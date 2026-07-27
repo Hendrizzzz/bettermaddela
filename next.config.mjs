@@ -15,7 +15,6 @@ const withSerwist = withSerwistInit({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = withSerwist({
-  output: 'export',
   trailingSlash: false,
   skipTrailingSlashRedirect: true,
   distDir: process.env.NODE_ENV === 'production' ? 'out' : '.next',
