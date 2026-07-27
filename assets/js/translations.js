@@ -50,7 +50,7 @@ const translations = {
     'breadcrumb-terms': 'Terms of Use',
 
     // Hero Section
-    'hero-welcome': 'Welcome to BetterSolano.org',
+    'hero-welcome': 'Welcome to BetterAurora.org',
     'hero-subtitle':
       'Access government services, information, and resources for the people of Solano, Nueva Vizcaya.',
     'hero-browse': 'Browse Services',
@@ -716,7 +716,7 @@ const translations = {
     'a11y-text-alternatives': 'Text Alternatives',
     'a11y-typescript': 'TypeScript',
     'a11y-volunteer-with-us': 'Volunteer with us',
-    'a11y-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'a11y-volunteerbettersolanoorg': 'volunteer@betteraurora.org',
     'a11y-wcag-21-level-aa': 'WCAG 2.1 Level AA',
     'a11y-works-on-all-devices-and-screen-sizes': 'Works on all devices and screen sizes.',
     'acct-1-day': '1 day',
@@ -2378,7 +2378,7 @@ const translations = {
     'faq-visit-the-municipal-treasurers-office-at-the':
       "Visit the Municipal Treasurer's Office at the Municipal Hall with your Tax Declaration or latest Official Receipt. Payment is in cash. Property taxes are due quarterly, but you may pay annually to avail of discounts.",
     'faq-volunteer-with-us': 'Volunteer with us',
-    'faq-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'faq-volunteerbettersolanoorg': 'volunteer@betteraurora.org',
     'faq-what-are-the-office-hours-of-the-municipal-hall':
       'What are the office hours of the Municipal Hall?',
     'faq-what-benefits-do-senior-citizens-receive': 'What benefits do senior citizens receive?',
@@ -5047,9 +5047,9 @@ const translations = {
     'privacy-analytics-cookies': 'Analytics Cookies:',
     'privacy-analytics-data': 'Analytics Data:',
     'privacy-bettersolanoorg-is-a-general-audience-website':
-      'BetterSolano.org is a general audience website providing civic information. We do not knowingly collect personal information from children under 18 years of age without parental consent.',
+      'BetterAurora.org is a general audience website providing civic information. We do not knowingly collect personal information from children under 18 years of age without parental consent.',
     'privacy-bettersolanoorg-we-us-or-our-is-committed-to':
-      'BetterSolano.org ("we," "us," or "our") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.',
+      'BetterAurora.org ("we," "us," or "our") is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.',
     'privacy-blgf-portal': 'BLGF Portal',
     'privacy-browser-type-and-version': 'Browser type and version',
     'privacy-business': 'Business',
@@ -5182,7 +5182,7 @@ const translations = {
     'privacy-under-the-data-privacy-act-of-2012-you-have-the':
       'Under the Data Privacy Act of 2012, you have the following rights regarding your personal information:',
     'privacy-volunteer-with-us': 'Volunteer with us',
-    'privacy-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'privacy-volunteerbettersolanoorg': 'volunteer@betteraurora.org',
     'privacy-we-collect-minimal-information-necessary-to':
       'We collect minimal information necessary to operate this civic platform effectively:',
     'privacy-we-do-not-sell-trade-or-rent-your-personal':
@@ -5944,7 +5944,7 @@ const translations = {
     'terms-all-information-on-this-website-is-provided-as-is':
       'All information on this website is provided "AS IS" without warranty of any kind, whether express or implied. This includes, but is not limited to:',
     'terms-although-volunteers-aim-to-keep-the-website':
-      'Although volunteers aim to keep the website accessible and functional, BetterSolano.org cannot guarantee that the website will be:',
+      'Although volunteers aim to keep the website accessible and functional, BetterAurora.org cannot guarantee that the website will be:',
     'terms-any-bugs-viruses-or-other-harmful-components':
       'Any bugs, viruses, or other harmful components transmitted through the site',
     'terms-any-errors-omissions-or-outdated-information':
@@ -5958,11 +5958,11 @@ const translations = {
     'terms-as-is-disclaimer': '"As Is" Disclaimer',
     'terms-available-or-accessible-at-all-times': 'Available or accessible at all times',
     'terms-bettersolanoorg-is-a-civic-platform-dedicated-to':
-      'BetterSolano.org is a civic platform dedicated to empowering the people of Solano by providing transparent access to the services, programs, and public funds of LGU Solano.',
+      'BetterAurora.org is a civic platform dedicated to empowering the people of Solano by providing transparent access to the services, programs, and public funds of LGU Solano.',
     'terms-bettersolanoorg-provides-public-domain':
-      'BetterSolano.org provides public domain information to support civic engagement, transparency, and informed participation in local governance.',
+      'BetterAurora.org provides public domain information to support civic engagement, transparency, and informed participation in local governance.',
     'terms-bettersolanoorg-values-accuracy-public-safety-and':
-      'BetterSolano.org values accuracy, public safety, and respect for rights. Despite good-faith efforts, some content may become outdated, incomplete, or raise legitimate concerns.',
+      'BetterAurora.org values accuracy, public safety, and respect for rights. Despite good-faith efforts, some content may become outdated, incomplete, or raise legitimate concerns.',
     'terms-blgf-portal': 'BLGF Portal',
     'terms-business': 'Business',
     'terms-by-accessing-and-using-this-website-you':
@@ -6018,7 +6018,7 @@ const translations = {
       'Fully compatible with all devices, browsers, or assistive technologies',
     'terms-governing-law': 'Governing Law',
     'terms-government': 'Government',
-    'terms-guidelines-for-using-bettersolanoorg': 'Guidelines for using BetterSolano.org',
+    'terms-guidelines-for-using-bettersolanoorg': 'Guidelines for using BetterAurora.org',
     'terms-health': 'Health',
     'terms-home': 'Home',
     'terms-if-any-provision-of-these-terms-is-found-to-be':
@@ -6056,7 +6056,7 @@ const translations = {
     'terms-public-domain-content-and-volunteer-operation':
       'Public Domain Content and Volunteer Operation',
     'terms-public-domain-content-may-be-freely-used-copied':
-      'Public domain content may be freely used, copied, distributed, and modified without permission or attribution, although attribution to BetterSolano.org and LGU Solano is encouraged as a civic courtesy.',
+      'Public domain content may be freely used, copied, distributed, and modified without permission or attribution, although attribution to BetterAurora.org and LGU Solano is encouraged as a civic courtesy.',
     'terms-public-safety': 'Public Safety',
     'terms-quick-links': 'Quick Links',
     'terms-resolution-framework': 'Resolution Framework',
@@ -6113,12 +6113,12 @@ const translations = {
     'terms-verify-information-directly-from-original-and':
       'Verify information directly from original and official sources',
     'terms-volunteer-with-us': 'Volunteer with us',
-    'terms-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'terms-volunteerbettersolanoorg': 'volunteer@betteraurora.org',
     'terms-warranties-of-merchantability': 'Warranties of merchantability',
     'terms-website-availability': 'Website Availability',
     'terms-when-reaching-out-kindly-include': 'When reaching out, kindly include:',
     'terms-while-volunteers-make-every-effort-to-secure':
-      'While volunteers make every effort to secure BetterSolano.org from online threats and keep information accurate, no system can be guaranteed to be perfectly secure, error-free, or completely up-to-date at all times.',
+      'While volunteers make every effort to secure BetterAurora.org from online threats and keep information accurate, no system can be guaranteed to be perfectly secure, error-free, or completely up-to-date at all times.',
     'terms-you-are-strongly-encouraged-to': 'You are strongly encouraged to:',
     'terms-your-contact-information-for-followup': 'Your contact information for follow-up',
     'terms-your-use-of-or-reliance-on-this-website-or-its':
@@ -6503,7 +6503,7 @@ const translations = {
     'breadcrumb-sitemap': 'Mapa ng Site',
     'breadcrumb-privacy': 'Patakaran sa Pagkapribado',
     'breadcrumb-terms': 'Mga Tuntunin ng Paggamit',
-    'hero-welcome': 'Maligayang Pagdating sa BetterSolano.org',
+    'hero-welcome': 'Maligayang Pagdating sa BetterAurora.org',
     'hero-subtitle':
       'I-access ang mga serbisyo ng pamahalaan, impormasyon, at mga mapagkukunan para sa mga mamamayan ng Solano, Nueva Vizcaya.',
     'hero-browse': 'Tingnan ang mga Serbisyo',
@@ -7112,7 +7112,7 @@ const translations = {
     'a11y-text-alternatives': 'Mga Alternatibong Teksto',
     'a11y-typescript': 'TypeScript',
     'a11y-volunteer-with-us': 'Mag-volunteer sa amin',
-    'a11y-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'a11y-volunteerbettersolanoorg': 'volunteer@betteraurora.org',
     'a11y-wcag-21-level-aa': 'WCAG 2.1 Level AA',
     'a11y-works-on-all-devices-and-screen-sizes': 'Gumagana sa lahat ng device at laki ng screen.',
     'acct-1-day': '1 araw',
@@ -8792,7 +8792,7 @@ const translations = {
     'faq-visit-the-municipal-treasurers-office-at-the':
       'Bumisita sa Opisina ng Ingat-Yaman ng Munisipyo sa Munisipyo na may iyong Tax Declaration o pinakabagong Opisyal na Resibo. Ang pagbabayad ay sa cash. Ang mga buwis sa ari-arian ay dapat bayaran quarterly, ngunit maaari kang magbayad taun-taon upang makakuha ng diskwento.',
     'faq-volunteer-with-us': 'Mag-volunteer sa amin',
-    'faq-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'faq-volunteerbettersolanoorg': 'volunteer@betteraurora.org',
     'faq-what-are-the-office-hours-of-the-municipal-hall':
       'What ay ang office hours ng ang Munisipyo?',
     'faq-what-benefits-do-senior-citizens-receive':
@@ -11509,9 +11509,9 @@ const translations = {
     'privacy-analytics-cookies': 'Mga Analytics Cookie:',
     'privacy-analytics-data': 'Datos ng Analytics:',
     'privacy-bettersolanoorg-is-a-general-audience-website':
-      'Ang BetterSolano.org ay isang website para sa pangkalahatang madla na nagbibigay ng civic na impormasyon. Hindi namin sinasadyang kinokolekta ang personal na impormasyon mula sa mga bata under 18 years ng age nang walang parental pahintulot.',
+      'Ang BetterAurora.org ay isang website para sa pangkalahatang madla na nagbibigay ng civic na impormasyon. Hindi namin sinasadyang kinokolekta ang personal na impormasyon mula sa mga bata under 18 years ng age nang walang parental pahintulot.',
     'privacy-bettersolanoorg-we-us-or-our-is-committed-to':
-      'BetterSolano.org (\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"we,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"us,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" or \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"our\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\") is committed to protecting your privacy and ensuring the security of your personal impormasyon. This Privacy Patakaran explains how we kolektahin, gamitin, ibunyag, and safeguard your impormasyon when you bisitahin our website.',
+      'BetterAurora.org (\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"we,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"us,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" or \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"our\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\") is committed to protecting your privacy and ensuring the security of your personal impormasyon. This Privacy Patakaran explains how we kolektahin, gamitin, ibunyag, and safeguard your impormasyon when you bisitahin our website.',
     'privacy-blgf-portal': 'BLGF Portal',
     'privacy-browser-type-and-version': 'Uri at bersyon ng browser',
     'privacy-business': 'Negosyo',
@@ -11647,7 +11647,7 @@ const translations = {
     'privacy-under-the-data-privacy-act-of-2012-you-have-the':
       'Under ang Data Privacy Act ng 2012, ikaw ay maaari ang following mga karapatan regarding iyong personal na impormasyon:',
     'privacy-volunteer-with-us': 'Mag-volunteer sa amin',
-    'privacy-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'privacy-volunteerbettersolanoorg': 'volunteer@betteraurora.org',
     'privacy-we-collect-minimal-information-necessary-to':
       'We kolektahin minimal impormasyon necessary to operate this civic platform effectively:',
     'privacy-we-do-not-sell-trade-or-rent-your-personal':
@@ -12414,7 +12414,7 @@ const translations = {
     'terms-all-information-on-this-website-is-provided-as-is':
       'Ang lahat ng impormasyon sa website na ito ay ibinibigay \\\\\\"AS IS\\\\\\" nang walang warranty ng anumang uri, maging hayag o ipinahiwatig. Kabilang dito ngunit hindi limitado sa:',
     'terms-although-volunteers-aim-to-keep-the-website':
-      'Bagaman naglalayong panatilihing accessible sa functional ang website ng mga boluntaryo, Hindi magagarantiya ng BetterSolano.org na ang website ay magiging:',
+      'Bagaman naglalayong panatilihing accessible sa functional ang website ng mga boluntaryo, Hindi magagarantiya ng BetterAurora.org na ang website ay magiging:',
     'terms-any-bugs-viruses-or-other-harmful-components':
       'Any bugs, viruses, or iba pang harmful components transmitted through the site',
     'terms-any-errors-omissions-or-outdated-information':
@@ -12429,11 +12429,11 @@ const translations = {
       '\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"As Is\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" Disclaimer',
     'terms-available-or-accessible-at-all-times': 'Magagamit or naa-access at all times',
     'terms-bettersolanoorg-is-a-civic-platform-dedicated-to':
-      'Ang BetterSolano.org ay isang civic platform na nakatuon sa pagbibigay-kapangyarihan sa mga tao ng Solano sa pamamagitan ng pagbibigay ng transparent na access sa ang mga serbisyo, mga programa, sa pampublikong funds ng LGU Solano.',
+      'Ang BetterAurora.org ay isang civic platform na nakatuon sa pagbibigay-kapangyarihan sa mga tao ng Solano sa pamamagitan ng pagbibigay ng transparent na access sa ang mga serbisyo, mga programa, sa pampublikong funds ng LGU Solano.',
     'terms-bettersolanoorg-provides-public-domain':
-      'Ang BetterSolano.org ay nagbibigay ng impormasyon sa pampublikong domain upang suportahan ang civic engagement, transparency, sa maaari kaalamang pakikilahok sa lokal na governance.',
+      'Ang BetterAurora.org ay nagbibigay ng impormasyon sa pampublikong domain upang suportahan ang civic engagement, transparency, sa maaari kaalamang pakikilahok sa lokal na governance.',
     'terms-bettersolanoorg-values-accuracy-public-safety-and':
-      'Pinahahalagahan ng BetterSolano.org ang katumpakan, kaligtasan ng publiko, sa paggalang sa mga karapatan. Sa kabila ng mga pagsisikap na maaari mabuting layunin, ang ilang nilalaman ay maaaringcome outdated, incomplete, o raise legitimate mga alalahanin.',
+      'Pinahahalagahan ng BetterAurora.org ang katumpakan, kaligtasan ng publiko, sa paggalang sa mga karapatan. Sa kabila ng mga pagsisikap na maaari mabuting layunin, ang ilang nilalaman ay maaaringcome outdated, incomplete, o raise legitimate mga alalahanin.',
     'terms-blgf-portal': 'BLGF Portal',
     'terms-business': 'Negosyo',
     'terms-by-accessing-and-using-this-website-you':
@@ -12489,7 +12489,7 @@ const translations = {
       'Ganap na tugma sa lahat ng device, browser, o assistive technology',
     'terms-governing-law': 'Namamahalang Batas',
     'terms-government': 'Pamahalaan',
-    'terms-guidelines-for-using-bettersolanoorg': 'Mga alituntunin for using BetterSolano.org',
+    'terms-guidelines-for-using-bettersolanoorg': 'Mga alituntunin for using BetterAurora.org',
     'terms-health': 'Kalusugan',
     'terms-home': 'Tahanan',
     'terms-if-any-provision-of-these-terms-is-found-to-be':
@@ -12527,7 +12527,7 @@ const translations = {
     'terms-public-domain-content-and-volunteer-operation':
       'Pampubliko Domain Content and Volunteer Operation',
     'terms-public-domain-content-may-be-freely-used-copied':
-      'Pampubliko domain content may be freely used, copied, distributed, and modified without permission or attribution, although attribution to BetterSolano.org and LGU Solano is encouraged as a civic courtesy.',
+      'Pampubliko domain content may be freely used, copied, distributed, and modified without permission or attribution, although attribution to BetterAurora.org and LGU Solano is encouraged as a civic courtesy.',
     'terms-public-safety': 'Kaligtasang Pampubliko',
     'terms-quick-links': 'Mga Mabilisang Link',
     'terms-resolution-framework': 'Balangkas ng Resolusyon',
@@ -12585,12 +12585,12 @@ const translations = {
     'terms-verify-information-directly-from-original-and':
       'Verify impormasyon directly mula sa original sa opisyal na sources',
     'terms-volunteer-with-us': 'Mag-volunteer sa amin',
-    'terms-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'terms-volunteerbettersolanoorg': 'volunteer@betteraurora.org',
     'terms-warranties-of-merchantability': 'Mga garantiya ng kakayahang ibenta',
     'terms-website-availability': 'Pagkakaroon ng Website',
     'terms-when-reaching-out-kindly-include': 'When reaching out, kindly isama:',
     'terms-while-volunteers-make-every-effort-to-secure':
-      'Bagaman ang mga boluntaryo ay nagsusumikap na pangalagaan ang BetterSolano.org mula sa mga online na banta at panatilihing tumpak ang impormasyon, walang sistema ang maaaring garantiyahan na perpektong ligtas, walang error, o ganap na napapanahon sa lahat ng oras.',
+      'Bagaman ang mga boluntaryo ay nagsusumikap na pangalagaan ang BetterAurora.org mula sa mga online na banta at panatilihing tumpak ang impormasyon, walang sistema ang maaaring garantiyahan na perpektong ligtas, walang error, o ganap na napapanahon sa lahat ng oras.',
     'terms-you-are-strongly-encouraged-to': 'Lubos kang hinihikayat na:',
     'terms-your-contact-information-for-followup': 'Your makipag-ugnayan impormasyon for follow-up',
     'terms-your-use-of-or-reliance-on-this-website-or-its':
@@ -12976,7 +12976,7 @@ const translations = {
     'breadcrumb-sitemap': 'Mapa ti Site',
     'breadcrumb-privacy': 'Pagannurotan ti Pagkapribado',
     'breadcrumb-terms': 'Dagiti Kondision ti Panagusar',
-    'hero-welcome': 'Naragsak a Panangyawat iti BetterSolano.org',
+    'hero-welcome': 'Naragsak a Panangyawat iti BetterAurora.org',
     'hero-subtitle':
       'Aksesen dagiti serbisio ti gobierno, impormasion, ken dagiti rekurso para kadagiti umili ti Solano, Nueva Vizcaya.',
     'hero-browse': 'Kitaen dagiti Serbisio',
@@ -13585,7 +13585,7 @@ const translations = {
     'a11y-text-alternatives': 'Dagiti Alternatibo a Teksto',
     'a11y-typescript': 'TypeScript',
     'a11y-volunteer-with-us': 'Ag-volunteer kadakami',
-    'a11y-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'a11y-volunteerbettersolanoorg': 'volunteer@betteraurora.org',
     'a11y-wcag-21-level-aa': 'WCAG 2.1 Level AA',
     'a11y-works-on-all-devices-and-screen-sizes':
       'Agtrabtrabaho iti amin a device ken kadakkel ti screen.',
@@ -15275,7 +15275,7 @@ const translations = {
     'faq-visit-the-municipal-treasurers-office-at-the':
       'Bisitaen ti Opisina ti Tesorero ti Munisipalidad iti Munisipalidad nga addaan iti Tax Declaration wenno kaudian nga Opisyal a Resibo. Ti panagbayad ket cash. Dagiti buwis iti kukua ket masapul a bayadan quarterly, ngem mabalinmo ti agbayad iti tinawen tapno magun-od ti diskwento.',
     'faq-volunteer-with-us': 'Ag-volunteer kadakami',
-    'faq-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'faq-volunteerbettersolanoorg': 'volunteer@betteraurora.org',
     'faq-what-are-the-office-hours-of-the-municipal-hall':
       'What ay ti office hours ti ti Munisipalidad?',
     'faq-what-benefits-do-senior-citizens-receive':
@@ -17994,9 +17994,9 @@ const translations = {
     'privacy-analytics-cookies': 'Dagiti Analytics Cookie:',
     'privacy-analytics-data': 'Datos ti Analytics:',
     'privacy-bettersolanoorg-is-a-general-audience-website':
-      'Ti BetterSolano.org ay isang website para iti pangkalahatang madla na nagbibigay ti civic na impormasion. Saan namin sinasadyang kinokolekta ti personal na impormasion manipud iti dagiti bata under 18 years ti age nang walang parental pahintulot.',
+      'Ti BetterAurora.org ay isang website para iti pangkalahatang madla na nagbibigay ti civic na impormasion. Saan namin sinasadyang kinokolekta ti personal na impormasion manipud iti dagiti bata under 18 years ti age nang walang parental pahintulot.',
     'privacy-bettersolanoorg-we-us-or-our-is-committed-to':
-      'BetterSolano.org (\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"we,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"us,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" or \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"our\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\") is committed to protecting your privacy and ensuring the security of your personal impormasion. This Privacy Patakaran explains how we kolektaen, usaren, ipalgak, and safeguard your impormasion when you bisitaen our website.',
+      'BetterAurora.org (\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"we,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"us,\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" or \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"our\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\") is committed to protecting your privacy and ensuring the security of your personal impormasion. This Privacy Patakaran explains how we kolektaen, usaren, ipalgak, and safeguard your impormasion when you bisitaen our website.',
     'privacy-blgf-portal': 'BLGF Portal',
     'privacy-browser-type-and-version': 'Uri ken bersyon ti browser',
     'privacy-business': 'Negosio',
@@ -18132,7 +18132,7 @@ const translations = {
     'privacy-under-the-data-privacy-act-of-2012-you-have-the':
       'Under ti Data Privacy Act ti 2012, ikaw ay maaari ti following dagiti karapatan regarding iyong personal na impormasion:',
     'privacy-volunteer-with-us': 'Ag-volunteer kadakami',
-    'privacy-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'privacy-volunteerbettersolanoorg': 'volunteer@betteraurora.org',
     'privacy-we-collect-minimal-information-necessary-to':
       'We kolektaen minimal impormasion necessary to operate this civic platform effectively:',
     'privacy-we-do-not-sell-trade-or-rent-your-personal':
@@ -18901,7 +18901,7 @@ const translations = {
     'terms-all-information-on-this-website-is-provided-as-is':
       'Ti amin nga impormasion iti daytoy a website ket maipaay a \\\\\\"AS IS\\\\\\" nga awan ti warranty ti aniaman a kita, hayag man wenno ipinahiwatig. Karaman ditoy ngem saan a limitado iti:',
     'terms-although-volunteers-aim-to-keep-the-website':
-      'Bagaman naglalayong panatilihing accessible iti functional ti website ti dagiti boluntaryo, Saan magagarantiya ti BetterSolano.org na ti website ay magiging:',
+      'Bagaman naglalayong panatilihing accessible iti functional ti website ti dagiti boluntaryo, Saan magagarantiya ti BetterAurora.org na ti website ay magiging:',
     'terms-any-bugs-viruses-or-other-harmful-components':
       'Any bugs, viruses, or sabali harmful components transmitted through the site',
     'terms-any-errors-omissions-or-outdated-information':
@@ -18916,11 +18916,11 @@ const translations = {
       '\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\"As Is\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\" Disclaimer',
     'terms-available-or-accessible-at-all-times': 'Magun-od or magun-od at all times',
     'terms-bettersolanoorg-is-a-civic-platform-dedicated-to':
-      'Ti BetterSolano.org ay isang civic platform na nakatuon iti panagipaay-kapangyarihan iti dagiti tao ti Solano iti pamamagitan ti panagipaay ti transparent na access iti ti dagiti serbisio, dagiti programa, iti pampublikong funds ti LGU Solano.',
+      'Ti BetterAurora.org ay isang civic platform na nakatuon iti panagipaay-kapangyarihan iti dagiti tao ti Solano iti pamamagitan ti panagipaay ti transparent na access iti ti dagiti serbisio, dagiti programa, iti pampublikong funds ti LGU Solano.',
     'terms-bettersolanoorg-provides-public-domain':
-      'Ti BetterSolano.org ay nagbibigay ti impormasion iti pampublikong domain upang suportahan ti civic engagement, transparency, iti maaari kaalamang pakikilahok iti lokal na governance.',
+      'Ti BetterAurora.org ay nagbibigay ti impormasion iti pampublikong domain upang suportahan ti civic engagement, transparency, iti maaari kaalamang pakikilahok iti lokal na governance.',
     'terms-bettersolanoorg-values-accuracy-public-safety-and':
-      'Pinahahalagahan ti BetterSolano.org ti katumpakan, kaligtasan ti publiko, iti paggalang iti dagiti karapatan. Sa kabila ti dagiti pagsisikap na maaari mabuting layunin, ti ilang nilalaman ay maaaringcome outdated, incomplete, wenno raise legitimate dagiti alalahanin.',
+      'Pinahahalagahan ti BetterAurora.org ti katumpakan, kaligtasan ti publiko, iti paggalang iti dagiti karapatan. Sa kabila ti dagiti pagsisikap na maaari mabuting layunin, ti ilang nilalaman ay maaaringcome outdated, incomplete, wenno raise legitimate dagiti alalahanin.',
     'terms-blgf-portal': 'BLGF Portal',
     'terms-business': 'Negosio',
     'terms-by-accessing-and-using-this-website-you':
@@ -18976,7 +18976,7 @@ const translations = {
       'Ganap na tugma iti lahat ti device, browser, wenno assistive technology',
     'terms-governing-law': 'Mangituray a Linteg',
     'terms-government': 'Gobierno',
-    'terms-guidelines-for-using-bettersolanoorg': 'Dagiti giya for using BetterSolano.org',
+    'terms-guidelines-for-using-bettersolanoorg': 'Dagiti giya for using BetterAurora.org',
     'terms-health': 'Salun-at',
     'terms-home': 'Pagtaengan',
     'terms-if-any-provision-of-these-terms-is-found-to-be':
@@ -19014,7 +19014,7 @@ const translations = {
     'terms-public-domain-content-and-volunteer-operation':
       'Publiko Domain Content and Volunteer Operation',
     'terms-public-domain-content-may-be-freely-used-copied':
-      'Publiko domain content may be freely used, copied, distributed, and modified without permission or attribution, although attribution to BetterSolano.org and LGU Solano is encouraged as a civic courtesy.',
+      'Publiko domain content may be freely used, copied, distributed, and modified without permission or attribution, although attribution to BetterAurora.org and LGU Solano is encouraged as a civic courtesy.',
     'terms-public-safety': 'Kaligtasan Pampubliko',
     'terms-quick-links': 'Dagiti Napartak a Silpo',
     'terms-resolution-framework': 'Balangkas ti Resolusion',
@@ -19072,12 +19072,12 @@ const translations = {
     'terms-verify-information-directly-from-original-and':
       'Verify impormasion directly manipud iti original iti opisyal na sources',
     'terms-volunteer-with-us': 'Ag-volunteer kadakami',
-    'terms-volunteerbettersolanoorg': 'volunteer@bettersolano.org',
+    'terms-volunteerbettersolanoorg': 'volunteer@betteraurora.org',
     'terms-warranties-of-merchantability': 'Dagiti garantiya ti kakayahang ibenta',
     'terms-website-availability': 'Pannakagun-od ti Website',
     'terms-when-reaching-out-kindly-include': 'When reaching out, kindly iraman:',
     'terms-while-volunteers-make-every-effort-to-secure':
-      'Nupay ti dagiti boluntaryo ay nagsusumikap na pangalagaan ti BetterSolano.org manipud iti dagiti online na banta ken panatilihing tumpak ti impormasion, walang sistema ti maaaring garantiyahan na perpektong ligtas, walang error, wenno ganap na napapanahon iti lahat ti oras.',
+      'Nupay ti dagiti boluntaryo ay nagsusumikap na pangalagaan ti BetterAurora.org manipud iti dagiti online na banta ken panatilihing tumpak ti impormasion, walang sistema ti maaaring garantiyahan na perpektong ligtas, walang error, wenno ganap na napapanahon iti lahat ti oras.',
     'terms-you-are-strongly-encouraged-to': 'Lubos kang hinihikayat na:',
     'terms-your-contact-information-for-followup': 'Your kontaken impormasion for follow-up',
     'terms-your-use-of-or-reliance-on-this-website-or-its':

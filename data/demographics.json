@@ -1,18 +1,18 @@
 {
   "_schema_version": "1.0",
   "_status": "draft",
-  "_source": "Philippine Statistics Authority (PSA)",
-  "_note": "Awaiting official data from PSA / LGU Solano planning office",
-  "municipality": "Solano",
-  "province": "Nueva Vizcaya",
-  "region": "Region II - Cagayan Valley",
+  "_source": "Philippine Statistics Authority (PSA) and Aurora ZDS official profile",
+  "_note": "Aurora, Zamboanga del Sur demographic data from PSA 2024 Census and municipal planning office",
+  "municipality": "Aurora",
+  "province": "Zamboanga del Sur",
+  "region": "Region IX - Zamboanga Peninsula",
   "population": {
-    "total": 69296,
+    "total": 52746,
     "year": 2024,
     "source": "PSA Census"
   },
-  "land_area_km2": 162.7,
-  "barangay_count": 22,
+  "land_area_km2": 180.95,
+  "barangay_count": 44,
   "income_class": "1st",
   "barangays": []
 }

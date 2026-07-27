@@ -1,15 +1,15 @@
-# Migration Guide: Static HTML to React + TypeScript
+# Migration Guide: Static HTML to Next.js + TypeScript
 
-This document provides guidance for contributors migrating from the static HTML version to the React + TypeScript version of BetterSolano.org.
+This document records the migration from the legacy static HTML site to the current Next.js + TypeScript application at the repository root.
 
 ## Overview
 
-BetterSolano.org now has two versions:
+BetterAurora.org now ships as a single Next.js application on the `main` branch. The legacy static HTML files, the Python `serve.py` development server, and the separate `react-app/` directory have been removed.
 
-| Version            | Branch             | Status             | Technology                       |
-| ------------------ | ------------------ | ------------------ | -------------------------------- |
-| Static HTML        | `main`             | Stable (Legacy)    | HTML5, CSS3, Vanilla JavaScript  |
-| React + TypeScript | `react-typescript` | Active Development | Next.js 14, React 18, TypeScript |
+| Version            | Location              | Status   | Technology                       |
+| ------------------ | --------------------- | -------- | -------------------------------- |
+| Next.js + TypeScript | repository root       | Active   | Next.js 15, React 18, TypeScript |
+| Static HTML        | `legacy` branch (future archive) | Retired  | HTML5, CSS3, Vanilla JavaScript  |
 
 ## Version Comparison
 
@@ -50,34 +50,27 @@ BetterSolano.org now has two versions:
 - Long-term maintenance
 - Scalable architecture
 
-## Getting Started with React Version
+## Getting Started
 
 ### Prerequisites
 
 | Requirement | Version       |
 | ----------- | ------------- |
-| Node.js     | v18 or higher |
-| npm         | v9 or higher  |
+| Bun         | v1.3 or higher |
 | Git         | Latest        |
 
 ### Setup
 
 ```bash
 # Clone the repository
-git clone https://github.com/BetterSolano/bettersolano.git
-cd bettersolano
-
-# Switch to React branch
-git checkout react-typescript
-
-# Navigate to React app
-cd react-app
+git clone https://github.com/BetterAurora/betteraurora.git
+cd betteraurora
 
 # Install dependencies
-npm install
+bun install
 
 # Start development server
-npm run dev
+bun dev
 ```
 
 Open http://localhost:3000 in your browser.
@@ -87,7 +80,7 @@ Open http://localhost:3000 in your browser.
 ### Static HTML
 
 ```
-bettersolano/
+betteraurora/
 ├── index.html
 ├── services/
 ├── government/
@@ -98,36 +91,33 @@ bettersolano/
 └── data/
 ```
 
-### React + TypeScript
+### Next.js + TypeScript
 
 ```
-bettersolano/
-├── react-app/
-│   ├── src/
-│   │   ├── app/           # Next.js App Router pages
-│   │   ├── components/    # Reusable React components
-│   │   ├── contexts/      # React Context providers
-│   │   ├── hooks/         # Custom React hooks
-│   │   ├── types/         # TypeScript type definitions
-│   │   └── data/          # Static data and translations
-│   ├── public/
-│   │   └── assets/        # Static assets (images, CSS)
-│   └── package.json
-└── ... (static HTML files)
+betteraurora/
+├── src/
+│   ├── app/           # Next.js App Router pages
+│   ├── components/    # Reusable React components
+│   └── contexts/      # React Context providers
+├── public/            # Static assets and data
+├── package.json
+├── next.config.mjs
+└── tsconfig.json
 ```
 
 ## Component Mapping
 
 This table shows which static HTML files correspond to which React components:
 
-| Static HTML             | React Component | Location                      |
-| ----------------------- | --------------- | ----------------------------- |
-| `index.html`            | `page.tsx`      | `src/app/page.tsx`            |
-| `services/index.html`   | `page.tsx`      | `src/app/services/page.tsx`   |
-| `government/index.html` | `page.tsx`      | `src/app/government/page.tsx` |
-| `budget/index.html`     | `page.tsx`      | `src/app/budget/page.tsx`     |
-| `statistics/index.html` | `page.tsx`      | `src/app/statistics/page.tsx` |
-| `contact/index.html`    | `page.tsx`      | `src/app/contact/page.tsx`    |
+| Static HTML             | Next.js Page        | Location                      |
+| ----------------------- | ------------------- | ----------------------------- |
+| `index.html`            | `page.tsx`          | `src/app/page.tsx`            |
+| `services/index.html`   | `page.tsx`          | `src/app/services/page.tsx`   |
+| `government/index.html` | `page.tsx`         | `src/app/government/page.tsx` |
+| `budget/index.html`     | `page.tsx`          | `src/app/budget/page.tsx`     |
+| `statistics/index.html` | `page.tsx`          | `src/app/statistics/page.tsx` |
+| `contact/index.html`    | `page.tsx`          | `src/app/contact/page.tsx`    |
+| Legacy service detail pages | `page.tsx`      | `src/app/services/[slug]/page.tsx` |
 
 ## Key Differences
 
@@ -222,17 +212,17 @@ export default function ExampleCard({ title, description }: ExampleCardProps) {
 
 | Phase   | Timeframe | Action                                         |
 | ------- | --------- | ---------------------------------------------- |
-| Phase 1 | Current   | Both versions maintained in parallel           |
-| Phase 2 | 3 months  | React version becomes primary for new features |
-| Phase 3 | 6 months  | Evaluate community adoption                    |
-| Phase 4 | TBD       | Static HTML moved to `legacy` branch           |
+| Phase 1 | Completed | Static HTML and `react-app/` merged to root Next.js app |
+| Phase 2 | Completed | Python `serve.py` and static HTML removed       |
+| Phase 3 | Completed | Bun + Serwist PWA adopted for build/runtime     |
+| Phase 4 | Ongoing   | Final branding and documentation updates        |
 
 ## Questions and Support
 
 - Open an issue on GitHub with the `react` label
 - Join our Discord community for real-time discussion
-- Email: volunteer@bettersolano.org
+- Email: volunteer@betteraurora.org
 
 ---
 
-Last updated: January 2026
+Last updated: July 2026

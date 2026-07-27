@@ -1,0 +1,3040 @@
+{
+  "province": "ZAMBOANGA DEL SUR",
+  "municipality": "AURORA",
+  "region": "REGION 9",
+  "term": "2023-2026",
+  "barangay_count": 44,
+  "total_officials": 810,
+  "barangays": [
+    {
+      "barangay": "Acad",
+      "total_officials": 19,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 6,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            "LORENCE PRIOLO VALENCIA JR."
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Alang-alang",
+      "total_officials": 10,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 6,
+          "officials": [
+            NaN,
+            "ROGER LIMUTAN FORTUNA SR.",
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Alegria",
+      "total_officials": 10,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Anonang",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Bagong Mandaue",
+      "total_officials": 18,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 5,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Bagong Maslog",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            "MARIANO CAPOY WAGAS JR"
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            "SIMPLICIO CODENIERA ROSAL JR."
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            "EDWIN ENGLISA ESTIMADA JR.",
+            NaN,
+            NaN,
+            "ELADIO PATALINGHUG CENIZA JR.",
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Bagong Oslob",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            "JEGER BOLAY-OG LAGUNA JR.",
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Bagong Pitogo",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Baki",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            "GREG ARTHUR VELASCO FUENTES JR."
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            "VALERIANO SAPIO CABATINGAN JR.",
+            NaN,
+            "PORFERIO REDELOSA ARENA JR.",
+            NaN,
+            "NELITO ARDIENTE VELASCO JR.",
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Balas",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            "RICHARD BENURO BRAVO SR"
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            "ELISEO TEMPORADO JURADO JR",
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            "ANTONIO MARTEL ALIGATO III",
+            "DANNY SAQUIN ARCANGEL SR",
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Balide",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            "Amado Atamosa Basiga Sr",
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Balintawak",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Bayabas",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            "CLAUDIO PROCRATO SIAO JR.",
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Bemposa",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Cabilinan",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            "GENNY J ARIAS SR",
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Campo Uno",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Ceboneg",
+      "total_officials": 10,
+      "positions": [
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Commonwealth",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Gubaan",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            "MELECIO PIKIT CLAROS JR."
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Inasagan",
+      "total_officials": 10,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Inroad",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            "FLORENCIO ALIN ALCALDE JR",
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Kahayagan East",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Kahayagan West",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Kauswagan",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            "OWEN AMARILLO GUIGAYOMA JR."
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            "EDWIN OPSIMA VELASCO JR.",
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "La Paz",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            "Teofredo Gerundio Cabalhug Sr"
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "La Victoria",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Lantungan",
+      "total_officials": 11,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            "ANTONIO HISOLER MENDEZ JR."
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Libertad",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Lintugop",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            "FLORENCIO GONZALES DELES JR."
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Lubid",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Maguikay",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Mahayahay",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Monte Alegre",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Montela",
+      "total_officials": 11,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Napo",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Panaghiusa",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Poblacion",
+      "total_officials": 15,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 5,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Resthouse",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            "ROLAN OROT OPLE SR"
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            "FRANKLIN MEDINA DELOSO JR",
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Romarate",
+      "total_officials": 19,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 6,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "San Jose",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "San Juan",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            "ALBERTO PROJO VILLAVERDE JR."
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Sapa Loboc",
+      "total_officials": 18,
+      "positions": [
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Tagulalo",
+      "total_officials": 19,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 6,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            "CERIACO DAAS SABANAL JR.",
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    },
+    {
+      "barangay": "Waterfall",
+      "total_officials": 20,
+      "positions": [
+        {
+          "position": "Barangay Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Barangay Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Punong Barangay",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Chairperson",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        },
+        {
+          "position": "SK Secretary",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "SK Treasurer",
+          "count": 1,
+          "officials": [
+            NaN
+          ]
+        },
+        {
+          "position": "Sangguniang Barangay Member",
+          "count": 7,
+          "officials": [
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN,
+            NaN
+          ]
+        }
+      ]
+    }
+  ]
+}
