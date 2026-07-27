@@ -72,7 +72,7 @@ export default function ResolutionFrameworkPage() {
         <>
             <PageHeader
                 title="Resolution Framework"
-                description="Resolutions passed by the Sangguniang Bayan ng Solano"
+                description="Resolutions passed by the Sangguniang Bayan ng Aurora"
                 badge={{ icon: 'bi bi-file-earmark-ruled-fill', label: 'Resolutions' }}
                 breadcrumbs={[
                     { label: 'Home', href: '/' },
@@ -94,7 +94,7 @@ export default function ResolutionFrameworkPage() {
                                 Resolutions are formal expressions of the opinion, will, or intent of the Sangguniang Bayan.
                                 They are used for various purposes including approvals of plans and programs, authorizations
                                 for the municipal mayor to enter into agreements, commendations, and declarations of support
-                                for policies and programs affecting the Municipality of Solano.
+                                for policies and programs affecting the Municipality of Aurora.
                             </p>
                             <div className="leg-info-actions">
                                 <Link href="/legislative" className="btn btn-secondary">

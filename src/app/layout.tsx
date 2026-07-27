@@ -13,8 +13,8 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: { default: 'BetterAurora.org | Official Portal', template: '%s | BetterAurora.org' },
-  description: 'BetterAurora.org - Your digital gateway to LGU Solano services.',
-  keywords: ['BetterAurora', 'Solano Nueva Vizcaya', 'LGU Solano', 'municipal services'],
+  description: 'BetterAurora.org - Your digital gateway to LGU Aurora services.',
+  keywords: ['BetterAurora', 'Aurora Zamboanga del Sur', 'LGU Aurora', 'municipal services'],
   authors: [{ name: 'Ramon Logan Jr.' }],
   openGraph: {
     type: 'website',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: 'https://betteraurora.org/',
     siteName: 'BetterAurora.org',
     title: 'BetterAurora.org | Official Portal',
-    description: 'Empowering the people of Solano with transparent access to services.',
+    description: 'Empowering the people of Aurora with transparent access to services.',
     images: [
       {
         url: 'https://betteraurora.org/assets/images/banners/opengraph.png',
@@ -66,6 +66,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <a href="#main-content" className="skip-link">
             Skip to main content
           </a>
+          <div className="wip-banner" role="status">
+            <i className="bi bi-cone-striped" aria-hidden="true"></i>
+            <span>Work in Progress — this site is under active development.</span>
+          </div>
           <HotlineBar />
           <Header />
           <InfoBar />

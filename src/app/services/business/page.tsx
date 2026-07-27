@@ -9,7 +9,7 @@ export default function BusinessPage() {
     <>
       <PageHeader
         title="Business Services"
-        description="Permits, licenses, and support for businesses in Solano."
+        description="Permits, licenses, and support for businesses in Aurora."
         badge={{ icon: 'bi bi-shop', label: 'Business' }}
         breadcrumbs={[
           { label: 'Home', href: '/' },

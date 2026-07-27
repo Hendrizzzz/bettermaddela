@@ -1,52 +1,75 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-// Aurora, Zamboanga del Sur (same coordinates used by the info bar)
+// Aurora, Zamboanga del Sur (same coordinates used by the info bar and map marker)
 const LAT = 7.95;
 const LON = 123.58;
-const API_URL =
-    `https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}` +
-    '&current=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation,weather_code,wind_speed_10m' +
-    '&timezone=Asia%2FManila';
+const CACHE_KEY = 'aurora_weather_cache';
+const CACHE_TTL = 30 * 60 * 1000; // 30 minutes
+
+interface HourForecast {
+    time: string;
+    temp: number;
+    icon: string;
+}
 
 interface WeatherData {
-    temp: number;
+    temperature: number;
     feelsLike: number;
     humidity: number;
-    wind: number;
-    precip: number;
-    code: number;
-    time: string;
+    windSpeed: number;
+    condition: string;
+    icon: string;
+    hourly: HourForecast[];
+    timestamp: number;
 }
 
-/** Map a WMO weather code to a label and a Bootstrap icon. */
-function describeWeather(code: number): { label: string; icon: string } {
-    if (code === 0) return { label: 'Clear sky', icon: 'bi-sun-fill' };
-    if (code === 1) return { label: 'Mainly clear', icon: 'bi-cloud-sun-fill' };
-    if (code === 2) return { label: 'Partly cloudy', icon: 'bi-cloud-sun-fill' };
-    if (code === 3) return { label: 'Overcast', icon: 'bi-clouds-fill' };
-    if (code === 45 || code === 48) return { label: 'Fog', icon: 'bi-cloud-fog2-fill' };
-    if (code >= 51 && code <= 55) return { label: 'Drizzle', icon: 'bi-cloud-drizzle-fill' };
-    if (code === 56 || code === 57) return { label: 'Freezing drizzle', icon: 'bi-cloud-sleet-fill' };
-    if (code >= 61 && code <= 65) return { label: 'Rain', icon: 'bi-cloud-rain-fill' };
-    if (code === 66 || code === 67) return { label: 'Freezing rain', icon: 'bi-cloud-sleet-fill' };
-    if (code >= 71 && code <= 77) return { label: 'Snow', icon: 'bi-cloud-snow-fill' };
-    if (code >= 80 && code <= 82) return { label: 'Rain showers', icon: 'bi-cloud-rain-heavy-fill' };
-    if (code === 85 || code === 86) return { label: 'Snow showers', icon: 'bi-cloud-snow-fill' };
-    if (code >= 95) return { label: 'Thunderstorm', icon: 'bi-cloud-lightning-rain-fill' };
-    return { label: 'Unknown', icon: 'bi-cloud-fill' };
+/** Map a WMO weather code to a condition label and a Bootstrap icon. */
+function mapWeatherCode(code: number): { condition: string; icon: string } {
+    const m: Record<number, { condition: string; icon: string }> = {
+        0: { condition: 'Clear sky', icon: 'bi-sun-fill' },
+        1: { condition: 'Mainly clear', icon: 'bi-cloud-sun-fill' },
+        2: { condition: 'Partly cloudy', icon: 'bi-cloud-sun-fill' },
+        3: { condition: 'Overcast', icon: 'bi-clouds-fill' },
+        45: { condition: 'Foggy', icon: 'bi-cloud-fog-fill' },
+        48: { condition: 'Rime fog', icon: 'bi-cloud-fog-fill' },
+        51: { condition: 'Light drizzle', icon: 'bi-cloud-drizzle-fill' },
+        53: { condition: 'Drizzle', icon: 'bi-cloud-drizzle-fill' },
+        55: { condition: 'Dense drizzle', icon: 'bi-cloud-drizzle-fill' },
+        61: { condition: 'Slight rain', icon: 'bi-cloud-rain-fill' },
+        63: { condition: 'Moderate rain', icon: 'bi-cloud-rain-fill' },
+        65: { condition: 'Heavy rain', icon: 'bi-cloud-rain-heavy-fill' },
+        80: { condition: 'Rain showers', icon: 'bi-cloud-rain-fill' },
+        81: { condition: 'Rain showers', icon: 'bi-cloud-rain-fill' },
+        82: { condition: 'Violent showers', icon: 'bi-cloud-rain-heavy-fill' },
+        95: { condition: 'Thunderstorm', icon: 'bi-cloud-lightning-rain-fill' },
+        96: { condition: 'Thunderstorm', icon: 'bi-cloud-lightning-rain-fill' },
+        99: { condition: 'Thunderstorm', icon: 'bi-cloud-lightning-rain-fill' },
+    };
+    return m[code] || { condition: 'Partly cloudy', icon: 'bi-cloud-sun-fill' };
 }
 
-function formatUpdated(iso: string): string {
-    const d = new Date(iso);
-    if (isNaN(d.getTime())) return '';
-    let h = d.getHours();
-    const m = d.getMinutes();
-    const ampm = h >= 12 ? 'PM' : 'AM';
-    h = h % 12 || 12;
-    return `${h}:${m < 10 ? '0' + m : m} ${ampm}`;
+function readCache(): WeatherData | null {
+    try {
+        const raw = localStorage.getItem(CACHE_KEY);
+        if (!raw) return null;
+        const entry = JSON.parse(raw);
+        if (entry?.data && Date.now() - entry.data.timestamp < CACHE_TTL) return entry.data;
+        localStorage.removeItem(CACHE_KEY);
+    } catch {
+        /* ignore */
+    }
+    return null;
+}
+
+function writeCache(data: WeatherData) {
+    try {
+        localStorage.setItem(CACHE_KEY, JSON.stringify({ data }));
+    } catch {
+        /* ignore */
+    }
 }
 
 export default function WeatherWidget() {
@@ -54,102 +77,168 @@ export default function WeatherWidget() {
     const [data, setData] = useState<WeatherData | null>(null);
     const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
 
-    useEffect(() => {
-        let cancelled = false;
-        fetch(API_URL)
-            .then((r) => (r.ok ? r.json() : Promise.reject(new Error('Weather request failed'))))
-            .then((json) => {
-                if (cancelled) return;
-                const c = json?.current;
-                if (!c || c.temperature_2m == null) throw new Error('No current weather');
-                setData({
-                    temp: Math.round(c.temperature_2m),
-                    feelsLike: Math.round(c.apparent_temperature),
-                    humidity: Math.round(c.relative_humidity_2m),
-                    wind: Math.round(c.wind_speed_10m),
-                    precip: Math.round((c.precipitation ?? 0) * 10) / 10,
-                    code: c.weather_code ?? 0,
-                    time: c.time ?? '',
-                });
+    const load = useCallback(async (force = false) => {
+        setStatus('loading');
+        if (!force) {
+            const cached = readCache();
+            if (cached) {
+                setData(cached);
                 setStatus('ready');
-            })
-            .catch(() => {
-                if (!cancelled) setStatus('error');
+                return;
+            }
+        }
+        try {
+            const params = new URLSearchParams({
+                latitude: String(LAT),
+                longitude: String(LON),
+                current: 'temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m',
+                hourly: 'temperature_2m,weather_code',
+                timezone: 'Asia/Manila',
+                forecast_days: '1',
             });
-        return () => {
-            cancelled = true;
-        };
+            const controller = new AbortController();
+            const timer = setTimeout(() => controller.abort(), 10000);
+            const res = await fetch(`https://api.open-meteo.com/v1/forecast?${params}`, {
+                signal: controller.signal,
+            });
+            clearTimeout(timer);
+            if (!res.ok) throw new Error(`API ${res.status}`);
+            const json = await res.json();
+            const cur = json.current;
+            if (!cur || cur.temperature_2m == null) throw new Error('No current weather');
+
+            const { condition, icon } = mapWeatherCode(cur.weather_code);
+            const nowHour = new Date().getHours();
+            const hourly: HourForecast[] = [];
+            const times: string[] = json.hourly?.time ?? [];
+            for (let i = 0; i < 4 && nowHour + i < times.length; i++) {
+                const idx = nowHour + i;
+                hourly.push({
+                    time: new Date(times[idx]).toLocaleTimeString('en-PH', {
+                        hour: 'numeric',
+                        hour12: true,
+                    }),
+                    temp: Math.round(json.hourly.temperature_2m[idx]),
+                    icon: mapWeatherCode(json.hourly.weather_code[idx]).icon,
+                });
+            }
+
+            const result: WeatherData = {
+                temperature: Math.round(cur.temperature_2m),
+                feelsLike: Math.round(cur.apparent_temperature ?? cur.temperature_2m),
+                humidity: Math.round(cur.relative_humidity_2m),
+                windSpeed: Math.round(cur.wind_speed_10m),
+                condition,
+                icon,
+                hourly,
+                timestamp: Date.now(),
+            };
+            writeCache(result);
+            setData(result);
+            setStatus('ready');
+        } catch {
+            setStatus('error');
+        }
     }, []);
 
-    const weather = data ? describeWeather(data.code) : null;
+    useEffect(() => {
+        load();
+    }, [load]);
+
+    if (status === 'loading') {
+        return (
+            <div className="weather-loading" aria-busy="true" aria-label="Loading weather data">
+                <div className="weather-current">
+                    <div className="skeleton-circle"></div>
+                    <div className="weather-current-info">
+                        <div className="skeleton-text skeleton-lg"></div>
+                        <div className="skeleton-text skeleton-md" style={{ marginTop: 8 }}></div>
+                        <div className="skeleton-text skeleton-sm" style={{ marginTop: 8 }}></div>
+                    </div>
+                </div>
+                <div className="weather-stats">
+                    <div className="skeleton-text skeleton-stat"></div>
+                    <div className="skeleton-text skeleton-stat"></div>
+                    <div className="skeleton-text skeleton-stat"></div>
+                </div>
+                <div className="weather-hourly">
+                    <div className="skeleton-hour"></div>
+                    <div className="skeleton-hour"></div>
+                    <div className="skeleton-hour"></div>
+                    <div className="skeleton-hour"></div>
+                </div>
+            </div>
+        );
+    }
+
+    if (status === 'error' || !data) {
+        return (
+            <div className="weather-error" role="alert">
+                <div className="weather-error-content">
+                    <i className="bi bi-cloud-slash" aria-hidden="true"></i>
+                    <p>Weather data unavailable</p>
+                    <button
+                        type="button"
+                        className="btn btn-sm btn-primary weather-retry-btn"
+                        onClick={() => load(true)}
+                    >
+                        <i className="bi bi-arrow-clockwise" aria-hidden="true"></i> Retry
+                    </button>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className="weather-widget" role="region" aria-label="Current weather in Aurora">
-            {status === 'loading' && (
-                <div className="weather-loading" aria-hidden="true">
-                    <div className="weather-skeleton weather-skeleton-lg" />
-                    <div className="weather-skeleton weather-skeleton-grid" />
+            <div className="weather-current">
+                <div className="weather-current-icon" aria-hidden="true">
+                    <i className={`bi ${data.icon}`}></i>
                 </div>
-            )}
-
-            {status === 'error' && (
-                <div className="weather-error">
-                    <i className="bi bi-cloud-slash"></i>
-                    <span>Weather data unavailable right now.</span>
+                <div className="weather-current-info">
+                    <div className="weather-current-temp">{data.temperature}°C</div>
+                    <div className="weather-current-condition">
+                        {data.condition}
+                        <span
+                            className="weather-live-dot"
+                            title="Live data from Open-Meteo"
+                            aria-label="Live data"
+                        >
+                            {' '}
+                            ●
+                        </span>
+                    </div>
+                    <div className="weather-current-location">
+                        <i className="bi bi-geo-alt" aria-hidden="true"></i> {t('weather-location')}
+                    </div>
                 </div>
-            )}
+            </div>
 
-            {status === 'ready' && data && weather && (
-                <>
-                    <div className="weather-current">
-                        <div className="weather-current-icon">
-                            <i className={`bi ${weather.icon}`}></i>
-                        </div>
-                        <div className="weather-current-info">
-                            <div className="weather-current-temp">{data.temp}°C</div>
-                            <div className="weather-current-condition">{weather.label}</div>
-                            <div className="weather-current-location">
-                                <i className="bi bi-geo-alt"></i> {t('weather-location')}
-                            </div>
-                        </div>
-                    </div>
+            <div className="weather-stats" role="list" aria-label="Weather details">
+                <div className="weather-stat" role="listitem" aria-label={`Feels like ${data.feelsLike} degrees`}>
+                    <i className="bi bi-thermometer-half" aria-hidden="true"></i>
+                    <span>{data.feelsLike}°C</span>
+                </div>
+                <div className="weather-stat" role="listitem" aria-label={`Humidity ${data.humidity} percent`}>
+                    <i className="bi bi-droplet" aria-hidden="true"></i>
+                    <span>{data.humidity}%</span>
+                </div>
+                <div className="weather-stat" role="listitem" aria-label={`Wind ${data.windSpeed} kilometers per hour`}>
+                    <i className="bi bi-wind" aria-hidden="true"></i>
+                    <span>{data.windSpeed} km/h</span>
+                </div>
+            </div>
 
-                    <div className="weather-stats">
-                        <div className="weather-stat">
-                            <i className="bi bi-thermometer-half"></i>
-                            <div className="weather-stat-text">
-                                <span className="weather-stat-value">{data.feelsLike}°C</span>
-                                <span className="weather-stat-label">Feels like</span>
-                            </div>
+            {data.hourly.length > 0 && (
+                <div className="weather-hourly" role="list" aria-label="Hourly forecast">
+                    {data.hourly.map((h, i) => (
+                        <div className="weather-hour" role="listitem" key={i}>
+                            <span className="weather-hour-time">{h.time}</span>
+                            <i className={`bi ${h.icon}`} aria-hidden="true"></i>
+                            <span className="weather-hour-temp">{h.temp}°</span>
                         </div>
-                        <div className="weather-stat">
-                            <i className="bi bi-droplet-fill"></i>
-                            <div className="weather-stat-text">
-                                <span className="weather-stat-value">{data.humidity}%</span>
-                                <span className="weather-stat-label">Humidity</span>
-                            </div>
-                        </div>
-                        <div className="weather-stat">
-                            <i className="bi bi-wind"></i>
-                            <div className="weather-stat-text">
-                                <span className="weather-stat-value">{data.wind} km/h</span>
-                                <span className="weather-stat-label">Wind</span>
-                            </div>
-                        </div>
-                        <div className="weather-stat">
-                            <i className="bi bi-cloud-rain"></i>
-                            <div className="weather-stat-text">
-                                <span className="weather-stat-value">{data.precip} mm</span>
-                                <span className="weather-stat-label">Precipitation</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="weather-updated">
-                        <i className="bi bi-arrow-clockwise"></i>
-                        <span>Updated {formatUpdated(data.time)} • Open-Meteo</span>
-                    </div>
-                </>
+                    ))}
+                </div>
             )}
         </div>
     );

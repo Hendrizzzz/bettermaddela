@@ -8,7 +8,7 @@ export default function ServicesDirectoryPage() {
     <>
       <PageHeader
         title="Municipal Services Directory"
-        description="Browse all services offered by the Municipality of Solano."
+        description="Browse all services offered by the Municipality of Aurora."
         badge={{ icon: 'bi bi-grid-fill', label: 'Services' }}
         breadcrumbs={[
           { label: 'Home', href: '/' },
@@ -34,7 +34,7 @@ export default function ServicesDirectoryPage() {
                 <i className="bi bi-shop"></i>
                 <span>Business, Trade & Investment</span>
               </h3>
-              <p className="service-item-desc">Permits, licenses, and support for businesses in Solano.</p>
+              <p className="service-item-desc">Permits, licenses, and support for businesses in Aurora.</p>
               <div className="service-item-meta">
                 <span><i className="bi bi-arrow-right"></i> View services</span>
               </div>

@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     return {
         name: 'BetterAurora.org | Official Portal',
         short_name: 'BetterAurora',
-        description: 'Your digital gateway to LGU Solano services, news, and public information.',
+        description: 'Your digital gateway to LGU Aurora services, news, and public information.',
         start_url: '/',
         display: 'standalone',
         background_color: '#ffffff',

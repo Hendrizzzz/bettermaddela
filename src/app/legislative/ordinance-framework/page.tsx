@@ -24,7 +24,7 @@ export default function OrdinanceFrameworkPage() {
         <>
             <PageHeader
                 title="Ordinance Framework"
-                description="Municipal ordinances enacted by the Sangguniang Bayan ng Solano"
+                description="Municipal ordinances enacted by the Sangguniang Bayan ng Aurora"
                 badge={{ icon: 'bi bi-journal-bookmark-fill', label: 'Ordinances' }}
                 breadcrumbs={[
                     { label: 'Home', href: '/' },
@@ -85,7 +85,7 @@ export default function OrdinanceFrameworkPage() {
                             <p>
                                 Municipal ordinances are local laws enacted by the Sangguniang Bayan that have a
                                 permanent and general application within the jurisdiction of the Municipality of
-                                Solano. These ordinances cover public safety, health, environment, governance, and
+                                Aurora. These ordinances cover public safety, health, environment, governance, and
                                 other local matters affecting the community.
                             </p>
                             <div className="leg-info-actions">

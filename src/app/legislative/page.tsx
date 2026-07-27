@@ -41,7 +41,7 @@ export default function LegislativePage() {
         <>
             <PageHeader
                 title="Legislative Documents"
-                description="Ordinances and resolutions of the Sangguniang Bayan ng Solano"
+                description="Ordinances and resolutions of the Sangguniang Bayan ng Aurora"
                 badge={{ icon: 'bi bi-bank2', label: 'Sangguniang Bayan' }}
                 breadcrumbs={[
                     { label: 'Home', href: '/' },

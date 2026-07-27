@@ -8,7 +8,7 @@ export default function MunicipalTreasurerPage() {
     <>
       <PageHeader
         title="Municipal Treasurer\'s Office"
-        description="Tax collection, fee payments, and financial services for Solano residents"
+        description="Tax collection, fee payments, and financial services for Aurora residents"
         badge={{ icon: 'bi bi-info-circle', label: 'Service' }}
         breadcrumbs={[
           { label: 'Home', href: '/' },

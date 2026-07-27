@@ -77,7 +77,7 @@ export default function FAQPage() {
                                     </summary>
                                     <div className="faq-answer">
                                         <p>
-                                            For birth certificates registered in Solano, it typically takes 15-30 minutes
+                                            For birth certificates registered in Aurora, it typically takes 15-30 minutes
                                             while you wait, provided the record is readily available.
                                         </p>
                                     </div>
@@ -130,7 +130,7 @@ export default function FAQPage() {
                                 </details>
                                 <details className="faq-accordion">
                                     <summary>
-                                        What do I need to start a new business in Solano?
+                                        What do I need to start a new business in Aurora?
                                     </summary>
                                     <div className="faq-answer">
                                         <p>
@@ -284,7 +284,7 @@ export default function FAQPage() {
                                                 Abakada.org
                                             </a>
                                             {" "}and BetterAurora.org, a community-driven initiative building a digital bridge
-                                            between the residents of Solano and the local government of Solano. Based in
+                                            between the residents of Aurora and the local government of Aurora. Based in
                                             the United Arab Emirates, he works in IT and practices full-stack development,
                                             helping build practical digital solutions in web development, design, cloud
                                             services, and cybersecurity.
@@ -309,10 +309,10 @@ export default function FAQPage() {
                                             , a nonprofit supporting open-source JavaScript communities worldwide.
                                         </p>
                                         <p>
-                                            Ramon has made the Solano Project open source under MIT | CC BY 4.0 to empower
+                                            Ramon has made the Aurora Project open source under MIT | CC BY 4.0 to empower
                                             community-driven development, and contributions are warmly welcomed from
                                             everyone; whether you are a developer, data researcher, designer, content
-                                            writer, translator, or a concerned citizen of Solano, your participation helps
+                                            writer, translator, or a concerned citizen of Aurora, your participation helps
                                             shape the project for all.
                                         </p>
                                     </div>

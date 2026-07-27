@@ -8,7 +8,7 @@ export default function BirthCertificatePage() {
     <>
       <PageHeader
         title="Birth Certificate (Local Copy)"
-        description="Official certified copy of birth certificate registered in Solano"
+        description="Official certified copy of birth certificate registered in Aurora"
         badge={{ icon: 'bi bi-info-circle', label: 'Service' }}
         breadcrumbs={[
           { label: 'Home', href: '/' },
@@ -20,7 +20,7 @@ export default function BirthCertificatePage() {
       <section className="section">
         <div className="container">
           <div className="service-detail-content">
-            <p className="lead">Get a certified copy of birth certificate registered in Solano.</p>
+            <p className="lead">Get a certified copy of birth certificate registered in Aurora.</p>
             
             <div className="service-item-meta" style={{ marginTop: '1.5rem' }}>
               <span><strong>Office:</strong> Local Civil Registrar</span>

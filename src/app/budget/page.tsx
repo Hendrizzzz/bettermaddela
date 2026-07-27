@@ -214,7 +214,7 @@ export default function BudgetPage() {
                             <h3>FCDS Package 5 - Magat River Flood Control</h3>
                             <p className="infra-location">
                                 <i className="bi bi-geo-alt"></i>
-                                <span>Magat River, Bagahabag Section, Solano, Nueva Vizcaya</span>
+                                <span>Magat River, Bagahabag Section, Aurora, Zamboanga del Sur</span>
                             </p>
                         </div>
                         <div className="infra-project-details">
@@ -262,7 +262,7 @@ export default function BudgetPage() {
                             <h3>Repair/Rehabilitation of Flood Control and Drainage Structure - Section 1</h3>
                             <p className="infra-location">
                                 <i className="bi bi-geo-alt"></i>
-                                <span>Magat River, Bangar Section 1, Brgy. Bangar, Solano, Nueva Vizcaya</span>
+                                <span>Magat River, Bangar Section 1, Brgy. Bangar, Aurora, Zamboanga del Sur</span>
                             </p>
                         </div>
                         <div className="infra-project-details">
@@ -310,7 +310,7 @@ export default function BudgetPage() {
                             <h3>Repair/Rehabilitation of Flood Control and Drainage Structure - Section 2</h3>
                             <p className="infra-location">
                                 <i className="bi bi-geo-alt"></i>
-                                <span>Magat River, Bangar Section 2, Brgy. Bangar, Solano, Nueva Vizcaya</span>
+                                <span>Magat River, Bangar Section 2, Brgy. Bangar, Aurora, Zamboanga del Sur</span>
                             </p>
                         </div>
                         <div className="infra-project-details">
@@ -355,8 +355,8 @@ export default function BudgetPage() {
                             <i className="bi bi-building"></i>
                             <span>National Government Projects</span>
                         </span>
-                        <h2>DPWH Infrastructure Projects in Solano</h2>
-                        <p>Implementing Agency: Nueva Vizcaya District Engineering Office</p>
+                        <h2>DPWH Infrastructure Projects in Aurora</h2>
+                        <p>Implementing Agency: Zamboanga del Sur District Engineering Office</p>
                     </div>
 
                     <div id="dpwh-projects-container"></div>

@@ -45,9 +45,9 @@ export default function TermsPage() {
                             <section id="introduction" className="legal-section">
                                 <h2>Introduction</h2>
                                 <p>
-                                    BetterAurora.org is a civic platform dedicated to empowering the people of Solano
+                                    BetterAurora.org is a civic platform dedicated to empowering the people of Aurora
                                     by providing transparent access to the services, programs, and public funds of LGU
-                                    Solano.
+                                    Aurora.
                                 </p>
                                 <p>
                                     While volunteers make every effort to secure BetterAurora.org from online threats
@@ -82,7 +82,7 @@ export default function TermsPage() {
                                 <p>
                                     Public domain content may be freely used, copied, distributed, and modified
                                     without permission or attribution, although attribution to BetterAurora.org and
-                                    LGU Solano is encouraged as a civic courtesy.
+                                    LGU Aurora is encouraged as a civic courtesy.
                                 </p>
                                 <div className="legal-note">
                                     <i className="bi bi-info-circle"></i>
@@ -90,7 +90,7 @@ export default function TermsPage() {
                                         As a volunteer-run initiative, this website does not replace official government
                                         channels. Residents and stakeholders are encouraged to conduct their own
                                         independent research and verification of all information found here and to
-                                        consult official LGU Solano offices and government agencies when making
+                                        consult official LGU Aurora offices and government agencies when making
                                         important decisions.
                                     </p>
                                 </div>

@@ -283,7 +283,7 @@ export default function SitemapPage() {
                                 className="sitemap-link-item sitemap-link-item--external"
                             >
                                 <i className="bi bi-box-arrow-up-right"></i>
-                                <span>Official Solano Website</span>
+                                <span>Official Aurora Website</span>
                             </a>
                             <a
                                 href="https://sangguniangbayan.solano.gov.ph/"

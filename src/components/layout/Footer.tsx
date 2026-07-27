@@ -139,7 +139,7 @@ export default function Footer() {
             <div
               className="footer-cost"
               role="status"
-              aria-label="Cost to the People of Solano: Zero Pesos"
+              aria-label="Cost to the People of Aurora: Zero Pesos"
             >
               {t('footer-cost')} <span className="footer-cost-value">₱0</span>
             </div>
@@ -155,36 +155,6 @@ export default function Footer() {
               <i className="bi bi-github"></i> {t('footer-contribute')}
             </a>
             <div className="footer-partners">
-              <a
-                href="https://abakada.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Abakada.org"
-              >
-                <img
-                  src="/assets/images/logo/abakada-footer.svg"
-                  alt="Abakada.org"
-                  className="footer-partner-logo"
-                  width="120"
-                  height="28"
-                  loading="lazy"
-                />
-              </a>
-              <a
-                href="https://hivcareph.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="HIV Care Philippines"
-              >
-                <img
-                  src="/assets/images/logo/hiv-care-logo-footer.svg"
-                  alt="HIV Care Philippines"
-                  className="footer-partner-logo"
-                  width="120"
-                  height="28"
-                  loading="lazy"
-                />
-              </a>
               <a
                 href="https://bettergov.ph"
                 target="_blank"

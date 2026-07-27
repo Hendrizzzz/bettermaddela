@@ -15,7 +15,7 @@ const translations: Record<string, Record<string, string>> = {
     'nav-contact': 'Contact',
 
     // Appointment CTA
-    'appointment-cta-heading': "Enhancing Appointment Services of LGU Solano Mayor's Office",
+    'appointment-cta-heading': "Enhancing Appointment Services of LGU Aurora Mayor's Office",
     'appointment-cta-subtitle': 'No lines. No back-and-forth. Just efficient appointments.',
     'appointment-schedule-btn': 'Schedule Appointment',
     'appointment-create-btn': 'Create Account',
@@ -61,7 +61,7 @@ const translations: Record<string, Record<string, string>> = {
 
     // Services Page
     'services-title': 'Municipal Services Directory',
-    'services-subtitle': 'Browse all services offered by the Municipality of Solano',
+    'services-subtitle': 'Browse all services offered by the Municipality of Aurora',
     'life-events-title': 'Browse by Life Event',
     'life-events-subtitle': "Find services based on what's happening in your life",
     'life-starting-business': 'Starting a Business',
@@ -151,11 +151,11 @@ const translations: Record<string, Record<string, string>> = {
     'health-stat-hospitals': 'Major Hospitals',
     'health-stat-bhs': 'Barangay Health Stations',
     'health-stat-mho': 'Municipal Health Office',
-    'health-section-hospitals': 'Hospitals in Solano',
+    'health-section-hospitals': 'Hospitals in Aurora',
     'health-section-mho': 'Municipal Health Office',
     'health-section-bhs': 'Barangay Health Stations',
-    'health-bhs-subtitle': '22 Barangay Health Stations/Centers serving all barangays of Solano',
-    'health-mho-title': 'Solano Municipal Health Office',
+    'health-bhs-subtitle': '22 Barangay Health Stations/Centers serving all barangays of Aurora',
+    'health-mho-title': 'Aurora Municipal Health Office',
     'health-mho-desc':
       'The Municipal Health Office provides primary healthcare services including a lying-in facility and laboratory services. It serves as the main public health center for the municipality.',
     'health-service-lying-in': 'Lying-in Facility',
@@ -167,7 +167,7 @@ const translations: Record<string, Record<string, string>> = {
     'health-pltciluis-a-tiam-medical-center': 'PLTCI-Luis A. Tiam Medical Center',
     'health-a-tertiary-level-philhealthaccredited-private':
       'A tertiary level, PhilHealth-accredited private hospital providing comprehensive medical services.',
-    'health-national-highway-solano': 'National Highway, Solano',
+    'health-national-highway-solano': 'National Highway, Aurora',
     'health-medical-mission-group-hospital-health-services':
       'Medical Mission Group Hospital & Health Services Cooperative',
     'health-also-known-as-new-mmg-hospital-providing-quality':
@@ -223,7 +223,7 @@ const translations: Record<string, Record<string, string>> = {
 
     // Ordinance Framework Page
     'ord-page-title': 'Ordinance Framework',
-    'ord-page-desc': 'Municipal ordinances enacted by the Sangguniang Bayan ng Solano',
+    'ord-page-desc': 'Municipal ordinances enacted by the Sangguniang Bayan ng Aurora',
     'ord-page-badge': 'Legislative',
     'ord-what-is': 'What is an Ordinance?',
     'ord-what-is-p1':
@@ -238,7 +238,7 @@ const translations: Record<string, Record<string, string>> = {
     'ord-cat-traffic': 'Traffic & Transportation',
     'ord-cat-zoning': 'Zoning & Land Use',
     'ord-2025-title': '2025 Ordinances',
-    'ord-2025-subtitle': 'Official ordinances enacted by the Sangguniang Bayan ng Solano in 2025',
+    'ord-2025-subtitle': 'Official ordinances enacted by the Sangguniang Bayan ng Aurora in 2025',
     'ord-table-number': 'Ordinance No.',
     'ord-table-title': 'Title',
     'ord-table-date': 'Session Date',
@@ -246,7 +246,7 @@ const translations: Record<string, Record<string, string>> = {
 
     // Resolution Framework Page
     'reso-page-title': 'Resolution Framework',
-    'reso-page-desc': 'Resolutions passed by the Sangguniang Bayan ng Solano',
+    'reso-page-desc': 'Resolutions passed by the Sangguniang Bayan ng Aurora',
     'reso-page-badge': 'Legislative',
     'reso-what-is': 'What is a Resolution?',
     'reso-what-is-p1':
@@ -261,9 +261,9 @@ const translations: Record<string, Record<string, string>> = {
     'reso-type-authorization': 'Authorization',
     'reso-type-appropriation': 'Appropriation',
     'reso-2026-title': '2026 Resolutions',
-    'reso-2026-subtitle': 'Official resolutions passed by the Sangguniang Bayan ng Solano in 2026',
+    'reso-2026-subtitle': 'Official resolutions passed by the Sangguniang Bayan ng Aurora in 2026',
     'reso-2025-title': '2025 Resolutions',
-    'reso-2025-subtitle': 'Official resolutions passed by the Sangguniang Bayan ng Solano in 2025',
+    'reso-2025-subtitle': 'Official resolutions passed by the Sangguniang Bayan ng Aurora in 2025',
     'reso-table-number': 'Resolution No.',
     'reso-table-title': 'Title',
     'reso-table-date': 'Session Date',
@@ -271,7 +271,7 @@ const translations: Record<string, Record<string, string>> = {
 
     // Business Services Page
     'biz-page-title': 'Business Services',
-    'biz-page-desc': 'Permits, licenses, and support for businesses in Solano',
+    'biz-page-desc': 'Permits, licenses, and support for businesses in Aurora',
     'biz-page-badge': 'Business',
     'biz-permit-new': 'Business Permit (New)',
     'biz-permit-new-desc': "Apply for a new mayor's permit for your business",
@@ -428,7 +428,7 @@ const translations: Record<string, Record<string, string>> = {
       'Deadline for business permit renewal is set for January 20, 2025. Early renewal is encouraged.',
     'news-market-title': 'New Public Market Wing Opens',
     'news-market-desc':
-      'The renovated wing of the Solano Public Market is now open to vendors and the public.',
+      'The renovated wing of the Aurora Public Market is now open to vendors and the public.',
     'news-power-title': 'Scheduled Power Interruption',
     'news-power-desc': 'Maintenance scheduled for Barangay Osmeña on Dec 1, 8:00 AM - 5:00 PM.',
 
@@ -440,12 +440,12 @@ const translations: Record<string, Record<string, string>> = {
     'footer-faq': 'FAQ',
     'footer-open-data': 'Open Data Philippines',
     'footer-foi': 'Freedom of Information',
-    'footer-lgu-portal': 'Official LGU Solano Portal',
+    'footer-lgu-portal': 'Official LGU Aurora Portal',
     'footer-sb': 'Sangguniang Bayan',
-    'footer-lgu-facebook': 'LGU Solano Facebook',
+    'footer-lgu-facebook': 'LGU Aurora Facebook',
     'footer-blgf': 'BLGF Portal',
     'footer-cmci': 'CMCI DTI Portal',
-    'footer-cost': 'Cost to the People of Solano =',
+    'footer-cost': 'Cost to the People of Aurora =',
     'footer-volunteer': 'Volunteer with us',
     'footer-contribute': 'Contribute code with us',
     'footer-copyright-text': 'BetterAurora.org',
@@ -465,7 +465,7 @@ const translations: Record<string, Record<string, string>> = {
 
     // Appointment CTA
     'appointment-cta-heading':
-      'Pagpapahusay ng Serbisyo sa Appointment ng Opisina ng Alkalde ng LGU Solano',
+      'Pagpapahusay ng Serbisyo sa Appointment ng Opisina ng Alkalde ng LGU Aurora',
     'appointment-cta-subtitle': 'Walang pila. Walang pabalik-balik. Mahusay na appointment lang.',
     'appointment-schedule-btn': 'Mag-iskedyul ng Appointment',
     'appointment-create-btn': 'Gumawa ng Account',
@@ -473,7 +473,7 @@ const translations: Record<string, Record<string, string>> = {
     // Hero Section
     'hero-welcome': 'Maligayang Pagdating sa BetterAurora.org',
     'hero-subtitle':
-      'I-access ang mga serbisyo ng pamahalaan, impormasyon, at mga mapagkukunan para sa mga mamamayan ng Solano, Nueva Vizcaya.',
+      'I-access ang mga serbisyo ng pamahalaan, impormasyon, at mga mapagkukunan para sa mga mamamayan ng Aurora, Zamboanga del Sur.',
     'hero-find-service': 'Maghanap ng Serbisyo',
 
     // Popular Services
@@ -511,7 +511,7 @@ const translations: Record<string, Record<string, string>> = {
 
     // Services Page
     'services-title': 'Direktoryo ng Serbisyong Munisipal',
-    'services-subtitle': 'Tingnan ang lahat ng serbisyong inaalok ng Munisipalidad ng Solano',
+    'services-subtitle': 'Tingnan ang lahat ng serbisyong inaalok ng Munisipalidad ng Aurora',
     'life-events-title': 'Maghanap Ayon sa Pangyayari sa Buhay',
     'life-events-subtitle': 'Hanapin ang mga serbisyo batay sa nangyayari sa iyong buhay',
     'life-starting-business': 'Magsimula ng Negosyo',
@@ -607,12 +607,12 @@ const translations: Record<string, Record<string, string>> = {
     'health-stat-hospitals': 'Mga Pangunahing Ospital',
     'health-stat-bhs': 'Mga Barangay Health Station',
     'health-stat-mho': 'Opisina ng Kalusugan ng Munisipalidad',
-    'health-section-hospitals': 'Mga Ospital sa Solano',
+    'health-section-hospitals': 'Mga Ospital sa Aurora',
     'health-section-mho': 'Opisina ng Kalusugan ng Munisipalidad',
     'health-section-bhs': 'Mga Barangay Health Station',
     'health-bhs-subtitle':
-      '22 Barangay Health Stations/Centers na naglilingkod sa lahat ng barangay ng Solano',
-    'health-mho-title': 'Opisina ng Kalusugan ng Munisipalidad ng Solano',
+      '22 Barangay Health Stations/Centers na naglilingkod sa lahat ng barangay ng Aurora',
+    'health-mho-title': 'Opisina ng Kalusugan ng Munisipalidad ng Aurora',
     'health-mho-desc':
       'Ang Municipal Health Office ay nagbibigay ng pangunahing serbisyo sa kalusugan kabilang ang lying-in facility at laboratory services. Ito ang pangunahing public health center ng munisipalidad.',
     'health-service-lying-in': 'Lying-in Facility',
@@ -624,7 +624,7 @@ const translations: Record<string, Record<string, string>> = {
     'health-pltciluis-a-tiam-medical-center': 'PLTCI-Luis A. Tiam Medical Center',
     'health-a-tertiary-level-philhealthaccredited-private':
       'A tertiary level, PhilHealth-accredited pribadong hospital nagbibigay ng komprehensibong mga serbisyong medikal.',
-    'health-national-highway-solano': 'Pambansa Highway, Solano',
+    'health-national-highway-solano': 'Pambansa Highway, Aurora',
     'health-medical-mission-group-hospital-health-services':
       'Medical Mission Group Hospital & Health Mga serbisyo Cooperative',
     'health-also-known-as-new-mmg-hospital-providing-quality':
@@ -680,7 +680,7 @@ const translations: Record<string, Record<string, string>> = {
 
     // Ordinance Framework Page - Filipino
     'ord-page-title': 'Balangkas ng Ordinansa',
-    'ord-page-desc': 'Mga ordinansang ipinasa ng Sangguniang Bayan ng Solano',
+    'ord-page-desc': 'Mga ordinansang ipinasa ng Sangguniang Bayan ng Aurora',
     'ord-page-badge': 'Lehislatura',
     'ord-what-is': 'Ano ang Ordinansa?',
     'ord-what-is-p1':
@@ -696,7 +696,7 @@ const translations: Record<string, Record<string, string>> = {
     'ord-cat-zoning': 'Zoning at Paggamit ng Lupa',
     'ord-2025-title': 'Mga Ordinansa ng 2025',
     'ord-2025-subtitle':
-      'Mga opisyal na ordinansang ipinasa ng Sangguniang Bayan ng Solano sa 2025',
+      'Mga opisyal na ordinansang ipinasa ng Sangguniang Bayan ng Aurora sa 2025',
     'ord-table-number': 'Numero ng Ordinansa',
     'ord-table-title': 'Pamagat',
     'ord-table-date': 'Petsa ng Sesyon',
@@ -704,7 +704,7 @@ const translations: Record<string, Record<string, string>> = {
 
     // Resolution Framework Page - Filipino
     'reso-page-title': 'Balangkas ng Resolusyon',
-    'reso-page-desc': 'Mga resolusyong ipinasa ng Sangguniang Bayan ng Solano',
+    'reso-page-desc': 'Mga resolusyong ipinasa ng Sangguniang Bayan ng Aurora',
     'reso-page-badge': 'Lehislatura',
     'reso-what-is': 'Ano ang Resolusyon?',
     'reso-what-is-p1':
@@ -720,10 +720,10 @@ const translations: Record<string, Record<string, string>> = {
     'reso-type-appropriation': 'Apropriyasyon',
     'reso-2026-title': 'Mga Resolusyon ng 2026',
     'reso-2026-subtitle':
-      'Mga opisyal na resolusyong ipinasa ng Sangguniang Bayan ng Solano sa 2026',
+      'Mga opisyal na resolusyong ipinasa ng Sangguniang Bayan ng Aurora sa 2026',
     'reso-2025-title': 'Mga Resolusyon ng 2025',
     'reso-2025-subtitle':
-      'Mga opisyal na resolusyong ipinasa ng Sangguniang Bayan ng Solano sa 2025',
+      'Mga opisyal na resolusyong ipinasa ng Sangguniang Bayan ng Aurora sa 2025',
     'reso-table-number': 'Numero ng Resolusyon',
     'reso-table-title': 'Pamagat',
     'reso-table-date': 'Petsa ng Sesyon',
@@ -731,7 +731,7 @@ const translations: Record<string, Record<string, string>> = {
 
     // Business Services Page - Filipino
     'biz-page-title': 'Serbisyo sa Negosyo',
-    'biz-page-desc': 'Mga permit, lisensya, at suporta para sa mga negosyo sa Solano',
+    'biz-page-desc': 'Mga permit, lisensya, at suporta para sa mga negosyo sa Aurora',
     'biz-page-badge': 'Negosyo',
     'biz-permit-new': 'Permit ng Negosyo (Bago)',
     'biz-permit-new-desc': "Mag-apply ng bagong mayor's permit para sa iyong negosyo",
@@ -889,14 +889,14 @@ const translations: Record<string, Record<string, string>> = {
       'Ang deadline para sa pag-renew ng permit sa negosyo ay Enero 20, 2025. Hinihikayat ang maagang pag-renew.',
     'news-market-title': 'Bagong Wing ng Pampublikong Palengke Bukas Na',
     'news-market-desc':
-      'Ang na-renovate na wing ng Pampublikong Palengke ng Solano ay bukas na sa mga nagtitinda at publiko.',
+      'Ang na-renovate na wing ng Pampublikong Palengke ng Aurora ay bukas na sa mga nagtitinda at publiko.',
     'news-power-title': 'Nakaiskedyul na Pagkaputol ng Kuryente',
     'news-power-desc':
       'Maintenance na nakaiskedyul para sa Barangay Osmeña sa Dis 1, 8:00 AM - 5:00 PM.',
 
     // Footer
     'footer-tagline':
-      'Pagbibigay-kapangyarihan sa mga tao ng Solano na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Solano.',
+      'Pagbibigay-kapangyarihan sa mga tao ng Aurora na may transparent na access sa mga serbisyo, programa, at pampublikong pondo ng LGU Aurora.',
     'footer-quick-links': 'Mga Mabilisang Link',
     'footer-resources': 'Mga Mapagkukunan',
     'footer-sitemap': 'Mapa ng Site',
@@ -907,12 +907,12 @@ const translations: Record<string, Record<string, string>> = {
     'footer-faq': 'FAQ',
     'footer-open-data': 'Open Data Philippines',
     'footer-foi': 'Kalayaan sa Impormasyon',
-    'footer-lgu-portal': 'Opisyal na Portal ng LGU Solano',
+    'footer-lgu-portal': 'Opisyal na Portal ng LGU Aurora',
     'footer-sb': 'Sangguniang Bayan',
-    'footer-lgu-facebook': 'LGU Solano Facebook',
+    'footer-lgu-facebook': 'LGU Aurora Facebook',
     'footer-blgf': 'BLGF Portal',
     'footer-cmci': 'CMCI DTI Portal',
-    'footer-cost': 'Gastos sa mga Tao ng Solano =',
+    'footer-cost': 'Gastos sa mga Tao ng Aurora =',
     'footer-volunteer': 'Mag-volunteer sa amin',
     'footer-contribute': 'Mag-ambag ng code sa amin',
     'footer-copyright-text': 'BetterAurora.org',

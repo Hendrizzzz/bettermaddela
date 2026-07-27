@@ -42,7 +42,7 @@ export default function NewsPage() {
         <>
             <PageHeader
                 title="News & Updates"
-                description="Stay informed about the latest happenings in Solano"
+                description="Stay informed about the latest happenings in Aurora"
                 badge={{ icon: 'bi bi-newspaper', label: 'News' }}
                 breadcrumbs={[
                     { label: 'Home', href: '/' },
@@ -61,7 +61,7 @@ export default function NewsPage() {
                                 </div>
                                 <div className="news-card-body">
                                     <h3 className="news-card-title">Loading news...</h3>
-                                    <p className="news-card-desc">Fetching news and updates from Solano.</p>
+                                    <p className="news-card-desc">Fetching news and updates from Aurora.</p>
                                 </div>
                             </article>
                         )}
@@ -105,11 +105,11 @@ export default function NewsPage() {
                 <div className="container">
                     <div className="fb-feed-head">
                         <h2>From our Facebook Page</h2>
-                        <p>The latest posts published by the Official LGU Solano Facebook Page.</p>
+                        <p>The latest posts published by the Official LGU Aurora Facebook Page.</p>
                     </div>
                     <div className="fb-feed-embed">
                         <iframe
-                            title="Latest posts from the Official LGU Solano Facebook Page"
+                            title="Latest posts from the Official LGU Aurora Facebook Page"
                             src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FOfficialLGUSolano&tabs=timeline&width=500&height=720&small_header=false&adapt_container_width=true&hide_cover=false&show_facecount=true"
                             width="500"
                             height="720"
@@ -127,7 +127,7 @@ export default function NewsPage() {
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Visit the Official LGU Solano Facebook Page
+                            Visit the Official LGU Aurora Facebook Page
                             <i className="bi bi-box-arrow-up-right" aria-hidden="true"></i>
                         </a>
                     </p>
