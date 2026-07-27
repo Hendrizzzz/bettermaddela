@@ -1,0 +1,98 @@
+{
+  "source": "https://region9.dilg.gov.ph/aurora/",
+  "profile": {
+    "lgu_name": "AURORA",
+    "province": "ZAMBOANGA DEL SUR",
+    "region": "IX",
+    "income_class": "2nd class",
+    "population_dilg": 48434,
+    "population_growth_rate": "1.29%",
+    "number_of_barangays": 44,
+    "number_of_households": 9263,
+    "land_area_sq_km": 180.95,
+    "major_lgu_products": "COCONUT",
+    "major_land_use": "AGRICULTURAL",
+    "date_created": "October 12, 1942",
+    "legal_basis": "Legislative Enactment by Congress"
+  },
+  "elected_officials": [
+    {
+      "name": "HON. ENRIQUE J. CABAHUG JR.",
+      "position": "Mun. Mayor",
+      "term": "3rd Term",
+      "party": "LP-NP",
+      "contact": "09177012268"
+    },
+    {
+      "name": "HON. EMMANUEL L. PALMA II",
+      "position": "Vice Mayor",
+      "term": "1st Term",
+      "party": "NPC",
+      "contact": "09209256688"
+    },
+    {
+      "name": "HON. GALLANT ENRIQUE R. CABAHUG",
+      "position": "SBM",
+      "term": "1st Term",
+      "party": "LP-NP",
+      "contact": "09292000586"
+    },
+    {
+      "name": "HON. BONIFACIO J. CABAHUG",
+      "position": "SBM",
+      "term": "1st Term",
+      "party": "LP-NP",
+      "contact": "09177207299"
+    },
+    {
+      "name": "HON. RAUL A. CENIZA",
+      "position": "SBM",
+      "term": "2nd Term",
+      "party": "NPC",
+      "contact": "09282123288"
+    },
+    {
+      "name": "HON. ROSARIO C. PINTOR",
+      "position": "SBM",
+      "term": "3rd Term",
+      "party": "NPC",
+      "contact": "09105411397"
+    },
+    {
+      "name": "HON. ROGELIO S. TIGUE",
+      "position": "SBM",
+      "term": "2nd Term",
+      "party": "LP-NP",
+      "contact": "09062002581"
+    },
+    {
+      "name": "HON. RUBEN B. CODENIERA",
+      "position": "SBM",
+      "term": "2nd Term",
+      "party": "NPC",
+      "contact": "09264089026"
+    },
+    {
+      "name": "HON. ANASTACIO O. RONDRIQUE",
+      "position": "SBM",
+      "term": "1st Term",
+      "party": "NPC",
+      "contact": "09069757353"
+    },
+    {
+      "name": "HON. MARCELO P. CENIZA, JR.",
+      "position": "SBM",
+      "term": "1st Term",
+      "party": "NPC",
+      "contact": "09196041194"
+    }
+  ],
+  "contact": {
+    "office_address": "AURORA, ZAMBOANGA DEL SUR",
+    "fax_number": "062-331-2067",
+    "office_phone": "331-2067",
+    "mobile_phone": "09177012268",
+    "official_email": "lgu_aurorazds@yahoo.com",
+    "official_website": "NONE"
+  }
+}

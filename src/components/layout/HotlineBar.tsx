@@ -3,7 +3,7 @@
 import { useEffect, useRef, useCallback } from 'react';
 
 const hotlines = [
-  { icon: 'bi-shield-fill', label: 'Police', number: '0927 400 8033', tel: '09274008033' },
+  { icon: 'bi-shield-fill', label: 'Police', number: '0950 343 2166', tel: '09503432166' },
   { icon: 'bi-heart-fill', label: 'MSWDO', number: '0916 284 0885', tel: '09162840885' },
   { icon: 'bi-fire', label: 'Fire', number: '0936 062 0305', tel: '09360620305' },
   { icon: 'bi-building', label: 'DILG', number: '0906 188 086', tel: '0906188086' },

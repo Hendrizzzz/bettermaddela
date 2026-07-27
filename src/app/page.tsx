@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useLanguage } from '@/contexts/LanguageContext';
 import SearchAutocomplete, { SearchAutocompleteHandle } from '@/components/SearchAutocomplete';
+import WeatherWidget from '@/components/WeatherWidget';
 import officialsData from '@/data/officials.json';
 
 export default function HomePage() {
@@ -201,34 +202,7 @@ export default function HomePage() {
           <div className="weather-map-grid">
             <div className="weather-column">
               <div id="weather-container" aria-live="polite">
-                <div
-                  className="weather-widget"
-                  role="region"
-                  aria-label="Current weather in Aurora"
-                >
-                  <div className="weather-current">
-                    <div className="weather-current-icon">
-                      <i className="bi bi-cloud-sun-fill"></i>
-                    </div>
-                    <div className="weather-current-info">
-                      <div className="weather-current-temp">29°C</div>
-                      <div className="weather-current-condition">{t('weather-mainly-clear')}</div>
-                      <div className="weather-current-location">
-                        <i className="bi bi-geo-alt"></i> {t('weather-location')}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="weather-stats">
-                    <div className="weather-stat">
-                      <i className="bi bi-droplet"></i>
-                      <span>65%</span>
-                    </div>
-                    <div className="weather-stat">
-                      <i className="bi bi-wind"></i>
-                      <span>12 km/h</span>
-                    </div>
-                  </div>
-                </div>
+                <WeatherWidget />
               </div>
             </div>
             <div className="map-column">

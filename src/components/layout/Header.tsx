@@ -238,14 +238,6 @@ export default function Header() {
             >
               FIL
             </button>
-            <button
-              type="button"
-              className={`btn btn-secondary btn-sm lang-btn ${language === 'ilo' ? 'active' : ''}`}
-              onClick={() => setLanguage('ilo')}
-              aria-label="Switch to Ilocano"
-            >
-              ILO
-            </button>
           </div>
         </div>
 
