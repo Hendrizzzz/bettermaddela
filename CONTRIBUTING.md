@@ -1,68 +1,45 @@
-# Contributing to BetterSolano.org
+# Contributing to BetterAurora.org
 
-Thank you for your interest in contributing to BetterSolano.org! This civic-tech project thrives on community participation. Whether you're a developer, designer, translator, or a concerned citizen of Solano, your contributions are welcome.
+Thank you for your interest in contributing to BetterAurora.org! This civic-tech project thrives on community participation. Whether you're a developer, designer, translator, or a concerned citizen of Aurora, Zamboanga del Sur, your contributions are welcome.
 
-## Choosing a Version
+## Project Architecture
 
-BetterSolano.org has two versions. Choose based on your preference:
+BetterAurora.org is a single Next.js + TypeScript application located at the repository root. The legacy static HTML version and the separate `react-app/` directory have been retired. The `main` branch now contains the active Next.js application.
 
-| Version            | Branch             | Best For                                                          |
-| ------------------ | ------------------ | ----------------------------------------------------------------- |
-| Static HTML        | `main`             | Quick fixes, content updates, contributors new to web development |
-| React + TypeScript | `react-typescript` | New features, complex UI, contributors familiar with React        |
-
-Both versions are actively maintained and contributions to either are welcome.
-
-For detailed differences and migration guidance, see [MIGRATION.md](MIGRATION.md).
+For historical migration guidance, see [MIGRATION.md](MIGRATION.md).
 
 ## Getting Started
 
-### Static HTML Version
-
 #### Prerequisites
 
-- Node.js v16 or higher
-- npm v8 or higher
-- Python 3 (for local development server)
+- [Bun](https://bun.sh/) v1.3 or higher
 - Git
 
 #### Setup
 
 ```bash
-git clone https://github.com/BetterSolano/bettersolano.git
-cd bettersolano
-npm install
-npm run dev
-```
-
-Open http://localhost:8000 in your browser.
-
-### React + TypeScript Version
-
-#### Prerequisites
-
-- Node.js v18 or higher
-- npm v9 or higher
-- Git
-
-#### Setup
-
-```bash
-git clone https://github.com/BetterSolano/bettersolano.git
-cd bettersolano
-git checkout react-typescript
-cd react-app
-npm install
-npm run dev
+git clone https://github.com/BetterAurora/betteraurora.git
+cd betteraurora
+bun install
+bun dev
 ```
 
 Open http://localhost:3000 in your browser.
+
+#### Production build preview
+
+```bash
+bash build.sh
+npx serve -s dist -p 8080
+```
+
+Open http://localhost:8080 in your browser.
 
 ## How to Contribute
 
 ### Reporting Bugs
 
-1. Check existing [issues](https://github.com/BetterSolano/bettersolano/issues) to avoid duplicates
+1. Check existing [issues](https://github.com/BetterAurora/betteraurora/issues) to avoid duplicates
 2. Create a new issue with:
    - Clear, descriptive title
    - Steps to reproduce
@@ -117,7 +94,7 @@ Types:
 | Bug Fixes          | Fix reported issues                  |
 | Features           | Implement new functionality          |
 | Content            | Update municipal service information |
-| Translations       | Translate to Filipino or Ilocano     |
+| Translations       | Translate to Filipino or Cebuano     |
 | Design             | Improve UI/UX and accessibility      |
 | Data               | Verify and update statistics         |
 | Documentation      | Improve guides and comments          |
@@ -183,9 +160,9 @@ Pull requests are reviewed for:
 ## Community
 
 - **Discord:** [Join our community](https://discord.com/invite/qeSu7RJkjQ)
-- **Facebook:** [@bettersolano.org](https://www.facebook.com/bettersolano.org)
-- **LinkedIn:** [Connect with us](https://www.linkedin.com/company/bettersolano)
-- **Email:** volunteer@bettersolano.org
+- **Facebook:** [@betteraurora.org](https://www.facebook.com/betteraurora.org)
+- **LinkedIn:** [Connect with us](https://www.linkedin.com/company/betteraurora)
+- **Email:** volunteer@betteraurora.org
 
 ## Recognition
 
@@ -197,4 +174,4 @@ Feel free to open an issue or reach out on Discord. We're happy to help!
 
 ---
 
-Thank you for helping make government information accessible to the people of Solano.
+Thank you for helping make government information accessible to the people of Aurora, Zamboanga del Sur.

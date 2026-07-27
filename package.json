@@ -1,46 +1,31 @@
 {
-  "name": "bs-web",
-  "version": "1.1.19",
-  "description": "BetterSolano.org - Official Portal for LGU Solano",
+  "name": "betteraurora-web",
+  "version": "1.1.20",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "python3 -m http.server 8000",
-    "build": "bash build.sh",
-    "build:major": "bash scripts/version.sh major && bash build.sh --no-bump",
-    "build:minor": "bash scripts/version.sh minor && bash build.sh --no-bump",
-    "serve": "python3 -m http.server 8000",
-    "serve:dist": "cd dist && python3 -m http.server 8080",
-    "version:major": "node scripts/bump-version.js major",
-    "version:minor": "node scripts/bump-version.js minor",
-    "version:patch": "node scripts/bump-version.js patch",
-    "version:check": "node scripts/bump-version.js",
-    "lighthouse": "lhci autorun",
-    "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "dev": "next dev",
+    "build": "NODE_ENV=production next build",
+    "start": "next start",
+    "serve": "npx serve -s out -p 8000",
+    "serve:dist": "npx serve -s out -p 8080"
   },
-  "keywords": [
-    "solano",
-    "nueva-vizcaya",
-    "government",
-    "lgu"
-  ],
-  "author": "Ramon Logan Jr.",
-  "license": "MIT",
+  "dependencies": {
+    "chart.js": "^4.5.1",
+    "next": "^15.5.19",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
   "devDependencies": {
-    "@babel/cli": "^7.23.9",
-    "@babel/core": "^7.29.6",
-    "@babel/preset-env": "^7.23.9",
-    "@lhci/cli": "^0.15.1",
-    "@playwright/test": "^1.61.0",
-    "clean-css-cli": "^5.6.3",
-    "core-js": "^3.40.0",
-    "html-minifier-terser": "^7.2.0",
-    "playwright": "^1.61.0",
-    "prettier": "^3.8.1",
-    "terser": "^5.44.1"
+    "@serwist/next": "^9.0.0",
+    "@types/chart.js": "^4.0.1",
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "serwist": "^9.0.0",
+    "typescript": "^5.4.5"
   },
   "overrides": {
-    "tmp": "0.2.7",
-    "js-yaml": "^4.2.0",
-    "uuid": "^11.1.1"
+    "postcss": "^8.5.10"
   }
 }

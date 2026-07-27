@@ -1,26 +1,17 @@
-# BetterSolano.org
+# BetterAurora.org
 
-A civic-tech initiative providing transparent access to municipal services, programs, and public funds of LGU Solano, Nueva Vizcaya, Philippines.
+A civic-tech initiative providing transparent access to municipal services, programs, and public funds of LGU Aurora, Zamboanga del Sur, Philippines.
 
-![Version](https://img.shields.io/badge/version-1.1.15-green)
+![Version](https://img.shields.io/badge/version-1.1.20-green)
 ![License](https://img.shields.io/badge/license-MIT%20%7C%20CC%20BY%204.0-blue)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white)
+![Bun](https://img.shields.io/badge/Bun-000000?logo=bun&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?logo=next.js&logoColor=white)
 ![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
 
-## Version Notice
+## Architecture
 
-A **React + TypeScript** version of BetterSolano.org is now available for contributors who prefer modern tooling and component-based architecture.
-
-| Version            | Branch             | Status             | Documentation                |
-| ------------------ | ------------------ | ------------------ | ---------------------------- |
-| Static HTML        | `main`             | Stable             | This README                  |
-| React + TypeScript | `react-typescript` | Active Development | [MIGRATION.md](MIGRATION.md) |
-
-Both versions are actively maintained. New contributors may choose either version based on their preference. For migration guidance, see [MIGRATION.md](MIGRATION.md).
+BetterAurora.org is a Next.js 15 + TypeScript application. The legacy static HTML version and separate `react-app/` workspace have been retired; `main` now contains the single active codebase.
 
 ## Open Source for LGUs
 
@@ -37,13 +28,13 @@ To adapt this project for your LGU, fork the repository and customize the conten
 
 ## About
 
-BetterSolano.org is a volunteer-driven, open-source project that empowers the people of Solano with easy access to local government information. The platform aggregates public data from official government portals and presents it in a user-friendly, accessible format.
+BetterAurora.org is a volunteer-driven, open-source project that empowers the people of Aurora, Zamboanga del Sur with easy access to local government information. The platform aggregates public data from official government portals and presents it in a user-friendly, accessible format.
 
-**Cost to the People of Solano = ₱0**
+**Cost to the People of Aurora, Zamboanga del Sur = ₱0**
 
 ## Live Demo
 
-Visit the live website: [https://bettersolano.org](https://bettersolano.org)
+Visit the live website: [https://betteraurora.org](https://betteraurora.org)
 
 ## Technology Stack
 
@@ -62,9 +53,10 @@ Visit the live website: [https://bettersolano.org](https://bettersolano.org)
 | **Minification**    | html-minifier-terser, clean-css-cli, terser                            |
 | **Code Formatting** | Prettier (auto-format on commit via git pre-commit hook)               |
 | **Version Control** | Git, GitHub                                                            |
-| **Server**          | Apache (.htaccess), mod_rewrite, mod_deflate                           |
-| **Hosting**         | cPanel (Production), Python HTTP Server (Development)                  |
-| **PWA**             | Service Worker (versioned caching, install prompt, seamless updates), Web App Manifest, offline fallback |
+| **Runtime**         | Bun                                                                    |
+| **Server**          | Next.js static export + Apache (.htaccess)                             |
+| **Hosting**         | cPanel (Production), Vercel/Node-compatible static hosting             |
+| **PWA**             | Serwist service worker, install prompt, offline fallback               |
 | **SEO**             | Open Graph, Twitter Cards, XML Sitemap, robots.txt                     |
 | **Security**        | HTTPS, CSP Headers, HSTS, X-Frame-Options                              |
 | **Analytics**       | Google Analytics (gtag.js)                                             |
@@ -81,14 +73,14 @@ Visit the live website: [https://bettersolano.org](https://bettersolano.org)
 | **Legislative Documents**        | Searchable database of ordinances and resolutions from Sangguniang Bayan                                                                                                                                          |
 | **Municipal Statistics**         | Demographics, economic data, and competitive index rankings                                                                                                                                                       |
 | **Appointment Services**         | Online appointment scheduling integration with the Mayor's Office (OASYS), featuring branded Lottie animation                                                                                                     |
-| **Solano Quiz**                  | Interactive quiz about Solano history and culture, linked from homepage CTA and footer across all pages                                                                                                           |
+| **Aurora Quiz**                  | Interactive quiz about Aurora, Zamboanga del Sur history and culture, linked from homepage CTA and footer across all pages                                                                                       |
 | **Real-time Information**        | Live weather updates, currency exchange rates, and Philippine time                                                                                                                                                |
 | **Emergency Hotline Marquee**    | Clickable scrolling marquee for emergency contacts on tablet and mobile viewports, with pause-on-hover/focus accessibility                                                                                        |
 | **Progressive Web App**          | Installable PWA with "Install App" prompt, seamless auto-updates via skipWaiting (no manual refresh), versioned service worker caching (static + runtime), offline fallback page with emergency hotlines, push notification foundation |
 | **Auto Version Management**      | Dynamic version display from `version.json`, auto-bumped on every git commit via pre-commit hook, synced across all 51+ HTML files, `package.json`, and React app                                                 |
-| **Multi-language Support**       | Full i18n coverage in English, Filipino, and Ilocano (5,546 keys per language with perfect parity)                                                                                                                |
+| **Multi-language Support**       | Full i18n coverage in English, Filipino, and Cebuano (5,546 keys per language with perfect parity)                                                                                                                |
 | **Clean URLs**                   | SEO-friendly URLs without `.html` extensions, powered by Apache mod_rewrite                                                                                                                                       |
-| **Brief History of Solano**      | Interactive timeline (1760–1957) with fully translated cards in all three languages                                                                                                                               |
+| **Brief History of Aurora, Zamboanga del Sur** | Interactive timeline with fully translated cards in all three languages                                                                                                                                       |
 | **Mobile Navigation**            | Responsive menu with GPU-accelerated open/close transitions, body scroll lock, animation guard against rapid toggles, debounced resize handling, touch-safe hover scoping, click-outside-to-close, and focus trap |
 | **Accessibility**                | WCAG 2.1 compliant with skip links, ARIA labels, keyboard navigation, and semantic HTML                                                                                                                           |
 | **SEO Optimized**                | Meta tags, Open Graph, Twitter Cards, structured data, and XML sitemap                                                                                                                                            |
@@ -98,19 +90,19 @@ Visit the live website: [https://bettersolano.org](https://bettersolano.org)
 
 ```bash
 # Clone the repository
-git clone https://github.com/BetterSolano/bettersolano.git
+git clone https://github.com/BetterAurora/betteraurora.git
 
 # Navigate to project directory
-cd bettersolano
+cd betteraurora
 
 # Install dependencies
-npm install
+bun install
 
-# Start development server (with clean URL support)
-py serve.py --port 8000 --directory .
+# Start development server
+bun dev
 
 # Open in browser
-# http://localhost:8000
+# http://localhost:3000
 ```
 
 ## Installation
@@ -119,9 +111,7 @@ py serve.py --port 8000 --directory .
 
 | Requirement | Version | Purpose                            |
 | ----------- | ------- | ---------------------------------- |
-| Node.js     | v16+    | Build tools and package management |
-| npm         | v8+     | Dependency management              |
-| Python 3    | v3.x    | Local development server           |
+| Bun         | v1.3+   | Runtime and package manager        |
 | Git         | Latest  | Version control                    |
 
 ### Setup Steps
@@ -129,25 +119,25 @@ py serve.py --port 8000 --directory .
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/BetterSolano/bettersolano.git
-cd bettersolano
+git clone https://github.com/BetterAurora/betteraurora.git
+cd betteraurora
 ```
 
 2. **Install dependencies**
 
 ```bash
-npm install
+bun install
 ```
 
 3. **Start the development server**
 
 ```bash
-npm run dev
+bun dev
 ```
 
 4. **Open in browser**
-   - Development: http://localhost:8000
-   - Production preview: http://localhost:8080 (after build)
+   - Development: http://localhost:3000
+   - Production preview: http://localhost:8080 (after `bash build.sh`)
 
 ## Usage
 
@@ -199,7 +189,7 @@ The site supports three languages with full translation coverage:
 | -------- | ----- | --------------------- |
 | English  | `en`  | Complete (5,546 keys) |
 | Filipino | `fil` | Complete (5,546 keys) |
-| Ilocano  | `ilo` | Complete (5,546 keys) |
+| Cebuano  | `ceb` | Complete (5,546 keys) |
 
 The static site uses a `TranslationEngine` in `assets/js/translations.js` with `data-i18n` attributes on HTML elements. The React version uses a `LanguageContext` provider with a `t()` function. Both systems support fallback to English for any missing keys.
 
@@ -213,21 +203,22 @@ The project maintains three synchronized versions:
 | **React + TypeScript** | `react-app/`    | Modern component-based homepage      |
 | **Production Dist**    | `dist/`         | Minified build for cPanel deployment |
 
-All CSS, images, animations, and translations are kept in sync across all three versions. The build script (`build.sh`) generates the dist from the static legacy source.
+All CSS, images, animations, and translations are kept in sync. The build script (`build.sh`) generates the production `dist/` from the Next.js static export.
 
 ## Project Structure
 
 ```
-bettersolano/
-├── assets/
-│   ├── css/              # Stylesheets (9 files)
-│   ├── js/               # JavaScript modules (18 files)
-│   ├── images/           # Images, icons, banners, partner logos
-│   └── animation/        # Lottie JSON animation files
-├── data/                 # JSON data files
-│   ├── officials.json    # Government officials data
-│   ├── services.json     # Municipal services data
-│   ├── news.json         # News and announcements
+betteraurora/
+├── src/
+│   ├── app/              # Next.js App Router pages
+│   ├── components/       # Reusable React components
+│   └── contexts/         # React Context providers
+├── public/               # Static assets and JSON data
+│   ├── assets/           # Stylesheets, images, animations
+│   └── data/             # Municipal data files
+├── package.json
+├── next.config.mjs
+└── tsconfig.json
 │   ├── ordinances.json   # Legislative ordinances
 │   └── resolutions.json  # Legislative resolutions
 ├── react-app/            # React + TypeScript version
@@ -292,81 +283,36 @@ bettersolano/
 - Raised tablet breakpoint from 991px to 1024px to properly capture iPad Pro portrait (1024px) and iPad Air landscape
 - Converted emergency hotline bar into a clickable scrolling marquee on all tablet and mobile viewports (≤1024px) with pause-on-hover/focus for accessibility
 - Centered hamburger menu icon between logo and language toggle on tablet viewports using flexbox ordering (logo → hamburger → lang toggle)
-- Tablet footer: left-aligned BetterSolano logo, tagline, and social icons to match the visual hierarchy of the brand column
+- Tablet footer: left-aligned BetterAurora logo, tagline, and social icons to match the visual hierarchy of the brand column
 
 #### Progressive Web App (PWA)
 
-- Rewrote `sw.js` with dual-cache architecture: `STATIC_CACHE` (precached app shell) and `RUNTIME_CACHE` (dynamic content, 80-item FIFO, 7-day TTL)
-- Navigation uses network-first with offline fallback; static assets use stale-while-revalidate; data/API uses network-first with cache fallback
-- Added push notification and background sync foundations
-- Enhanced SW registration with 30-minute update polling and non-intrusive refresh banner on new version activation
-- Upgraded `manifest.webmanifest` with maskable icons, app shortcuts (Services, Contact, Government, Transparency), and `orientation: any`
-- Added iOS PWA meta tags (`apple-mobile-web-app-capable`, `apple-mobile-web-app-status-bar-style`, `apple-mobile-web-app-title`)
-- Fixed theme-color from old green (#1a5f2a) to brand blue (#0032a0) across all files
-- Updated offline fallback page colors to match brand
+- Replaced legacy `sw.js` with Serwist-generated service worker via `@serwist/next`
+- Precaches the app shell and uses runtime caching with offline fallback to `~offline`
+- Manifest generated by Next.js metadata API at `/manifest.json`
+- Service worker source at `src/app/sw.ts`
 
 #### Automatic Version Management
 
-- Created cross-platform `scripts/bump-version.js` (Node.js) replacing the bash-only `version.sh` for Windows compatibility
-- Version bump updates `version.json`, `package.json`, all 51+ HTML files, and syncs to `react-app/public/version.json`
-- Git pre-commit hook auto-bumps patch version on every commit (skips version-only commits to prevent loops)
-- Footer version displayed dynamically at runtime via `version.js` fetching from `version.json`
+- `scripts/bump-version.js` updates `version.json` and `package.json`
+- Footer version displayed dynamically at runtime via `version.js` fetching from `/version.json`
 
-#### React App Sync
+#### React / Next.js App
 
-- Created `HotlineBar.tsx` component with tablet/mobile marquee matching static site behavior
-- Created `InfoBar.tsx` component with live exchange rates, weather, and Philippine time
-- Created `SearchAutocomplete.tsx` component with service search dropdown
-- Created `PWAManager.tsx` component handling install prompt and seamless SW updates
-- Updated `Footer.tsx` to dynamically fetch version from `/version.json` instead of hardcoded value
-- Updated `Header.tsx` breakpoint from 991px to 1024px, fixed ARIA attribute string values
-- Updated `layout.tsx` with corrected theme-color, manifest link, Apple PWA meta tags, and PWAManager integration
-- Synced `manifest.webmanifest`, `version.json`, `sw.js`, and all CSS to react-app
+- Single Next.js 15 application now lives at repository root
+- Replaced legacy static HTML and separate `react-app/` directory
+- Development server uses `bun dev` on port 3000
+- Static export produces clean URLs under `out/`; `build.sh` packages the final `dist/`
 
 #### Code Quality & Tooling
 
-- Installed Prettier as dev dependency with project-wide configuration (`.prettierrc`, `.prettierignore`)
-- Formatted entire codebase (120+ files) for consistent code style
-- Git pre-commit hook auto-formats staged files with Prettier before each commit
-- Fixed `privacy/index.html` malformed HTML (duplicate `</body></html>` closing tags)
-- Resolved all npm vulnerabilities: upgraded `@lhci/cli` to ^0.15.1, added `tmp` override to 0.2.5 (0 vulnerabilities)
-- Added `npm run format` and `npm run format:check` scripts
+- Migrated package manager from npm to Bun
+- Next.js static export with clean URLs
+- Serwist PWA integration
 
 ### Previous Changes
 
-### Content & Features
-
-- Added Solano Quiz CTA section on homepage with branded Lottie animation (brand blue `#0032A0`)
-- Added Solano Quiz link to footer Quick Links across all 51 HTML pages and React Footer
-- Added Brief History of Solano interactive timeline section on homepage (1760–1957)
-- Added quiz entry to HTML sitemap page
-- Added Abakada education tools CTA on services/education page with local SVG logo
-
-### Internationalization (i18n)
-
-- Upgraded translation engine to 5,546 keys per language with perfect en/fil/ilo parity
-- Fixed Brief History timeline cards — full paragraph translations now applied via `data-i18n` on `<p>` elements (previously only proper nouns inside `<strong>` tags were translated, leaving surrounding English text intact)
-- Corrected Filipino translations: proper religious title "Padre" (not "Ama"), fully translated historical paragraphs (no half-English)
-- Corrected Ilocano translations: proper Ilocano vocabulary ("Ababa a Pakasaritaan" not Filipino "Maikling Kasaysayan", "Dimteng" not "Dumating", "Ili" not "Lungsod"), fully translated paragraphs
-- Added 54 translation keys for Solano Quiz footer link across all page contexts
-
-### Footer & Copyright
-
-- Standardized copyright across all 51 HTML files and React Footer: three styled spans (`footer-copyright-text`, `footer-copyright-license`, `footer-copyright-disclaimer`)
-- Updated copyright year to 2026, name to "BetterSolano.org"
-- Footer copyright uses `flex-wrap: wrap; gap: 6px` layout with version badge right-aligned via `margin-left: auto`
-- Removed trailing period after "BetterSolano.org" from all pages and all 3 translation languages
-
-### Clean URLs
-
-- Removed `.html` extensions from 621 navigation links across 48 HTML files
-- Apache `.htaccess` rewrite rules handle clean URL resolution on cPanel
-
-### Build & Deployment
-
-- Updated `build.sh` rsync excludes to filter out dev artifacts (`.backup`, `.md`, `package*.json`, `scripts/`, `docs/`, etc.)
-- Production dist: 52 HTML pages, 106 total files, 3.9MB, zero dev artifacts
-- Updated CSP headers: added `worker-src 'self' blob:`, `blob:` to `connect-src`, CDN domains to `connect-src` for dotlottie-player and Bootstrap Icons compatibility
+*Historical release notes for the original static HTML and legacy React app have been archived in the git history.*
 
 ### Cross-Version Sync
 
@@ -376,7 +322,7 @@ bettersolano/
 
 ## Contributing
 
-We welcome contributions from everyone! Whether you're a developer, designer, data researcher, content writer, translator, or a concerned citizen of Solano, your participation helps shape this project for all.
+We welcome contributions from everyone! Whether you're a developer, designer, data researcher, content writer, translator, or a concerned citizen of Aurora, Zamboanga del Sur, your participation helps shape this project for all.
 
 ### How to Contribute
 
@@ -404,7 +350,7 @@ We welcome contributions from everyone! Whether you're a developer, designer, da
 | **Bug Fixes**          | Report issues or submit fixes for existing bugs               |
 | **Features**           | Propose or implement new functionality                        |
 | **Content**            | Update service information, add missing municipal data        |
-| **Translations**       | Help translate content to Filipino or Ilocano                 |
+| **Translations**       | Help translate content to Filipino or Cebuano                 |
 | **Design**             | Improve UI/UX, accessibility, and visual consistency          |
 | **Data**               | Verify and update municipal statistics and records            |
 | **Documentation**      | Enhance README, code comments, and guides                     |
@@ -415,7 +361,7 @@ We welcome contributions from everyone! Whether you're a developer, designer, da
 
 | Guideline         | Description                                                              |
 | ----------------- | ------------------------------------------------------------------------ |
-| **Formatting**    | Prettier auto-formats on commit; run `npm run format` to format manually |
+| **Formatting**    | Prettier auto-formats on commit; run `bun run format` to format manually |
 | **HTML**          | Use semantic HTML5 elements; validate before committing                  |
 | **CSS**           | Follow BEM naming conventions; use CSS custom properties                 |
 | **JavaScript**    | Keep vanilla JS unless proposing framework for data visualization        |
@@ -432,8 +378,8 @@ All public information is sourced from official government portals:
 
 | Source                             | URL                                                                       | Data Type                 |
 | ---------------------------------- | ------------------------------------------------------------------------- | ------------------------- |
-| LGU Solano Official Website        | [solano.gov.ph](https://solano.gov.ph/)                                   | Services, Officials       |
-| Sangguniang Bayan ng Solano        | [sangguniangbayan.solano.gov.ph](https://sangguniangbayan.solano.gov.ph/) | Ordinances, Resolutions   |
+| LGU Aurora Official Website        | [aurorazds.gov.ph](https://aurorazds.gov.ph/)                                           | Services, Officials       |
+| Sangguniang Bayan ng Aurora        | [sangguniangbayan.aurorazds.gov.ph](https://sangguniangbayan.aurorazds.gov.ph/)         | Ordinances, Resolutions   |
 | Bureau of Local Government Finance | [blgf.gov.ph](https://blgf.gov.ph/)                                       | Budget, Financial Reports |
 | Philippine Statistics Authority    | [psa.gov.ph](https://psa.gov.ph/)                                         | Demographics, Census      |
 | DTI CMCI Portal                    | [cmci.dti.gov.ph](https://cmci.dti.gov.ph/)                               | Competitive Index         |
@@ -453,26 +399,26 @@ See [LICENSE](LICENSE) for full details.
 
 | Channel  | Link                                                                      |
 | -------- | ------------------------------------------------------------------------- |
-| Website  | [bettersolano.org](https://bettersolano.org)                              |
-| Email    | volunteer@bettersolano.org                                                |
-| Facebook | [@bettersolano.org](https://www.facebook.com/bettersolano.org)            |
-| LinkedIn | [BetterSolano](https://www.linkedin.com/company/bettersolano/)            |
+| Website  | [betteraurora.org](https://betteraurora.org)                              |
+| Email    | volunteer@betteraurora.org                                                |
+| Facebook | [@betteraurora.org](https://www.facebook.com/betteraurora.org)            |
+| LinkedIn | [BetterAurora](https://www.linkedin.com/company/betteraurora/)            |
 | Discord  | [Join Community](https://discord.com/invite/qeSu7RJkjQ)                   |
-| GitHub   | [BetterSolano/bettersolano](https://github.com/BetterSolano/bettersolano) |
+| GitHub   | [BetterAurora/betteraurora](https://github.com/BetterAurora/betteraurora) |
 
 ## Acknowledgments
 
 - [BetterGov.ph](https://bettergov.ph) for the civic-tech initiative in the Philippines
 - [Abakada.org](https://abakada.org) for supporting civic technology efforts
-- LGU Solano for public data availability and transparency
+- LGU Aurora for public data availability and transparency
 - All volunteers and contributors who dedicate their time
 - Open-source community for the tools and libraries used
-- Citizens of Solano for their feedback and support
+- Citizens of Aurora for their feedback and support
 
 ---
 
-Made for the people of Solano, Nueva Vizcaya
+Made for the people of Aurora, Zamboanga del Sur
 
 ## Developer
 
-[Ramon Logan Jr.](https://ramonloganjr.com/) is a UAE-based full-stack developer and IT professional specializing in web development, design, cloud services, and cybersecurity. He is the developer behind BetterSolano.org, [Abakada.org](https://abakada.org), and the founder of the small cloud-based solutions initiative, [HelloPinas.com](https://hellopinas.com). Ramon actively contributes to civic-tech efforts like [BetterGov.ph](https://bettergov.ph) and is an individual participant in the [OpenJS Foundation](https://openjsf.org/).
+[Ramon Logan Jr.](https://ramonloganjr.com/) is a UAE-based full-stack developer and IT professional specializing in web development, design, cloud services, and cybersecurity. He is the developer behind BetterAurora.org, [Abakada.org](https://abakada.org), and the founder of the small cloud-based solutions initiative, [HelloPinas.com](https://hellopinas.com). Ramon actively contributes to civic-tech efforts like [BetterGov.ph](https://bettergov.ph) and is an individual participant in the [OpenJS Foundation](https://openjsf.org/).
