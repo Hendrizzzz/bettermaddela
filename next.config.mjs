@@ -8,6 +8,7 @@ const revision =
 const withSerwist = withSerwistInit({
   swSrc: 'src/app/sw.ts',
   swDest: 'public/sw.js',
+  disable: process.env.NODE_ENV !== 'production',
   additionalPrecacheEntries: [{ url: '/~offline', revision }],
   // Do not precache the JSON data folder or symlinks if present
   exclude: [/\/_next\/dynamic/, /\.map$/, /^data\//, /^assets\/js\/(translations|main)\.js$/],
