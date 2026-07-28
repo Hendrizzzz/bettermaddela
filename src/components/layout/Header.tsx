@@ -135,6 +135,24 @@ export default function Header() {
           className={`main-nav ${mobileMenuOpen ? 'active' : ''}`}
           aria-label="Main Navigation"
         >
+          <div className={`mobile-lang-actions ${mobileMenuOpen ? 'flex' : 'hidden'} lg:hidden`}>
+            <button
+              type="button"
+              className={`btn btn-secondary btn-sm lang-btn ${language === 'en' ? 'active' : ''}`}
+              onClick={() => setLanguage('en')}
+              aria-label="Switch to English"
+            >
+              EN
+            </button>
+            <button
+              type="button"
+              className={`btn btn-secondary btn-sm lang-btn ${language === 'fil' ? 'active' : ''}`}
+              onClick={() => setLanguage('fil')}
+              aria-label="Switch to Filipino"
+            >
+              FIL
+            </button>
+          </div>
           <ul>
             <li>
               <Link href="/" className={pathname === '/' ? 'active' : ''}>
@@ -244,7 +262,7 @@ export default function Header() {
         <button
           ref={toggleRef}
           type="button"
-          className="mobile-menu-toggle btn btn-secondary"
+          className="mobile-menu-toggle"
           onClick={() => {
             if (isAnimatingRef.current) return;
             if (mobileMenuOpen) {
