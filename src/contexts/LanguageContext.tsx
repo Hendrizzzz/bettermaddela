@@ -432,6 +432,12 @@ const translations: Record<string, Record<string, string>> = {
     'news-power-title': 'Scheduled Power Interruption',
     'news-power-desc': 'Maintenance scheduled for Barangay Osmeña on Dec 1, 8:00 AM - 5:00 PM.',
 
+    // Footer
+    'footer-tagline':
+      'Empowering the people of Aurora with transparent access to the services, programs, and public funds of the Municipality of Aurora, Zamboanga del Sur.',
+    'footer-quick-links': 'Quick Links',
+    'footer-resources': 'Resources',
+    'footer-sitemap': 'Sitemap',
 
     'footer-citizens-charter': "Citizen's Charter",
     'footer-terms': 'Terms of Use',
@@ -900,6 +906,7 @@ const translations: Record<string, Record<string, string>> = {
     'footer-quick-links': 'Mga Mabilisang Link',
     'footer-resources': 'Mga Mapagkukunan',
     'footer-sitemap': 'Mapa ng Site',
+
     'footer-citizens-charter': "Citizen's Charter",
     'footer-terms': 'Mga Tuntunin ng Paggamit',
     'footer-privacy': 'Patakaran sa Privacy',

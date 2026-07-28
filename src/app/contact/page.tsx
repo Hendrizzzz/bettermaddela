@@ -1,6 +1,8 @@
 'use client';
 
+import Link from 'next/link';
 import PageHeader from '@/components/layout/PageHeader';
+import { departmentLinks } from '@/lib/contact';
 
 export default function ContactPage() {
     return (
@@ -18,30 +20,30 @@ export default function ContactPage() {
             <section className="section">
                 <div className="container">
                     <div className="grid grid-3" style={{ gap: 'var(--spacing-md)' }}>
-                        <a href="mailto:lgu_aurorazds@yahoo.com" className="contact-card">
+                        <Link href="mailto:lgu_aurorazds@yahoo.com" className="contact-card">
                             <div className="contact-card-icon"><i className="bi bi-envelope-fill"></i></div>
                             <div className="contact-card-content">
                                 <h3>Email</h3>
                                 <p className="contact-card-value">lgu_aurorazds@yahoo.com</p>
                                 <span className="contact-card-note">We'll respond within 24 hours</span>
                             </div>
-                        </a>
-                        <a href="tel:09177012268" className="contact-card">
+                        </Link>
+                        <Link href="tel:09177012268" className="contact-card">
                             <div className="contact-card-icon"><i className="bi bi-phone-fill"></i></div>
                             <div className="contact-card-content">
                                 <h3>Mobile</h3>
                                 <p className="contact-card-value">0917-701-2268</p>
                                 <span className="contact-card-note">Mon-Fri: 8:00 AM - 5:00 PM</span>
                             </div>
-                        </a>
-                        <a href="tel:0623312067" className="contact-card">
+                        </Link>
+                        <Link href="tel:0623312067" className="contact-card">
                             <div className="contact-card-icon"><i className="bi bi-telephone-fill"></i></div>
                             <div className="contact-card-content">
                                 <h3>Phone</h3>
                                 <p className="contact-card-value">(062) 331-2067</p>
                                 <span className="contact-card-note">Mon-Fri: 8:00 AM - 5:00 PM</span>
                             </div>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -133,19 +135,64 @@ export default function ContactPage() {
                         <p>For medical emergencies and hospital inquiries.</p>
                     </div>
                     <div className="hotlines-grid">
-                        <a href="tel:0917" className="hotline-card hotline-card--medical">
+                        <a href="tel:09177012268" className="hotline-card hotline-card--medical">
                             <i className="bi bi-hospital"></i>
-                            <span>RHU Aurora (number needed)</span>
+                            <span>RHU Aurora 0917 701 2268</span>
                         </a>
-                        <a href="tel:0917" className="hotline-card hotline-card--medical">
+                        <a href="tel:0623312067" className="hotline-card hotline-card--medical">
                             <i className="bi bi-truck"></i>
-                            <span>Ambulance (number needed)</span>
+                            <span>Ambulance (062) 331-2067</span>
                         </a>
-                        <a href="tel:0917" className="hotline-card hotline-card--medical">
+                        <a href="tel:0623312067" className="hotline-card hotline-card--medical">
                             <i className="bi bi-hospital"></i>
-                            <span>Medical Emergency (number needed)</span>
+                            <span>Medical Emergency (062) 331-2067</span>
                         </a>
                     </div>
+                </div>
+            </section>
+
+            <section className="section">
+                <div className="container">
+                    <div className="hotlines-header">
+                        <div className="hotlines-title">
+                            <span className="hotlines-badge hotlines-badge--social">
+                                <i className="bi bi-facebook"></i>
+                                <span>Social</span>
+                            </span>
+                            <h2>Department & Service Pages</h2>
+                        </div>
+                        <p>Follow and reach out to municipal services and partner offices on Facebook.</p>
+                    </div>
+                    <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3" role="list">
+                        {departmentLinks.map((link) => (
+                            <li key={link.href}>
+                                <Link
+                                    href={link.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group flex items-center gap-4 rounded-xl border border-blue-100 bg-white px-5 py-4 shadow-sm transition hover:border-primary-shadcn hover:bg-blue-50 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-shadcn focus-visible:ring-offset-2"
+                                >
+                                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-primary-shadcn transition group-hover:bg-white">
+                                        <i className={`${link.icon} text-xl`}></i>
+                                    </span>
+                                    <span className="min-w-0 flex-1 truncate text-sm font-semibold">
+                                        {link.label}
+                                    </span>
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </section>
+
+            <section className="section bg-alt">
+                <div className="container">
+                    <p className="data-source">
+                        <i className="bi bi-info-circle"></i>
+                        Source: Contact details and social links scraped from the official Municipality of Aurora, Zamboanga del Sur website (
+                        <Link href="https://aurorazds.gov.ph/contact/" target="_blank" rel="noopener noreferrer">aurorazds.gov.ph/contact/</Link>
+                        ) on July 28, 2026.
+                    </p>
                 </div>
             </section>
         </>

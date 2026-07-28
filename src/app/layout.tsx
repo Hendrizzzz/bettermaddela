@@ -1,11 +1,12 @@
 import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
-import HotlineBar from '@/components/layout/HotlineBar';
 import Header from '@/components/layout/Header';
 import InfoBar from '@/components/layout/InfoBar';
 import Footer from '@/components/layout/Footer';
 import PWAManager from '@/components/PWAManager';
 import { LanguageProvider } from '@/contexts/LanguageContext';
+import { cn } from "@/lib/utils";
+import "./globals.css";
 
 export const viewport: Viewport = {
   themeColor: '#0032a0',
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={cn("font-sans")}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -63,14 +64,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <LanguageProvider>
-          <a href="#main-content" className="skip-link">
+          <a href="#main-content" className="skip-link hidden">
             Skip to main content
           </a>
-          <div className="wip-banner" role="status">
-            <i className="bi bi-cone-striped" aria-hidden="true"></i>
-            <span>Work in Progress — this site is under active development.</span>
-          </div>
-          <HotlineBar />
           <Header />
           <InfoBar />
           <main id="main-content">{children}</main>

@@ -61,15 +61,28 @@
   }
 
   .mobile-menu-toggle {
-    order: 2;
+    order: 3;
     flex-shrink: 0;
-    margin: 0 auto;
+    margin: 0;
   }
 
   .header-actions {
-    order: 3;
+    order: 2;
     flex-shrink: 0;
     padding: 2px 0;
+    display: none;
+    }
+    
+    .main-nav.active .mobile-lang-actions {
+      align-items: center;
+      gap: var(--spacing-xs);
+      padding: 8px 16px 12px;
+      border-bottom: 1px solid var(--color-bg-alt);
+    }
+    
+    .mobile-lang-actions .lang-btn {
+      padding: 5px 9px;
+      font-size: 0.6875rem;
   }
 
   .lang-selector {

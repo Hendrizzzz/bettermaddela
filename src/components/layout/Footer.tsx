@@ -28,7 +28,7 @@ export default function Footer() {
               className="footer-logo"
             />
             <p className="footer-tagline">{t('footer-tagline')}</p>
-            <div className="footer-social-new">
+            <div className="footer-social-new hidden">
               <a
                 href="https://www.facebook.com/betteraurora.org"
                 className="footer-social-btn"
@@ -147,7 +147,7 @@ export default function Footer() {
               <i className="bi bi-envelope-heart"></i> {t('footer-volunteer')}
             </a>
             <a
-              href="https://github.com/BetterAurora/bettersolano"
+              href="https://github.com/jayke770/betteraurora"
               className="footer-contribute"
               target="_blank"
               rel="noopener noreferrer"

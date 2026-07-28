@@ -46,13 +46,12 @@ a {
   transition: color 0.2s ease;
 }
 
-a:hover {
-  color: var(--color-primary-dark);
-  text-decoration: underline;
-}
-
 ul {
   list-style: none;
+}
+
+.hidden {
+  display: none !important;
 }
 
 img {
@@ -9627,6 +9626,28 @@ a.a11y-contact-item:hover i {
   color: #0077be;
 }
 
+/* Social / Department Link Cards */
+.hotlines-badge--social {
+  background: linear-gradient(135deg, #0032a0 0%, #1877f2 100%);
+  color: white;
+}
+
+.hotlines-badge--social i {
+  color: white;
+}
+
+.hotline-card--social {
+  border-color: #dbeafe;
+}
+
+.hotline-card--social:hover {
+  border-color: #0032a0;
+  background: #eff6ff;
+}
+
+.hotline-card--social>i {
+  color: #0032a0;
+}
 /* Environmental Initiatives Section */
 .section-compact {
   padding-top: var(--spacing-md);
