@@ -2,14 +2,16 @@
 
 ## BetterAurora foundation
 
-BetterMaddela is a fork and adaptation of
-[BetterAurora](https://github.com/Jayke770/betteraurora). The upstream repository and
-its history supplied the initial Next.js application, design foundation, and
-repository structure.
+BetterMaddela is a standalone adaptation derived from
+[BetterAurora](https://github.com/Jayke770/betteraurora). BetterAurora at upstream
+baseline commit `c9490e83efc712b33c12e3f5ba6d8208f403991a` supplied the initial
+Next.js application, design foundation, repository structure, and retained Git
+history.
 
 - Upstream work: BetterAurora
 - Copyright notice: Copyright (c) 2025-2026 Ramon Logan Jr.
 - Source: <https://github.com/Jayke770/betteraurora>
+- Upstream baseline: `c9490e83efc712b33c12e3f5ba6d8208f403991a`
 - Software license: MIT License
 - Non-code content license: Creative Commons Attribution 4.0 International (CC BY 4.0)
 - Modifications: the project is being renamed, re-scoped, documented, and converted

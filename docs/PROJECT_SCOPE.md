@@ -54,12 +54,13 @@ The MVP does not:
 
 ## Foundation and research boundary
 
-This repository is a fork of `Jayke770/betteraurora` and retains its Git history and
-software foundation under the existing licence and attribution requirements.
-BetterAurora is a design and code starting point only; its municipal facts, images,
-branding, and operational assumptions are not BetterMaddela data. Until that inherited
-content is purged and the applicable checks pass, the application is a conversion
-baseline—not a completed BetterMaddela site.
+This repository is a standalone adaptation derived from `Jayke770/betteraurora` at
+upstream baseline commit `c9490e83efc712b33c12e3f5ba6d8208f403991a`. It retains the
+upstream Git history and software foundation under the existing licence and attribution
+requirements. BetterAurora is a design and code starting point only; its municipal
+facts, images, branding, and operational assumptions are not BetterMaddela data. Until
+that inherited content is purged and the applicable checks pass, the application is a
+conversion baseline—not a completed BetterMaddela site.
 
 Implementation may establish the clean shell, schemas, validation, accessibility, and
 publication controls before civic research is complete. Research is a separate input:
