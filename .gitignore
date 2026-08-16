@@ -3,9 +3,18 @@ node_modules/
 dist/
 .next/
 out/
+*.tsbuildinfo
 *.backup
+*.bak
+
+# Local environment
+.env
+.env.*
+!.env.example
+.local/
+*.local.md
+
 # Serwist generated service worker artifacts
 public/sw.js
 public/sw.js.map
 public/swe-worker-*
-.playwright-mcp

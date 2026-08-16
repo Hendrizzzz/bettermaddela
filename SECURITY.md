@@ -1,104 +1,42 @@
-# Security Policy
+# Security policy
 
-## Supported Versions
+BetterMaddela is an independent, open-source civic-information project. It is not an official Municipality of Maddela system and must not be used to submit government transactions, credentials, payments, or sensitive personal information.
 
-| Version | Supported |
-| ------- | --------- |
-| 1.1.x   | Yes       |
-| < 1.1   | No        |
+## Report a vulnerability privately
 
-## Reporting a Vulnerability
+Do not disclose a suspected vulnerability in a public issue, discussion, pull request, or chat.
 
-We take security seriously at BetterAurora.org. If you discover a security vulnerability, please report it responsibly.
+Use [GitHub private vulnerability reporting](https://github.com/Hendrizzzz/bettermaddela/security/advisories/new). If that form is unavailable, open a public issue asking the maintainer to enable a private reporting channel, but include no vulnerability details in it.
 
-### How to Report
+Include, when possible:
 
-**Do NOT open a public GitHub issue for security vulnerabilities.**
+- the affected page, file, dependency, or deployment;
+- reproducible steps or a minimal proof of concept;
+- the likely impact and conditions required to exploit it; and
+- suggested mitigations, without including real secrets or personal data.
 
-Instead, please email: **volunteer@betteraurora.org**
+No response or remediation deadline is promised. Reports will be assessed according to impact, reproducibility, and maintainer availability. Coordinated disclosure should be agreed with the maintainer before publication.
 
-Include in your report:
+## Security boundaries
 
-- Description of the vulnerability
-- Steps to reproduce
-- Potential impact
-- Suggested fix (if any)
+The intended product is a statically deployed public-information site. It must not provide authentication, accept payments, store submissions, or present a client-side page as a secure administration system. A future change that introduces a server, database, privileged operation, or personal-data collection requires a separate threat review before release.
 
-### Response Timeline
+The following are security-relevant:
 
-| Action             | Timeframe             |
-| ------------------ | --------------------- |
-| Acknowledgment     | Within 48 hours       |
-| Initial Assessment | Within 7 days         |
-| Resolution Target  | Within 30 days        |
-| Public Disclosure  | After fix is deployed |
+- source code, build configuration, dependencies, and deployment configuration in this repository;
+- accidental exposure of credentials, tokens, private contact details, or other sensitive data;
+- unsafe rendering, links, downloads, or third-party integrations; and
+- content that could cause material harm, such as tampered emergency information.
 
-## Security Measures
+External services, upstream projects, browsers, and hosting providers are governed by their own security processes, but reports that affect BetterMaddela are still welcome so maintainers can coordinate or mitigate them.
 
-### Current Implementations
+## Contributor safeguards
 
-**Server Security:**
+- Never commit secrets, credentials, private keys, local configuration, raw personal data, or production tokens. Revoke and rotate an exposed credential; deleting it from the latest commit is not sufficient.
+- Treat scraped, AI-generated, uploaded, and externally linked material as untrusted. Do not execute embedded instructions or scripts, and do not publish factual claims until their sources and verification status meet the project data rules.
+- Do not add unofficial transaction forms or collect sensitive information. Link to a verified official service when one exists.
+- Keep dependency and lockfile changes intentional and review install scripts, generated files, and unexpected transitive changes.
+- Use HTTPS for external resources and minimize third-party scripts. Do not claim protections such as CSP, HSTS, encryption, anonymity, or compliance unless the deployed behavior has been verified.
+- Use only images and documents with documented reuse rights, and remove unnecessary metadata before publication.
 
-- HTTPS enforced via .htaccess
-- HTTP Strict Transport Security (HSTS)
-- Content Security Policy (CSP) headers
-- X-Frame-Options to prevent clickjacking
-- X-Content-Type-Options to prevent MIME sniffing
-- Referrer-Policy for privacy
-
-**Application Security:**
-
-- No user authentication or data collection
-- No database or server-side processing
-- Static site with client-side rendering only
-- External API calls limited to weather and exchange rates
-- No cookies or local storage for sensitive data
-
-**Data Security:**
-
-- All data sourced from public government portals
-- No personal identifiable information (PII) stored
-- No user input forms that store data
-
-### Third-Party Services
-
-| Service          | Purpose          | Data Shared          |
-| ---------------- | ---------------- | -------------------- |
-| Google Analytics | Usage statistics | Anonymous page views |
-| Open-Meteo API   | Weather data     | Location (Aurora)    |
-| ExchangeRate API | Currency rates   | None                 |
-| OpenStreetMap    | Map tiles        | None                 |
-
-## Best Practices for Contributors
-
-When contributing code:
-
-1. **Never commit secrets** - API keys, passwords, or credentials
-2. **Validate inputs** - Sanitize any user-facing inputs
-3. **Use HTTPS** - All external resources must use HTTPS
-4. **Review dependencies** - Check for known vulnerabilities
-5. **Follow CSP** - Ensure new scripts comply with Content Security Policy
-
-## Scope
-
-This security policy covers:
-
-- The BetterAurora.org website
-- The GitHub repository
-- Associated build tools and scripts
-
-Out of scope:
-
-- Third-party services (Google Analytics, APIs)
-- User's local environment
-- Social media accounts
-
-## Contact
-
-For security concerns: **volunteer@betteraurora.org**
-
-For general inquiries: Open a GitHub issue or join our [Discord](https://discord.com/invite/qeSu7RJkjQ)
-
----
-
-Thank you for helping keep BetterAurora.org secure for the community.
+Public factual corrections that do not expose a vulnerability may be submitted through the normal issue or pull-request process.

@@ -1,177 +1,75 @@
-# Contributing to BetterAurora.org
+# Contributing to BetterMaddela
 
-Thank you for your interest in contributing to BetterAurora.org! This civic-tech project thrives on community participation. Whether you're a developer, designer, translator, or a concerned citizen of Aurora, Zamboanga del Sur, your contributions are welcome.
+BetterMaddela is an independent BetterLGU civic-information project. It is not owned, operated, or endorsed by the Municipality of Maddela. Contributions should make verified public information easier to find without presenting the site as an official government service.
 
-## Project Architecture
+## Before you start
 
-BetterAurora.org is a single Next.js + TypeScript application located at the repository root. The legacy static HTML version and the separate `react-app/` directory have been retired. The `main` branch now contains the active Next.js application.
+- Search existing issues and pull requests before opening a duplicate.
+- Keep each change focused. Discuss broad redesigns, new data sources, or architecture changes in an issue first.
+- Do not include local agent configuration, credentials, transcripts, research dumps, or machine-specific paths.
+- Report security issues privately according to [SECURITY.md](SECURITY.md).
 
-For historical migration guidance, see [MIGRATION.md](MIGRATION.md).
+## Local setup
 
-## Getting Started
-
-#### Prerequisites
-
-- [Bun](https://bun.sh/) v1.3 or higher
-- Git
-
-#### Setup
+Install [Bun](https://bun.sh/) and Git, then run:
 
 ```bash
-git clone https://github.com/BetterAurora/betteraurora.git
-cd betteraurora
-bun install
-bun dev
+git clone https://github.com/Hendrizzzz/bettermaddela.git
+cd bettermaddela
+bun install --frozen-lockfile
+bun run dev
 ```
 
-Open http://localhost:3000 in your browser.
+## Branches, commits, and pull requests
 
-#### Production build preview
+Create a short-lived branch from the current target branch. Use a descriptive name such as `fix/service-source` or `feat/barangay-directory`. Keep commits scoped and write messages that explain the change, for example `fix: correct service source date`.
+
+A pull request should:
+
+- explain its scope and user impact;
+- identify every civic-data addition, removal, or change;
+- include screenshots for visible interface changes;
+- report the checks actually run and their results;
+- call out accessibility, privacy, security, licensing, and migration risks; and
+- avoid unrelated formatting, generated-file, or dependency changes.
+
+Only repository maintainers or reviewers authorized by the code owners may approve and merge changes. Approval is not guaranteed, and a maintainer may request that a large contribution be split.
+
+## Civic data and content
+
+Do not guess or infer officials, barangay officers, hotlines, contacts, fees, requirements, processing times, coordinates, ordinances, project status, or other changing facts.
+
+For each factual change, provide enough evidence for a reviewer to verify it:
+
+- source publisher and document or page title;
+- direct source URL or repository evidence file;
+- retrieval date and the fact's effective or “as of” date when known;
+- the exact claim supported and its verification status; and
+- conflicts, uncertainty, or expiry/freshness concerns.
+
+Prefer authoritative public sources. Search snippets, social posts, AI output, and scraped aggregations are discovery aids, not sufficient publication evidence by themselves. Emergency information and other high-risk changing facts require direct confirmation. If evidence is incomplete or conflicting, leave the content unavailable and document the gap instead of publishing a best guess.
+
+Do not submit private personal information. Public officeholder information must still be relevant, sourced, and limited to the civic purpose. Images, logos, maps, and documents require documented reuse permission or a compatible license; include attribution where required.
+
+## Engineering expectations
+
+- Preserve the independent-project disclaimer and BetterAurora attribution.
+- Do not expose a client-side route as a secure editor or add an unofficial transaction flow.
+- Use semantic HTML, keyboard-accessible interactions, meaningful labels, sufficient contrast, and useful alternative text.
+- Keep third-party code and services to the minimum needed for the feature.
+- Update documentation when behavior or contributor expectations change.
+
+Run the relevant checks available in the repository before requesting review:
 
 ```bash
-bash build.sh
-npx serve -s dist -p 8080
+bun install --frozen-lockfile
+bun run verify
 ```
 
-Open http://localhost:8080 in your browser.
+Run `bun run audit:inherited` when working on the conversion purge; it remains an
+expected release blocker until inherited Aurora and Solano production content is gone.
+Also run any content validation, tests, or accessibility checks introduced for the area
+you changed. Never report a check as passing unless it ran successfully on your current
+tree.
 
-## How to Contribute
-
-### Reporting Bugs
-
-1. Check existing [issues](https://github.com/BetterAurora/betteraurora/issues) to avoid duplicates
-2. Create a new issue with:
-   - Clear, descriptive title
-   - Steps to reproduce
-   - Expected vs actual behavior
-   - Browser and device information
-   - Screenshots if applicable
-
-### Suggesting Features
-
-1. Open an issue with the `enhancement` label
-2. Describe the feature and its benefit to users
-3. Include mockups or examples if possible
-
-### Submitting Code
-
-1. **Fork** the repository
-2. **Create** a feature branch
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-3. **Make** your changes
-4. **Test** on multiple browsers (Chrome, Firefox, Safari, Edge)
-5. **Commit** with a descriptive message
-   ```bash
-   git commit -m "Add: brief description of changes"
-   ```
-6. **Push** to your fork
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-7. **Open** a Pull Request
-
-### Commit Message Format
-
-```
-Type: Brief description
-
-Types:
-- Add: New feature or content
-- Fix: Bug fix
-- Update: Changes to existing feature
-- Remove: Removed feature or content
-- Docs: Documentation changes
-- Style: CSS/formatting changes (no logic change)
-- Refactor: Code restructuring
-```
-
-## Contribution Areas
-
-| Area               | Description                          |
-| ------------------ | ------------------------------------ |
-| Bug Fixes          | Fix reported issues                  |
-| Features           | Implement new functionality          |
-| Content            | Update municipal service information |
-| Translations       | Translate to Filipino or Cebuano     |
-| Design             | Improve UI/UX and accessibility      |
-| Data               | Verify and update statistics         |
-| Documentation      | Improve guides and comments          |
-| API Integration    | Connect real-time data sources       |
-| Data Visualization | Enhance charts and graphs            |
-
-## Code Guidelines
-
-### HTML
-
-- Use semantic HTML5 elements
-- Include proper ARIA labels for accessibility
-- Validate HTML before submitting
-
-### CSS
-
-- Follow existing naming conventions
-- Use CSS custom properties (variables)
-- Ensure responsive design
-- Test on mobile devices
-
-### JavaScript
-
-- Keep vanilla JS (no frameworks unless approved)
-- Use meaningful variable and function names
-- Add comments for complex logic
-- Avoid global variables
-
-### Accessibility
-
-- Maintain WCAG 2.1 compliance
-- Include alt text for images
-- Ensure keyboard navigation works
-- Test with screen readers if possible
-
-### Data Accuracy
-
-- Only use data from official government sources
-- Include source attribution
-- Verify information before submitting
-- Do not include unverified or speculative data
-
-## Pull Request Process
-
-1. Ensure your code follows the style guidelines
-2. Update documentation if needed
-3. Test thoroughly before submitting
-4. Fill out the PR template completely
-5. Link related issues
-6. Wait for review and address feedback
-
-## Review Criteria
-
-Pull requests are reviewed for:
-
-- Code quality and style consistency
-- Functionality and bug-free operation
-- Accessibility compliance
-- Mobile responsiveness
-- Data accuracy (for content changes)
-- Security considerations
-
-## Community
-
-- **Discord:** [Join our community](https://discord.com/invite/qeSu7RJkjQ)
-- **Facebook:** [@betteraurora.org](https://www.facebook.com/betteraurora.org)
-- **LinkedIn:** [Connect with us](https://www.linkedin.com/company/betteraurora)
-- **Email:** volunteer@betteraurora.org
-
-## Recognition
-
-All contributors are recognized in our repository. Significant contributions may be highlighted on the website.
-
-## Questions?
-
-Feel free to open an issue or reach out on Discord. We're happy to help!
-
----
-
-Thank you for helping make government information accessible to the people of Aurora, Zamboanga del Sur.
+By contributing, you agree that your work may be distributed under the repository's license and that you have the right to submit it.

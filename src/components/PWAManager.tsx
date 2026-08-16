@@ -42,28 +42,36 @@ export default function PWAManager() {
 
     // Service worker registration + update detection
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js').then((reg) => {
-        setInterval(() => reg.update(), 30 * 60 * 1000);
+      if (process.env.NODE_ENV !== 'production') {
+        void navigator.serviceWorker
+          .getRegistrations()
+          .then((registrations) =>
+            Promise.all(registrations.map((registration) => registration.unregister()))
+          );
+      } else {
+        void navigator.serviceWorker.register('/sw.js').then((reg) => {
+          setInterval(() => reg.update(), 30 * 60 * 1000);
 
-        reg.addEventListener('updatefound', () => {
-          const newWorker = reg.installing;
-          if (!newWorker) return;
-          newWorker.addEventListener('statechange', () => {
-            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-              waitingWorker.current = newWorker;
-              setShowUpdate(true);
-            }
+          reg.addEventListener('updatefound', () => {
+            const newWorker = reg.installing;
+            if (!newWorker) return;
+            newWorker.addEventListener('statechange', () => {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                waitingWorker.current = newWorker;
+                setShowUpdate(true);
+              }
+            });
           });
         });
-      });
 
-      // Seamless reload on controller change
-      let refreshing = false;
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
-        if (refreshing) return;
-        refreshing = true;
-        window.location.reload();
-      });
+        // Seamless reload on controller change
+        let refreshing = false;
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+          if (refreshing) return;
+          refreshing = true;
+          window.location.reload();
+        });
+      }
     }
 
     return () => window.removeEventListener('beforeinstallprompt', onBeforeInstall);
