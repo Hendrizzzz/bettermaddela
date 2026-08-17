@@ -15,7 +15,7 @@
     "verify": "bun run check:repository && bun run audit:inherited && bun run validate:data && bun run typecheck && bun run build && bun run test:accessibility"
   },
   "dependencies": {
-    "next": "^15.5.23",
+    "next": "^16.3.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
