@@ -36,6 +36,15 @@ const forbiddenServiceWorkerPath =
   /(?:^|\/)(?:sw|service-worker)\.(?:js|mjs|ts)$/i;
 const serviceWorkerContentPattern =
   /navigator\.serviceWorker|@serwist|from\s+["']serwist|serwist\//i;
+const allowedPublicAttribution = new Map([
+  ["src/components/SiteFooter.tsx", ["https://github.com/Jayke770/betteraurora"]],
+  ["src/contexts/LanguageContext.tsx", [
+    "BetterAurora foundation",
+    "Adapted from BetterAurora. Attribution does not imply endorsement.",
+    "Pundasyong BetterAurora",
+    "Hinango mula sa BetterAurora. Ang attribution ay hindi nangangahulugang pag-endorso.",
+  ]],
+]);
 
 function readText(path) {
   if (!existsSync(path)) return null;
@@ -98,7 +107,13 @@ function auditInheritedContent() {
     }
     if (inheritedPathPattern.test(path)) findings.push(`${path} (path)`);
     const content = readText(path);
-    if (content !== null && inheritedContentPattern.test(content)) {
+    const auditedContent = content === null
+      ? null
+      : (allowedPublicAttribution.get(path) ?? []).reduce(
+          (result, exactAttribution) => result.replaceAll(exactAttribution, ""),
+          content,
+        );
+    if (auditedContent !== null && inheritedContentPattern.test(auditedContent)) {
       findings.push(`${path} (content)`);
     }
     if (content !== null && serviceWorkerContentPattern.test(content)) {

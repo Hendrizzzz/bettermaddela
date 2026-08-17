@@ -1,79 +1,64 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import PageHeader from "@/components/layout/PageHeader";
 import { RecordMeta } from "@/components/RecordMeta";
 import { getRecord } from "@/data/civic";
 
 export const metadata: Metadata = {
   title: "Barangays",
-  description:
-    "The reviewed PSA list of Maddela's 32 barangays, with PSGC codes, classifications, and 2024 population counts.",
+  description: "The 32 barangays of Maddela, Quirino.",
 };
 
 interface Barangay {
   name: string;
   psgcCode: string;
-  correspondenceCode: string;
-  classification: "Urban" | "Rural";
-  population: number;
 }
+
 interface BarangayData {
   barangayCount: number;
-  psgcPublicationDate: string;
-  populationReferenceDate: string;
-  urbanRuralBasis: string;
   barangays: Barangay[];
+}
+
+function slugify(value: string) {
+  return value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
 }
 
 export default function BarangaysPage() {
   const record = getRecord<BarangayData>("barangay-dataset-2026q2");
 
   return (
-    <div className="shell page-shell">
-      <header className="page-heading">
-        <p className="eyebrow">PSA geographic data</p>
-        <h1>Maddela’s {record.data.barangayCount} barangays</h1>
-        <p>
-          The list preserves the PSA names, codes, classification, and 2024 POPCEN
-          population values exactly. Population reference date: {record.data.populationReferenceDate}.
-        </p>
-        <RecordMeta record={record} />
-      </header>
+    <>
+      <PageHeader
+        title="Barangays of Maddela"
+        description={`${record.data.barangayCount} barangays serving the municipality`}
+        badge={{ icon: "bi bi-geo-alt-fill", label: "Barangay Units" }}
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Government", href: "/government" }, { label: "Barangays" }]}
+      />
 
-      <div
-        aria-label="Complete Maddela barangay list"
-        className="table-wrap wide-table"
-        role="region"
-        tabIndex={0}
-      >
-        <table>
-          <caption>Complete Maddela barangay list from the second-quarter 2026 PSGC publication</caption>
-          <thead>
-            <tr>
-              <th scope="col">Barangay</th>
-              <th scope="col">PSGC code</th>
-              <th scope="col">Correspondence code</th>
-              <th scope="col">Class</th>
-              <th scope="col" className="numeric">2024 population</th>
-            </tr>
-          </thead>
-          <tbody>
+      <section className="section" style={{ background: "var(--color-bg-alt)" }}>
+        <div className="container">
+          <div className="grid grid-4" style={{ gap: "var(--spacing-sm)" }}>
             {record.data.barangays.map((barangay) => (
-              <tr key={barangay.psgcCode}>
-                <th scope="row">{barangay.name}</th>
-                <td><code>{barangay.psgcCode}</code></td>
-                <td><code>{barangay.correspondenceCode}</code></td>
-                <td><span className={`classification classification-${barangay.classification.toLowerCase()}`}>{barangay.classification}</span></td>
-                <td className="numeric">{barangay.population.toLocaleString("en-PH")}</td>
-              </tr>
+              <Link
+                key={barangay.psgcCode}
+                href={`/government/barangays/${slugify(barangay.name)}`}
+                className="barangay-card"
+              >
+                <div className="barangay-card-header">
+                  <i className="bi bi-geo-alt-fill" aria-hidden="true" />
+                  <span className="barangay-name">{barangay.name}</span>
+                </div>
+              </Link>
             ))}
-          </tbody>
-          <tfoot>
-            <tr><th scope="row" colSpan={4}>Total</th><td className="numeric">41,867</td></tr>
-          </tfoot>
-        </table>
-      </div>
-      <p className="table-note">
-        Urban/rural basis: {record.data.urbanRuralBasis}. The total is recomputed by the data validator.
-      </p>
-    </div>
+          </div>
+          <RecordMeta record={record} />
+        </div>
+      </section>
+    </>
   );
 }

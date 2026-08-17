@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { CivicInfoBar } from "@/components/CivicInfoBar";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,11 +17,35 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+        />
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <link rel="stylesheet" href="/assets/css/responsive.css" />
+        <link rel="stylesheet" href="/assets/css/accessibility.css" />
+        <link rel="stylesheet" href="/assets/css/footer.css" />
+        <link rel="stylesheet" href="/assets/css/statistics.css" />
+        <link rel="stylesheet" href="/assets/css/legal.css" />
+        <link rel="stylesheet" href="/assets/css/legislative.css" />
+        <link rel="stylesheet" href="/assets/css/transparency-v2.css" />
+        <link rel="stylesheet" href="/assets/css/maddela.css" />
+      </head>
       <body>
-        <a className="skip-link" href="#main-content">Skip to main content</a>
-        <SiteHeader />
-        <main id="main-content">{children}</main>
-        <SiteFooter />
+        <LanguageProvider>
+          <a className="skip-link" href="#main-content">Skip to main content</a>
+          <SiteHeader />
+          <CivicInfoBar />
+          <main id="main-content">{children}</main>
+          <SiteFooter />
+        </LanguageProvider>
       </body>
     </html>
   );

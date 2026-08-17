@@ -16,9 +16,21 @@ const sha256Pattern = /^[a-f0-9]{64}$/;
 const localPathPattern =
   /\b[A-Za-z]:[\\/]|\\\\[^\\\s]+\\[^\s]+|(?<!:)\/\/[A-Za-z0-9._-]+\/[A-Za-z0-9$._-]+|\/(?:Users|home|tmp|private\/tmp|var\/tmp)\//;
 const today = new Date().toISOString().slice(0, 10);
-const allowedSourceTypes = new Set(["webpage", "pdf", "law", "dataset"]);
+const allowedSourceTypes = new Set([
+  "webpage",
+  "pdf",
+  "law",
+  "dataset",
+  "procurement-record",
+]);
 const allowedSourceStates = new Set(["active", "superseded"]);
-const allowedCadences = new Set(["annually", "manual"]);
+const allowedCadences = new Set([
+  "monthly",
+  "quarterly",
+  "annually",
+  "per-document",
+  "manual",
+]);
 const allowedRecordTypes = new Set([
   "municipal-identity",
   "legal-instrument",
@@ -26,6 +38,13 @@ const allowedRecordTypes = new Set([
   "statistic-series",
   "barangay-dataset",
   "data-quality-reconciliation",
+  "history-profile",
+  "official-snapshot",
+  "office-observation",
+  "news-feed",
+  "procurement-register",
+  "community-profile",
+  "weather-config",
 ]);
 
 function requireText(value, path) {

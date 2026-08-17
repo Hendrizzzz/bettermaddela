@@ -4,6 +4,7 @@ dist/
 .next/
 out/
 .lighthouseci/
+tmp/
 *.tsbuildinfo
 *.backup
 *.bak
