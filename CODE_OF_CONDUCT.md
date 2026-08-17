@@ -2,7 +2,7 @@
 
 ## Our Pledge
 
-BetterAurora.org is a civic-tech project built for the people of Aurora, Zamboanga del Sur. We are committed to providing a welcoming, inclusive, and harassment-free environment for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
+BetterMaddela is an independent civic-information project for Maddela, Quirino. We are committed to providing a welcoming, inclusive, and harassment-free environment for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
 ## Our Standards
 
@@ -11,7 +11,7 @@ BetterAurora.org is a civic-tech project built for the people of Aurora, Zamboan
 - Be respectful and considerate in all interactions
 - Use welcoming and inclusive language
 - Accept constructive criticism gracefully
-- Focus on what is best for the community and the people of Aurora, Zamboanga del Sur
+- Focus on what is best for the people of Maddela and the contributor community
 - Show empathy towards other community members
 - Respect differing viewpoints and experiences
 - Prioritize accuracy when contributing public government data
@@ -31,19 +31,17 @@ BetterAurora.org is a civic-tech project built for the people of Aurora, Zamboan
 This Code of Conduct applies to all project spaces, including:
 
 - GitHub repository (issues, pull requests, discussions)
-- Discord community
-- Social media channels (Facebook, LinkedIn)
-- Email communications
+- Project-maintained communication channels
 - Any public representation of the project
 
 ## Enforcement
 
-Instances of unacceptable behavior may be reported to:
+Report unacceptable behavior privately to the repository maintainer using a contact
+method listed on the maintainer's GitHub profile. If no private method is available,
+open an issue titled `Request private conduct-reporting contact` without including names,
+evidence, or incident details. Security advisories are reserved for vulnerabilities.
 
-- Email: volunteer@betteraurora.org
-- Discord: Contact a moderator
-
-All complaints will be reviewed and investigated promptly and fairly. The project team is obligated to maintain confidentiality regarding the reporter.
+Reports will be reviewed fairly and kept as confidential as reasonably possible.
 
 **Enforcement Actions:**
 
@@ -57,4 +55,4 @@ This Code of Conduct is adapted from the [Contributor Covenant](https://www.cont
 
 ---
 
-By participating in BetterAurora.org, you agree to abide by this Code of Conduct.
+By participating in BetterMaddela, you agree to abide by this Code of Conduct.

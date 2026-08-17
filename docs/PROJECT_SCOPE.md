@@ -1,0 +1,70 @@
+# BetterMaddela project scope
+
+## Purpose
+
+BetterMaddela is an independent, community-maintained BetterLGU civic-information site
+for Maddela, Quirino. It aims to make verified local-government information easier to
+find and understand. It is not owned, operated, endorsed, or approved by the Municipal
+Government of Maddela.
+
+## MVP
+
+The first useful release provides an accessible, responsive, static information layer
+with:
+
+- a prominent independent-project disclaimer;
+- municipal identity and civic records only after their evidence passes the applicable
+  publication gate;
+- source and last-verification information for changing facts;
+- honest unavailable states for missing or conflicting records;
+- focused navigation for verified services, offices, officials, barangays, contacts,
+  transparency records, and legislation as each dataset becomes publishable; and
+- clear attribution, correction, accessibility, privacy, and security information.
+
+The inherited-content removal is implemented. The MVP is complete only after the
+remaining site passes all applicable repository and release checks and any intended
+deployment boundary is separately reviewed.
+
+## Accessibility acceptance
+
+Public pages target WCAG 2.2 Level AA. Before release, representative routes for every
+shared layout and interaction must have:
+
+- an automated accessibility scan with no serious or critical findings;
+- keyboard-only review covering navigation, visible focus, dialogs, forms, and skip
+  links;
+- manual checks for headings, accessible names, error messages, contrast, zoom/reflow,
+  reduced motion, and meaningful alternative text; and
+- a recorded list of routes, browsers, tools, results, and justified exceptions.
+
+UI changes must report the applicable manual checks immediately. The clean-shell work
+must add the automated accessibility gate before any UI is considered release-ready.
+
+## Non-goals
+
+The MVP does not:
+
+- act as an official LGU website or imply government endorsement;
+- accept payments, permit applications, appointments, complaints, or other official
+  transactions;
+- store sensitive resident records;
+- expose a client-side page as secure administration;
+- publish guessed, provisional, conflicting, stale, or unconfirmed civic facts;
+- publish emergency contacts without direct, recent confirmation; or
+- add speculative platforms, services, automation, or infrastructure for future use.
+
+## Foundation and research boundary
+
+This repository is a standalone adaptation derived from `Jayke770/betteraurora` at
+upstream baseline commit `c9490e83efc712b33c12e3f5ba6d8208f403991a`. It retains the
+upstream Git history and software foundation under the existing licence and attribution
+requirements. BetterAurora is a design and code starting point only; its municipal
+facts, images, branding, and operational assumptions are not BetterMaddela data. Until
+that inherited content is purged and the applicable checks pass, the application is a
+conversion baseline—not a completed BetterMaddela site.
+
+Implementation may establish the clean shell, schemas, validation, accessibility, and
+publication controls before civic research is complete. Research is a separate input:
+submitted notes and documents remain evidence candidates until reviewed against
+`docs/data/DATA_CONTRACT.md`. Missing research blocks the affected content, not the
+engineering foundation, and must never be filled with plausible placeholders.

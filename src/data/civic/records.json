@@ -1,0 +1,393 @@
+{
+  "schemaVersion": 1,
+  "records": [
+    {
+      "id": "municipality-identity",
+      "type": "municipal-identity",
+      "label": "Municipality identity and PSGC classification",
+      "data": {
+        "officialName": "Municipality of Maddela",
+        "psgcName": "Maddela",
+        "level": "Municipality",
+        "province": "Quirino",
+        "region": "Region II (Cagayan Valley)",
+        "psgcCode": "0205704000",
+        "correspondenceCode": "025704000",
+        "incomeClass": "1st"
+      },
+      "sourceIds": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
+      "claimSources": {
+        "officialName": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
+        "psgcName": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
+        "level": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
+        "province": ["psa-psgc-2026q2-xlsx"],
+        "region": ["psa-psgc-2026q2-xlsx"],
+        "psgcCode": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
+        "correspondenceCode": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
+        "incomeClass": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-17",
+      "acceptedBy": "bettermaddela-review-2026-08-17-a",
+      "acceptedAt": "2026-08-17T03:50:52+08:00",
+      "nextReviewOn": "2027-06-30",
+      "updateCadence": "annually",
+      "owner": "BetterMaddela identity and statistics data steward",
+      "effectiveFrom": "2026-06-30",
+      "notes": "Municipal classification is civic source data. BetterMaddela remains an independent project and does not represent the LGU."
+    },
+    {
+      "id": "maddela-postal-code-current",
+      "type": "municipal-identity",
+      "label": "PHLPost ZIP code for Maddela",
+      "data": {
+        "municipality": "Maddela",
+        "province": "Quirino",
+        "region": "Region 2 (Cagayan Valley)",
+        "zipCode": "3404"
+      },
+      "sourceIds": ["phlpost-zip-code-locator"],
+      "claimSources": {
+        "municipality": ["phlpost-zip-code-locator"],
+        "province": ["phlpost-zip-code-locator"],
+        "region": ["phlpost-zip-code-locator"],
+        "zipCode": ["phlpost-zip-code-locator"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-17",
+      "acceptedBy": "bettermaddela-review-2026-08-17-a",
+      "acceptedAt": "2026-08-17T03:50:52+08:00",
+      "nextReviewOn": "2027-08-17",
+      "updateCadence": "annually",
+      "owner": "BetterMaddela identity and contact data steward",
+      "notes": "The postal-code record does not establish a Municipal Hall address."
+    },
+    {
+      "id": "legal-eo-368-1950",
+      "type": "legal-instrument",
+      "label": "Executive Order No. 368",
+      "data": {
+        "instrument": "Executive Order No. 368",
+        "exactTitle": "REORGANIZING THE MUNICIPALITIES AND MUNICIPAL DISTRICTS IN THE PROVINCE OF NUEVA VIZCAYA INTO TEN MUNICIPALITIES, DEFINING THEIR BOUNDARIES, AND ABOLISHING THE MUNICIPAL DISTRICTS",
+        "date": "1950-11-11",
+        "relevantProvision": "The opening paragraph names Maddela among ten reorganized municipalities; item 9 defines its historical boundary and states an area of 225,972 hectares, more or less.",
+        "effectivity": "The reorganization and abolition shall take effect immediately."
+      },
+      "sourceIds": ["lawphil-eo-368-1950"],
+      "claimSources": {
+        "instrument": ["lawphil-eo-368-1950"],
+        "exactTitle": ["lawphil-eo-368-1950"],
+        "date": ["lawphil-eo-368-1950"],
+        "relevantProvision": ["lawphil-eo-368-1950"],
+        "effectivity": ["lawphil-eo-368-1950"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-17",
+      "acceptedBy": "bettermaddela-review-2026-08-17-a",
+      "acceptedAt": "2026-08-17T03:50:52+08:00",
+      "nextReviewOn": "2027-08-17",
+      "updateCadence": "manual",
+      "owner": "BetterMaddela legal-source reviewer",
+      "effectiveFrom": "1950-11-11",
+      "notes": "This is a reorganization instrument. It does not establish a Pinappagan renaming claim, definitive founding date, or current municipal area."
+    },
+    {
+      "id": "legal-ra-4734-1966",
+      "type": "legal-instrument",
+      "label": "Republic Act No. 4734",
+      "data": {
+        "instrument": "Republic Act No. 4734",
+        "exactTitle": "An Act Creating the Subprovince of Quirino in the Province of Nueva Vizcaya",
+        "approved": "1966-06-18",
+        "relevantProvision": "Section 1 includes Diffun, Saguday, Aglipay, and Maddela in the Subprovince of Quirino.",
+        "effectivity": "Section 7 states effect upon approval."
+      },
+      "sourceIds": ["lawphil-ra-4734-1966"],
+      "claimSources": {
+        "instrument": ["lawphil-ra-4734-1966"],
+        "exactTitle": ["lawphil-ra-4734-1966"],
+        "approved": ["lawphil-ra-4734-1966"],
+        "relevantProvision": ["lawphil-ra-4734-1966"],
+        "effectivity": ["lawphil-ra-4734-1966"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-17",
+      "acceptedBy": "bettermaddela-review-2026-08-17-a",
+      "acceptedAt": "2026-08-17T03:50:52+08:00",
+      "nextReviewOn": "2027-08-17",
+      "updateCadence": "manual",
+      "owner": "BetterMaddela legal-source reviewer",
+      "effectiveFrom": "1966-06-18",
+      "notes": "This is a province and subprovince history anchor, not a municipal founding instrument."
+    },
+    {
+      "id": "legal-ra-5554-1969",
+      "type": "legal-instrument",
+      "label": "Republic Act No. 5554",
+      "data": {
+        "instrument": "Republic Act No. 5554",
+        "exactTitle": "AN ACT AMENDING REPUBLIC ACT NUMBERED FOUR THOUSAND SEVEN HUNDRED AND THIRTY-FOUR, ENTITLED, \"AN ACT CREATING THE SUEPROVINCE OF QUIRINO IN THE PROVINCE OF NUEVA VIZCAYA,\" AND FOR OTHER SIMILAR PURPOSES.",
+        "approved": "1969-06-21",
+        "relevantProvision": "The amended Section 1 lists Diffun, Saguday, Aglipay, Maddela, and Cabarroguis as municipalities of Quirino Subprovince.",
+        "conditionalProvision": "Section 3 submits specified administrative changes to a plebiscite.",
+        "effectivity": "Section 6 states effect upon approval."
+      },
+      "sourceIds": ["lawphil-ra-5554-1969"],
+      "claimSources": {
+        "instrument": ["lawphil-ra-5554-1969"],
+        "exactTitle": ["lawphil-ra-5554-1969"],
+        "approved": ["lawphil-ra-5554-1969"],
+        "relevantProvision": ["lawphil-ra-5554-1969"],
+        "conditionalProvision": ["lawphil-ra-5554-1969"],
+        "effectivity": ["lawphil-ra-5554-1969"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-17",
+      "acceptedBy": "bettermaddela-review-2026-08-17-a",
+      "acceptedAt": "2026-08-17T03:50:52+08:00",
+      "nextReviewOn": "2027-08-17",
+      "updateCadence": "manual",
+      "owner": "BetterMaddela legal-source reviewer",
+      "effectiveFrom": "1969-06-21",
+      "notes": "Source title spelling is preserved. The instrument does not supply the plebiscite result."
+    },
+    {
+      "id": "legal-ra-6394-1971",
+      "type": "legal-instrument",
+      "label": "Republic Act No. 6394",
+      "data": {
+        "instrument": "Republic Act No. 6394",
+        "exactTitle": "AN ACT TO SEPARATE THE SUB-PROVINCE OF QUIRINO FROM THE PROVINCE OF NUEVA V1ZCAYA AND CONSTITUTE IT INTO A REGULAR PROVINCE TO BE KNOWN AS THE PROVINCE OF QUIRINO.",
+        "approved": "1971-09-10",
+        "relevantProvision": "Section 1 provides for separation and constitution as the Province of Quirino.",
+        "conditionalProvision": "Section 11 states that corporate existence follows a favorable plebiscite.",
+        "effectivity": "Section 13 states effect upon approval."
+      },
+      "sourceIds": ["lawphil-ra-6394-1971"],
+      "claimSources": {
+        "instrument": ["lawphil-ra-6394-1971"],
+        "exactTitle": ["lawphil-ra-6394-1971"],
+        "approved": ["lawphil-ra-6394-1971"],
+        "relevantProvision": ["lawphil-ra-6394-1971"],
+        "conditionalProvision": ["lawphil-ra-6394-1971"],
+        "effectivity": ["lawphil-ra-6394-1971"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-17",
+      "acceptedBy": "bettermaddela-review-2026-08-17-a",
+      "acceptedAt": "2026-08-17T03:50:52+08:00",
+      "nextReviewOn": "2027-08-17",
+      "updateCadence": "manual",
+      "owner": "BetterMaddela legal-source reviewer",
+      "effectiveFrom": "1971-09-10",
+      "notes": "Source title spelling is preserved. The instrument does not supply the plebiscite result."
+    },
+    {
+      "id": "legal-bp-345-1983",
+      "type": "legal-instrument",
+      "label": "Batas Pambansa Blg. 345",
+      "data": {
+        "instrument": "Batas Pambansa Blg. 345",
+        "exactTitle": "An Act Creating the Municipality of Nagtipunan, in the Province of Quirino",
+        "approved": "1983-02-25",
+        "barangaysInSection1": ["San Dionisio II", "Anak", "Ponggo", "Landingan", "Wasid", "Matmad", "San Ramos", "San Pugo", "La Conwap", "Sangbay", "Mattaddi", "Guino", "Old Gumiad"],
+        "statedAction": "The listed barangays, then within Maddela, are separated and constituted into the Municipality of Nagtipunan.",
+        "conditionalProvision": "Section 3 requires ratification by a majority of votes cast in the proposed municipality.",
+        "effectivity": "Section 5 states effect upon approval."
+      },
+      "sourceIds": ["lawphil-bp-345-1983"],
+      "claimSources": {
+        "instrument": ["lawphil-bp-345-1983"],
+        "exactTitle": ["lawphil-bp-345-1983"],
+        "approved": ["lawphil-bp-345-1983"],
+        "barangaysInSection1": ["lawphil-bp-345-1983"],
+        "statedAction": ["lawphil-bp-345-1983"],
+        "conditionalProvision": ["lawphil-bp-345-1983"],
+        "effectivity": ["lawphil-bp-345-1983"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-17",
+      "acceptedBy": "bettermaddela-review-2026-08-17-a",
+      "acceptedAt": "2026-08-17T03:50:52+08:00",
+      "nextReviewOn": "2027-08-17",
+      "updateCadence": "manual",
+      "owner": "BetterMaddela legal-source reviewer",
+      "effectiveFrom": "1983-02-25",
+      "notes": "The instrument does not supply the plebiscite result. Its area statement is not used to calculate current Maddela land area."
+    },
+    {
+      "id": "legal-bp-533-1983",
+      "type": "legal-instrument",
+      "label": "Batas Pambansa Blg. 533",
+      "data": {
+        "instrument": "Batas Pambansa Blg. 533",
+        "exactTitle": "An Act Providing for the Establishment, Operation and Maintenance of a Ten-Bed Municipal Hospital in the Municipality of Maddela, Province of Quirino, and Providing Funds Therefor",
+        "approved": "1983-06-24",
+        "relevantProvision": "Section 1 provides for a ten-bed hospital known as the Maddela Municipal Hospital.",
+        "effectivity": "Section 4 states effect upon approval."
+      },
+      "sourceIds": ["lawphil-bp-533-1983"],
+      "claimSources": {
+        "instrument": ["lawphil-bp-533-1983"],
+        "exactTitle": ["lawphil-bp-533-1983"],
+        "approved": ["lawphil-bp-533-1983"],
+        "relevantProvision": ["lawphil-bp-533-1983"],
+        "effectivity": ["lawphil-bp-533-1983"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-17",
+      "acceptedBy": "bettermaddela-review-2026-08-17-a",
+      "acceptedAt": "2026-08-17T03:50:52+08:00",
+      "nextReviewOn": "2027-08-17",
+      "updateCadence": "manual",
+      "owner": "BetterMaddela legal-source reviewer",
+      "effectiveFrom": "1983-06-24",
+      "notes": "This historical law does not establish a current facility name, licence, capacity, or emergency service."
+    },
+    {
+      "id": "legal-ra-7239-1992",
+      "type": "legal-instrument",
+      "label": "Republic Act No. 7239",
+      "data": {
+        "instrument": "Republic Act No. 7239",
+        "exactTitle": "AN ACT INCREASING THE BED CAPACITY OF THE MADDELA MEDICARE COMMUNITY HOSPITAL IN THE MUNICIPALITY OF MADDELA, PROVINCE OF QUIRINO, FROM TEN (10) TO TWENTY-FIVE (25) BEDS, AND APPROPRIATING FUNDS THEREFOR",
+        "approved": "1992-03-19",
+        "relevantProvision": "Section 1 increases the stated bed capacity from 10 to 25.",
+        "effectivity": "Section 3 states effect upon approval."
+      },
+      "sourceIds": ["lawphil-ra-7239-1992"],
+      "claimSources": {
+        "instrument": ["lawphil-ra-7239-1992"],
+        "exactTitle": ["lawphil-ra-7239-1992"],
+        "approved": ["lawphil-ra-7239-1992"],
+        "relevantProvision": ["lawphil-ra-7239-1992"],
+        "effectivity": ["lawphil-ra-7239-1992"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-17",
+      "acceptedBy": "bettermaddela-review-2026-08-17-a",
+      "acceptedAt": "2026-08-17T03:50:52+08:00",
+      "nextReviewOn": "2027-08-17",
+      "updateCadence": "manual",
+      "owner": "BetterMaddela legal-source reviewer",
+      "effectiveFrom": "1992-03-19",
+      "notes": "This historical law does not establish the present facility name, institutional continuity, licensed capacity, or emergency services."
+    },
+    {
+      "id": "population-2024-popcen",
+      "type": "statistic",
+      "label": "2024 Census of Population count",
+      "data": {
+        "population": 41867,
+        "census": "2024 Census of Population (2024 POPCEN)",
+        "referenceDate": "2024-07-01"
+      },
+      "sourceIds": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
+      "claimSources": {
+        "population": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
+        "census": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
+        "referenceDate": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-17",
+      "acceptedBy": "bettermaddela-review-2026-08-17-a",
+      "acceptedAt": "2026-08-17T03:50:52+08:00",
+      "nextReviewOn": "2027-08-17",
+      "updateCadence": "annually",
+      "owner": "BetterMaddela statistics data steward",
+      "effectiveFrom": "2024-07-01",
+      "notes": "This is a dated census count, not a live population estimate."
+    },
+    {
+      "id": "barangay-dataset-2026q2",
+      "type": "barangay-dataset",
+      "label": "Complete PSGC barangay list with 2024 populations",
+      "data": {
+        "barangayCount": 32,
+        "psgcPublicationDate": "2026-06-30",
+        "psgcWebpageCountAsOf": "2025-07-31",
+        "populationReferenceDate": "2024-07-01",
+        "urbanRuralBasis": "2020 Census of Population and Housing, as labelled in the PSA publication",
+        "barangays": [
+          { "name": "Abbag", "psgcCode": "0205704001", "correspondenceCode": "025704001", "classification": "Rural", "population": 951 },
+          { "name": "Balligui", "psgcCode": "0205704003", "correspondenceCode": "025704003", "classification": "Rural", "population": 2538 },
+          { "name": "Divisoria Sur", "psgcCode": "0205704004", "correspondenceCode": "025704004", "classification": "Rural", "population": 1149 },
+          { "name": "Buenavista", "psgcCode": "0205704005", "correspondenceCode": "025704005", "classification": "Rural", "population": 1434 },
+          { "name": "Cabaruan", "psgcCode": "0205704006", "correspondenceCode": "025704006", "classification": "Rural", "population": 1916 },
+          { "name": "Cabua-an", "psgcCode": "0205704007", "correspondenceCode": "025704007", "classification": "Rural", "population": 845 },
+          { "name": "Cofcaville", "psgcCode": "0205704008", "correspondenceCode": "025704008", "classification": "Rural", "population": 796 },
+          { "name": "Diduyon", "psgcCode": "0205704009", "correspondenceCode": "025704009", "classification": "Rural", "population": 933 },
+          { "name": "Dipintin", "psgcCode": "0205704010", "correspondenceCode": "025704010", "classification": "Rural", "population": 3122 },
+          { "name": "Divisoria Norte", "psgcCode": "0205704011", "correspondenceCode": "025704011", "classification": "Rural", "population": 666 },
+          { "name": "Dumabato Norte", "psgcCode": "0205704012", "correspondenceCode": "025704012", "classification": "Rural", "population": 1528 },
+          { "name": "Dumabato Sur", "psgcCode": "0205704013", "correspondenceCode": "025704013", "classification": "Rural", "population": 1484 },
+          { "name": "Lusod", "psgcCode": "0205704014", "correspondenceCode": "025704014", "classification": "Rural", "population": 2175 },
+          { "name": "Manglad", "psgcCode": "0205704015", "correspondenceCode": "025704015", "classification": "Rural", "population": 692 },
+          { "name": "Pedlisan", "psgcCode": "0205704016", "correspondenceCode": "025704016", "classification": "Rural", "population": 822 },
+          { "name": "Poblacion Norte", "psgcCode": "0205704017", "correspondenceCode": "025704017", "classification": "Urban", "population": 2949 },
+          { "name": "San Bernabe", "psgcCode": "0205704019", "correspondenceCode": "025704019", "classification": "Rural", "population": 1321 },
+          { "name": "San Dionisio I", "psgcCode": "0205704021", "correspondenceCode": "025704021", "classification": "Rural", "population": 625 },
+          { "name": "San Martin", "psgcCode": "0205704023", "correspondenceCode": "025704023", "classification": "Rural", "population": 1085 },
+          { "name": "San Pedro", "psgcCode": "0205704024", "correspondenceCode": "025704024", "classification": "Rural", "population": 1260 },
+          { "name": "San Salvador", "psgcCode": "0205704025", "correspondenceCode": "025704025", "classification": "Rural", "population": 537 },
+          { "name": "Santo Niño", "psgcCode": "0205704026", "correspondenceCode": "025704026", "classification": "Rural", "population": 1195 },
+          { "name": "Santo Tomas", "psgcCode": "0205704027", "correspondenceCode": "025704027", "classification": "Rural", "population": 623 },
+          { "name": "Villa Gracia", "psgcCode": "0205704028", "correspondenceCode": "025704028", "classification": "Rural", "population": 904 },
+          { "name": "Villa Hermosa Sur", "psgcCode": "0205704029", "correspondenceCode": "025704029", "classification": "Rural", "population": 2412 },
+          { "name": "Villa Hermosa Norte", "psgcCode": "0205704030", "correspondenceCode": "025704030", "classification": "Rural", "population": 1739 },
+          { "name": "Ysmael", "psgcCode": "0205704032", "correspondenceCode": "025704032", "classification": "Rural", "population": 642 },
+          { "name": "Villa Agullana", "psgcCode": "0205704034", "correspondenceCode": "025704034", "classification": "Rural", "population": 528 },
+          { "name": "Poblacion Sur", "psgcCode": "0205704036", "correspondenceCode": "025704036", "classification": "Urban", "population": 2156 },
+          { "name": "Villa Jose V Ylanan", "psgcCode": "0205704037", "correspondenceCode": "025704037", "classification": "Rural", "population": 582 },
+          { "name": "Jose Ancheta", "psgcCode": "0205704038", "correspondenceCode": "025704038", "classification": "Rural", "population": 1235 },
+          { "name": "Santa Maria", "psgcCode": "0205704039", "correspondenceCode": "025704039", "classification": "Rural", "population": 1023 }
+        ]
+      },
+      "sourceIds": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
+      "claimSources": {
+        "barangayCount": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
+        "psgcPublicationDate": ["psa-psgc-2026q2-xlsx"],
+        "psgcWebpageCountAsOf": ["psa-psgc-maddela"],
+        "populationReferenceDate": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
+        "urbanRuralBasis": ["psa-psgc-2026q2-xlsx"],
+        "barangays": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-17",
+      "acceptedBy": "bettermaddela-review-2026-08-17-a",
+      "acceptedAt": "2026-08-17T03:50:52+08:00",
+      "nextReviewOn": "2027-06-30",
+      "updateCadence": "annually",
+      "owner": "BetterMaddela barangay and statistics data steward",
+      "effectiveFrom": "2026-06-30",
+      "notes": "Names, punctuation, codes, and code gaps are preserved. Only Poblacion Norte and Poblacion Sur are classified Urban in the source."
+    },
+    {
+      "id": "barangay-population-reconciliation",
+      "type": "data-quality-reconciliation",
+      "label": "Barangay count and population reconciliation",
+      "data": {
+        "barangayRows": 32,
+        "barangayPopulationSum": 41867,
+        "municipalPopulation": 41867,
+        "difference": 0
+      },
+      "sourceIds": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
+      "claimSources": {
+        "barangayRows": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
+        "barangayPopulationSum": ["psa-psgc-2026q2-xlsx"],
+        "municipalPopulation": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
+        "difference": ["psa-psgc-2026q2-xlsx"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-17",
+      "acceptedBy": "bettermaddela-review-2026-08-17-a",
+      "acceptedAt": "2026-08-17T03:50:52+08:00",
+      "nextReviewOn": "2027-06-30",
+      "updateCadence": "annually",
+      "owner": "BetterMaddela data-quality reviewer",
+      "effectiveFrom": "2024-07-01",
+      "notes": "The sum is recomputed by validation whenever the production dataset changes."
+    }
+  ]
+}
