@@ -1,7 +1,12 @@
 import recordsDocument from "./records.json";
 import sourcesDocument from "./sources.json";
 
-export type SourceType = "webpage" | "pdf" | "law" | "dataset";
+export type SourceType =
+  | "webpage"
+  | "pdf"
+  | "law"
+  | "dataset"
+  | "procurement-record";
 
 export interface CivicSource {
   id: string;
@@ -31,7 +36,12 @@ export interface CivicRecord<TData = unknown> {
   acceptedBy: string;
   acceptedAt: string;
   nextReviewOn: string;
-  updateCadence: "annually" | "manual";
+  updateCadence:
+    | "monthly"
+    | "quarterly"
+    | "annually"
+    | "per-document"
+    | "manual";
   owner: string;
   effectiveFrom?: string;
   effectiveTo?: string;

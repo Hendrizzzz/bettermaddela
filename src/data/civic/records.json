@@ -446,6 +446,501 @@
       "owner": "BetterMaddela data-quality reviewer",
       "effectiveFrom": "2024-07-01",
       "notes": "The sum is recomputed by validation whenever the production dataset changes."
+    },
+    {
+      "id": "maddela-history-profile",
+      "type": "history-profile",
+      "label": "A sourced public history of Maddela",
+      "data": {
+        "overview": "Maddela's civic story begins before the modern municipality, in a landscape shaped by Indigenous communities, river valleys, forests and later migration. A local compilation records settlement and road-building stories from 1919 and the 1920s; these are presented as local tradition, while laws and institutional sources anchor the documented milestones that followed.",
+        "sections": [
+          {
+            "period": "Before 1950",
+            "title": "Communities, migration and Pinappagan",
+            "kind": "local-tradition",
+            "text": "A local historical compilation describes Ilongot or Bugkalot and Dumagat communities in the wider area, then an Ilocano settlement effort led by forester Vicente Velasco in 1919 at a place called Pinappagan. Because the compilation does not cite archival records for every name and date, BetterMaddela attributes this account rather than treating it as a controlling legal history."
+          },
+          {
+            "period": "November 11, 1950",
+            "title": "The documented municipal reorganization",
+            "kind": "documented-legal-milestone",
+            "text": "Executive Order No. 368 reorganized municipalities and municipal districts in Nueva Vizcaya, included Maddela among ten municipalities, defined its historical boundary and took effect immediately. The order is the clearest recovered legal milestone for Maddela's modern municipal status; it does not itself prove an exact Pinappagan renaming date."
+          },
+          {
+            "period": "1966-1971",
+            "title": "Maddela becomes part of Quirino",
+            "kind": "documented-legal-milestone",
+            "text": "Republic Act No. 4734 included Maddela in the Subprovince of Quirino in 1966. Republic Act No. 5554 amended that arrangement in 1969, and Republic Act No. 6394 provided for Quirino's separation from Nueva Vizcaya as a regular province in 1971. The laws' plebiscite conditions are preserved without inventing results not stated in the inspected texts."
+          },
+          {
+            "period": "February 25, 1983",
+            "title": "Territorial change and Nagtipunan",
+            "kind": "documented-legal-milestone",
+            "text": "Batas Pambansa Blg. 345 provided for thirteen barangays then within Maddela to form the Municipality of Nagtipunan, subject to a plebiscite. This later territorial change is why Maddela's 1950 historical boundary and area are not presented as its current geography."
+          },
+          {
+            "period": "February 9, 2004",
+            "title": "A protected landscape",
+            "kind": "documented-legal-milestone",
+            "text": "Proclamation No. 548 established the Quirino Protected Landscape across portions of Maddela and other municipalities. Its landscape-wide area is not a measure of Maddela's municipal land area."
+          },
+          {
+            "period": "Maddela today",
+            "title": "A rural municipality shaped by farms, learning and nature",
+            "kind": "institutional-context",
+            "text": "Maddela is a first-income-class municipality of 32 barangays with an official 2024 population of 41,867. Public institutions and sources connect its present identity with agriculture, Quirino State University's campus in Dipintin, the protected landscape and destinations such as Governor's Rapids and Maddela Waterfalls. These are source-scoped descriptions, not promotional rankings."
+          }
+        ],
+        "publicationNote": "Local tradition and documented legal fact are intentionally distinguished. No single unsupported founding or renaming date, current land area, visitor schedule or tourism safety claim is inferred."
+      },
+      "sourceIds": [
+        "local-history-maddela-2013",
+        "lawphil-eo-368-1950",
+        "lawphil-ra-4734-1966",
+        "lawphil-ra-5554-1969",
+        "lawphil-ra-6394-1971",
+        "lawphil-bp-345-1983",
+        "lawphil-proc-548-2004",
+        "psa-psgc-maddela",
+        "psa-popcen-quirino-2024",
+        "qsu-maddela-campus",
+        "quirino-tourism-maddela"
+      ],
+      "claimSources": {
+        "overview": ["local-history-maddela-2013", "lawphil-eo-368-1950"],
+        "sections": ["local-history-maddela-2013", "lawphil-eo-368-1950", "lawphil-ra-4734-1966", "lawphil-ra-5554-1969", "lawphil-ra-6394-1971", "lawphil-bp-345-1983", "lawphil-proc-548-2004", "psa-psgc-maddela", "psa-popcen-quirino-2024", "qsu-maddela-campus", "quirino-tourism-maddela"],
+        "sections.0": ["local-history-maddela-2013"],
+        "sections.1": ["lawphil-eo-368-1950"],
+        "sections.2": ["lawphil-ra-4734-1966", "lawphil-ra-5554-1969", "lawphil-ra-6394-1971"],
+        "sections.3": ["lawphil-bp-345-1983"],
+        "sections.4": ["lawphil-proc-548-2004"],
+        "sections.5": ["psa-psgc-maddela", "psa-popcen-quirino-2024", "qsu-maddela-campus", "lawphil-proc-548-2004", "quirino-tourism-maddela"],
+        "publicationNote": ["local-history-maddela-2013", "lawphil-eo-368-1950", "lawphil-proc-548-2004", "quirino-tourism-maddela"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-18",
+      "acceptedBy": "bettermaddela-review-2026-08-18-c",
+      "acceptedAt": "2026-08-18T01:25:03+08:00",
+      "nextReviewOn": "2027-08-18",
+      "updateCadence": "manual",
+      "owner": "BetterMaddela history and legal-source reviewer",
+      "notes": "This narrative complements, and does not replace, the existing record-level legal instruments."
+    },
+    {
+      "id": "maddela-leadership-snapshot",
+      "type": "official-snapshot",
+      "label": "Dated municipal and congressional leadership observations",
+      "data": {
+        "leaders": [
+          {
+            "name": "Rimel C. Tolentino",
+            "title": "Municipal Mayor",
+            "scope": "Municipality of Maddela",
+            "asOf": "2026-07-17",
+            "evidenceContext": "Identified as mayor in independent PSA and DMW government releases dated May and July 2026."
+          },
+          {
+            "name": "Midy N. Cua",
+            "title": "District Representative",
+            "scope": "Quirino, Lone District",
+            "asOf": "2026-08-18",
+            "evidenceContext": "Listed on the official House of Representatives member profile for the 20th Congress."
+          }
+        ],
+        "limitations": "This is a dated, partial snapshot. It does not establish exact term dates or supply a current vice mayor, complete Sangguniang Bayan roster, vacancies, acting appointments or ex-officio seats."
+      },
+      "sourceIds": ["psa-cbms-board-maddela-2026", "dmw-maddela-caravan-2026", "house-midy-cua-20th"],
+      "claimSources": {
+        "leaders": ["psa-cbms-board-maddela-2026", "dmw-maddela-caravan-2026", "house-midy-cua-20th"],
+        "leaders.0": ["psa-cbms-board-maddela-2026", "dmw-maddela-caravan-2026"],
+        "leaders.1": ["house-midy-cua-20th"],
+        "limitations": ["psa-cbms-board-maddela-2026", "dmw-maddela-caravan-2026", "house-midy-cua-20th"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-18",
+      "acceptedBy": "bettermaddela-review-2026-08-18-c",
+      "acceptedAt": "2026-08-18T01:25:03+08:00",
+      "nextReviewOn": "2026-09-17",
+      "updateCadence": "monthly",
+      "owner": "BetterMaddela governance data steward",
+      "notes": "Text-only observations; no portrait reuse rights are implied."
+    },
+    {
+      "id": "maddela-office-head-observations",
+      "type": "office-observation",
+      "label": "Dated municipal office-head observations",
+      "data": {
+        "observations": [
+          {
+            "office": "Municipal Civil Registry Office",
+            "person": "Nelia L. Culian",
+            "displayedTitle": "Municipal Civil Registrar",
+            "asOf": "2026-07-20",
+            "evidenceContext": "Named in the PSA release about APCAS going live in Maddela."
+          },
+          {
+            "office": "Public Employment Service Office",
+            "person": "Flordelie L. Sagabaen",
+            "displayedTitle": "PESO Manager",
+            "asOf": "2026-07-17",
+            "evidenceContext": "Named in the DMW Region 2 government-service-caravan planning release."
+          },
+          {
+            "office": "Municipal Planning and Development Office",
+            "person": "Lemuel Rey Maranion, EnP",
+            "displayedTitle": "MPDC",
+            "asOf": "2025-08-07",
+            "evidenceContext": "Named in the PSA release about the 2024 CBMS data-turnover event."
+          },
+          {
+            "office": "Municipal Economic Enterprise Office / Data Protection",
+            "person": "George O. Colebra",
+            "displayedTitle": "Municipal Economic Enterprise Officer; DPO-designate in the event context",
+            "asOf": "2025-08-07",
+            "evidenceContext": "Named in the PSA release about the 2024 CBMS data-turnover event."
+          }
+        ],
+        "limitations": "These are source-dated observations, not a complete signed directory. They do not establish current office hours, direct contacts, service requirements or continuity beyond each as-of date."
+      },
+      "sourceIds": ["psa-apcas-maddela-2026", "dmw-maddela-caravan-2026", "psa-cbms-turnover-maddela-2025"],
+      "claimSources": {
+        "observations": ["psa-apcas-maddela-2026", "dmw-maddela-caravan-2026", "psa-cbms-turnover-maddela-2025"],
+        "observations.0": ["psa-apcas-maddela-2026"],
+        "observations.1": ["dmw-maddela-caravan-2026"],
+        "observations.2": ["psa-cbms-turnover-maddela-2025"],
+        "observations.3": ["psa-cbms-turnover-maddela-2025"],
+        "limitations": ["psa-apcas-maddela-2026", "dmw-maddela-caravan-2026", "psa-cbms-turnover-maddela-2025"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-18",
+      "acceptedBy": "bettermaddela-review-2026-08-18-c",
+      "acceptedAt": "2026-08-18T01:25:03+08:00",
+      "nextReviewOn": "2026-09-17",
+      "updateCadence": "monthly",
+      "owner": "BetterMaddela municipal-office data steward",
+      "notes": "Older or conflicting office-holder candidates are not included."
+    },
+    {
+      "id": "maddela-news-feed",
+      "type": "news-feed",
+      "label": "Curated government and agency updates about Maddela",
+      "data": {
+        "items": [
+          {
+            "id": "apcas-go-live-2026",
+            "headline": "APCAS Goes Live in the Municipality of Maddela",
+            "summary": "PSA reports that the Administrative Petition for Correction Automated System went live with Maddela's Local Civil Registry Office. The story is a program update, not a Citizen's Charter or fee schedule.",
+            "publisher": "Philippine Statistics Authority - Quirino Provincial Statistical Office",
+            "publishedAt": "2026-07-20",
+            "eventDate": "2026-07-20",
+            "category": "Civil registration",
+            "status": "recent",
+            "canonicalUrl": "https://rsso02.psa.gov.ph/content/apcas-goes-live-municipality-maddela"
+          },
+          {
+            "id": "dmw-caravan-planning-2026",
+            "headline": "Government service caravan and job-fair planning for Maddela",
+            "summary": "DMW Region 2 and the Municipal Government of Maddela discussed preparations for a service caravan and job fair. The inspected release gives no final public event date, so this remains a planning update rather than an active event notice.",
+            "publisher": "Department of Migrant Workers Regional Office 2 - Cagayan Valley",
+            "publishedAt": "2026-07-17",
+            "category": "Employment and public service",
+            "status": "planning-update",
+            "canonicalUrl": "https://ro2.dmw.gov.ph/news-release/7-17-2026"
+          },
+          {
+            "id": "sbdp-compliance-monitoring-2026",
+            "headline": "DILG Quirino confirms compliance of infrastructure projects with standards",
+            "summary": "PIA reports DILG monitoring and compliant Field Density Test results at road-project sites in San Pedro, Villa Agullana and Manglad. The source supports progress and compliance at the reported stage, not project completion or a final cost.",
+            "publisher": "Philippine Information Agency",
+            "publishedAt": "2026-03-13",
+            "eventDate": "2026-03-04",
+            "category": "Projects and monitoring",
+            "status": "archive",
+            "canonicalUrl": "https://pia.gov.ph/news/luzon/cv/dilg-quirino-confirms-compliance-of-infra-projects-with-standards/"
+          },
+          {
+            "id": "pasalubong-center-opening-2026",
+            "headline": "DTI backs newly opened Pasalubong Center in Maddela",
+            "summary": "PIA reports the dated opening of a local-products center with DTI support. Current hours, inventory and continued operation were not established by this research pass.",
+            "publisher": "Philippine Information Agency",
+            "publishedAt": "2026-03-12",
+            "category": "Local economy",
+            "status": "archive",
+            "canonicalUrl": "https://pia.gov.ph/news/luzon/cv/dti-backs-newly-opened-pasalubong-center-in-maddela/"
+          }
+        ],
+        "limitations": "This is a selected agency-news feed, not a complete municipal announcement archive. Original dates, stages and links are retained; article images are not reused."
+      },
+      "sourceIds": ["psa-apcas-maddela-2026", "dmw-maddela-caravan-2026", "pia-sbdp-compliance-2026", "pia-pasalubong-2026"],
+      "claimSources": {
+        "items": ["psa-apcas-maddela-2026", "dmw-maddela-caravan-2026", "pia-sbdp-compliance-2026", "pia-pasalubong-2026"],
+        "items.0": ["psa-apcas-maddela-2026"],
+        "items.1": ["dmw-maddela-caravan-2026"],
+        "items.2": ["pia-sbdp-compliance-2026"],
+        "items.3": ["pia-pasalubong-2026"],
+        "limitations": ["psa-apcas-maddela-2026", "dmw-maddela-caravan-2026", "pia-sbdp-compliance-2026", "pia-pasalubong-2026"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-18",
+      "acceptedBy": "bettermaddela-review-2026-08-18-c",
+      "acceptedAt": "2026-08-18T01:25:03+08:00",
+      "nextReviewOn": "2026-09-18",
+      "updateCadence": "monthly",
+      "owner": "BetterMaddela news and currentness editor",
+      "notes": "The DMW item intentionally has no eventDate because the inspected release did not establish one."
+    },
+    {
+      "id": "maddela-procurement-register",
+      "type": "procurement-register",
+      "label": "Selected Maddela procurement records",
+      "data": {
+        "items": [
+          {
+            "id": "philgeps-11406198",
+            "title": "Construction of Recycling Facility Building (PHASE I)",
+            "procuringEntity": "Municipality of Maddela, Quirino",
+            "referenceNumber": "11406198",
+            "amountLabel": "Approved Budget for the Contract (ABC)",
+            "amount": 1600962,
+            "currency": "PHP",
+            "publishedAt": "2024-10-29",
+            "closingDate": "2024-11-19",
+            "stage": "Awarded",
+            "stageAsOf": "2024-12-31",
+            "canonicalUrl": "https://notices.philgeps.gov.ph/GEPSNONPILOT/Tender/PrintableBidNoticeAbstractUI.aspx?refid=11406198",
+            "limitations": "The inspected abstract does not establish the awardee, contract amount, delivery, construction completion or acceptance."
+          },
+          {
+            "id": "ffedis-2026-06-832",
+            "title": "Supply & Delivery of Rice",
+            "procuringEntity": "Municipal Agriculture Office - LGU Maddela",
+            "referenceNumber": "PR 2026-06-832; contract control 2026-SSA-0001",
+            "amountLabel": "Contract price",
+            "amount": 6000240,
+            "currency": "PHP",
+            "quantity": "13,044 bags, 10 kg each",
+            "publishedAt": "2026-06-30",
+            "closingDate": "2026-07-03",
+            "stage": "Contract executed",
+            "stageAsOf": "2026-07-09",
+            "canonicalUrl": "https://ffedis.da.gov.ph/negotiated-procurement/public/view/1913",
+            "limitations": "The inspected procurement page, purchase request, award and contract do not prove delivery, inspection, acceptance, payment or beneficiary distribution."
+          }
+        ],
+        "limitations": "Selected public records only; this is not a complete procurement inventory, Annual Procurement Plan or BAC archive. Award and contract execution are not completion claims."
+      },
+      "sourceIds": ["philgeps-11406198", "da-ffedis-2026-06-832", "ffedis-2026-06-832-purchase-request", "ffedis-2026-06-832-notice-of-award", "ffedis-2026-06-832-contract"],
+      "claimSources": {
+        "items": ["philgeps-11406198", "da-ffedis-2026-06-832", "ffedis-2026-06-832-purchase-request", "ffedis-2026-06-832-notice-of-award", "ffedis-2026-06-832-contract"],
+        "items.0": ["philgeps-11406198"],
+        "items.1": ["da-ffedis-2026-06-832", "ffedis-2026-06-832-purchase-request", "ffedis-2026-06-832-notice-of-award", "ffedis-2026-06-832-contract"],
+        "limitations": ["philgeps-11406198", "da-ffedis-2026-06-832", "ffedis-2026-06-832-purchase-request", "ffedis-2026-06-832-notice-of-award", "ffedis-2026-06-832-contract"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-18",
+      "acceptedBy": "bettermaddela-review-2026-08-18-c",
+      "acceptedAt": "2026-08-18T01:25:03+08:00",
+      "nextReviewOn": "2026-11-18",
+      "updateCadence": "per-document",
+      "owner": "BetterMaddela transparency and procurement reviewer",
+      "notes": "The erroneous alternate rice record of 120 sacks and PHP 100,800 is not imported."
+    },
+    {
+      "id": "maddela-community-profile",
+      "type": "community-profile",
+      "label": "Source-scoped community profile",
+      "data": {
+        "summary": "Maddela's strongest public-source community profile is in agriculture, higher education, protected landscapes and nature-based destinations. These are institutional descriptions, not a complete economic census, business registry or visitor guide.",
+        "themes": [
+          {
+            "label": "Agriculture",
+            "description": "The Provincial Government's profile associates Maddela with corn, rice, coffee, banana, pineapple and peanut. These are profile-listed crops, not current production shares, rankings or output totals."
+          },
+          {
+            "label": "Environment",
+            "description": "Proclamation No. 548 includes portions of Maddela in the Quirino Protected Landscape. The proclamation's landscape-wide area is not Maddela's municipal land area."
+          }
+        ],
+        "institutions": [
+          {
+            "name": "Quirino State University - Maddela Campus",
+            "type": "Higher-education campus",
+            "location": "Dipintin, Maddela",
+            "limitations": "The institutional page supports the campus and location; current programs, contacts and administration should be rechecked quarterly."
+          }
+        ],
+        "places": [
+          {
+            "name": "Governor's Rapids",
+            "type": "River and rapids destination",
+            "locationContext": "Identified on the Provincial Government's Maddela tourism profile",
+            "limitations": "No current hours, fees, access restrictions, water conditions or rescue coverage were established."
+          },
+          {
+            "name": "Maddela Eco-Tourism Park / Maddela Waterfalls",
+            "type": "Nature and waterfall destination",
+            "locationContext": "Identified on the Provincial Government's Maddela tourism profile",
+            "limitations": "No current operating rules, fees, closures or safety notice were established."
+          },
+          {
+            "name": "Maria Angela Falls",
+            "type": "Waterfall destination",
+            "locationContext": "Identified on the Provincial Government's Maddela tourism profile",
+            "limitations": "No current operating, access or safety information was established."
+          }
+        ],
+        "limitations": "No unsupported superlatives, production totals, employment figures, business counts, visitor schedules, fees, safety claims or image rights are included."
+      },
+      "sourceIds": ["quirino-tourism-maddela", "qsu-maddela-campus", "lawphil-proc-548-2004"],
+      "claimSources": {
+        "summary": ["quirino-tourism-maddela", "qsu-maddela-campus", "lawphil-proc-548-2004"],
+        "themes": ["quirino-tourism-maddela", "lawphil-proc-548-2004"],
+        "themes.0": ["quirino-tourism-maddela"],
+        "themes.1": ["lawphil-proc-548-2004"],
+        "institutions": ["qsu-maddela-campus"],
+        "institutions.0": ["qsu-maddela-campus"],
+        "places": ["quirino-tourism-maddela"],
+        "places.0": ["quirino-tourism-maddela"],
+        "places.1": ["quirino-tourism-maddela"],
+        "places.2": ["quirino-tourism-maddela"],
+        "limitations": ["quirino-tourism-maddela", "qsu-maddela-campus", "lawphil-proc-548-2004"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-18",
+      "acceptedBy": "bettermaddela-review-2026-08-18-c",
+      "acceptedAt": "2026-08-18T01:25:03+08:00",
+      "nextReviewOn": "2026-11-18",
+      "updateCadence": "quarterly",
+      "owner": "BetterMaddela community-profile data steward",
+      "notes": "Tourism images and agency logos are not cleared for reuse by these source records."
+    },
+    {
+      "id": "maddela-weather-config",
+      "type": "weather-config",
+      "label": "Live weather and map configuration",
+      "data": {
+        "pagasaStation": {
+          "siteId": "5076",
+          "name": "Maddela, Quirino AWS",
+          "verifiedOn": "2026-08-18"
+        },
+        "forecastProvider": {
+          "name": "Open-Meteo",
+          "endpoint": "https://api.open-meteo.com/v1/forecast",
+          "documentationUrl": "https://open-meteo.com/en/docs",
+          "termsUrl": "https://open-meteo.com/en/terms",
+          "attribution": "Weather data by Open-Meteo.com",
+          "timezone": "Asia/Manila"
+        },
+        "forecastPoint": {
+          "latitude": 16.3414,
+          "longitude": 121.6849,
+          "providerResultLabel": "Maddela",
+          "providerAdministrativeLevel": "Municipality of Maddela",
+          "verifiedOn": "2026-08-18",
+          "classification": "technical-forecast-point",
+          "disclaimer": "Open-Meteo returned this point for Maddela on 2026-08-18. It is used only to request a model forecast and is not presented as Municipal Hall, an official centroid, a boundary or a cadastral coordinate."
+        },
+        "map": {
+          "searchUrl": "https://www.openstreetmap.org/search?query=Maddela%2C%20Quirino%2C%20Philippines",
+          "attribution": "© OpenStreetMap contributors"
+        }
+      },
+      "sourceIds": ["pagasa-aws", "openmeteo-docs", "openmeteo-terms", "openmeteo-geocoding-maddela-2026", "osm-copyright"],
+      "claimSources": {
+        "pagasaStation": ["pagasa-aws"],
+        "forecastProvider": ["openmeteo-docs", "openmeteo-terms", "openmeteo-geocoding-maddela-2026"],
+        "forecastPoint": ["openmeteo-geocoding-maddela-2026"],
+        "map": ["osm-copyright"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-18",
+      "acceptedBy": "bettermaddela-review-2026-08-18-c",
+      "acceptedAt": "2026-08-18T01:25:03+08:00",
+      "nextReviewOn": "2026-11-18",
+      "updateCadence": "quarterly",
+      "owner": "BetterMaddela weather-integration maintainer",
+      "notes": "Never store live weather values in this civic dataset. Open-Meteo model output is separate from the PAGASA station inventory and must not be described as an official PAGASA forecast."
+    },
+    {
+      "id": "maddela-households-2024",
+      "type": "statistic",
+      "label": "2024 household and institutional population profile",
+      "data": {
+        "totalPopulation": 41867,
+        "householdPopulation": 41802,
+        "numberOfHouseholds": 10414,
+        "institutionalPopulation": 65,
+        "referenceDate": "2024-07-01",
+        "census": "2024 Census of Population (2024 POPCEN)"
+      },
+      "sourceIds": ["psa-popcen-2024-region2-tables"],
+      "claimSources": {
+        "totalPopulation": ["psa-popcen-2024-region2-tables"],
+        "householdPopulation": ["psa-popcen-2024-region2-tables"],
+        "numberOfHouseholds": ["psa-popcen-2024-region2-tables"],
+        "institutionalPopulation": ["psa-popcen-2024-region2-tables"],
+        "referenceDate": ["psa-popcen-2024-region2-tables"],
+        "census": ["psa-popcen-2024-region2-tables"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-18",
+      "acceptedBy": "bettermaddela-review-2026-08-18-c",
+      "acceptedAt": "2026-08-18T01:25:03+08:00",
+      "nextReviewOn": "2027-08-18",
+      "updateCadence": "annually",
+      "owner": "BetterMaddela statistics data steward",
+      "effectiveFrom": "2024-07-01",
+      "notes": "Institutional population is the derived difference 41,867 minus 41,802. The other three counts are transcribed from the PSA workbook. This is a dated census profile, not a live estimate."
+    },
+    {
+      "id": "maddela-poverty-estimates",
+      "type": "statistic-series",
+      "label": "Municipal small-area poverty estimates",
+      "data": {
+        "measure": "Poverty incidence among population (percent)",
+        "method": "Philippine Statistics Authority small-area estimate",
+        "series": [
+          {
+            "year": 2018,
+            "estimatePercent": 9.25
+          },
+          {
+            "year": 2021,
+            "estimatePercent": 8.802885
+          },
+          {
+            "year": 2023,
+            "estimatePercent": 6.991652
+          }
+        ],
+        "latest": {
+          "year": 2023,
+          "estimatePercent": 6.991652,
+          "coefficientOfVariationPercent": 12.8007806082,
+          "standardErrorPercentagePoints": 0.8949860334,
+          "confidenceLevelPercent": 90,
+          "lowerBoundPercent": 5.519399975,
+          "upperBoundPercent": 8.463904025
+        }
+      },
+      "sourceIds": ["psa-sae-2023-table"],
+      "claimSources": {
+        "measure": ["psa-sae-2023-table"],
+        "method": ["psa-sae-2023-table"],
+        "series": ["psa-sae-2023-table"],
+        "latest": ["psa-sae-2023-table"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-18",
+      "acceptedBy": "bettermaddela-review-2026-08-18-c",
+      "acceptedAt": "2026-08-18T01:25:03+08:00",
+      "nextReviewOn": "2027-08-18",
+      "updateCadence": "annually",
+      "owner": "BetterMaddela statistics data steward",
+      "effectiveFrom": "2018-01-01",
+      "effectiveTo": "2023-12-31",
+      "notes": "These are model-based estimates, not exact headcounts. Display the latest estimate with its covered year and 90% confidence interval; do not describe changes between years as statistically significant without a supported test."
     }
   ]
 }

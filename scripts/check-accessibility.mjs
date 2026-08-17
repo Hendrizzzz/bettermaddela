@@ -1,20 +1,19 @@
 import AxeBuilder from "@axe-core/playwright";
 import { createServer } from "node:http";
-import { readFile, stat } from "node:fs/promises";
+import { readFile, readdir, stat } from "node:fs/promises";
 import { extname, resolve, sep } from "node:path";
 import { chromium } from "playwright-core";
 
 const outputRoot = resolve("out");
-const routes = [
-  "/",
-  "/population/",
-  "/barangays/",
-  "/legal-history/",
-  "/sources/",
-  "/accessibility/",
-  "/privacy/",
-  "/404.html",
-];
+const routes = (await readdir(outputRoot, { recursive: true }))
+  .filter((path) => path.endsWith(".html"))
+  .map((path) => path.replaceAll("\\", "/"))
+  .map((path) => {
+    if (path === "index.html") return "/";
+    if (path.endsWith("/index.html")) return `/${path.slice(0, -"index.html".length)}`;
+    return `/${path}`;
+  })
+  .sort();
 const contentTypes = new Map([
   [".css", "text/css; charset=utf-8"],
   [".html", "text/html; charset=utf-8"],

@@ -14,9 +14,12 @@ history.
 - Upstream baseline: `c9490e83efc712b33c12e3f5ba6d8208f403991a`
 - Software license: MIT License
 - Non-code content license: Creative Commons Attribution 4.0 International (CC BY 4.0)
-- Modifications: the project is being renamed, re-scoped, documented, and converted
-  into an independent civic-information project for Maddela. The Git history records
-  detailed code changes.
+- Modifications: the project was renamed and re-scoped for Maddela while preserving
+  the upstream blue visual system, responsive page compositions, navigation, cards,
+  and footer. The two BetterMaddela logo SVGs are modified versions of the upstream
+  BetterAurora logo artwork with the municipal name changed. Aurora-specific civic
+  claims, links, integrations, and operational assumptions were removed or replaced
+  with reviewed Maddela records. The Git history records detailed code changes.
 
 The original copyright and license notices are preserved in [LICENSE](LICENSE).
 BetterMaddela's maintainers and contributors do not claim authorship of unmodified
@@ -38,6 +41,9 @@ government website is not proof that BetterMaddela may reuse them. Every retaine
 non-code asset must have a documented source, rights holder, license or permission,
 required attribution, and modification status. Material without a demonstrable reuse
 basis must be removed before release.
+
+The public interface requests the Inter stylesheet from Google Fonts and Bootstrap
+Icons from jsDelivr. Those providers and assets remain subject to their own terms.
 
 Maddela research submissions are evidence candidates, not automatically licensed
 project content. Publication and preservation of source material must follow
