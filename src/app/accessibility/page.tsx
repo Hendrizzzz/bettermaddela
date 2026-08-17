@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Accessibility" };
+export const metadata: Metadata = {
+  title: "Accessibility",
+  description:
+    "BetterMaddela's accessibility commitment, current verification approach, and issue-reporting path.",
+};
 
 export default function AccessibilityPage() {
   return (

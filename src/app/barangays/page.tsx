@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import { RecordMeta } from "@/components/RecordMeta";
 import { getRecord } from "@/data/civic";
 
-export const metadata: Metadata = { title: "Barangays" };
+export const metadata: Metadata = {
+  title: "Barangays",
+  description:
+    "The reviewed PSA list of Maddela's 32 barangays, with PSGC codes, classifications, and 2024 population counts.",
+};
 
 interface Barangay {
   name: string;

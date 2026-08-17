@@ -110,6 +110,14 @@ h3 {
   min-height: 4.5rem;
 }
 
+.project-notice {
+  margin-top: -0.35rem;
+  padding-bottom: 0.65rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
 .wordmark {
   display: inline-flex;
   align-items: center;

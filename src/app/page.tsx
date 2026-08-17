@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import { RecordMeta } from "@/components/RecordMeta";
-import { getRecord } from "@/data/civic";
+import { RecordMetaGroup } from "@/components/RecordMeta";
+import { getRecord, records } from "@/data/civic";
+
+export const metadata: Metadata = {
+  description:
+    "Reviewed population, barangay, identity, postal, and legal-source information about Maddela, Quirino.",
+};
 
 interface IdentityData {
   officialName: string;
@@ -19,6 +25,7 @@ export default function HomePage() {
   const postal = getRecord<PostalData>("maddela-postal-code-current");
   const population = getRecord<PopulationData>("population-2024-popcen");
   const barangays = getRecord<BarangayData>("barangay-dataset-2026q2");
+  const legalRecordCount = records.filter((record) => record.type === "legal-instrument").length;
 
   return (
     <>
@@ -84,7 +91,14 @@ export default function HomePage() {
             </dd>
           </div>
         </dl>
-        <RecordMeta record={population} />
+        <RecordMetaGroup
+          records={[
+            { label: "population", record: population },
+            { label: "barangays", record: barangays },
+            { label: "income class", record: identity },
+            { label: "ZIP code", record: postal },
+          ]}
+        />
       </section>
 
       <section className="section section-tint">
@@ -96,18 +110,18 @@ export default function HomePage() {
           <div className="card-grid">
             <article className="content-card">
               <p className="card-kicker">Statistics</p>
-              <h3><Link href="/population">Population over time</Link></h3>
-              <p>The latest official census count, with its source and review date.</p>
+              <h3><Link href="/population">Population and growth</Link></h3>
+              <p>Published census counts since 2000 and PSA annual growth rates.</p>
             </article>
             <article className="content-card">
               <p className="card-kicker">Geography</p>
-              <h3><Link href="/barangays">All 32 barangays</Link></h3>
+              <h3><Link href="/barangays">All {barangays.data.barangayCount} barangays</Link></h3>
               <p>Names, PSGC identifiers, classifications, and 2024 populations.</p>
             </article>
             <article className="content-card">
               <p className="card-kicker">History</p>
               <h3><Link href="/legal-history">Legal source timeline</Link></h3>
-              <p>Seven full-text national legal instruments, presented with limits.</p>
+              <p>{legalRecordCount} full-text national legal instruments, presented with limits.</p>
             </article>
           </div>
         </div>

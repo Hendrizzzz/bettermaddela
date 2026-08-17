@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Privacy" };
+export const metadata: Metadata = {
+  title: "Privacy",
+  description:
+    "How BetterMaddela's static information site handles privacy, external links, and sensitive information.",
+};
 
 export default function PrivacyPage() {
   return (
