@@ -12,11 +12,21 @@ make verified civic information about Maddela, Quirino easier to find and unders
 **Pre-release / verified-baseline shell.** Inherited municipal production content has
 been removed. The application publishes a deliberately small reviewed baseline:
 municipal identity, postal code, the latest census population, the complete PSA
-barangay dataset, and seven reviewed legal instruments.
+barangay dataset, census population history and growth rates, and seven reviewed
+legal instruments.
 
 Officials, contacts, emergency information, service details, local legislation,
 transparency records, project status, and media remain unavailable until their
 record-specific publication gates pass.
+
+### Next steps
+
+1. Review and import useful civic records only when they pass the
+   [civic-data publication gate](docs/data/DATA_CONTRACT.md).
+2. Complete the remaining manual accessibility, link, privacy, and security release
+   checks.
+3. Connect the repository to Vercel, inspect a preview deployment, and publish only
+   after the release checks pass.
 
 ## Technical foundation
 
@@ -38,6 +48,26 @@ bun run dev
 The development server is available at `http://localhost:3000`. The verification
 command checks repository policy, inherited content, civic data, types, the static
 build, and automated accessibility across every public route.
+
+### Deployment readiness
+
+No hosting project, production domain, or deployment credentials are configured in
+this repository. To deploy on Vercel:
+
+1. Run `bun install --frozen-lockfile` and `bun run verify` on `main`, and proceed only
+   when that revision is safe to expose at a public Vercel URL.
+2. In Vercel, create a project by importing this GitHub repository. The initial
+   deployment of `main` is a production deployment, not a private preview.
+3. Keep the detected **Next.js** framework preset, repository root, build command, and
+   output settings. No environment variables are currently required.
+4. After the initial connection, use branch or pull-request deployments for review;
+   keep `main` as the production branch.
+
+Vercel automatically detects Next.js and applies framework defaults. The existing
+`package.json` build script and `next.config.mjs` static-export settings are sufficient,
+so a `vercel.json` file is not needed unless a future requirement must override those
+defaults. See Vercel's official [Git deployment guide](https://vercel.com/docs/git) and
+[project configuration reference](https://vercel.com/docs/project-configuration).
 
 ## Civic-data discipline
 

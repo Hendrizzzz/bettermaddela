@@ -26,6 +26,9 @@ export function SiteHeader() {
           </ul>
         </nav>
       </div>
+      <p className="shell project-notice">
+        Independent community project — not an official government website.
+      </p>
     </header>
   );
 }

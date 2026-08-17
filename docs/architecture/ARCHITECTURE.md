@@ -49,8 +49,12 @@ third-party trust boundaries.
 ### Deployment
 
 This repository produces a host-agnostic static export. It does not currently define
-or verify a production hosting provider, live domain, server-side security headers, or
-deployment credentials. Those properties must not be claimed based on a local build.
+or verify a live hosting project, production domain, server-side security headers, or
+deployment credentials. Vercel is the documented first deployment path, but connecting
+the repository and configuring a domain remain external release actions. Vercel's
+Next.js framework defaults, the existing `package.json` build script, and
+`next.config.mjs` are sufficient for the current application; no `vercel.json` override
+is needed. None of these deployment properties may be claimed based on a local build.
 
 ## Explicit non-goals
 

@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { records, sources, sourcesFor } from "@/data/civic";
 
-export const metadata: Metadata = { title: "Sources and verification" };
+export const metadata: Metadata = {
+  title: "Sources and verification",
+  description:
+    "The evidence, review dates, limitations, and publication boundaries for BetterMaddela's civic records.",
+};
 
 export default function SourcesPage() {
   return (

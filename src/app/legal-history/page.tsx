@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import { RecordMeta } from "@/components/RecordMeta";
 import { getRecord, getSource, records } from "@/data/civic";
 
-export const metadata: Metadata = { title: "Legal history" };
+export const metadata: Metadata = {
+  title: "Legal history",
+  description:
+    "A source-linked timeline of national legal instruments relevant to Maddela's administrative and institutional history.",
+};
 
 interface LegalData {
   instrument: string;
@@ -25,7 +29,7 @@ export default function LegalHistoryPage() {
         <p className="eyebrow">Primary legal sources</p>
         <h1>Legal history</h1>
         <p>
-          Seven national instruments help document Maddela’s administrative and
+          {legalRecords.length} national instruments help document Maddela’s administrative and
           institutional history. These notes summarize only the cited provisions and
           are not legal advice.
         </p>
