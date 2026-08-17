@@ -12,19 +12,30 @@ const requiredFiles = [
   "docs/CONTEXT_MAP.md",
   "docs/architecture/ARCHITECTURE.md",
   "docs/data/DATA_CONTRACT.md",
+  "src/data/civic/records.json",
+  "src/data/civic/sources.json",
+  "scripts/validate-civic-data.mjs",
 ];
 
-const trackedFiles = execFileSync("git", ["ls-files", "-z"], {
-  encoding: "utf8",
-})
+const repositoryFiles = execFileSync(
+  "git",
+  ["ls-files", "--cached", "--others", "--exclude-standard", "-z"],
+  { encoding: "utf8" },
+)
   .split("\0")
-  .filter(Boolean);
-const localOnlyPattern = /(^|\/)\.local(?:\/|$)|\.local\.md$/i;
-
+  .filter((path) => path && existsSync(path));
+const localOnlyPattern =
+  /(^|\/)(?:\.local|\.vscode)(?:\/|$)|\.local\.md$/i;
 const absoluteLocalPathPatterns = [
-  /\b[A-Za-z]:[\\/](?:Users|Documents and Settings)[\\/][^\s"'`<>]+/g,
-  /\/(?:Users|home)\/[^/\s"'`<>]+(?:\/[^\s"'`<>]+)*/g,
+  /\b[A-Za-z]:[\\/][^\s"'`<>]+/g,
+  /(?:^|[\s"'`(])\\\\[^\\\s"'`<>]+\\[^\s"'`<>]+/gm,
+  /(?:^|[\s"'`(])\/\/[A-Za-z0-9._-]+\/[A-Za-z0-9$._-]+[^\s"'`<>]*/gm,
+  /\/(?:Users|home|tmp|private\/tmp|var\/tmp)\/[^/\s"'`<>]+(?:\/[^\s"'`<>]+)*/g,
 ];
+const forbiddenServiceWorkerPath =
+  /(?:^|\/)(?:sw|service-worker)\.(?:js|mjs|ts)$/i;
+const serviceWorkerContentPattern =
+  /navigator\.serviceWorker|@serwist|from\s+["']serwist|serwist\//i;
 
 function readText(path) {
   if (!existsSync(path)) return null;
@@ -37,16 +48,11 @@ function checkPolicy() {
   const errors = [];
 
   for (const path of requiredFiles) {
-    if (!existsSync(path)) {
-      errors.push(`missing required file: ${path}`);
-    }
+    if (!existsSync(path)) errors.push(`missing required file: ${path}`);
   }
 
-  for (const path of trackedFiles) {
-    if (localOnlyPattern.test(path)) {
-      errors.push(`local-only path is tracked: ${path}`);
-    }
-
+  for (const path of repositoryFiles) {
+    if (localOnlyPattern.test(path)) errors.push(`local-only path is included: ${path}`);
     if (path === "scripts/check-repository.mjs") continue;
     const content = readText(path);
     if (content === null) continue;
@@ -71,7 +77,7 @@ function checkPolicy() {
 
 function auditInheritedContent() {
   const findings = [];
-  const productionPaths = trackedFiles.filter(
+  const productionPaths = repositoryFiles.filter(
     (path) =>
       path.startsWith("src/") ||
       path.startsWith("public/") ||
@@ -86,10 +92,17 @@ function auditInheritedContent() {
     /better[-_]?aurora|aurorazds|aurora,?\s+zamboanga|municipality(?:["']?\s*:\s*["']|\s+of\s+)aurora|(?:official\s+)?lgu(?:\s+of)?\s+aurora|sangguniang\s+bayan\s+(?:ng|of)\s+aurora|(?:registered|recorded|issued|filed|located|operating)\s+in\s+aurora|(?:business(?:es)?|residents?|citizens?|constituents?)\s+in\s+aurora|aurora\s+(?:residents?|citizens?|constituents?|community|business(?:es)?)|(?:peso|negosyo\s+center|pnp|mdrrmc?|rhu)[-_.\s]*aurora|current\s+weather\s+in\s+aurora|weather-location[^>]*>\s*aurora|bettersolano|\bsolano\b/i;
 
   for (const path of productionPaths) {
+    if (path === "scripts/check-repository.mjs") continue;
+    if (forbiddenServiceWorkerPath.test(path)) {
+      findings.push(`${path} (service workers are not part of the current architecture)`);
+    }
     if (inheritedPathPattern.test(path)) findings.push(`${path} (path)`);
     const content = readText(path);
     if (content !== null && inheritedContentPattern.test(content)) {
       findings.push(`${path} (content)`);
+    }
+    if (content !== null && serviceWorkerContentPattern.test(content)) {
+      findings.push(`${path} (service-worker registration or dependency)`);
     }
   }
 
@@ -102,9 +115,7 @@ function auditInheritedContent() {
     `Inherited Aurora/Solano production-content audit is blocked (${findings.length} findings).`,
   );
   for (const finding of findings.slice(0, 25)) console.error(`- ${finding}`);
-  if (findings.length > 25) {
-    console.error(`- ...and ${findings.length - 25} more`);
-  }
+  if (findings.length > 25) console.error(`- ...and ${findings.length - 25} more`);
   process.exitCode = 1;
 }
 

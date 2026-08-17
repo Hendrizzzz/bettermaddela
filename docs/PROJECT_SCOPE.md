@@ -21,8 +21,9 @@ with:
   transparency records, and legislation as each dataset becomes publishable; and
 - clear attribution, correction, accessibility, privacy, and security information.
 
-The MVP is complete only after inherited Aurora and Solano production content has been
-removed and the remaining site passes the applicable repository checks.
+The inherited-content removal is implemented. The MVP is complete only after the
+remaining site passes all applicable repository and release checks and any intended
+deployment boundary is separately reviewed.
 
 ## Accessibility acceptance
 

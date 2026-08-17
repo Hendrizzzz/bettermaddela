@@ -9,15 +9,14 @@ make verified civic information about Maddela, Quirino easier to find and unders
 
 ## Project status
 
-**Pre-release / research-ready engineering foundation.** The repository currently
-contains the inherited BetterAurora application while the BetterMaddela shell and
-publication controls are established. Aurora and Solano facts, branding, routes,
-caches, links, and assets remain a release blocker and must be removed before this can
-be presented or deployed as BetterMaddela.
+**Pre-release / verified-baseline shell.** Inherited municipal production content has
+been removed. The application publishes a deliberately small reviewed baseline:
+municipal identity, postal code, the latest census population, the complete PSA
+barangay dataset, and seven reviewed legal instruments.
 
-No Maddela civic dataset has been accepted for publication yet. Missing or conflicting
-information will remain unavailable rather than being guessed or copied from an
-unverified source.
+Officials, contacts, emergency information, service details, local legislation,
+transparency records, project status, and media remain unavailable until their
+record-specific publication gates pass.
 
 ## Technical foundation
 
@@ -37,7 +36,8 @@ bun run dev
 ```
 
 The development server is available at `http://localhost:3000`. The verification
-command runs the repository checks used for the current foundation.
+command checks repository policy, inherited content, civic data, types, the static
+build, and automated accessibility across every public route.
 
 ## Civic-data discipline
 

@@ -3,11 +3,8 @@
 ## Status
 
 This document describes the application that exists now, not a planned platform.
-BetterMaddela is a pre-release conversion of the BetterAurora codebase. Inherited
-Aurora and Solano content, branding, routes, caches, links, and assets are still
-present and are release blockers. In particular, the inherited client-side
-`src/app/admin/news-editor` route is not secure administration and must not be exposed
-as one.
+BetterMaddela is a pre-release static civic-information shell. Inherited municipal
+production content, branding, routes, caches, scripts, and assets have been removed.
 
 ## Active application
 
@@ -15,15 +12,14 @@ The repository contains one active web application:
 
 - Next.js 15 App Router with React and TypeScript;
 - application routes and the root layout under `src/app`;
-- shared interface code under `src/components` and `src/contexts`;
-- repository-managed JSON consumed from `src/data` at build time and `public/data` in
-  the browser; and
-- static assets under `public`.
+- shared interface code under `src/components`;
+- reviewed, repository-managed civic JSON under `src/data/civic`; and
+- build-time validation under `scripts`.
 
 Bun installs dependencies and runs repository scripts. `next.config.mjs` configures
 Next.js with `output: 'export'`; a production build writes the static site to `out`.
-Serwist generates the service worker during production builds. There is no required
-application server after export.
+There is no service worker, runtime civic-data API, or required application server
+after export.
 
 ## Trust boundaries
 
@@ -36,9 +32,8 @@ reviewer must verify each candidate record against
 
 Production civic content is repository-controlled, bundled into the static build, and
 publicly readable. Secrets, private correspondence, unnecessary personal data, and
-unreviewed research do not belong in either `src/data` or `public/data`. Current data
-in those locations is inherited and must be removed or independently accepted before
-release.
+unreviewed research do not belong in `src/data`. Only accepted records from the public
+source registry may enter that directory.
 
 ### Build and browser
 
@@ -47,9 +42,9 @@ boundary. Only a successful verified build output should reach hosting. The gene
 `out` directory contains public files and must never be treated as a private storage
 boundary.
 
-The browser executes the exported application and service worker. Any remote font,
-icon, script, map, API, or linked document is a separate third-party trust boundary
-and requires a current product, privacy, security, and licensing justification.
+The browser executes the exported application. The current interface uses no remote
+font, analytics, map, API, or third-party script. Linked source documents are separate
+third-party trust boundaries.
 
 ### Deployment
 

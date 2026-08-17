@@ -3,6 +3,7 @@ node_modules/
 dist/
 .next/
 out/
+.lighthouseci/
 *.tsbuildinfo
 *.backup
 *.bak
@@ -13,8 +14,3 @@ out/
 !.env.example
 .local/
 *.local.md
-
-# Serwist generated service worker artifacts
-public/sw.js
-public/sw.js.map
-public/swe-worker-*

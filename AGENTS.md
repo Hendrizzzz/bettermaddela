@@ -98,10 +98,10 @@ bun install --frozen-lockfile
 bun run verify
 ```
 
-`bun run audit:inherited` is a separate release-blocking audit and is expected to fail
-until the Aurora/Solano purge is complete. Run content-schema, provenance,
-accessibility, PWA, link, security, and secret checks when those checks exist and the
-affected surface requires them. Do not weaken a gate to make a change pass.
+The canonical gate includes the inherited-content audit, civic-data validation,
+typecheck, static build, and automated accessibility scan. Run additional provenance,
+link, security, and secret checks when the affected surface requires them. Do not
+weaken a gate to make a change pass.
 
 At handoff, report:
 

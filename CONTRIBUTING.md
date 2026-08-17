@@ -66,10 +66,8 @@ bun install --frozen-lockfile
 bun run verify
 ```
 
-Run `bun run audit:inherited` when working on the conversion purge; it remains an
-expected release blocker until inherited Aurora and Solano production content is gone.
-Also run any content validation, tests, or accessibility checks introduced for the area
-you changed. Never report a check as passing unless it ran successfully on your current
-tree.
+`bun run verify` includes the inherited-content audit, civic-data validation, static
+build, and automated accessibility checks. Never report a check as passing unless it
+ran successfully on your current tree.
 
 By contributing, you agree that your work may be distributed under the repository's license and that you have the right to submit it.
