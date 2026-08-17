@@ -17,13 +17,13 @@
   "dependencies": {
     "next": "^15.5.23",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
     "@types/node": "^20.19.43",
     "@types/react": "^18.3.31",
-    "@types/react-dom": "^18.3.7",
+    "@types/react-dom": "^19.2.4",
     "playwright-core": "^1.62.1",
     "typescript": "^5.9.3"
   },
