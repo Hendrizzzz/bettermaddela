@@ -269,20 +269,11 @@
   }
 
   /* Footer */
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-lg);
-  }
-
   /* Footer brand left-align on tablet */
   .footer-brand {
     grid-column: 1 / -1;
     max-width: 100%;
     text-align: left;
-  }
-
-  .footer-social-new {
-    justify-content: flex-start;
   }
 
   .footer-logo {
@@ -357,16 +348,6 @@
   .grid-4 {
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
-    text-align: center;
-  }
-
-  .footer-col {
-    margin-bottom: var(--spacing-md);
   }
 
   .social-links {

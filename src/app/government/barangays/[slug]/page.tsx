@@ -25,6 +25,15 @@ function slugify(value: string) {
     .replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
 
+function formatLongDate(value: string) {
+  return new Intl.DateTimeFormat("en-PH", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "Asia/Manila",
+  }).format(new Date(`${value}T00:00:00+08:00`));
+}
+
 export function generateStaticParams() {
   return barangayRecord.data.barangays.map((barangay) => ({ slug: slugify(barangay.name) }));
 }
@@ -73,7 +82,7 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
               <div className="metric-icon"><i className="bi bi-people-fill" aria-hidden="true" /></div>
               <div className="metric-value">{barangay.population.toLocaleString("en-PH")}</div>
               <div className="metric-label">Population</div>
-              <div className="metric-source">As of <time dateTime={barangayRecord.data.populationReferenceDate}>1 July 2024</time></div>
+              <div className="metric-source">As of <time dateTime={barangayRecord.data.populationReferenceDate}>{formatLongDate(barangayRecord.data.populationReferenceDate)}</time></div>
             </div>
             <div className="metric-card">
               <div className="metric-icon"><i className="bi bi-geo-alt-fill" aria-hidden="true" /></div>

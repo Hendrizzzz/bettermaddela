@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect } from "react";
 import { LiveWeather, type WeatherConfigData } from "@/components/LiveWeather";
 import { VerifiedSearch } from "@/components/VerifiedSearch";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -98,6 +97,36 @@ const serviceCategories = [
     icon: "bi-heart-pulse-fill",
     title: { en: "Health Services", fil: "Serbisyong Pangkalusugan" },
     description: { en: "Municipal health service information", fil: "Impormasyon sa serbisyong pangkalusugan ng munisipalidad" },
+  },
+  {
+    href: "/services/agriculture",
+    icon: "bi-tree-fill",
+    title: { en: "Agriculture", fil: "Agrikultura" },
+    description: { en: "Agriculture and livelihood information", fil: "Impormasyon sa agrikultura at kabuhayan" },
+  },
+  {
+    href: "/services/infrastructure",
+    icon: "bi-building-fill-gear",
+    title: { en: "Infrastructure", fil: "Imprastraktura" },
+    description: { en: "Public-works and infrastructure information", fil: "Impormasyon sa imprastruktura at mga proyektong pampubliko" },
+  },
+  {
+    href: "/services/education",
+    icon: "bi-mortarboard-fill",
+    title: { en: "Education", fil: "Edukasyon" },
+    description: { en: "Education and scholarship information", fil: "Impormasyon sa edukasyon at mga iskolarship" },
+  },
+  {
+    href: "/services/public-safety",
+    icon: "bi-shield-fill-check",
+    title: { en: "Public Safety", fil: "Kaligtasang Pampubliko" },
+    description: { en: "Safety and preparedness information", fil: "Impormasyon sa kaligtasan at paghahanda" },
+  },
+  {
+    href: "/services/environment",
+    icon: "bi-globe-americas",
+    title: { en: "Environment", fil: "Kapaligiran" },
+    description: { en: "Environment and natural-resources information", fil: "Impormasyon sa kapaligiran at likas na yaman" },
   },
 ];
 
@@ -216,13 +245,14 @@ export default function HomePage() {
   const municipalLeaders = leadership.data.leaders.filter(
     (leader) => leader.scope === "Municipality of Maddela",
   );
-
-  useEffect(() => {
-    document.documentElement.lang = language === "fil" ? "fil" : "en";
-    return () => {
-      document.documentElement.lang = "en";
-    };
-  }, [language]);
+  const mapBbox = [
+    weather.data.forecastPoint.longitude - 0.035,
+    weather.data.forecastPoint.latitude - 0.03,
+    weather.data.forecastPoint.longitude + 0.035,
+    weather.data.forecastPoint.latitude + 0.03,
+  ]
+    .map((value) => value.toFixed(4))
+    .join(",");
 
   return (
     <>
@@ -353,7 +383,7 @@ export default function HomePage() {
               <div className="map-card">
                 <div id="map-container" role="region" aria-label={copy.mapTitle} data-map-loaded="iframe">
                   <iframe
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=121.6500%2C16.3100%2C121.7200%2C16.3700&amp;layer=mapnik"
+                    src={`https://www.openstreetmap.org/export/embed.html?bbox=${encodeURIComponent(mapBbox)}&layer=mapnik`}
                     className="map-iframe"
                     title={copy.mapTitle}
                     loading="lazy"

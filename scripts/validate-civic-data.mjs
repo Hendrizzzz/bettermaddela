@@ -20,14 +20,19 @@ const allowedSourceTypes = new Set([
   "webpage",
   "pdf",
   "law",
+  "social-post",
   "dataset",
   "procurement-record",
+  "media-file",
+  "permission-record",
+  "direct-confirmation",
 ]);
 const allowedSourceStates = new Set(["active", "superseded"]);
 const allowedCadences = new Set([
   "monthly",
   "quarterly",
   "annually",
+  "per-term",
   "per-document",
   "manual",
 ]);
@@ -151,23 +156,32 @@ for (const [index, source] of sources.entries()) {
   }
   if (!allowedSourceTypes.has(source.documentType)) errors.push(`${path}.documentType is not supported`);
 
-  try {
-    const url = new URL(source.url);
-    if (url.protocol !== "https:") errors.push(`${path}.url must use HTTPS`);
-    if (url.username || url.password) errors.push(`${path}.url must not contain credentials`);
-    if (/^(?:www\.)?(?:google|bing)\./i.test(url.hostname)) {
-      errors.push(`${path}.url must not be a search-results URL`);
+  if (source.url === undefined && source.documentType !== "direct-confirmation") {
+    errors.push(`${path}.url is required unless the source is a direct confirmation`);
+  }
+
+  if (source.url !== undefined) {
+    try {
+      const url = new URL(source.url);
+      if (url.protocol !== "https:") errors.push(`${path}.url must use HTTPS`);
+      if (url.username || url.password) errors.push(`${path}.url must not contain credentials`);
+      if (/^(?:www\.)?(?:google|bing)\./i.test(url.hostname)) {
+        errors.push(`${path}.url must not be a search-results URL`);
+      }
+    } catch {
+      errors.push(`${path}.url is invalid`);
     }
-  } catch {
-    errors.push(`${path}.url is invalid`);
   }
 
   if (source.publishedAt !== undefined) requireDate(source.publishedAt, `${path}.publishedAt`);
   if (source.sha256 !== undefined && !sha256Pattern.test(source.sha256)) {
     errors.push(`${path}.sha256 must be a lowercase 64-character SHA-256 value`);
   }
-  if (source.documentType === "pdf" && !sha256Pattern.test(source.sha256 ?? "")) {
-    errors.push(`${path}.sha256 is required for a PDF evidence source`);
+  if (
+    (source.documentType === "pdf" || source.documentType === "media-file") &&
+    !sha256Pattern.test(source.sha256 ?? "")
+  ) {
+    errors.push(`${path}.sha256 is required for a PDF or media-file evidence source`);
   }
 }
 

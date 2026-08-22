@@ -5,8 +5,12 @@ export type SourceType =
   | "webpage"
   | "pdf"
   | "law"
+  | "social-post"
   | "dataset"
-  | "procurement-record";
+  | "procurement-record"
+  | "media-file"
+  | "permission-record"
+  | "direct-confirmation";
 
 export interface CivicSource {
   id: string;
@@ -40,6 +44,7 @@ export interface CivicRecord<TData = unknown> {
     | "monthly"
     | "quarterly"
     | "annually"
+    | "per-term"
     | "per-document"
     | "manual";
   owner: string;
