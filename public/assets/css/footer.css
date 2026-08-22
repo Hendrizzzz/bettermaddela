@@ -38,32 +38,6 @@
   margin-bottom: 24px;
 }
 
-.footer-social-new {
-  display: flex;
-  gap: 12px;
-}
-
-.footer-social-btn {
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 1.125rem;
-  transition: all 0.2s ease;
-  text-decoration: none;
-}
-
-.footer-social-btn:hover {
-  background: var(--color-primary);
-  color: white;
-  transform: translateY(-2px);
-  text-decoration: none;
-}
-
 /* Foo
 ter Columns */
 .footer-column h4 {
@@ -269,10 +243,6 @@ ter Columns */
 
   .footer-tagline {
     text-align: left;
-  }
-
-  .footer-social-new {
-    justify-content: flex-start;
   }
 }
 

@@ -114,45 +114,6 @@
   margin-bottom: 0;
 }
 
-/* High Contrast Mode */
-body.high-contrast {
-  --color-primary: #ffff00;
-  --color-primary-dark: #ffff00;
-  --color-secondary: #ffffff;
-  --color-bg: #000000;
-  --color-bg-alt: #1a1a1a;
-  --color-text: #ffffff;
-  --color-text-light: #dddddd;
-  --color-white: #000000;
-  background-color: #000000;
-  color: #ffffff;
-}
-
-body.high-contrast a {
-  color: #ffff00;
-  text-decoration: underline;
-}
-
-body.high-contrast .btn-primary {
-  background-color: #000000;
-  color: #ffff00;
-  border: 2px solid #ffff00;
-}
-
-body.high-contrast .card {
-  background-color: #1a1a1a;
-  border: 1px solid #ffffff;
-}
-
-/* Font Sizing */
-body.font-large {
-  font-size: 120%;
-}
-
-body.font-xlarge {
-  font-size: 140%;
-}
-
 /* Focus States */
 :focus {
   outline: 2px solid var(--color-primary);
