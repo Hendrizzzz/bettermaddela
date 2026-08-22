@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect } from "react";
 import { LiveWeather, type WeatherConfigData } from "@/components/LiveWeather";
 import { VerifiedSearch } from "@/components/VerifiedSearch";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -216,13 +215,6 @@ export default function HomePage() {
   const municipalLeaders = leadership.data.leaders.filter(
     (leader) => leader.scope === "Municipality of Maddela",
   );
-
-  useEffect(() => {
-    document.documentElement.lang = language === "fil" ? "fil" : "en";
-    return () => {
-      document.documentElement.lang = "en";
-    };
-  }, [language]);
 
   return (
     <>
