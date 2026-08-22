@@ -98,6 +98,36 @@ const serviceCategories = [
     title: { en: "Health Services", fil: "Serbisyong Pangkalusugan" },
     description: { en: "Municipal health service information", fil: "Impormasyon sa serbisyong pangkalusugan ng munisipalidad" },
   },
+  {
+    href: "/services/agriculture",
+    icon: "bi-tree-fill",
+    title: { en: "Agriculture", fil: "Agrikultura" },
+    description: { en: "Agriculture and livelihood information", fil: "Impormasyon sa agrikultura at kabuhayan" },
+  },
+  {
+    href: "/services/infrastructure",
+    icon: "bi-building-fill-gear",
+    title: { en: "Infrastructure", fil: "Imprastraktura" },
+    description: { en: "Public-works and infrastructure information", fil: "Impormasyon sa imprastruktura at mga proyektong pampubliko" },
+  },
+  {
+    href: "/services/education",
+    icon: "bi-mortarboard-fill",
+    title: { en: "Education", fil: "Edukasyon" },
+    description: { en: "Education and scholarship information", fil: "Impormasyon sa edukasyon at mga iskolarship" },
+  },
+  {
+    href: "/services/public-safety",
+    icon: "bi-shield-fill-check",
+    title: { en: "Public Safety", fil: "Kaligtasang Pampubliko" },
+    description: { en: "Safety and preparedness information", fil: "Impormasyon sa kaligtasan at paghahanda" },
+  },
+  {
+    href: "/services/environment",
+    icon: "bi-globe-americas",
+    title: { en: "Environment", fil: "Kapaligiran" },
+    description: { en: "Environment and natural-resources information", fil: "Impormasyon sa kapaligiran at likas na yaman" },
+  },
 ];
 
 const homeCopy = {
