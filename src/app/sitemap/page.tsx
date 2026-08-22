@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const sections = [
   { title: "Main Navigation", icon: "bi bi-house-door", links: [["Home", "/"], ["Services", "/services"], ["Government", "/government"], ["Statistics", "/statistics"], ["Legislative", "/legislative"], ["Transparency", "/budget"], ["Contact", "/contact"]] },
-  { title: "Civic Information", icon: "bi bi-database", links: [["Barangays", "/government#barangays"], ["Officials", "/government/officials"], ["Legal History", "/legal-history"], ["Ordinances", "/legislative/ordinance-framework"], ["Resolutions", "/legislative/resolution-framework"], ["Sources", "/sources"]] },
+  { title: "Civic Information", icon: "bi bi-database", links: [["Barangays", "/government#barangays"], ["Barangays of Maddela", "/barangays"], ["Population", "/population"], ["Officials", "/government/officials"], ["Legal History", "/legal-history"], ["Ordinances", "/legislative/ordinance-framework"], ["Resolutions", "/legislative/resolution-framework"], ["Sources", "/sources"]] },
   { title: "Project", icon: "bi bi-info-circle", links: [["News", "/news"], ["FAQ", "/faq"], ["Accessibility", "/accessibility"], ["Privacy", "/privacy"], ["Terms of Use", "/terms"]] },
 ] as const;
 
