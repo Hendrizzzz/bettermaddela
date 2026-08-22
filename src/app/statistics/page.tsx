@@ -56,6 +56,15 @@ export const metadata: Metadata = {
 
 function year(value: string) { return value.slice(0, 4); }
 
+function formatLongDate(value: string) {
+  return new Intl.DateTimeFormat("en-PH", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "Asia/Manila",
+  }).format(new Date(`${value}T00:00:00+08:00`));
+}
+
 export default function StatisticsPage() {
   return (
     <>
@@ -83,7 +92,7 @@ export default function StatisticsPage() {
           <div className="section-header-minimal">
             <span className="section-tag"><i className="bi bi-house-fill" aria-hidden="true" /> <span>Households</span></span>
             <h2>Household profile</h2>
-            <p>Dated census counts as of <time dateTime={households.data.referenceDate}>1 July 2024</time></p>
+            <p>Dated census counts as of <time dateTime={households.data.referenceDate}>{formatLongDate(households.data.referenceDate)}</time></p>
           </div>
           <div className="metrics-grid">
             <div className="metric-card"><div className="metric-icon"><i className="bi bi-people" aria-hidden="true" /></div><div className="metric-value">{households.data.householdPopulation.toLocaleString("en-PH")}</div><div className="metric-label">Household residents</div><div className="metric-source">People living in households</div></div>
