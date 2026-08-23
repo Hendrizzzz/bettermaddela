@@ -3,10 +3,11 @@ import Link from "next/link";
 import PageHeader from "@/components/layout/PageHeader";
 import { RecordMeta } from "@/components/RecordMeta";
 import { getRecord } from "@/data/civic";
+import { slugify } from "@/lib/slugify";
 
 export const metadata: Metadata = {
   title: "Barangays",
-  description: "The 32 barangays of Maddela, Quirino.",
+  description: `The ${getRecord<BarangayData>("barangay-dataset-2026q2").data.barangayCount} barangays of Maddela, Quirino.`,
 };
 
 interface Barangay {
@@ -19,15 +20,6 @@ interface BarangayData {
   barangays: Barangay[];
 }
 
-function slugify(value: string) {
-  return value
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)/g, "");
-}
-
 export default function BarangaysPage() {
   const record = getRecord<BarangayData>("barangay-dataset-2026q2");
 
@@ -36,13 +28,12 @@ export default function BarangaysPage() {
       <PageHeader
         title="Barangays of Maddela"
         description={`${record.data.barangayCount} barangays serving the municipality`}
-        badge={{ icon: "bi bi-geo-alt-fill", label: "Barangay Units" }}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Government", href: "/government" }, { label: "Barangays" }]}
       />
 
       <section className="section" style={{ background: "var(--color-bg-alt)" }}>
         <div className="container">
-          <div className="grid grid-4" style={{ gap: "var(--spacing-sm)" }}>
+          <div className="grid grid-4">
             {record.data.barangays.map((barangay) => (
               <Link
                 key={barangay.psgcCode}
