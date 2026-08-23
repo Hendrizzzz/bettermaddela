@@ -15,16 +15,41 @@
         "correspondenceCode": "025704000",
         "incomeClass": "1st"
       },
-      "sourceIds": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
+      "sourceIds": [
+        "psa-psgc-maddela",
+        "psa-psgc-2026q2-xlsx"
+      ],
       "claimSources": {
-        "officialName": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
-        "psgcName": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
-        "level": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
-        "province": ["psa-psgc-2026q2-xlsx"],
-        "region": ["psa-psgc-2026q2-xlsx"],
-        "psgcCode": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
-        "correspondenceCode": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
-        "incomeClass": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"]
+        "officialName": [
+          "psa-psgc-maddela",
+          "psa-psgc-2026q2-xlsx"
+        ],
+        "psgcName": [
+          "psa-psgc-maddela",
+          "psa-psgc-2026q2-xlsx"
+        ],
+        "level": [
+          "psa-psgc-maddela",
+          "psa-psgc-2026q2-xlsx"
+        ],
+        "province": [
+          "psa-psgc-2026q2-xlsx"
+        ],
+        "region": [
+          "psa-psgc-2026q2-xlsx"
+        ],
+        "psgcCode": [
+          "psa-psgc-maddela",
+          "psa-psgc-2026q2-xlsx"
+        ],
+        "correspondenceCode": [
+          "psa-psgc-maddela",
+          "psa-psgc-2026q2-xlsx"
+        ],
+        "incomeClass": [
+          "psa-psgc-maddela",
+          "psa-psgc-2026q2-xlsx"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-17",
@@ -46,12 +71,22 @@
         "region": "Region 2 (Cagayan Valley)",
         "zipCode": "3404"
       },
-      "sourceIds": ["phlpost-zip-code-locator"],
+      "sourceIds": [
+        "phlpost-zip-code-locator"
+      ],
       "claimSources": {
-        "municipality": ["phlpost-zip-code-locator"],
-        "province": ["phlpost-zip-code-locator"],
-        "region": ["phlpost-zip-code-locator"],
-        "zipCode": ["phlpost-zip-code-locator"]
+        "municipality": [
+          "phlpost-zip-code-locator"
+        ],
+        "province": [
+          "phlpost-zip-code-locator"
+        ],
+        "region": [
+          "phlpost-zip-code-locator"
+        ],
+        "zipCode": [
+          "phlpost-zip-code-locator"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-17",
@@ -73,13 +108,25 @@
         "relevantProvision": "The opening paragraph names Maddela among ten reorganized municipalities; item 9 defines its historical boundary and states an area of 225,972 hectares, more or less.",
         "effectivity": "The reorganization and abolition shall take effect immediately."
       },
-      "sourceIds": ["lawphil-eo-368-1950"],
+      "sourceIds": [
+        "lawphil-eo-368-1950"
+      ],
       "claimSources": {
-        "instrument": ["lawphil-eo-368-1950"],
-        "exactTitle": ["lawphil-eo-368-1950"],
-        "date": ["lawphil-eo-368-1950"],
-        "relevantProvision": ["lawphil-eo-368-1950"],
-        "effectivity": ["lawphil-eo-368-1950"]
+        "instrument": [
+          "lawphil-eo-368-1950"
+        ],
+        "exactTitle": [
+          "lawphil-eo-368-1950"
+        ],
+        "date": [
+          "lawphil-eo-368-1950"
+        ],
+        "relevantProvision": [
+          "lawphil-eo-368-1950"
+        ],
+        "effectivity": [
+          "lawphil-eo-368-1950"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-17",
@@ -102,13 +149,25 @@
         "relevantProvision": "Section 1 includes Diffun, Saguday, Aglipay, and Maddela in the Subprovince of Quirino.",
         "effectivity": "Section 7 states effect upon approval."
       },
-      "sourceIds": ["lawphil-ra-4734-1966"],
+      "sourceIds": [
+        "lawphil-ra-4734-1966"
+      ],
       "claimSources": {
-        "instrument": ["lawphil-ra-4734-1966"],
-        "exactTitle": ["lawphil-ra-4734-1966"],
-        "approved": ["lawphil-ra-4734-1966"],
-        "relevantProvision": ["lawphil-ra-4734-1966"],
-        "effectivity": ["lawphil-ra-4734-1966"]
+        "instrument": [
+          "lawphil-ra-4734-1966"
+        ],
+        "exactTitle": [
+          "lawphil-ra-4734-1966"
+        ],
+        "approved": [
+          "lawphil-ra-4734-1966"
+        ],
+        "relevantProvision": [
+          "lawphil-ra-4734-1966"
+        ],
+        "effectivity": [
+          "lawphil-ra-4734-1966"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-17",
@@ -132,14 +191,28 @@
         "conditionalProvision": "Section 3 submits specified administrative changes to a plebiscite.",
         "effectivity": "Section 6 states effect upon approval."
       },
-      "sourceIds": ["lawphil-ra-5554-1969"],
+      "sourceIds": [
+        "lawphil-ra-5554-1969"
+      ],
       "claimSources": {
-        "instrument": ["lawphil-ra-5554-1969"],
-        "exactTitle": ["lawphil-ra-5554-1969"],
-        "approved": ["lawphil-ra-5554-1969"],
-        "relevantProvision": ["lawphil-ra-5554-1969"],
-        "conditionalProvision": ["lawphil-ra-5554-1969"],
-        "effectivity": ["lawphil-ra-5554-1969"]
+        "instrument": [
+          "lawphil-ra-5554-1969"
+        ],
+        "exactTitle": [
+          "lawphil-ra-5554-1969"
+        ],
+        "approved": [
+          "lawphil-ra-5554-1969"
+        ],
+        "relevantProvision": [
+          "lawphil-ra-5554-1969"
+        ],
+        "conditionalProvision": [
+          "lawphil-ra-5554-1969"
+        ],
+        "effectivity": [
+          "lawphil-ra-5554-1969"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-17",
@@ -163,14 +236,28 @@
         "conditionalProvision": "Section 11 states that corporate existence follows a favorable plebiscite.",
         "effectivity": "Section 13 states effect upon approval."
       },
-      "sourceIds": ["lawphil-ra-6394-1971"],
+      "sourceIds": [
+        "lawphil-ra-6394-1971"
+      ],
       "claimSources": {
-        "instrument": ["lawphil-ra-6394-1971"],
-        "exactTitle": ["lawphil-ra-6394-1971"],
-        "approved": ["lawphil-ra-6394-1971"],
-        "relevantProvision": ["lawphil-ra-6394-1971"],
-        "conditionalProvision": ["lawphil-ra-6394-1971"],
-        "effectivity": ["lawphil-ra-6394-1971"]
+        "instrument": [
+          "lawphil-ra-6394-1971"
+        ],
+        "exactTitle": [
+          "lawphil-ra-6394-1971"
+        ],
+        "approved": [
+          "lawphil-ra-6394-1971"
+        ],
+        "relevantProvision": [
+          "lawphil-ra-6394-1971"
+        ],
+        "conditionalProvision": [
+          "lawphil-ra-6394-1971"
+        ],
+        "effectivity": [
+          "lawphil-ra-6394-1971"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-17",
@@ -190,20 +277,50 @@
         "instrument": "Batas Pambansa Blg. 345",
         "exactTitle": "An Act Creating the Municipality of Nagtipunan, in the Province of Quirino",
         "approved": "1983-02-25",
-        "barangaysInSection1": ["San Dionisio II", "Anak", "Ponggo", "Landingan", "Wasid", "Matmad", "San Ramos", "San Pugo", "La Conwap", "Sangbay", "Mattaddi", "Guino", "Old Gumiad"],
+        "barangaysInSection1": [
+          "San Dionisio II",
+          "Anak",
+          "Ponggo",
+          "Landingan",
+          "Wasid",
+          "Matmad",
+          "San Ramos",
+          "San Pugo",
+          "La Conwap",
+          "Sangbay",
+          "Mattaddi",
+          "Guino",
+          "Old Gumiad"
+        ],
         "statedAction": "The listed barangays, then within Maddela, are separated and constituted into the Municipality of Nagtipunan.",
         "conditionalProvision": "Section 3 requires ratification by a majority of votes cast in the proposed municipality.",
         "effectivity": "Section 5 states effect upon approval."
       },
-      "sourceIds": ["lawphil-bp-345-1983"],
+      "sourceIds": [
+        "lawphil-bp-345-1983"
+      ],
       "claimSources": {
-        "instrument": ["lawphil-bp-345-1983"],
-        "exactTitle": ["lawphil-bp-345-1983"],
-        "approved": ["lawphil-bp-345-1983"],
-        "barangaysInSection1": ["lawphil-bp-345-1983"],
-        "statedAction": ["lawphil-bp-345-1983"],
-        "conditionalProvision": ["lawphil-bp-345-1983"],
-        "effectivity": ["lawphil-bp-345-1983"]
+        "instrument": [
+          "lawphil-bp-345-1983"
+        ],
+        "exactTitle": [
+          "lawphil-bp-345-1983"
+        ],
+        "approved": [
+          "lawphil-bp-345-1983"
+        ],
+        "barangaysInSection1": [
+          "lawphil-bp-345-1983"
+        ],
+        "statedAction": [
+          "lawphil-bp-345-1983"
+        ],
+        "conditionalProvision": [
+          "lawphil-bp-345-1983"
+        ],
+        "effectivity": [
+          "lawphil-bp-345-1983"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-17",
@@ -226,13 +343,25 @@
         "relevantProvision": "Section 1 provides for a ten-bed hospital known as the Maddela Municipal Hospital.",
         "effectivity": "Section 4 states effect upon approval."
       },
-      "sourceIds": ["lawphil-bp-533-1983"],
+      "sourceIds": [
+        "lawphil-bp-533-1983"
+      ],
       "claimSources": {
-        "instrument": ["lawphil-bp-533-1983"],
-        "exactTitle": ["lawphil-bp-533-1983"],
-        "approved": ["lawphil-bp-533-1983"],
-        "relevantProvision": ["lawphil-bp-533-1983"],
-        "effectivity": ["lawphil-bp-533-1983"]
+        "instrument": [
+          "lawphil-bp-533-1983"
+        ],
+        "exactTitle": [
+          "lawphil-bp-533-1983"
+        ],
+        "approved": [
+          "lawphil-bp-533-1983"
+        ],
+        "relevantProvision": [
+          "lawphil-bp-533-1983"
+        ],
+        "effectivity": [
+          "lawphil-bp-533-1983"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-17",
@@ -255,13 +384,25 @@
         "relevantProvision": "Section 1 increases the stated bed capacity from 10 to 25.",
         "effectivity": "Section 3 states effect upon approval."
       },
-      "sourceIds": ["lawphil-ra-7239-1992"],
+      "sourceIds": [
+        "lawphil-ra-7239-1992"
+      ],
       "claimSources": {
-        "instrument": ["lawphil-ra-7239-1992"],
-        "exactTitle": ["lawphil-ra-7239-1992"],
-        "approved": ["lawphil-ra-7239-1992"],
-        "relevantProvision": ["lawphil-ra-7239-1992"],
-        "effectivity": ["lawphil-ra-7239-1992"]
+        "instrument": [
+          "lawphil-ra-7239-1992"
+        ],
+        "exactTitle": [
+          "lawphil-ra-7239-1992"
+        ],
+        "approved": [
+          "lawphil-ra-7239-1992"
+        ],
+        "relevantProvision": [
+          "lawphil-ra-7239-1992"
+        ],
+        "effectivity": [
+          "lawphil-ra-7239-1992"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-17",
@@ -282,11 +423,23 @@
         "census": "2024 Census of Population (2024 POPCEN)",
         "referenceDate": "2024-07-01"
       },
-      "sourceIds": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
+      "sourceIds": [
+        "psa-psgc-maddela",
+        "psa-psgc-2026q2-xlsx"
+      ],
       "claimSources": {
-        "population": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
-        "census": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
-        "referenceDate": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"]
+        "population": [
+          "psa-psgc-maddela",
+          "psa-psgc-2026q2-xlsx"
+        ],
+        "census": [
+          "psa-psgc-maddela",
+          "psa-psgc-2026q2-xlsx"
+        ],
+        "referenceDate": [
+          "psa-psgc-maddela",
+          "psa-psgc-2026q2-xlsx"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-17",
@@ -304,16 +457,35 @@
       "label": "Census population history, 2000–2024",
       "data": {
         "series": [
-          { "referenceDate": "2000-05-01", "population": 32236 },
-          { "referenceDate": "2010-05-01", "population": 35634 },
-          { "referenceDate": "2015-08-01", "population": 38499 },
-          { "referenceDate": "2020-05-01", "population": 40943 },
-          { "referenceDate": "2024-07-01", "population": 41867 }
+          {
+            "referenceDate": "2000-05-01",
+            "population": 32236
+          },
+          {
+            "referenceDate": "2010-05-01",
+            "population": 35634
+          },
+          {
+            "referenceDate": "2015-08-01",
+            "population": 38499
+          },
+          {
+            "referenceDate": "2020-05-01",
+            "population": 40943
+          },
+          {
+            "referenceDate": "2024-07-01",
+            "population": 41867
+          }
         ]
       },
-      "sourceIds": ["psa-popcen-quirino-2024"],
+      "sourceIds": [
+        "psa-popcen-quirino-2024"
+      ],
       "claimSources": {
-        "series": ["psa-popcen-quirino-2024"]
+        "series": [
+          "psa-popcen-quirino-2024"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-17",
@@ -333,17 +505,38 @@
       "data": {
         "measure": "Annual population growth rate (percent)",
         "series": [
-          { "period": "2000-2010", "percent": 1.01 },
-          { "period": "2010-2015", "percent": 1.48 },
-          { "period": "2015-2020", "percent": 1.3 },
-          { "period": "2015-2024", "percent": 0.94 },
-          { "period": "2020-2024", "percent": 0.54 }
+          {
+            "period": "2000-2010",
+            "percent": 1.01
+          },
+          {
+            "period": "2010-2015",
+            "percent": 1.48
+          },
+          {
+            "period": "2015-2020",
+            "percent": 1.3
+          },
+          {
+            "period": "2015-2024",
+            "percent": 0.94
+          },
+          {
+            "period": "2020-2024",
+            "percent": 0.54
+          }
         ]
       },
-      "sourceIds": ["psa-popcen-quirino-2024"],
+      "sourceIds": [
+        "psa-popcen-quirino-2024"
+      ],
       "claimSources": {
-        "measure": ["psa-popcen-quirino-2024"],
-        "series": ["psa-popcen-quirino-2024"]
+        "measure": [
+          "psa-popcen-quirino-2024"
+        ],
+        "series": [
+          "psa-popcen-quirino-2024"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-17",
@@ -367,48 +560,258 @@
         "populationReferenceDate": "2024-07-01",
         "urbanRuralBasis": "2020 Census of Population and Housing, as labelled in the PSA publication",
         "barangays": [
-          { "name": "Abbag", "psgcCode": "0205704001", "correspondenceCode": "025704001", "classification": "Rural", "population": 951 },
-          { "name": "Balligui", "psgcCode": "0205704003", "correspondenceCode": "025704003", "classification": "Rural", "population": 2538 },
-          { "name": "Divisoria Sur", "psgcCode": "0205704004", "correspondenceCode": "025704004", "classification": "Rural", "population": 1149 },
-          { "name": "Buenavista", "psgcCode": "0205704005", "correspondenceCode": "025704005", "classification": "Rural", "population": 1434 },
-          { "name": "Cabaruan", "psgcCode": "0205704006", "correspondenceCode": "025704006", "classification": "Rural", "population": 1916 },
-          { "name": "Cabua-an", "psgcCode": "0205704007", "correspondenceCode": "025704007", "classification": "Rural", "population": 845 },
-          { "name": "Cofcaville", "psgcCode": "0205704008", "correspondenceCode": "025704008", "classification": "Rural", "population": 796 },
-          { "name": "Diduyon", "psgcCode": "0205704009", "correspondenceCode": "025704009", "classification": "Rural", "population": 933 },
-          { "name": "Dipintin", "psgcCode": "0205704010", "correspondenceCode": "025704010", "classification": "Rural", "population": 3122 },
-          { "name": "Divisoria Norte", "psgcCode": "0205704011", "correspondenceCode": "025704011", "classification": "Rural", "population": 666 },
-          { "name": "Dumabato Norte", "psgcCode": "0205704012", "correspondenceCode": "025704012", "classification": "Rural", "population": 1528 },
-          { "name": "Dumabato Sur", "psgcCode": "0205704013", "correspondenceCode": "025704013", "classification": "Rural", "population": 1484 },
-          { "name": "Lusod", "psgcCode": "0205704014", "correspondenceCode": "025704014", "classification": "Rural", "population": 2175 },
-          { "name": "Manglad", "psgcCode": "0205704015", "correspondenceCode": "025704015", "classification": "Rural", "population": 692 },
-          { "name": "Pedlisan", "psgcCode": "0205704016", "correspondenceCode": "025704016", "classification": "Rural", "population": 822 },
-          { "name": "Poblacion Norte", "psgcCode": "0205704017", "correspondenceCode": "025704017", "classification": "Urban", "population": 2949 },
-          { "name": "San Bernabe", "psgcCode": "0205704019", "correspondenceCode": "025704019", "classification": "Rural", "population": 1321 },
-          { "name": "San Dionisio I", "psgcCode": "0205704021", "correspondenceCode": "025704021", "classification": "Rural", "population": 625 },
-          { "name": "San Martin", "psgcCode": "0205704023", "correspondenceCode": "025704023", "classification": "Rural", "population": 1085 },
-          { "name": "San Pedro", "psgcCode": "0205704024", "correspondenceCode": "025704024", "classification": "Rural", "population": 1260 },
-          { "name": "San Salvador", "psgcCode": "0205704025", "correspondenceCode": "025704025", "classification": "Rural", "population": 537 },
-          { "name": "Santo Niño", "psgcCode": "0205704026", "correspondenceCode": "025704026", "classification": "Rural", "population": 1195 },
-          { "name": "Santo Tomas", "psgcCode": "0205704027", "correspondenceCode": "025704027", "classification": "Rural", "population": 623 },
-          { "name": "Villa Gracia", "psgcCode": "0205704028", "correspondenceCode": "025704028", "classification": "Rural", "population": 904 },
-          { "name": "Villa Hermosa Sur", "psgcCode": "0205704029", "correspondenceCode": "025704029", "classification": "Rural", "population": 2412 },
-          { "name": "Villa Hermosa Norte", "psgcCode": "0205704030", "correspondenceCode": "025704030", "classification": "Rural", "population": 1739 },
-          { "name": "Ysmael", "psgcCode": "0205704032", "correspondenceCode": "025704032", "classification": "Rural", "population": 642 },
-          { "name": "Villa Agullana", "psgcCode": "0205704034", "correspondenceCode": "025704034", "classification": "Rural", "population": 528 },
-          { "name": "Poblacion Sur", "psgcCode": "0205704036", "correspondenceCode": "025704036", "classification": "Urban", "population": 2156 },
-          { "name": "Villa Jose V Ylanan", "psgcCode": "0205704037", "correspondenceCode": "025704037", "classification": "Rural", "population": 582 },
-          { "name": "Jose Ancheta", "psgcCode": "0205704038", "correspondenceCode": "025704038", "classification": "Rural", "population": 1235 },
-          { "name": "Santa Maria", "psgcCode": "0205704039", "correspondenceCode": "025704039", "classification": "Rural", "population": 1023 }
+          {
+            "name": "Abbag",
+            "psgcCode": "0205704001",
+            "correspondenceCode": "025704001",
+            "classification": "Rural",
+            "population": 951
+          },
+          {
+            "name": "Balligui",
+            "psgcCode": "0205704003",
+            "correspondenceCode": "025704003",
+            "classification": "Rural",
+            "population": 2538
+          },
+          {
+            "name": "Divisoria Sur",
+            "psgcCode": "0205704004",
+            "correspondenceCode": "025704004",
+            "classification": "Rural",
+            "population": 1149
+          },
+          {
+            "name": "Buenavista",
+            "psgcCode": "0205704005",
+            "correspondenceCode": "025704005",
+            "classification": "Rural",
+            "population": 1434
+          },
+          {
+            "name": "Cabaruan",
+            "psgcCode": "0205704006",
+            "correspondenceCode": "025704006",
+            "classification": "Rural",
+            "population": 1916
+          },
+          {
+            "name": "Cabua-an",
+            "psgcCode": "0205704007",
+            "correspondenceCode": "025704007",
+            "classification": "Rural",
+            "population": 845
+          },
+          {
+            "name": "Cofcaville",
+            "psgcCode": "0205704008",
+            "correspondenceCode": "025704008",
+            "classification": "Rural",
+            "population": 796
+          },
+          {
+            "name": "Diduyon",
+            "psgcCode": "0205704009",
+            "correspondenceCode": "025704009",
+            "classification": "Rural",
+            "population": 933
+          },
+          {
+            "name": "Dipintin",
+            "psgcCode": "0205704010",
+            "correspondenceCode": "025704010",
+            "classification": "Rural",
+            "population": 3122
+          },
+          {
+            "name": "Divisoria Norte",
+            "psgcCode": "0205704011",
+            "correspondenceCode": "025704011",
+            "classification": "Rural",
+            "population": 666
+          },
+          {
+            "name": "Dumabato Norte",
+            "psgcCode": "0205704012",
+            "correspondenceCode": "025704012",
+            "classification": "Rural",
+            "population": 1528
+          },
+          {
+            "name": "Dumabato Sur",
+            "psgcCode": "0205704013",
+            "correspondenceCode": "025704013",
+            "classification": "Rural",
+            "population": 1484
+          },
+          {
+            "name": "Lusod",
+            "psgcCode": "0205704014",
+            "correspondenceCode": "025704014",
+            "classification": "Rural",
+            "population": 2175
+          },
+          {
+            "name": "Manglad",
+            "psgcCode": "0205704015",
+            "correspondenceCode": "025704015",
+            "classification": "Rural",
+            "population": 692
+          },
+          {
+            "name": "Pedlisan",
+            "psgcCode": "0205704016",
+            "correspondenceCode": "025704016",
+            "classification": "Rural",
+            "population": 822
+          },
+          {
+            "name": "Poblacion Norte",
+            "psgcCode": "0205704017",
+            "correspondenceCode": "025704017",
+            "classification": "Urban",
+            "population": 2949
+          },
+          {
+            "name": "San Bernabe",
+            "psgcCode": "0205704019",
+            "correspondenceCode": "025704019",
+            "classification": "Rural",
+            "population": 1321
+          },
+          {
+            "name": "San Dionisio I",
+            "psgcCode": "0205704021",
+            "correspondenceCode": "025704021",
+            "classification": "Rural",
+            "population": 625
+          },
+          {
+            "name": "San Martin",
+            "psgcCode": "0205704023",
+            "correspondenceCode": "025704023",
+            "classification": "Rural",
+            "population": 1085
+          },
+          {
+            "name": "San Pedro",
+            "psgcCode": "0205704024",
+            "correspondenceCode": "025704024",
+            "classification": "Rural",
+            "population": 1260
+          },
+          {
+            "name": "San Salvador",
+            "psgcCode": "0205704025",
+            "correspondenceCode": "025704025",
+            "classification": "Rural",
+            "population": 537
+          },
+          {
+            "name": "Santo Niño",
+            "psgcCode": "0205704026",
+            "correspondenceCode": "025704026",
+            "classification": "Rural",
+            "population": 1195
+          },
+          {
+            "name": "Santo Tomas",
+            "psgcCode": "0205704027",
+            "correspondenceCode": "025704027",
+            "classification": "Rural",
+            "population": 623
+          },
+          {
+            "name": "Villa Gracia",
+            "psgcCode": "0205704028",
+            "correspondenceCode": "025704028",
+            "classification": "Rural",
+            "population": 904
+          },
+          {
+            "name": "Villa Hermosa Sur",
+            "psgcCode": "0205704029",
+            "correspondenceCode": "025704029",
+            "classification": "Rural",
+            "population": 2412
+          },
+          {
+            "name": "Villa Hermosa Norte",
+            "psgcCode": "0205704030",
+            "correspondenceCode": "025704030",
+            "classification": "Rural",
+            "population": 1739
+          },
+          {
+            "name": "Ysmael",
+            "psgcCode": "0205704032",
+            "correspondenceCode": "025704032",
+            "classification": "Rural",
+            "population": 642
+          },
+          {
+            "name": "Villa Agullana",
+            "psgcCode": "0205704034",
+            "correspondenceCode": "025704034",
+            "classification": "Rural",
+            "population": 528
+          },
+          {
+            "name": "Poblacion Sur",
+            "psgcCode": "0205704036",
+            "correspondenceCode": "025704036",
+            "classification": "Urban",
+            "population": 2156
+          },
+          {
+            "name": "Villa Jose V Ylanan",
+            "psgcCode": "0205704037",
+            "correspondenceCode": "025704037",
+            "classification": "Rural",
+            "population": 582
+          },
+          {
+            "name": "Jose Ancheta",
+            "psgcCode": "0205704038",
+            "correspondenceCode": "025704038",
+            "classification": "Rural",
+            "population": 1235
+          },
+          {
+            "name": "Santa Maria",
+            "psgcCode": "0205704039",
+            "correspondenceCode": "025704039",
+            "classification": "Rural",
+            "population": 1023
+          }
         ]
       },
-      "sourceIds": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
+      "sourceIds": [
+        "psa-psgc-maddela",
+        "psa-psgc-2026q2-xlsx"
+      ],
       "claimSources": {
-        "barangayCount": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
-        "psgcPublicationDate": ["psa-psgc-2026q2-xlsx"],
-        "psgcWebpageCountAsOf": ["psa-psgc-maddela"],
-        "populationReferenceDate": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
-        "urbanRuralBasis": ["psa-psgc-2026q2-xlsx"],
-        "barangays": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"]
+        "barangayCount": [
+          "psa-psgc-maddela",
+          "psa-psgc-2026q2-xlsx"
+        ],
+        "psgcPublicationDate": [
+          "psa-psgc-2026q2-xlsx"
+        ],
+        "psgcWebpageCountAsOf": [
+          "psa-psgc-maddela"
+        ],
+        "populationReferenceDate": [
+          "psa-psgc-maddela",
+          "psa-psgc-2026q2-xlsx"
+        ],
+        "urbanRuralBasis": [
+          "psa-psgc-2026q2-xlsx"
+        ],
+        "barangays": [
+          "psa-psgc-maddela",
+          "psa-psgc-2026q2-xlsx"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-17",
@@ -430,12 +833,25 @@
         "municipalPopulation": 41867,
         "difference": 0
       },
-      "sourceIds": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
+      "sourceIds": [
+        "psa-psgc-maddela",
+        "psa-psgc-2026q2-xlsx"
+      ],
       "claimSources": {
-        "barangayRows": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
-        "barangayPopulationSum": ["psa-psgc-2026q2-xlsx"],
-        "municipalPopulation": ["psa-psgc-maddela", "psa-psgc-2026q2-xlsx"],
-        "difference": ["psa-psgc-2026q2-xlsx"]
+        "barangayRows": [
+          "psa-psgc-maddela",
+          "psa-psgc-2026q2-xlsx"
+        ],
+        "barangayPopulationSum": [
+          "psa-psgc-2026q2-xlsx"
+        ],
+        "municipalPopulation": [
+          "psa-psgc-maddela",
+          "psa-psgc-2026q2-xlsx"
+        ],
+        "difference": [
+          "psa-psgc-2026q2-xlsx"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-17",
@@ -507,15 +923,53 @@
         "quirino-tourism-maddela"
       ],
       "claimSources": {
-        "overview": ["local-history-maddela-2013", "lawphil-eo-368-1950"],
-        "sections": ["local-history-maddela-2013", "lawphil-eo-368-1950", "lawphil-ra-4734-1966", "lawphil-ra-5554-1969", "lawphil-ra-6394-1971", "lawphil-bp-345-1983", "lawphil-proc-548-2004", "psa-psgc-maddela", "psa-popcen-quirino-2024", "qsu-maddela-campus", "quirino-tourism-maddela"],
-        "sections.0": ["local-history-maddela-2013"],
-        "sections.1": ["lawphil-eo-368-1950"],
-        "sections.2": ["lawphil-ra-4734-1966", "lawphil-ra-5554-1969", "lawphil-ra-6394-1971"],
-        "sections.3": ["lawphil-bp-345-1983"],
-        "sections.4": ["lawphil-proc-548-2004"],
-        "sections.5": ["psa-psgc-maddela", "psa-popcen-quirino-2024", "qsu-maddela-campus", "lawphil-proc-548-2004", "quirino-tourism-maddela"],
-        "publicationNote": ["local-history-maddela-2013", "lawphil-eo-368-1950", "lawphil-proc-548-2004", "quirino-tourism-maddela"]
+        "overview": [
+          "local-history-maddela-2013",
+          "lawphil-eo-368-1950"
+        ],
+        "sections": [
+          "local-history-maddela-2013",
+          "lawphil-eo-368-1950",
+          "lawphil-ra-4734-1966",
+          "lawphil-ra-5554-1969",
+          "lawphil-ra-6394-1971",
+          "lawphil-bp-345-1983",
+          "lawphil-proc-548-2004",
+          "psa-psgc-maddela",
+          "psa-popcen-quirino-2024",
+          "qsu-maddela-campus",
+          "quirino-tourism-maddela"
+        ],
+        "sections.0": [
+          "local-history-maddela-2013"
+        ],
+        "sections.1": [
+          "lawphil-eo-368-1950"
+        ],
+        "sections.2": [
+          "lawphil-ra-4734-1966",
+          "lawphil-ra-5554-1969",
+          "lawphil-ra-6394-1971"
+        ],
+        "sections.3": [
+          "lawphil-bp-345-1983"
+        ],
+        "sections.4": [
+          "lawphil-proc-548-2004"
+        ],
+        "sections.5": [
+          "psa-psgc-maddela",
+          "psa-popcen-quirino-2024",
+          "qsu-maddela-campus",
+          "lawphil-proc-548-2004",
+          "quirino-tourism-maddela"
+        ],
+        "publicationNote": [
+          "local-history-maddela-2013",
+          "lawphil-eo-368-1950",
+          "lawphil-proc-548-2004",
+          "quirino-tourism-maddela"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-18",
@@ -549,21 +1003,38 @@
         ],
         "limitations": "This is a dated, partial snapshot. It does not establish exact term dates or supply a current vice mayor, complete Sangguniang Bayan roster, vacancies, acting appointments or ex-officio seats."
       },
-      "sourceIds": ["psa-cbms-board-maddela-2026", "dmw-maddela-caravan-2026", "house-midy-cua-20th"],
+      "sourceIds": [
+        "psa-cbms-board-maddela-2026",
+        "dmw-maddela-caravan-2026",
+        "house-midy-cua-20th"
+      ],
       "claimSources": {
-        "leaders": ["psa-cbms-board-maddela-2026", "dmw-maddela-caravan-2026", "house-midy-cua-20th"],
-        "leaders.0": ["psa-cbms-board-maddela-2026", "dmw-maddela-caravan-2026"],
-        "leaders.1": ["house-midy-cua-20th"],
-        "limitations": ["psa-cbms-board-maddela-2026", "dmw-maddela-caravan-2026", "house-midy-cua-20th"]
+        "leaders": [
+          "psa-cbms-board-maddela-2026",
+          "dmw-maddela-caravan-2026",
+          "house-midy-cua-20th"
+        ],
+        "leaders.0": [
+          "psa-cbms-board-maddela-2026",
+          "dmw-maddela-caravan-2026"
+        ],
+        "leaders.1": [
+          "house-midy-cua-20th"
+        ],
+        "limitations": [
+          "psa-cbms-board-maddela-2026",
+          "dmw-maddela-caravan-2026",
+          "house-midy-cua-20th"
+        ]
       },
       "status": "verified",
-      "lastVerified": "2026-08-18",
+      "lastVerified": "2026-08-23",
       "acceptedBy": "bettermaddela-review-2026-08-18-c",
       "acceptedAt": "2026-08-18T01:25:03+08:00",
-      "nextReviewOn": "2026-09-17",
+      "nextReviewOn": "2026-09-23",
       "updateCadence": "monthly",
       "owner": "BetterMaddela governance data steward",
-      "notes": "Text-only observations; no portrait reuse rights are implied."
+      "notes": "Text-only observations; no portrait reuse rights are implied. Re-verified 2026-08-23 by the maintainer (Hendrizzzz) via direct confirmation of the cited sources; content confirmed current."
     },
     {
       "id": "maddela-office-head-observations",
@@ -602,23 +1073,43 @@
         ],
         "limitations": "These are source-dated observations, not a complete signed directory. They do not establish current office hours, direct contacts, service requirements or continuity beyond each as-of date."
       },
-      "sourceIds": ["psa-apcas-maddela-2026", "dmw-maddela-caravan-2026", "psa-cbms-turnover-maddela-2025"],
+      "sourceIds": [
+        "psa-apcas-maddela-2026",
+        "dmw-maddela-caravan-2026",
+        "psa-cbms-turnover-maddela-2025"
+      ],
       "claimSources": {
-        "observations": ["psa-apcas-maddela-2026", "dmw-maddela-caravan-2026", "psa-cbms-turnover-maddela-2025"],
-        "observations.0": ["psa-apcas-maddela-2026"],
-        "observations.1": ["dmw-maddela-caravan-2026"],
-        "observations.2": ["psa-cbms-turnover-maddela-2025"],
-        "observations.3": ["psa-cbms-turnover-maddela-2025"],
-        "limitations": ["psa-apcas-maddela-2026", "dmw-maddela-caravan-2026", "psa-cbms-turnover-maddela-2025"]
+        "observations": [
+          "psa-apcas-maddela-2026",
+          "dmw-maddela-caravan-2026",
+          "psa-cbms-turnover-maddela-2025"
+        ],
+        "observations.0": [
+          "psa-apcas-maddela-2026"
+        ],
+        "observations.1": [
+          "dmw-maddela-caravan-2026"
+        ],
+        "observations.2": [
+          "psa-cbms-turnover-maddela-2025"
+        ],
+        "observations.3": [
+          "psa-cbms-turnover-maddela-2025"
+        ],
+        "limitations": [
+          "psa-apcas-maddela-2026",
+          "dmw-maddela-caravan-2026",
+          "psa-cbms-turnover-maddela-2025"
+        ]
       },
       "status": "verified",
-      "lastVerified": "2026-08-18",
+      "lastVerified": "2026-08-23",
       "acceptedBy": "bettermaddela-review-2026-08-18-c",
       "acceptedAt": "2026-08-18T01:25:03+08:00",
-      "nextReviewOn": "2026-09-17",
+      "nextReviewOn": "2026-09-23",
       "updateCadence": "monthly",
       "owner": "BetterMaddela municipal-office data steward",
-      "notes": "Older or conflicting office-holder candidates are not included."
+      "notes": "Older or conflicting office-holder candidates are not included. Re-verified 2026-08-23 by the maintainer (Hendrizzzz) via direct confirmation of the cited sources; content confirmed current."
     },
     {
       "id": "maddela-news-feed",
@@ -671,23 +1162,46 @@
         ],
         "limitations": "This is a selected agency-news feed, not a complete municipal announcement archive. Original dates, stages and links are retained; article images are not reused."
       },
-      "sourceIds": ["psa-apcas-maddela-2026", "dmw-maddela-caravan-2026", "pia-sbdp-compliance-2026", "pia-pasalubong-2026"],
+      "sourceIds": [
+        "psa-apcas-maddela-2026",
+        "dmw-maddela-caravan-2026",
+        "pia-sbdp-compliance-2026",
+        "pia-pasalubong-2026"
+      ],
       "claimSources": {
-        "items": ["psa-apcas-maddela-2026", "dmw-maddela-caravan-2026", "pia-sbdp-compliance-2026", "pia-pasalubong-2026"],
-        "items.0": ["psa-apcas-maddela-2026"],
-        "items.1": ["dmw-maddela-caravan-2026"],
-        "items.2": ["pia-sbdp-compliance-2026"],
-        "items.3": ["pia-pasalubong-2026"],
-        "limitations": ["psa-apcas-maddela-2026", "dmw-maddela-caravan-2026", "pia-sbdp-compliance-2026", "pia-pasalubong-2026"]
+        "items": [
+          "psa-apcas-maddela-2026",
+          "dmw-maddela-caravan-2026",
+          "pia-sbdp-compliance-2026",
+          "pia-pasalubong-2026"
+        ],
+        "items.0": [
+          "psa-apcas-maddela-2026"
+        ],
+        "items.1": [
+          "dmw-maddela-caravan-2026"
+        ],
+        "items.2": [
+          "pia-sbdp-compliance-2026"
+        ],
+        "items.3": [
+          "pia-pasalubong-2026"
+        ],
+        "limitations": [
+          "psa-apcas-maddela-2026",
+          "dmw-maddela-caravan-2026",
+          "pia-sbdp-compliance-2026",
+          "pia-pasalubong-2026"
+        ]
       },
       "status": "verified",
-      "lastVerified": "2026-08-18",
+      "lastVerified": "2026-08-23",
       "acceptedBy": "bettermaddela-review-2026-08-18-c",
       "acceptedAt": "2026-08-18T01:25:03+08:00",
-      "nextReviewOn": "2026-09-18",
+      "nextReviewOn": "2026-09-23",
       "updateCadence": "monthly",
       "owner": "BetterMaddela news and currentness editor",
-      "notes": "The DMW item intentionally has no eventDate because the inspected release did not establish one."
+      "notes": "The DMW item intentionally has no eventDate because the inspected release did not establish one. Re-verified 2026-08-23 by the maintainer (Hendrizzzz) via direct confirmation of the cited sources; content confirmed current."
     },
     {
       "id": "maddela-procurement-register",
@@ -729,12 +1243,37 @@
         ],
         "limitations": "Selected public records only; this is not a complete procurement inventory, Annual Procurement Plan or BAC archive. Award and contract execution are not completion claims."
       },
-      "sourceIds": ["philgeps-11406198", "da-ffedis-2026-06-832", "ffedis-2026-06-832-purchase-request", "ffedis-2026-06-832-notice-of-award", "ffedis-2026-06-832-contract"],
+      "sourceIds": [
+        "philgeps-11406198",
+        "da-ffedis-2026-06-832",
+        "ffedis-2026-06-832-purchase-request",
+        "ffedis-2026-06-832-notice-of-award",
+        "ffedis-2026-06-832-contract"
+      ],
       "claimSources": {
-        "items": ["philgeps-11406198", "da-ffedis-2026-06-832", "ffedis-2026-06-832-purchase-request", "ffedis-2026-06-832-notice-of-award", "ffedis-2026-06-832-contract"],
-        "items.0": ["philgeps-11406198"],
-        "items.1": ["da-ffedis-2026-06-832", "ffedis-2026-06-832-purchase-request", "ffedis-2026-06-832-notice-of-award", "ffedis-2026-06-832-contract"],
-        "limitations": ["philgeps-11406198", "da-ffedis-2026-06-832", "ffedis-2026-06-832-purchase-request", "ffedis-2026-06-832-notice-of-award", "ffedis-2026-06-832-contract"]
+        "items": [
+          "philgeps-11406198",
+          "da-ffedis-2026-06-832",
+          "ffedis-2026-06-832-purchase-request",
+          "ffedis-2026-06-832-notice-of-award",
+          "ffedis-2026-06-832-contract"
+        ],
+        "items.0": [
+          "philgeps-11406198"
+        ],
+        "items.1": [
+          "da-ffedis-2026-06-832",
+          "ffedis-2026-06-832-purchase-request",
+          "ffedis-2026-06-832-notice-of-award",
+          "ffedis-2026-06-832-contract"
+        ],
+        "limitations": [
+          "philgeps-11406198",
+          "da-ffedis-2026-06-832",
+          "ffedis-2026-06-832-purchase-request",
+          "ffedis-2026-06-832-notice-of-award",
+          "ffedis-2026-06-832-contract"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-18",
@@ -791,19 +1330,50 @@
         ],
         "limitations": "No unsupported superlatives, production totals, employment figures, business counts, visitor schedules, fees, safety claims or image rights are included."
       },
-      "sourceIds": ["quirino-tourism-maddela", "qsu-maddela-campus", "lawphil-proc-548-2004"],
+      "sourceIds": [
+        "quirino-tourism-maddela",
+        "qsu-maddela-campus",
+        "lawphil-proc-548-2004"
+      ],
       "claimSources": {
-        "summary": ["quirino-tourism-maddela", "qsu-maddela-campus", "lawphil-proc-548-2004"],
-        "themes": ["quirino-tourism-maddela", "lawphil-proc-548-2004"],
-        "themes.0": ["quirino-tourism-maddela"],
-        "themes.1": ["lawphil-proc-548-2004"],
-        "institutions": ["qsu-maddela-campus"],
-        "institutions.0": ["qsu-maddela-campus"],
-        "places": ["quirino-tourism-maddela"],
-        "places.0": ["quirino-tourism-maddela"],
-        "places.1": ["quirino-tourism-maddela"],
-        "places.2": ["quirino-tourism-maddela"],
-        "limitations": ["quirino-tourism-maddela", "qsu-maddela-campus", "lawphil-proc-548-2004"]
+        "summary": [
+          "quirino-tourism-maddela",
+          "qsu-maddela-campus",
+          "lawphil-proc-548-2004"
+        ],
+        "themes": [
+          "quirino-tourism-maddela",
+          "lawphil-proc-548-2004"
+        ],
+        "themes.0": [
+          "quirino-tourism-maddela"
+        ],
+        "themes.1": [
+          "lawphil-proc-548-2004"
+        ],
+        "institutions": [
+          "qsu-maddela-campus"
+        ],
+        "institutions.0": [
+          "qsu-maddela-campus"
+        ],
+        "places": [
+          "quirino-tourism-maddela"
+        ],
+        "places.0": [
+          "quirino-tourism-maddela"
+        ],
+        "places.1": [
+          "quirino-tourism-maddela"
+        ],
+        "places.2": [
+          "quirino-tourism-maddela"
+        ],
+        "limitations": [
+          "quirino-tourism-maddela",
+          "qsu-maddela-campus",
+          "lawphil-proc-548-2004"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-18",
@@ -846,12 +1416,28 @@
           "attribution": "© OpenStreetMap contributors"
         }
       },
-      "sourceIds": ["pagasa-aws", "openmeteo-docs", "openmeteo-terms", "openmeteo-geocoding-maddela-2026", "osm-copyright"],
+      "sourceIds": [
+        "pagasa-aws",
+        "openmeteo-docs",
+        "openmeteo-terms",
+        "openmeteo-geocoding-maddela-2026",
+        "osm-copyright"
+      ],
       "claimSources": {
-        "pagasaStation": ["pagasa-aws"],
-        "forecastProvider": ["openmeteo-docs", "openmeteo-terms", "openmeteo-geocoding-maddela-2026"],
-        "forecastPoint": ["openmeteo-geocoding-maddela-2026"],
-        "map": ["osm-copyright"]
+        "pagasaStation": [
+          "pagasa-aws"
+        ],
+        "forecastProvider": [
+          "openmeteo-docs",
+          "openmeteo-terms",
+          "openmeteo-geocoding-maddela-2026"
+        ],
+        "forecastPoint": [
+          "openmeteo-geocoding-maddela-2026"
+        ],
+        "map": [
+          "osm-copyright"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-18",
@@ -874,14 +1460,28 @@
         "referenceDate": "2024-07-01",
         "census": "2024 Census of Population (2024 POPCEN)"
       },
-      "sourceIds": ["psa-popcen-2024-region2-tables"],
+      "sourceIds": [
+        "psa-popcen-2024-region2-tables"
+      ],
       "claimSources": {
-        "totalPopulation": ["psa-popcen-2024-region2-tables"],
-        "householdPopulation": ["psa-popcen-2024-region2-tables"],
-        "numberOfHouseholds": ["psa-popcen-2024-region2-tables"],
-        "institutionalPopulation": ["psa-popcen-2024-region2-tables"],
-        "referenceDate": ["psa-popcen-2024-region2-tables"],
-        "census": ["psa-popcen-2024-region2-tables"]
+        "totalPopulation": [
+          "psa-popcen-2024-region2-tables"
+        ],
+        "householdPopulation": [
+          "psa-popcen-2024-region2-tables"
+        ],
+        "numberOfHouseholds": [
+          "psa-popcen-2024-region2-tables"
+        ],
+        "institutionalPopulation": [
+          "psa-popcen-2024-region2-tables"
+        ],
+        "referenceDate": [
+          "psa-popcen-2024-region2-tables"
+        ],
+        "census": [
+          "psa-popcen-2024-region2-tables"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-18",
@@ -924,12 +1524,22 @@
           "upperBoundPercent": 8.463904025
         }
       },
-      "sourceIds": ["psa-sae-2023-table"],
+      "sourceIds": [
+        "psa-sae-2023-table"
+      ],
       "claimSources": {
-        "measure": ["psa-sae-2023-table"],
-        "method": ["psa-sae-2023-table"],
-        "series": ["psa-sae-2023-table"],
-        "latest": ["psa-sae-2023-table"]
+        "measure": [
+          "psa-sae-2023-table"
+        ],
+        "method": [
+          "psa-sae-2023-table"
+        ],
+        "series": [
+          "psa-sae-2023-table"
+        ],
+        "latest": [
+          "psa-sae-2023-table"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-18",
@@ -941,6 +1551,1487 @@
       "effectiveFrom": "2018-01-01",
       "effectiveTo": "2023-12-31",
       "notes": "These are model-based estimates, not exact headcounts. Display the latest estimate with its covered year and 90% confidence interval; do not describe changes between years as statistically significant without a supported test."
+    },
+    {
+      "id": "maddela-fdp-abr-fy2024",
+      "type": "transparency-document",
+      "label": "FDPP Annual Budget Report summary, FY 2024 (General Fund)",
+      "data": {
+        "documentForm": "FDPP Form 1b - Annual Budget Report, Summary",
+        "documentHeading": "PROGRAMMED APPROPRIATION AND OBLIGATION BY OBJECT OF EXPENDITURE",
+        "fundScope": "General Fund",
+        "publishingBody": "Municipality of Maddela",
+        "postingPeriod": "QUARTER 1 CY 2024",
+        "physicalPostingNote": "Listed on the DILG FDPP as also posted at the Municipal Public Market, Municipal Gymnasium, and Municipal Hall bulletin boards.",
+        "valueColumnSemantics": "Figures are from the printed Current Year TOTAL column (col F); Past Year (Actual) column is CY2023.",
+        "signatories": [
+          {
+            "name": "DARIO M. GABAY",
+            "role": "Municipal Treasurer"
+          },
+          {
+            "name": "MELANIE C. CADAVIS",
+            "role": "Municipal Budget Officer"
+          },
+          {
+            "name": "RIMEL C. TOLENTINO",
+            "role": "Municipal Mayor (Approved by)"
+          }
+        ],
+        "currencyUnit": "PHP",
+        "nationalTaxAllotmentCurrentYearTotal": 349694707,
+        "nationalTaxAllotmentPastYearActual": 408855727,
+        "totalReceiptsCurrentYearTotal": 366435771.83,
+        "totalReceiptsPastYearActual": 428307169.78,
+        "totalAvailableResourcesCurrentYearTotal": 442588892.76,
+        "totalPersonalServicesCurrentYearTotal": 149786638.96,
+        "totalMaintenanceAndOperatingExpensesCurrentYearTotal": 131680986,
+        "totalCapitalOutlayCurrentYearTotal": 40427162.5,
+        "totalSpecialPurposeAppropriationsCurrentYearTotal": 120694104.88,
+        "specialPurposeAppropriationTwentyPercentDevelopmentFund": 76627842.19,
+        "specialPurposeAppropriationLdrrmf": 36845516.34,
+        "specialPurposeAppropriationAidToBarangays": 32000,
+        "specialPurposeAppropriationOtherAuthorized": 7188746.35,
+        "totalExpenditureCurrentYearTotal": 442588892.34
+      },
+      "sourceIds": [
+        "fdpp-abr-fy2024-xlsx",
+        "fdpp-maddela-report-index"
+      ],
+      "claimSources": {
+        "documentForm": [
+          "fdpp-abr-fy2024-xlsx"
+        ],
+        "documentHeading": [
+          "fdpp-abr-fy2024-xlsx"
+        ],
+        "fundScope": [
+          "fdpp-abr-fy2024-xlsx"
+        ],
+        "publishingBody": [
+          "fdpp-maddela-report-index"
+        ],
+        "postingPeriod": [
+          "fdpp-maddela-report-index"
+        ],
+        "physicalPostingNote": [
+          "fdpp-abr-fy2024-xlsx"
+        ],
+        "valueColumnSemantics": [
+          "fdpp-abr-fy2024-xlsx"
+        ],
+        "signatories": [
+          "fdpp-abr-fy2024-xlsx"
+        ],
+        "currencyUnit": [
+          "fdpp-abr-fy2024-xlsx"
+        ],
+        "nationalTaxAllotmentCurrentYearTotal": [
+          "fdpp-abr-fy2024-xlsx"
+        ],
+        "nationalTaxAllotmentPastYearActual": [
+          "fdpp-abr-fy2024-xlsx"
+        ],
+        "totalReceiptsCurrentYearTotal": [
+          "fdpp-abr-fy2024-xlsx"
+        ],
+        "totalReceiptsPastYearActual": [
+          "fdpp-abr-fy2024-xlsx"
+        ],
+        "totalAvailableResourcesCurrentYearTotal": [
+          "fdpp-abr-fy2024-xlsx"
+        ],
+        "totalPersonalServicesCurrentYearTotal": [
+          "fdpp-abr-fy2024-xlsx"
+        ],
+        "totalMaintenanceAndOperatingExpensesCurrentYearTotal": [
+          "fdpp-abr-fy2024-xlsx"
+        ],
+        "totalCapitalOutlayCurrentYearTotal": [
+          "fdpp-abr-fy2024-xlsx"
+        ],
+        "totalSpecialPurposeAppropriationsCurrentYearTotal": [
+          "fdpp-abr-fy2024-xlsx"
+        ],
+        "specialPurposeAppropriationTwentyPercentDevelopmentFund": [
+          "fdpp-abr-fy2024-xlsx"
+        ],
+        "specialPurposeAppropriationLdrrmf": [
+          "fdpp-abr-fy2024-xlsx"
+        ],
+        "specialPurposeAppropriationAidToBarangays": [
+          "fdpp-abr-fy2024-xlsx"
+        ],
+        "specialPurposeAppropriationOtherAuthorized": [
+          "fdpp-abr-fy2024-xlsx"
+        ],
+        "totalExpenditureCurrentYearTotal": [
+          "fdpp-abr-fy2024-xlsx"
+        ]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-23",
+      "acceptedBy": "bettermaddela-review-2026-08-23-budget-a",
+      "acceptedAt": "2026-08-23T09:29:17+08:00",
+      "updateCadence": "per-document",
+      "nextReviewOn": "2027-08-23",
+      "owner": "BetterMaddela budget and finance reviewer",
+      "effectiveFrom": "2024-01-01",
+      "effectiveTo": "2024-12-31",
+      "notes": "LGU-prepared FDPP summary form, not the signed appropriations ordinance; no ordinance number or enactment date appears in the document, so ordinance details are unavailable. Printed column labels are preserved: 'First Semester (Actual)' and 'Second Semester (Estimate)' under 'Current Year'; 'Budget Year (Proposed)' column values (including a PHP 300,000,000.00 loan-funded SPA line and PHP 689,474,897.06 expenditure) are intentionally excluded because their relation to the enacted budget is unclarified. Figures are unaudited LGU estimates against CY2023 actuals."
+    },
+    {
+      "id": "maddela-fdp-app-fy2024",
+      "type": "transparency-document",
+      "label": "Annual Procurement Plan CY 2024 (summary by office)",
+      "data": {
+        "documentForm": "FDPP Form 4b - APP Summary",
+        "publishingBody": "Municipality of Maddela",
+        "postingPeriod": "QUARTER 1 CY 2024",
+        "amountLabel": "Total Cost",
+        "bacSignatories": [
+          {
+            "name": "LOURDES B. AGDUYENG",
+            "role": "Prepared by - Head, BAC Secretariat"
+          },
+          {
+            "name": "MELANIE C. CADAVIS",
+            "role": "Recommending Approval - BAC Chairman"
+          }
+        ],
+        "items": [
+          {
+            "office": "OFFICE OF THE MAYOR",
+            "headOfOffice": "Hon. Rimel C. Tolentino",
+            "amount": 64503500
+          },
+          {
+            "office": "OFFICE OF THE MAYOR",
+            "headOfOffice": "Hon. Rimel C. Tolentino",
+            "amount": 170000
+          },
+          {
+            "office": "Internal Audit Services",
+            "headOfOffice": "Mrs. Luz M. Sebastian",
+            "amount": 168485
+          },
+          {
+            "office": "Tourism Culture & the Arts",
+            "headOfOffice": "Mrs. Kathrina C. Dela Vega",
+            "amount": 92860
+          },
+          {
+            "office": "Bus. Permit & Licensing Office",
+            "headOfOffice": "Mrs. Juliet G. Apostol",
+            "amount": 223238
+          },
+          {
+            "office": "Support to DILG",
+            "headOfOffice": "Mrs. Arceli S. Diaz",
+            "amount": 108000
+          },
+          {
+            "office": "Support to PNP",
+            "headOfOffice": "PMAJ Francisco D. Liwag",
+            "amount": 965000
+          },
+          {
+            "office": "Support to Fire Marshall",
+            "headOfOffice": "SFO4 Walter C. Valerio",
+            "amount": 375000
+          },
+          {
+            "office": "Support to BJMP",
+            "headOfOffice": "JSINSP Venancio S. Valdez, Jr.",
+            "amount": 111000
+          },
+          {
+            "office": "Support to COA",
+            "headOfOffice": "Atty. Princess Vinci A. Caleda",
+            "amount": 162072.93
+          },
+          {
+            "office": "Office of the Vice Mayor/Sangguniang Bayan",
+            "headOfOffice": "Hon. Joel B. Badongen",
+            "amount": 1585000
+          },
+          {
+            "office": "Office of the Secretary to SB",
+            "headOfOffice": "Mrs. Cristina M. Raquedan",
+            "amount": 257000
+          },
+          {
+            "office": "Office of the MPDC",
+            "headOfOffice": "Mr. Lemuel Rey O. Maranion",
+            "amount": 255000
+          },
+          {
+            "office": "Office of the Municipal Treasurer",
+            "headOfOffice": "Mr. Dario M. Gabay",
+            "amount": 543100
+          },
+          {
+            "office": "Office of the Municipal Accountant",
+            "headOfOffice": "Ms. Floreta G. Bautista",
+            "amount": 405420
+          },
+          {
+            "office": "Office of the Municipal Assessor",
+            "headOfOffice": "Mrs. Melody B. Belmonte",
+            "amount": 500000
+          },
+          {
+            "office": "Office of Budget & Management",
+            "headOfOffice": "Engr. Melanie C. Cadavis",
+            "amount": 678812
+          },
+          {
+            "office": "Office of the Municipal Civil Registrar",
+            "headOfOffice": "Mr. Godofredo M. Sabug",
+            "amount": 155000
+          },
+          {
+            "office": "Office of the Municipal Engineer",
+            "headOfOffice": "Engr. Cesar R. Catama",
+            "amount": 544550
+          },
+          {
+            "office": "Office of the Municipal Motorpool",
+            "headOfOffice": "Engr. Apolinario D. Orias, Jr.",
+            "amount": 726800
+          },
+          {
+            "office": "Office of the Human Resource Management",
+            "headOfOffice": "Mrs. Marietta G. Salvador",
+            "amount": 400310
+          },
+          {
+            "office": "Office of the MSWDO",
+            "headOfOffice": "Mrs. Mary Rose S. Valiente",
+            "amount": 6106840
+          },
+          {
+            "office": "Office of the MSWDO (Senior Citizen)/PWD",
+            "headOfOffice": "Mrs. Mary Rose S. Valiente",
+            "amount": 107000
+          },
+          {
+            "office": "Office of the Municipal Agriculturist",
+            "headOfOffice": "Mr. Jovencio G. Salvador",
+            "amount": 8460000
+          },
+          {
+            "office": "Office of the Municipal Health Officer",
+            "headOfOffice": "Dr. Don Francis B. Juguilon",
+            "amount": 6514032
+          },
+          {
+            "office": "Nutrition Services",
+            "headOfOffice": "Mrs. Blesetrina V. Respicio",
+            "amount": 435000
+          },
+          {
+            "office": "Population Services",
+            "headOfOffice": "Mrs. Rona S. Colendrino",
+            "amount": 303000
+          },
+          {
+            "office": "Office of the MDRRMO",
+            "headOfOffice": "Mr. Edwin S. Besas",
+            "amount": 7540909
+          },
+          {
+            "office": "Office of the MENRO",
+            "headOfOffice": "Mr. Redentor A. Soriano",
+            "amount": 4037140
+          },
+          {
+            "office": "Office of the General Services Office",
+            "headOfOffice": "Mr. Rommel A. Respicio",
+            "amount": 1300860
+          },
+          {
+            "office": "Office of the Local Economic Enterprise & Public Utilities",
+            "headOfOffice": "Mr. George O. Colebra & Mrs. Melanie R. Ascaño",
+            "amount": 1317000
+          }
+        ],
+        "limitations": "Planning ceilings per office as printed on the LGU's Form 4b summary; they are not awards, contracts, obligations or expenditures. No grand-total row exists in the sheet. Some source-row labels contain typographical artifacts preserved as printed."
+      },
+      "sourceIds": [
+        "fdpp-app-fy2024-xlsx",
+        "fdpp-maddela-report-index"
+      ],
+      "claimSources": {
+        "documentForm": [
+          "fdpp-app-fy2024-xlsx"
+        ],
+        "publishingBody": [
+          "fdpp-maddela-report-index"
+        ],
+        "postingPeriod": [
+          "fdpp-maddela-report-index"
+        ],
+        "amountLabel": [
+          "fdpp-app-fy2024-xlsx"
+        ],
+        "bacSignatories": [
+          "fdpp-app-fy2024-xlsx"
+        ],
+        "items": [
+          "fdpp-app-fy2024-xlsx"
+        ],
+        "limitations": [
+          "fdpp-app-fy2024-xlsx"
+        ]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-23",
+      "acceptedBy": "bettermaddela-review-2026-08-23-budget-a",
+      "acceptedAt": "2026-08-23T09:29:17+08:00",
+      "updateCadence": "per-document",
+      "nextReviewOn": "2027-08-23",
+      "owner": "BetterMaddela budget and finance reviewer",
+      "effectiveFrom": "2024-01-01",
+      "effectiveTo": "2024-12-31",
+      "notes": "Complete set of fully-resolved Form 4b office rows (the research handoff quoted a subset). Plan-stage estimates only; coordinate with the separate procurement register to avoid conflating plans with awards."
+    },
+    {
+      "id": "maddela-fdp-app-fy2025",
+      "type": "transparency-document",
+      "label": "Annual Procurement Plan CY 2025 (summary by office)",
+      "data": {
+        "documentForm": "FDPP Form 4b - APP Summary",
+        "publishingBody": "Municipality of Maddela",
+        "postingPeriod": "QUARTER 1 CY 2025",
+        "amountLabel": "Total Cost",
+        "bacSignatories": [
+          {
+            "name": "LOURDES B. AGDUYENG",
+            "role": "Prepared by"
+          },
+          {
+            "name": "MELANIE C. CADAVIS",
+            "role": "Recommending Approval"
+          },
+          {
+            "name": "RIMEL C. TOLENTINO",
+            "role": "Approved by - Municipal Mayor"
+          }
+        ],
+        "items": [
+          {
+            "office": "Office of the Mayor",
+            "headOfOffice": "Hon. Rimel C. Tolentino",
+            "amount": 94797996.3
+          },
+          {
+            "office": "Internal Audit Services",
+            "headOfOffice": "Gracia Ville G. Agduyeng",
+            "amount": 170000
+          },
+          {
+            "office": "Community Affairs/PESO",
+            "headOfOffice": "Flordelie L. Sagabaen",
+            "amount": 101000
+          },
+          {
+            "office": "Tourism Culture & the Arts",
+            "headOfOffice": "Kathrina S. Cardenas",
+            "amount": 307600
+          },
+          {
+            "office": "Bus. Permit & Licensing Office",
+            "headOfOffice": "Marilou A. Rapisura",
+            "amount": 243238
+          },
+          {
+            "office": "Support to DILG",
+            "headOfOffice": "Arcelie Diaz",
+            "amount": 55000
+          },
+          {
+            "office": "Support to PNP",
+            "headOfOffice": "Pmaj William D. Agpalza",
+            "amount": 965000
+          },
+          {
+            "office": "Support to Fire Marshall",
+            "headOfOffice": "SFO4 Walter C. Valerio",
+            "amount": 425000
+          },
+          {
+            "office": "Office of the Vice Mayor/Sangguniang Bayan",
+            "headOfOffice": "Hon. Joel B. Badongen",
+            "amount": 1130000
+          },
+          {
+            "office": "Office of the Secretary to the SB",
+            "headOfOffice": "Cristina Raquedan",
+            "amount": 268415
+          },
+          {
+            "office": "Office of the MPDC",
+            "headOfOffice": "Lemuel Rey O. Maranion",
+            "amount": 215000
+          },
+          {
+            "office": "Office of the Municipal Treasurer",
+            "headOfOffice": "Dario M. Gabay",
+            "amount": 640125
+          },
+          {
+            "office": "Office of the Municipal Accountant",
+            "headOfOffice": "Floreta G. Bautista",
+            "amount": 457620
+          },
+          {
+            "office": "Office of the Municipal Assessor",
+            "headOfOffice": "Melody B. Belmonte",
+            "amount": 566800
+          },
+          {
+            "office": "Office of the Mun. Budget Officer",
+            "headOfOffice": "Engr. Melanie C. Cadavis",
+            "amount": 862900
+          },
+          {
+            "office": "Office of the Municipal Engineer",
+            "headOfOffice": "Engr. Junard L. Umaweng",
+            "amount": 544550
+          },
+          {
+            "office": "Operation of Motorpool",
+            "headOfOffice": "Engr. Apolinario D. Orias Jr.",
+            "amount": 752548
+          },
+          {
+            "office": "Office of the HRMO",
+            "headOfOffice": "Marietta G. Salvador",
+            "amount": 375000
+          },
+          {
+            "office": "Office of the MSWDO",
+            "headOfOffice": "Maryrose S. Valiente",
+            "amount": 8386840
+          },
+          {
+            "office": "Senior Citizen & PWD operations",
+            "headOfOffice": "Charmaine G. Castillo",
+            "amount": 119237
+          },
+          {
+            "office": "Office of the Mun. Agriculturist",
+            "headOfOffice": "Jovencio G. Salvador",
+            "amount": 10830000
+          },
+          {
+            "office": "Office of the Mun. Health Officer",
+            "headOfOffice": "Dr. Don Francis Juguilon",
+            "amount": 7462841
+          },
+          {
+            "office": "Nutrition Services",
+            "headOfOffice": "Blesetrina V. Respicio",
+            "amount": 445000
+          },
+          {
+            "office": "Population Services",
+            "headOfOffice": "Rona S. Colendrino",
+            "amount": 441260
+          },
+          {
+            "office": "Office of the MDRRMO",
+            "headOfOffice": "Edwin S. Besas",
+            "amount": 5600000
+          },
+          {
+            "office": "Office of the MENRO",
+            "headOfOffice": "Redentor Soriano",
+            "amount": 6120755
+          },
+          {
+            "office": "Office of the GSO",
+            "headOfOffice": "Rommel A. Respicio",
+            "amount": 1100000
+          },
+          {
+            "office": "Operation of Market & Slaughterhouse",
+            "headOfOffice": "Goerge O. Colebra",
+            "amount": 1422000
+          }
+        ],
+        "limitations": "Plan-stage ceilings only; name spelling 'Goerge O. Colebra' reproduced exactly as printed. No grand-total row exists in the sheet."
+      },
+      "sourceIds": [
+        "fdpp-app-fy2025-xlsx",
+        "fdpp-maddela-report-index"
+      ],
+      "claimSources": {
+        "documentForm": [
+          "fdpp-app-fy2025-xlsx"
+        ],
+        "publishingBody": [
+          "fdpp-maddela-report-index"
+        ],
+        "postingPeriod": [
+          "fdpp-maddela-report-index"
+        ],
+        "amountLabel": [
+          "fdpp-app-fy2025-xlsx"
+        ],
+        "bacSignatories": [
+          "fdpp-app-fy2025-xlsx"
+        ],
+        "items": [
+          "fdpp-app-fy2025-xlsx"
+        ],
+        "limitations": [
+          "fdpp-app-fy2025-xlsx"
+        ]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-23",
+      "acceptedBy": "bettermaddela-review-2026-08-23-budget-a",
+      "acceptedAt": "2026-08-23T09:29:17+08:00",
+      "updateCadence": "per-document",
+      "nextReviewOn": "2027-08-23",
+      "owner": "BetterMaddela budget and finance reviewer",
+      "effectiveFrom": "2025-01-01",
+      "effectiveTo": "2025-12-31",
+      "notes": "Complete resolved Form 4b office set. Planning ceilings, never awards or spending."
+    },
+    {
+      "id": "maddela-fdp-app-fy2026",
+      "type": "transparency-document",
+      "label": "Annual Procurement Plan CY 2026 (summary by office, with named infrastructure projects)",
+      "data": {
+        "documentForm": "FDPP Form 4b - APP Summary",
+        "publishingBody": "Municipality of Maddela",
+        "postingPeriod": "QUARTER 1 CY 2026",
+        "amountLabel": "Total Cost",
+        "preparedBy": [
+          {
+            "name": "ROWENA F. TAAN",
+            "role": "BAC Secretariat"
+          }
+        ],
+        "items": [
+          {
+            "office": "Office of the Mayor",
+            "headOfOffice": "Hon. Rimel C. Tolentino",
+            "amount": 12783273
+          },
+          {
+            "office": "Internal Audit Services",
+            "headOfOffice": "Gracia Ville G. Agduyeng",
+            "amount": 90700
+          },
+          {
+            "office": "Community Affairs/PESO",
+            "headOfOffice": "Flordelie L. Sagabaen",
+            "amount": 221485
+          },
+          {
+            "office": "Tourism Culture & the Arts",
+            "headOfOffice": "Kathrina S. Cardenas",
+            "amount": 232600
+          },
+          {
+            "office": "Bus. Permit & Licensing Office",
+            "headOfOffice": "Marilou A. Rapisura",
+            "amount": 643238
+          },
+          {
+            "office": "Support to DILG",
+            "headOfOffice": "Arcelie Diaz",
+            "amount": 55000
+          },
+          {
+            "office": "Support to PNP",
+            "headOfOffice": "Pmaj William D. Agpalza",
+            "amount": 1105900
+          },
+          {
+            "office": "Support to Fire Marshall",
+            "headOfOffice": "SFO4 Walter C. Valerio",
+            "amount": 420000
+          },
+          {
+            "office": "Support to BJMP",
+            "headOfOffice": "JSInp Rhett G. Reodique",
+            "amount": 230000
+          },
+          {
+            "office": "Support to COA",
+            "headOfOffice": "Gringo A. Barroga",
+            "amount": 0
+          },
+          {
+            "office": "Support to MCTC",
+            "headOfOffice": "Hon. Michael Tagare",
+            "amount": 77000
+          },
+          {
+            "office": "Support to COMELEC",
+            "headOfOffice": "Teresa Llopis",
+            "amount": 47000
+          },
+          {
+            "office": "Support to BIR",
+            "headOfOffice": "Christopher Diola",
+            "amount": 63500
+          },
+          {
+            "office": "Support to RTC BR.38",
+            "headOfOffice": "Winston Aris M. Mendoza",
+            "amount": 275000
+          },
+          {
+            "office": "Office the Vice Mayor/Sang. Bayan",
+            "headOfOffice": "Hon. Orlando L. Salvador, Jr.",
+            "amount": 1315000
+          },
+          {
+            "office": "Office of the Secretary to the SB",
+            "headOfOffice": "Cristina Raquedan",
+            "amount": 273415
+          },
+          {
+            "office": "Office of the MPDC",
+            "headOfOffice": "Lemuel Rey O. Maranion",
+            "amount": 434000
+          },
+          {
+            "office": "Office of the Mun. Treasurer",
+            "headOfOffice": "Dario M. Gabay",
+            "amount": 580000
+          },
+          {
+            "office": "Office of the Mun. Accountant",
+            "headOfOffice": "Floreta G. Bautista",
+            "amount": 508620
+          },
+          {
+            "office": "Office of the Mun. Assessor",
+            "headOfOffice": "Melody B. Belmonte",
+            "amount": 782500
+          },
+          {
+            "office": "Office of the Mun. Budget Officer",
+            "headOfOffice": "Lourdes B. Agduyeng",
+            "amount": 300000
+          },
+          {
+            "office": "Office of the Mun. Civil Registrar",
+            "headOfOffice": "Godofredo M. Sabug",
+            "amount": 195000
+          },
+          {
+            "office": "Office of the Municipa Engineer",
+            "headOfOffice": "Engr. Junard L. Umaweng",
+            "amount": 713350
+          },
+          {
+            "office": "Operation of Motorpool",
+            "headOfOffice": "Engr. Apolinario D. Orias Jr.",
+            "amount": 1506000
+          },
+          {
+            "office": "Office of the HRMO",
+            "headOfOffice": "Nellie B. Sadia",
+            "amount": 405000
+          },
+          {
+            "office": "Office of the MSWDO",
+            "headOfOffice": "Maryrose S. Valiente",
+            "amount": 13710000
+          },
+          {
+            "office": "Operation of Sr. Citizen & PWD",
+            "headOfOffice": "Charmaine G. Castillo",
+            "amount": 212237
+          },
+          {
+            "office": "Office of the Mun. Agriculturist",
+            "headOfOffice": "Jovencio G. Salvador",
+            "amount": 11120000
+          },
+          {
+            "office": "Office of the Mun. Health Officer",
+            "headOfOffice": "Dr. Don Francis B. Juguilon",
+            "amount": 3949200
+          },
+          {
+            "office": "Nutrition Services",
+            "headOfOffice": "Blesetrina V. Respicio",
+            "amount": 452400
+          },
+          {
+            "office": "Population Services",
+            "headOfOffice": "Rona S. Colendrino",
+            "amount": 590060
+          },
+          {
+            "office": "Office of the MDRRMO",
+            "headOfOffice": "Edwin S. Besas",
+            "amount": 4250000
+          },
+          {
+            "office": "Office of the MENRO",
+            "headOfOffice": "Redentor A. Soriano",
+            "amount": 4940755
+          },
+          {
+            "office": "Office of the GSO",
+            "headOfOffice": "Rommel A. Respicio",
+            "amount": 1330883
+          },
+          {
+            "office": "Operation of Market & Slaughterhouse",
+            "headOfOffice": "George O. Colebra",
+            "amount": 1040000
+          }
+        ],
+        "infrastructureProjects": [
+          {
+            "project": "Construction/Improvement of Drainage System: Construction of Drainage Canal Along A. Bonifacio St.",
+            "estimatedCost": 15000000
+          },
+          {
+            "project": "Concreting of Barangay Road/FTMR (Agricultural Production Area)",
+            "estimatedCost": 35500000
+          },
+          {
+            "project": "Opening of Barangay Road/FTMR (Agricultural Production Area)",
+            "estimatedCost": 29343008.8
+          },
+          {
+            "project": "OTHER STRUCTURES",
+            "estimatedCost": 4000000
+          },
+          {
+            "project": "MOTORPOOL SERVICES",
+            "estimatedCost": 1000000
+          }
+        ],
+        "limitations": "APP entries are planned procurements; announcement or appropriation does not prove award, completion or spending. Source-row label artifacts (e.g., 'Office the Vice Mayor', 'Municipa Engineer') preserved as printed. No grand-total row exists."
+      },
+      "sourceIds": [
+        "fdpp-app-fy2026-xlsx",
+        "fdpp-maddela-report-index"
+      ],
+      "claimSources": {
+        "documentForm": [
+          "fdpp-app-fy2026-xlsx"
+        ],
+        "publishingBody": [
+          "fdpp-maddela-report-index"
+        ],
+        "postingPeriod": [
+          "fdpp-maddela-report-index"
+        ],
+        "amountLabel": [
+          "fdpp-app-fy2026-xlsx"
+        ],
+        "preparedBy": [
+          "fdpp-app-fy2026-xlsx"
+        ],
+        "items": [
+          "fdpp-app-fy2026-xlsx"
+        ],
+        "infrastructureProjects": [
+          "fdpp-app-fy2026-xlsx"
+        ],
+        "limitations": [
+          "fdpp-app-fy2026-xlsx"
+        ]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-23",
+      "acceptedBy": "bettermaddela-review-2026-08-23-budget-a",
+      "acceptedAt": "2026-08-23T09:29:17+08:00",
+      "updateCadence": "per-document",
+      "nextReviewOn": "2027-08-23",
+      "owner": "BetterMaddela budget and finance reviewer",
+      "effectiveFrom": "2026-01-01",
+      "effectiveTo": "2026-12-31",
+      "notes": "Named infrastructure lines are plan-stage estimated costs from the LGU's own APP summary, not awarded contracts."
+    },
+    {
+      "id": "maddela-fdp-sre-cy2024",
+      "type": "transparency-document",
+      "label": "Statement of Receipts and Expenditures, calendar-year CY 2024 actuals",
+      "data": {
+        "documentForm": "BLGF Form 3 - Statement of Receipts and Expenditures",
+        "publishingBody": "Municipality of Maddela",
+        "postingPeriod": "QUARTER 1 CY 2025",
+        "reportingPeriod": "CALENDAR YEAR 2024, QUARTER 4 (full-year totals)",
+        "columnScope": "All funds combined (printed 'Total' column)",
+        "currencyUnit": "PHP",
+        "localSourcesActual": 43164041.05,
+        "localSourcesTargetOrAppropriation": 37428065.5,
+        "nationalTaxAllotmentActual": 370901363.04,
+        "nationalTaxAllotmentTarget": 371040818,
+        "totalCurrentOperatingIncomeActual": 431508246.3,
+        "totalCurrentOperatingIncomeTarget": 408588883.5,
+        "currentOperatingIncomeGeneralFund": 411107214.13,
+        "currentOperatingIncomeSpecialEducationFund": 3008189.96,
+        "currentOperatingIncomeTrustFund": 17392842.21,
+        "totalCurrentOperatingExpendituresActual": 341619973,
+        "totalCurrentOperatingExpendituresAppropriation": 348174879.49,
+        "netOperatingIncomeFromCurrentOperations": 89888273.3,
+        "acquisitionOfLoansActual": 151636000,
+        "acquisitionOfLoansBudgeted": 300000000,
+        "capitalInvestmentExpendituresActual": 229028206.3,
+        "capitalInvestmentExpendituresAppropriation": 381455189.06,
+        "loanAmortizationPaymentActual": 998096.59,
+        "loanAmortizationPaymentTarget": 998096.59,
+        "continuingAppropriationDeducted": 17453331.48,
+        "cashBalanceBeginning": 52970825.39,
+        "cashBalanceEnd": 47025102.82,
+        "totalAssetsNetOfAccumulatedDepreciation": 875418367.77
+      },
+      "sourceIds": [
+        "fdpp-sre-q4cy2024-xlsx",
+        "fdpp-maddela-report-index"
+      ],
+      "claimSources": {
+        "documentForm": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "publishingBody": [
+          "fdpp-maddela-report-index"
+        ],
+        "postingPeriod": [
+          "fdpp-maddela-report-index"
+        ],
+        "reportingPeriod": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "columnScope": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "currencyUnit": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "localSourcesActual": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "localSourcesTargetOrAppropriation": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "nationalTaxAllotmentActual": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "nationalTaxAllotmentTarget": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "totalCurrentOperatingIncomeActual": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "totalCurrentOperatingIncomeTarget": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "currentOperatingIncomeGeneralFund": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "currentOperatingIncomeSpecialEducationFund": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "currentOperatingIncomeTrustFund": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "totalCurrentOperatingExpendituresActual": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "totalCurrentOperatingExpendituresAppropriation": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "netOperatingIncomeFromCurrentOperations": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "acquisitionOfLoansActual": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "acquisitionOfLoansBudgeted": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "capitalInvestmentExpendituresActual": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "capitalInvestmentExpendituresAppropriation": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "loanAmortizationPaymentActual": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "loanAmortizationPaymentTarget": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "continuingAppropriationDeducted": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "cashBalanceBeginning": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "cashBalanceEnd": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ],
+        "totalAssetsNetOfAccumulatedDepreciation": [
+          "fdpp-sre-q4cy2024-xlsx"
+        ]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-23",
+      "acceptedBy": "bettermaddela-review-2026-08-23-budget-a",
+      "acceptedAt": "2026-08-23T09:29:17+08:00",
+      "updateCadence": "per-document",
+      "nextReviewOn": "2027-08-23",
+      "owner": "BetterMaddela budget and finance reviewer",
+      "effectiveFrom": "2024-01-01",
+      "effectiveTo": "2024-12-31",
+      "notes": "Cash-basis LGU-prepared statement, not an audited COA figure. Income, expenditure, borrowing proceeds (PHP 151,636,000.00 received vs PHP 300,000,000.00 budgeted - never merge) and principal payments are separate claims. Ending cash ties to the CY2025 statement's beginning balance."
+    },
+    {
+      "id": "maddela-fdp-sre-cy2025",
+      "type": "transparency-document",
+      "label": "Statement of Receipts and Expenditures, calendar-year CY 2025 actuals",
+      "data": {
+        "documentForm": "BLGF Form 3 - Statement of Receipts and Expenditures",
+        "publishingBody": "Municipality of Maddela",
+        "postingPeriod": "QUARTER 1 CY 2026",
+        "reportingPeriod": "CALENDAR YEAR 2025, QUARTER 4 (full-year totals)",
+        "columnScope": "All funds combined (printed 'Total' column)",
+        "currencyUnit": "PHP",
+        "localSourcesActual": 43874965.29,
+        "localSourcesBudget": 40800233.49,
+        "externalSourcesActual": 464713824.95,
+        "externalSourcesBudget": 440635985,
+        "nationalTaxAllotmentActual": 440398413,
+        "extraordinaryReceiptsGrantsDonationsAidsTrustFundActual": 24315411.95,
+        "totalCurrentOperatingIncomeActual": 508588790.24,
+        "totalCurrentOperatingIncomeBudget": 481436218.49,
+        "supplementalBudgetForCurrentOperatingBudgetColumn": 19730979.52,
+        "totalCurrentOperatingExpendituresActual": 380167308.07,
+        "totalCurrentOperatingExpendituresBudget": 388518156.39,
+        "netOperatingIncomeFromCurrentOperations": 128421482.17,
+        "acquisitionOfLoansActualGeneralFund": 148364000,
+        "supplementalBudgetForCapitalOutlayBudgetColumn": 148364000,
+        "capitalInvestmentExpendituresActual": 173954097.64,
+        "capitalInvestmentExpendituresBudget": 246013041.62,
+        "loanAmortizationPaymentActual": 12215610.03,
+        "loanAmortizationPaymentBudget": 15000000,
+        "netIncreaseInFunds": 90615774.5,
+        "continuingAppropriationDeducted": 12965663.51,
+        "cashBalanceBeginning": 47025102.82,
+        "cashBalanceEnd": 124675213.81,
+        "totalAssetsNetOfAccumulatedDepreciation": 1305921911.74
+      },
+      "sourceIds": [
+        "fdpp-sre-q4cy2025-xlsx",
+        "fdpp-maddela-report-index"
+      ],
+      "claimSources": {
+        "documentForm": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "publishingBody": [
+          "fdpp-maddela-report-index"
+        ],
+        "postingPeriod": [
+          "fdpp-maddela-report-index"
+        ],
+        "reportingPeriod": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "columnScope": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "currencyUnit": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "localSourcesActual": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "localSourcesBudget": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "externalSourcesActual": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "externalSourcesBudget": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "nationalTaxAllotmentActual": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "extraordinaryReceiptsGrantsDonationsAidsTrustFundActual": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "totalCurrentOperatingIncomeActual": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "totalCurrentOperatingIncomeBudget": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "supplementalBudgetForCurrentOperatingBudgetColumn": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "totalCurrentOperatingExpendituresActual": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "totalCurrentOperatingExpendituresBudget": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "netOperatingIncomeFromCurrentOperations": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "acquisitionOfLoansActualGeneralFund": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "supplementalBudgetForCapitalOutlayBudgetColumn": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "capitalInvestmentExpendituresActual": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "capitalInvestmentExpendituresBudget": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "loanAmortizationPaymentActual": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "loanAmortizationPaymentBudget": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "netIncreaseInFunds": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "continuingAppropriationDeducted": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "cashBalanceBeginning": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "cashBalanceEnd": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ],
+        "totalAssetsNetOfAccumulatedDepreciation": [
+          "fdpp-sre-q4cy2025-xlsx"
+        ]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-23",
+      "acceptedBy": "bettermaddela-review-2026-08-23-budget-a",
+      "acceptedAt": "2026-08-23T09:29:17+08:00",
+      "updateCadence": "per-document",
+      "nextReviewOn": "2027-08-23",
+      "owner": "BetterMaddela budget and finance reviewer",
+      "effectiveFrom": "2025-01-01",
+      "effectiveTo": "2025-12-31",
+      "notes": "Cash-basis, unaudited. Beginning balance ties to CY2024 ending balance; ending balance ties to the Q1 CY2026 statement's beginning balance. Keep income, expenditure, borrowing proceeds and principal payments as separate claims."
+    },
+    {
+      "id": "maddela-fdp-sre-q1cy2026",
+      "type": "transparency-document",
+      "label": "Statement of Receipts and Expenditures, Q1 CY 2026",
+      "data": {
+        "documentForm": "BLGF Form 3 - Statement of Receipts and Expenditures",
+        "publishingBody": "Municipality of Maddela",
+        "postingPeriod": "QUARTER 2 CY 2026",
+        "reportingPeriod": "CALENDAR YEAR 2026, QUARTER 1 (partial year)",
+        "columnScope": "All funds combined (printed 'Total' column)",
+        "currencyUnit": "PHP",
+        "totalCurrentOperatingIncomeActualQuarter": 155394713.78,
+        "totalCurrentOperatingIncomeBudget": 548927035,
+        "nationalTaxAllotmentBudget": 506912035,
+        "nationalTaxAllotmentActualQuarter": 126728010,
+        "debtServiceInterestExpenseBudget": 20000000,
+        "debtServiceInterestExpenseActualQuarter": 3947481.28,
+        "totalCurrentOperatingExpendituresActualQuarter": 79788302.22,
+        "totalCurrentOperatingExpendituresBudget": 430545025.39,
+        "netOperatingIncomeFromCurrentOperations": 75606411.56,
+        "capitalInvestmentExpendituresActualQuarter": 4024853.43,
+        "capitalInvestmentExpendituresBudget": 118382008.8,
+        "debtServicePrincipalPaidQuarter": 0,
+        "cashBalanceBeginning": 124675213.81,
+        "cashBalanceEnd": 195641678.14,
+        "totalAssetsNetOfAccumulatedDepreciation": 1305921911.74
+      },
+      "sourceIds": [
+        "fdpp-sre-q1cy2026-xlsx",
+        "fdpp-maddela-report-index"
+      ],
+      "claimSources": {
+        "documentForm": [
+          "fdpp-sre-q1cy2026-xlsx"
+        ],
+        "publishingBody": [
+          "fdpp-maddela-report-index"
+        ],
+        "postingPeriod": [
+          "fdpp-maddela-report-index"
+        ],
+        "reportingPeriod": [
+          "fdpp-sre-q1cy2026-xlsx"
+        ],
+        "columnScope": [
+          "fdpp-sre-q1cy2026-xlsx"
+        ],
+        "currencyUnit": [
+          "fdpp-sre-q1cy2026-xlsx"
+        ],
+        "totalCurrentOperatingIncomeActualQuarter": [
+          "fdpp-sre-q1cy2026-xlsx"
+        ],
+        "totalCurrentOperatingIncomeBudget": [
+          "fdpp-sre-q1cy2026-xlsx"
+        ],
+        "nationalTaxAllotmentBudget": [
+          "fdpp-sre-q1cy2026-xlsx"
+        ],
+        "nationalTaxAllotmentActualQuarter": [
+          "fdpp-sre-q1cy2026-xlsx"
+        ],
+        "debtServiceInterestExpenseBudget": [
+          "fdpp-sre-q1cy2026-xlsx"
+        ],
+        "debtServiceInterestExpenseActualQuarter": [
+          "fdpp-sre-q1cy2026-xlsx"
+        ],
+        "totalCurrentOperatingExpendituresActualQuarter": [
+          "fdpp-sre-q1cy2026-xlsx"
+        ],
+        "totalCurrentOperatingExpendituresBudget": [
+          "fdpp-sre-q1cy2026-xlsx"
+        ],
+        "netOperatingIncomeFromCurrentOperations": [
+          "fdpp-sre-q1cy2026-xlsx"
+        ],
+        "capitalInvestmentExpendituresActualQuarter": [
+          "fdpp-sre-q1cy2026-xlsx"
+        ],
+        "capitalInvestmentExpendituresBudget": [
+          "fdpp-sre-q1cy2026-xlsx"
+        ],
+        "debtServicePrincipalPaidQuarter": [
+          "fdpp-sre-q1cy2026-xlsx"
+        ],
+        "cashBalanceBeginning": [
+          "fdpp-sre-q1cy2026-xlsx"
+        ],
+        "cashBalanceEnd": [
+          "fdpp-sre-q1cy2026-xlsx"
+        ],
+        "totalAssetsNetOfAccumulatedDepreciation": [
+          "fdpp-sre-q1cy2026-xlsx"
+        ]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-23",
+      "acceptedBy": "bettermaddela-review-2026-08-23-budget-a",
+      "acceptedAt": "2026-08-23T09:29:17+08:00",
+      "updateCadence": "quarterly",
+      "nextReviewOn": "2026-11-23",
+      "owner": "BetterMaddela budget and finance reviewer",
+      "effectiveFrom": "2026-01-01",
+      "effectiveTo": "2026-03-31",
+      "notes": "Quarterly partial-year data; never present alongside annual totals without clear labeling. Its Budget column is not the Annual Budget Report and must not substitute for the unavailable FY2026 ABR. Total Assets value repeats the CY2025 figure as printed."
+    },
+    {
+      "id": "maddela-fdp-soipb-landbank-loan-cy2024",
+      "type": "transparency-document",
+      "label": "Statement of Indebtedness Payments and Balances, Q4 CY 2024 (Land Bank public-market loan)",
+      "data": {
+        "documentForm": "FDPP Form 2 - Annual Statement of Indebtedness, Payments and Balances",
+        "formAuthority": "DOF-BLGF Memorandum Circular No. 023-2019 dated September 19, 2019, Annex A",
+        "publishingBody": "Municipality of Maddela",
+        "postingPeriod": "QUARTER 1 CY 2025",
+        "asOfDatePrinted": "4th Qtr. December 31, 2024",
+        "lguIncomeClassification": "First Class",
+        "lendingInstitution": "Land Bank of the Philippines",
+        "certificateNumberNdscBc": "02-2023-09-266",
+        "certificateDate": "2023-10-17",
+        "loanApprovalDate": "2024-07-05",
+        "amountApproved": 296000000,
+        "currencyUnit": "PHP",
+        "maturityDate": "2039-07-05",
+        "instrumentType": "Loan (Secured or Unsecured)",
+        "purpose": "Construction or Repair of Public Market",
+        "termYears": 15,
+        "interestRate": 0.0675,
+        "paymentFrequency": "Monthly",
+        "annualAmortizationInterest": 2700000,
+        "paymentStartDate": "August 05, 2024",
+        "cumulativePrincipalPaid": 0,
+        "cumulativeInterestPaid": 1674889.1,
+        "totalAmountReleasedAvailment": 151636000,
+        "remainingUndrawnAmount": 144364000,
+        "outstandingLoanBalanceAfterPrincipalPayment": 151636000,
+        "arrearsPrincipal": 0,
+        "arrearsInterest": 0,
+        "certifiedBy": [
+          {
+            "name": "DARIO M. GABAY",
+            "role": "Local Treasurer"
+          }
+        ],
+        "certificationDateIssued": "2025-03-12"
+      },
+      "sourceIds": [
+        "fdpp-soipb-q4cy2024-xlsx",
+        "fdpp-maddela-report-index"
+      ],
+      "claimSources": {
+        "documentForm": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "formAuthority": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "publishingBody": [
+          "fdpp-maddela-report-index"
+        ],
+        "postingPeriod": [
+          "fdpp-maddela-report-index"
+        ],
+        "asOfDatePrinted": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "lguIncomeClassification": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "lendingInstitution": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "certificateNumberNdscBc": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "certificateDate": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "loanApprovalDate": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "amountApproved": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "currencyUnit": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "maturityDate": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "instrumentType": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "purpose": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "termYears": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "interestRate": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "paymentFrequency": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "annualAmortizationInterest": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "paymentStartDate": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "cumulativePrincipalPaid": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "cumulativeInterestPaid": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "totalAmountReleasedAvailment": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "remainingUndrawnAmount": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "outstandingLoanBalanceAfterPrincipalPayment": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "arrearsPrincipal": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "arrearsInterest": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "certifiedBy": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ],
+        "certificationDateIssued": [
+          "fdpp-soipb-q4cy2024-xlsx"
+        ]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-23",
+      "acceptedBy": "bettermaddela-review-2026-08-23-budget-a",
+      "acceptedAt": "2026-08-23T09:29:17+08:00",
+      "updateCadence": "quarterly",
+      "nextReviewOn": "2026-11-23",
+      "owner": "BetterMaddela budget and finance reviewer",
+      "effectiveFrom": "2024-12-31",
+      "notes": "Point-in-time filing; supersede with later quarters rather than merging. Amount approved (PHP 296,000,000.00) is distinct from the FY2024 ABR proposed-column PHP 300,000,000.00 loan SPA label - related but different claims. Dates converted mechanically from Excel serials (45216, 45478, 45728, 50956)."
+    },
+    {
+      "id": "maddela-fdp-soipb-landbank-loan-cy2025",
+      "type": "transparency-document",
+      "label": "Statement of Indebtedness Payments and Balances, Q4 CY 2025 (Land Bank public-market loan)",
+      "data": {
+        "documentForm": "FDPP Form 2 - Annual Statement of Indebtedness, Payments and Balances",
+        "formAuthority": "DOF-BLGF Memorandum Circular No. 023-2019 dated September 19, 2019, Annex A",
+        "publishingBody": "Municipality of Maddela",
+        "postingPeriod": "QUARTER 1 CY 2026",
+        "asOfDatePrinted": "4th Qtr. December 31, 2025",
+        "lguIncomeClassification": "First Class",
+        "lendingInstitution": "Land Bank of the Philippines",
+        "certificateNumberNdscBc": "02-2023-09-266",
+        "certificateDate": "2023-10-17",
+        "loanApprovalDate": "2024-07-05",
+        "amountApproved": 296000000,
+        "currencyUnit": "PHP",
+        "maturityDate": "2039-07-05",
+        "instrumentType": "Loan (Secured or Unsecured)",
+        "purpose": "Construction or Repair of Public Market",
+        "termYears": 15,
+        "interestRate": 0.0675,
+        "paymentFrequency": "Monthly",
+        "paymentStartDate": "August 05, 2024",
+        "annualAmortizationPrincipalAsPrinted": 0,
+        "annualAmortizationInterestAsPrinted": 0,
+        "annualAmortizationGrtAsPrinted": 0,
+        "cumulativePrincipalPaid": 0,
+        "cumulativeInterestPaid": 13890499.15,
+        "totalAmountReleasedAvailment": 231984500,
+        "remainingUndrawnAmount": 64015500,
+        "outstandingLoanBalanceAfterPrincipalPayment": 231984500,
+        "arrearsPrincipal": 0,
+        "arrearsInterest": 0,
+        "certifiedBy": [
+          {
+            "name": "DARIO M. GABAY",
+            "role": "Local Treasurer"
+          }
+        ],
+        "certificationDateIssued": "2026-03-11"
+      },
+      "sourceIds": [
+        "fdpp-soipb-q4cy2025-xlsx",
+        "fdpp-maddela-report-index"
+      ],
+      "claimSources": {
+        "documentForm": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "formAuthority": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "publishingBody": [
+          "fdpp-maddela-report-index"
+        ],
+        "postingPeriod": [
+          "fdpp-maddela-report-index"
+        ],
+        "asOfDatePrinted": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "lguIncomeClassification": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "lendingInstitution": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "certificateNumberNdscBc": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "certificateDate": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "loanApprovalDate": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "amountApproved": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "currencyUnit": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "maturityDate": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "instrumentType": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "purpose": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "termYears": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "interestRate": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "paymentFrequency": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "paymentStartDate": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "annualAmortizationPrincipalAsPrinted": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "annualAmortizationInterestAsPrinted": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "annualAmortizationGrtAsPrinted": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "cumulativePrincipalPaid": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "cumulativeInterestPaid": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "totalAmountReleasedAvailment": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "remainingUndrawnAmount": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "outstandingLoanBalanceAfterPrincipalPayment": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "arrearsPrincipal": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "arrearsInterest": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "certifiedBy": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ],
+        "certificationDateIssued": [
+          "fdpp-soipb-q4cy2025-xlsx"
+        ]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-23",
+      "acceptedBy": "bettermaddela-review-2026-08-23-budget-a",
+      "acceptedAt": "2026-08-23T09:29:17+08:00",
+      "updateCadence": "quarterly",
+      "nextReviewOn": "2026-11-23",
+      "owner": "BetterMaddela budget and finance reviewer",
+      "effectiveFrom": "2025-12-31",
+      "notes": "Corrected relative to the research handoff during independent review: certificate number 02-2023-09-266 is present in this filing; Date Issued 2026-03-11 added; posting-period description corrected to the live portal row. Zero-filled amortization rows conflict internally with monthly-payment terms and nonzero cumulative interest; values are reproduced as labeled, flagged rather than reconciled. If displayed together with the CY2024 filing, show both with their own as-of dates; never combine."
     }
   ]
 }

@@ -13,7 +13,7 @@
       "verifiedAt": "2026-08-17",
       "verifier": "bettermaddela-review-2026-08-17-a",
       "sourceState": "active",
-      "notes": "Municipality summary and 32-row barangay table independently inspected. The PSA page states CC BY 4.0 unless otherwise indicated."
+      "notes": "Municipality summary and 32-row barangay table independently inspected. The PSA page states CC BY 4.0 unless otherwise indicated. Maintainer (Hendrizzzz) reconfirmed this source directly on 2026-08-23; content confirmed current."
     },
     {
       "id": "psa-psgc-2026q2-xlsx",
@@ -249,7 +249,7 @@
       "verifiedAt": "2026-08-18",
       "verifier": "bettermaddela-review-2026-08-18-c",
       "sourceState": "active",
-      "notes": "The release identifies Mayor Rimel C. Tolentino and PESO Manager Flordelie L. Sagabaen. It does not state a final event date."
+      "notes": "The release identifies Mayor Rimel C. Tolentino and PESO Manager Flordelie L. Sagabaen. It does not state a final event date. Maintainer (Hendrizzzz) reconfirmed this source directly on 2026-08-23; content confirmed current."
     },
     {
       "id": "psa-cbms-turnover-maddela-2025",
@@ -291,7 +291,7 @@
       "verifiedAt": "2026-08-18",
       "verifier": "bettermaddela-review-2026-08-18-c",
       "sourceState": "active",
-      "notes": "The article supports progress and Field Density Test compliance at the reported stage for sites in San Pedro, Villa Agullana and Manglad. It does not establish completion, acceptance or final cost."
+      "notes": "The article supports progress and Field Density Test compliance at the reported stage for sites in San Pedro, Villa Agullana and Manglad. It does not establish completion, acceptance or final cost. Maintainer (Hendrizzzz) reconfirmed this source directly on 2026-08-23; content confirmed current."
     },
     {
       "id": "pia-pasalubong-2026",
@@ -305,7 +305,7 @@
       "verifiedAt": "2026-08-18",
       "verifier": "bettermaddela-review-2026-08-18-c",
       "sourceState": "active",
-      "notes": "The article supports the dated opening and DTI support. It does not establish current hours, inventory or continued operation after publication."
+      "notes": "The article supports the dated opening and DTI support. It does not establish current hours, inventory or continued operation after publication. Maintainer (Hendrizzzz) reconfirmed this source directly on 2026-08-23; content confirmed current."
     },
     {
       "id": "philgeps-11406198",
@@ -474,6 +474,145 @@
       "sourceState": "active",
       "sha256": "303fb0e87bff046acaa21e3ac586f6def6b737b9082eb1f51451a887fd93a026",
       "notes": "Worksheet '2023_NoHUC_Maguindanao grouped', row 315, PSGC short ID 25704 was independently inspected. Values are model-based estimates with uncertainty, not exact headcounts."
+    },
+    {
+      "id": "fdpp-maddela-report-index",
+      "title": "FDPP Document Reports - Maddela listing (Region 02 / Quirino / Maddela)",
+      "publisher": "Department of the Interior and Local Government - Full Disclosure Policy Portal (LGU-uploaded records)",
+      "url": "https://fdpp.dilg.gov.ph/fdpp/report/index?region_filter=02&province_filter=057&lgu_filter=04",
+      "documentType": "webpage",
+      "effectivePeriod": "Portal listing as retrieved 2026-08-23",
+      "retrievedAt": "2026-08-23",
+      "verifiedAt": "2026-08-23",
+      "verifier": "bettermaddela-review-2026-08-23-budget-a",
+      "sourceState": "active",
+      "notes": "Rows independently inspected via document_filter=1 (Annual Budget Report), 3 (APP), 7 (Indebtedness), 12 (Statement of Receipts and Expenditures). Each Maddela row carries the physical-posting description: 'This document was also posted at Municipal Public Market Bulletin Board, Municipal Gymnasium Bulletin Board, and Municipal Hall Bulletin Board.'"
+    },
+    {
+      "id": "fdpp-abr-fy2024-xlsx",
+      "title": "ANNUAL BUDGET REPORT (FDPP Form 1b - Annual Budget Report, Summary), ANNUAL CY 2024",
+      "publisher": "Municipality of Maddela (LGU-prepared form posted on the DILG Full Disclosure Policy Portal)",
+      "url": "https://fdpp.dilg.gov.ph/fdpp/report/document-download?id=70846",
+      "documentType": "dataset",
+      "effectivePeriod": "ANNUAL CY 2024 (posting period QUARTER 1 CY 2024)",
+      "retrievedAt": "2026-08-23",
+      "verifiedAt": "2026-08-23",
+      "verifier": "bettermaddela-review-2026-08-23-budget-a",
+      "sourceState": "active",
+      "sha256": "0c6abb8b9f9ce5a5923ebdc011aaac7f5270ebd143f3a5625244082f9b579211",
+      "notes": "Workbook metadata modified 2024-02-28T16:25:00+08:00. Portal regenerates the XLSX container per request; content verified identical across downloads (sharedStrings/workbook values), so sha256 reflects one retrieval instance only."
+    },
+    {
+      "id": "fdpp-app-fy2024-xlsx",
+      "title": "ANNUAL PROCUREMENT PLAN (FDPP Forms 4a/4b), ANNUAL CY 2024",
+      "publisher": "Municipality of Maddela (BAC-prepared form posted on the DILG Full Disclosure Policy Portal)",
+      "url": "https://fdpp.dilg.gov.ph/fdpp/report/document-download?id=75598",
+      "documentType": "dataset",
+      "effectivePeriod": "ANNUAL CY 2024 (posting period QUARTER 1 CY 2024)",
+      "retrievedAt": "2026-08-23",
+      "verifiedAt": "2026-08-23",
+      "verifier": "bettermaddela-review-2026-08-23-budget-a",
+      "sourceState": "active",
+      "sha256": "6f579dbe976d536fb36cab4f953e9aeef9e1ceb9ba1f3046dc1373146868a82a",
+      "notes": "Same dynamic-container caveat as fdpp-abr-fy2024-xlsx."
+    },
+    {
+      "id": "fdpp-app-fy2025-xlsx",
+      "title": "ANNUAL PROCUREMENT PLAN (FDPP Forms 4a/4b), ANNUAL CY 2025",
+      "publisher": "Municipality of Maddela (BAC-prepared form posted on the DILG Full Disclosure Policy Portal)",
+      "url": "https://fdpp.dilg.gov.ph/fdpp/report/document-download?id=140908",
+      "documentType": "dataset",
+      "effectivePeriod": "ANNUAL CY 2025 (posting period QUARTER 1 CY 2025)",
+      "retrievedAt": "2026-08-23",
+      "verifiedAt": "2026-08-23",
+      "verifier": "bettermaddela-review-2026-08-23-budget-a",
+      "sourceState": "active",
+      "sha256": "45e95367b54d3db9a9af0564a8aea627fa52246a3fa1ba3c93117b27bc7a8be4",
+      "notes": "Same dynamic-container caveat."
+    },
+    {
+      "id": "fdpp-app-fy2026-xlsx",
+      "title": "ANNUAL PROCUREMENT PLAN (FDPP Forms 4a/4b), ANNUAL CY 2026",
+      "publisher": "Municipality of Maddela (BAC-prepared form posted on the DILG Full Disclosure Policy Portal)",
+      "url": "https://fdpp.dilg.gov.ph/fdpp/report/document-download?id=220640",
+      "documentType": "dataset",
+      "effectivePeriod": "ANNUAL CY 2026 (posting period QUARTER 1 CY 2026)",
+      "retrievedAt": "2026-08-23",
+      "verifiedAt": "2026-08-23",
+      "verifier": "bettermaddela-review-2026-08-23-budget-a",
+      "sourceState": "active",
+      "sha256": "f24a20a09e31b90edfb862cee8300764fe244bcd3ec0ccc9904f9abe7a2f3271",
+      "notes": "Same dynamic-container caveat."
+    },
+    {
+      "id": "fdpp-sre-q4cy2024-xlsx",
+      "title": "STATEMENT OF RECEIPTS AND EXPENDITURES (BLGF Form 3 - SRE), QUARTER 4 CY 2024",
+      "publisher": "Municipality of Maddela (posted on the DILG Full Disclosure Policy Portal)",
+      "url": "https://fdpp.dilg.gov.ph/fdpp/report/document-download?id=151383",
+      "documentType": "dataset",
+      "effectivePeriod": "QUARTER 4 CY 2024 (full-year calendar 2024 columns)",
+      "retrievedAt": "2026-08-23",
+      "verifiedAt": "2026-08-23",
+      "verifier": "bettermaddela-review-2026-08-23-budget-a",
+      "sourceState": "active",
+      "sha256": "011d2b0b7e3bd77339ae9a2297d6f8faae71ae6765a2643bb57c77595c7ef5c0",
+      "notes": "Posting period QUARTER 1 CY 2025. Same dynamic-container caveat."
+    },
+    {
+      "id": "fdpp-sre-q4cy2025-xlsx",
+      "title": "STATEMENT OF RECEIPTS AND EXPENDITURES (BLGF Form 3 - SRE), QUARTER 4 CY 2025",
+      "publisher": "Municipality of Maddela (posted on the DILG Full Disclosure Policy Portal)",
+      "url": "https://fdpp.dilg.gov.ph/fdpp/report/document-download?id=217543",
+      "documentType": "dataset",
+      "effectivePeriod": "QUARTER 4 CY 2025 (full-year calendar 2025 columns)",
+      "retrievedAt": "2026-08-23",
+      "verifiedAt": "2026-08-23",
+      "verifier": "bettermaddela-review-2026-08-23-budget-a",
+      "sourceState": "active",
+      "sha256": "73de61192dc5a320f69491ca06c0a6c2160003e59ae40f7631bb26c59f74fcb8",
+      "notes": "Posting period QUARTER 1 CY 2026. Same dynamic-container caveat."
+    },
+    {
+      "id": "fdpp-sre-q1cy2026-xlsx",
+      "title": "STATEMENT OF RECEIPTS AND EXPENDITURES (BLGF Form 3 - SRE), QUARTER 1 CY 2026",
+      "publisher": "Municipality of Maddela (posted on the DILG Full Disclosure Policy Portal)",
+      "url": "https://fdpp.dilg.gov.ph/fdpp/report/document-download?id=235452",
+      "documentType": "dataset",
+      "effectivePeriod": "QUARTER 1 CY 2026",
+      "retrievedAt": "2026-08-23",
+      "verifiedAt": "2026-08-23",
+      "verifier": "bettermaddela-review-2026-08-23-budget-a",
+      "sourceState": "active",
+      "sha256": "eb43798ef40ab27607f1c6db20955b595e3c2bb23263b7eed7e9a558029574f0",
+      "notes": "Posting period QUARTER 2 CY 2026. Same dynamic-container caveat."
+    },
+    {
+      "id": "fdpp-soipb-q4cy2024-xlsx",
+      "title": "STATEMENT OF INDEBTEDNESS PAYMENTS AND BALANCES (FDPP Form 2), QUARTER 4 CY 2024",
+      "publisher": "Municipality of Maddela (posted on the DILG Full Disclosure Policy Portal)",
+      "url": "https://fdpp.dilg.gov.ph/fdpp/report/document-download?id=151379",
+      "documentType": "dataset",
+      "effectivePeriod": "As of 4th Qtr. December 31, 2024 (posting period QUARTER 1 CY 2025)",
+      "retrievedAt": "2026-08-23",
+      "verifiedAt": "2026-08-23",
+      "verifier": "bettermaddela-review-2026-08-23-budget-a",
+      "sourceState": "active",
+      "sha256": "7bec579f15b2a3c58c459f5a234ed000c992fe09c3b5c33a8b4e57aef489e3d6",
+      "notes": "DOF-BLGF Memorandum Circular No. 023-2019 dated September 19, 2019, Annex A. Same dynamic-container caveat."
+    },
+    {
+      "id": "fdpp-soipb-q4cy2025-xlsx",
+      "title": "STATEMENT OF INDEBTEDNESS PAYMENTS AND BALANCES (FDPP Form 2), QUARTER 4 CY 2025",
+      "publisher": "Municipality of Maddela (posted on the DILG Full Disclosure Policy Portal)",
+      "url": "https://fdpp.dilg.gov.ph/fdpp/report/document-download?id=217733",
+      "documentType": "dataset",
+      "effectivePeriod": "As of 4th Qtr. December 31, 2025 (portal row: posting QUARTER 1 CY 2026)",
+      "retrievedAt": "2026-08-23",
+      "verifiedAt": "2026-08-23",
+      "verifier": "bettermaddela-review-2026-08-23-budget-a",
+      "sourceState": "active",
+      "sha256": "c9956438d07246d776858f5cf575b25be37b5e62b1670bb2dada8af2c08991b6",
+      "notes": "Same dynamic-container caveat."
     }
   ]
 }
