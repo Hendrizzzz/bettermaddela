@@ -11,15 +11,13 @@ export default function TermsPage() {
     <>
       <PageHeader
         title="Terms of Use"
-        description="Guidelines for using BetterMaddela."
-        badge={{ icon: "bi bi-file-earmark-text", label: "Legal" }}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Terms of Use" }]}
       />
       <section className="legal-content">
         <div className="container">
           <div className="legal-wrapper">
             <aside className="legal-toc">
-              <h4><i className="bi bi-list-ul" aria-hidden="true" /> <span>Contents</span></h4>
+              <h2><i className="bi bi-list-ul" aria-hidden="true" /> <span>Contents</span></h2>
               <nav aria-label="Terms sections"><a href="#introduction">Introduction</a><a href="#information">Civic information</a><a href="#no-transactions">No transactions</a><a href="#external-links">External links</a><a href="#availability">Availability</a></nav>
             </aside>
             <article className="legal-article">

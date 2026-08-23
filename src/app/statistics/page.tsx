@@ -70,27 +70,24 @@ export default function StatisticsPage() {
     <>
       <PageHeader
         title="Maddela Statistics"
-        description="Verified population and administrative statistics for Maddela."
-        badge={{ icon: "bi bi-bar-chart-fill", label: "Statistics" }}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Statistics" }]}
       />
 
       <section className="stats-metrics">
         <div className="container">
           <div className="metrics-grid">
-            <div className="metric-card"><div className="metric-icon"><i className="bi bi-people-fill" /></div><div className="metric-value">{population.data.population.toLocaleString("en-PH")}</div><div className="metric-label">Population</div><div className="metric-source">2024 census count</div></div>
-            <div className="metric-card"><div className="metric-icon"><i className="bi bi-geo-alt-fill" /></div><div className="metric-value">{barangays.data.barangayCount}</div><div className="metric-label">Barangays</div><div className="metric-source">Official administrative units</div></div>
-            <div className="metric-card"><div className="metric-icon"><i className="bi bi-award-fill" /></div><div className="metric-value">{identity.data.incomeClass}</div><div className="metric-label">Income class</div><div className="metric-source">Official municipal classification</div></div>
-            <div className="metric-card"><div className="metric-icon"><i className="bi bi-mailbox" /></div><div className="metric-value">{postal.data.zipCode}</div><div className="metric-label">ZIP code</div><div className="metric-source">PHLPost locator</div></div>
+            <div className="metric-card"><div className="metric-icon"><i className="bi bi-people-fill" aria-hidden="true" /></div><div className="metric-value">{population.data.population.toLocaleString("en-PH")}</div><div className="metric-label">Population</div><div className="metric-source">2024 census count</div></div>
+            <div className="metric-card"><div className="metric-icon"><i className="bi bi-geo-alt-fill" aria-hidden="true" /></div><div className="metric-value">{barangays.data.barangayCount}</div><div className="metric-label">Barangays</div><div className="metric-source">Official administrative units</div></div>
+            <div className="metric-card"><div className="metric-icon"><i className="bi bi-award-fill" aria-hidden="true" /></div><div className="metric-value">{identity.data.incomeClass}</div><div className="metric-label">Income class</div><div className="metric-source">Official municipal classification</div></div>
+            <div className="metric-card"><div className="metric-icon"><i className="bi bi-mailbox" aria-hidden="true" /></div><div className="metric-value">{postal.data.zipCode}</div><div className="metric-label">ZIP code</div><div className="metric-source">PHLPost locator</div></div>
           </div>
           <RecordMetaGroup records={[{ label: "population", record: population }, { label: "barangays", record: barangays }, { label: "classification", record: identity }, { label: "ZIP code", record: postal }]} />
         </div>
       </section>
 
-      <section className="stats-section stats-demographics">
+      <section className="stats-section">
         <div className="container">
           <div className="section-header-minimal">
-            <span className="section-tag"><i className="bi bi-house-fill" aria-hidden="true" /> <span>Households</span></span>
             <h2>Household profile</h2>
             <p>Dated census counts as of <time dateTime={households.data.referenceDate}>{formatLongDate(households.data.referenceDate)}</time></p>
           </div>
@@ -103,20 +100,20 @@ export default function StatisticsPage() {
         </div>
       </section>
 
-      <section className="stats-section stats-trends">
+      <section className="stats-section">
         <div className="container">
           <div className="section-header-minimal">
-            <span className="section-tag"><i className="bi bi-graph-up" /> <span>Population</span></span>
             <h2>Census population history</h2>
             <p>Dated census counts, not live estimates</p>
           </div>
           <div className="trends-summary">
             <div className="trend-stat"><span className="trend-stat-label">{year(history.data.series[0].referenceDate)}</span><span className="trend-stat-value">{history.data.series[0].population.toLocaleString("en-PH")}</span></div>
-            <div className="trend-arrow"><i className="bi bi-arrow-right" /></div>
+            <div className="trend-arrow"><i className="bi bi-arrow-right" aria-hidden="true" /></div>
             <div className="trend-stat trend-stat-current"><span className="trend-stat-label">{year(history.data.series.at(-1)!.referenceDate)}</span><span className="trend-stat-value">{history.data.series.at(-1)!.population.toLocaleString("en-PH")}</span></div>
           </div>
-          <div className="table-wrap statistics-table">
+          <div className="table-wrap">
             <table>
+              <caption>Dated census counts for Maddela</caption>
               <thead><tr><th scope="col">Census reference date</th><th scope="col" className="numeric">Population</th></tr></thead>
               <tbody>{history.data.series.map((item) => <tr key={item.referenceDate}><th scope="row"><time dateTime={item.referenceDate}>{item.referenceDate}</time></th><td className="numeric">{item.population.toLocaleString("en-PH")}</td></tr>)}</tbody>
             </table>
@@ -125,10 +122,9 @@ export default function StatisticsPage() {
         </div>
       </section>
 
-      <section className="stats-section stats-poverty">
+      <section className="stats-section">
         <div className="container">
           <div className="section-header-minimal">
-            <span className="section-tag"><i className="bi bi-people" aria-hidden="true" /> <span>Social indicator</span></span>
             <h2>Estimated poverty incidence</h2>
             <p>A model-based municipal estimate, not an exact headcount</p>
           </div>
@@ -140,8 +136,9 @@ export default function StatisticsPage() {
               <div className="metric-source">{poverty.data.latest.confidenceLevelPercent}% confidence interval: {poverty.data.latest.lowerBoundPercent.toFixed(2)}%–{poverty.data.latest.upperBoundPercent.toFixed(2)}%</div>
             </article>
           </div>
-          <div className="table-wrap statistics-table">
+          <div className="table-wrap">
             <table>
+              <caption>Model-based poverty incidence estimates</caption>
               <thead><tr><th scope="col">Estimate year</th><th scope="col" className="numeric">Estimated incidence</th></tr></thead>
               <tbody>{poverty.data.series.map((item) => <tr key={item.year}><th scope="row">{item.year}</th><td className="numeric">{item.estimatePercent.toFixed(2)}%</td></tr>)}</tbody>
             </table>
@@ -150,10 +147,9 @@ export default function StatisticsPage() {
         </div>
       </section>
 
-      <section className="stats-section stats-distribution">
+      <section className="stats-section">
         <div className="container">
           <div className="section-header-minimal">
-            <span className="section-tag"><i className="bi bi-pie-chart-fill" /> <span>Distribution</span></span>
             <h2>Population by barangay</h2>
             <p>All {barangays.data.barangayCount} barangays, ranked by the dated census count</p>
           </div>
@@ -186,14 +182,14 @@ export default function StatisticsPage() {
         </div>
       </section>
 
-      <section className="stats-section stats-trends">
+      <section className="stats-section">
         <div className="container">
           <div className="section-header-minimal">
-            <span className="section-tag"><i className="bi bi-percent" /> <span>Growth</span></span>
             <h2>{growth.data.measure}</h2>
           </div>
-          <div className="table-wrap statistics-table">
+          <div className="table-wrap">
             <table>
+              <caption>PSA annual population growth rates</caption>
               <thead><tr><th scope="col">Period</th><th scope="col" className="numeric">Rate</th></tr></thead>
               <tbody>{growth.data.series.map((item) => <tr key={item.period}><th scope="row">{item.period}</th><td className="numeric">{item.percent.toFixed(2)}%</td></tr>)}</tbody>
             </table>

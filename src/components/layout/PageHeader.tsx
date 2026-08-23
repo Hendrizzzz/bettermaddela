@@ -3,14 +3,12 @@ import Link from "next/link";
 interface PageHeaderProps {
   title: string;
   description?: string;
-  badge?: { icon: string; label: string };
   breadcrumbs: Array<{ label: string; href?: string }>;
 }
 
 export default function PageHeader({
   title,
   description,
-  badge,
   breadcrumbs,
 }: PageHeaderProps) {
   return (
@@ -36,12 +34,6 @@ export default function PageHeader({
       <section className="page-header">
         <div className="container">
           <div className="page-header-content">
-            {badge && (
-              <span className="page-header-badge">
-                <i className={badge.icon} aria-hidden="true" />
-                <span>{badge.label}</span>
-              </span>
-            )}
             <h1>{title}</h1>
             {description && <p className="page-header-desc">{description}</p>}
           </div>

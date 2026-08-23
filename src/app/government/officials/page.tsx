@@ -39,7 +39,6 @@ export default function OfficialsPage() {
       <PageHeader
         title="Municipal Officials"
         description="Leadership entries are shown only for the exact role, scope, and date supported by public evidence."
-        badge={{ icon: "bi bi-people-fill", label: "Officials" }}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Government", href: "/government" }, { label: "Officials" }]}
       />
 
@@ -68,9 +67,8 @@ export default function OfficialsPage() {
 
       <section className="section bg-alt">
         <div className="container">
-          <div className="text-center" style={{ marginBottom: "var(--spacing-xl)" }}>
-            <span className="inline-badge"><i className="bi bi-building-gear" aria-hidden="true" /> Municipal offices</span>
-            <h2>Dated office-head observations</h2>
+            <div className="text-center" style={{ marginBottom: "var(--spacing-xl)" }}>
+              <h2>Dated office-head observations</h2>
             <p>Individual source observations; not a complete municipal directory.</p>
           </div>
           <div className="grid grid-3">

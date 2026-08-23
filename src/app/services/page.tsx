@@ -25,8 +25,6 @@ export default function ServicesDirectoryPage() {
     <>
       <PageHeader
         title="Services Directory"
-        description="Browse general municipal service-information categories."
-        badge={{ icon: "bi bi-grid-fill", label: "Services" }}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Services" }]}
       />
 

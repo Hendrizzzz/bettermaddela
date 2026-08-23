@@ -58,9 +58,10 @@ export function SiteHeader() {
 
   const toggleDropdown = useCallback((index: number, event: MouseEvent<HTMLAnchorElement>) => {
     if (!isMobileNavigation()) return;
+    if (openDropdown === index) return;
     event.preventDefault();
-    setOpenDropdown((current) => (current === index ? null : index));
-  }, []);
+    setOpenDropdown(index);
+  }, [openDropdown]);
 
   useEffect(() => {
     closeMenu();
@@ -103,9 +104,9 @@ export function SiteHeader() {
   }, [closeMenu]);
 
   const renderLanguageControls = (mobile = false) => (
-    <div className={mobile ? `mobile-lang-actions ${mobileMenuOpen ? "flex" : "hidden"} lg:hidden` : "lang-selector"}>
-      <button type="button" className={`btn btn-secondary btn-sm lang-btn ${language === "en" ? "active" : ""}`} onClick={() => setLanguage("en")} aria-pressed={language === "en"} aria-label="Switch to English">EN</button>
-      <button type="button" className={`btn btn-secondary btn-sm lang-btn ${language === "fil" ? "active" : ""}`} onClick={() => setLanguage("fil")} aria-pressed={language === "fil"} aria-label="Lumipat sa Filipino">FIL</button>
+    <div className={mobile ? "mobile-lang-actions" : "lang-selector"}>
+      <button type="button" className={`btn btn-secondary btn-sm lang-btn ${language === "en" ? "active" : ""}`} onClick={() => setLanguage("en")} aria-pressed={language === "en"} aria-label={t("lang-to-en")}>EN</button>
+      <button type="button" className={`btn btn-secondary btn-sm lang-btn ${language === "fil" ? "active" : ""}`} onClick={() => setLanguage("fil")} aria-pressed={language === "fil"} aria-label={t("lang-to-fil")}>FIL</button>
     </div>
   );
 
@@ -122,11 +123,11 @@ export function SiteHeader() {
           </Link>
         </div>
 
-        <button ref={toggleRef} type="button" className="mobile-menu-toggle" aria-controls="primary-navigation" aria-expanded={mobileMenuOpen} aria-label={mobileMenuOpen ? "Close navigation" : "Open navigation"} onClick={() => (mobileMenuOpen ? closeMenu() : openMenu())}>
+        <button ref={toggleRef} type="button" className="mobile-menu-toggle" aria-controls="primary-navigation" aria-expanded={mobileMenuOpen} aria-label={mobileMenuOpen ? t("a11y-close-nav") : t("a11y-open-nav")} onClick={() => (mobileMenuOpen ? closeMenu() : openMenu())}>
           <i className={`bi ${mobileMenuOpen ? "bi-x-lg" : "bi-list"}`} aria-hidden="true" />
         </button>
 
-        <nav ref={navRef} id="primary-navigation" className={`main-nav ${mobileMenuOpen ? "active" : ""}`} aria-label="Main navigation">
+        <nav ref={navRef} id="primary-navigation" className={`main-nav ${mobileMenuOpen ? "active" : ""}`} aria-label={t("a11y-main-nav")}>
           {renderLanguageControls(true)}
           <ul>
             <li><Link href="/" className={pathname === "/" ? "active" : ""}>{t("nav-home")}</Link></li>

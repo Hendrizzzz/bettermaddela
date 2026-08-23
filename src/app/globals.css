@@ -268,3 +268,24 @@
     gap: 2px;
   }
 }
+
+/* Budget disclosure register */
+.disclosure-details {
+  margin: 0;
+  display: grid;
+  gap: var(--spacing-xs);
+}
+
+.disclosure-details .infra-detail-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--spacing-xs) var(--spacing-sm);
+}
+
+.disclosure-list {
+  margin: var(--spacing-xs) 0 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 4px;
+}

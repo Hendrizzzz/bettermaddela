@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { CivicInfoBar } from "@/components/CivicInfoBar";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SkipLink } from "@/components/SkipLink";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import "./globals.css";
 
@@ -40,10 +41,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </head>
       <body>
         <LanguageProvider>
-          <a className="skip-link" href="#main-content">Skip to main content</a>
+          <SkipLink />
           <SiteHeader />
           <CivicInfoBar />
-          <main id="main-content">{children}</main>
+          <main id="main-content" tabIndex={-1}>{children}</main>
           <SiteFooter />
         </LanguageProvider>
       </body>

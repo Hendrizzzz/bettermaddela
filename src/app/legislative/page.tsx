@@ -13,7 +13,6 @@ export default function LegislativePage() {
       <PageHeader
         title="Legislative"
         description="Local archive publication areas and the national legal instruments documented in Maddela's history."
-        badge={{ icon: "bi bi-bank2", label: "Legislative records" }}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Legislative" }]}
       />
 

@@ -37,8 +37,6 @@ export default function NewsPage() {
     <>
       <PageHeader
         title="News & Updates"
-        description="Dated public updates from government and public-agency sources relevant to Maddela."
-        badge={{ icon: "bi bi-newspaper", label: "News" }}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "News" }]}
       />
 
@@ -51,7 +49,7 @@ export default function NewsPage() {
                 href={item.canonicalUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="news-card news-card-link"
+                className="news-card"
               >
                 <div className="news-card-header">
                   <span className={badgeClass(item.status)}>{item.category}</span>

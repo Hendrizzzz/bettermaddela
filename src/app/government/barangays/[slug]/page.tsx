@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import PageHeader from "@/components/layout/PageHeader";
 import { RecordMeta } from "@/components/RecordMeta";
 import { getRecord } from "@/data/civic";
+import { slugify } from "@/lib/slugify";
 
 interface BarangayEntry {
   name: string;
@@ -19,11 +20,6 @@ interface BarangayDataset {
 }
 
 const barangayRecord = getRecord<BarangayDataset>("barangay-dataset-2026q2");
-
-function slugify(value: string) {
-  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
-}
 
 function formatLongDate(value: string) {
   return new Intl.DateTimeFormat("en-PH", {
@@ -68,8 +64,7 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
       <PageHeader
         title={`Barangay ${barangay.name}`}
         description={`Dated statistical profile for Barangay ${barangay.name}, Maddela.`}
-        badge={{ icon: "bi bi-geo-alt-fill", label: "Barangay Unit" }}
-        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Government", href: "/government" }, { label: barangay.name }]}
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Government", href: "/government" }, { label: "Barangays", href: "/barangays" }, { label: barangay.name }]}
       />
       <section className="section" style={{ background: "var(--color-bg-alt)" }}>
         <div className="container">
