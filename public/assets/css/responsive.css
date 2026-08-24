@@ -206,11 +206,7 @@ h3 {
   }
 .official-card {
     padding: var(--spacing-md);
-  }
-.official-photo i {
-    font-size: 5rem !important;
-  }
-.footer-brand {
+  }.footer-brand {
     grid-column: 1 / -1;
     max-width: 100%;
     text-align: left;
@@ -277,11 +273,7 @@ h4 {
   }
 .official-card {
     padding: var(--spacing-sm);
-  }
-.official-photo i {
-    font-size: 4rem !important;
-  }
-.councilor-card {
+  }.councilor-card {
     padding: var(--spacing-sm);
   }
 .councilor-card i {

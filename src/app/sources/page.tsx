@@ -54,7 +54,7 @@ export default function SourcesPage() {
       <section className="section bg-alt">
         <div className="container">
           <div className="coverage-panel">
-            <div><p className="section-kicker">Publication boundary</p><h2>What remains unavailable</h2></div>
+            <div><h2>What remains unavailable</h2></div>
             <p>Complete elected and barangay rosters, a general municipal contact directory, emergency contacts, detailed service procedures, complete local-legislation archives, the enacted municipal budget, a complete procurement history, and uncleared media remain unpublished until their specific evidence gates pass.</p>
           </div>
         </div>

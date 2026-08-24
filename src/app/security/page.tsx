@@ -20,7 +20,7 @@ export default function SecurityPage() {
         <div className="container">
           <div className="legal-wrapper">
             <aside className="legal-toc">
-              <h2><i className="bi bi-list-ul" aria-hidden="true" /> <span>Contents</span></h2>
+              <h2><span>Contents</span></h2>
               <nav aria-label="Security sections">
                 <a href="#reporting">Report a Vulnerability</a>
                 <a href="#what-to-include">What to Include</a>

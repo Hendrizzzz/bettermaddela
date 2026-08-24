@@ -17,7 +17,7 @@ export default function TermsPage() {
         <div className="container">
           <div className="legal-wrapper">
             <aside className="legal-toc">
-              <h2><i className="bi bi-list-ul" aria-hidden="true" /> <span>Contents</span></h2>
+              <h2><span>Contents</span></h2>
               <nav aria-label="Terms sections"><a href="#introduction">Introduction</a><a href="#information">Civic information</a><a href="#no-transactions">No transactions</a><a href="#external-links">External links</a><a href="#availability">Availability</a></nav>
             </aside>
             <article className="legal-article">

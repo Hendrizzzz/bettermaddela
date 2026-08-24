@@ -19,7 +19,7 @@ export default function PrivacyPage() {
         <div className="container">
           <div className="legal-wrapper">
             <aside className="legal-toc">
-              <h2><i className="bi bi-list-ul" aria-hidden="true" /> <span>Contents</span></h2>
+              <h2><span>Contents</span></h2>
               <nav aria-label="Privacy sections">
                 <a href="#introduction">Introduction</a>
                 <a href="#hosting">Hosting</a>

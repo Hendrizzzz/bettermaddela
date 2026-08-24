@@ -48,9 +48,6 @@ export default function OfficialsPage() {
           <div className="grid grid-2">
             {leadershipRecord.data.leaders.map((leader) => (
               <article className="official-card card" key={`${leader.title}-${leader.name}`}>
-                <div className="official-photo" aria-hidden="true">
-                  <i className="bi bi-person-circle" style={{ fontSize: "6rem", color: "var(--color-primary)" }} />
-                </div>
                 <div className="official-info">
                   <h3>{leader.name}</h3>
                   <p className="official-title">{leader.title}</p>
@@ -74,7 +71,6 @@ export default function OfficialsPage() {
           <div className="grid grid-3">
             {officeHeadsRecord.data.observations.map((observation) => (
               <article className="councilor-card card text-center" key={`${observation.office}-${observation.person}`}>
-                <i className="bi bi-person-badge" style={{ fontSize: "3rem", color: "var(--color-primary)" }} aria-hidden="true" />
                 <h3>{observation.person}</h3>
                 <p className="badge badge-info">{observation.displayedTitle}</p>
                 <p>{observation.office}</p>
@@ -90,7 +86,7 @@ export default function OfficialsPage() {
       <section className="section">
         <div className="container">
           <div className="coverage-panel government-officials-notice">
-            <div><p className="section-kicker">Current roster boundary</p><h2>Vice mayor and council roster not published</h2></div>
+            <h2>Vice mayor and council roster not published</h2>
             <p>A complete current Sangguniang Bayan record—including applicable ex-officio seats, vacancies, succession, and appointment instruments—was not established. BetterMaddela therefore does not present a partial list as the current council.</p>
           </div>
           <RecordMetaGroup records={[

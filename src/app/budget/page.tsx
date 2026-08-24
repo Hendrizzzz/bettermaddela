@@ -148,7 +148,7 @@ export default function BudgetPage() {
             </div>
           </div>
           <div className="coverage-panel">
-            <div><p className="section-kicker">Publication boundary</p><h2>What is still not shown</h2></div>
+            <div><h2>What is still not shown</h2></div>
             <p>The signed appropriations ordinance and its enactment details remain unavailable, so no figure on this page is presented as the enacted annual budget. The FY 2025 and FY 2026 Annual Budget Report files are broken at the source portal (server error) and stay unpublished. Proposed-budget-year columns and plan-stage estimates are labeled as such; unlike documents (appropriations, actuals, procurement plans, loan balances) are never combined into a single total. All figures are unaudited, LGU-prepared disclosures.</p>
           </div>
         </div>

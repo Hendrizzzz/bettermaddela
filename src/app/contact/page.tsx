@@ -29,28 +29,24 @@ export default function ContactPage() {
           </div>
           <div className="grid grid-2" style={{ gap: "var(--spacing-md)" }}>
             <a href={psaSource.url} target="_blank" rel="noopener noreferrer" className="contact-card">
-              <div className="contact-card-icon"><i className="bi bi-bar-chart-fill" aria-hidden="true" /></div>
               <div className="contact-card-content">
                 <h3>National statistics record</h3>
                 <span className="contact-card-note">{psaSource.publisher} <i className="bi bi-box-arrow-up-right" aria-hidden="true" /></span>
               </div>
             </a>
             <a href={postalSource.url} target="_blank" rel="noopener noreferrer" className="contact-card">
-              <div className="contact-card-icon"><i className="bi bi-mailbox" aria-hidden="true" /></div>
               <div className="contact-card-content">
                 <h3>PHLPost ZIP Code Locator</h3>
                 <span className="contact-card-note">{postalSource.publisher} <i className="bi bi-box-arrow-up-right" aria-hidden="true" /></span>
               </div>
             </a>
             <Link href="/sources" className="contact-card">
-              <div className="contact-card-icon"><i className="bi bi-journal-check" aria-hidden="true" /></div>
               <div className="contact-card-content">
                 <h3>Sources and verification</h3>
                 <span className="contact-card-note">Evidence, dates, and limitations</span>
               </div>
             </Link>
             <a href="https://github.com/Hendrizzzz/bettermaddela/issues" target="_blank" rel="noopener noreferrer" className="contact-card">
-              <div className="contact-card-icon"><i className="bi bi-github" aria-hidden="true" /></div>
               <div className="contact-card-content">
                 <h3>Report a correction</h3>
                 <span className="contact-card-note">Do not submit private records or emergency requests <i className="bi bi-box-arrow-up-right" aria-hidden="true" /></span>
@@ -63,7 +59,7 @@ export default function ContactPage() {
       <section className="section bg-alt">
         <div className="container">
           <div className="coverage-panel">
-            <div><p className="section-kicker">Directory status</p><h2>Municipal contact directory not published</h2></div>
+            <h2>Municipal contact directory not published</h2>
             <p>A current official municipal office directory and public office schedule could not be independently verified. BetterMaddela is not a transaction, complaint, appointment, or emergency channel.</p>
           </div>
         </div>

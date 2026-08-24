@@ -76,10 +76,10 @@ export default function StatisticsPage() {
       <section className="stats-metrics">
         <div className="container">
           <div className="metrics-grid">
-            <div className="metric-card"><div className="metric-icon"><i className="bi bi-people-fill" aria-hidden="true" /></div><div className="metric-value">{population.data.population.toLocaleString("en-PH")}</div><div className="metric-label">Population</div><div className="metric-source">2024 census count</div></div>
-            <div className="metric-card"><div className="metric-icon"><i className="bi bi-geo-alt-fill" aria-hidden="true" /></div><div className="metric-value">{barangays.data.barangayCount}</div><div className="metric-label">Barangays</div><div className="metric-source">Official administrative units</div></div>
-            <div className="metric-card"><div className="metric-icon"><i className="bi bi-award-fill" aria-hidden="true" /></div><div className="metric-value">{identity.data.incomeClass}</div><div className="metric-label">Income class</div><div className="metric-source">Official municipal classification</div></div>
-            <div className="metric-card"><div className="metric-icon"><i className="bi bi-mailbox" aria-hidden="true" /></div><div className="metric-value">{postal.data.zipCode}</div><div className="metric-label">ZIP code</div><div className="metric-source">PHLPost locator</div></div>
+            <div className="metric-card"><div className="metric-value">{population.data.population.toLocaleString("en-PH")}</div><div className="metric-label">Population</div><div className="metric-source">2024 census count</div></div>
+            <div className="metric-card"><div className="metric-value">{barangays.data.barangayCount}</div><div className="metric-label">Barangays</div><div className="metric-source">Official administrative units</div></div>
+            <div className="metric-card"><div className="metric-value">{identity.data.incomeClass}</div><div className="metric-label">Income class</div><div className="metric-source">Official municipal classification</div></div>
+            <div className="metric-card"><div className="metric-value">{postal.data.zipCode}</div><div className="metric-label">ZIP code</div><div className="metric-source">PHLPost locator</div></div>
           </div>
           <RecordMetaGroup records={[{ label: "population", record: population }, { label: "barangays", record: barangays }, { label: "classification", record: identity }, { label: "ZIP code", record: postal }]} />
         </div>
@@ -92,9 +92,9 @@ export default function StatisticsPage() {
             <p>Dated census counts as of <time dateTime={households.data.referenceDate}>{formatLongDate(households.data.referenceDate)}</time></p>
           </div>
           <div className="metrics-grid">
-            <div className="metric-card"><div className="metric-icon"><i className="bi bi-people" aria-hidden="true" /></div><div className="metric-value">{households.data.householdPopulation.toLocaleString("en-PH")}</div><div className="metric-label">Household residents</div><div className="metric-source">People living in households</div></div>
-            <div className="metric-card"><div className="metric-icon"><i className="bi bi-house-door-fill" aria-hidden="true" /></div><div className="metric-value">{households.data.numberOfHouseholds.toLocaleString("en-PH")}</div><div className="metric-label">Households</div><div className="metric-source">Dated census count</div></div>
-            <div className="metric-card"><div className="metric-icon"><i className="bi bi-building" aria-hidden="true" /></div><div className="metric-value">{households.data.institutionalPopulation.toLocaleString("en-PH")}</div><div className="metric-label">Institutional residents</div><div className="metric-source">Derived difference from the census totals</div></div>
+            <div className="metric-card"><div className="metric-value">{households.data.householdPopulation.toLocaleString("en-PH")}</div><div className="metric-label">Household residents</div><div className="metric-source">People living in households</div></div>
+            <div className="metric-card"><div className="metric-value">{households.data.numberOfHouseholds.toLocaleString("en-PH")}</div><div className="metric-label">Households</div><div className="metric-source">Dated census count</div></div>
+            <div className="metric-card"><div className="metric-value">{households.data.institutionalPopulation.toLocaleString("en-PH")}</div><div className="metric-label">Institutional residents</div><div className="metric-source">Derived difference from the census totals</div></div>
           </div>
           <RecordMeta record={households} />
         </div>
@@ -130,7 +130,6 @@ export default function StatisticsPage() {
           </div>
           <div className="poverty-comparison">
             <article className="metric-card">
-              <div className="metric-icon"><i className="bi bi-percent" aria-hidden="true" /></div>
               <div className="metric-value">{poverty.data.latest.estimatePercent.toFixed(2)}%</div>
               <div className="metric-label">Estimated incidence in {poverty.data.latest.year}</div>
               <div className="metric-source">{poverty.data.latest.confidenceLevelPercent}% confidence interval: {poverty.data.latest.lowerBoundPercent.toFixed(2)}%–{poverty.data.latest.upperBoundPercent.toFixed(2)}%</div>

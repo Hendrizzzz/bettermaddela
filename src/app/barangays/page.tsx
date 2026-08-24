@@ -41,7 +41,6 @@ export default function BarangaysPage() {
                 className="barangay-card"
               >
                 <div className="barangay-card-header">
-                  <i className="bi bi-geo-alt-fill" aria-hidden="true" />
                   <span className="barangay-name">{barangay.name}</span>
                 </div>
               </Link>

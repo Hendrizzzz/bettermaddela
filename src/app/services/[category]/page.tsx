@@ -48,23 +48,18 @@ export default async function ServiceCategoryPage({
       <section className="section">
         <div className="container">
           <div className="service-detail-content">
-            <div>
-              <h2>What this category covers</h2>
-              <p>{entry.description}</p>
-              <ul className="service-topic-list">
-                {entry.topics.map((topic) => (
-                  <li key={topic}>{topic}</li>
-                ))}
-              </ul>
-            </div>
-            <aside className="coverage-panel" aria-labelledby="service-status-heading">
-              <div><p className="section-kicker">Publication status</p><h2 id="service-status-heading">Procedure details pending</h2></div>
-              <div>
-                <p>Detailed requirements, fees, and processing time are not yet verified. Please confirm directly with the responsible office.</p>
-                <Link href="/services" className="btn btn-secondary">
-                  <i className="bi bi-arrow-left" aria-hidden="true" /> Back to all services
-                </Link>
-              </div>
+            <h2>What this category covers</h2>
+            <ul className="service-topic-list">
+              {entry.topics.map((topic) => (
+                <li key={topic}>{topic}</li>
+              ))}
+            </ul>
+            <aside className="coverage-panel coverage-panel--stacked" aria-labelledby="service-status-heading">
+              <h2 id="service-status-heading">Procedure details pending</h2>
+              <p>Detailed requirements, fees, and processing time are not yet verified. Please confirm directly with the responsible office.</p>
+              <Link href="/services" className="btn btn-secondary">
+                <i className="bi bi-arrow-left" aria-hidden="true" /> Back to all services
+              </Link>
             </aside>
           </div>
         </div>

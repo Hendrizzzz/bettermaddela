@@ -8,16 +8,16 @@ export const metadata: Metadata = {
 };
 
 const categories = [
-  { slug: "agriculture", icon: "bi bi-tree-fill", title: "Agriculture & Economic Development", description: "Agriculture and local economic-development information." },
-  { slug: "business", icon: "bi bi-shop", title: "Business, Trade & Investment", description: "Business, trade, permit, and licensing information." },
-  { slug: "certificates", icon: "bi bi-file-earmark-text-fill", title: "Certificates & Vital Records", description: "Civil-registry and certificate information." },
-  { slug: "education", icon: "bi bi-mortarboard-fill", title: "Education & Scholarship", description: "Education and scholarship information." },
-  { slug: "environment", icon: "bi bi-globe-americas", title: "Environment & Natural Resources", description: "Environment and natural-resources information." },
-  { slug: "health", icon: "bi bi-heart-pulse-fill", title: "Health Services", description: "Local health-service information." },
-  { slug: "infrastructure", icon: "bi bi-building-fill-gear", title: "Infrastructure & Public Works", description: "Infrastructure and public-works information." },
-  { slug: "public-safety", icon: "bi bi-shield-fill-check", title: "Public Safety & Security", description: "Public-safety and preparedness information." },
-  { slug: "social-services", icon: "bi bi-people-fill", title: "Social Services & Assistance", description: "Social-welfare and assistance information." },
-  { slug: "tax-payments", icon: "bi bi-cash-coin", title: "Taxation & Payments", description: "Taxation and payment information." },
+  { slug: "agriculture", title: "Agriculture & Economic Development", description: "Agriculture and local economic-development information." },
+  { slug: "business", title: "Business, Trade & Investment", description: "Business, trade, permit, and licensing information." },
+  { slug: "certificates", title: "Certificates & Vital Records", description: "Civil-registry and certificate information." },
+  { slug: "education", title: "Education & Scholarship", description: "Education and scholarship information." },
+  { slug: "environment", title: "Environment & Natural Resources", description: "Environment and natural-resources information." },
+  { slug: "health", title: "Health Services", description: "Local health-service information." },
+  { slug: "infrastructure", title: "Infrastructure & Public Works", description: "Infrastructure and public-works information." },
+  { slug: "public-safety", title: "Public Safety & Security", description: "Public-safety and preparedness information." },
+  { slug: "social-services", title: "Social Services & Assistance", description: "Social-welfare and assistance information." },
+  { slug: "tax-payments", title: "Taxation & Payments", description: "Taxation and payment information." },
 ] as const;
 
 export default function ServicesDirectoryPage() {
@@ -42,14 +42,8 @@ export default function ServicesDirectoryPage() {
                 href={`/services/${category.slug}`}
                 className="service-item-card service-item-link"
               >
-                <h3 className="service-item-title">
-                  <i className={category.icon} aria-hidden="true" />
-                  <span>{category.title}</span>
-                </h3>
+                <h3 className="service-item-title">{category.title}</h3>
                 <p className="service-item-desc">{category.description}</p>
-                <div className="service-item-meta">
-                  <span><i className="bi bi-arrow-right" aria-hidden="true" /> View category</span>
-                </div>
               </Link>
             ))}
           </div>
