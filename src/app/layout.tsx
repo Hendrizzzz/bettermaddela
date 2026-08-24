@@ -2,17 +2,30 @@ import type { Metadata } from "next";
 import { CivicInfoBar } from "@/components/CivicInfoBar";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SkipLink } from "@/components/SkipLink";
+import { SITE_URL } from "@/lib/site";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "BetterMaddela",
     template: "%s · BetterMaddela",
   },
   description:
     "Independent, source-linked civic information about Maddela, Quirino.",
+  openGraph: {
+    type: "website",
+    siteName: "BetterMaddela",
+    locale: "en_PH",
+    url: SITE_URL,
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
+
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
@@ -40,10 +53,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </head>
       <body>
         <LanguageProvider>
-          <a className="skip-link" href="#main-content">Skip to main content</a>
+          <SkipLink />
           <SiteHeader />
           <CivicInfoBar />
-          <main id="main-content">{children}</main>
+          <main id="main-content" tabIndex={-1}>{children}</main>
           <SiteFooter />
         </LanguageProvider>
       </body>

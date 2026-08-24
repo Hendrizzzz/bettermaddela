@@ -29,6 +29,7 @@ export function SiteFooter() {
               <li><Link href="/terms">{t("footer-terms")}</Link></li>
               <li><Link href="/privacy">{t("footer-privacy")}</Link></li>
               <li><Link href="/accessibility">{t("footer-accessibility")}</Link></li>
+              <li><Link href="/security">{t("footer-security")}</Link></li>
               <li><Link href="/faq">{t("footer-faq")}</Link></li>
             </ul>
           </nav>
@@ -43,9 +44,12 @@ export function SiteFooter() {
           </nav>
 
           <div className="footer-column">
-            <div className="footer-cost" role="status">{t("footer-cost")} <span className="footer-cost-value">₱0</span></div>
+            <div className="footer-cost">
+              <span className="footer-cost-label">{t("footer-cost-label")}</span>
+              <span className="footer-cost-value">₱0</span>
+            </div>
             <a href="https://github.com/Hendrizzzz/bettermaddela" className="footer-contribute" target="_blank" rel="noopener noreferrer"><i className="bi bi-github" aria-hidden="true" /> {t("footer-contribute")}</a>
-            <a href="https://github.com/Jayke770/betteraurora" className="footer-contribute" target="_blank" rel="noopener noreferrer"><i className="bi bi-code-slash" aria-hidden="true" /> {t("footer-foundation")}</a>
+            <a href="https://github.com/Jayke770/betteraurora" className="footer-foundation-link" target="_blank" rel="noopener noreferrer">{t("footer-foundation")}</a>
             <p className="footer-foundation-note">{t("footer-attribution-note")}</p>
           </div>
         </div>

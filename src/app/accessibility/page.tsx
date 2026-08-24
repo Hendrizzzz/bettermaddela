@@ -12,8 +12,6 @@ export default function AccessibilityPage() {
     <>
       <PageHeader
         title="Accessibility Statement"
-        description="BetterMaddela's commitment to accessible civic information."
-        badge={{ icon: "bi bi-universal-access", label: "Accessibility" }}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Accessibility" }]}
       />
 
@@ -56,16 +54,16 @@ export default function AccessibilityPage() {
               <h2>Report a Problem</h2>
               <p>Use the public issue tracker for accessibility problems. Do not include private personal information.</p>
               <div className="a11y-contact-grid">
-                <a href="https://github.com/Hendrizzzz/bettermaddela/issues" className="a11y-contact-item">
+                <a href="https://github.com/Hendrizzzz/bettermaddela/issues" className="a11y-contact-item" target="_blank" rel="noopener noreferrer">
                   <i className="bi bi-github" aria-hidden="true" />
-                  <span>Open the issue tracker</span>
+                  <span>Open the issue tracker <i className="bi bi-box-arrow-up-right" aria-hidden="true" /></span>
                 </a>
               </div>
             </div>
 
             <div className="a11y-section">
               <h2>Technology</h2>
-              <div className="a11y-tech-tags" aria-label="Interface technologies">
+              <div className="a11y-tech-tags" role="group" aria-label="Interface technologies">
                 <span className="a11y-tag">HTML5</span><span className="a11y-tag">CSS3</span><span className="a11y-tag">React</span><span className="a11y-tag">TypeScript</span><span className="a11y-tag">ARIA</span>
               </div>
             </div>

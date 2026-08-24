@@ -126,6 +126,8 @@ const copy = {
     updated: "Updated",
     cached: "Temporarily showing a recent cached forecast.",
     modelForecast: "model forecast",
+    temperatureCelsius: "degrees Celsius",
+    details: "Weather details",
   },
   fil: {
     loading: "Kinukuha ang live na taya ng panahon",
@@ -141,6 +143,8 @@ const copy = {
     updated: "Na-update",
     cached: "Pansamantalang ipinapakita ang kamakailang naka-cache na forecast.",
     modelForecast: "model forecast",
+    temperatureCelsius: "digri Celsius",
+    details: "Mga detalye ng panahon",
   },
 } as const;
 
@@ -364,7 +368,7 @@ export function LiveWeather({ config }: { config: WeatherConfigData }) {
           <i className={`bi ${current.icon}`} />
         </div>
         <div className="weather-current-info">
-          <div className="weather-current-temp" aria-label={`${data.temperature} degrees Celsius`}>{data.temperature}°C</div>
+          <div className="weather-current-temp" aria-label={`${data.temperature} ${text.temperatureCelsius}`}>{data.temperature}°C</div>
           <div className="weather-current-condition">{current[language]}</div>
           <div className="weather-current-location">
             <i className="bi bi-geo-alt" aria-hidden="true" /> {text.location}
@@ -372,7 +376,7 @@ export function LiveWeather({ config }: { config: WeatherConfigData }) {
         </div>
       </div>
 
-      <div className="weather-stats" role="list" aria-label={language === "fil" ? "Mga detalye ng panahon" : "Weather details"}>
+      <div className="weather-stats" role="list" aria-label={text.details}>
         <div className="weather-stat" role="listitem" title={text.feelsLike}>
           <i className="bi bi-thermometer-half" aria-hidden="true" />
           <span>{data.feelsLike}°C</span>

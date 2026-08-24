@@ -15,3 +15,6 @@ tmp/
 !.env.example
 .local/
 *.local.md
+
+# Local agent session transcripts (never committed)
+session-ses_*.md

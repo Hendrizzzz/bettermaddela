@@ -169,6 +169,8 @@ const homeCopy = {
     mapTitle: "General map view around Maddela, Quirino",
     mapNote: "General location view only; no municipal-hall pin or cadastral boundary is claimed.",
     exploreMap: "Explore Maddela on OpenStreetMap",
+    incomeClassSuffix: "Class",
+    maddelaToday: "Maddela today",
   },
   fil: {
     welcome: "Maligayang pagdating sa BetterMaddela",
@@ -208,6 +210,8 @@ const homeCopy = {
     mapTitle: "Pangkalahatang mapa sa paligid ng Maddela, Quirino",
     mapNote: "Pangkalahatang lokasyon lamang; walang inaangking pin ng munisipyo o hangganang kadastral.",
     exploreMap: "Tingnan ang Maddela sa OpenStreetMap",
+    incomeClassSuffix: "Klase",
+    maddelaToday: "Ang Maddela ngayon",
   },
 } as const;
 
@@ -291,9 +295,6 @@ export default function HomePage() {
           <div className="home-services-grid">
             {serviceCategories.map((service) => (
               <Link key={service.href} href={service.href} className="home-service-card">
-                <div className="home-service-icon">
-                  <i className={`bi ${service.icon}`} aria-hidden="true"></i>
-                </div>
                 <div className="home-service-content">
                   <h3>{service.title[language]}</h3>
                   <p>{service.description[language]}</p>
@@ -302,12 +303,8 @@ export default function HomePage() {
               </Link>
             ))}
             <Link href="/services" className="home-service-card home-service-card--all">
-              <div className="home-service-icon">
-                <i className="bi bi-grid-fill" aria-hidden="true"></i>
-              </div>
               <div className="home-service-content">
                 <h3>{copy.viewAllServices}</h3>
-                <p>{copy.browseDirectory}</p>
               </div>
               <i className="bi bi-arrow-right home-service-arrow" aria-hidden="true"></i>
             </Link>
@@ -326,9 +323,6 @@ export default function HomePage() {
           </div>
           <div className="home-stats-v2-grid">
             <Link href="/statistics" className="home-stat-card">
-              <div className="home-stat-card-icon">
-                <i className="bi bi-people-fill" aria-hidden="true"></i>
-              </div>
               <div className="home-stat-card-content">
                 <span className="home-stat-card-value">
                   {population.data.population.toLocaleString("en-PH")}
@@ -337,27 +331,18 @@ export default function HomePage() {
               </div>
             </Link>
             <Link href="/statistics" className="home-stat-card">
-              <div className="home-stat-card-icon">
-                <i className="bi bi-geo-alt-fill" aria-hidden="true"></i>
-              </div>
               <div className="home-stat-card-content">
                 <span className="home-stat-card-value">{barangays.data.barangayCount}</span>
                 <span className="home-stat-card-label">{copy.barangays}</span>
               </div>
             </Link>
             <Link href="/statistics" className="home-stat-card">
-              <div className="home-stat-card-icon">
-                <i className="bi bi-award-fill" aria-hidden="true"></i>
-              </div>
               <div className="home-stat-card-content">
-                <span className="home-stat-card-value">{identity.data.incomeClass} Class</span>
+                <span className="home-stat-card-value">{identity.data.incomeClass} {copy.incomeClassSuffix}</span>
                 <span className="home-stat-card-label">{copy.municipality}</span>
               </div>
             </Link>
             <Link href="/statistics" className="home-stat-card">
-              <div className="home-stat-card-icon">
-                <i className="bi bi-house-door-fill" aria-hidden="true"></i>
-              </div>
               <div className="home-stat-card-content">
                 <span className="home-stat-card-value">{households.data.numberOfHouseholds.toLocaleString("en-PH")}</span>
                 <span className="home-stat-card-label">{copy.households}</span>
@@ -418,7 +403,7 @@ export default function HomePage() {
         <div className="container">
           <div className="home-stats-v2-header">
             <h2>
-              <i className="bi bi-book" aria-hidden="true"></i> {copy.history}
+              {copy.history}
             </h2>
             <Link href="/legal-history" className="home-section-link">
               {copy.viewHistory} <i className="bi bi-arrow-right" aria-hidden="true"></i>
@@ -438,11 +423,8 @@ export default function HomePage() {
               <p className="history-publication-note">{copy.historySourceNote} <Link href="/sources">{copy.sources}</Link></p>
             </div>
             <div className="history-summary">
-              {community.data.themes.slice(0, 2).map((theme, index) => (
+              {community.data.themes.slice(0, 2).map((theme) => (
                 <div className="history-card" key={theme.label} lang="en">
-                  <div className="history-card-icon">
-                    <i className={`bi ${index === 0 ? "bi-flower1" : "bi-tree-fill"}`} aria-hidden="true" />
-                  </div>
                   <div className="history-card-content">
                     <h3>{theme.label}</h3>
                     <p>{theme.description}</p>
@@ -450,9 +432,8 @@ export default function HomePage() {
                 </div>
               ))}
               <div className="history-card history-card--overview" lang="en">
-                <div className="history-card-icon"><i className="bi bi-people-fill" aria-hidden="true" /></div>
                 <div className="history-card-content">
-                  <h3>Maddela today</h3>
+                  <h3>{copy.maddelaToday}</h3>
                   <p>{community.data.summary}</p>
                 </div>
               </div>
@@ -523,21 +504,18 @@ export default function HomePage() {
           </div>
           <div className="home-contact-v2-grid">
             <Link href="/sources" className="home-contact-v2-card">
-              <div className="home-contact-v2-icon"><i className="bi bi-journal-check" aria-hidden="true" /></div>
               <div className="home-contact-v2-content">
                 <h3>{copy.sourceDirectory}</h3>
                 <p className="home-contact-v2-value">{copy.sourceDirectoryNote}</p>
               </div>
             </Link>
             <Link href="/contact" className="home-contact-v2-card">
-              <div className="home-contact-v2-icon"><i className="bi bi-chat-square-text-fill" aria-hidden="true" /></div>
               <div className="home-contact-v2-content">
                 <h3>{copy.corrections}</h3>
                 <p className="home-contact-v2-value">{copy.correctionsNote}</p>
               </div>
             </Link>
             <Link href="/services" className="home-contact-v2-card">
-              <div className="home-contact-v2-icon"><i className="bi bi-grid-fill" aria-hidden="true" /></div>
               <div className="home-contact-v2-content">
                 <h3>{copy.serviceInformation}</h3>
                 <p className="home-contact-v2-value">{copy.serviceInformationNote}</p>

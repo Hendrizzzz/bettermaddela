@@ -39,9 +39,8 @@ const serviceWorkerContentPattern =
 const allowedPublicAttribution = new Map([
   ["src/components/SiteFooter.tsx", ["https://github.com/Jayke770/betteraurora"]],
   ["src/contexts/LanguageContext.tsx", [
-    "BetterAurora foundation",
+    "BetterAurora",
     "Adapted from BetterAurora. Attribution does not imply endorsement.",
-    "Pundasyong BetterAurora",
     "Hinango mula sa BetterAurora. Ang attribution ay hindi nangangahulugang pag-endorso.",
   ]],
 ]);

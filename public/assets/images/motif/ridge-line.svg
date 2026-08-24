@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 96" preserveAspectRatio="none" role="presentation">
+  <g fill="none" stroke="#ffffff" stroke-width="3" stroke-linejoin="miter" stroke-linecap="butt">
+    <polyline opacity="0.14" points="0,64 120,40 260,58 420,26 560,48 700,30 860,54 1020,36 1200,50"/>
+    <polyline opacity="0.26" points="0,78 160,56 320,70 480,44 640,62 800,40 980,64 1120,50 1200,58"/>
+  </g>
+</svg>

@@ -3,20 +3,18 @@ import Link from "next/link";
 interface PageHeaderProps {
   title: string;
   description?: string;
-  badge?: { icon: string; label: string };
   breadcrumbs: Array<{ label: string; href?: string }>;
 }
 
 export default function PageHeader({
   title,
   description,
-  badge,
   breadcrumbs,
 }: PageHeaderProps) {
   return (
-    <>
+    <section className="page-header">
       <div className="container">
-        <nav className="breadcrumbs" aria-label="Breadcrumb">
+        <nav className="breadcrumbs breadcrumbs--inverse" aria-label="Breadcrumb">
           {breadcrumbs.map((crumb, index) => {
             const isLast = index === breadcrumbs.length - 1;
             return (
@@ -31,22 +29,11 @@ export default function PageHeader({
             );
           })}
         </nav>
-      </div>
-
-      <section className="page-header">
-        <div className="container">
-          <div className="page-header-content">
-            {badge && (
-              <span className="page-header-badge">
-                <i className={badge.icon} aria-hidden="true" />
-                <span>{badge.label}</span>
-              </span>
-            )}
-            <h1>{title}</h1>
-            {description && <p className="page-header-desc">{description}</p>}
-          </div>
+        <div className="page-header-content">
+          <h1>{title}</h1>
+          {description && <p className="page-header-desc">{description}</p>}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

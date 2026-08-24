@@ -12,8 +12,6 @@ export default function PrivacyPage() {
     <>
       <PageHeader
         title="Privacy Policy"
-        description="How BetterMaddela's static information site handles privacy."
-        badge={{ icon: "bi bi-shield-lock", label: "Privacy" }}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Privacy Policy" }]}
       />
 
@@ -21,7 +19,7 @@ export default function PrivacyPage() {
         <div className="container">
           <div className="legal-wrapper">
             <aside className="legal-toc">
-              <h4><i className="bi bi-list-ul" aria-hidden="true" /> <span>Contents</span></h4>
+              <h2><span>Contents</span></h2>
               <nav aria-label="Privacy sections">
                 <a href="#introduction">Introduction</a>
                 <a href="#hosting">Hosting</a>
@@ -39,7 +37,7 @@ export default function PrivacyPage() {
 
               <section id="hosting" className="legal-section">
                 <h2>Hosting</h2>
-                <p>Vercel hosts the public static site and may process ordinary request, security, and network information under its own <a href="https://vercel.com/legal/privacy-policy">privacy policy</a>. BetterMaddela does not add analytics or advertising scripts.</p>
+                <p>Vercel hosts the public static site and may process ordinary request, security, and network information under its own <a href="https://vercel.com/legal/privacy-policy">privacy policy <i className="bi bi-box-arrow-up-right" aria-hidden="true" /></a>. BetterMaddela does not add analytics or advertising scripts.</p>
               </section>
 
               <section id="preferences" className="legal-section">

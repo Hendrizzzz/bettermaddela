@@ -13,20 +13,18 @@ export default function SourcesPage() {
       <PageHeader
         title="Sources & Verification"
         description="Every published civic record keeps its evidence, review date, and limitations."
-        badge={{ icon: "bi bi-journal-check", label: "Evidence" }}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Sources" }]}
       />
 
       <section className="section">
         <div className="container">
-          <div className="method-grid" aria-label="Publication totals">
+          <div className="method-grid" role="group" aria-label="Publication totals">
             <div><p className="metric">{records.length}</p><p>accepted records</p></div>
             <div><p className="metric">{sources.length}</p><p>reviewed source entries</p></div>
             <div><p className="metric">0</p><p>published provisional records</p></div>
           </div>
 
           <div className="section-header-minimal">
-            <span className="section-tag"><i className="bi bi-database-check" aria-hidden="true" /> <span>Registry</span></span>
             <h2>Published records</h2>
             <p>A verification date records the review; it is not a promise that changing information can never change.</p>
           </div>
@@ -56,7 +54,7 @@ export default function SourcesPage() {
       <section className="section bg-alt">
         <div className="container">
           <div className="coverage-panel">
-            <div><p className="section-kicker">Publication boundary</p><h2>What remains unavailable</h2></div>
+            <div><h2>What remains unavailable</h2></div>
             <p>Complete elected and barangay rosters, a general municipal contact directory, emergency contacts, detailed service procedures, complete local-legislation archives, the enacted municipal budget, a complete procurement history, and uncleared media remain unpublished until their specific evidence gates pass.</p>
           </div>
         </div>

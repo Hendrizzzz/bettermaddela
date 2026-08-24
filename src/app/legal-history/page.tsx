@@ -38,7 +38,7 @@ export default function LegalHistoryPage() {
         <div className="container">
           <div className="legal-wrapper">
             <aside className="legal-toc" aria-label="Legal history contents">
-              <h2><i className="bi bi-list-ul" aria-hidden="true" /> On this page</h2>
+              <h2>On this page</h2>
               <nav>
                 {legalRecords.map((record) => (
                   <a href={`#${record.id}`} key={record.id}>{record.data.instrument}</a>

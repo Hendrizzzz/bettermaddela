@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const destinations = [
-  { href: "/services/certificates", label: { en: "Birth Certificate", fil: "Birth Certificate" }, keywords: "birth marriage death certificate civil registry kapanganakan kasal kamatayan" },
+  { href: "/services/certificates", label: { en: "Birth Certificate", fil: "Sertipiko ng Kapanganakan" }, keywords: "birth marriage death certificate civil registry kapanganakan kasal kamatayan" },
   { href: "/services/business", label: { en: "Business Permit", fil: "Permit sa Negosyo" }, keywords: "business permit licensing renewal negosyo lisensya" },
   { href: "/services/tax-payments", label: { en: "Real Property Tax", fil: "Buwis sa Ari-arian" }, keywords: "property tax payment treasury buwis ari-arian bayad" },
   { href: "/government", label: { en: "Barangays", fil: "Mga Barangay" }, keywords: "barangays government geography pamahalaan" },
@@ -49,7 +49,7 @@ export function VerifiedSearch() {
   return (
     <div className="home-search-box">
       <h2><i className="bi bi-search" aria-hidden="true"></i> {copy.title}</h2>
-      <form className="search-form" role="search" onSubmit={submit}>
+      <form role="search" onSubmit={submit}>
         <label className="sr-only" htmlFor="verified-search">{copy.label}</label>
         <div className="search-input-wrapper">
           <input

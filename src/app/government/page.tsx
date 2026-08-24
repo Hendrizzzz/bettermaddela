@@ -3,6 +3,7 @@ import Link from "next/link";
 import PageHeader from "@/components/layout/PageHeader";
 import { RecordMeta, RecordMetaGroup } from "@/components/RecordMeta";
 import { getRecord } from "@/data/civic";
+import { slugify } from "@/lib/slugify";
 
 interface BarangayEntry {
   name: string;
@@ -48,42 +49,23 @@ export const metadata: Metadata = {
   description: "Reviewed leadership, office, and barangay information for Maddela, Quirino.",
 };
 
-function slugify(value: string) {
-  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
-}
-
-function SectionBadge({ icon, label }: { icon: string; label: string }) {
-  return (
-    <span className="inline-badge">
-      <i className={icon} aria-hidden="true" /> <span>{label}</span>
-    </span>
-  );
-}
-
 export default function GovernmentPage() {
   return (
     <>
       <PageHeader
         title="Government Structure & Officials"
-        description="Dated public records about leadership, municipal offices, and barangays in Maddela."
-        badge={{ icon: "bi bi-building-fill", label: "Government" }}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Government" }]}
       />
 
       <section className="section" style={{ background: "var(--color-bg-alt)" }}>
         <div className="container">
           <div className="text-center" style={{ marginBottom: "var(--spacing-xl)" }}>
-            <SectionBadge icon="bi bi-star-fill" label="Leadership" />
             <h2>Current public observations</h2>
             <p style={{ color: "var(--color-text-light)" }}>Each role keeps the scope and date stated by its evidence.</p>
           </div>
           <div className="grid grid-2">
             {leadershipRecord.data.leaders.map((leader) => (
               <article className="official-card card" key={`${leader.title}-${leader.name}`}>
-                <div className="official-photo" aria-hidden="true">
-                  <i className="bi bi-person-circle" style={{ fontSize: "5rem", color: "var(--color-primary)" }} />
-                </div>
                 <div className="official-info">
                   <h3>{leader.name}</h3>
                   <p className="official-title">{leader.title}</p>
@@ -95,7 +77,7 @@ export default function GovernmentPage() {
           </div>
           <RecordMeta record={leadershipRecord} />
           <div className="coverage-panel government-officials-notice" style={{ marginTop: "var(--spacing-lg)" }}>
-            <div><p className="section-kicker">Roster boundary</p><h2>Municipal council list withheld</h2></div>
+            <h2>Municipal council list withheld</h2>
             <p>A complete current vice-mayor and Sangguniang Bayan roster has not passed the project&apos;s publication gate. <Link href="/government/officials">See the officials record</Link>.</p>
           </div>
         </div>
@@ -104,14 +86,12 @@ export default function GovernmentPage() {
       <section className="section">
         <div className="container">
           <div className="text-center" style={{ marginBottom: "var(--spacing-xl)" }}>
-            <SectionBadge icon="bi bi-building-gear" label="Municipal offices" />
             <h2>Dated office-head observations</h2>
             <p style={{ color: "var(--color-text-light)" }}>These are source-dated observations, not a complete office directory.</p>
           </div>
           <div className="grid grid-3">
             {officeHeadsRecord.data.observations.map((observation) => (
               <article className="councilor-card card text-center" key={`${observation.office}-${observation.person}`}>
-                <i className="bi bi-person-badge" style={{ fontSize: "3rem", color: "var(--color-primary)" }} aria-hidden="true" />
                 <h3>{observation.person}</h3>
                 <p className="badge badge-info">{observation.displayedTitle}</p>
                 <p>{observation.office}</p>
@@ -126,15 +106,13 @@ export default function GovernmentPage() {
       <section id="barangays" className="section" style={{ background: "var(--color-bg-alt)" }}>
         <div className="container">
           <div className="text-center" style={{ marginBottom: "var(--spacing-xl)" }}>
-            <SectionBadge icon="bi bi-geo-alt-fill" label="Barangay Units" />
             <h2>Barangays of Maddela</h2>
             <p style={{ color: "var(--color-text-light)" }}>{barangayRecord.data.barangayCount} barangays</p>
           </div>
-          <div className="grid grid-4" style={{ gap: "var(--spacing-sm)" }}>
+          <div className="grid grid-4">
             {barangayRecord.data.barangays.map((barangay) => (
               <Link key={barangay.psgcCode} href={`/government/barangays/${slugify(barangay.name)}`} className="barangay-card">
                 <div className="barangay-card-header">
-                  <i className="bi bi-geo-alt-fill" aria-hidden="true" />
                   <span className="barangay-name">{barangay.name}</span>
                 </div>
               </Link>
