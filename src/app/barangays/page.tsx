@@ -5,48 +5,151 @@ import { RecordMeta } from "@/components/RecordMeta";
 import { getRecord } from "@/data/civic";
 import { slugify } from "@/lib/slugify";
 
-export const metadata: Metadata = {
-  title: "Barangays",
-  description: `The ${getRecord<BarangayData>("barangay-dataset-2026q2").data.barangayCount} barangays of Maddela, Quirino.`,
-};
-
 interface Barangay {
   name: string;
   psgcCode: string;
+  correspondenceCode: string;
+  classification: "Urban" | "Rural";
+  population: number;
 }
 
 interface BarangayData {
   barangayCount: number;
+  psgcPublicationDate: string;
+  psgcWebpageCountAsOf: string;
+  populationReferenceDate: string;
+  urbanRuralBasis: string;
   barangays: Barangay[];
 }
 
+const barangayRecord = getRecord<BarangayData>("barangay-dataset-2026q2");
+const barangays = barangayRecord.data.barangays;
+
+function formatLongDate(value: string) {
+  return new Intl.DateTimeFormat("en-PH", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "Asia/Manila",
+  }).format(new Date(`${value}T00:00:00+08:00`));
+}
+
+// All derived figures are computed from the reviewed record at render; nothing hardcoded.
+const totalPopulation = barangays.reduce((sum, entry) => sum + entry.population, 0);
+const ruralCount = barangays.filter((entry) => entry.classification === "Rural").length;
+const urbanCount = barangays.filter((entry) => entry.classification === "Urban").length;
+const urbanPopulation = barangays
+  .filter((entry) => entry.classification === "Urban")
+  .reduce((sum, entry) => sum + entry.population, 0);
+const urbanSharePercent = totalPopulation > 0 ? (urbanPopulation / totalPopulation) * 100 : 0;
+
+const rankedBarangays = [...barangays]
+  .sort((a, b) => b.population - a.population || a.name.localeCompare(b.name))
+  .map((entry, index) => ({
+    ...entry,
+    rank: index + 1,
+    sharePercent: totalPopulation > 0 ? (entry.population / totalPopulation) * 100 : 0,
+  }));
+
+const shareFormat = new Intl.NumberFormat("en-PH", { maximumFractionDigits: 1 });
+
+export const metadata: Metadata = {
+  title: "Barangays",
+  description: `Directory of Maddela's ${barangayRecord.data.barangayCount} barangays with computed municipal totals, PSA-based population rankings, and links to each barangay profile.`,
+};
+
 export default function BarangaysPage() {
-  const record = getRecord<BarangayData>("barangay-dataset-2026q2");
+  const data = barangayRecord.data;
 
   return (
     <>
       <PageHeader
         title="Barangays of Maddela"
-        description={`${record.data.barangayCount} barangays serving the municipality`}
+        description={`${data.barangayCount} barangays serving the municipality`}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Government", href: "/government" }, { label: "Barangays" }]}
       />
 
       <section className="section" style={{ background: "var(--color-bg-alt)" }}>
         <div className="container">
-          <div className="grid grid-4">
-            {record.data.barangays.map((barangay) => (
-              <Link
-                key={barangay.psgcCode}
-                href={`/government/barangays/${slugify(barangay.name)}`}
-                className="barangay-card"
-              >
-                <div className="barangay-card-header">
-                  <span className="barangay-name">{barangay.name}</span>
-                </div>
-              </Link>
+          <h2 className="brgy-section-heading">Municipal summary</h2>
+          <dl className="brgy-summary">
+            <div className="brgy-summary-item">
+              <dt className="brgy-summary-label">Total population</dt>
+              <dd className="brgy-summary-value">{totalPopulation.toLocaleString("en-PH")}</dd>
+              <dd className="brgy-summary-note">
+                Computed from the PSA barangay dataset · reference date{" "}
+                <time dateTime={data.populationReferenceDate}>{formatLongDate(data.populationReferenceDate)}</time>
+              </dd>
+            </div>
+            <div className="brgy-summary-item">
+              <dt className="brgy-summary-label">Rural barangays</dt>
+              <dd className="brgy-summary-value">{ruralCount.toLocaleString("en-PH")}</dd>
+              <dd className="brgy-summary-note">Computed from the PSA barangay dataset</dd>
+            </div>
+            <div className="brgy-summary-item">
+              <dt className="brgy-summary-label">Urban barangays</dt>
+              <dd className="brgy-summary-value">{urbanCount.toLocaleString("en-PH")}</dd>
+              <dd className="brgy-summary-note">Computed from the PSA barangay dataset</dd>
+            </div>
+            <div className="brgy-summary-item">
+              <dt className="brgy-summary-label">Urban share of population</dt>
+              <dd className="brgy-summary-value">{shareFormat.format(urbanSharePercent)}%</dd>
+              <dd className="brgy-summary-note">Computed: urban residents ÷ {totalPopulation.toLocaleString("en-PH")} total</dd>
+            </div>
+          </dl>
+
+          <h2 className="brgy-section-heading">All {data.barangayCount} barangays by population</h2>
+          <ol className="brgy-grid">
+            {rankedBarangays.map((entry) => (
+              <li key={entry.psgcCode}>
+                <Link href={`/government/barangays/${slugify(entry.name)}`} className="brgy-card">
+                  <div className="brgy-card-top">
+                    <span className="brgy-rank">
+                      <span className="sr-only">Rank </span>#{entry.rank}
+                    </span>
+                    <span
+                      className={`brgy-chip ${
+                        entry.classification === "Urban" ? "brgy-chip--urban" : "brgy-chip--rural"
+                      }`}
+                    >
+                      {entry.classification === "Urban" ? (
+                        <i className="bi bi-buildings-fill" aria-hidden="true" />
+                      ) : (
+                        <i className="bi bi-tree-fill" aria-hidden="true" />
+                      )}
+                      {entry.classification}
+                    </span>
+                  </div>
+                  <h3 className="brgy-name">{entry.name}</h3>
+                  <dl className="brgy-card-stats">
+                    <div className="brgy-stat">
+                      <dt>Population</dt>
+                      <dd>{entry.population.toLocaleString("en-PH")}</dd>
+                    </div>
+                    <div className="brgy-stat">
+                      <dt>Share of municipal population</dt>
+                      <dd>{shareFormat.format(entry.sharePercent)}%</dd>
+                    </div>
+                  </dl>
+                </Link>
+              </li>
             ))}
+          </ol>
+          <p className="table-note brgy-list-note">
+            Ranking and shares computed at render from the reviewed PSA dataset; equal populations would be ordered alphabetically.
+          </p>
+
+          <div className="coverage-panel brgy-coverage">
+            <h2>Profiles publish the PSA dataset only</h2>
+            <p>
+              Each barangay profile currently includes only the reviewed PSA population and classification
+              dataset. Barangay contacts, projects, facilities, and history have not passed this project&apos;s
+              verification gate and are therefore not published. BetterMaddela does not present unverified
+              material to fill those gaps.
+            </p>
           </div>
-          <RecordMeta record={record} />
+
+          <RecordMeta record={barangayRecord} />
         </div>
       </section>
     </>
