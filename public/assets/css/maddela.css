@@ -238,6 +238,12 @@
   border-radius: var(--border-radius);
   background: var(--color-white);
 }
+.table-wrap tbody tr {
+  transition: background-color 160ms ease-out;
+}
+.table-wrap tbody tr:hover {
+  background-color: var(--color-bg-alt);
+}
 .table-wrap table {
   width: 100%;
   border-collapse: collapse;

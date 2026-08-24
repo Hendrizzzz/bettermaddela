@@ -12,9 +12,9 @@ export default function PageHeader({
   breadcrumbs,
 }: PageHeaderProps) {
   return (
-    <>
+    <section className="page-header">
       <div className="container">
-        <nav className="breadcrumbs" aria-label="Breadcrumb">
+        <nav className="breadcrumbs breadcrumbs--inverse" aria-label="Breadcrumb">
           {breadcrumbs.map((crumb, index) => {
             const isLast = index === breadcrumbs.length - 1;
             return (
@@ -29,16 +29,11 @@ export default function PageHeader({
             );
           })}
         </nav>
-      </div>
-
-      <section className="page-header">
-        <div className="container">
-          <div className="page-header-content">
-            <h1>{title}</h1>
-            {description && <p className="page-header-desc">{description}</p>}
-          </div>
+        <div className="page-header-content">
+          <h1>{title}</h1>
+          {description && <p className="page-header-desc">{description}</p>}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

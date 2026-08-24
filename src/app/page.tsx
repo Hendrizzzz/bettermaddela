@@ -297,6 +297,7 @@ export default function HomePage() {
               <Link key={service.href} href={service.href} className="home-service-card">
                 <div className="home-service-content">
                   <h3>{service.title[language]}</h3>
+                  <p>{service.description[language]}</p>
                 </div>
                 <i className="bi bi-arrow-right home-service-arrow" aria-hidden="true"></i>
               </Link>
@@ -505,16 +506,19 @@ export default function HomePage() {
             <Link href="/sources" className="home-contact-v2-card">
               <div className="home-contact-v2-content">
                 <h3>{copy.sourceDirectory}</h3>
+                <p className="home-contact-v2-value">{copy.sourceDirectoryNote}</p>
               </div>
             </Link>
             <Link href="/contact" className="home-contact-v2-card">
               <div className="home-contact-v2-content">
                 <h3>{copy.corrections}</h3>
+                <p className="home-contact-v2-value">{copy.correctionsNote}</p>
               </div>
             </Link>
             <Link href="/services" className="home-contact-v2-card">
               <div className="home-contact-v2-content">
                 <h3>{copy.serviceInformation}</h3>
+                <p className="home-contact-v2-value">{copy.serviceInformationNote}</p>
               </div>
             </Link>
           </div>

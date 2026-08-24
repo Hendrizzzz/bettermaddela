@@ -13,10 +13,6 @@ export function RecordMeta({ record }: { record: CivicRecord }) {
   const { t } = useLanguage();
   return (
     <p className="record-meta">
-      {t("record-verified")} <time dateTime={record.lastVerified}>{record.lastVerified}</time>
-      {" · "}
-      {t("record-review-by")} <time dateTime={record.nextReviewOn}>{record.nextReviewOn}</time>
-      {" · "}
       <Link href={`/sources#record-${record.id}`}>{t("record-view-sources")}</Link>
     </p>
   );
