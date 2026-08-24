@@ -4,7 +4,8 @@ import PageHeader from "@/components/layout/PageHeader";
 
 export const metadata: Metadata = {
   title: "Services",
-  description: "Browse BetterMaddela's municipal service-information categories.",
+  description:
+    "Service-information categories for Maddela with the topics each covers; requirements, fees, and processing times stay unpublished until verified.",
 };
 
 const categories = [

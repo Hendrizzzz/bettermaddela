@@ -4,7 +4,8 @@ import PageHeader from "@/components/layout/PageHeader";
 
 export const metadata: Metadata = {
   title: "Ordinance Archive",
-  description: "Publication status for Maddela's municipal ordinance archive.",
+  description:
+    "Why Maddela's municipal ordinance archive stays unpublished until complete official documents pass review.",
 };
 
 export default function OrdinanceFrameworkPage() {

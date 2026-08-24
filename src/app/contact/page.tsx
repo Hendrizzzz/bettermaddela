@@ -8,7 +8,8 @@ const postalSource = getSource("phlpost-zip-code-locator");
 
 export const metadata: Metadata = {
   title: "Contact and Corrections",
-  description: "Official source links and the BetterMaddela public correction route.",
+  description:
+    "Official source links, project channels, and the public correction route - no municipal or emergency phone numbers are published here.",
 };
 
 export default function ContactPage() {

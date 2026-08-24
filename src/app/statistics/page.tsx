@@ -47,7 +47,8 @@ const poverty = getRecord<PovertyData>("maddela-poverty-estimates");
 
 export const metadata: Metadata = {
   title: "Statistics",
-  description: "Reviewed population and administrative statistics for Maddela, Quirino.",
+  description:
+    "Reviewed population, household, barangay-level, and poverty-estimate statistics for Maddela, Quirino, with sources and review dates.",
 };
 
 function year(value: string) { return value.slice(0, 4); }

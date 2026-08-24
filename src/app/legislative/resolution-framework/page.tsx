@@ -4,7 +4,8 @@ import PageHeader from "@/components/layout/PageHeader";
 
 export const metadata: Metadata = {
   title: "Resolution Archive",
-  description: "Publication status for Maddela's municipal resolution archive.",
+  description:
+    "Why Maddela's municipal resolution archive stays unpublished until complete official documents pass review.",
 };
 
 export default function ResolutionFrameworkPage() {
