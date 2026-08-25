@@ -11,10 +11,14 @@ export const size = {
 };
 export const contentType = "image/png";
 
-const BRAND_BLUE = "#0032a0";
-const BRAND_DARK = "#002170";
-const LIMESTONE = "#f7f5f0";
-const INK = "#1a1a1a";
+// "Gorge & Current" identity world - see .agents/skills and the icon.svg
+// direction contract. Palette derives from research/2026-08-identity-brief
+// section 11.4 cues: limestone, deep forest, river, cultivated gold.
+const LIMESTONE = "#f4f6f1";
+const INK = "#16362e";
+const RIVER = "#2e7d6b";
+const WHITEWATER = "#8fe3cd";
+const GOLD = "#e9b944";
 
 export default function OpengraphImage() {
   return new ImageResponse(
@@ -35,25 +39,29 @@ export default function OpengraphImage() {
           style={{
             display: "flex",
             alignItems: "center",
-            gap: 16,
-            marginBottom: 28,
+            gap: 18,
+            marginBottom: 30,
           }}
         >
-          <div
-            style={{
-              width: 18,
-              height: 18,
-              backgroundColor: "#f77f00",
-              display: "flex",
-            }}
-          />
+          <svg width="44" height="44" viewBox="0 0 64 64" style={{ display: "flex" }}>
+            <rect width="64" height="64" rx="14" fill={INK} />
+            <path
+              d="M18 44 V23 L32 35.5 L46 23 V44"
+              fill="none"
+              stroke={WHITEWATER}
+              strokeWidth="7"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <circle cx="32" cy="13" r="3.4" fill={GOLD} />
+          </svg>
           <div
             style={{
               display: "flex",
               fontSize: 28,
               fontWeight: 600,
               letterSpacing: 6,
-              color: BRAND_BLUE,
+              color: RIVER,
               textTransform: "uppercase",
             }}
           >
@@ -70,13 +78,13 @@ export default function OpengraphImage() {
           }}
         >
           <span>Better</span>
-          <span style={{ color: BRAND_BLUE }}>Maddela</span>
+          <span style={{ color: RIVER }}>Maddela</span>
         </div>
         <div
           style={{
             display: "flex",
             fontSize: 38,
-            color: "rgba(26, 26, 26, 0.78)",
+            color: "rgba(22, 54, 46, 0.78)",
             marginBottom: 200,
           }}
         >
@@ -94,14 +102,16 @@ export default function OpengraphImage() {
             display: "flex",
           }}
         >
+          {/* Stepped current: the seven-tier falls abstracted to descending
+              terraces of water over stone. */}
           <polygon
-            fill={BRAND_BLUE}
-            opacity="0.45"
-            points="0,140 130,70 270,120 420,40 580,115 730,60 890,135 1050,85 1200,150 1200,260 0,260"
+            fill={RIVER}
+            opacity="0.4"
+            points="0,96 200,60 400,104 600,52 800,110 1000,66 1200,118 1200,260 0,260"
           />
           <polygon
-            fill={BRAND_DARK}
-            points="0,205 160,130 310,185 490,105 650,175 810,125 970,195 1130,145 1200,180 1200,260 0,260"
+            fill={INK}
+            points="0,176 240,132 480,186 720,128 960,192 1200,150 1200,260 0,260"
           />
         </svg>
         <div
@@ -111,7 +121,7 @@ export default function OpengraphImage() {
             bottom: 44,
             display: "flex",
             fontSize: 24,
-            color: LIMESTONE,
+            color: "rgba(244, 246, 241, 0.92)",
           }}
         >
           Independent project - not a government website

@@ -37,11 +37,12 @@
   --surface: #ffffff;
   --surface-muted: #f8f9fa;
   --line: #dfe3ea;
-  --brand: #0032a0;
-  --brand-dark: #002170;
-  --brand-soft: #eaf0ff;
-  --accent: #f77f00;
-  --shadow: 0 8px 24px rgba(0, 50, 160, 0.1);
+  /* "Gorge & Current" Maddela palette (see src/app/icon.svg direction contract). */
+  --brand: #276a5b;
+  --brand-dark: #16362e;
+  --brand-soft: #e7f1ec;
+  --accent: #b97e14;
+  --shadow: 0 8px 24px rgba(22, 54, 46, 0.12);
   --radius: 0.75rem;
 }
 .history-section {

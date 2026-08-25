@@ -16,10 +16,12 @@
 }
 :root {
   --font-display: "Archivo", "Inter", sans-serif;
-  --color-primary: #0032a0;
-  --color-primary-dark: #002170;
-  --color-secondary: #003d82;
-  --color-accent: #f77f00;
+  /* "Gorge & Current" Maddela palette - derives from the identity brief's
+     verified landscape anchors (river, limestone, forest, cultivated gold). */
+  --color-primary: #276a5b;
+  --color-primary-dark: #16362e;
+  --color-secondary: #1f5c4d;
+  --color-accent: #b97e14;
   --color-success: #06a77d;
   --color-danger: #d62828;
   --color-info: #0077be;
@@ -530,7 +532,8 @@ body.mobile-menu-open {
   padding: var(--spacing-md);
 }
 .page-header {
-  background: var(--color-primary);
+  /* Deep forest-river ink band: the gorge wall behind every page title. */
+  background: linear-gradient(180deg, var(--color-primary-dark) 0%, #1d4a3e 100%);
   padding: 20px 0 var(--spacing-lg);
   color: white;
 }
