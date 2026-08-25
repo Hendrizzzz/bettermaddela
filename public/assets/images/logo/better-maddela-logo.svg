@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- BetterMaddela horizontal lockup - original vector work (2026-08).
-     Mark: sunrise nested between gorge walls, river reflection below.
-     Light-surface variant. Wordmark in Archivo (self-hosted display face). -->
+<!-- BetterMaddela horizontal lockup - light surface. "The Ridge Mon" mark,
+     owner-selected 2026-08. Original vector work; wordmark in Archivo. -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 64" role="img" aria-label="BetterMaddela">
-  <g>
-    <rect x="8" y="8" width="11" height="48" rx="5.5" fill="#221d14"/>
-    <rect x="45" y="8" width="11" height="48" rx="5.5" fill="#221d14"/>
-    <circle cx="32" cy="30" r="13" fill="#f5b301"/>
-    <rect x="21" y="50" width="10" height="5" rx="2.5" fill="#f5b301"/>
-    <rect x="33" y="50" width="10" height="5" rx="2.5" fill="#f5b301" opacity="0.55"/>
-  </g>
-  <text x="78" y="41"
+  <circle cx="32" cy="32" r="29.5" fill="none" stroke="#221d14" stroke-width="4.5"/>
+  <path d="M17 44 L17 21 L25 21 L32 31 L39 21 L47 21 L47 44 L40 44 L40 32.5 L34.5 40 L29.5 40 L24 32.5 L24 44 Z"
+        fill="#f5b301" stroke="#221d14" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="74" y="41"
         font-family="Archivo, 'Segoe UI', system-ui, sans-serif"
         font-size="30" font-weight="600" letter-spacing="-0.5" fill="#221d14">Better</text>
-  <text x="152" y="41"
+  <text x="148" y="41"
         font-family="Archivo, 'Segoe UI', system-ui, sans-serif"
         font-size="30" font-weight="800" letter-spacing="-0.5" fill="#221d14">Maddela</text>
 </svg>

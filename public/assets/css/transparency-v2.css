@@ -1,6 +1,6 @@
 .sre-section-v2 {
   padding: 48px 0 64px;
-  background: #f8fafc;
+  background: #f7efd8;
 }
 .sre-header-v2 {
   display: flex;
@@ -47,7 +47,7 @@
 .infra-project-v5 {
   background: white;
   border-radius: 16px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(34, 0, 0, 0.08);
   overflow: hidden;
   transition: all 0.2s ease;
   margin-bottom: 24px;
@@ -57,11 +57,11 @@
 }
 .infra-project-v5:hover {
   border-color: var(--color-primary);
-  box-shadow: 0 8px 32px rgba(0, 50, 160, 0.1);
+  box-shadow: 0 8px 32px rgba(34, 50, 160, 0.1);
 }
 .infra-project-main {
   padding: 28px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid rgba(34, 0, 0, 0.06);
 }
 .infra-project-tags {
   display: flex;
@@ -81,7 +81,7 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  background: rgba(0, 119, 190, 0.08);
+  background: rgba(34, 119, 190, 0.08);
   color: var(--color-info);
   padding: 6px 12px;
   border-radius: 6px;
@@ -109,7 +109,7 @@
 }
 .infra-project-details {
   padding: 24px 28px;
-  background: #fafbfc;
+  background: #f7efd8;
 }
 /* RecordMeta renders as a direct child of the overflow-hidden card; without
    its own inset the link sits under the 16px corner curve and gets clipped. */
@@ -150,7 +150,7 @@
   justify-content: space-between;
   padding: 16px 28px;
   background: white;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-top: 1px solid rgba(34, 0, 0, 0.06);
 }
 .infra-source {
   display: flex;

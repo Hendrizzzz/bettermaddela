@@ -42,11 +42,14 @@ export default function OpengraphImage() {
           }}
         >
           <svg width="46" height="46" viewBox="0 0 64 64" style={{ display: "flex" }}>
-            <rect x="8" y="8" width="11" height="48" rx="5.5" fill={INK} />
-            <rect x="45" y="8" width="11" height="48" rx="5.5" fill={INK} />
-            <circle cx="32" cy="30" r="13" fill={GOLD} />
-            <rect x="21" y="50" width="10" height="5" rx="2.5" fill={GOLD} />
-            <rect x="33" y="50" width="10" height="5" rx="2.5" fill={GOLD} opacity="0.55" />
+            <circle cx="32" cy="32" r="29.5" fill="none" stroke={INK} strokeWidth="4.5" />
+            <path
+              d="M17 44 L17 21 L25 21 L32 31 L39 21 L47 21 L47 44 L40 44 L40 32.5 L34.5 40 L29.5 40 L24 32.5 L24 44 Z"
+              fill={GOLD}
+              stroke={INK}
+              strokeWidth="2.5"
+              strokeLinejoin="round"
+            />
           </svg>
           <div
             style={{

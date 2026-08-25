@@ -9,10 +9,11 @@
     "build": "node scripts/clean-output.mjs && next build",
     "typecheck": "tsc --noEmit --incremental false",
     "check:repository": "node scripts/check-repository.mjs",
+    "check:design": "node scripts/check-design-tokens.mjs",
     "audit:inherited": "node scripts/check-repository.mjs --audit-inherited",
     "validate:data": "node scripts/validate-civic-data.mjs",
     "test:accessibility": "node scripts/check-accessibility.mjs",
-    "verify": "bun run check:repository && bun run audit:inherited && bun run validate:data && bun run typecheck && bun run build && bun run test:accessibility"
+    "verify": "bun run check:repository && bun run check:design && bun run audit:inherited && bun run validate:data && bun run typecheck && bun run build && bun run test:accessibility"
   },
   "dependencies": {
     "gsap": "^3.15.0",
