@@ -1239,6 +1239,21 @@
             "stageAsOf": "2026-07-09",
             "canonicalUrl": "https://ffedis.da.gov.ph/negotiated-procurement/public/view/1913",
             "limitations": "The inspected procurement page, purchase request, award and contract do not prove delivery, inspection, acceptance, payment or beneficiary distribution."
+          },
+          {
+            "id": "ffedis-2026-07-761",
+            "title": "Supply and Delivery of 60 pcs Bamboo Poles and 100 pcs Tamarind Twigs",
+            "procuringEntity": "BFAR-RO2",
+            "referenceNumber": "Ref # 2026-07-761; Solicitation No. NP SS-04",
+            "amountLabel": "Approved Budget",
+            "amount": 18000,
+            "currency": "PHP",
+            "publishedAt": "2026-07-24",
+            "closingDate": "2026-07-28",
+            "stage": "Expired (closed with no Notice of Award uploaded)",
+            "stageAsOf": "2026-08-25",
+            "canonicalUrl": "https://ffedis.da.gov.ph/negotiated-procurement/public/view/3241",
+            "limitations": "Procuring entity is BFAR-RO2, a national government bureau; the record names Maddela only as the stated area of delivery (Region II (Cagayan Valley) | Quirino | Maddela), not as procuring entity. Status chips as published: Closed with closing date passed, and Expired with no Notice of Award uploaded; no NOA or contract is uploaded, so award, delivery, acceptance and payment are not established. Delivery Period shows unitless '10' exactly as published and is not interpreted."
           }
         ],
         "limitations": "Selected public records only; this is not a complete procurement inventory, Annual Procurement Plan or BAC archive. Award and contract execution are not completion claims."
@@ -1248,7 +1263,8 @@
         "da-ffedis-2026-06-832",
         "ffedis-2026-06-832-purchase-request",
         "ffedis-2026-06-832-notice-of-award",
-        "ffedis-2026-06-832-contract"
+        "ffedis-2026-06-832-contract",
+        "ffedis-2026-07-761"
       ],
       "claimSources": {
         "items": [
@@ -1256,7 +1272,8 @@
           "da-ffedis-2026-06-832",
           "ffedis-2026-06-832-purchase-request",
           "ffedis-2026-06-832-notice-of-award",
-          "ffedis-2026-06-832-contract"
+          "ffedis-2026-06-832-contract",
+          "ffedis-2026-07-761"
         ],
         "items.0": [
           "philgeps-11406198"
@@ -1267,6 +1284,9 @@
           "ffedis-2026-06-832-notice-of-award",
           "ffedis-2026-06-832-contract"
         ],
+        "items.2": [
+          "ffedis-2026-07-761"
+        ],
         "limitations": [
           "philgeps-11406198",
           "da-ffedis-2026-06-832",
@@ -1276,13 +1296,13 @@
         ]
       },
       "status": "verified",
-      "lastVerified": "2026-08-18",
-      "acceptedBy": "bettermaddela-review-2026-08-18-c",
-      "acceptedAt": "2026-08-18T01:25:03+08:00",
-      "nextReviewOn": "2026-11-18",
+      "lastVerified": "2026-08-25",
+      "acceptedBy": "hendrizzzz-review-2026-08-25-a",
+      "acceptedAt": "2026-08-25T08:56:20+08:00",
+      "nextReviewOn": "2026-11-25",
       "updateCadence": "per-document",
       "owner": "BetterMaddela transparency and procurement reviewer",
-      "notes": "The erroneous alternate rice record of 120 sacks and PHP 100,800 is not imported."
+      "notes": "The erroneous alternate rice record of 120 sacks and PHP 100,800 is not imported. Item ffeDIS-2026-07-761 was accepted by the repository maintainer on 2026-08-25 after live field-checking of the FFEDIS page; it is included with its delivery-area-only scope labeled because it evidences a national-bureau procurement delivering to Maddela."
     },
     {
       "id": "maddela-community-profile",

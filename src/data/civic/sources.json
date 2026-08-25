@@ -613,6 +613,20 @@
       "sourceState": "active",
       "sha256": "c9956438d07246d776858f5cf575b25be37b5e62b1670bb2dada8af2c08991b6",
       "notes": "Same dynamic-container caveat."
+    },
+    {
+      "id": "ffedis-2026-07-761",
+      "title": "Request for Written Proposal/Offer - Ref #: 2026-07-761",
+      "publisher": "Department of Agriculture - Farmers and Fisherfolk Enterprise Development Information System; procuring entity BFAR-RO2",
+      "url": "https://ffedis.da.gov.ph/negotiated-procurement/public/view/3241",
+      "documentType": "procurement-record",
+      "publishedAt": "2026-07-24",
+      "effectivePeriod": "Closing date 2026-07-28 11:00 AM; page status chips Closed and Expired with no Notice of Award uploaded",
+      "retrievedAt": "2026-08-25",
+      "verifiedAt": "2026-08-25",
+      "verifier": "hendrizzzz-review-2026-08-25-a",
+      "sourceState": "active",
+      "notes": "Live record field-checked on 2026-08-25 during acceptance review (original evidence retrieval by the research preparer on 2026-08-23). Procurement-only contact details on the page are not treated as a general office directory and are not published."
     }
   ]
 }
