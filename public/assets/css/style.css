@@ -16,19 +16,19 @@
 }
 :root {
   --font-display: "Archivo", "Inter", sans-serif;
-  /* "Gorge & Current" Maddela palette - derives from the identity brief's
-     verified landscape anchors (river, limestone, forest, cultivated gold). */
-  --color-primary: #276a5b;
-  --color-primary-dark: #16362e;
-  --color-secondary: #1f5c4d;
-  --color-accent: #b97e14;
+  /* "Golden Hour" Maddela palette - harvest gold and dawn light from the
+     identity brief's verified anchors (rice/corn gold, dawn over the fields). */
+  --color-primary: #8a5e0f;
+  --color-primary-dark: #221d14;
+  --color-secondary: #7a540d;
+  --color-accent: #f5b301;
   --color-success: #06a77d;
   --color-danger: #d62828;
   --color-info: #0077be;
-  --color-bg: #ffffff;
-  --color-bg-alt: #f8f9fa;
-  --color-text: #1a1a1a;
-  --color-text-light: #666666;
+  --color-bg: #fffcf4;
+  --color-bg-alt: #f7efd8;
+  --color-text: #221d14;
+  --color-text-light: #6b6353;
   --color-white: #ffffff;
   --font-main: 'Inter', sans-serif;
   --line-height-body: 1.6;
@@ -430,7 +430,7 @@ body.mobile-menu-open {
   margin: 0;
 }
 .site-footer {
-  background-color: #1a1a1a;
+  background-color: #221d14;
   color: #ffffff;
   padding: var(--spacing-xl) 0;
   margin-top: var(--spacing-xl);
@@ -532,8 +532,8 @@ body.mobile-menu-open {
   padding: var(--spacing-md);
 }
 .page-header {
-  /* Deep forest-river ink band: the gorge wall behind every page title. */
-  background: linear-gradient(180deg, var(--color-primary-dark) 0%, #1d4a3e 100%);
+  /* Roasted ink band: dawn darkness behind every page title, gold accents. */
+  background: linear-gradient(180deg, var(--color-primary-dark) 0%, #3a2f1b 100%);
   padding: 20px 0 var(--spacing-lg);
   color: white;
 }
@@ -739,7 +739,7 @@ h6 {
 
 }
 .site-footer {
-  background-color: #1a1a1a;
+  background-color: #221d14;
   color: #ffffff;
   padding: 0;
   margin-top: 0;

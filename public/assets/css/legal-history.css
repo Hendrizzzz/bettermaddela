@@ -1,0 +1,289 @@
+/* ==========================================================================
+   Legal history timeline — "Golden Hour" scope
+   Applies only to src/app/legal-history/page.tsx (.lh-* classes).
+   Tokens come from style.css :root; literal colors use the approved
+   palette only: ink #221D14, paper #FFFCF4, straw #F7EFD8, gold #F5B301,
+   deep amber #8A5E0F, border #E8DFC8.
+   ========================================================================== */
+
+.lh-hero {
+  background: var(--color-primary-dark);
+  color: #fffcf4;
+  padding: 56px 0 48px;
+}
+
+.lh-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 18px;
+  background: #f7efd8;
+  color: #8a5e0f;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-radius: 999px;
+  padding: 6px 14px;
+}
+
+.lh-hero h1 {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  line-height: 1.15;
+  color: #fffcf4;
+}
+
+.lh-hero-subtitle {
+  margin: 0;
+  max-width: 52ch;
+  line-height: 1.55;
+}
+
+/* Intro row ------------------------------------------------------------- */
+
+.lh-section {
+  padding: 40px 0 72px;
+}
+
+.lh-intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+  margin-bottom: 32px;
+}
+
+.lh-intro-sentence {
+  margin: 0;
+  max-width: 54ch;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--color-text);
+}
+
+/* Chips ------------------------------------------------------------------ */
+
+.lh-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lh-chip {
+  background: #f7efd8;
+  color: #8a5e0f;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  border-radius: 999px;
+  padding: 6px 14px;
+}
+
+/* Timeline rail and nodes ------------------------------------------------- */
+
+.lh-timeline {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  max-width: 760px;
+  padding: 4px 0 0 44px;
+}
+
+.lh-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  width: 4px;
+  border-radius: 999px;
+  background: #e8dfc8;
+}
+
+.lh-item {
+  position: relative;
+  margin: 0 0 20px;
+}
+
+.lh-item::before {
+  content: "";
+  position: absolute;
+  left: -38px;
+  top: 34px;
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #f5b301;
+  border: 2px solid #221d14;
+}
+
+/* Event cards -------------------------------------------------------------- */
+
+.lh-card {
+  background: #fffcf4;
+  border: 1px solid #e8dfc8;
+  border-radius: 16px;
+  padding: 24px 28px;
+  box-shadow: 0 2px 10px rgba(34, 29, 20, 0.06);
+}
+
+.lh-year {
+  margin: 0 0 4px;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: #221d14;
+}
+
+.lh-year time {
+  color: inherit;
+}
+
+.lh-label {
+  margin: 0 0 6px;
+  font-family: var(--font-display);
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #221d14;
+}
+
+.lh-sentence {
+  margin: 0 0 14px;
+  max-width: 62ch;
+  line-height: 1.55;
+  color: var(--color-text);
+}
+
+/* Details pill row ---------------------------------------------------------- */
+
+.lh-details-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  list-style: none;
+  background: transparent;
+  border: 1px solid #e8dfc8;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: background-color 160ms ease;
+}
+
+.lh-details-summary::-webkit-details-marker {
+  display: none;
+}
+
+.lh-details-summary:hover {
+  background: #f7efd8;
+}
+
+.lh-chevron {
+  font-size: 0.75rem;
+  transition: transform 160ms ease;
+}
+
+.lh-details[open] .lh-chevron {
+  transform: rotate(180deg);
+}
+
+/* Details body ---------------------------------------------------------------- */
+
+.lh-details-body {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed #e8dfc8;
+}
+
+.lh-details-body p {
+  margin: 0 0 10px;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.lh-details-body .lh-chips {
+  margin-bottom: 14px;
+}
+
+.lh-exact-title {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #8a5e0f;
+}
+
+.lh-source-link a {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* Keep the record-meta link clear of card edges (clipping fix):
+   the padded hit/paint area is compensated by a negative margin so the
+   layout stays unchanged while nothing touches the 24px+ card padding
+   boundary. */
+.lh-card .record-meta {
+  margin: 0;
+}
+
+.lh-card .record-meta a {
+  display: inline-block;
+  padding: 12px;
+  margin: -12px;
+}
+
+/* Focus visibility --------------------------------------------------------- */
+
+.lh-card a:focus-visible,
+.lh-details-summary:focus-visible {
+  outline: 2px solid #8a5e0f;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lh-chevron,
+  .lh-details-summary {
+    transition: none;
+  }
+}
+
+/* Mobile -------------------------------------------------------------------- */
+
+@media (max-width: 640px) {
+  .lh-timeline {
+    padding-left: 20px;
+  }
+
+  .lh-timeline::before {
+    left: 2px;
+  }
+
+  .lh-item::before {
+    left: -22px;
+    top: 26px;
+  }
+
+  .lh-card {
+    padding: 20px;
+  }
+
+  .lh-year {
+    font-size: 1.25rem;
+  }
+
+  .lh-intro {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

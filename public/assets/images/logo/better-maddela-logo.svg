@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- BetterMaddela horizontal lockup - original vector work (2026-08).
-     Mark: whitewater M through a forest-river gorge; dawn light in the gap.
-     Wordmark uses the system UI stack until the display face lands with the
-     design-system foundation. Light-surface variant. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 328 64" role="img" aria-label="BetterMaddela">
+     Mark: sunrise nested between gorge walls, river reflection below.
+     Light-surface variant. Wordmark in Archivo (self-hosted display face). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 64" role="img" aria-label="BetterMaddela">
   <g>
-    <rect width="64" height="64" rx="14" fill="#16362e"/>
-    <path d="M18 44 V23 L32 35.5 L46 23 V44" fill="none" stroke="#8fe3cd"
-          stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="32" cy="13" r="3.4" fill="#e9b944"/>
+    <rect x="8" y="8" width="11" height="48" rx="5.5" fill="#221d14"/>
+    <rect x="45" y="8" width="11" height="48" rx="5.5" fill="#221d14"/>
+    <circle cx="32" cy="30" r="13" fill="#f5b301"/>
+    <rect x="21" y="50" width="10" height="5" rx="2.5" fill="#f5b301"/>
+    <rect x="33" y="50" width="10" height="5" rx="2.5" fill="#f5b301" opacity="0.55"/>
   </g>
-  <text x="80" y="30"
-        font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif"
-        font-size="29" font-weight="600" letter-spacing="-0.5" fill="#16362e">Better</text>
-  <text x="80" y="56"
-        font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif"
-        font-size="29" font-weight="750" letter-spacing="-0.5" fill="#1f5c4d">Maddela</text>
+  <text x="78" y="41"
+        font-family="Archivo, 'Segoe UI', system-ui, sans-serif"
+        font-size="30" font-weight="600" letter-spacing="-0.5" fill="#221d14">Better</text>
+  <text x="152" y="41"
+        font-family="Archivo, 'Segoe UI', system-ui, sans-serif"
+        font-size="30" font-weight="800" letter-spacing="-0.5" fill="#221d14">Maddela</text>
 </svg>

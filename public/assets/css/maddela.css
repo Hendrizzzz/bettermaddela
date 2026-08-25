@@ -32,17 +32,17 @@
   text-underline-offset: 0.15em;
 }
 :root {
-  --ink: #1a1a1a;
+  --ink: #221d14;
   --muted: #666666;
   --surface: #ffffff;
   --surface-muted: #f8f9fa;
   --line: #dfe3ea;
-  /* "Gorge & Current" Maddela palette (see src/app/icon.svg direction contract). */
-  --brand: #276a5b;
-  --brand-dark: #16362e;
-  --brand-soft: #e7f1ec;
-  --accent: #b97e14;
-  --shadow: 0 8px 24px rgba(22, 54, 46, 0.12);
+  /* "Golden Hour" Maddela palette (see src/app/icon.svg direction contract). */
+  --brand: #8a5e0f;
+  --brand-dark: #221d14;
+  --brand-soft: #f7efd8;
+  --accent: #f5b301;
+  --shadow: 0 8px 24px rgba(34, 29, 20, 0.1);
   --radius: 0.75rem;
 }
 .history-section {

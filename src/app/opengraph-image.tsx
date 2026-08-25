@@ -11,14 +11,12 @@ export const size = {
 };
 export const contentType = "image/png";
 
-// "Gorge & Current" identity world - see .agents/skills and the icon.svg
-// direction contract. Palette derives from research/2026-08-identity-brief
-// section 11.4 cues: limestone, deep forest, river, cultivated gold.
-const LIMESTONE = "#f4f6f1";
-const INK = "#16362e";
-const RIVER = "#2e7d6b";
-const WHITEWATER = "#8fe3cd";
-const GOLD = "#e9b944";
+// "Golden Hour" identity world - see src/app/icon.svg direction contract.
+// Harvest gold and dawn light from the identity brief's verified anchors.
+const PAPER = "#fffcf4";
+const INK = "#221d14";
+const AMBER = "#b97e14";
+const GOLD = "#f5b301";
 
 export default function OpengraphImage() {
   return new ImageResponse(
@@ -30,7 +28,7 @@ export default function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          backgroundColor: LIMESTONE,
+          backgroundColor: PAPER,
           position: "relative",
           padding: "72px",
         }}
@@ -43,17 +41,12 @@ export default function OpengraphImage() {
             marginBottom: 30,
           }}
         >
-          <svg width="44" height="44" viewBox="0 0 64 64" style={{ display: "flex" }}>
-            <rect width="64" height="64" rx="14" fill={INK} />
-            <path
-              d="M18 44 V23 L32 35.5 L46 23 V44"
-              fill="none"
-              stroke={WHITEWATER}
-              strokeWidth="7"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <circle cx="32" cy="13" r="3.4" fill={GOLD} />
+          <svg width="46" height="46" viewBox="0 0 64 64" style={{ display: "flex" }}>
+            <rect x="8" y="8" width="11" height="48" rx="5.5" fill={INK} />
+            <rect x="45" y="8" width="11" height="48" rx="5.5" fill={INK} />
+            <circle cx="32" cy="30" r="13" fill={GOLD} />
+            <rect x="21" y="50" width="10" height="5" rx="2.5" fill={GOLD} />
+            <rect x="33" y="50" width="10" height="5" rx="2.5" fill={GOLD} opacity="0.55" />
           </svg>
           <div
             style={{
@@ -61,7 +54,7 @@ export default function OpengraphImage() {
               fontSize: 28,
               fontWeight: 600,
               letterSpacing: 6,
-              color: RIVER,
+              color: AMBER,
               textTransform: "uppercase",
             }}
           >
@@ -78,13 +71,13 @@ export default function OpengraphImage() {
           }}
         >
           <span>Better</span>
-          <span style={{ color: RIVER }}>Maddela</span>
+          <span style={{ color: AMBER }}>Maddela</span>
         </div>
         <div
           style={{
             display: "flex",
             fontSize: 38,
-            color: "rgba(22, 54, 46, 0.78)",
+            color: "rgba(34, 29, 20, 0.75)",
             marginBottom: 200,
           }}
         >
@@ -102,16 +95,17 @@ export default function OpengraphImage() {
             display: "flex",
           }}
         >
-          {/* Stepped current: the seven-tier falls abstracted to descending
-              terraces of water over stone. */}
+          {/* Dawn terraces: descending field steps catching first light. */}
+          <rect x="0" y="150" width="1200" height="110" fill={INK} />
           <polygon
-            fill={RIVER}
-            opacity="0.4"
-            points="0,96 200,60 400,104 600,52 800,110 1000,66 1200,118 1200,260 0,260"
+            fill={GOLD}
+            opacity="0.85"
+            points="0,150 240,110 480,158 720,106 960,160 1200,120 1200,150 0,150"
           />
           <polygon
-            fill={INK}
-            points="0,176 240,132 480,186 720,128 960,192 1200,150 1200,260 0,260"
+            fill={GOLD}
+            opacity="0.4"
+            points="0,150 240,110 480,158 720,106 960,160 1200,120 1200,176 0,176"
           />
         </svg>
         <div
@@ -121,7 +115,7 @@ export default function OpengraphImage() {
             bottom: 44,
             display: "flex",
             fontSize: 24,
-            color: "rgba(244, 246, 241, 0.92)",
+            color: "rgba(255, 252, 244, 0.92)",
           }}
         >
           Independent project - not a government website

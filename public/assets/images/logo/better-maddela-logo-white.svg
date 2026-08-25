@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- BetterMaddela horizontal lockup - dark-surface variant (footer).
-     Original vector work (2026-08); same gorge-and-current mark, pale wordmark. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 328 64" role="img" aria-label="BetterMaddela">
+     Original vector work (2026-08): pale gorge walls, gold sun. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 64" role="img" aria-label="BetterMaddela">
   <g>
-    <rect width="64" height="64" rx="14" fill="#1d4a3e"/>
-    <path d="M18 44 V23 L32 35.5 L46 23 V44" fill="none" stroke="#a9ecd9"
-          stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="32" cy="13" r="3.4" fill="#f0c25e"/>
+    <rect x="8" y="8" width="11" height="48" rx="5.5" fill="#fffcf4"/>
+    <rect x="45" y="8" width="11" height="48" rx="5.5" fill="#fffcf4"/>
+    <circle cx="32" cy="30" r="13" fill="#f5b301"/>
+    <rect x="21" y="50" width="10" height="5" rx="2.5" fill="#f5b301"/>
+    <rect x="33" y="50" width="10" height="5" rx="2.5" fill="#f5b301" opacity="0.55"/>
   </g>
-  <text x="80" y="30"
-        font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif"
-        font-size="29" font-weight="600" letter-spacing="-0.5" fill="#f2f5ef">Better</text>
-  <text x="80" y="56"
-        font-family="'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif"
-        font-size="29" font-weight="750" letter-spacing="-0.5" fill="#a9ecd9">Maddela</text>
+  <text x="78" y="41"
+        font-family="Archivo, 'Segoe UI', system-ui, sans-serif"
+        font-size="30" font-weight="600" letter-spacing="-0.5" fill="#fffcf4">Better</text>
+  <text x="152" y="41"
+        font-family="Archivo, 'Segoe UI', system-ui, sans-serif"
+        font-size="30" font-weight="800" letter-spacing="-0.5" fill="#fffcf4">Maddela</text>
 </svg>

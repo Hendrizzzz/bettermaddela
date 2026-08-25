@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   BetterMaddela identity mark - original vector work for this project (2026-08).
-  Direction contract ("Gorge & Current"):
-  THESIS: Maddela is where the Cagayan River cuts white limestone through the
-  Sierra Madre foothills; the mark draws the town's initial M as a whitewater
-  current dropping through a forest-river gorge, with cultivated dawn light in
-  the gap (identity reference per research/2026-08-identity-brief section 3;
-  no municipal-seal imitation, no indigenous motif borrowing, no corn clipart).
-  OWN-WORLD: deep forest-river ink #16362E, aerated whitewater #8FE3CD,
-  cultivated gold #E9B944 on a rounded limestone-safe tile.
+  Direction contract ("Golden Hour"):
+  THESIS: Maddela at sunrise - harvest gold light rising exactly between two
+  limestone gorge walls, its reflection on the Cagayan River. No letterform,
+  no app-icon tile, no seal, no borrowed motifs.
+  OWN-WORLD: warm charcoal ink #221D14, harvest gold #F5B301, paper #FFFCF4.
+  Anchors: research/2026-08-identity-brief (corn/rice gold, dawn light, river
+  and limestone landscape). Independent project - never an official seal.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#16362e"/>
-  <path d="M18 44 V23 L32 35.5 L46 23 V44" fill="none" stroke="#8fe3cd"
-        stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="32" cy="13" r="3.4" fill="#e9b944"/>
+  <rect x="8" y="8" width="11" height="48" rx="5.5" fill="#221d14"/>
+  <rect x="45" y="8" width="11" height="48" rx="5.5" fill="#221d14"/>
+  <circle cx="32" cy="30" r="13" fill="#f5b301"/>
+  <rect x="21" y="50" width="10" height="5" rx="2.5" fill="#f5b301"/>
+  <rect x="33" y="50" width="10" height="5" rx="2.5" fill="#f5b301" opacity="0.55"/>
 </svg>
