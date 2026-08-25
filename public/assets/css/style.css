@@ -87,7 +87,8 @@ h1 {
   font-size: 2.5rem;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 1.875rem;
+  letter-spacing: -0.01em;
   color: var(--color-text);
 }
 h3 {
@@ -360,8 +361,8 @@ body.mobile-menu-open {
 }
 .news-card {
   background: var(--color-white);
-  border: 1px solid var(--color-bg-alt);
-  border-radius: var(--border-radius);
+  border: 1px solid #e8dfc8;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -872,7 +873,7 @@ h6 {
 }
 .home-service-card:hover {
   border-color: var(--color-primary);
-  box-shadow: 0 4px 12px rgba(34, 50, 160, 0.1);
+  box-shadow: var(--shadow-md);
   text-decoration: none;
 }.home-service-content {
   flex: 1;
@@ -920,7 +921,7 @@ h6 {
   color: white;
 }
 .home-service-card--all:hover {
-  box-shadow: 0 4px 16px rgba(34, 50, 160, 0.3);
+  box-shadow: var(--shadow-md);
 }
 .home-stats {
   background: var(--color-bg-alt);
@@ -1318,7 +1319,7 @@ h6 {
   margin-bottom: var(--spacing-xs);
 }
 .hotlines-title h2 {
-  font-size: 1.25rem;
+  font-size: 1.875rem;
   margin: 0;
 }
 .hotlines-header > p {
@@ -1642,7 +1643,7 @@ a.a11y-contact-item:hover i {
 }
 .home-stat-card:hover {
   border-color: var(--color-primary);
-  box-shadow: 0 8px 24px rgba(34, 50, 160, 0.12);
+  box-shadow: var(--shadow-md);
   text-decoration: none;
 }.home-stat-card-content {
   flex: 1;

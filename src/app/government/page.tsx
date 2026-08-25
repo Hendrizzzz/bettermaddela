@@ -76,10 +76,10 @@ export default function GovernmentPage() {
             ))}
           </div>
           <RecordMeta record={leadershipRecord} />
-          <div className="coverage-panel government-officials-notice" style={{ marginTop: "var(--spacing-lg)" }}>
-            <h2>Municipal council list withheld</h2>
-            <p>A complete current vice-mayor and Sangguniang Bayan roster has not passed the project&apos;s publication gate. <Link href="/government/officials">See the officials record</Link>.</p>
-          </div>
+          <p className="unpublished-note">
+            A complete current vice-mayor and Sangguniang Bayan roster has not passed the publication gate —{" "}
+            <Link href="/government/officials">see the officials record</Link>.
+          </p>
         </div>
       </section>
 
