@@ -85,6 +85,72 @@ function DataValue({ value }: { value: unknown }) {
   return <>{String(value)}</>;
 }
 
+function isLineItemArray(value: unknown): boolean {
+  return (
+    Array.isArray(value) &&
+    value.length > 0 &&
+    value.every(
+      (item) =>
+        typeof item === "object" &&
+        item !== null &&
+        (("office" in item && "headOfOffice" in item && typeof item.amount === "number") ||
+          ("project" in item && typeof item.estimatedCost === "number")),
+    )
+  );
+}
+
+type LineItem = Record<string, unknown>;
+
+function LineItemBars({ items }: { items: LineItem[] }) {
+  const values = items.map((item) =>
+    typeof item.amount === "number" ? item.amount : (item.estimatedCost as number),
+  );
+  const max = Math.max(...values);
+
+  return (
+    <div className="disclosure-bars">
+      <p className="infra-detail-label">Line items, share of this document&apos;s listed items (computed)</p>
+      <ul className="disclosure-bar-list">
+        {items.map((item, index) => {
+          const name =
+            typeof item.office === "string" && typeof item.headOfOffice === "string"
+              ? `${item.office} — ${item.headOfOffice}`
+              : String(item.project);
+          return (
+            <li className="disclosure-bar-item" key={index}>
+              <span className="disclosure-bar-head">
+                <span className="disclosure-bar-name">{name}</span>
+                <span className="disclosure-bar-amount">{formatMoney(values[index])}</span>
+              </span>
+              <span className="disclosure-bar-track">
+                <span
+                  className="disclosure-bar-fill"
+                  style={{ width: `${max > 0 ? (values[index] / max) * 100 : 0}%` }}
+                />
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+}
+
+// At most one headline figure per record: an explicit primary key when present,
+// otherwise only when exactly one printed peso field exists. Never summed or
+// combined across keys or records.
+const HEADLINE_KEY = "amountApproved";
+
+function getHeadline(data: Record<string, unknown>) {
+  const moneyEntries = Object.entries(data).filter(
+    ([key, value]) => typeof value === "number" && MONEY_KEY.test(key),
+  );
+  const preferred = moneyEntries.find(([key]) => key === HEADLINE_KEY);
+  if (preferred) return { key: preferred[0], value: preferred[1] as number };
+  if (moneyEntries.length === 1) return { key: moneyEntries[0][0], value: moneyEntries[0][1] as number };
+  return null;
+}
+
 function DisclosureEntry({ record }: { record: CivicRecord<Record<string, unknown>> }) {
   const periodLine = [
     record.data.postingPeriod,
@@ -92,31 +158,57 @@ function DisclosureEntry({ record }: { record: CivicRecord<Record<string, unknow
     record.data.asOfDatePrinted,
   ].filter((value): value is string => typeof value === "string");
 
+  const entries = Object.entries(record.data);
+  const barArrays = entries.filter(([, value]) => isLineItemArray(value));
+  const scalarRows = entries.filter(
+    ([key, value]) => !SKIP_KEYS.has(key) && !isLineItemArray(value),
+  );
+  const headline = getHeadline(record.data);
+
   return (
     <article className="infra-project-v5" id={`disclosure-${record.id}`}>
-      <div className="infra-project-main">
-        <div className="infra-project-tags">
-          {periodLine.map((period) => (
-            <span className="infra-tag-category" key={period}><i className="bi bi-calendar3" aria-hidden="true" /><span>{period}</span></span>
+      <details className="disclosure-card">
+        <summary className="infra-project-main disclosure-summary">
+          <div className="disclosure-summary-title">
+            <div className="infra-project-tags">
+              {periodLine.map((period) => (
+                <span className="infra-tag-category" key={period}><i className="bi bi-calendar3" aria-hidden="true" /><span>{period}</span></span>
+              ))}
+            </div>
+            <h3>{record.label}</h3>
+          </div>
+          {headline ? (
+            <span className="disclosure-headline">
+              <span className="infra-detail-label">{humanizeKey(headline.key)}</span>
+              <span className="disclosure-headline-value">{formatMoney(headline.value)}</span>
+            </span>
+          ) : (
+            <span className="disclosure-toggle">
+              <i className="bi bi-chevron-right disclosure-chevron" aria-hidden="true" />
+              <span>View figures</span>
+            </span>
+          )}
+        </summary>
+        <div className="infra-project-details">
+          {barArrays.map(([key, value]) => (
+            <div key={key}>
+              <p className="infra-detail-label">{humanizeKey(key)}</p>
+              <LineItemBars items={value as LineItem[]} />
+            </div>
           ))}
-        </div>
-        <h3>{record.label}</h3>
-      </div>
-      <div className="infra-project-details">
-        <dl className="disclosure-details">
-          {Object.entries(record.data)
-            .filter(([key]) => !SKIP_KEYS.has(key))
-            .map(([key, value]) => (
+          <dl className="disclosure-details">
+            {scalarRows.map(([key, value]) => (
               <div className="infra-detail-row" key={key}>
                 <dt className="infra-detail-label">{humanizeKey(key)}</dt>
                 <dd className="infra-detail-value"><DataValue value={value} /></dd>
               </div>
             ))}
-        </dl>
-        {"limitations" in record.data && typeof record.data.limitations === "string" && (
-          <p className="table-note">{record.data.limitations}</p>
-        )}
-      </div>
+          </dl>
+          {"limitations" in record.data && typeof record.data.limitations === "string" && (
+            <p className="table-note">{record.data.limitations}</p>
+          )}
+        </div>
+      </details>
       <RecordMeta record={record} />
     </article>
   );
@@ -144,12 +236,12 @@ export default function BudgetPage() {
           <div className="sre-header-v2">
             <div className="sre-title-group">
               <h2>Municipal budget documents</h2>
-              <p>LGU-prepared financial disclosures from the DILG Full Disclosure Policy Portal are published record by record.</p>
+              <p>LGU-prepared financial disclosures from the DILG Full Disclosure Policy Portal.</p>
             </div>
           </div>
           <div className="coverage-panel">
             <div><h2>What is still not shown</h2></div>
-            <p>The signed appropriations ordinance and its enactment details remain unavailable, so no figure on this page is presented as the enacted annual budget. The FY 2025 and FY 2026 Annual Budget Report files are broken at the source portal (server error) and stay unpublished. Proposed-budget-year columns and plan-stage estimates are labeled as such; unlike documents (appropriations, actuals, procurement plans, loan balances) are never combined into a single total. All figures are unaudited, LGU-prepared disclosures.</p>
+            <p>No figure on this page is presented as the enacted annual budget, and the broken FY 2025/FY 2026 Annual Budget Report source files stay unpublished. All published figures are unaudited, LGU-prepared disclosures.</p>
           </div>
         </div>
       </section>
@@ -159,7 +251,7 @@ export default function BudgetPage() {
           <div className="container">
             <div className="infra-header-v5">
               <h2 id="disclosure-heading">Reviewed FDPP disclosures</h2>
-              <p>Record-level entries from the DILG Full Disclosure Policy Portal. Amounts keep full printed precision; every entry links to its evidence on the sources page.</p>
+              <p>Record-level DILG Full Disclosure Policy Portal entries; amounts keep full printed precision and every entry links to its source.</p>
             </div>
 
             {disclosureRecords.map((record) => (
@@ -191,14 +283,10 @@ export default function BudgetPage() {
                   <div className="infra-detail-col"><span className="infra-detail-label">Reference</span><span className="infra-detail-value">{item.referenceNumber}</span></div>
                   <div className="infra-detail-col"><span className="infra-detail-label">Published</span><span className="infra-detail-value"><time dateTime={item.publishedAt}>{item.publishedAt}</time></span></div>
                   <div className="infra-detail-col infra-detail-cost"><span className="infra-detail-label">{item.amountLabel}</span><span className="infra-detail-value">{formatAmount(item.amount, item.currency)}</span></div>
+                  {item.quantity && <div className="infra-detail-col"><span className="infra-detail-label">Quantity</span><span className="infra-detail-value">{item.quantity}</span></div>}
+                  {item.closingDate && <div className="infra-detail-col"><span className="infra-detail-label">Closing date</span><span className="infra-detail-value"><time dateTime={item.closingDate}>{item.closingDate}</time></span></div>}
+                  <div className="infra-detail-col"><span className="infra-detail-label">Stage as of</span><span className="infra-detail-value"><time dateTime={item.stageAsOf}>{item.stageAsOf}</time></span></div>
                 </div>
-                {(item.quantity || item.closingDate) && (
-                  <div className="infra-detail-row">
-                    {item.quantity && <div className="infra-detail-col"><span className="infra-detail-label">Quantity</span><span className="infra-detail-value">{item.quantity}</span></div>}
-                    {item.closingDate && <div className="infra-detail-col"><span className="infra-detail-label">Closing date</span><span className="infra-detail-value"><time dateTime={item.closingDate}>{item.closingDate}</time></span></div>}
-                    <div className="infra-detail-col"><span className="infra-detail-label">Stage as of</span><span className="infra-detail-value"><time dateTime={item.stageAsOf}>{item.stageAsOf}</time></span></div>
-                  </div>
-                )}
                 <p className="table-note">{item.limitations}</p>
               </div>
               <div className="infra-project-footer">
