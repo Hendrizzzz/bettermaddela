@@ -12,7 +12,7 @@ with reviewed Maddela data and honest unavailable states.
 
 The repository contains one active web application:
 
-- Next.js 15 App Router with React and TypeScript;
+- Next.js 16 App Router with React and TypeScript;
 - application routes and the root layout under `src/app`;
 - shared interface code under `src/components`;
 - reviewed, repository-managed civic JSON under `src/data/civic`; and
