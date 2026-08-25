@@ -1,0 +1,223 @@
+.sre-section-v2 {
+  padding: 48px 0 64px;
+  background: #f8fafc;
+}
+.sre-header-v2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+.sre-title-group {
+  flex: 1;
+  min-width: 280px;
+}
+.sre-title-group h2 {
+  font-size: 1.5rem;
+  color: var(--color-text);
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+.sre-title-group p {
+  color: var(--color-text-light);
+  font-size: 0.9375rem;
+  margin: 0;
+}
+.infra-section-v5 {
+  padding: 64px 0;
+  background: white;
+}
+.infra-header-v5 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.infra-header-v5 h2 {
+  font-size: 1.5rem;
+  color: var(--color-text);
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+.infra-header-v5 p {
+  color: var(--color-text-light);
+  font-size: 0.9375rem;
+  margin: 0;
+}
+.infra-project-v5 {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.2s ease;
+  margin-bottom: 24px;
+}
+.infra-project-v5:last-child {
+  margin-bottom: 0;
+}
+.infra-project-v5:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 32px rgba(0, 50, 160, 0.1);
+}
+.infra-project-main {
+  padding: 28px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.infra-project-tags {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.infra-tag-year {
+  background: var(--color-primary);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+.infra-tag-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(0, 119, 190, 0.08);
+  color: var(--color-info);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+.infra-project-main h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 10px 0;
+  line-height: 1.4;
+}
+.infra-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9375rem;
+  color: var(--color-text-light);
+  margin: 0;
+}
+.infra-location i {
+  color: var(--color-info);
+  font-size: 0.875rem;
+}
+.infra-project-details {
+  padding: 24px 28px;
+  background: #fafbfc;
+}
+.infra-detail-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+.infra-detail-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.infra-detail-label {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+.infra-detail-value {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+.infra-detail-cost .infra-detail-value {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-success);
+}
+.infra-project-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 28px;
+  background: white;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+.infra-source {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+}
+.infra-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: gap 0.2s ease;
+}
+.infra-link:hover {
+  gap: 10px;
+  text-decoration: none;
+}
+@media (max-width: 991px) {.sre-header-v2 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+.infra-detail-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+}
+@media (max-width: 767px) {.infra-project-tags {
+    flex-wrap: wrap;
+  }
+.infra-header-v5 h2 {
+    font-size: 1.375rem;
+  }
+
+}
+@media (max-width: 575px) {.sre-section-v2 {
+    padding: 36px 0 48px;
+  }
+.sre-title-group h2, 
+  .infra-header-v5 h2 {
+    font-size: 1.25rem;
+  }
+.infra-section-v5 {
+    padding: 48px 0;
+  }
+.infra-project-main {
+    padding: 20px;
+  }
+.infra-project-main h3 {
+    font-size: 1.125rem;
+  }
+.infra-project-details {
+    padding: 20px;
+  }
+.infra-project-footer {
+    padding: 14px 20px;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+}
+@keyframes dpwh-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+

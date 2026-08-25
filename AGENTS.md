@@ -37,9 +37,11 @@ Never silently choose one or describe planned work as implemented or verified.
   direct confirmation. Never use placeholder emergency details.
 - Research submissions are evidence inputs, not production data. Preserve provenance,
   rights, retrieval dates, conflicts, and verification state through review and import.
-- Purge inherited Aurora and Solano production facts, branding, routes, caches, links,
-  and unlicensed assets before adding Maddela civic records. Do not describe the site
-  as ready while inherited municipal content remains exposed.
+- Purge inherited Aurora and Solano production facts, branding, caches, links, and
+  unlicensed assets before adding Maddela civic records. Reusable route and interface
+  code may remain only when every fact-bearing interior is replaced with reviewed
+  Maddela data or one honest unavailable state. Do not describe the site as ready while
+  inherited municipal content remains exposed.
 - Preserve `LICENSE` and maintain clear BetterAurora attribution without implying
   endorsement. Use only assets with a documented reuse basis.
 - The site is an information layer. Do not claim to submit transactions, take payments,

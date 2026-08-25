@@ -1,0 +1,189 @@
+.stats-metrics {
+  margin-top: 40px;
+  padding-bottom: 60px;
+  position: relative;
+  z-index: 2;
+}
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.metric-card {
+  background: white;
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: left;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}.metric-value {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.2;
+  margin-bottom: 4px;
+  font-variant-numeric: tabular-nums;
+}
+.metric-label {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+.metric-source {
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+}
+.stats-section {
+  padding: 88px 0 32px;
+}
+.stats-section:nth-child(even) {
+  background: var(--color-bg-alt);
+}
+.section-header-minimal {
+  text-align: left;
+  margin-bottom: 28px;
+}
+.section-header-minimal h2 {
+  font-size: 1.875rem;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+.section-header-minimal p {
+  color: var(--color-text-light);
+  font-size: 1rem;
+  margin: 0;
+}
+.more-barangays {
+  margin-top: 24px;
+}
+.more-barangays summary {
+  cursor: pointer;
+  color: var(--color-primary);
+  font-weight: 500;
+  padding: 12px;
+  text-align: center;
+}@media (max-width: 991px) {.metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+.trends-summary {
+    gap: 16px;
+  }}
+@media (max-width: 575px) {.metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+.metric-card {
+    padding: 20px;
+  }
+.metric-value {
+    font-size: 1.5rem;
+  }
+.stats-section {
+    padding: 48px 0;
+  }
+.section-header-minimal h2 {
+    font-size: 1.5rem;
+  }}
+
+
+/* Data figures */
+.stats-figure {
+  margin: 0 0 var(--spacing-md);
+}
+.chart-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.chart-scroll .chart-svg {
+  min-width: 720px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.stats-figure-caption {
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  max-width: 70ch;
+  margin-top: 12px;
+}
+.chart-note {
+  color: var(--color-text-light);
+  font-size: 0.8125rem;
+}
+.chart-gridline {
+  stroke: rgba(26, 26, 26, 0.08);
+  stroke-width: 1;
+}
+.chart-axis {
+  stroke: rgba(26, 26, 26, 0.25);
+  stroke-width: 1;
+}
+.chart-tick-label {
+  font-size: 12px;
+  fill: var(--color-text-light);
+}
+.chart-line {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.chart-line--muted {
+  opacity: 0.45;
+}
+.chart-line--lead {
+  stroke-width: 3;
+}
+.chart-dot {
+  fill: #ffffff;
+  stroke: var(--color-primary);
+  stroke-width: 2;
+}
+.chart-dot--lead {
+  fill: var(--color-primary);
+}
+.chart-bar {
+  fill: var(--color-primary);
+  fill-opacity: 0.35;
+}
+.chart-bar--lead {
+  fill-opacity: 1;
+}
+.chart-label-date {
+  font-size: 11px;
+  fill: var(--color-text-light);
+}
+.chart-label-value {
+  font-size: 13px;
+  font-weight: 600;
+  fill: var(--color-text);
+}
+.chart-label-num {
+  font-variant-numeric: tabular-nums;
+}
+.chart-annotation {
+  font-size: 12.5px;
+  font-weight: 600;
+  fill: var(--color-primary);
+}
+.chart-refline {
+  stroke: var(--color-text-light);
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+}
+.chart-refline-label {
+  font-size: 11.5px;
+  fill: var(--color-text-light);
+}
+.chart-whisker {
+  stroke: var(--color-text-light);
+  stroke-width: 1.5;
+}
+.chart-swatch {
+  fill: var(--color-primary);
+  fill-opacity: 0.45;
+}
+.chart-swatch--lead {
+  fill-opacity: 1;
+}

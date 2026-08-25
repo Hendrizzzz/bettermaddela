@@ -3,8 +3,10 @@
 ## Status
 
 This document describes the application that exists now, not a planned platform.
-BetterMaddela is a pre-release static civic-information shell. Inherited municipal
-production content, branding, routes, caches, scripts, and assets have been removed.
+BetterMaddela is a pre-release static civic-information site. The upstream interface
+and route compositions are intentionally preserved, while inherited municipal facts,
+branding, links, integrations, caches, and unsupported assets are removed or replaced
+with reviewed Maddela data and honest unavailable states.
 
 ## Active application
 
@@ -42,15 +44,33 @@ boundary. Only a successful verified build output should reach hosting. The gene
 `out` directory contains public files and must never be treated as a private storage
 boundary.
 
-The browser executes the exported application. The current interface uses no remote
-font, analytics, map, API, or third-party script. Linked source documents are separate
-third-party trust boundaries.
+The browser executes the exported application. The interface requests the Inter font
+stylesheet from Google Fonts and the Bootstrap Icons stylesheet from jsDelivr. The
+homepage requests a public model forecast from Open-Meteo and embeds a general-area
+OpenStreetMap view; both are third-party network boundaries and receive ordinary
+request metadata. No third-party script is loaded into BetterMaddela's own document,
+and the site uses no analytics or advertising.
+
+Browser local storage contains the selected `en` or `fil` interface language and a
+short-lived Open-Meteo response cache. The current forecast cache is reused for up to
+30 minutes, with a six-hour degraded fallback when the provider is unavailable. It
+contains forecast values, the technical forecast point, and a fetch time—not user
+submissions or resident records. Linked source documents and the external providers
+above remain separate trust boundaries.
 
 ### Deployment
 
-This repository produces a host-agnostic static export. It does not currently define
-or verify a production hosting provider, live domain, server-side security headers, or
-deployment credentials. Those properties must not be claimed based on a local build.
+This repository produces a host-agnostic static export. The GitHub repository is
+connected to Vercel project `bettermaddela`; `main` deploys to
+`https://bettermaddela.vercel.app`, while other branches and pull requests receive
+preview deployments. The production URL remains a work in progress and must not be
+treated as a completed BetterLGU launch merely because a deployment succeeds.
+
+Vercel's Next.js framework defaults, the existing `package.json` build script, and
+`next.config.mjs` are sufficient; no `vercel.json` override or application environment
+variable is currently required. Deployment credentials remain outside the repository.
+Server-side platform behavior must be verified against the actual deployment rather
+than inferred from a local build.
 
 ## Explicit non-goals
 

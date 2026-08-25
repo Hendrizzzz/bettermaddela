@@ -15,10 +15,32 @@ const idPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const sha256Pattern = /^[a-f0-9]{64}$/;
 const localPathPattern =
   /\b[A-Za-z]:[\\/]|\\\\[^\\\s]+\\[^\s]+|(?<!:)\/\/[A-Za-z0-9._-]+\/[A-Za-z0-9$._-]+|\/(?:Users|home|tmp|private\/tmp|var\/tmp)\//;
-const today = new Date().toISOString().slice(0, 10);
-const allowedSourceTypes = new Set(["webpage", "pdf", "law", "dataset"]);
+const today = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Manila" }).format(new Date());
+const allowedSourceTypes = new Set([
+  "webpage",
+  "pdf",
+  "law",
+  "social-post",
+  "dataset",
+  "procurement-record",
+  "media-file",
+  "permission-record",
+  "direct-confirmation",
+]);
 const allowedSourceStates = new Set(["active", "superseded"]);
-const allowedCadences = new Set(["annually", "manual"]);
+const allowedCadences = new Set([
+  "monthly",
+  "quarterly",
+  "annually",
+  "per-term",
+  "per-document",
+  "manual",
+]);
+const cadenceMaxWindowDays = new Map([
+  ["monthly", 31],
+  ["quarterly", 92],
+  ["annually", 366],
+]);
 const allowedRecordTypes = new Set([
   "municipal-identity",
   "legal-instrument",
@@ -26,6 +48,14 @@ const allowedRecordTypes = new Set([
   "statistic-series",
   "barangay-dataset",
   "data-quality-reconciliation",
+  "history-profile",
+  "official-snapshot",
+  "office-observation",
+  "news-feed",
+  "procurement-register",
+  "community-profile",
+  "weather-config",
+  "transparency-document",
 ]);
 
 function requireText(value, path) {
@@ -89,6 +119,16 @@ function duplicateValues(items) {
   });
 }
 
+function claimPathExists(data, key) {
+  let current = data;
+  for (const segment of key.split(".")) {
+    if (current === null || typeof current !== "object") return false;
+    if (!Object.hasOwn(current, segment)) return false;
+    current = current[segment];
+  }
+  return true;
+}
+
 if (sourceDocument.schemaVersion !== 1) {
   errors.push("sources.json schemaVersion must be 1");
 }
@@ -132,23 +172,37 @@ for (const [index, source] of sources.entries()) {
   }
   if (!allowedSourceTypes.has(source.documentType)) errors.push(`${path}.documentType is not supported`);
 
-  try {
-    const url = new URL(source.url);
-    if (url.protocol !== "https:") errors.push(`${path}.url must use HTTPS`);
-    if (url.username || url.password) errors.push(`${path}.url must not contain credentials`);
-    if (/^(?:www\.)?(?:google|bing)\./i.test(url.hostname)) {
-      errors.push(`${path}.url must not be a search-results URL`);
+  if (source.url === undefined && source.documentType !== "direct-confirmation") {
+    errors.push(`${path}.url is required unless the source is a direct confirmation`);
+  }
+
+  if (source.url !== undefined) {
+    const searchHostDomains = [
+      "google.com", "bing.com", "duckduckgo.com", "yahoo.com", "yandex.com",
+      "baidu.com", "ecosia.org", "mojeek.com", "startpage.com", "brave.com",
+    ];
+    try {
+      const url = new URL(source.url);
+      if (url.protocol !== "https:") errors.push(`${path}.url must use HTTPS`);
+      if (url.username || url.password) errors.push(`${path}.url must not contain credentials`);
+      const hostname = url.hostname.toLowerCase().replace(/^www\./, "");
+      if (searchHostDomains.some((domain) => hostname === domain || hostname.endsWith(`.${domain}`))) {
+        errors.push(`${path}.url must not be a search-results URL`);
+      }
+    } catch {
+      errors.push(`${path}.url is invalid`);
     }
-  } catch {
-    errors.push(`${path}.url is invalid`);
   }
 
   if (source.publishedAt !== undefined) requireDate(source.publishedAt, `${path}.publishedAt`);
   if (source.sha256 !== undefined && !sha256Pattern.test(source.sha256)) {
     errors.push(`${path}.sha256 must be a lowercase 64-character SHA-256 value`);
   }
-  if (source.documentType === "pdf" && !sha256Pattern.test(source.sha256 ?? "")) {
-    errors.push(`${path}.sha256 is required for a PDF evidence source`);
+  if (
+    (source.documentType === "pdf" || source.documentType === "media-file") &&
+    !sha256Pattern.test(source.sha256 ?? "")
+  ) {
+    errors.push(`${path}.sha256 is required for a PDF or media-file evidence source`);
   }
 }
 
@@ -188,6 +242,11 @@ for (const [index, record] of records.entries()) {
         errors.push(`${path}.claimSources is missing the displayed data field: ${field}`);
       }
     }
+    for (const claim of Object.keys(record.claimSources)) {
+      if (!claimPathExists(record.data ?? {}, claim)) {
+        errors.push(`${path}.claimSources references a missing data path: ${claim}`);
+      }
+    }
   }
   if (record.status !== "verified") errors.push(`${path}.status must be verified in production data`);
   requireDate(record.lastVerified, `${path}.lastVerified`);
@@ -202,6 +261,19 @@ for (const [index, record] of records.entries()) {
   }
   if (isValidDate(record.nextReviewOn) && record.nextReviewOn < today) {
     errors.push(`${path}.nextReviewOn has passed and requires reverification`);
+  }
+  const maxWindowDays = cadenceMaxWindowDays.get(record.updateCadence);
+  if (
+    maxWindowDays !== undefined &&
+    isValidDate(record.lastVerified) &&
+    isValidDate(record.nextReviewOn)
+  ) {
+    const windowDays = Math.round(
+      (Date.parse(`${record.nextReviewOn}T00:00:00Z`) - Date.parse(`${record.lastVerified}T00:00:00Z`)) / 86400000,
+    );
+    if (windowDays > maxWindowDays) {
+      errors.push(`${path}.updateCadence ${record.updateCadence} requires nextReviewOn within ${maxWindowDays} days of lastVerified`);
+    }
   }
   if (!allowedCadences.has(record.updateCadence)) errors.push(`${path}.updateCadence is unsupported`);
   requireText(record.owner, `${path}.owner`);

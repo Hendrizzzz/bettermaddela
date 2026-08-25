@@ -1,0 +1,35 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import PageHeader from "@/components/layout/PageHeader";
+
+export const metadata: Metadata = {
+  title: "Sitemap",
+  description: "Navigate BetterMaddela's public civic-information and project pages.",
+};
+
+const sections = [
+  { title: "Main Navigation", links: [["Home", "/"], ["Services", "/services"], ["Government", "/government"], ["Statistics", "/statistics"], ["Legislative", "/legislative"], ["Transparency", "/budget"], ["Contact", "/contact"]] },
+  { title: "Civic Information", links: [["Barangays", "/government#barangays"], ["Barangays of Maddela", "/barangays"], ["Population", "/population"], ["Officials", "/government/officials"], ["Legal History", "/legal-history"], ["Ordinances", "/legislative/ordinance-framework"], ["Resolutions", "/legislative/resolution-framework"], ["Sources", "/sources"]] },
+  { title: "Project", links: [["News", "/news"], ["FAQ", "/faq"], ["Accessibility", "/accessibility"], ["Security", "/security"], ["Privacy", "/privacy"], ["Terms of Use", "/terms"]] },
+] as const;
+
+export default function SitemapPage() {
+  return (
+    <>
+      <PageHeader
+        title="Sitemap"
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Sitemap" }]}
+      />
+      <section className="section">
+        <div className="container">
+          {sections.map((section) => (
+            <div className="sitemap-section-new" key={section.title}>
+              <div className="sitemap-section-header"><h2>{section.title}</h2></div>
+              <div className="sitemap-links-grid">{section.links.map(([label, href]) => <Link href={href} className="sitemap-link-item" key={href}><i className="bi bi-arrow-right" aria-hidden="true" /><span>{label}</span></Link>)}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
+  );
+}

@@ -8,6 +8,7 @@ current task, and the exact files being changed are always required.
 | Product purpose, MVP, or non-goals | `docs/PROJECT_SCOPE.md` | Applicable public behavior and affected source files |
 | Civic research handoff, data modeling, import, or publication | `docs/data/DATA_CONTRACT.md` | Exact submitted evidence; affected content/schema files; source-specific primary material |
 | Branding, routes, content, or inherited-data purge | `docs/PROJECT_SCOPE.md`; affected `src/` and `public/` files | `docs/data/DATA_CONTRACT.md` before adding any civic record; `LICENSE` and attribution material when reuse is involved |
+| Identity, creative direction, or locality-focused design | `research/2026-08-identity-brief-bettergov-aligned.md` (research input, not production data) | `docs/PROJECT_SCOPE.md`; affected `src/` and `public/` files; `docs/data/DATA_CONTRACT.md` before importing any record it proposes |
 | UI, accessibility, navigation, or PWA behavior | `docs/PROJECT_SCOPE.md`; affected UI files and tests | Data contract for factual copy; current accessibility or deployment guidance for the changed surface |
 | Build, dependencies, scripts, or CI | `package.json`; lockfile; affected configuration and workflow files | Security policy and current official version-specific documentation when behavior may have changed |
 | Security, privacy, secrets, or reporting | `SECURITY.md`; affected data flow or workflow | `docs/data/DATA_CONTRACT.md` for evidence or civic data; deployment documentation for an actual deployment boundary |

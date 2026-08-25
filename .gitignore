@@ -4,6 +4,7 @@ dist/
 .next/
 out/
 .lighthouseci/
+tmp/
 *.tsbuildinfo
 *.backup
 *.bak
@@ -14,3 +15,6 @@ out/
 !.env.example
 .local/
 *.local.md
+
+# Local agent session transcripts (never committed)
+session-ses_*.md
