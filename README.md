@@ -32,7 +32,7 @@ publication gates pass.
 
 ## Technical foundation
 
-The active application is a Next.js 15 App Router project written in TypeScript. Bun
+The active application is a Next.js 16 App Router project written in TypeScript. Bun
 manages dependencies and scripts, and production builds use Next.js static export.
 See [the current architecture](docs/architecture/ARCHITECTURE.md) for the implemented
 boundaries and known blockers.
