@@ -111,6 +111,12 @@
   padding: 24px 28px;
   background: #fafbfc;
 }
+/* RecordMeta renders as a direct child of the overflow-hidden card; without
+   its own inset the link sits under the 16px corner curve and gets clipped. */
+.infra-project-v5 > .record-meta {
+  padding: 0 28px;
+  margin: 0 0 20px;
+}
 .infra-detail-row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

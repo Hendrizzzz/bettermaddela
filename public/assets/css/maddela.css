@@ -25,9 +25,10 @@
 .footer-copyright-disclaimer {
   color: rgba(255, 255, 255, 0.72);
 }
-.record-meta a, 
-.source-links a, 
+.record-meta a,
+.source-links a,
 .prose-page a {
+  color: var(--color-primary);
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
