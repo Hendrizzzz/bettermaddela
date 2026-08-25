@@ -53,15 +53,48 @@
   font-size: 1rem;
   margin: 0;
 }
-.more-barangays {
+.more-barangays,
+.stats-more {
   margin-top: 24px;
 }
-.more-barangays summary {
+.more-barangays summary,
+.stats-more summary {
   cursor: pointer;
   color: var(--color-primary);
   font-weight: 500;
   padding: 12px;
   text-align: center;
+}
+.stats-more {
+  background: var(--color-white);
+  border: 1px solid #e8dfc8;
+  border-radius: 14px;
+  padding: 4px 20px;
+}
+.stats-more[open] {
+  padding-bottom: 20px;
+}
+.stats-more summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.stats-more summary::-webkit-details-marker {
+  display: none;
+}
+.stats-more summary::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+  transform: rotate(45deg);
+  transition: transform 160ms ease-out;
+}
+.stats-more[open] summary::after {
+  transform: rotate(225deg);
 }@media (max-width: 991px) {.metrics-grid {
     grid-template-columns: repeat(2, 1fr);
   }

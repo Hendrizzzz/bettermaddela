@@ -133,7 +133,7 @@ const serviceCategories = [
 const homeCopy = {
   en: {
     welcome: "Welcome to BetterMaddela",
-    introduction: "Access civic information and public-source records for the people of Maddela, Quirino.",
+    introduction: "Civic information and public-source records for Maddela, Quirino.",
     browseServices: "Browse Services",
     contactInformation: "Contact Information",
     serviceCategories: "Service Categories",
@@ -174,7 +174,7 @@ const homeCopy = {
   },
   fil: {
     welcome: "Maligayang pagdating sa BetterMaddela",
-    introduction: "Mag-access ng impormasyong sibiko at mga rekord mula sa pampublikong sanggunian para sa mga mamamayan ng Maddela, Quirino.",
+    introduction: "Impormasyong sibiko at mga rekord mula sa pampublikong sanggunian para sa Maddela, Quirino.",
     browseServices: "Tingnan ang mga Serbisyo",
     contactInformation: "Impormasyon sa Pakikipag-ugnayan",
     serviceCategories: "Mga Kategorya ng Serbisyo",

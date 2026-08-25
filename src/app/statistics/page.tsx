@@ -87,11 +87,9 @@ const latestRate = growthSeries[growthSeries.length - 1].percent;
 const latestRateShare = Math.round((latestRate / earliestRate) * 100);
 
 const personsPerHousehold = (households.data.householdPopulation / households.data.numberOfHouseholds).toFixed(1);
-const institutionalOneIn = Math.round(households.data.totalPopulation / households.data.institutionalPopulation);
 
 const povertyLatest = poverty.data.latest;
 const povertyFirst = poverty.data.series[0];
-const povertyDrop = (povertyFirst.estimatePercent - povertyLatest.estimatePercent).toFixed(2);
 const povertyCiWidth = (povertyLatest.upperBoundPercent - povertyLatest.lowerBoundPercent).toFixed(2);
 
 const rankedBarangays = [...barangays.data.barangays].sort((a, b) => b.population - a.population);
@@ -139,9 +137,6 @@ export default function StatisticsPage() {
             <div className="metric-card"><div className="metric-value">{fmt(households.data.institutionalPopulation)}</div><div className="metric-label">Institutional residents</div><div className="metric-source">Derived difference from the census totals</div></div>
             <div className="metric-card"><div className="metric-value metric-value--computed">{personsPerHousehold}</div><div className="metric-label">Persons per household</div><div className="metric-source">Computed: {fmt(households.data.householdPopulation)} residents ÷ {fmt(households.data.numberOfHouseholds)} households</div></div>
           </div>
-          <p className="table-note">
-            Institutional residents ({fmt(households.data.institutionalPopulation)}) are about 1 in every {fmt(institutionalOneIn)} people counted — too small a share for a meaningful chart, so this profile stays as counts.
-          </p>
           <RecordMeta record={households} />
         </div>
       </section>
@@ -157,19 +152,23 @@ export default function StatisticsPage() {
               <CensusChart />
             </div>
             <figcaption className="stats-figure-caption">
-              <strong>Maddela grew by {fmt(totalGain)} residents over 24 years — and the pace is visibly easing.</strong>{" "}
-              The census count rose from {fmt(firstCensus.population)} ({monthYear(firstCensus.referenceDate)}) to {fmt(lastCensus.population)} ({monthYear(lastCensus.referenceDate)}), a {totalGrowthPercent}% increase <span className="chart-note">(computed)</span>.{" "}
-              The latest interval added {fmt(latestGain)} people{smallestGain === latestGain ? " — smaller than any previous census interval" : ""} <span className="chart-note">(computed)</span>.
+              <strong>Maddela grew by {fmt(totalGain)} residents over 24 years — and the pace is visibly easing.</strong>
             </figcaption>
           </figure>
-          <div className="table-wrap">
-            <table>
-              <caption>Dated census counts for Maddela</caption>
-              <thead><tr><th scope="col">Census reference date</th><th scope="col" className="numeric">Population</th></tr></thead>
-              <tbody>{historySeries.map((item) => <tr key={item.referenceDate}><th scope="row"><time dateTime={item.referenceDate}>{item.referenceDate}</time></th><td className="numeric">{fmt(item.population)}</td></tr>)}</tbody>
-            </table>
-          </div>
-          <RecordMeta record={history} />
+          <details className="stats-more">
+            <summary>About this data</summary>
+            <p className="table-note">
+              The census count rose from {fmt(firstCensus.population)} ({monthYear(firstCensus.referenceDate)}) to {fmt(lastCensus.population)} ({monthYear(lastCensus.referenceDate)}), a {totalGrowthPercent}% increase (computed). The latest interval added {fmt(latestGain)} people{smallestGain === latestGain ? " — smaller than any previous census interval" : ""} (computed).
+            </p>
+            <div className="table-wrap">
+              <table>
+                <caption>Dated census counts for Maddela</caption>
+                <thead><tr><th scope="col">Census reference date</th><th scope="col" className="numeric">Population</th></tr></thead>
+                <tbody>{historySeries.map((item) => <tr key={item.referenceDate}><th scope="row"><time dateTime={item.referenceDate}>{item.referenceDate}</time></th><td className="numeric">{fmt(item.population)}</td></tr>)}</tbody>
+              </table>
+            </div>
+            <RecordMeta record={history} />
+          </details>
         </div>
       </section>
 
@@ -184,19 +183,23 @@ export default function StatisticsPage() {
               <GrowthChart />
             </div>
             <figcaption className="stats-figure-caption">
-              <strong>Growth peaked at {growthSeries[1].percent}% in {growthSeries[1].period} and has fallen in every published period since.</strong>{" "}
-              The latest rate, {latestRate}% for {growthSeries[growthSeries.length - 1].period}, is about {latestRateShare}% of the {earliestRate}% pace of {growthSeries[0].period} <span className="chart-note">(computed)</span>.{" "}
-              Some periods overlap (they share a start year), so read them as separate published averages, not consecutive steps.
+              <strong>Growth peaked at {growthSeries[1].percent}% in {growthSeries[1].period} and has fallen in every published period since.</strong>
             </figcaption>
           </figure>
-          <div className="table-wrap">
-            <table>
-              <caption>PSA annual population growth rates</caption>
-              <thead><tr><th scope="col">Period</th><th scope="col" className="numeric">Rate</th></tr></thead>
-              <tbody>{growthSeries.map((item) => <tr key={item.period}><th scope="row">{item.period}</th><td className="numeric">{item.percent.toFixed(2)}%</td></tr>)}</tbody>
-            </table>
-          </div>
-          <RecordMeta record={growth} />
+          <details className="stats-more">
+            <summary>About this data</summary>
+            <p className="table-note">
+              The latest rate, {latestRate}% for {growthSeries[growthSeries.length - 1].period}, is about {latestRateShare}% of the {earliestRate}% pace of {growthSeries[0].period} (computed). Some periods overlap (they share a start year), so read them as separate published averages, not consecutive steps.
+            </p>
+            <div className="table-wrap">
+              <table>
+                <caption>PSA annual population growth rates</caption>
+                <thead><tr><th scope="col">Period</th><th scope="col" className="numeric">Rate</th></tr></thead>
+                <tbody>{growthSeries.map((item) => <tr key={item.period}><th scope="row">{item.period}</th><td className="numeric">{item.percent.toFixed(2)}%</td></tr>)}</tbody>
+              </table>
+            </div>
+            <RecordMeta record={growth} />
+          </details>
         </div>
       </section>
 
@@ -211,19 +214,23 @@ export default function StatisticsPage() {
               <PovertyChart />
             </div>
             <figcaption className="stats-figure-caption">
-              <strong>Estimated poverty incidence declined from {povertyFirst.estimatePercent.toFixed(2)}% in {povertyFirst.year} to {povertyLatest.estimatePercent.toFixed(2)}% in {povertyLatest.year} — {povertyDrop} points lower.</strong>{" "}
-              These are PSA small-area model estimates, not headcounts. Only the {povertyLatest.year} reading publishes uncertainty: a {povertyLatest.confidenceLevelPercent}% confidence interval spanning {povertyLatest.lowerBoundPercent.toFixed(2)}%–{povertyLatest.upperBoundPercent.toFixed(2)}%, nearly {Math.round(Number(povertyCiWidth))} points wide <span className="chart-note">(computed)</span>.{" "}
-              Earlier years carry no published interval, so this record does not support calling the decline statistically significant — read it as direction, not proof.
+              <strong>Estimated poverty incidence declined from {povertyFirst.estimatePercent.toFixed(2)}% in {povertyFirst.year} to {povertyLatest.estimatePercent.toFixed(2)}% in {povertyLatest.year}.</strong>
             </figcaption>
           </figure>
-          <div className="table-wrap">
-            <table>
-              <caption>Model-based poverty incidence estimates</caption>
-              <thead><tr><th scope="col">Estimate year</th><th scope="col" className="numeric">Estimated incidence</th></tr></thead>
-              <tbody>{poverty.data.series.map((item) => <tr key={item.year}><th scope="row">{item.year}</th><td className="numeric">{item.estimatePercent.toFixed(2)}%</td></tr>)}</tbody>
-            </table>
-          </div>
-          <RecordMeta record={poverty} />
+          <details className="stats-more">
+            <summary>About this data</summary>
+            <p className="table-note">
+              These are PSA small-area model estimates, not headcounts. Only the {povertyLatest.year} reading publishes uncertainty: a {povertyLatest.confidenceLevelPercent}% confidence interval spanning {povertyLatest.lowerBoundPercent.toFixed(2)}%–{povertyLatest.upperBoundPercent.toFixed(2)}%, nearly {Math.round(Number(povertyCiWidth))} points wide (computed). Earlier years carry no published interval, so this record does not support calling the decline statistically significant — read it as direction, not proof.
+            </p>
+            <div className="table-wrap">
+              <table>
+                <caption>Model-based poverty incidence estimates</caption>
+                <thead><tr><th scope="col">Estimate year</th><th scope="col" className="numeric">Estimated incidence</th></tr></thead>
+                <tbody>{poverty.data.series.map((item) => <tr key={item.year}><th scope="row">{item.year}</th><td className="numeric">{item.estimatePercent.toFixed(2)}%</td></tr>)}</tbody>
+              </table>
+            </div>
+            <RecordMeta record={poverty} />
+          </details>
         </div>
       </section>
 
@@ -238,13 +245,14 @@ export default function StatisticsPage() {
               <BarangayChart />
             </div>
             <figcaption className="stats-figure-caption">
-              <strong>Half of Maddela&apos;s barangays have {fmt(medianPopulation)} residents or fewer.</strong>{" "}
-              They range from {smallestBarangay.name}&apos;s {fmt(smallestBarangay.population)} to {largestBarangay.name}&apos;s {fmt(largestBarangay.population)} — a {barangaySpread}× spread <span className="chart-note">(computed)</span>.{" "}
-              Only the {urbanBarangays.length === 2 ? "two urban-classified barangays, both Poblaciones" : `${urbanBarangays.length} urban-classified barangays`}, hold about {urbanShare}% of the municipal population <span className="chart-note">(computed)</span>.
+              <strong>Half of Maddela&apos;s barangays have {fmt(medianPopulation)} residents or fewer.</strong>
             </figcaption>
           </figure>
-          <details className="more-barangays">
-            <summary>View all {barangays.data.barangayCount} barangays as a table</summary>
+          <details className="stats-more">
+            <summary>About this data</summary>
+            <p className="table-note">
+              They range from {smallestBarangay.name}&apos;s {fmt(smallestBarangay.population)} to {largestBarangay.name}&apos;s {fmt(largestBarangay.population)} — a {barangaySpread}× spread (computed). Only the {urbanBarangays.length === 2 ? "two urban-classified barangays, both Poblaciones" : `${urbanBarangays.length} urban-classified barangays`}, hold about {urbanShare}% of the municipal population (computed).
+            </p>
             <div className="table-wrap">
               <table>
                 <caption>Population by barangay, <time dateTime={barangays.data.populationReferenceDate}>{formatLongDate(barangays.data.populationReferenceDate)}</time></caption>
@@ -252,8 +260,8 @@ export default function StatisticsPage() {
                 <tbody>{rankedBarangays.map((item) => <tr key={item.name}><th scope="row">{item.name}</th><td>{item.classification}</td><td className="numeric">{fmt(item.population)}</td></tr>)}</tbody>
               </table>
             </div>
+            <RecordMeta record={barangays} />
           </details>
-          <RecordMeta record={barangays} />
         </div>
       </section>
     </>

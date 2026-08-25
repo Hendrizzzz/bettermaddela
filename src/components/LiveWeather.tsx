@@ -317,7 +317,7 @@ export function LiveWeather({ config }: { config: WeatherConfigData }) {
 
   if (status === "loading") {
     return (
-      <div className="weather-loading" aria-busy="true" aria-label={text.loading}>
+      <div className="weather-loading" role="status" aria-label={text.loading} aria-busy="true">
         <div className="weather-current">
           <div className="skeleton-circle" aria-hidden="true" />
           <div className="weather-current-info" aria-hidden="true">
