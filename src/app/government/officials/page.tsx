@@ -85,10 +85,10 @@ export default function OfficialsPage() {
 
       <section className="section">
         <div className="container">
-          <div className="coverage-panel government-officials-notice">
-            <h2>Vice mayor and council roster not published</h2>
-            <p>A complete current Sangguniang Bayan record—including applicable ex-officio seats, vacancies, succession, and appointment instruments—was not established. BetterMaddela therefore does not present a partial list as the current council.</p>
-          </div>
+          <p className="unpublished-note">
+            No complete current Sangguniang Bayan record — ex-officio seats and vacancies included — was established,
+            so no partial list is presented as the current council.
+          </p>
           <RecordMetaGroup records={[
             { label: "leadership observations", record: leadershipRecord },
             { label: "office-head observations", record: officeHeadsRecord },

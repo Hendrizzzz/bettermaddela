@@ -165,14 +165,14 @@
   align-items: flex-start;
   gap: 14px;
   padding: 20px;
-  border: 1px solid rgba(34, 0, 0, 0.06);
+  border: 1px solid #e8dfc8;
   border-radius: 12px;
   background: var(--color-bg);
   transition: all 0.3s ease;
 }
 .history-card:hover {
   border-color: var(--color-primary);
-  box-shadow: 0 4px 16px rgba(34, 50, 160, 0.1);
+  box-shadow: var(--shadow-md);
   transform: translateY(-2px);
 }.history-card-content h3 {
   margin: 0 0 6px;
@@ -517,7 +517,7 @@
 /* ===== Barangays directory & profile (appended) ===== */
 .brgy-section-heading {
   margin: var(--spacing-xl) 0 var(--spacing-md);
-  font-size: 1.5rem;
+  font-size: 1.875rem;
   color: var(--ink);
 }
 .brgy-summary {
@@ -568,14 +568,14 @@
   height: 100%;
   padding: var(--spacing-md);
   border: 1px solid #e8dfc8;
-  border-radius: var(--border-radius);
+  border-radius: 12px;
   background: #ffffff;
   color: var(--ink);
   text-decoration: none;
 }
 .brgy-card:hover {
   border-color: var(--brand);
-  box-shadow: 0 6px 18px rgba(34, 50, 160, 0.12);
+  box-shadow: var(--shadow-md);
 }
 @media (prefers-reduced-motion: no-preference) {
   .brgy-card {
@@ -747,6 +747,53 @@
   .brgy-summary {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
+
+/* ===== Phase 3 polish: shared quiet unavailable-state note ===== */
+.unpublished-note {
+  max-width: 46rem;
+  margin: var(--spacing-lg) 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+.unpublished-note a {
+  color: var(--brand);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+/* ===== Phase 3 polish: unified section-heading scale =====
+   Normalizes heading classes defined in statistics.css and
+   transparency-v2.css toward the dominant 1.875rem treatment. */
+.section-header-minimal h2,
+.infra-header-v5 h2,
+.sre-title-group h2 {
+  font-size: 1.875rem;
+}
+@media (max-width: 575px) {
+  .section-header-minimal h2,
+  .infra-header-v5 h2,
+  .sre-title-group h2,
+  .hotlines-title h2,
+  .brgy-section-heading {
+    font-size: 1.5rem;
+  }
+}
+
+/* ===== Phase 3 polish: unified card language ===== */
+.home-stats-v2-grid > .home-stat-card,
+.home-stats-v2-grid > div > .home-stat-card {
+  height: 100%;
+}
+.metric-card {
+  border-radius: 12px;
+  border-color: #e8dfc8;
+}
+.infra-project-v5 {
+  border-radius: 12px;
+}
+.infra-project-v5:hover {
+  box-shadow: var(--shadow-md);
 }
 @media (max-width: 480px) {
   .brgy-summary {

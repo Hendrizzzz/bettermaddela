@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { LiveWeather, type WeatherConfigData } from "@/components/LiveWeather";
+import { Reveal } from "@/components/motion/Reveal";
 import { VerifiedSearch } from "@/components/VerifiedSearch";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getRecord } from "@/data/civic";
@@ -317,32 +318,40 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="home-stats-v2-grid">
-            <Link href="/statistics" className="home-stat-card">
-              <div className="home-stat-card-content">
-                <span className="home-stat-card-value">
-                  {population.data.population.toLocaleString("en-PH")}
-                </span>
-                <span className="home-stat-card-label">{copy.population}</span>
-              </div>
-            </Link>
-            <Link href="/statistics" className="home-stat-card">
-              <div className="home-stat-card-content">
-                <span className="home-stat-card-value">{barangays.data.barangayCount}</span>
-                <span className="home-stat-card-label">{copy.barangays}</span>
-              </div>
-            </Link>
-            <Link href="/statistics" className="home-stat-card">
-              <div className="home-stat-card-content">
-                <span className="home-stat-card-value">{identity.data.incomeClass} {copy.incomeClassSuffix}</span>
-                <span className="home-stat-card-label">{copy.municipality}</span>
-              </div>
-            </Link>
-            <Link href="/statistics" className="home-stat-card">
-              <div className="home-stat-card-content">
-                <span className="home-stat-card-value">{households.data.numberOfHouseholds.toLocaleString("en-PH")}</span>
-                <span className="home-stat-card-label">{copy.households}</span>
-              </div>
-            </Link>
+            <Reveal delay={0}>
+              <Link href="/statistics" className="home-stat-card">
+                <div className="home-stat-card-content">
+                  <span className="home-stat-card-value">
+                    {population.data.population.toLocaleString("en-PH")}
+                  </span>
+                  <span className="home-stat-card-label">{copy.population}</span>
+                </div>
+              </Link>
+            </Reveal>
+            <Reveal delay={0.08}>
+              <Link href="/statistics" className="home-stat-card">
+                <div className="home-stat-card-content">
+                  <span className="home-stat-card-value">{barangays.data.barangayCount}</span>
+                  <span className="home-stat-card-label">{copy.barangays}</span>
+                </div>
+              </Link>
+            </Reveal>
+            <Reveal delay={0.16}>
+              <Link href="/statistics" className="home-stat-card">
+                <div className="home-stat-card-content">
+                  <span className="home-stat-card-value">{identity.data.incomeClass} {copy.incomeClassSuffix}</span>
+                  <span className="home-stat-card-label">{copy.municipality}</span>
+                </div>
+              </Link>
+            </Reveal>
+            <Reveal delay={0.24}>
+              <Link href="/statistics" className="home-stat-card">
+                <div className="home-stat-card-content">
+                  <span className="home-stat-card-value">{households.data.numberOfHouseholds.toLocaleString("en-PH")}</span>
+                  <span className="home-stat-card-label">{copy.households}</span>
+                </div>
+              </Link>
+            </Reveal>
           </div>
         </div>
       </section>

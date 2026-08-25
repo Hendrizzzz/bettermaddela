@@ -48,15 +48,12 @@ export default function SourcesPage() {
               </article>
             ))}
           </div>
-        </div>
-      </section>
 
-      <section className="section bg-alt">
-        <div className="container">
-          <div className="coverage-panel">
-            <div><h2>What remains unavailable</h2></div>
-            <p>Complete elected and barangay rosters, a general municipal contact directory, emergency contacts, detailed service procedures, complete local-legislation archives, the enacted municipal budget, a complete procurement history, and uncleared media remain unpublished until their specific evidence gates pass.</p>
-          </div>
+          <p className="unpublished-note">
+            Still unpublished pending their evidence gates: complete elected and barangay rosters, a municipal contact
+            directory, emergency contacts, detailed service procedures, local-legislation archives, the enacted
+            municipal budget, procurement history, and uncleared media.
+          </p>
         </div>
       </section>
     </>

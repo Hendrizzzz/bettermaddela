@@ -54,15 +54,10 @@ export default function ContactPage() {
               </div>
             </a>
           </div>
-        </div>
-      </section>
-
-      <section className="section bg-alt">
-        <div className="container">
-          <div className="coverage-panel">
-            <h2>Municipal contact directory not published</h2>
-            <p>A current official municipal office directory and public office schedule could not be independently verified. BetterMaddela is not a transaction, complaint, appointment, or emergency channel.</p>
-          </div>
+          <p className="unpublished-note">
+            No municipal contact directory or office schedule is published here — none has passed independent
+            verification yet, and BetterMaddela is not a transaction, complaint, appointment, or emergency channel.
+          </p>
         </div>
       </section>
     </>

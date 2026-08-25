@@ -54,12 +54,9 @@ export default async function ServiceCategoryPage({
                 <li key={topic}>{topic}</li>
               ))}
             </ul>
-            <aside className="coverage-panel coverage-panel--stacked" aria-labelledby="service-status-heading">
-              <h2 id="service-status-heading">Procedure details pending</h2>
-              <p>Detailed requirements, fees, and processing time are not yet verified. Please confirm directly with the responsible office.</p>
-              <Link href="/services" className="btn btn-secondary">
-                <i className="bi bi-arrow-left" aria-hidden="true" /> Back to all services
-              </Link>
+            <aside className="unpublished-note">
+              Requirements, fees, and processing time are not yet verified — confirm directly with the responsible
+              office. <Link href="/services">Back to all services</Link>
             </aside>
           </div>
         </div>
