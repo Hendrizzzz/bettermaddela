@@ -74,7 +74,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(0, 50, 160, 0.08);
+  background: rgba(34, 29, 20, 0.07);
   color: var(--color-primary);
   padding: 5px 12px;
   border-radius: 50px;

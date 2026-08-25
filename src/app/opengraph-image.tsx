@@ -11,10 +11,12 @@ export const size = {
 };
 export const contentType = "image/png";
 
-const BRAND_BLUE = "#0032a0";
-const BRAND_DARK = "#002170";
-const LIMESTONE = "#f7f5f0";
-const INK = "#1a1a1a";
+// "Golden Hour" identity world - see src/app/icon.svg direction contract.
+// Harvest gold and dawn light from the identity brief's verified anchors.
+const PAPER = "#fffcf4";
+const INK = "#221d14";
+const AMBER = "#b97e14";
+const GOLD = "#f5b301";
 
 export default function OpengraphImage() {
   return new ImageResponse(
@@ -26,7 +28,7 @@ export default function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          backgroundColor: LIMESTONE,
+          backgroundColor: PAPER,
           position: "relative",
           padding: "72px",
         }}
@@ -35,25 +37,24 @@ export default function OpengraphImage() {
           style={{
             display: "flex",
             alignItems: "center",
-            gap: 16,
-            marginBottom: 28,
+            gap: 18,
+            marginBottom: 30,
           }}
         >
-          <div
-            style={{
-              width: 18,
-              height: 18,
-              backgroundColor: "#f77f00",
-              display: "flex",
-            }}
-          />
+          <svg width="46" height="46" viewBox="0 0 64 64" style={{ display: "flex" }}>
+            <rect x="8" y="8" width="11" height="48" rx="5.5" fill={INK} />
+            <rect x="45" y="8" width="11" height="48" rx="5.5" fill={INK} />
+            <circle cx="32" cy="30" r="13" fill={GOLD} />
+            <rect x="21" y="50" width="10" height="5" rx="2.5" fill={GOLD} />
+            <rect x="33" y="50" width="10" height="5" rx="2.5" fill={GOLD} opacity="0.55" />
+          </svg>
           <div
             style={{
               display: "flex",
               fontSize: 28,
               fontWeight: 600,
               letterSpacing: 6,
-              color: BRAND_BLUE,
+              color: AMBER,
               textTransform: "uppercase",
             }}
           >
@@ -70,13 +71,13 @@ export default function OpengraphImage() {
           }}
         >
           <span>Better</span>
-          <span style={{ color: BRAND_BLUE }}>Maddela</span>
+          <span style={{ color: AMBER }}>Maddela</span>
         </div>
         <div
           style={{
             display: "flex",
             fontSize: 38,
-            color: "rgba(26, 26, 26, 0.78)",
+            color: "rgba(34, 29, 20, 0.75)",
             marginBottom: 200,
           }}
         >
@@ -94,14 +95,17 @@ export default function OpengraphImage() {
             display: "flex",
           }}
         >
+          {/* Dawn terraces: descending field steps catching first light. */}
+          <rect x="0" y="150" width="1200" height="110" fill={INK} />
           <polygon
-            fill={BRAND_BLUE}
-            opacity="0.45"
-            points="0,140 130,70 270,120 420,40 580,115 730,60 890,135 1050,85 1200,150 1200,260 0,260"
+            fill={GOLD}
+            opacity="0.85"
+            points="0,150 240,110 480,158 720,106 960,160 1200,120 1200,150 0,150"
           />
           <polygon
-            fill={BRAND_DARK}
-            points="0,205 160,130 310,185 490,105 650,175 810,125 970,195 1130,145 1200,180 1200,260 0,260"
+            fill={GOLD}
+            opacity="0.4"
+            points="0,150 240,110 480,158 720,106 960,160 1200,120 1200,176 0,176"
           />
         </svg>
         <div
@@ -111,7 +115,7 @@ export default function OpengraphImage() {
             bottom: 44,
             display: "flex",
             fontSize: 24,
-            color: LIMESTONE,
+            color: "rgba(255, 252, 244, 0.92)",
           }}
         >
           Independent project - not a government website
