@@ -72,72 +72,63 @@ const serviceCategories = [
     href: "/services/certificates",
     icon: "bi-file-earmark-text-fill",
     title: { en: "Certificates", fil: "Mga Sertipiko" },
-    description: { en: "Civil registry and certificate information", fil: "Impormasyon sa civil registry at mga sertipiko" },
   },
   {
     href: "/services/business",
     icon: "bi-shop",
     title: { en: "Business Permits", fil: "Mga Permit sa Negosyo" },
-    description: { en: "Business-related service information", fil: "Impormasyon sa mga serbisyong pangnegosyo" },
   },
   {
     href: "/services/tax-payments",
     icon: "bi-cash-coin",
     title: { en: "Tax Payments", fil: "Pagbabayad ng Buwis" },
-    description: { en: "Local tax and payment information", fil: "Impormasyon sa lokal na buwis at pagbabayad" },
   },
   {
     href: "/services/social-services",
     icon: "bi-people-fill",
     title: { en: "Social Services", fil: "Serbisyong Panlipunan" },
-    description: { en: "Social assistance program information", fil: "Impormasyon sa mga programang panlipunang tulong" },
   },
   {
     href: "/services/health",
     icon: "bi-heart-pulse-fill",
     title: { en: "Health Services", fil: "Serbisyong Pangkalusugan" },
-    description: { en: "Municipal health service information", fil: "Impormasyon sa serbisyong pangkalusugan ng munisipalidad" },
   },
   {
     href: "/services/agriculture",
     icon: "bi-tree-fill",
     title: { en: "Agriculture", fil: "Agrikultura" },
-    description: { en: "Agriculture and livelihood information", fil: "Impormasyon sa agrikultura at kabuhayan" },
   },
   {
     href: "/services/infrastructure",
     icon: "bi-building-fill-gear",
     title: { en: "Infrastructure", fil: "Imprastraktura" },
-    description: { en: "Public-works and infrastructure information", fil: "Impormasyon sa imprastruktura at mga proyektong pampubliko" },
   },
   {
     href: "/services/education",
     icon: "bi-mortarboard-fill",
     title: { en: "Education", fil: "Edukasyon" },
-    description: { en: "Education and scholarship information", fil: "Impormasyon sa edukasyon at mga iskolarship" },
   },
   {
     href: "/services/public-safety",
     icon: "bi-shield-fill-check",
     title: { en: "Public Safety", fil: "Kaligtasang Pampubliko" },
-    description: { en: "Safety and preparedness information", fil: "Impormasyon sa kaligtasan at paghahanda" },
   },
   {
     href: "/services/environment",
     icon: "bi-globe-americas",
     title: { en: "Environment", fil: "Kapaligiran" },
-    description: { en: "Environment and natural-resources information", fil: "Impormasyon sa kapaligiran at likas na yaman" },
   },
 ];
 
 const homeCopy = {
   en: {
+    heroKicker: "Maddela, Quirino",
     welcome: "Welcome to BetterMaddela",
     introduction: "Civic information and public-source records for Maddela, Quirino.",
     browseServices: "Browse Services",
     contactInformation: "Contact Information",
     serviceCategories: "Service Categories",
-    serviceNotice: "Browse service categories. Detailed requirements, fees, and processing times are not yet verified. Please confirm directly with the responsible office.",
+    serviceNotice: "Requirements and fees not yet verified — confirm with the office.",
     viewAllServices: "View All Services",
     browseDirectory: "Browse the service directory",
     atAGlance: "Maddela at a Glance",
@@ -151,6 +142,7 @@ const homeCopy = {
     viewHistory: "View national legal history",
     sources: "Sources",
     historySourceNote: "Local tradition and documented legal milestones are identified separately.",
+    readMore: "Read more",
     updates: "Latest Updates",
     viewUpdates: "View All",
     leadership: "Municipal Leadership",
@@ -159,11 +151,11 @@ const homeCopy = {
     contact: "Contact Information",
     viewAll: "View All",
     sourceDirectory: "Source Directory",
-    sourceDirectoryNote: "Read the evidence and review dates behind published information.",
+    sourceDirectoryNote: "Evidence and review dates behind every figure.",
     corrections: "Contact & Corrections",
-    correctionsNote: "Report an error or learn how this independent project handles corrections.",
+    correctionsNote: "Report an error or suggest a correction.",
     serviceInformation: "Service Information",
-    serviceInformationNote: "Browse available categories and the limits of currently verified details.",
+    serviceInformationNote: "Browse categories — verified details remain limited.",
     localWeatherContext: "Local station context",
     separateForecast: "Forecast values are provided separately by Open-Meteo.",
     mapTitle: "General map view around Maddela, Quirino",
@@ -173,12 +165,13 @@ const homeCopy = {
     maddelaToday: "Maddela today",
   },
   fil: {
+    heroKicker: "Maddela, Quirino",
     welcome: "Maligayang pagdating sa BetterMaddela",
     introduction: "Impormasyong sibiko at mga rekord mula sa pampublikong sanggunian para sa Maddela, Quirino.",
     browseServices: "Tingnan ang mga Serbisyo",
     contactInformation: "Impormasyon sa Pakikipag-ugnayan",
     serviceCategories: "Mga Kategorya ng Serbisyo",
-    serviceNotice: "Tingnan ang mga kategorya ng serbisyo. Hindi pa beripikado ang detalyadong requirements, bayarin, at oras ng pagproseso. Direktang kumpirmahin ang mga ito sa kinauukulang tanggapan.",
+    serviceNotice: "Hindi pa beripikado ang mga requirements at bayarin — kumpirmahin sa tanggapan.",
     viewAllServices: "Tingnan ang Lahat ng Serbisyo",
     browseDirectory: "Tingnan ang direktoryo ng serbisyo",
     atAGlance: "Maddela sa Isang Tingin",
@@ -192,6 +185,7 @@ const homeCopy = {
     viewHistory: "Tingnan ang pambansang legal na kasaysayan",
     sources: "Mga Sanggunian",
     historySourceNote: "Magkahiwalay na tinutukoy ang lokal na salaysay at dokumentadong legal na pangyayari.",
+    readMore: "Basahin pa",
     updates: "Pinakabagong Update",
     viewUpdates: "Tingnan Lahat",
     leadership: "Pamunuan ng Munisipalidad",
@@ -200,11 +194,11 @@ const homeCopy = {
     contact: "Impormasyon sa Pakikipag-ugnayan",
     viewAll: "Tingnan Lahat",
     sourceDirectory: "Direktoryo ng mga Sanggunian",
-    sourceDirectoryNote: "Basahin ang ebidensya at mga petsa ng pagsusuri sa likod ng impormasyong inilathala.",
+    sourceDirectoryNote: "Ebidensya at petsa ng pagsusuri sa likod ng bawat bilang.",
     corrections: "Ugnayan at Pagwawasto",
-    correctionsNote: "Mag-ulat ng mali o alamin kung paano pinangangasiwaan ng malayang proyektong ito ang pagwawasto.",
+    correctionsNote: "Mag-ulat ng mali o imungkahi ang pagwawasto.",
     serviceInformation: "Impormasyon sa Serbisyo",
-    serviceInformationNote: "Tingnan ang mga kategorya at hangganan ng kasalukuyang beripikadong detalye.",
+    serviceInformationNote: "Tingnan ang mga kategorya — limitado pa ang beripikadong detalye.",
     localWeatherContext: "Lokal na konteksto ng istasyon",
     separateForecast: "Hiwalay na ibinibigay ng Open-Meteo ang mga forecast value.",
     mapTitle: "Pangkalahatang mapa sa paligid ng Maddela, Quirino",
@@ -265,6 +259,7 @@ export default function HomePage() {
         <div className="container">
           <div className="home-hero-v2-inner">
             <div className="home-hero-v2-text">
+              <p className="home-hero-kicker">{copy.heroKicker}</p>
               <h1>{copy.welcome}</h1>
               <p>{copy.introduction}</p>
               <div className="home-hero-v2-actions">
@@ -296,8 +291,8 @@ export default function HomePage() {
             {serviceCategories.map((service) => (
               <Link key={service.href} href={service.href} className="home-service-card">
                 <div className="home-service-content">
+                  <i className={`bi ${service.icon} home-service-icon`} aria-hidden="true"></i>
                   <h3>{service.title[language]}</h3>
-                  <p>{service.description[language]}</p>
                 </div>
                 <i className="bi bi-arrow-right home-service-arrow" aria-hidden="true"></i>
               </Link>
@@ -416,7 +411,11 @@ export default function HomePage() {
                   <div className="timeline-marker" />
                   <div className="timeline-content" lang="en">
                     <span className="timeline-year">{section.period}</span>
-                    <p><strong>{section.title}.</strong> {section.text}</p>
+                    <p><strong>{section.title}</strong></p>
+                    <details className="timeline-more">
+                      <summary>{copy.readMore}<span className="sr-only"> — {section.title}</span></summary>
+                      <p>{section.text}</p>
+                    </details>
                   </div>
                 </div>
               ))}
@@ -427,14 +426,20 @@ export default function HomePage() {
                 <div className="history-card" key={theme.label} lang="en">
                   <div className="history-card-content">
                     <h3>{theme.label}</h3>
-                    <p>{theme.description}</p>
+                    <details className="history-card-more">
+                      <summary>{copy.readMore}<span className="sr-only"> — {theme.label}</span></summary>
+                      <p>{theme.description}</p>
+                    </details>
                   </div>
                 </div>
               ))}
               <div className="history-card history-card--overview" lang="en">
                 <div className="history-card-content">
                   <h3>{copy.maddelaToday}</h3>
-                  <p>{community.data.summary}</p>
+                  <details className="history-card-more">
+                    <summary>{copy.readMore}<span className="sr-only"> — {copy.maddelaToday}</span></summary>
+                    <p>{community.data.summary}</p>
+                  </details>
                 </div>
               </div>
             </div>
@@ -460,7 +465,7 @@ export default function HomePage() {
                     <time className="home-news-date" dateTime={item.publishedAt}>{formatDate(item.publishedAt, language)}</time>
                   </div>
                   <h3><a href={item.canonicalUrl} target="_blank" rel="noreferrer">{item.headline}</a></h3>
-                  <p>{item.summary}</p>
+                  <p className="home-news-summary">{item.summary}</p>
                   <p className="home-news-publisher">{item.publisher}</p>
                 </article>
               ))}
