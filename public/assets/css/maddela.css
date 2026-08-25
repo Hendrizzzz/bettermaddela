@@ -138,6 +138,21 @@
 .timeline-content p strong {
   color: var(--color-primary);
 }
+.timeline-more,
+.history-card-more {
+  margin-top: 8px;
+}
+.timeline-more summary,
+.history-card-more summary {
+  cursor: pointer;
+  color: var(--brand);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+.timeline-more[open] summary,
+.history-card-more[open] summary {
+  margin-bottom: 6px;
+}
 .history-summary {
   position: sticky;
   top: 100px;

@@ -888,6 +888,15 @@ h6 {
   color: var(--color-text-light);
   margin: 0;
 }
+.home-service-icon {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+.home-service-card--all .home-service-icon {
+  color: white;
+}
 .home-service-arrow {
   color: var(--color-text-light);
   opacity: 0;
@@ -971,6 +980,12 @@ h6 {
   color: var(--color-text-light);
   margin: 0;
   line-height: 1.5;
+}
+.home-news-summary {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
 }
 .home-leadership-section {
   background: var(--color-bg-alt);
@@ -1064,6 +1079,14 @@ h6 {
   margin-bottom: var(--spacing-sm);
   line-height: 1.2;
   letter-spacing: -0.02em;
+}
+.home-hero-kicker {
+  margin: 0 0 var(--spacing-sm);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
 }
 .home-hero-v2-text p {
   font-size: 1.125rem;
@@ -1627,10 +1650,12 @@ a.a11y-contact-item:hover i {
 }
 .home-stat-card-value {
   display: block;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
   color: var(--color-primary);
-  line-height: 1.2;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
   transition: color 0.3s ease;
 }
 .home-stat-card:hover .home-stat-card-value {
@@ -1650,6 +1675,9 @@ a.a11y-contact-item:hover i {
 }
 @media (max-width: 576px) {.home-stats-v2-grid {
     grid-template-columns: 1fr;
+  }
+.home-stat-card-value {
+    font-size: 2rem;
   }
 .home-stats-v2-header {
     flex-direction: column;
