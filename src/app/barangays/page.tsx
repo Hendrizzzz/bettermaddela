@@ -42,6 +42,7 @@ const urbanPopulation = barangays
   .filter((entry) => entry.classification === "Urban")
   .reduce((sum, entry) => sum + entry.population, 0);
 const urbanSharePercent = totalPopulation > 0 ? (urbanPopulation / totalPopulation) * 100 : 0;
+const ruralSharePercent = 100 - urbanSharePercent;
 
 const rankedBarangays = [...barangays]
   .sort((a, b) => b.population - a.population || a.name.localeCompare(b.name))
@@ -50,6 +51,9 @@ const rankedBarangays = [...barangays]
     rank: index + 1,
     sharePercent: totalPopulation > 0 ? (entry.population / totalPopulation) * 100 : 0,
   }));
+
+// Rank #1 holds the largest share; every micro-bar scales against it.
+const maxSharePercent = rankedBarangays.length > 0 ? rankedBarangays[0].sharePercent : 0;
 
 const shareFormat = new Intl.NumberFormat("en-PH", { maximumFractionDigits: 1 });
 
@@ -77,28 +81,52 @@ export default function BarangaysPage() {
               <dt className="brgy-summary-label">Total population</dt>
               <dd className="brgy-summary-value">{totalPopulation.toLocaleString("en-PH")}</dd>
               <dd className="brgy-summary-note">
-                Computed from the PSA barangay dataset · reference date{" "}
+                PSA dataset ·{" "}
                 <time dateTime={data.populationReferenceDate}>{formatLongDate(data.populationReferenceDate)}</time>
               </dd>
             </div>
             <div className="brgy-summary-item">
               <dt className="brgy-summary-label">Rural barangays</dt>
               <dd className="brgy-summary-value">{ruralCount.toLocaleString("en-PH")}</dd>
-              <dd className="brgy-summary-note">Computed from the PSA barangay dataset</dd>
+              <dd className="brgy-summary-note">PSA dataset</dd>
             </div>
             <div className="brgy-summary-item">
               <dt className="brgy-summary-label">Urban barangays</dt>
               <dd className="brgy-summary-value">{urbanCount.toLocaleString("en-PH")}</dd>
-              <dd className="brgy-summary-note">Computed from the PSA barangay dataset</dd>
+              <dd className="brgy-summary-note">PSA dataset</dd>
             </div>
             <div className="brgy-summary-item">
               <dt className="brgy-summary-label">Urban share of population</dt>
               <dd className="brgy-summary-value">{shareFormat.format(urbanSharePercent)}%</dd>
-              <dd className="brgy-summary-note">Computed: urban residents ÷ {totalPopulation.toLocaleString("en-PH")} total</dd>
+              <dd className="brgy-summary-note">Computed · PSA dataset</dd>
             </div>
           </dl>
 
+          <figure className="brgy-split-card">
+            <div
+              className="brgy-split-bar"
+              role="img"
+              aria-label={`Municipal population split, computed from the reviewed PSA dataset: Urban ${shareFormat.format(urbanSharePercent)} percent (${urbanCount.toLocaleString("en-PH")} of ${data.barangayCount.toLocaleString("en-PH")} barangays), Rural ${shareFormat.format(ruralSharePercent)} percent.`}
+            >
+              <div className="brgy-split-seg brgy-split-seg--urban" style={{ width: `${urbanSharePercent}%` }} />
+              <div className="brgy-split-seg brgy-split-seg--rural" style={{ width: `${ruralSharePercent}%` }}>
+                {ruralSharePercent >= 25 && (
+                  <span className="brgy-split-seg-label">Rural {shareFormat.format(ruralSharePercent)}%</span>
+                )}
+              </div>
+            </div>
+            <figcaption className="brgy-split-key">
+              <span className="brgy-split-swatch brgy-split-swatch--urban" aria-hidden="true" />
+              Urban {shareFormat.format(urbanSharePercent)}%
+              <span className="brgy-split-dot" aria-hidden="true">
+                ·
+              </span>
+              {urbanCount.toLocaleString("en-PH")} of {data.barangayCount.toLocaleString("en-PH")} barangays
+            </figcaption>
+          </figure>
+
           <h2 className="brgy-section-heading">All {data.barangayCount} barangays by population</h2>
+          <p className="brgy-method-note">Ranked by PSA census count · ties alphabetical</p>
           <ol className="brgy-grid">
             {rankedBarangays.map((entry) => (
               <li key={entry.psgcCode}>
@@ -131,23 +159,21 @@ export default function BarangaysPage() {
                       <dd>{shareFormat.format(entry.sharePercent)}%</dd>
                     </div>
                   </dl>
+                  <div className="brgy-microbar" aria-hidden="true">
+                    <div
+                      className="brgy-microbar-fill"
+                      style={{ width: `${maxSharePercent > 0 ? (entry.sharePercent / maxSharePercent) * 100 : 0}%` }}
+                    />
+                  </div>
                 </Link>
               </li>
             ))}
           </ol>
-          <p className="table-note brgy-list-note">
-            Ranking and shares computed at render from the reviewed PSA dataset; equal populations would be ordered alphabetically.
-          </p>
 
-          <div className="coverage-panel brgy-coverage">
-            <h2>Profiles publish the PSA dataset only</h2>
-            <p>
-              Each barangay profile currently includes only the reviewed PSA population and classification
-              dataset. Barangay contacts, projects, facilities, and history have not passed this project&apos;s
-              verification gate and are therefore not published. BetterMaddela does not present unverified
-              material to fill those gaps.
-            </p>
-          </div>
+          <p className="brgy-unpublished-note">
+            Barangay profiles publish the reviewed PSA dataset only — contacts, projects, facilities, and history
+            remain unpublished pending verification.
+          </p>
 
           <RecordMeta record={barangayRecord} />
         </div>
