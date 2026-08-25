@@ -108,7 +108,7 @@
   font-size: 0.875rem;
 }
 .infra-project-details {
-  padding: 24px 28px;
+  padding: 18px 28px;
   background: #f7efd8;
 }
 /* RecordMeta renders as a direct child of the overflow-hidden card; without
@@ -119,8 +119,8 @@
 }
 .infra-detail-row {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 12px 20px;
 }
 .infra-detail-col {
   display: flex;
@@ -173,6 +173,104 @@
   gap: 10px;
   text-decoration: none;
 }
+/* Collapsed FDPP disclosure entries: summary is the visible header row */
+.disclosure-summary {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  cursor: pointer;
+  list-style: none;
+  border-bottom: 1px solid rgba(34, 0, 0, 0.06);
+}
+.disclosure-summary::-webkit-details-marker {
+  display: none;
+}
+.disclosure-summary h3 {
+  margin-bottom: 0;
+}
+.disclosure-summary:hover .disclosure-toggle,
+.disclosure-summary:hover .disclosure-headline-value {
+  color: var(--color-secondary);
+}
+.disclosure-summary-title {
+  min-width: 0;
+}
+.disclosure-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  color: var(--color-primary);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.disclosure-chevron {
+  font-size: 0.75rem;
+  transition: transform 0.2s ease;
+}
+.disclosure-card[open] .disclosure-chevron {
+  transform: rotate(90deg);
+}
+.disclosure-card[open] .disclosure-summary {
+  margin-bottom: 6px;
+}
+.disclosure-headline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  flex-shrink: 0;
+}
+.disclosure-headline-value {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-success);
+  white-space: nowrap;
+}
+/* Line-item bar list inside an expanded entry */
+.disclosure-bars {
+  margin: 14px 0;
+}
+.disclosure-bar-list {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+.disclosure-bar-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+.disclosure-bar-name {
+  font-size: 0.875rem;
+  color: var(--color-text);
+}
+.disclosure-bar-amount {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.disclosure-bar-track {
+  display: block;
+  height: 8px;
+  margin-top: 4px;
+  background: #e8dfc8;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.disclosure-bar-fill {
+  display: block;
+  height: 100%;
+  background: #f5b301;
+  border-radius: inherit;
+}
 @media (max-width: 991px) {.sre-header-v2 {
     flex-direction: column;
     align-items: flex-start;
@@ -215,6 +313,14 @@
     flex-direction: column;
     gap: 12px;
     text-align: center;
+  }
+.disclosure-summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+.disclosure-headline {
+    align-items: flex-start;
   }
 
 }
