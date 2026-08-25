@@ -14,7 +14,7 @@
   border-radius: 16px;
   padding: 28px 24px;
   text-align: left;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(34, 0, 0, 0.06);
 }.metric-value {
   font-size: 2.25rem;
   font-weight: 700;
@@ -111,11 +111,11 @@
   font-size: 0.8125rem;
 }
 .chart-gridline {
-  stroke: rgba(26, 26, 26, 0.08);
+  stroke: rgba(34, 26, 26, 0.08);
   stroke-width: 1;
 }
 .chart-axis {
-  stroke: rgba(26, 26, 26, 0.25);
+  stroke: rgba(34, 26, 26, 0.25);
   stroke-width: 1;
 }
 .chart-tick-label {
