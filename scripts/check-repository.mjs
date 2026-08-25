@@ -26,6 +26,11 @@ const repositoryFiles = execFileSync(
   .filter((path) => path && existsSync(path));
 const localOnlyPattern =
   /(^|\/)(?:\.local|\.vscode)(?:\/|$)|\.local\.md$/i;
+// Vendored third-party agent tooling (see .agents/skills/VENDORED.md) is upstream
+// code governed by its own source repositories; this policy scan targets
+// repository-authored content. Upstream regex literals reliably false-positive
+// here (JS escapes such as "\\b..." resemble UNC/drive paths).
+const vendoredToolingPrefixes = [".agents/"];
 const absoluteLocalPathPatterns = [
   /\b[A-Za-z]:[\\/][^\s"'`<>]+/g,
   /(?:^|[\s"'`(])\\\\[^\\\s"'`<>]+\\[^\s"'`<>]+/gm,
@@ -62,6 +67,7 @@ function checkPolicy() {
   for (const path of repositoryFiles) {
     if (localOnlyPattern.test(path)) errors.push(`local-only path is included: ${path}`);
     if (path === "scripts/check-repository.mjs") continue;
+    if (vendoredToolingPrefixes.some((prefix) => path.startsWith(prefix))) continue;
     const content = readText(path);
     if (content === null) continue;
 
