@@ -3,8 +3,10 @@
    Applies only to src/app/legal-history/page.tsx (.hst-* classes) and
    src/components/history/HistoryTimeline.tsx.
    Tokens come from style.css :root; literal colors use the approved
-   palette only. Mobile-first: single-column rail on the left; desktop
-   widens the cards and typography.
+   palette only. Evidence kinds are carried by typography (small caps,
+   weight, color) and small square markers — never pill shapes
+   (UX_PRINCIPLES hard rule 1). Mobile-first: single-column rail on the
+   left; desktop widens the cards and typography.
    ========================================================================== */
 
 /* Hero -------------------------------------------------------------------- */
@@ -15,18 +17,19 @@
   padding: 56px 0 48px;
 }
 
+/* Kicker: small-caps letterspaced line on a hairline gold left rule. */
 .hst-kicker {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   margin: 0 0 18px;
-  background: rgba(255, 252, 244, 0.12);
-  color: #fffcf4;
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  border-radius: 999px;
-  padding: 6px 14px;
+  padding-left: 12px;
+  border-left: 2px solid #f5b301;
+  color: rgba(255, 252, 244, 0.85);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .hst-hero h1 {
@@ -51,21 +54,22 @@
 .hst-facts {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 8px 18px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+/* Hero facts: plain small-caps items separated by hairline rules. */
 .hst-fact {
-  background: rgba(255, 252, 244, 0.14);
-  border: 1px solid rgba(255, 252, 244, 0.35);
+  padding-left: 10px;
+  border-left: 1px solid rgba(255, 252, 244, 0.35);
   color: #fffcf4;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   white-space: nowrap;
-  border-radius: 999px;
-  padding: 6px 14px;
 }
 
 /* Section shell ------------------------------------------------------------ */
@@ -105,51 +109,92 @@
   color: #6b6353;
 }
 
-
-/* Evidence chips ------------------------------------------------------------ */
+/* Evidence kind markers ------------------------------------------------------ */
+/* The label is typography: small caps, weight, and color carry the kind.
+   A small square marker fronts each label; its fill encodes the kind the
+   way the old chip fills did. No pill shapes anywhere. */
 
 .hst-chip {
-  display: inline-block;
-  font-size: 0.78rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   white-space: nowrap;
-  border-radius: 999px;
-  padding: 4px 12px;
+  color: #3a2f1b;
 }
 
-/* Documented evidence: solid gold. */
+.hst-chip::before {
+  content: "";
+  flex: none;
+  width: 9px;
+  height: 9px;
+  background: #6b6353;
+}
+
+/* Documented evidence: solid gold marker, deep amber label. */
 .hst-chip--gold {
-  background: #f5b301;
-  color: #171208;
-}
-
-/* Institutional descriptions: soft straw. */
-.hst-chip--straw {
-  background: #f7efd8;
   color: #7a540d;
 }
 
-/* Weaker, attributed accounts: outlined only. */
+.hst-chip--gold::before {
+  background: #f5b301;
+}
+
+/* Institutional descriptions: straw marker with a hairline amber edge. */
+.hst-chip--straw {
+  color: #7a540d;
+}
+
+.hst-chip--straw::before {
+  background: #f7efd8;
+  box-shadow: inset 0 0 0 1px #8a5e0f;
+}
+
+/* Weaker, attributed accounts: hollow slate marker, brown label. */
 .hst-chip--outline {
-  background: transparent;
   color: #3a2f1b;
+}
+
+.hst-chip--outline::before {
+  background: transparent;
   box-shadow: inset 0 0 0 2px #6b6353;
 }
 
-/* Honest gap marker: quiet and recessive. */
+/* Honest gap marker: recessive hollow marker, muted label. */
 .hst-chip--quiet {
-  background: #fffcf4;
   color: #6b6353;
+}
+
+.hst-chip--quiet::before {
+  background: transparent;
   box-shadow: inset 0 0 0 1px #e8dfc8;
 }
 
-/* Legend (how to read the chips) -------------------------------------------- */
+/* Legend (how to read the markers) ------------------------------------------- */
 
 .hst-legend {
   list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.hst-legend-item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-text);
+}
 
 /* Timeline rail and nodes (mobile-first, line on the left) ------------------- */
+/* The rail itself is a decorative bar; its fully-rounded ends are allowed. */
 
 .hst-frame {
   position: relative;
@@ -226,6 +271,13 @@
   box-shadow: 0 2px 10px rgba(34, 29, 20, 0.06);
 }
 
+/* Honest gap state: a quiet panel with a dashed left border, no shadow.
+   Never a pill — the dashed rule marks the missing evidence. */
+.hst-item--gap .hst-card {
+  border-left: 4px dashed #e8dfc8;
+  box-shadow: none;
+}
+
 .hst-item--tradition .hst-card {
   border-left-color: #6b6353;
 }
@@ -234,9 +286,45 @@
   border-left-color: #e8dfc8;
 }
 
-.hst-item--gap .hst-card {
+.hst-card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin-bottom: 2px;
+}
+
+.hst-period {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: #221d14;
+}
+
+.hst-period time {
+  color: inherit;
+}
+
+.hst-heading {
+  margin: 2px 0 10px;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #3a2f1b;
+}
+
+.hst-gap-text {
+  margin: 0;
+  color: #6b6353;
+}
 
 /* Details (depth on demand) -------------------------------------------------- */
+/* Toggle is a quiet rectangular control, not a pill. */
 
 .hst-details-summary {
   display: inline-flex;
@@ -246,8 +334,8 @@
   list-style: none;
   background: transparent;
   border: 1px solid #e8dfc8;
-  border-radius: 999px;
-  padding: 7px 15px;
+  border-radius: 6px;
+  padding: 7px 14px;
   font-size: 0.88rem;
   font-weight: 600;
   color: var(--color-primary);
@@ -311,8 +399,35 @@
   color: #6b6353;
 }
 
-.hst-instrument .hst-chips {
+.hst-chips {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 10px;
+  padding: 0;
+}
+
+.hst-exact-title {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #7a540d;
+}
+
+.hst-instrument p {
+  margin: 0 0 10px;
+  max-width: 62ch;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.hst-source-link a {
+  font-weight: 600;
+  color: var(--color-primary);
+}
 
 /* Epilogue: community today --------------------------------------------------- */
 
@@ -432,91 +547,3 @@
     padding: 28px 32px;
   }
 }
-
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 8px 0 10px;
-  padding: 0;
-}
-
-.hst-exact-title {
-  margin: 0 0 10px;
-  font-family: var(--font-display);
-  font-size: 0.95rem;
-  font-weight: 700;
-  line-height: 1.45;
-  color: #7a540d;
-}
-
-.hst-instrument p {
-  margin: 0 0 10px;
-  max-width: 62ch;
-  line-height: 1.6;
-  color: var(--color-text);
-}
-
-.hst-source-link a {
-  font-weight: 600;
-  color: var(--color-primary);
-}
-
-  background: #ffffff;
-  border-style: dashed;
-  border-left: 1px dashed #e8dfc8;
-  box-shadow: none;
-}
-
-.hst-card-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 6px 12px;
-  margin-bottom: 2px;
-}
-
-.hst-period {
-  margin: 0;
-  font-family: var(--font-display);
-  font-size: 1.45rem;
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
-  color: #221d14;
-}
-
-.hst-period time {
-  color: inherit;
-}
-
-.hst-heading {
-  margin: 2px 0 10px;
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  font-weight: 700;
-  line-height: 1.35;
-  color: #3a2f1b;
-}
-
-.hst-gap-text {
-  margin: 0;
-  color: #6b6353;
-}
-
-  margin: 14px 0 0;
-  padding: 0;
-  display: grid;
-  gap: 10px;
-}
-
-.hst-legend-item {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px 10px;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: var(--color-text);
-}
-

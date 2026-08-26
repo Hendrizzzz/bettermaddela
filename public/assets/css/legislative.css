@@ -74,12 +74,15 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(34, 29, 20, 0.07);
+  background: none;
   color: var(--color-primary);
-  padding: 5px 12px;
-  border-radius: 50px;
+  padding: 0 0 0 10px;
+  border-left: 2px solid #f5b301;
+  border-radius: 0;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   margin-bottom: 10px;
 }
 .leg-info-header h2 {
