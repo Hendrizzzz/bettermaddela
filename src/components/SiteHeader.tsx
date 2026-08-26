@@ -146,6 +146,7 @@ export function SiteHeader() {
               </ul>
             </li>
             <li><Link href="/budget" className={pathname.startsWith("/budget") ? "active" : ""}>{t("nav-transparency")}</Link></li>
+            <li><Link href="/projects" className={pathname.startsWith("/projects") ? "active" : ""}>Projects</Link></li>
             <li><Link href="/contact" className={pathname.startsWith("/contact") ? "active" : ""}>{t("nav-contact")}</Link></li>
           </ul>
         </nav>

@@ -3052,6 +3052,250 @@
       "owner": "BetterMaddela budget and finance reviewer",
       "effectiveFrom": "2025-12-31",
       "notes": "Corrected relative to the research handoff during independent review: certificate number 02-2023-09-266 is present in this filing; Date Issued 2026-03-11 added; posting-period description corrected to the live portal row. Zero-filled amortization rows conflict internally with monthly-payment terms and nonzero cumulative interest; values are reproduced as labeled, flagged rather than reconciled. If displayed together with the CY2024 filing, show both with their own as-of dates; never combine."
+    },
+    {
+      "id": "nia-lusod-inip-close-conduit",
+      "type": "procurement-register",
+      "label": "Lusod Integrated National Irrigation Project — close-conduit package (NIA Region II)",
+      "data": {
+        "projectName": "Lusod Integrated National Irrigation Project",
+        "category": "National irrigation project",
+        "componentPackage": "Construction of Close Conduit at Sta. 3+574.68 – Sta. 4+600",
+        "location": "Maddela, Quirino; related land-acquisition areas reported in Dipantan (Nagtipunan), Abbag (Maddela) and Dipintin (Maddela)",
+        "implementingAgency": "National Irrigation Administration — Region II, through the Quirino Irrigation Management Office (NIA-QIMO)",
+        "referenceCodes": "NCB-RO2-QUI01-26 (original ITB); NCB-RO2-QUI01R-26 (re-bid); supplemental/bid bulletin #04-2026",
+        "amountLabel": "Approved Budget for the Contract (ABC)",
+        "amount": 62645314.3,
+        "amountNote": "Bidding budget as printed on the ITB postings; not a contract price.",
+        "stage": "Notice of Award posted July 1, 2026 for the close-conduit package",
+        "stageAsOf": "2026-07-01",
+        "contextNotes": "Pre-construction conferences were held June 16–18, 2026 for CY 2026 packages including Lusod ('contractors may now proceed with project mobilization based on the approved implementation schedules'); land acquisition and resettlement planning was ongoing as of March 18, 2026.",
+        "canonicalUrl": "https://region2.nia.gov.ph/content/contract-construction-close-conduit-sta357468-sta-460000-lusod-integrated-national-0",
+        "limitations": "An NOA proves award only — not commencement, delivery or completion. No contractor is published (the NOA PDF has no extractable text), and no fund source, overall INIP cost, construction schedule or physical progress percentage appears in the retrieved postings. The source's NOA title spells 'Madella' [sic]."
+      },
+      "sourceIds": [
+        "nia-r2-lusod-inip-noa",
+        "nia-r2-lusod-inip-itb-rebid",
+        "nia-r2-lusod-preconstruction",
+        "nia-r2-lusod-larp"
+      ],
+      "claimSources": {
+        "projectName": ["nia-r2-lusod-inip-noa"],
+        "category": ["nia-r2-lusod-inip-noa", "nia-r2-lusod-inip-itb-rebid"],
+        "componentPackage": ["nia-r2-lusod-inip-noa", "nia-r2-lusod-inip-itb-rebid"],
+        "location": ["nia-r2-lusod-larp"],
+        "implementingAgency": ["nia-r2-lusod-preconstruction"],
+        "referenceCodes": ["nia-r2-lusod-inip-itb-rebid"],
+        "amountLabel": ["nia-r2-lusod-inip-itb-rebid"],
+        "amount": ["nia-r2-lusod-inip-itb-rebid"],
+        "amountNote": ["nia-r2-lusod-inip-itb-rebid"],
+        "stage": ["nia-r2-lusod-inip-noa"],
+        "stageAsOf": ["nia-r2-lusod-inip-noa"],
+        "contextNotes": ["nia-r2-lusod-preconstruction", "nia-r2-lusod-larp"],
+        "canonicalUrl": ["nia-r2-lusod-inip-noa"],
+        "limitations": ["nia-r2-lusod-inip-noa", "nia-r2-lusod-inip-itb-rebid", "nia-r2-lusod-preconstruction", "nia-r2-lusod-larp"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-26",
+      "acceptedBy": "bettermaddela-review-2026-08-26-projects-a",
+      "acceptedAt": "2026-08-26T14:05:00+08:00",
+      "updateCadence": "quarterly",
+      "nextReviewOn": "2026-11-24",
+      "owner": "BetterMaddela projects board editor",
+      "notes": "Desk import from research/2026-08-projects-evidence.md (evidence retrieved from the cited NIA Region II pages on 2026-08-26 by the research preparer; the importer performed no independent re-fetch). Requires explicit owner approval before merge. Evidence grades procurement/awarding HIGH, anything beyond award MEDIUM-LOW."
+    },
+    {
+      "id": "nia-solar-pump-14-unit-multi-site",
+      "type": "procurement-register",
+      "label": "14-unit solar-powered pump irrigation package, multi-municipality incl. Maddela (NIA Region II)",
+      "data": {
+        "projectName": "Construction of Fourteen (14) units 15HP Solar Powered Pump with AI Satellite-assisted Monitoring System, Aglipay, Cabarroguis, Diffun, Maddela & Saguday, Quirino and Enchague [sic], Isabela",
+        "category": "Solar-powered irrigation infrastructure",
+        "location": "Municipalities named only — Aglipay, Cabarroguis, Diffun, Maddela and Saguday (Quirino), Enchague [sic] (Isabela); per-unit site breakdown within Maddela is not stated",
+        "implementingAgency": "NIA Region II",
+        "referenceCode": "NCB-RO2-QUI02-26",
+        "amountLabel": "Approved Budget for the Contract (ABC)",
+        "amount": 132220450.79,
+        "amountNote": "Printed on the posting with spaces as '132, 220, 450.79'; bidding budget, not a contract price.",
+        "stage": "Invitation to Bid posted June 30, 2026 — bids due July 20, 2026, 9:30 AM; status Open as posted",
+        "stageAsOf": "2026-06-30",
+        "outcomeCheck": "Outcome unverified: no matching Notice of Award was present on page 1 of NIA R2's Notice of Award listing as of 2026-08-26; deeper listing pages were not enumerated.",
+        "canonicalUrl": "https://region2.nia.gov.ph/content/construction-fourteen-14-units-15hp-solar-powered-pump-ai-satellite-assisted-monitoring",
+        "limitations": "Procurement-stage facts rest on a single official posting (MEDIUM-HIGH confidence); all other details are LOW confidence or absent. Fund source, contractor, per-unit Maddela locations and any award outcome are not established by the retrieved sources."
+      },
+      "sourceIds": ["nia-r2-solar-pump-itb"],
+      "claimSources": {
+        "projectName": ["nia-r2-solar-pump-itb"],
+        "category": ["nia-r2-solar-pump-itb"],
+        "location": ["nia-r2-solar-pump-itb"],
+        "implementingAgency": ["nia-r2-solar-pump-itb"],
+        "referenceCode": ["nia-r2-solar-pump-itb"],
+        "amountLabel": ["nia-r2-solar-pump-itb"],
+        "amount": ["nia-r2-solar-pump-itb"],
+        "amountNote": ["nia-r2-solar-pump-itb"],
+        "stage": ["nia-r2-solar-pump-itb"],
+        "stageAsOf": ["nia-r2-solar-pump-itb"],
+        "outcomeCheck": ["nia-r2-solar-pump-itb"],
+        "canonicalUrl": ["nia-r2-solar-pump-itb"],
+        "limitations": ["nia-r2-solar-pump-itb"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-26",
+      "acceptedBy": "bettermaddela-review-2026-08-26-projects-a",
+      "acceptedAt": "2026-08-26T14:10:00+08:00",
+      "updateCadence": "quarterly",
+      "nextReviewOn": "2026-11-24",
+      "owner": "BetterMaddela projects board editor",
+      "notes": "Desk import from research/2026-08-projects-evidence.md (retrieved 2026-08-26). Requires explicit owner approval before merge. The bid outcome must be treated as unverified until an award or failure notice is read on an official page."
+    },
+    {
+      "id": "nia-balligui-spip",
+      "type": "procurement-register",
+      "label": "Balligui Solar Pump Irrigation Project — completed and turned over February 17, 2022 (NIA Region II)",
+      "data": {
+        "projectName": "Balligui Solar Pump Irrigation Project (SPIP)",
+        "category": "Solar pump irrigation system (solar pump system, pump sump, water tanks, appurtenant structures)",
+        "locationConflict": "Municipality attribution is source-conflicted: the article's title and first paragraph place it in the Municipality of Maddela; a later paragraph states 'situated at Barangay Balligui, Diffun, Quirino.' A separate 2025 Provincial Government bid notice places Balligui in Maddela. Not resolved here.",
+        "implementingAgency": "NIA Region II through Quirino IMO",
+        "contractor": "JMD-68 Builders (named in the NIA article)",
+        "fundSource": "Establishment of Groundwater Pump Irrigation Project (EGPIP), General Appropriations Act (GAA) 2021",
+        "amountLabel": "Total project allocation",
+        "amount": 3000000,
+        "schedule": "Execution started April 30, 2021; completed January 19, 2022 (as stated in the article)",
+        "stage": "Inaugurated and turned over to the Balligui Irrigators Association on February 17, 2022",
+        "stageAsOf": "2022-02-17",
+        "serviceArea": "Potential service area 6 hectares; 9 farmer-beneficiaries; water source Nagtim-og Creek (as stated)",
+        "canonicalUrl": "https://region2.nia.gov.ph/content/nia-turns-over-first-solar-pump-irrigation-project-maddela-quirino",
+        "limitations": "The 2022 NIA article is the sole source retrieved; nothing later was found about the system's condition or operation. Municipality attribution is conflicted across official sources."
+      },
+      "sourceIds": ["nia-r2-balligui-spip-turnover"],
+      "claimSources": {
+        "projectName": ["nia-r2-balligui-spip-turnover"],
+        "category": ["nia-r2-balligui-spip-turnover"],
+        "locationConflict": ["nia-r2-balligui-spip-turnover"],
+        "implementingAgency": ["nia-r2-balligui-spip-turnover"],
+        "contractor": ["nia-r2-balligui-spip-turnover"],
+        "fundSource": ["nia-r2-balligui-spip-turnover"],
+        "amountLabel": ["nia-r2-balligui-spip-turnover"],
+        "amount": ["nia-r2-balligui-spip-turnover"],
+        "schedule": ["nia-r2-balligui-spip-turnover"],
+        "stage": ["nia-r2-balligui-spip-turnover"],
+        "stageAsOf": ["nia-r2-balligui-spip-turnover"],
+        "serviceArea": ["nia-r2-balligui-spip-turnover"],
+        "canonicalUrl": ["nia-r2-balligui-spip-turnover"],
+        "limitations": ["nia-r2-balligui-spip-turnover"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-26",
+      "acceptedBy": "bettermaddela-review-2026-08-26-projects-a",
+      "acceptedAt": "2026-08-26T14:15:00+08:00",
+      "updateCadence": "quarterly",
+      "nextReviewOn": "2026-11-24",
+      "owner": "BetterMaddela projects board editor",
+      "notes": "Desk import from research/2026-08-projects-evidence.md (retrieved 2026-08-26). Requires explicit owner approval before merge. 'Completed and turned over' is stated by the single cited article as of February 17, 2022; it is not a current-condition claim."
+    },
+    {
+      "id": "dar-nia-carpic-cabaruan-cis",
+      "type": "procurement-register",
+      "label": "CARP-IC communal irrigation system, Cabaruan — turned over October 29, 2021 (DAR Quirino with NIA)",
+      "data": {
+        "projectName": "CARP-IC irrigation project — Communal Irrigation System (CIS) at Cabaruan (formal project name not given in the posting)",
+        "category": "Communal irrigation system",
+        "location": "Barangay Cabaruan, Maddela",
+        "implementingAgency": "Department of Agrarian Reform (DAR) Quirino, with NIA and the irrigators' association",
+        "turnoverTo": "Dumalata Irrigators' Association",
+        "stage": "Turned over October 29, 2021",
+        "stageAsOf": "2021-10-29",
+        "canonicalUrl": "https://region2.nia.gov.ph/content/ia-and-dar-turns-over-carp-ic-irrigation-project-quirino",
+        "limitations": "Contractor, fund source and amount are not stated in the retrieved summary. The headline and snippet were verified on the NIA page listing; the full article body was not independently inspected in the 2026-08 session. Historical item only — it does not describe a current build."
+      },
+      "sourceIds": ["nia-r2-carpic-cabaruan-turnover"],
+      "claimSources": {
+        "projectName": ["nia-r2-carpic-cabaruan-turnover"],
+        "category": ["nia-r2-carpic-cabaruan-turnover"],
+        "location": ["nia-r2-carpic-cabaruan-turnover"],
+        "implementingAgency": ["nia-r2-carpic-cabaruan-turnover"],
+        "turnoverTo": ["nia-r2-carpic-cabaruan-turnover"],
+        "stage": ["nia-r2-carpic-cabaruan-turnover"],
+        "stageAsOf": ["nia-r2-carpic-cabaruan-turnover"],
+        "canonicalUrl": ["nia-r2-carpic-cabaruan-turnover"],
+        "limitations": ["nia-r2-carpic-cabaruan-turnover"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-26",
+      "acceptedBy": "bettermaddela-review-2026-08-26-projects-a",
+      "acceptedAt": "2026-08-26T14:20:00+08:00",
+      "updateCadence": "quarterly",
+      "nextReviewOn": "2026-11-24",
+      "owner": "BetterMaddela projects board editor",
+      "notes": "Desk import from research/2026-08-projects-evidence.md (retrieval 2026-08-26; evidence grades this item MEDIUM because the full article body was not fetched). Requires explicit owner approval before merge."
+    },
+    {
+      "id": "quirino-bac-maddela-notices-2025",
+      "type": "procurement-register",
+      "label": "Provincial bid notices naming Maddela barangays — titles only, details unavailable at source (Provincial Government of Quirino, 2025)",
+      "data": {
+        "summary": "Six bid notices naming Maddela were posted on the Quirino provincial bids board between April 30 and September 26, 2025. Post bodies currently error out at the source, so only titles and posting dates are verifiable.",
+        "items": [
+          {
+            "title": "Improvement/Concreting of Farm to Market Road (FTMR), Buenavista, Maddela, Quirino",
+            "location": "Brgy. Buenavista, Maddela",
+            "postedAt": "2025-04-30"
+          },
+          {
+            "title": "Improvement/Concreting of Farm to Market Road (FTMR), Dipintin, Maddela, Quirino",
+            "location": "Brgy. Dipintin, Maddela",
+            "postedAt": "2025-04-30"
+          },
+          {
+            "title": "Improvement/Concreting of Farm to Market Road (FTMR), Dumabato Sur, Maddela, Quirino",
+            "location": "Brgy. Dumabato Sur, Maddela",
+            "postedAt": "2025-04-30"
+          },
+          {
+            "title": "Improvement/Concreting of Farm to Market Road (FTMR), Cabaruan, Maddela, Quirino",
+            "location": "Brgy. Cabaruan, Maddela",
+            "postedAt": "2025-04-30"
+          },
+          {
+            "title": "Construction of Water System at Balligui, Maddela, Quirino, Quirino",
+            "location": "Brgy. Balligui, Maddela (as titled; note the separate Balligui SPIP municipality conflict)",
+            "postedAt": "2025-09-05"
+          },
+          {
+            "title": "Construction/Completion of Multi-Purpose Building, Abbag, Maddela, Quirino",
+            "location": "Brgy. Abbag, Maddela",
+            "postedAt": "2025-09-26"
+          }
+        ],
+        "stage": "Bid notice posted on the dates shown; nothing later is evidenced",
+        "stageAsOf": "2026-08-26",
+        "canonicalUrl": "https://quirinoprovince.gov.ph/?s=Maddela",
+        "limitations": "Every individual /bac-post/ post body returns a WordPress critical error at the source (verified through three fetch methods as of 2026-08-26). Amounts, fund sources, deadlines, contractors and award outcomes are UNAVAILABLE — do not infer completion or ongoing construction from these titles."
+      },
+      "sourceIds": ["quirino-bac-maddela-listing"],
+      "claimSources": {
+        "summary": ["quirino-bac-maddela-listing"],
+        "items": ["quirino-bac-maddela-listing"],
+        "items.0": ["quirino-bac-maddela-listing"],
+        "items.1": ["quirino-bac-maddela-listing"],
+        "items.2": ["quirino-bac-maddela-listing"],
+        "items.3": ["quirino-bac-maddela-listing"],
+        "items.4": ["quirino-bac-maddela-listing"],
+        "items.5": ["quirino-bac-maddela-listing"],
+        "stage": ["quirino-bac-maddela-listing"],
+        "stageAsOf": ["quirino-bac-maddela-listing"],
+        "canonicalUrl": ["quirino-bac-maddela-listing"],
+        "limitations": ["quirino-bac-maddela-listing"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-26",
+      "acceptedBy": "bettermaddela-review-2026-08-26-projects-a",
+      "acceptedAt": "2026-08-26T14:25:00+08:00",
+      "updateCadence": "quarterly",
+      "nextReviewOn": "2026-11-24",
+      "owner": "BetterMaddela projects board editor",
+      "notes": "Desk import from research/2026-08-projects-evidence.md (retrieved 2026-08-26). Included with an explicit unverified-fields limitation per the evidence file's recommendation ('details unavailable' state). Requires explicit owner approval before merge."
     }
   ]
 }
