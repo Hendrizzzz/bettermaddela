@@ -738,6 +738,20 @@
       "verifier": "bettermaddela-review-2026-08-26-projects-a",
       "sourceState": "active",
       "notes": "Every individual /bac-post/ post body returns a WordPress critical error ('There has been a critical error on this website') through three independent fetch methods; no amounts, fund sources, deadlines or award outcomes are obtainable from these posts as of retrieval. Only titles and posting dates are verifiable."
+    },
+    {
+      "id": "rappler-maddela-2025-results",
+      "title": "RESULTS: Maddela, Quirino election 2025 | Rappler",
+      "publisher": "Rappler",
+      "url": "https://ph.rappler.com/elections/2025/local-race/quirino/maddela",
+      "documentType": "webpage",
+      "publishedAt": "2025-05-15",
+      "effectivePeriod": "Comelec Media (Transparency) Server tallies; 100% of precincts as of May 15, 2025, 2:41 PM",
+      "retrievedAt": "2026-08-26",
+      "verifiedAt": "2026-08-26",
+      "verifier": "owner-approval-2026-08-26",
+      "sourceState": "active",
+      "notes": "Rappler republishes Comelec Media Server data (partial/unofficial). No primary COMELEC certificate of canvass for Maddela was accessed; names are treated as listed, pending official proclamations."
     }
   ]
 }
