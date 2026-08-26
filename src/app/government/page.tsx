@@ -67,11 +67,7 @@ export default function GovernmentPage() {
       <section className="section govt-structure-section">
         <div className="container">
           <div className="text-center" style={{ marginBottom: "var(--spacing-xl)" }}>
-            <h2>How a municipality is structured</h2>
-            <p style={{ color: "var(--color-text-light)" }}>
-              Who does what, and who reports to whom — under the Local Government Code
-              (RA 7160), shown with Maddela&rsquo;s verified incumbents where they exist.
-            </p>
+            <h2>Government structure</h2>
           </div>
           <StructureChart
             mayor={mayor ? { name: mayor.name, asOf: mayor.asOf } : null}
