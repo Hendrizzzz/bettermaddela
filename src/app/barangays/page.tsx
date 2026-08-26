@@ -171,8 +171,8 @@ export default function BarangaysPage() {
           </ol>
 
           <p className="brgy-unpublished-note">
-            Barangay profiles publish the reviewed PSA dataset only — contacts, projects, facilities, and history
-            remain unpublished pending verification.
+            Each profile opens with verified population data — officials, projects, and contacts appear
+            there as each passes verification.
           </p>
 
           <RecordMeta record={barangayRecord} />
