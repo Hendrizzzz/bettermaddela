@@ -421,7 +421,6 @@ export default function StatisticsPage() {
             <text className="chart-tick-label" x={left - 10} y={y(tick) + 4} textAnchor="end">{tick}%</text>
           </g>
         ))}
-        <line className="chart-refline" aria-hidden="true" x1={x(povertyFirst.year)} y1={ciTop} x2={x(povertyLatest.year)} y2={ciTop} />
         {poverty.data.series.map((item) => {
           const isLatest = item.year === povertyLatest.year;
           return (

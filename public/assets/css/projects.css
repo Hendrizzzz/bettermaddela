@@ -200,6 +200,12 @@
   background: #146c2e;
 }
 
+/* The track terminates at the last dot: no connector on "Turnover",
+   in either the horizontal (desktop) or vertical (mobile) orientation. */
+.proj-track-step:last-child .proj-track-line {
+  display: none;
+}
+
 .proj-track-dot {
   position: relative;
   z-index: 1;
