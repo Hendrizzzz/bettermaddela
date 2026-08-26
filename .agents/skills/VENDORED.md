@@ -13,6 +13,8 @@ Copied on 2026-08-25 at the repository maintainer's request.
 | `impeccable` | https://github.com/pbakaus/impeccable | `.agents/skills/impeccable` | current `main` HEAD at copy time — **drifted** from the previously installed tree `c10903ca3e7fe0b1815576f9b67730b588fba665` (upstream advanced past that commit; not found in recent history) | Apache-2.0 |
 | `frontend-design` | https://github.com/anthropics/skills | `skills/frontend-design` | tree `0d5b74a14bdf3ebcd64f352d06376a2ef05ed296` (byte-exact match); folder-level `LICENSE.txt` included | Apache-2.0 (folder LICENSE.txt) |
 | `web-design-guidelines` | https://github.com/vercel-labs/agent-skills | `skills/web-design-guidelines` | tree `3116f3e62dbd02b44a598b1aa690d2a8938e8f89` (byte-exact match) | none declared upstream |
+| `gsap-core`, `gsap-performance`, `gsap-react`, `gsap-scrolltrigger`, `gsap-timeline` | copied from the maintainer's local checkout (`RG_Fitness/.agents/skills`) at the maintainer's request, 2026-08-26 | n/a (local copy) | current content at copy time | none declared in folder — development reference only |
+| `mobile-first-design`, `responsive-web-design` | copied from the maintainer's local checkout (`RG_Fitness/.agents/skills`) at the maintainer's request, 2026-08-26 | n/a (local copy) | current content at copy time | none declared in folder — development reference only |
 
 ## Notes and cautions
 

@@ -29,6 +29,23 @@ the price of understanding.
    websites — orchestrated reveals, count-ups, scroll-triggered timelines. Never
    decorative noise; never a barrier to information.
 
+## Hard interface rules (owner-mandated 2026-08-26, round 2)
+
+1. **No pills.** Fully-rounded chip/badge shapes (border-radius: 999px on text
+   containers) are banned everywhere. Status, classification, and evidence labels
+   are carried by typography (small caps, weight, color), markers (dots, squares,
+   left borders), or position — never by pill shapes.
+2. **No babysitting text.** Users know what a mayor is. Structure surfaces show
+   WHO and HOW CONNECTED visually (position, lines, icons, names); they do not
+   explain civic basics in prose. One-line factual captions only where a number or
+   date needs a source note.
+3. **Cut text to the bone.** A card gets a name, a number, and at most one line.
+   Completeness lives one click away (expanders, tables, sources), never in the
+   glance layer.
+4. **More GSAP, orchestrated.** Premium modern motion: drawn connectors, staggered
+   cascades, count-ups on money/numbers, scroll-scrubbed progress. Always
+   reduced-motion-safe.
+
 ## Technology decisions (owner-approved 2026-08-26)
 
 - **Motion: GSAP only.** The repo already ships GSAP + the `Reveal` component. All
