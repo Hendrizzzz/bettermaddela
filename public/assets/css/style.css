@@ -312,7 +312,7 @@ body.mobile-menu-open {
   width: 100%;
   padding: 16px 24px;
   padding-right: 50px;
-  border-radius: 50px;
+  border-radius: 10px;
   border: none;
   font-size: 1.125rem;
   box-shadow: var(--shadow-md);
@@ -944,22 +944,33 @@ h6 {
   gap: var(--spacing-sm);
   margin-bottom: var(--spacing-sm);
 }
+/* News badges are small-caps labels with a square marker — no pills. */
 .home-news-badge {
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.home-news-badge::before {
+  content: "";
+  flex: none;
+  width: 7px;
+  height: 7px;
+  background: #f5b301;
 }
 .home-news-badge--info {
-  background: #f7efd8;
   color: #8a5e0f;
 }
 .home-news-badge--success {
-  background: #e6f4ea;
   color: #146c2e;
 }
+.home-news-badge--success::before {
+  background: #146c2e;
+}
 .home-news-badge--warning {
-  background: #f7efd8;
   color: #8a5e0f;
 }
 .home-news-date {
@@ -1005,12 +1016,13 @@ h6 {
 }
 .home-leader-badge {
   display: inline-block;
-  background: var(--color-primary);
-  color: white;
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 6px 14px;
-  border-radius: 50px;
+  color: #7a540d;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0 0 6px;
+  border-bottom: 2px solid #f5b301;
   margin-bottom: var(--spacing-sm);
 }
 .home-leader-card h3 {
@@ -1230,19 +1242,23 @@ h6 {
   font-weight: 500;
 }
 .home-search-tags a {
-  color: var(--color-primary);
-  background: rgba(34, 50, 160, 0.06);
-  padding: 5px 12px;
-  border-radius: 50px;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  font-weight: 500;
-  border: 1px solid transparent;
+  color: #7a540d;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  text-decoration: underline;
+  text-decoration-color: #e8dfc8;
+  text-underline-offset: 3px;
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
+  font-weight: 600;
+  border: none;
 }
 .home-search-tags a:hover {
-  background: rgba(34, 50, 160, 0.1);
-  border-color: rgba(34, 50, 160, 0.15);
-  text-decoration: none;
+  color: #221d14;
+  text-decoration-color: #f5b301;
+  text-decoration-thickness: 2px;
 }
 .home-contact-v2-grid {
   display: grid;
@@ -1560,12 +1576,24 @@ a.a11y-contact-item:hover i {
   flex-wrap: wrap;
 }
 .a11y-tag {
-  padding: 8px 16px;
-  background: var(--color-bg-alt);
-  border-radius: 50px;
-  font-size: 0.875rem;
-  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: var(--color-text);
+}
+.a11y-tag::before {
+  content: "";
+  flex: none;
+  width: 7px;
+  height: 7px;
+  background: #8a5e0f;
 }
 .a11y-promise {
   display: flex;

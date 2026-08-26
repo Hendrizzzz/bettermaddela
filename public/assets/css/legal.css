@@ -11,12 +11,14 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.15);
-  color: white;
-  padding: 8px 20px;
-  border-radius: 50px;
-  font-size: 0.875rem;
-  font-weight: 500;
+  background: none;
+  color: #fffcf4;
+  padding: 0 0 0 10px;
+  border-left: 2px solid #f5b301;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   margin-bottom: 16px;
 }
 .legal-hero h1 {
