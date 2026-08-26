@@ -3080,20 +3080,54 @@
         "nia-r2-lusod-larp"
       ],
       "claimSources": {
-        "projectName": ["nia-r2-lusod-inip-noa"],
-        "category": ["nia-r2-lusod-inip-noa", "nia-r2-lusod-inip-itb-rebid"],
-        "componentPackage": ["nia-r2-lusod-inip-noa", "nia-r2-lusod-inip-itb-rebid"],
-        "location": ["nia-r2-lusod-larp"],
-        "implementingAgency": ["nia-r2-lusod-preconstruction"],
-        "referenceCodes": ["nia-r2-lusod-inip-itb-rebid"],
-        "amountLabel": ["nia-r2-lusod-inip-itb-rebid"],
-        "amount": ["nia-r2-lusod-inip-itb-rebid"],
-        "amountNote": ["nia-r2-lusod-inip-itb-rebid"],
-        "stage": ["nia-r2-lusod-inip-noa"],
-        "stageAsOf": ["nia-r2-lusod-inip-noa"],
-        "contextNotes": ["nia-r2-lusod-preconstruction", "nia-r2-lusod-larp"],
-        "canonicalUrl": ["nia-r2-lusod-inip-noa"],
-        "limitations": ["nia-r2-lusod-inip-noa", "nia-r2-lusod-inip-itb-rebid", "nia-r2-lusod-preconstruction", "nia-r2-lusod-larp"]
+        "projectName": [
+          "nia-r2-lusod-inip-noa"
+        ],
+        "category": [
+          "nia-r2-lusod-inip-noa",
+          "nia-r2-lusod-inip-itb-rebid"
+        ],
+        "componentPackage": [
+          "nia-r2-lusod-inip-noa",
+          "nia-r2-lusod-inip-itb-rebid"
+        ],
+        "location": [
+          "nia-r2-lusod-larp"
+        ],
+        "implementingAgency": [
+          "nia-r2-lusod-preconstruction"
+        ],
+        "referenceCodes": [
+          "nia-r2-lusod-inip-itb-rebid"
+        ],
+        "amountLabel": [
+          "nia-r2-lusod-inip-itb-rebid"
+        ],
+        "amount": [
+          "nia-r2-lusod-inip-itb-rebid"
+        ],
+        "amountNote": [
+          "nia-r2-lusod-inip-itb-rebid"
+        ],
+        "stage": [
+          "nia-r2-lusod-inip-noa"
+        ],
+        "stageAsOf": [
+          "nia-r2-lusod-inip-noa"
+        ],
+        "contextNotes": [
+          "nia-r2-lusod-preconstruction",
+          "nia-r2-lusod-larp"
+        ],
+        "canonicalUrl": [
+          "nia-r2-lusod-inip-noa"
+        ],
+        "limitations": [
+          "nia-r2-lusod-inip-noa",
+          "nia-r2-lusod-inip-itb-rebid",
+          "nia-r2-lusod-preconstruction",
+          "nia-r2-lusod-larp"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-26",
@@ -3123,21 +3157,49 @@
         "canonicalUrl": "https://region2.nia.gov.ph/content/construction-fourteen-14-units-15hp-solar-powered-pump-ai-satellite-assisted-monitoring",
         "limitations": "Procurement-stage facts rest on a single official posting (MEDIUM-HIGH confidence); all other details are LOW confidence or absent. Fund source, contractor, per-unit Maddela locations and any award outcome are not established by the retrieved sources."
       },
-      "sourceIds": ["nia-r2-solar-pump-itb"],
+      "sourceIds": [
+        "nia-r2-solar-pump-itb"
+      ],
       "claimSources": {
-        "projectName": ["nia-r2-solar-pump-itb"],
-        "category": ["nia-r2-solar-pump-itb"],
-        "location": ["nia-r2-solar-pump-itb"],
-        "implementingAgency": ["nia-r2-solar-pump-itb"],
-        "referenceCode": ["nia-r2-solar-pump-itb"],
-        "amountLabel": ["nia-r2-solar-pump-itb"],
-        "amount": ["nia-r2-solar-pump-itb"],
-        "amountNote": ["nia-r2-solar-pump-itb"],
-        "stage": ["nia-r2-solar-pump-itb"],
-        "stageAsOf": ["nia-r2-solar-pump-itb"],
-        "outcomeCheck": ["nia-r2-solar-pump-itb"],
-        "canonicalUrl": ["nia-r2-solar-pump-itb"],
-        "limitations": ["nia-r2-solar-pump-itb"]
+        "projectName": [
+          "nia-r2-solar-pump-itb"
+        ],
+        "category": [
+          "nia-r2-solar-pump-itb"
+        ],
+        "location": [
+          "nia-r2-solar-pump-itb"
+        ],
+        "implementingAgency": [
+          "nia-r2-solar-pump-itb"
+        ],
+        "referenceCode": [
+          "nia-r2-solar-pump-itb"
+        ],
+        "amountLabel": [
+          "nia-r2-solar-pump-itb"
+        ],
+        "amount": [
+          "nia-r2-solar-pump-itb"
+        ],
+        "amountNote": [
+          "nia-r2-solar-pump-itb"
+        ],
+        "stage": [
+          "nia-r2-solar-pump-itb"
+        ],
+        "stageAsOf": [
+          "nia-r2-solar-pump-itb"
+        ],
+        "outcomeCheck": [
+          "nia-r2-solar-pump-itb"
+        ],
+        "canonicalUrl": [
+          "nia-r2-solar-pump-itb"
+        ],
+        "limitations": [
+          "nia-r2-solar-pump-itb"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-26",
@@ -3168,22 +3230,52 @@
         "canonicalUrl": "https://region2.nia.gov.ph/content/nia-turns-over-first-solar-pump-irrigation-project-maddela-quirino",
         "limitations": "The 2022 NIA article is the sole source retrieved; nothing later was found about the system's condition or operation. Municipality attribution is conflicted across official sources."
       },
-      "sourceIds": ["nia-r2-balligui-spip-turnover"],
+      "sourceIds": [
+        "nia-r2-balligui-spip-turnover"
+      ],
       "claimSources": {
-        "projectName": ["nia-r2-balligui-spip-turnover"],
-        "category": ["nia-r2-balligui-spip-turnover"],
-        "locationConflict": ["nia-r2-balligui-spip-turnover"],
-        "implementingAgency": ["nia-r2-balligui-spip-turnover"],
-        "contractor": ["nia-r2-balligui-spip-turnover"],
-        "fundSource": ["nia-r2-balligui-spip-turnover"],
-        "amountLabel": ["nia-r2-balligui-spip-turnover"],
-        "amount": ["nia-r2-balligui-spip-turnover"],
-        "schedule": ["nia-r2-balligui-spip-turnover"],
-        "stage": ["nia-r2-balligui-spip-turnover"],
-        "stageAsOf": ["nia-r2-balligui-spip-turnover"],
-        "serviceArea": ["nia-r2-balligui-spip-turnover"],
-        "canonicalUrl": ["nia-r2-balligui-spip-turnover"],
-        "limitations": ["nia-r2-balligui-spip-turnover"]
+        "projectName": [
+          "nia-r2-balligui-spip-turnover"
+        ],
+        "category": [
+          "nia-r2-balligui-spip-turnover"
+        ],
+        "locationConflict": [
+          "nia-r2-balligui-spip-turnover"
+        ],
+        "implementingAgency": [
+          "nia-r2-balligui-spip-turnover"
+        ],
+        "contractor": [
+          "nia-r2-balligui-spip-turnover"
+        ],
+        "fundSource": [
+          "nia-r2-balligui-spip-turnover"
+        ],
+        "amountLabel": [
+          "nia-r2-balligui-spip-turnover"
+        ],
+        "amount": [
+          "nia-r2-balligui-spip-turnover"
+        ],
+        "schedule": [
+          "nia-r2-balligui-spip-turnover"
+        ],
+        "stage": [
+          "nia-r2-balligui-spip-turnover"
+        ],
+        "stageAsOf": [
+          "nia-r2-balligui-spip-turnover"
+        ],
+        "serviceArea": [
+          "nia-r2-balligui-spip-turnover"
+        ],
+        "canonicalUrl": [
+          "nia-r2-balligui-spip-turnover"
+        ],
+        "limitations": [
+          "nia-r2-balligui-spip-turnover"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-26",
@@ -3209,17 +3301,37 @@
         "canonicalUrl": "https://region2.nia.gov.ph/content/ia-and-dar-turns-over-carp-ic-irrigation-project-quirino",
         "limitations": "Contractor, fund source and amount are not stated in the retrieved summary. The headline and snippet were verified on the NIA page listing; the full article body was not independently inspected in the 2026-08 session. Historical item only — it does not describe a current build."
       },
-      "sourceIds": ["nia-r2-carpic-cabaruan-turnover"],
+      "sourceIds": [
+        "nia-r2-carpic-cabaruan-turnover"
+      ],
       "claimSources": {
-        "projectName": ["nia-r2-carpic-cabaruan-turnover"],
-        "category": ["nia-r2-carpic-cabaruan-turnover"],
-        "location": ["nia-r2-carpic-cabaruan-turnover"],
-        "implementingAgency": ["nia-r2-carpic-cabaruan-turnover"],
-        "turnoverTo": ["nia-r2-carpic-cabaruan-turnover"],
-        "stage": ["nia-r2-carpic-cabaruan-turnover"],
-        "stageAsOf": ["nia-r2-carpic-cabaruan-turnover"],
-        "canonicalUrl": ["nia-r2-carpic-cabaruan-turnover"],
-        "limitations": ["nia-r2-carpic-cabaruan-turnover"]
+        "projectName": [
+          "nia-r2-carpic-cabaruan-turnover"
+        ],
+        "category": [
+          "nia-r2-carpic-cabaruan-turnover"
+        ],
+        "location": [
+          "nia-r2-carpic-cabaruan-turnover"
+        ],
+        "implementingAgency": [
+          "nia-r2-carpic-cabaruan-turnover"
+        ],
+        "turnoverTo": [
+          "nia-r2-carpic-cabaruan-turnover"
+        ],
+        "stage": [
+          "nia-r2-carpic-cabaruan-turnover"
+        ],
+        "stageAsOf": [
+          "nia-r2-carpic-cabaruan-turnover"
+        ],
+        "canonicalUrl": [
+          "nia-r2-carpic-cabaruan-turnover"
+        ],
+        "limitations": [
+          "nia-r2-carpic-cabaruan-turnover"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-26",
@@ -3273,20 +3385,46 @@
         "canonicalUrl": "https://quirinoprovince.gov.ph/?s=Maddela",
         "limitations": "Every individual /bac-post/ post body returns a WordPress critical error at the source (verified through three fetch methods as of 2026-08-26). Amounts, fund sources, deadlines, contractors and award outcomes are UNAVAILABLE — do not infer completion or ongoing construction from these titles."
       },
-      "sourceIds": ["quirino-bac-maddela-listing"],
+      "sourceIds": [
+        "quirino-bac-maddela-listing"
+      ],
       "claimSources": {
-        "summary": ["quirino-bac-maddela-listing"],
-        "items": ["quirino-bac-maddela-listing"],
-        "items.0": ["quirino-bac-maddela-listing"],
-        "items.1": ["quirino-bac-maddela-listing"],
-        "items.2": ["quirino-bac-maddela-listing"],
-        "items.3": ["quirino-bac-maddela-listing"],
-        "items.4": ["quirino-bac-maddela-listing"],
-        "items.5": ["quirino-bac-maddela-listing"],
-        "stage": ["quirino-bac-maddela-listing"],
-        "stageAsOf": ["quirino-bac-maddela-listing"],
-        "canonicalUrl": ["quirino-bac-maddela-listing"],
-        "limitations": ["quirino-bac-maddela-listing"]
+        "summary": [
+          "quirino-bac-maddela-listing"
+        ],
+        "items": [
+          "quirino-bac-maddela-listing"
+        ],
+        "items.0": [
+          "quirino-bac-maddela-listing"
+        ],
+        "items.1": [
+          "quirino-bac-maddela-listing"
+        ],
+        "items.2": [
+          "quirino-bac-maddela-listing"
+        ],
+        "items.3": [
+          "quirino-bac-maddela-listing"
+        ],
+        "items.4": [
+          "quirino-bac-maddela-listing"
+        ],
+        "items.5": [
+          "quirino-bac-maddela-listing"
+        ],
+        "stage": [
+          "quirino-bac-maddela-listing"
+        ],
+        "stageAsOf": [
+          "quirino-bac-maddela-listing"
+        ],
+        "canonicalUrl": [
+          "quirino-bac-maddela-listing"
+        ],
+        "limitations": [
+          "quirino-bac-maddela-listing"
+        ]
       },
       "status": "verified",
       "lastVerified": "2026-08-26",
@@ -3296,6 +3434,135 @@
       "nextReviewOn": "2026-11-24",
       "owner": "BetterMaddela projects board editor",
       "notes": "Desk import from research/2026-08-projects-evidence.md (retrieved 2026-08-26). Included with an explicit unverified-fields limitation per the evidence file's recommendation ('details unavailable' state). Requires explicit owner approval before merge."
+    },
+    {
+      "id": "maddela-officials-2025-term",
+      "type": "official-snapshot",
+      "label": "Municipal officials elected May 2025 (term beginning June 30, 2025)",
+      "data": {
+        "leaders": [
+          {
+            "name": "Rimel C. Tolentino",
+            "title": "Municipal Mayor",
+            "scope": "Municipality of Maddela",
+            "asOf": "2025-06-30",
+            "evidenceContext": "Winner of the May 12, 2025 mayoral race — 12,140 votes (46.63%), listed as 'TOLENTINO LIPPUOK (NPC)'; succeeds his 2022–2025 term."
+          },
+          {
+            "name": "Salvador 'Junjun'",
+            "title": "Municipal Vice Mayor",
+            "scope": "Municipality of Maddela",
+            "asOf": "2025-06-30",
+            "evidenceContext": "Listed as the vice-mayoral winner 'SALVADOR JUNJUN (Ind)' — 13,881 votes (53.31%). Name reproduced as listed; the full given name awaits official proclamation (possibly the 2022–2025 SB member Orlando L. Salvador Jr. — unconfirmed, not asserted here)."
+          },
+          {
+            "name": "Tolentino, Jaja",
+            "title": "Sangguniang Bayan Member",
+            "scope": "Municipality of Maddela",
+            "asOf": "2025-06-30",
+            "evidenceContext": "Elected councilor (top 8 of the 2025 race) — 13,654 votes, listed as NPC. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
+          },
+          {
+            "name": "Albano, Prescy",
+            "title": "Sangguniang Bayan Member",
+            "scope": "Municipality of Maddela",
+            "asOf": "2025-06-30",
+            "evidenceContext": "Elected councilor (top 8 of the 2025 race) — 13,445 votes, listed as NPC. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
+          },
+          {
+            "name": "Ylanan Jr., Renato",
+            "title": "Sangguniang Bayan Member",
+            "scope": "Municipality of Maddela",
+            "asOf": "2025-06-30",
+            "evidenceContext": "Elected councilor (top 8 of the 2025 race) — 13,011 votes, listed as NPC. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
+          },
+          {
+            "name": "Ruiz, Ace Pong",
+            "title": "Sangguniang Bayan Member",
+            "scope": "Municipality of Maddela",
+            "asOf": "2025-06-30",
+            "evidenceContext": "Elected councilor (top 8 of the 2025 race) — 12,859 votes, listed as NPC. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
+          },
+          {
+            "name": "Naboye, Carlos Cajoga",
+            "title": "Sangguniang Bayan Member",
+            "scope": "Municipality of Maddela",
+            "asOf": "2025-06-30",
+            "evidenceContext": "Elected councilor (top 8 of the 2025 race) — 12,429 votes, listed as NPC. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
+          },
+          {
+            "name": "Hidalgo, Budan",
+            "title": "Sangguniang Bayan Member",
+            "scope": "Municipality of Maddela",
+            "asOf": "2025-06-30",
+            "evidenceContext": "Elected councilor (top 8 of the 2025 race) — 12,286 votes, listed as NPC. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
+          },
+          {
+            "name": "Cadavis, Jun",
+            "title": "Sangguniang Bayan Member",
+            "scope": "Municipality of Maddela",
+            "asOf": "2025-06-30",
+            "evidenceContext": "Elected councilor (top 8 of the 2025 race) — 11,246 votes, listed as LP. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
+          },
+          {
+            "name": "Balderas, Eleazar",
+            "title": "Sangguniang Bayan Member",
+            "scope": "Municipality of Maddela",
+            "asOf": "2025-06-30",
+            "evidenceContext": "Elected councilor (top 8 of the 2025 race) — 10,741 votes, listed as Ind. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
+          }
+        ],
+        "limitations": "Names are reproduced as listed on the Comelec Media (Transparency) Server tallies republished by Rappler (100% of precincts reporting as of May 15, 2025) — partial and unofficial; no primary COMELEC certificate of canvass for Maddela was accessed. Several winners are listed by nickname; full legal names and any post-election changes await official proclamations. Ex-officio seats (ABC president, SK federation president, IPMR) for the new term are not yet verified and are not listed. Wikipedia's Maddela officials infobox is stale and contradicted by primary reporting; it was not used."
+      },
+      "sourceIds": [
+        "rappler-maddela-2025-results"
+      ],
+      "claimSources": {
+        "leaders": [
+          "rappler-maddela-2025-results"
+        ],
+        "limitations": [
+          "rappler-maddela-2025-results"
+        ],
+        "leaders.0": [
+          "rappler-maddela-2025-results"
+        ],
+        "leaders.1": [
+          "rappler-maddela-2025-results"
+        ],
+        "leaders.2": [
+          "rappler-maddela-2025-results"
+        ],
+        "leaders.3": [
+          "rappler-maddela-2025-results"
+        ],
+        "leaders.4": [
+          "rappler-maddela-2025-results"
+        ],
+        "leaders.5": [
+          "rappler-maddela-2025-results"
+        ],
+        "leaders.6": [
+          "rappler-maddela-2025-results"
+        ],
+        "leaders.7": [
+          "rappler-maddela-2025-results"
+        ],
+        "leaders.8": [
+          "rappler-maddela-2025-results"
+        ],
+        "leaders.9": [
+          "rappler-maddela-2025-results"
+        ]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-26",
+      "acceptedBy": "owner-approval-2026-08-26",
+      "acceptedAt": "2026-08-26T12:00:00+08:00",
+      "nextReviewOn": "2026-09-26",
+      "updateCadence": "monthly",
+      "owner": "BetterMaddela governance data steward",
+      "notes": "Owner approved publication of this import on 2026-08-26 in the project review conversation. Names are reproduced exactly as listed by the cited source (surnames first); no name merging or full-name inference was applied."
     }
   ]
 }
