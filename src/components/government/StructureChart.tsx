@@ -29,6 +29,8 @@ export interface VerifiedIncumbent {
 
 interface StructureChartProps {
   mayor?: VerifiedIncumbent | null;
+  viceMayor?: VerifiedIncumbent | null;
+  councilors?: { name: string }[];
 }
 
 const EX_OFFICIO_SEATS = [
@@ -101,7 +103,8 @@ function SeatMarker({ large = false }: { large?: boolean }) {
   );
 }
 
-export default function StructureChart({ mayor }: StructureChartProps) {
+export default function StructureChart({ mayor, viceMayor, councilors }: StructureChartProps) {
+  const seats = Array.from({ length: 8 }, (_, index) => councilors?.[index] ?? null);
   const rootRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -220,7 +223,16 @@ export default function StructureChart({ mayor }: StructureChartProps) {
       <div className="govt-split">
         <article className="govt-node govt-node--vice" data-gsx-council>
           <h3 className="govt-node-role">Vice Mayor</h3>
-          <SeatMarker large />
+          {viceMayor ? (
+            <>
+              <p className="govt-node-name">{viceMayor.name}</p>
+              <p className="govt-node-asof">
+                Term began <time dateTime={viceMayor.asOf}>{viceMayor.asOf}</time>
+              </p>
+            </>
+          ) : (
+            <SeatMarker large />
+          )}
         </article>
 
         {/* Mobile-only connector between stacked branches */}
@@ -233,8 +245,20 @@ export default function StructureChart({ mayor }: StructureChartProps) {
         <article className="govt-node govt-node--sb" data-gsx-council>
           <h3 className="govt-node-role">Sangguniang Bayan</h3>
           <ul className="govt-seats" aria-label="8 elected regular member seats">
-            {Array.from({ length: 8 }, (_, index) => (
-              <li key={`seat-${index + 1}`} className="govt-seat" data-gsx-seat />
+            {seats.map((member, index) => (
+              <li key={`seat-${index + 1}`} className="govt-seat-cell" data-gsx-seat>
+                {member ? (
+                  <>
+                    <span className="govt-seat govt-seat--filled" aria-hidden="true" />
+                    <span className="govt-seat-name">{member.name}</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="govt-seat" aria-hidden="true" />
+                    <span className="govt-seat-name govt-seat-name--empty">Not yet verified</span>
+                  </>
+                )}
+              </li>
             ))}
           </ul>
           <ul className="govt-exofficio">
