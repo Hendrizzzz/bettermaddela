@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import PageHeader from "@/components/layout/PageHeader";
 import { RecordMeta } from "@/components/RecordMeta";
+import { Reveal } from "@/components/motion/Reveal";
 import { getRecord } from "@/data/civic";
 import { slugify } from "@/lib/slugify";
 
@@ -31,30 +32,46 @@ const municipalTotalPopulation = barangayRecord.data.barangays.reduce(
   (sum, entry) => sum + entry.population,
   0,
 );
+// Municipal median population, computed from the reviewed record at render.
+const sortedPopulations = barangayRecord.data.barangays
+  .map((entry) => entry.population)
+  .sort((a, b) => a - b);
+const middle = Math.floor(sortedPopulations.length / 2);
+const medianPopulation =
+  sortedPopulations.length % 2 === 0
+    ? (sortedPopulations[middle - 1] + sortedPopulations[middle]) / 2
+    : sortedPopulations[middle];
+
 const shareFormat = new Intl.NumberFormat("en-PH", { maximumFractionDigits: 1 });
 
 function formatPopulation(value: number) {
   return value.toLocaleString("en-PH");
 }
 
-function buildComparison(name: string, rank: number, population: number) {
+function positionBetween(value: number, low: number, high: number) {
+  if (high <= low) return 50;
+  return Math.min(100, Math.max(0, ((value - low) / (high - low)) * 100));
+}
+
+// Compact computed facts for the hero quiet line — same reviewed record, restyled.
+function buildFacts(name: string, rank: number, population: number) {
   const count = rankedBarangays.length;
+  const share =
+    municipalTotalPopulation > 0 ? (population / municipalTotalPopulation) * 100 : 0;
+  let standing: string;
   if (largestBarangay.psgcCode === undefined || smallestBarangay.psgcCode === undefined) {
     return "";
   }
   if (largestBarangay.name === name) {
-    return `Computed from the same dataset: ${name} is the most populous of the ${count} barangays — about ${shareFormat.format(
-      population / smallestBarangay.population,
-    )}× the population of the smallest, Barangay ${smallestBarangay.name}.`;
+    standing = `the most populous of the ${count} barangays`;
+  } else if (smallestBarangay.name === name) {
+    standing = `the least populous of the ${count} barangays`;
+  } else {
+    standing = `#${rank} of ${count} by population`;
   }
-  if (smallestBarangay.name === name) {
-    return `Computed from the same dataset: ${name} is the least populous of the ${count} barangays — about ${shareFormat.format(
-      (population / largestBarangay.population) * 100,
-    )}% of the population of the largest, Barangay ${largestBarangay.name}.`;
-  }
-  return `Computed from the same dataset: ${name} ranks #${rank} of ${count} by population — below Barangay ${largestBarangay.name} (${formatPopulation(
-    largestBarangay.population,
-  )}) and above Barangay ${smallestBarangay.name} (${formatPopulation(smallestBarangay.population)}).`;
+  return `${standing.charAt(0).toUpperCase()}${standing.slice(1)} · ${shareFormat.format(
+    share,
+  )}% of the municipal population · computed from the same reviewed PSA dataset.`;
 }
 
 function formatLongDate(value: string) {
@@ -86,9 +103,11 @@ export async function generateMetadata({
 
   return {
     title: `Barangay ${barangay.name}`,
-    description: `Dated population and classification data for Barangay ${barangay.name}, Maddela.`,
+    description: `Structured profile for Barangay ${barangay.name}, Maddela — dated population and classification today; officials, projects, and contacts follow verification.`,
   };
 }
+
+const KAGAWAD_SEATS = 7;
 
 export default async function BarangayDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -97,53 +116,143 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
 
   const rankedEntry = rankedBarangays.find((entry) => entry.psgcCode === barangay.psgcCode);
   if (!rankedEntry) notFound();
-  const shareOfMunicipal =
-    municipalTotalPopulation > 0 ? (barangay.population / municipalTotalPopulation) * 100 : 0;
-  const comparison = buildComparison(barangay.name, rankedEntry.rank, barangay.population);
+  const facts = buildFacts(barangay.name, rankedEntry.rank, barangay.population);
+
+  const rangeLow = smallestBarangay.population;
+  const rangeHigh = largestBarangay.population;
+  const barangayPosition = positionBetween(barangay.population, rangeLow, rangeHigh);
+  const medianPosition = positionBetween(medianPopulation, rangeLow, rangeHigh);
+  const rangeSummary = `${barangay.name} sits at ${Math.round(
+    barangayPosition,
+  )}% of the span between the smallest barangay, ${smallestBarangay.name} (${formatPopulation(
+    rangeLow,
+  )}), and the largest, ${largestBarangay.name} (${formatPopulation(
+    rangeHigh,
+  )}). The municipal median is ${formatPopulation(medianPopulation)}.`;
+
+  // Ready-to-fill scaffolds: when verified records arrive, map them here by
+  // barangay (psgcCode / slug). Until then these render honest empty states.
+  /* const verifiedOfficials = getRecord<...>(...)?.data.find(b => b.psgcCode === barangay.psgcCode); */
+  /* const verifiedProjects = getRecord<...>(...)?.data.filter(p => p.barangayPsgc === barangay.psgcCode); */
 
   return (
     <>
       <PageHeader
         title={`Barangay ${barangay.name}`}
-        description={`Dated statistical profile for Barangay ${barangay.name}, Maddela.`}
+        description={`Statistical profile for Barangay ${barangay.name}, Municipality of Maddela.`}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Government", href: "/government" }, { label: "Barangays", href: "/barangays" }, { label: barangay.name }]}
       />
-      <section className="section" style={{ background: "var(--color-bg-alt)" }}>
+      <section className="section brgy-prof">
         <div className="container">
-          <div className="text-center" style={{ marginBottom: "var(--spacing-xl)" }}>
-            <h2 style={{ fontSize: "1.75rem", marginBottom: "var(--spacing-xs)" }}>Barangay profile</h2>
-            <p style={{ color: "var(--color-text-light)" }}>Population and classification from the reviewed PSA dataset</p>
-          </div>
-          <div className="metrics-grid">
-            <div className="metric-card">
-              <div className="metric-icon"><i className="bi bi-people-fill" aria-hidden="true" /></div>
-              <div className="metric-value">{barangay.population.toLocaleString("en-PH")}</div>
-              <div className="metric-label">Population</div>
-              <div className="metric-source">As of <time dateTime={barangayRecord.data.populationReferenceDate}>{formatLongDate(barangayRecord.data.populationReferenceDate)}</time></div>
+          <Reveal>
+            <div className="brgy-prof-hero">
+              <p className="brgy-prof-kicker">
+                <span className={`brgy-prof-class brgy-prof-class--${barangay.classification.toLowerCase()}`}>
+                  {barangay.classification}
+                </span>
+                <span className="brgy-prof-kicker-sep" aria-hidden="true">·</span>
+                Municipality of Maddela
+              </p>
+              <p className="brgy-prof-population">
+                {barangay.population.toLocaleString("en-PH")}
+                <span className="brgy-prof-population-unit"> residents</span>
+              </p>
+              <p className="brgy-prof-pop-note">
+                As of{" "}
+                <time dateTime={barangayRecord.data.populationReferenceDate}>
+                  {formatLongDate(barangayRecord.data.populationReferenceDate)}
+                </time>{" "}
+                · reviewed PSA census count
+              </p>
+              {facts && <p className="brgy-prof-facts">{facts}</p>}
             </div>
-            <div className="metric-card">
-              <div className="metric-icon"><i className="bi bi-geo-alt-fill" aria-hidden="true" /></div>
-              <div className="metric-value">{barangay.classification}</div>
-              <div className="metric-label">Urban/rural classification</div>
-              <div className="metric-source">Classification basis in the reviewed census publication</div>
-            </div>
-            <div className="metric-card">
-              <div className="metric-icon"><i className="bi bi-bar-chart-fill" aria-hidden="true" /></div>
-              <div className="metric-value">
-                #{rankedEntry.rank}
-                <span className="brgy-rank-of"> of {rankedBarangays.length.toLocaleString("en-PH")}</span>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <figure className="brgy-prof-range">
+              <div className="brgy-prof-range-track" role="img" aria-label={rangeSummary}>
+                <span
+                  className="brgy-prof-range-fill"
+                  style={{ width: `${barangayPosition}%` }}
+                  aria-hidden="true"
+                />
+                <span
+                  className="brgy-prof-range-median"
+                  style={{ left: `${medianPosition}%` }}
+                  aria-hidden="true"
+                />
+                <span
+                  className="brgy-prof-range-dot"
+                  style={{ left: `${barangayPosition}%` }}
+                  aria-hidden="true"
+                />
               </div>
-              <div className="metric-label">Rank by population</div>
-              <div className="metric-source">Computed from the reviewed PSA barangay dataset</div>
+              <figcaption className="brgy-prof-range-key">
+                <span>
+                  Smallest · {smallestBarangay.name} {formatPopulation(rangeLow)}
+                </span>
+                <span className="brgy-prof-range-key-median">
+                  Municipal median {formatPopulation(medianPopulation)}
+                </span>
+                <span>
+                  Largest · {largestBarangay.name} {formatPopulation(rangeHigh)}
+                </span>
+              </figcaption>
+            </figure>
+          </Reveal>
+
+          <section className="brgy-prof-section" aria-labelledby="brgy-prof-officials">
+            <h2 className="brgy-section-heading" id="brgy-prof-officials">
+              Barangay officials
+            </h2>
+            <div className="brgy-prof-org">
+              <article className="brgy-prof-seat-card brgy-prof-seat-card--pb">
+                <span className="brgy-prof-seat-box brgy-prof-seat-box--lg" aria-hidden="true" />
+                <h3 className="brgy-prof-seat-role">Punong Barangay</h3>
+              </article>
+              <div className="brgy-prof-council">
+                <h3 className="brgy-prof-group-label">Sangguniang Barangay members</h3>
+                <ul
+                  className="brgy-prof-seat-grid"
+                  aria-label={`${KAGAWAD_SEATS} Sangguniang Barangay member seats`}
+                >
+                  {Array.from({ length: KAGAWAD_SEATS }, (_, index) => (
+                    <li key={`seat-${index + 1}`} className="brgy-prof-seat-cell">
+                      <span className="brgy-prof-seat-box" aria-hidden="true" />
+                      <span className="brgy-prof-seat-num">{`0${index + 1}`}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div className="metric-card">
-              <div className="metric-icon"><i className="bi bi-pie-chart-fill" aria-hidden="true" /></div>
-              <div className="metric-value">{shareFormat.format(shareOfMunicipal)}%</div>
-              <div className="metric-label">Share of municipal population</div>
-              <div className="metric-source">Computed: {barangay.population.toLocaleString("en-PH")} ÷ {municipalTotalPopulation.toLocaleString("en-PH")} municipal total</div>
-            </div>
+            <p className="brgy-prof-awaiting">
+              Officials are published once the list passes verification — expected from the DILG municipal office.
+            </p>
+          </section>
+
+          <div className="brgy-prof-duo">
+            <section className="brgy-prof-section brgy-prof-section--tight" aria-labelledby="brgy-prof-projects">
+              <h2 className="brgy-section-heading" id="brgy-prof-projects">
+                Projects &amp; notices
+              </h2>
+              {/* Project records will be mapped here by barangay once verified. */}
+              <div className="brgy-prof-empty">
+                <i className="bi bi-kanban" aria-hidden="true" />
+                <p>No verified projects recorded for this barangay yet.</p>
+              </div>
+            </section>
+
+            <section className="brgy-prof-section brgy-prof-section--tight" aria-labelledby="brgy-prof-contact">
+              <h2 className="brgy-section-heading" id="brgy-prof-contact">
+                Contact
+              </h2>
+              {/* Verified contact details will be mapped here by barangay once confirmed. */}
+              <div className="brgy-prof-empty">
+                <i className="bi bi-envelope" aria-hidden="true" />
+                <p>No verified contact details published for this barangay yet.</p>
+              </div>
+            </section>
           </div>
-          {comparison && <p className="brgy-context">{comparison}</p>}
+
           <p className="table-note">Urban/rural basis: {barangayRecord.data.urbanRuralBasis}.</p>
           <RecordMeta record={barangayRecord} />
         </div>
