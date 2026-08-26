@@ -44,6 +44,7 @@ interface OfficeHeadsData {
 const barangayRecord = getRecord<BarangayDataset>("barangay-dataset-2026q2");
 const leadershipRecord = getRecord<LeadershipData>("maddela-leadership-snapshot");
 const officeHeadsRecord = getRecord<OfficeHeadsData>("maddela-office-head-observations");
+const officialsTermRecord = getRecord<LeadershipData>("maddela-officials-2025-term");
 
 export const metadata: Metadata = {
   title: "Government",
@@ -52,9 +53,15 @@ export const metadata: Metadata = {
 
 export default function GovernmentPage() {
   // The structure chart shows a name ONLY for roles present in the reviewed
-  // leadership snapshot; every other seat renders a withheld state.
-  const mayor = leadershipRecord.data.leaders.find(
+  // records; every other seat renders a withheld state.
+  const mayor = officialsTermRecord.data.leaders.find(
     (leader) => leader.title === "Municipal Mayor",
+  );
+  const viceMayor = officialsTermRecord.data.leaders.find(
+    (leader) => leader.title === "Municipal Vice Mayor",
+  );
+  const councilors = officialsTermRecord.data.leaders.filter(
+    (leader) => leader.title === "Sangguniang Bayan Member",
   );
 
   return (
@@ -71,6 +78,8 @@ export default function GovernmentPage() {
           </div>
           <StructureChart
             mayor={mayor ? { name: mayor.name, asOf: mayor.asOf } : null}
+            viceMayor={viceMayor ? { name: viceMayor.name, asOf: viceMayor.asOf } : null}
+            councilors={councilors.map((member) => ({ name: member.name }))}
           />
         </div>
       </section>
@@ -95,8 +104,9 @@ export default function GovernmentPage() {
           </div>
           <RecordMeta record={leadershipRecord} />
           <p className="unpublished-note">
-            A complete current vice-mayor and Sangguniang Bayan roster has not passed the publication gate —{" "}
-            <Link href="/government/officials">see the officials record</Link>.
+            The 2025-elected vice mayor and councilors appear above and in the structure chart as
+            listed on Comelec server tallies; full legal names and the new ex-officio seats await
+            official proclamations — <Link href="/government/officials">see the officials record</Link>.
           </p>
         </div>
       </section>
@@ -140,6 +150,7 @@ export default function GovernmentPage() {
             { label: "barangay list and population", record: barangayRecord },
             { label: "leadership", record: leadershipRecord },
             { label: "office heads", record: officeHeadsRecord },
+            { label: "2025-elected officials", record: officialsTermRecord },
           ]} />
         </div>
       </section>
