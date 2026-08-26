@@ -6,8 +6,5 @@
         fill="#f5b301" stroke="#fffcf4" stroke-width="2.5" stroke-linejoin="round"/>
   <text x="74" y="41"
         font-family="Archivo, 'Segoe UI', system-ui, sans-serif"
-        font-size="30" font-weight="600" letter-spacing="-0.5" fill="#fffcf4">Better</text>
-  <text x="148" y="41"
-        font-family="Archivo, 'Segoe UI', system-ui, sans-serif"
-        font-size="30" font-weight="800" letter-spacing="-0.5" fill="#fffcf4">Maddela</text>
+        font-size="30" letter-spacing="-0.5" fill="#fffcf4"><tspan font-weight="600">Better</tspan><tspan font-weight="800">Maddela</tspan></text>
 </svg>
