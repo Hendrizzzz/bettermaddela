@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import PageHeader from "@/components/layout/PageHeader";
 import { RecordMeta } from "@/components/RecordMeta";
-import { Reveal } from "@/components/motion/Reveal";
+import { BoardMotion } from "@/components/projects/BoardMotion";
 import { getRecord, type CivicRecord } from "@/data/civic";
 
 interface ProjectData {
@@ -64,15 +63,15 @@ function trackStep(stage: string): number | null {
 }
 
 /*
- * Badge tone — honest color coding:
+ * Spine tone — honest color coding, carried by the stage-track text as well
+ * (color never carries meaning alone):
  *   green = the record's own stage states a source-stated turnover;
- *   gold  = an active procurement step (open bid, posted award) with no
- *           stated uncertainty attached;
+ *   gold  = an active procurement/award step with no stated uncertainty;
  *   muted = outcome explicitly unverified/unavailable, or stage unmappable.
  */
 type Tone = "gold" | "green" | "muted";
 
-function badgeTone(data: ProjectData | NoticesData): Tone {
+function cardTone(data: ProjectData | NoticesData): Tone {
   const haystack = `${data.stage} ${("outcomeCheck" in data && data.outcomeCheck) || ""}`;
   if (/turn(ed)?\s*over|handed over|handing over/i.test(data.stage)) return "green";
   if (/unverified|unavailable|nothing later is evidenced/i.test(haystack)) return "muted";
@@ -88,34 +87,38 @@ function formatMoney(value: number) {
   }).format(value);
 }
 
-function StageBadge({ stage, tone }: { stage: string; tone: Tone }) {
-  return (
-    <p className={`proj-badge proj-badge--${tone}`}>
-      <i className="bi bi-flag" aria-hidden="true" />
-      <span>{stage}</span>
-    </p>
-  );
-}
-
 function StageTrack({ stage }: { stage: string }) {
   const current = trackStep(stage);
   if (current === null) {
     return <p className="proj-track-unmapped">Recorded stage: {stage}</p>;
   }
+  const final = current === TRACK_STEPS.length - 1;
   return (
-    <ol className="proj-track" aria-label="Project stage track">
-      {TRACK_STEPS.map((label, index) => (
-        <li
-          key={label}
-          className={`proj-track-step${index <= current ? " done" : ""}${index === current ? " current" : ""}`}
-        >
-          <span className="proj-track-dot" aria-hidden="true" />
-          <span className="proj-track-label">
-            {label}
-            {index === current ? " — recorded stage" : ""}
-          </span>
-        </li>
-      ))}
+    <ol
+      className={`proj-track${final ? " proj-track--final" : ""}`}
+      aria-label="Project stage track"
+    >
+      {TRACK_STEPS.map((label, index) => {
+        const done = index <= current;
+        const isCurrent = index === current;
+        return (
+          <li
+            key={label}
+            className={`proj-track-step${done ? " done" : ""}${isCurrent ? " current" : ""}`}
+          >
+            {index > 0 && (
+              <span className="proj-track-line" aria-hidden="true">
+                {done && <span className="proj-track-line-fill" />}
+              </span>
+            )}
+            <span className="proj-track-dot" aria-hidden="true" />
+            <span className="proj-track-label">
+              {label}
+              {isCurrent ? " — recorded stage" : ""}
+            </span>
+          </li>
+        );
+      })}
     </ol>
   );
 }
@@ -125,26 +128,89 @@ function AmountBlock({ data }: { data: ProjectData }) {
     return (
       <div className="proj-amount">
         <span className="proj-amount-label">Amount</span>
-        <span className="proj-amount-none">No amount stated in source</span>
+        <span className="proj-amount-none">Amount not published</span>
       </div>
     );
   }
   return (
     <div className="proj-amount">
       <span className="proj-amount-label">{data.amountLabel ?? "Amount"}</span>
-      <strong className="proj-amount-value">{formatMoney(data.amount)}</strong>
-      {data.amountNote && <span className="proj-amount-note">{data.amountNote}</span>}
+      <strong
+        className="proj-amount-value"
+        data-count={String(data.amount)}
+        data-count-format="peso"
+      >
+        {formatMoney(data.amount)}
+      </strong>
     </div>
   );
 }
 
-function Chips({ items }: { items: string[] }) {
+function DetailBody({ data }: { data: ProjectData }) {
   return (
-    <ul className="proj-chips">
-      {items.map((chip) => (
-        <li key={chip} className="proj-chip">{chip}</li>
-      ))}
-    </ul>
+    <div className="proj-detail-body">
+      <p>
+        <strong>Recorded stage:</strong> {data.stage} (as of {data.stageAsOf})
+      </p>
+      {(data.referenceCodes || data.referenceCode) && (
+        <p>
+          <strong>Reference:</strong> {data.referenceCodes ?? data.referenceCode}
+        </p>
+      )}
+      {data.location && (
+        <p>
+          <strong>Location as stated:</strong> {data.location}
+        </p>
+      )}
+      {data.fundSource && (
+        <p>
+          <strong>Fund source:</strong> {data.fundSource}
+        </p>
+      )}
+      {data.contractor && (
+        <p>
+          <strong>Contractor:</strong> {data.contractor}
+        </p>
+      )}
+      {data.schedule && (
+        <p>
+          <strong>Schedule as stated:</strong> {data.schedule}
+        </p>
+      )}
+      {data.turnoverTo && (
+        <p>
+          <strong>Turned over to:</strong> {data.turnoverTo}
+        </p>
+      )}
+      {data.componentPackage && (
+        <p>
+          <strong>Package:</strong> {data.componentPackage}
+        </p>
+      )}
+      {data.serviceArea && (
+        <p>
+          <strong>Service area as stated:</strong> {data.serviceArea}
+        </p>
+      )}
+      {data.amountNote && (
+        <p>
+          <strong>About the amount:</strong> {data.amountNote}
+        </p>
+      )}
+      {data.contextNotes && (
+        <p>
+          <strong>Context:</strong> {data.contextNotes}
+        </p>
+      )}
+      {data.outcomeCheck && (
+        <p>
+          <strong>Outcome check:</strong> {data.outcomeCheck}
+        </p>
+      )}
+      <p>
+        <strong>Limitations:</strong> {data.limitations}
+      </p>
+    </div>
   );
 }
 
@@ -161,28 +227,25 @@ export default function ProjectsPage() {
   const carpic = getRecord<ProjectData>("dar-nia-carpic-cabaruan-cis");
   const provincialNotices = getRecord<NoticesData>("quirino-bac-maddela-notices-2025");
 
-  const projectCards: { record: CivicRecord<ProjectData>; icon: string; blurb: string }[] = [
-    {
-      record: lusod,
-      icon: "bi-droplet",
-      blurb: `National irrigation project; the reviewed package is ${(lusod.data.componentPackage ?? "").toLowerCase()}.`,
-    },
-    {
-      record: solarPumps,
-      icon: "bi-sun",
-      blurb: "Fourteen 15HP solar-powered pump systems with satellite-assisted monitoring across five municipalities; the per-unit Maddela sites are not stated.",
-    },
-    {
-      record: balligui,
-      icon: "bi-sun",
-      blurb: "Solar pump system with pump sump and water tanks; stated potential service area 6 hectares for 9 farmer-beneficiaries.",
-    },
-    {
-      record: carpic,
-      icon: "bi-droplet",
-      blurb: `Communal irrigation system turned over to the ${carpic.data.turnoverTo}.`,
-    },
+  const projectCards: { record: CivicRecord<ProjectData>; icon: string }[] = [
+    { record: lusod, icon: "bi-droplet" },
+    { record: solarPumps, icon: "bi-sun" },
+    { record: balligui, icon: "bi-sun" },
+    { record: carpic, icon: "bi-droplet" },
   ];
+
+  /* Header counts — COUNTS ONLY. Unlike amounts are never summed. */
+  const allData: (ProjectData | NoticesData)[] = [
+    ...projectCards.map(({ record }) => record.data),
+    provincialNotices.data,
+  ];
+  const trackedCount = allData.length;
+  const amountsCount = allData.filter(
+    (d) => "amount" in d && typeof d.amount === "number",
+  ).length;
+  const turnoverCount = allData.filter((d) =>
+    /turn(ed)?\s*over|handed over/i.test(d.stage),
+  ).length;
 
   return (
     <>
@@ -192,8 +255,8 @@ export default function ProjectsPage() {
       <link rel="stylesheet" href="/assets/css/projects.css" />
 
       <PageHeader
-        title="Projects & infrastructure"
-        description="What is actually on record about public works in Maddela."
+        title="Projects"
+        description="Reviewed civic records — what public works are actually on file for Maddela."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Projects & infrastructure" },
@@ -202,72 +265,66 @@ export default function ProjectsPage() {
 
       <section className="proj-section">
         <div className="container">
-          <p className="proj-intro">
-            Every card is a reviewed civic record linked to its official source. A published
-            award or contract is not evidence of delivery or completion. Not on this board yet:
-            a comprehensive project archive — DPWH, SubayBAYAN and municipal works listings
-            remain unpublished at their sources.
-          </p>
+          <BoardMotion>
+            <div className="proj-stats" data-reveal>
+              <div className="proj-stat">
+                <span className="proj-stat-num" data-count={String(trackedCount)}>
+                  {trackedCount}
+                </span>
+                <span className="proj-stat-label">records tracked</span>
+              </div>
+              <div className="proj-stat">
+                <span className="proj-stat-num" data-count={String(amountsCount)}>
+                  {amountsCount}
+                </span>
+                <span className="proj-stat-label">with published amounts</span>
+              </div>
+              <div className="proj-stat">
+                <span className="proj-stat-num" data-count={String(turnoverCount)}>
+                  {turnoverCount}
+                </span>
+                <span className="proj-stat-label">turned over, per source</span>
+              </div>
+            </div>
 
-          {projectCards.map(({ record, icon, blurb }, index) => {
-            const data = record.data;
-            const tone = badgeTone(data);
-            const locations = data.locationConflict
-              ? ["Balligui — municipality conflicted in sources (see limitations)"]
-              : data.location
-                ? data.location.split(";").map((part) => part.trim())
-                : [];
-            return (
-              <Reveal key={record.id} delay={index * 0.08}>
-                <article className="proj-card">
-                  <div className="proj-card-head">
-                    <span className="proj-category">
-                      <i className={`bi ${icon}`} aria-hidden="true" />
-                      <span>{data.category}</span>
-                    </span>
-                    <StageBadge stage={data.stage} tone={tone} />
-                  </div>
+            <p className="proj-honesty" data-reveal>
+              A published award or contract is not evidence of delivery or completion.
+            </p>
 
-                  <h2 className="proj-name">{data.projectName}</h2>
-                  <p className="proj-blurb">{blurb}</p>
-
-                  <div className="proj-card-body">
-                    <AmountBlock data={data} />
-                    <div className="proj-facts">
-                      {locations.length > 0 && <Chips items={locations} />}
-                      <p className="proj-agency">
-                        <i className="bi bi-building" aria-hidden="true" />
-                        <span>{data.implementingAgency}</span>
+            {projectCards.map(({ record, icon }) => {
+              const data = record.data;
+              const tone = cardTone(data);
+              const locationLine = data.locationConflict
+                ? "Municipality conflicted across sources — see record detail"
+                : data.location;
+              const metaLine = [locationLine, data.implementingAgency]
+                .filter(Boolean)
+                .join(" · ");
+              return (
+                <article
+                  key={record.id}
+                  className={`proj-card proj-card--${tone}`}
+                  data-reveal
+                >
+                  <div className="proj-card-top">
+                    <div className="proj-card-id">
+                      <p className="proj-eyebrow">
+                        <i className={`bi ${icon}`} aria-hidden="true" />
+                        <span>{data.category}</span>
                       </p>
-                      {(data.referenceCodes || data.referenceCode) && (
-                        <p className="proj-meta-line">
-                          Reference: {data.referenceCodes ?? data.referenceCode}
-                        </p>
-                      )}
-                      {data.fundSource && (
-                        <p className="proj-meta-line">Fund source: {data.fundSource}</p>
-                      )}
-                      {data.contractor && (
-                        <p className="proj-meta-line">Contractor: {data.contractor}</p>
-                      )}
-                      {data.schedule && (
-                        <p className="proj-meta-line">Schedule as stated: {data.schedule}</p>
-                      )}
+                      <h2 className="proj-name">{data.projectName}</h2>
+                      {metaLine && <p className="proj-metaline">{metaLine}</p>}
                     </div>
+                    <AmountBlock data={data} />
                   </div>
 
                   <div className="proj-track-wrap">
                     <StageTrack stage={data.stage} />
-                    {data.contextNotes && <p className="proj-context">{data.contextNotes}</p>}
-                    {data.outcomeCheck && (
-                      <p className="proj-context proj-context--muted">{data.outcomeCheck}</p>
-                    )}
                   </div>
 
                   <details className="proj-details">
-                    <summary>Limitations and record detail</summary>
-                    <p>{data.limitations}</p>
-                    {data.serviceArea && <p>Service area as stated: {data.serviceArea}</p>}
+                    <summary>Record detail &amp; limitations</summary>
+                    <DetailBody data={data} />
                   </details>
 
                   <div className="proj-footer">
@@ -283,40 +340,50 @@ export default function ProjectsPage() {
                     </a>
                   </div>
                 </article>
-              </Reveal>
-            );
-          })}
+              );
+            })}
 
-          <Reveal delay={projectCards.length * 0.08}>
-            <article className="proj-card">
-              <div className="proj-card-head">
-                <span className="proj-category">
-                  <i className="bi bi-cone-striped" aria-hidden="true" />
-                  <span>Provincial roads, water and building works</span>
-                </span>
-                <StageBadge
-                  stage={provincialNotices.data.stage}
-                  tone={badgeTone(provincialNotices.data)}
-                />
+            <article className="proj-card proj-card--muted" data-reveal>
+              <div className="proj-card-top">
+                <div className="proj-card-id">
+                  <p className="proj-eyebrow">
+                    <i className="bi bi-cone-striped" aria-hidden="true" />
+                    <span>Provincial bids board — roads, water, buildings</span>
+                  </p>
+                  <h2 className="proj-name">
+                    Six provincially advertised bid notices naming Maddela barangays
+                  </h2>
+                  <p className="proj-metaline">
+                    Provincial Government of Quirino ·{" "}
+                    {provincialNotices.data.items.length} bid notices posted 2025
+                  </p>
+                </div>
+                <div className="proj-amount">
+                  <span className="proj-amount-label">Amount</span>
+                  <span className="proj-amount-none">Amount not published</span>
+                </div>
               </div>
-
-              <h2 className="proj-name">
-                Six provincially advertised bid notices naming Maddela barangays
-              </h2>
-              <p className="proj-blurb">{provincialNotices.data.summary}</p>
-
-              <Chips
-                items={provincialNotices.data.items.map(
-                  (item) => `${item.location.replace(", Maddela", "")} · posted ${item.postedAt}`,
-                )}
-              />
 
               <div className="proj-track-wrap">
                 <StageTrack stage={provincialNotices.data.stage} />
-                <p className="proj-context proj-context--muted">
-                  {provincialNotices.data.limitations}
-                </p>
               </div>
+
+              <details className="proj-details">
+                <summary>Record detail &amp; limitations</summary>
+                <div className="proj-detail-body">
+                  <p>{provincialNotices.data.summary}</p>
+                  <ul className="proj-item-list">
+                    {provincialNotices.data.items.map((item) => (
+                      <li key={item.title}>
+                        <strong>{item.title}</strong> — posted {item.postedAt}
+                      </li>
+                    ))}
+                  </ul>
+                  <p>
+                    <strong>Limitations:</strong> {provincialNotices.data.limitations}
+                  </p>
+                </div>
+              </details>
 
               <div className="proj-footer">
                 <RecordMeta record={provincialNotices} />
@@ -331,7 +398,12 @@ export default function ProjectsPage() {
                 </a>
               </div>
             </article>
-          </Reveal>
+
+            <p className="proj-unpublished" data-reveal>
+              Not yet tracked here: DPWH, SubayBAYAN and municipal works listings —
+              unpublished at their sources.
+            </p>
+          </BoardMotion>
         </div>
       </section>
     </>
