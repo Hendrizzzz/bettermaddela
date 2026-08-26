@@ -830,10 +830,10 @@
 }
 
 /* ======================================================================
-   Government structure chart (govt-) — /government structure explainer.
-   Vertical org-chart flow: context strip → executive → legislature →
-   line offices → barangays, joined by connector lines. Tokens only
-   (Golden Hour closed palette); see scripts/check-design-tokens.mjs.
+   Government structure diagram (govt-) — /government.
+   Nodes + connector lines, Linear/Stripe-style: a node carries a role
+   label, an incumbent's name, and a verified date — nothing else.
+   Tokens only (Golden Hour closed palette); see scripts/check-design-tokens.mjs.
    ====================================================================== */
 .govt-structure-section {
   background: var(--color-bg);
@@ -842,18 +842,18 @@
   max-width: 62rem;
   margin: 0 auto;
 }
+
+/* Context strip: Republic → Quirino → Maddela */
 .govt-context {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: var(--spacing-xs);
-  padding: var(--spacing-sm) var(--spacing-lg);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--surface-muted);
+  margin-bottom: var(--spacing-lg);
   color: var(--muted);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
 }
 .govt-context-item--here {
   color: var(--ink);
@@ -863,108 +863,133 @@
   color: var(--line);
 }
 
-/* Connector lines between tiers; GSAP draws them in via scaleY. */
+/* Connector lines; GSAP draws them via scaleY from the top. */
 .govt-link-line {
+  display: block;
   width: 2px;
-  height: 2rem;
+  height: 1.75rem;
   margin: 0 auto;
-  border-radius: 2px;
+  border-radius: 1px;
+  background: var(--brand);
+  opacity: 0.45;
+  transform-origin: top center;
+}
+.govt-link-line--solo {
+  margin: var(--spacing-md) auto;
+}
+/* Fork under the mayor: horizontal rail + two drops onto the branch nodes */
+.govt-fork-rail {
+  position: relative;
+  height: 1.75rem;
+}
+.govt-fork-rail::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 25%;
+  right: 25%;
+  height: 2px;
   background: var(--brand);
   opacity: 0.45;
 }
-
-.govt-tier-heading {
-  margin: 0 0 var(--spacing-sm);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-align: center;
-  color: var(--muted);
+.govt-link-line--drop {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  margin: 0;
 }
-.govt-tier-split-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
-  gap: var(--spacing-md);
-  align-items: stretch;
+.govt-link-line--drop-l {
+  left: calc(25% - 1px);
+}
+.govt-link-line--drop-r {
+  left: calc(75% - 1px);
+}
+/* Mobile-only vertical stem between stacked branches */
+.govt-link-line--m-stem {
+  display: none;
 }
 
-.govt-card {
-  display: block;
-  padding: var(--spacing-lg);
+/* Nodes: role label + name/date, nothing else */
+.govt-node {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: var(--surface);
   box-shadow: var(--shadow);
-  color: inherit;
-  text-decoration: none;
 }
-.govt-card--mayor {
-  max-width: 34rem;
-  margin: 0 auto;
-  border-top: 4px solid var(--accent);
-}
-.govt-card-title {
+.govt-node-role {
   margin: 0 0 var(--spacing-xs);
-  font-size: 1.25rem;
+  font-size: 0.6875rem;
   font-weight: 700;
-  color: var(--ink);
-}
-.govt-card-role {
-  margin: 0 0 var(--spacing-xs);
-  color: var(--ink);
-}
-.govt-card-term {
-  margin: 0 0 var(--spacing-sm);
-  font-size: 0.875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--muted);
 }
-a.govt-card--barangay:hover,
-a.govt-card--barangay:focus-visible {
+.govt-node-name {
+  margin: 0;
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--ink);
+}
+.govt-node-asof {
+  margin: var(--spacing-xs) 0 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.govt-node--mayor {
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+  border-top: 4px solid var(--accent);
+  text-align: center;
+}
+.govt-node--mayor .govt-node-name {
+  font-size: 1.75rem;
+}
+.govt-node--vice,
+.govt-node--sb {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+a.govt-node--barangay {
+  display: block;
+  max-width: 30rem;
+  margin: 0 auto;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+a.govt-node--barangay:hover,
+a.govt-node--barangay:focus-visible {
   border-color: var(--brand);
 }
-.govt-card-cta {
-  display: block;
-  margin-top: var(--spacing-sm);
-  font-weight: 700;
-  color: var(--brand);
-}
-a.govt-card:focus-visible {
+a.govt-node:focus-visible {
   outline: 3px solid var(--brand);
   outline-offset: 3px;
 }
 
-/* Verified incumbent treatment */
-.govt-incumbent {
-  margin: 0;
-}
-.govt-incumbent-name {
-  display: block;
-  font-weight: 700;
-  color: var(--ink);
-}
-.govt-incumbent-asof {
-  font-size: 0.875rem;
-  color: var(--muted);
-}
-
-/* Designed withheld state — identical treatment on every unverified seat */
-.govt-unverified {
+/* Empty seat marker — dashed square, same language as the SB seat squares */
+.govt-seat-empty {
   display: inline-block;
-  padding: 0.25rem 0.625rem;
-  border: 1px dashed var(--muted);
-  border-radius: 999px;
-  background: var(--surface-muted);
-  color: var(--muted);
-  font-size: 0.8125rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  border: 1.5px dashed var(--muted);
+  border-radius: 0.25rem;
+}
+.govt-seat-empty--lg {
+  width: 2rem;
+  height: 2rem;
 }
 
 /* Sangguniang Bayan composition */
-.govt-seat-row {
+.govt-seats {
   display: flex;
   flex-wrap: wrap;
   gap: 0.375rem;
-  margin: 0 0 var(--spacing-xs);
+  margin: 0 0 var(--spacing-sm);
   padding: 0;
   list-style: none;
 }
@@ -974,85 +999,132 @@ a.govt-card:focus-visible {
   border: 1px solid var(--brand);
   border-radius: 0.25rem;
   background: var(--accent);
-}
-.govt-seats-caption {
-  margin: 0 0 var(--spacing-sm);
-  font-size: 0.8125rem;
-  color: var(--muted);
+  transform-origin: center;
 }
 .govt-exofficio {
   display: grid;
   gap: var(--spacing-xs);
+  width: 100%;
   margin: 0;
   padding: var(--spacing-sm) 0 0;
   list-style: none;
   border-top: 1px solid var(--line);
 }
-.govt-exofficio-seat {
+.govt-exofficio-row {
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: var(--spacing-xs);
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
 }
-.govt-exofficio-title {
+.govt-exofficio-role {
+  font-size: 0.6875rem;
   font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: var(--ink);
 }
-.govt-exofficio-detail {
-  font-size: 0.8125rem;
-  color: var(--muted);
-}
-.govt-exofficio-seat .govt-unverified {
-  flex-basis: 100%;
+
+/* Branch split under the mayor fork */
+.govt-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: var(--spacing-md);
+  align-items: stretch;
 }
 
-/* Line-office chips */
-.govt-office-grid {
+/* Line offices: quiet icon + label tiles */
+.govt-tier-heading {
+  margin: 0 0 var(--spacing-sm);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--muted);
+}
+.govt-offices {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
   gap: var(--spacing-xs);
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.govt-office-chip {
-  padding: 0.5rem 0.75rem;
+.govt-office {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 0.75rem;
   border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface-muted);
+  border-radius: 8px;
+  background: var(--surface);
   color: var(--ink);
   font-size: 0.875rem;
   font-weight: 600;
-  text-align: center;
 }
-.govt-office-note {
-  margin: var(--spacing-sm) 0 0;
-  font-size: 0.8125rem;
-  color: var(--muted);
+.govt-office svg {
+  flex: none;
+  width: 1.125rem;
+  height: 1.125rem;
+  color: var(--brand);
 }
 
-/* Footnote: statutory citation + evidence gate */
+/* Shared legend + statutory footnote */
+.govt-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: var(--spacing-lg) 0 0;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+.govt-legend-swatch {
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 1.5px dashed var(--muted);
+  border-radius: 0.1875rem;
+}
 .govt-footnote {
   max-width: 46rem;
-  margin: var(--spacing-lg) auto 0;
+  margin: var(--spacing-sm) auto 0;
   padding-top: var(--spacing-sm);
   border-top: 1px solid var(--line);
   font-size: 0.8125rem;
   color: var(--muted);
+  text-align: center;
 }
 .govt-footnote p {
-  margin: 0 0 var(--spacing-xs);
+  margin: 0;
 }
-.govt-evidence-note a {
+.govt-footnote a {
   color: var(--brand);
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
 
-/* Mobile-first collapse: tiers stack vertically with the same connectors. */
+/* Mobile: single vertical tree, full-width nodes, left-rail connectors */
 @media (max-width: 900px) {
-  .govt-tier-split-grid {
+  .govt-split {
     grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .govt-fork-rail {
+    display: none;
+  }
+  .govt-link-line--m-stem {
+    display: block;
+    margin: var(--spacing-sm) 0 var(--spacing-sm) 1.5rem;
+  }
+  .govt-link-line,
+  .govt-link-line--solo {
+    margin-left: 1.5rem;
+  }
+  .govt-node--mayor,
+  a.govt-node--barangay {
+    max-width: none;
   }
 }
+
 
