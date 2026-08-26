@@ -40,6 +40,21 @@ shared layout and interaction must have:
 UI changes must report the applicable manual checks immediately. The clean-shell work
 must add the automated accessibility gate before any UI is considered release-ready.
 
+## Glance-first direction (2026-08-26)
+
+Owner-approved product direction lives in
+[`docs/product/UX_PRINCIPLES.md`](product/UX_PRINCIPLES.md). Summary: the primary
+user is a visual learner who glances; every surface leads with one dominant visual
+(big numbers, charts, timelines, org charts, maps) with full detail one click away.
+Motion is GSAP-only and reduced-motion-safe; the closed-token palette stays (no
+shadcn/Tailwind); maps use the Google Maps embed with a privacy disclosure; weather
+is resident utility and must not outrank the transparency spine.
+
+Round 1 surfaces: location story, government-structure org chart, history timeline
+story, and a projects board. Content that still requires evidence collection before
+publication is tracked in that document's research-gated roadmap; missing datasets
+render as designed, honest unavailable states — never placeholders.
+
 ## Non-goals
 
 The MVP does not:

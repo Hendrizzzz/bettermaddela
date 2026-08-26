@@ -35,7 +35,10 @@ const absoluteLocalPathPatterns = [
   /\b[A-Za-z]:[\\/][^\s"'`<>]+/g,
   /(?:^|[\s"'`(])\\\\[^\\\s"'`<>]+\\[^\s"'`<>]+/gm,
   /(?:^|[\s"'`(])\/\/[A-Za-z0-9._-]+\/[A-Za-z0-9$._-]+[^\s"'`<>]*/gm,
-  /\/(?:Users|home|tmp|private\/tmp|var\/tmp)\/[^/\s"'`<>]+(?:\/[^\s"'`<>]+)*/g,
+  // Local-filesystem path leak detector. A lookbehind excludes matches that are
+  // part of a URL (e.g. https://example.com/home/x) so source citations in
+  // research notes are not false positives; genuine paths in prose still match.
+  /(?<![\w:.\-])\/(?:Users|home|tmp|private\/tmp|var\/tmp)\/[^/\s"'`<>]+(?:\/[^\s"'`<>]+)*/g,
 ];
 const forbiddenServiceWorkerPath =
   /(?:^|\/)(?:sw|service-worker)\.(?:js|mjs|ts)$/i;
