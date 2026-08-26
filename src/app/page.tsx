@@ -138,7 +138,8 @@ const homeCopy = {
     barangays: "Barangays",
     municipality: "Municipality",
     households: "Households",
-    weatherLocation: "Weather & Location",
+    whereTitle: "Where is Maddela?",
+    whereIntro: "Three quick steps from country to town.",
     history: "Brief History of Maddela",
     viewHistory: "View national legal history",
     sources: "Sources",
@@ -157,11 +158,20 @@ const homeCopy = {
     correctionsNote: "Report an error or suggest a correction.",
     serviceInformation: "Service Information",
     serviceInformationNote: "Browse categories — verified details remain limited.",
+    stepPhilippines: "Philippines",
+    stepPhilippinesNote: "Luzon island, Cagayan Valley region (Region II)",
+    stepQuirino: "Quirino",
+    stepQuirinoNote: "Maddela is a municipality of Quirino province.",
+    stepMaddela: "Maddela",
+    barangayLabel: "barangays",
+    residentsLabel: "residents",
+    censusLabel: "2024 census",
+    mapTitle: "Embedded Google Maps general view of Maddela, Quirino",
+    mapCaption: "General location view only — not an official boundary.",
+    exploreMap: "Explore on Google Maps",
+    weatherSideLabel: "Weather right now",
     localWeatherContext: "Local station context",
     separateForecast: "Forecast values are provided separately by Open-Meteo.",
-    mapTitle: "General map view around Maddela, Quirino",
-    mapNote: "General location view only; no municipal-hall pin or cadastral boundary is claimed.",
-    exploreMap: "Explore Maddela on OpenStreetMap",
     incomeClassSuffix: "Class",
     maddelaToday: "Maddela today",
   },
@@ -181,7 +191,8 @@ const homeCopy = {
     barangays: "Mga Barangay",
     municipality: "Munisipalidad",
     households: "Mga Sambahayan",
-    weatherLocation: "Panahon at Lokasyon",
+    whereTitle: "Nasaan ang Maddela?",
+    whereIntro: "Tatlong mabilis na hakbang mula bansa hanggang bayan.",
     history: "Maikling Kasaysayan ng Maddela",
     viewHistory: "Tingnan ang pambansang legal na kasaysayan",
     sources: "Mga Sanggunian",
@@ -200,11 +211,20 @@ const homeCopy = {
     correctionsNote: "Mag-ulat ng mali o imungkahi ang pagwawasto.",
     serviceInformation: "Impormasyon sa Serbisyo",
     serviceInformationNote: "Tingnan ang mga kategorya — limitado pa ang beripikadong detalye.",
+    stepPhilippines: "Pilipinas",
+    stepPhilippinesNote: "Isla ng Luzon, rehiyon ng Lambak Cagayan (Rehiyon II)",
+    stepQuirino: "Quirino",
+    stepQuirinoNote: "Ang Maddela ay isang munisipalidad ng lalawigan ng Quirino.",
+    stepMaddela: "Maddela",
+    barangayLabel: "mga barangay",
+    residentsLabel: "na residente",
+    censusLabel: "senso ng 2024",
+    mapTitle: "Pangkalahatang tanaw ng naka-embed na Google Maps sa Maddela, Quirino",
+    mapCaption: "Pangkalahatang lokasyon lamang — hindi opisyal na hangganan.",
+    exploreMap: "Tingnan ang Maddela sa Google Maps",
+    weatherSideLabel: "Panahon ngayon",
     localWeatherContext: "Lokal na konteksto ng istasyon",
     separateForecast: "Hiwalay na ibinibigay ng Open-Meteo ang mga forecast value.",
-    mapTitle: "Pangkalahatang mapa sa paligid ng Maddela, Quirino",
-    mapNote: "Pangkalahatang lokasyon lamang; walang inaangking pin ng munisipyo o hangganang kadastral.",
-    exploreMap: "Tingnan ang Maddela sa OpenStreetMap",
     incomeClassSuffix: "Klase",
     maddelaToday: "Ang Maddela ngayon",
   },
@@ -244,14 +264,16 @@ export default function HomePage() {
   const municipalLeaders = leadership.data.leaders.filter(
     (leader) => leader.scope === "Municipality of Maddela",
   );
-  const mapBbox = [
-    weather.data.forecastPoint.longitude - 0.035,
-    weather.data.forecastPoint.latitude - 0.03,
-    weather.data.forecastPoint.longitude + 0.035,
-    weather.data.forecastPoint.latitude + 0.03,
-  ]
-    .map((value) => value.toFixed(4))
-    .join(",");
+  const locationSteps = [
+    { name: copy.stepPhilippines, detail: copy.stepPhilippinesNote },
+    { name: copy.stepQuirino, detail: copy.stepQuirinoNote },
+    {
+      name: copy.stepMaddela,
+      detail: `${barangays.data.barangayCount} ${copy.barangayLabel} · ${population.data.population.toLocaleString(
+        language === "fil" ? "fil-PH" : "en-PH",
+      )} ${copy.residentsLabel} (${copy.censusLabel})`,
+    },
+  ];
 
   return (
     <>
@@ -356,23 +378,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Weather & Map */}
+      {/* Where is Maddela? */}
       <section className="section weather-map-section">
         <div className="container">
           <div className="home-stats-v2-header">
-            <h2>{copy.weatherLocation}</h2>
+            <h2>{copy.whereTitle}</h2>
           </div>
-          <div className="weather-map-grid">
-            <div className="weather-column">
-              <div id="weather-container" aria-live="polite">
-                <LiveWeather config={weather.data} />
-              </div>
-            </div>
+          <p className="location-intro">{copy.whereIntro}</p>
+          <ol className="location-story">
+            {locationSteps.map((step, index) => (
+              <li key={step.name}>
+                <Reveal delay={index * 0.12}>
+                  <article className={`location-step${index < locationSteps.length - 1 ? " location-step--linked" : ""}`}>
+                    <span className="location-step-number" aria-hidden="true">{index + 1}</span>
+                    <h3>{step.name}</h3>
+                    <p>{step.detail}</p>
+                  </article>
+                </Reveal>
+              </li>
+            ))}
+          </ol>
+          <div className="location-detail-grid">
             <div className="map-column">
               <div className="map-card">
                 <div id="map-container" role="region" aria-label={copy.mapTitle} data-map-loaded="iframe">
                   <iframe
-                    src={`https://www.openstreetmap.org/export/embed.html?bbox=${encodeURIComponent(mapBbox)}&layer=mapnik`}
+                    src="https://www.google.com/maps?q=Maddela%2C+Quirino%2C+Philippines&output=embed"
                     className="map-iframe"
                     title={copy.mapTitle}
                     loading="lazy"
@@ -381,13 +412,21 @@ export default function HomePage() {
                 <div className="map-attribution">
                   <i className="bi bi-geo-alt" aria-hidden="true" />
                   <span>
-                    <a href={weather.data.map.searchUrl} target="_blank" rel="noreferrer">{copy.exploreMap}</a>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Maddela%2C+Quirino%2C+Philippines" target="_blank" rel="noreferrer">{copy.exploreMap}</a>
                     <span className="map-attribution-separator" aria-hidden="true"> · </span>
-                    <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">{weather.data.map.attribution}</a>
+                    {copy.mapCaption}
                   </span>
                 </div>
               </div>
             </div>
+            <aside className="location-weather-column">
+              <p className="location-weather-label">
+                <i className="bi bi-cloud-sun" aria-hidden="true" /> {copy.weatherSideLabel}
+              </p>
+              <div id="weather-container" className="location-weather-card" aria-live="polite">
+                <LiveWeather config={weather.data} />
+              </div>
+            </aside>
           </div>
           <div className="weather-map-notes">
             <p>
@@ -397,7 +436,6 @@ export default function HomePage() {
                 PAGASA {weather.data.pagasaStation.name} (site {weather.data.pagasaStation.siteId})
               </a>. {copy.separateForecast}
             </p>
-            <p><i className="bi bi-map" aria-hidden="true" /> {copy.mapNote}</p>
           </div>
         </div>
       </section>

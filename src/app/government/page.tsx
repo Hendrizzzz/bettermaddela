@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHeader from "@/components/layout/PageHeader";
+import StructureChart from "@/components/government/StructureChart";
 import { RecordMeta, RecordMetaGroup } from "@/components/RecordMeta";
 import { getRecord } from "@/data/civic";
 import { slugify } from "@/lib/slugify";
@@ -50,12 +51,33 @@ export const metadata: Metadata = {
 };
 
 export default function GovernmentPage() {
+  // The structure chart shows a name ONLY for roles present in the reviewed
+  // leadership snapshot; every other seat renders a withheld state.
+  const mayor = leadershipRecord.data.leaders.find(
+    (leader) => leader.title === "Municipal Mayor",
+  );
+
   return (
     <>
       <PageHeader
         title="Government Structure & Officials"
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Government" }]}
       />
+
+      <section className="section govt-structure-section">
+        <div className="container">
+          <div className="text-center" style={{ marginBottom: "var(--spacing-xl)" }}>
+            <h2>How a municipality is structured</h2>
+            <p style={{ color: "var(--color-text-light)" }}>
+              Who does what, and who reports to whom — under the Local Government Code
+              (RA 7160), shown with Maddela&rsquo;s verified incumbents where they exist.
+            </p>
+          </div>
+          <StructureChart
+            mayor={mayor ? { name: mayor.name, asOf: mayor.asOf } : null}
+          />
+        </div>
+      </section>
 
       <section className="section" style={{ background: "var(--color-bg-alt)" }}>
         <div className="container">

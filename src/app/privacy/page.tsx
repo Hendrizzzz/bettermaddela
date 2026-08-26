@@ -49,7 +49,7 @@ export default function PrivacyPage() {
               <section id="third-parties" className="legal-section">
                 <h2>Third-Party Resources</h2>
                 <p>The interface requests the Inter font stylesheet from Google Fonts and Bootstrap Icons from jsDelivr. Those providers may receive ordinary network information under their own privacy policies.</p>
-                <p>The homepage requests model-forecast data directly from Open-Meteo and embeds a general-location map from OpenStreetMap. Those providers may receive ordinary request information such as an IP address, browser details, and the requested forecast point or map area. BetterMaddela does not send a user-entered location to either service.</p>
+                <p>The homepage requests model-forecast data directly from Open-Meteo and loads an embedded Google Maps view showing Maddela's general location within Quirino and the Philippines. When the embedded map loads, Google may receive ordinary request information such as your IP address and browser details, and handles it under its own <a href="https://policies.google.com/">privacy policy and terms <i className="bi bi-box-arrow-up-right" aria-hidden="true" /></a>. BetterMaddela does not send a user-entered location to either service.</p>
                 <p>Links to PSA, PHLPost, LawPhil, GitHub, and other sources leave BetterMaddela and are governed by those services.</p>
                 <div className="legal-note"><i className="bi bi-info-circle" aria-hidden="true" /><p>External references are provided for evidence and convenience; BetterMaddela does not control their content or privacy practices.</p></div>
               </section>
