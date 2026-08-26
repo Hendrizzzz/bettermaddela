@@ -124,38 +124,47 @@ const serviceCategories = [
 const homeCopy = {
   en: {
     heroKicker: "Maddela, Quirino",
+    heroEyebrow: "Independent portal — not the LGU",
+    heroIntroEm: "Civic information — public-source records for Maddela, Quirino.",
     welcome: "Welcome to BetterMaddela",
-    introduction: "Civic information and public-source records for Maddela, Quirino.",
+    introduction: "Civic information — public-source records for Maddela, Quirino.",
     browseServices: "Browse Services",
     contactInformation: "Contact Information",
     serviceCategories: "Service Categories",
+    serviceKicker: "Directory — Services",
     serviceNotice: "Requirements and fees not yet verified — confirm with the office.",
     viewAllServices: "View All Services",
     browseDirectory: "Browse the service directory",
     atAGlance: "Maddela at a Glance",
+    atAGlanceKicker: "By the numbers — Maddela at a glance",
     viewStatistics: "View Statistics",
     population: "Population",
     barangays: "Barangays",
     municipality: "Municipality",
     households: "Households",
     whereTitle: "Where is Maddela?",
-    whereIntro: "Three quick steps from country to town.",
+    whereKicker: "Location — Three steps",
+    whereIntro: "Three quick steps — from country to town.",
     history: "Brief History of Maddela",
+    historyKicker: "History — Local narrative & law",
     viewHistory: "View national legal history",
     sources: "Sources",
-    historySourceNote: "Local tradition and documented legal milestones are identified separately.",
+    historySourceNote: "Local tradition and documented legal milestones — identified separately.",
     readMore: "Read more",
     updates: "Latest Updates",
+    updatesKicker: "Notices — From verified publishers",
     viewUpdates: "View All",
     leadership: "Municipal Leadership",
+    leadershipKicker: "Government — Current observations",
     viewGovernment: "View Government",
     asOf: "As of",
     contact: "Contact Information",
+    contactKicker: "Connect — Sources & corrections",
     viewAll: "View All",
     sourceDirectory: "Source Directory",
-    sourceDirectoryNote: "Evidence and review dates behind every figure.",
+    sourceDirectoryNote: "Evidence and review dates — behind every figure.",
     corrections: "Contact & Corrections",
-    correctionsNote: "Report an error or suggest a correction.",
+    correctionsNote: "Report an error — or suggest a correction.",
     serviceInformation: "Service Information",
     serviceInformationNote: "Browse categories — verified details remain limited.",
     stepPhilippines: "Philippines",
@@ -174,41 +183,55 @@ const homeCopy = {
     separateForecast: "Forecast values are provided separately by Open-Meteo.",
     incomeClassSuffix: "Class",
     maddelaToday: "Maddela today",
+    verifiedBadge: "Verified",
+    censusBadge: "2024 POPCEN",
+    barangayBadge: "32 barangays",
+    incomeBadge: "PSGC 0205704000",
+    weatherBadge: "Open-Meteo + PAGASA",
   },
   fil: {
     heroKicker: "Maddela, Quirino",
+    heroEyebrow: "Independent portal — hindi ito ang LGU",
+    heroIntroEm: "Impormasyong sibiko — mga rekord mula sa pampublikong sanggunian para sa Maddela, Quirino.",
     welcome: "Maligayang pagdating sa BetterMaddela",
-    introduction: "Impormasyong sibiko at mga rekord mula sa pampublikong sanggunian para sa Maddela, Quirino.",
+    introduction: "Impormasyong sibiko — mga rekord mula sa pampublikong sanggunian para sa Maddela, Quirino.",
     browseServices: "Tingnan ang mga Serbisyo",
     contactInformation: "Impormasyon sa Pakikipag-ugnayan",
     serviceCategories: "Mga Kategorya ng Serbisyo",
+    serviceKicker: "Direktoryo — Mga Serbisyo",
     serviceNotice: "Hindi pa beripikado ang mga requirements at bayarin — kumpirmahin sa tanggapan.",
     viewAllServices: "Tingnan ang Lahat ng Serbisyo",
     browseDirectory: "Tingnan ang direktoryo ng serbisyo",
     atAGlance: "Maddela sa Isang Tingin",
+    atAGlanceKicker: "Sa mga numero — Maddela sa isang tingin",
     viewStatistics: "Tingnan ang Estadistika",
     population: "Populasyon",
     barangays: "Mga Barangay",
     municipality: "Munisipalidad",
     households: "Mga Sambahayan",
     whereTitle: "Nasaan ang Maddela?",
-    whereIntro: "Tatlong mabilis na hakbang mula bansa hanggang bayan.",
+    whereKicker: "Lokasyon — Tatlong hakbang",
+    whereIntro: "Tatlong mabilis na hakbang — mula bansa hanggang bayan.",
     history: "Maikling Kasaysayan ng Maddela",
+    historyKicker: "Kasaysayan — Salaysay at batas",
     viewHistory: "Tingnan ang pambansang legal na kasaysayan",
     sources: "Mga Sanggunian",
-    historySourceNote: "Magkahiwalay na tinutukoy ang lokal na salaysay at dokumentadong legal na pangyayari.",
+    historySourceNote: "Magkahiwalay na tinutukoy — ang lokal na salaysay at dokumentadong legal na pangyayari.",
     readMore: "Basahin pa",
     updates: "Pinakabagong Update",
+    updatesKicker: "Mga Abiso — Mula sa beripikadong publisher",
     viewUpdates: "Tingnan Lahat",
     leadership: "Pamunuan ng Munisipalidad",
+    leadershipKicker: "Pamahalaan — Kasalukuyang obsebasyon",
     viewGovernment: "Tingnan ang Pamahalaan",
     asOf: "Mula noong",
     contact: "Impormasyon sa Pakikipag-ugnayan",
+    contactKicker: "Ugnayan — Mga sanggunian at pagwawasto",
     viewAll: "Tingnan Lahat",
     sourceDirectory: "Direktoryo ng mga Sanggunian",
-    sourceDirectoryNote: "Ebidensya at petsa ng pagsusuri sa likod ng bawat bilang.",
+    sourceDirectoryNote: "Ebidensya at petsa ng pagsusuri — sa likod ng bawat bilang.",
     corrections: "Ugnayan at Pagwawasto",
-    correctionsNote: "Mag-ulat ng mali o imungkahi ang pagwawasto.",
+    correctionsNote: "Mag-ulat ng mali — o imungkahi ang pagwawasto.",
     serviceInformation: "Impormasyon sa Serbisyo",
     serviceInformationNote: "Tingnan ang mga kategorya — limitado pa ang beripikadong detalye.",
     stepPhilippines: "Pilipinas",
@@ -227,6 +250,11 @@ const homeCopy = {
     separateForecast: "Hiwalay na ibinibigay ng Open-Meteo ang mga forecast value.",
     incomeClassSuffix: "Klase",
     maddelaToday: "Ang Maddela ngayon",
+    verifiedBadge: "Beripikado",
+    censusBadge: "2024 POPCEN",
+    barangayBadge: "32 barangay",
+    incomeBadge: "PSGC 0205704000",
+    weatherBadge: "Open-Meteo + PAGASA",
   },
 } as const;
 
@@ -277,14 +305,15 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero Section */}
+      {/* Hero Section — Allen hero translation: kicker + H1 double label, em dash intro, search + popular */}
       <section className="home-hero-v2">
         <div className="container">
           <div className="home-hero-v2-inner">
             <div className="home-hero-v2-text">
+              <p className="section-kicker" style={{ color: "#f5b301" }}>{copy.heroEyebrow}</p>
               <p className="home-hero-kicker">{copy.heroKicker}</p>
               <h1>{copy.welcome}</h1>
-              <p>{copy.introduction}</p>
+              <p>{copy.heroIntroEm}</p>
               <div className="home-hero-v2-actions">
                 <Link href="/services" className="btn btn-primary">
                   {copy.browseServices} <i className="bi bi-arrow-right" aria-hidden="true"></i>
@@ -292,6 +321,11 @@ export default function HomePage() {
                 <Link href="/contact" className="btn btn-outline">
                   {copy.contactInformation}
                 </Link>
+              </div>
+              <div style={{ marginTop: 12, display: "flex", gap: 8, flexWrap: "wrap" }}>
+                <span className="pill pill--accent">01 — Services</span>
+                <span className="pill pill--muted">02 — Government</span>
+                <span className="pill pill--muted">03 — Statistics</span>
               </div>
             </div>
             <div className="home-hero-v2-search">
@@ -301,28 +335,34 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Service Categories */}
-      <section className="section">
+      {/* Service Categories — template flow: hairline + double label + numbered markers + pills + em dash copy */}
+      <section className="section section--allen">
         <div className="container">
           <div className="home-section-header">
             <div>
+              <p className="section-kicker">{copy.serviceKicker}</p>
               <h2>{copy.serviceCategories}</h2>
               <p>{copy.serviceNotice}</p>
             </div>
           </div>
+          <div className="section-header-rule" aria-hidden="true" />
           <div className="home-services-grid">
-            {serviceCategories.map((service) => (
-              <Link key={service.href} href={service.href} className="home-service-card">
+            {serviceCategories.map((service, idx) => (
+              <Link key={service.href} href={service.href} className="home-service-card hairline-top">
                 <div className="home-service-content">
+                  <span className="number-marker" aria-hidden="true">{String(idx + 1).padStart(2, "0")}</span>
                   <i className={`bi ${service.icon} home-service-icon`} aria-hidden="true"></i>
                   <h3>{service.title[language]}</h3>
+                  <span className="pill pill--muted" style={{ marginTop: 6 }}>{String(idx + 1).padStart(2, "0")} · {service.title.en}</span>
                 </div>
                 <i className="bi bi-arrow-right home-service-arrow" aria-hidden="true"></i>
               </Link>
             ))}
-            <Link href="/services" className="home-service-card home-service-card--all">
+            <Link href="/services" className="home-service-card home-service-card--all hairline-top">
               <div className="home-service-content">
+                <span className="number-marker number-marker--accent" aria-hidden="true">{String(serviceCategories.length + 1).padStart(2, "0")}</span>
                 <h3>{copy.viewAllServices}</h3>
+                <span className="pill" style={{ marginTop: 6, background: "rgba(255,255,255,0.18)", color: "#ffffff", borderColor: "rgba(255,255,255,0.35)" }}>{String(serviceCategories.length + 1).padStart(2, "0")} — View all</span>
               </div>
               <i className="bi bi-arrow-right home-service-arrow" aria-hidden="true"></i>
             </Link>
@@ -330,47 +370,59 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Quick Stats */}
-      <section className="home-stats-v2">
+      {/* Quick Stats — double label + hairline + numbered + data reputation pills + em dashes */}
+      <section className="home-stats-v2 section--allen">
         <div className="container">
           <div className="home-stats-v2-header">
-            <h2>{copy.atAGlance}</h2>
+            <div>
+              <p className="section-kicker">{copy.atAGlanceKicker}</p>
+              <h2>{copy.atAGlance}</h2>
+            </div>
             <Link href="/statistics" className="home-section-link">
               {copy.viewStatistics} <i className="bi bi-arrow-right" aria-hidden="true"></i>
             </Link>
           </div>
+          <div className="section-header-rule" aria-hidden="true" />
           <div className="home-stats-v2-grid">
             <Reveal delay={0}>
-              <Link href="/statistics" className="home-stat-card">
+              <Link href="/statistics" className="home-stat-card hairline-top">
                 <div className="home-stat-card-content">
+                  <span className="pill pill--success" style={{ marginBottom: 8 }}>01 — {copy.censusBadge}</span>
                   <span className="home-stat-card-value">
                     {population.data.population.toLocaleString("en-PH")}
                   </span>
-                  <span className="home-stat-card-label">{copy.population}</span>
+                  <span className="home-stat-card-label">{copy.population} — {copy.censusLabel}</span>
+                  <span className="pill pill--muted" style={{ marginTop: 8 }}>{copy.verifiedBadge} · 2024</span>
                 </div>
               </Link>
             </Reveal>
             <Reveal delay={0.08}>
-              <Link href="/statistics" className="home-stat-card">
+              <Link href="/statistics" className="home-stat-card hairline-top">
                 <div className="home-stat-card-content">
+                  <span className="pill pill--accent" style={{ marginBottom: 8 }}>02 — {copy.barangayBadge}</span>
                   <span className="home-stat-card-value">{barangays.data.barangayCount}</span>
-                  <span className="home-stat-card-label">{copy.barangays}</span>
+                  <span className="home-stat-card-label">{copy.barangays} — PSGC verified</span>
+                  <span className="pill pill--muted" style={{ marginTop: 8 }}>{copy.verifiedBadge} · 2024</span>
                 </div>
               </Link>
             </Reveal>
             <Reveal delay={0.16}>
-              <Link href="/statistics" className="home-stat-card">
+              <Link href="/statistics" className="home-stat-card hairline-top">
                 <div className="home-stat-card-content">
+                  <span className="pill pill--muted" style={{ marginBottom: 8 }}>03 — {copy.incomeBadge}</span>
                   <span className="home-stat-card-value">{identity.data.incomeClass} {copy.incomeClassSuffix}</span>
-                  <span className="home-stat-card-label">{copy.municipality}</span>
+                  <span className="home-stat-card-label">{copy.municipality} — 1st Class</span>
+                  <span className="pill pill--muted" style={{ marginTop: 8 }}>{copy.verifiedBadge} · PSGC</span>
                 </div>
               </Link>
             </Reveal>
             <Reveal delay={0.24}>
-              <Link href="/statistics" className="home-stat-card">
+              <Link href="/statistics" className="home-stat-card hairline-top">
                 <div className="home-stat-card-content">
+                  <span className="pill pill--muted" style={{ marginBottom: 8 }}>04 — Households</span>
                   <span className="home-stat-card-value">{households.data.numberOfHouseholds.toLocaleString("en-PH")}</span>
-                  <span className="home-stat-card-label">{copy.households}</span>
+                  <span className="home-stat-card-label">{copy.households} — {copy.censusLabel}</span>
+                  <span className="pill pill--muted" style={{ marginTop: 8 }}>{copy.verifiedBadge} · 2024</span>
                 </div>
               </Link>
             </Reveal>
@@ -378,20 +430,25 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Where is Maddela? */}
-      <section className="section weather-map-section">
+      {/* Where is Maddela? — double label + hairline + numbered 01 — with em dashes */}
+      <section className="section weather-map-section section--allen">
         <div className="container">
           <div className="home-stats-v2-header">
-            <h2>{copy.whereTitle}</h2>
+            <div>
+              <p className="section-kicker">{copy.whereKicker}</p>
+              <h2>{copy.whereTitle}</h2>
+            </div>
+            <span className="pill pill--muted">01 — Philippines · 02 — Quirino · 03 — Maddela</span>
           </div>
           <p className="location-intro">{copy.whereIntro}</p>
+          <div className="section-header-rule" aria-hidden="true" />
           <ol className="location-story">
             {locationSteps.map((step, index) => (
               <li key={step.name}>
                 <Reveal delay={index * 0.12}>
-                  <article className={`location-step${index < locationSteps.length - 1 ? " location-step--linked" : ""}`}>
-                    <span className="location-step-number" aria-hidden="true">{index + 1}</span>
-                    <h3>{step.name}</h3>
+                  <article className={`location-step hairline-top${index < locationSteps.length - 1 ? " location-step--linked" : ""}`}>
+                    <span className="number-marker number-marker--accent" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+                    <h3>{String(index + 1).padStart(2, "0")} — {step.name}</h3>
                     <p>{step.detail}</p>
                   </article>
                 </Reveal>
@@ -440,25 +497,30 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Brief History of Maddela */}
-      <section className="section history-section">
+      {/* Brief History of Maddela — double label + hairline + numbered + em dashes + pills */}
+      <section className="section history-section section--allen">
         <div className="container">
           <div className="home-stats-v2-header">
-            <h2>
-              {copy.history}
-            </h2>
+            <div>
+              <p className="section-kicker">{copy.historyKicker}</p>
+              <h2>
+                {copy.history}
+              </h2>
+            </div>
             <Link href="/legal-history" className="home-section-link">
               {copy.viewHistory} <i className="bi bi-arrow-right" aria-hidden="true"></i>
             </Link>
           </div>
+          <div className="section-header-rule" aria-hidden="true" />
           <div className="history-content">
             <div className="history-timeline">
-              {history.data.sections.map((section) => (
+              {history.data.sections.map((section, idx) => (
                 <div className={`timeline-item timeline-item--${section.kind}`} data-year={section.period} key={`${section.period}-${section.title}`}>
                   <div className="timeline-marker" />
-                  <div className="timeline-content" lang="en">
-                    <span className="timeline-year">{section.period}</span>
-                    <p><strong>{section.title}</strong></p>
+                  <div className="timeline-content hairline-top" lang="en">
+                    <span className="pill pill--muted" style={{ marginBottom: 6 }}>{String(idx + 1).padStart(2, "0")} — {section.period}</span>
+                    <span className="timeline-year" style={{ marginLeft: 6 }}>{section.period}</span>
+                    <p><strong>{section.title}</strong> — {section.kind}</p>
                     <details className="timeline-more">
                       <summary>{copy.readMore}<span className="sr-only"> — {section.title}</span></summary>
                       <p>{section.text}</p>
@@ -469,9 +531,10 @@ export default function HomePage() {
               <p className="history-publication-note">{copy.historySourceNote} <Link href="/sources">{copy.sources}</Link></p>
             </div>
             <div className="history-summary">
-              {community.data.themes.slice(0, 2).map((theme) => (
-                <div className="history-card" key={theme.label} lang="en">
+              {community.data.themes.slice(0, 2).map((theme, idx) => (
+                <div className="history-card hairline-top" key={theme.label} lang="en">
                   <div className="history-card-content">
+                    <span className="pill pill--muted" style={{ marginBottom: 6 }}>{String(idx + 1).padStart(2, "0")} · {theme.label}</span>
                     <h3>{theme.label}</h3>
                     <details className="history-card-more">
                       <summary>{copy.readMore}<span className="sr-only"> — {theme.label}</span></summary>
@@ -480,9 +543,10 @@ export default function HomePage() {
                   </div>
                 </div>
               ))}
-              <div className="history-card history-card--overview" lang="en">
+              <div className="history-card history-card--overview hairline-top" lang="en">
                 <div className="history-card-content">
-                  <h3>{copy.maddelaToday}</h3>
+                  <span className="pill pill--accent" style={{ marginBottom: 6 }}>03 — {copy.maddelaToday}</span>
+                  <h3>{copy.maddelaToday} — Maddela today</h3>
                   <details className="history-card-more">
                     <summary>{copy.readMore}<span className="sr-only"> — {copy.maddelaToday}</span></summary>
                     <p>{community.data.summary}</p>
@@ -494,26 +558,31 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Latest Updates */}
-      <section className="section">
+      {/* Latest Updates — double label + hairline + pills + data reputation */}
+      <section className="section section--allen">
         <div className="container">
           <div className="home-section-header">
-            <h2>{copy.updates}</h2>
+            <div>
+              <p className="section-kicker">{copy.updatesKicker}</p>
+              <h2>{copy.updates}</h2>
+            </div>
             <Link href="/news" className="home-section-link">
               {copy.viewUpdates} <i className="bi bi-arrow-right" aria-hidden="true"></i>
             </Link>
           </div>
+          <div className="section-header-rule" aria-hidden="true" />
           {updates.length > 0 && (
             <div className={`home-news-grid home-news-grid--${updates.length}`}>
-              {updates.map((item) => (
-                <article className="home-news-card" key={item.id} lang="en">
+              {updates.map((item, idx) => (
+                <article className="home-news-card hairline-top" key={item.id} lang="en">
                   <div className="home-news-meta">
-                    <span className={`home-news-badge ${updateBadgeClass(item.category)}`}>{item.category}</span>
-                    <time className="home-news-date" dateTime={item.publishedAt}>{formatDate(item.publishedAt, language)}</time>
+                    <span className="pill pill--muted">{String(idx + 1).padStart(2, "0")} — {item.category}</span>
+                    <span className={`home-news-badge ${updateBadgeClass(item.category)}`} style={{ marginLeft: 6 }}>{item.category}</span>
+                    <time className="home-news-date" dateTime={item.publishedAt} style={{ marginLeft: "auto" }}>{formatDate(item.publishedAt, language)}</time>
                   </div>
                   <h3><a href={item.canonicalUrl} target="_blank" rel="noreferrer">{item.headline}</a></h3>
                   <p className="home-news-summary">{item.summary}</p>
-                  <p className="home-news-publisher">{item.publisher}</p>
+                  <p className="home-news-publisher">{item.publisher} — {formatDate(item.publishedAt, language)}</p>
                 </article>
               ))}
             </div>
@@ -521,23 +590,30 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Municipal Leadership */}
-      <section className="section home-leadership-section">
+      {/* Municipal Leadership — triple label (eyebrow + name + pill), hairline, numbered, em dashes */}
+      <section className="section home-leadership-section section--allen">
         <div className="container">
           <div className="home-section-header">
-            <h2>{copy.leadership}</h2>
+            <div>
+              <p className="section-kicker">{copy.leadershipKicker}</p>
+              <h2>{copy.leadership}</h2>
+              <p style={{ color: "var(--color-text-light)", margin: 0 }}>Elected leadership — verified scope and dates, with provenance one click away.</p>
+            </div>
             <Link href="/government" className="home-section-link">
               {copy.viewGovernment} <i className="bi bi-arrow-right" aria-hidden="true"></i>
             </Link>
           </div>
+          <div className="section-header-rule" aria-hidden="true" />
           {municipalLeaders.length > 0 && (
             <div className={`home-leadership-grid home-leadership-grid--${municipalLeaders.length}`}>
-              {municipalLeaders.map((leader) => (
-                <article className="home-leader-card" key={`${leader.title}-${leader.name}`}>
+              {municipalLeaders.map((leader, idx) => (
+                <article className="home-leader-card hairline-top" key={`${leader.title}-${leader.name}`}>
+                  <span className="pill pill--brand" style={{ marginBottom: 8 }}>{String(idx + 1).padStart(2, "0")} — {leader.title}</span>
                   <div className="home-leader-badge">{leader.title}</div>
                   <h3>{leader.name}</h3>
                   <p className="home-leader-scope">{leader.scope}</p>
-                  <p className="home-leader-as-of">{copy.asOf} <time dateTime={leader.asOf}>{formatDate(leader.asOf, language)}</time></p>
+                  <p className="home-leader-as-of">{copy.asOf} <time dateTime={leader.asOf}>{formatDate(leader.asOf, language)}</time> — {leader.evidenceContext}</p>
+                  <span className="pill pill--success" style={{ marginTop: 8 }}>{copy.verifiedBadge} · {leader.asOf}</span>
                 </article>
               ))}
             </div>
@@ -545,30 +621,37 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Contact Information */}
-      <section className="section">
+      {/* Contact Information — double label + hairline + numbered + em dashes + pills */}
+      <section className="section section--allen">
         <div className="container">
           <div className="home-section-header">
-            <h2>{copy.contact}</h2>
+            <div>
+              <p className="section-kicker">{copy.contactKicker}</p>
+              <h2>{copy.contact}</h2>
+            </div>
             <Link href="/contact" className="home-section-link">
               {copy.viewAll} <i className="bi bi-arrow-right" aria-hidden="true"></i>
             </Link>
           </div>
+          <div className="section-header-rule" aria-hidden="true" />
           <div className="home-contact-v2-grid">
-            <Link href="/sources" className="home-contact-v2-card">
+            <Link href="/sources" className="home-contact-v2-card hairline-top">
               <div className="home-contact-v2-content">
+                <span className="pill pill--muted">01 — Sources</span>
                 <h3>{copy.sourceDirectory}</h3>
                 <p className="home-contact-v2-value">{copy.sourceDirectoryNote}</p>
               </div>
             </Link>
-            <Link href="/contact" className="home-contact-v2-card">
+            <Link href="/contact" className="home-contact-v2-card hairline-top">
               <div className="home-contact-v2-content">
+                <span className="pill pill--accent">02 — Corrections</span>
                 <h3>{copy.corrections}</h3>
                 <p className="home-contact-v2-value">{copy.correctionsNote}</p>
               </div>
             </Link>
-            <Link href="/services" className="home-contact-v2-card">
+            <Link href="/services" className="home-contact-v2-card hairline-top">
               <div className="home-contact-v2-content">
+                <span className="pill pill--muted">03 — Services</span>
                 <h3>{copy.serviceInformation}</h3>
                 <p className="home-contact-v2-value">{copy.serviceInformationNote}</p>
               </div>

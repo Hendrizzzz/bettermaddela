@@ -68,36 +68,49 @@ export default function GovernmentPage() {
     <>
       <PageHeader
         title="Government Structure & Officials"
+        description="Verified incumbents — where the record exists, shown with pill + hairline + numbered markers; elsewhere honestly withheld."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Government" }]}
       />
 
-      <section className="section govt-structure-section">
+      <section className="section govt-structure-section section--allen">
         <div className="container">
           <div className="text-center" style={{ marginBottom: "var(--spacing-xl)" }}>
-            <h2>Government structure</h2>
+            <p className="section-kicker" style={{ justifyContent: "center" }}>Government — Structure</p>
+            <h2>Government structure — Maddela LGU</h2>
+            <div className="section-header-rule" style={{ maxWidth: 320, margin: "12px auto 0" }} aria-hidden="true" />
           </div>
           <StructureChart
             mayor={mayor ? { name: mayor.name, asOf: mayor.asOf } : null}
             viceMayor={viceMayor ? { name: viceMayor.name, asOf: viceMayor.asOf } : null}
             councilors={councilors.map((member) => ({ name: member.name }))}
           />
+          <div style={{ display: "flex", justifyContent: "center", gap: 8, marginTop: 16, flexWrap: "wrap" }}>
+            <span className="pill pill--brand">01 — Mayor</span>
+            <span className="pill pill--muted">02 — Vice Mayor</span>
+            <span className="pill pill--muted">03 — Sangguniang Bayan · 8 seats</span>
+          </div>
         </div>
       </section>
 
-      <section className="section" style={{ background: "var(--color-bg-alt)" }}>
+      <section className="section section--allen" style={{ background: "var(--color-bg-alt)" }}>
         <div className="container">
           <div className="text-center" style={{ marginBottom: "var(--spacing-xl)" }}>
+            <p className="section-kicker" style={{ justifyContent: "center" }}>Government — Current observations</p>
             <h2>Current public observations</h2>
-            <p style={{ color: "var(--color-text-light)" }}>Each role keeps the scope and date stated by its evidence.</p>
+            <p style={{ color: "var(--color-text-light)" }}>Each role keeps the scope and date — stated by its evidence, repeated here and in the chart for glance recognition.</p>
           </div>
+          <div className="section-header-rule" aria-hidden="true" />
           <div className="grid grid-2">
-            {leadershipRecord.data.leaders.map((leader) => (
-              <article className="official-card card" key={`${leader.title}-${leader.name}`}>
+            {leadershipRecord.data.leaders.map((leader, idx) => (
+              <article className="official-card card hairline-top" key={`${leader.title}-${leader.name}`}>
                 <div className="official-info">
+                  <span className="pill pill--muted" style={{ marginBottom: 8 }}>{String(idx + 1).padStart(2, "0")} — {leader.title}</span>
+                  <span className="number-marker" style={{ marginLeft: 6 }} aria-hidden="true">{String(idx + 1).padStart(2, "0")}</span>
                   <h3>{leader.name}</h3>
-                  <p className="official-title">{leader.title}</p>
+                  <p className="official-title">{leader.title} — {leader.scope}</p>
                   <p>{leader.scope}</p>
-                  <p className="record-meta">Observed as of <time dateTime={leader.asOf}>{leader.asOf}</time></p>
+                  <p className="record-meta">Observed as of <time dateTime={leader.asOf}>{leader.asOf}</time> — {leader.evidenceContext}</p>
+                  <span className="pill pill--success" style={{ marginTop: 8 }}>Verified · {leader.asOf}</span>
                 </div>
               </article>
             ))}
@@ -105,25 +118,30 @@ export default function GovernmentPage() {
           <RecordMeta record={leadershipRecord} />
           <p className="unpublished-note">
             The 2025-elected vice mayor and councilors appear above and in the structure chart as
-            listed on Comelec server tallies; full legal names and the new ex-officio seats await
+            listed on Comelec server tallies — full legal names and the new ex-officio seats await
             official proclamations — <Link href="/government/officials">see the officials record</Link>.
           </p>
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section--allen">
         <div className="container">
           <div className="text-center" style={{ marginBottom: "var(--spacing-xl)" }}>
+            <p className="section-kicker" style={{ justifyContent: "center" }}>Offices — Dated observations</p>
             <h2>Dated office-head observations</h2>
-            <p style={{ color: "var(--color-text-light)" }}>These are source-dated observations, not a complete office directory.</p>
+            <p style={{ color: "var(--color-text-light)" }}>These are source-dated observations — not a complete office directory, shown with hairline + pill + numbered marker.</p>
           </div>
+          <div className="section-header-rule" aria-hidden="true" />
           <div className="grid grid-3">
-            {officeHeadsRecord.data.observations.map((observation) => (
-              <article className="councilor-card card text-center" key={`${observation.office}-${observation.person}`}>
+            {officeHeadsRecord.data.observations.map((observation, idx) => (
+              <article className="councilor-card card text-center hairline-top" key={`${observation.office}-${observation.person}`}>
+                <span className="pill pill--muted" style={{ marginBottom: 8 }}>{String(idx + 1).padStart(2, "0")} · {observation.office}</span>
                 <h3>{observation.person}</h3>
-                <p className="badge badge-info">{observation.displayedTitle}</p>
-                <p>{observation.office}</p>
-                <p className="record-meta">Observed <time dateTime={observation.asOf}>{observation.asOf}</time></p>
+                <p className="badge badge-info" style={{ display: "none" }}>{observation.displayedTitle}</p>
+                <span className="pill pill--brand" style={{ margin: "6px auto" }}>{observation.displayedTitle}</span>
+                <p>{observation.office} — {observation.displayedTitle}</p>
+                <p className="record-meta">Observed <time dateTime={observation.asOf}>{observation.asOf}</time> — {observation.evidenceContext}</p>
+                <span className="pill pill--success">Verified · {observation.asOf}</span>
               </article>
             ))}
           </div>
@@ -131,18 +149,22 @@ export default function GovernmentPage() {
         </div>
       </section>
 
-      <section id="barangays" className="section" style={{ background: "var(--color-bg-alt)" }}>
+      <section id="barangays" className="section section--allen" style={{ background: "var(--color-bg-alt)" }}>
         <div className="container">
           <div className="text-center" style={{ marginBottom: "var(--spacing-xl)" }}>
-            <h2>Barangays of Maddela</h2>
-            <p style={{ color: "var(--color-text-light)" }}>{barangayRecord.data.barangayCount} barangays</p>
+            <p className="section-kicker" style={{ justifyContent: "center" }}>Government — Barangays</p>
+            <h2>Barangays of Maddela — {barangayRecord.data.barangayCount} barangays</h2>
+            <p style={{ color: "var(--color-text-light)" }}>{barangayRecord.data.barangayCount} barangays — 32 rural/urban, each with numbered marker and hairline card</p>
+            <div className="section-header-rule" style={{ maxWidth: 360, margin: "12px auto 0" }} aria-hidden="true" />
           </div>
           <div className="grid grid-4">
-            {barangayRecord.data.barangays.map((barangay) => (
-              <Link key={barangay.psgcCode} href={`/government/barangays/${slugify(barangay.name)}`} className="barangay-card">
+            {barangayRecord.data.barangays.map((barangay, idx) => (
+              <Link key={barangay.psgcCode} href={`/government/barangays/${slugify(barangay.name)}`} className="barangay-card hairline-top">
                 <div className="barangay-card-header">
+                  <span className="number-marker" aria-hidden="true">{String(idx + 1).padStart(2, "0")}</span>
                   <span className="barangay-name">{barangay.name}</span>
                 </div>
+                <span className="pill pill--muted" style={{ marginTop: 8, alignSelf: "flex-start" }}>{String(idx + 1).padStart(2, "0")} · {barangay.classification}</span>
               </Link>
             ))}
           </div>

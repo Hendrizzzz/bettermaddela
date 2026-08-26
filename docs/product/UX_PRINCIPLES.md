@@ -29,22 +29,42 @@ the price of understanding.
    websites — orchestrated reveals, count-ups, scroll-triggered timelines. Never
    decorative noise; never a barrier to information.
 
-## Hard interface rules (owner-mandated 2026-08-26, round 2)
+## Hard interface rules (owner-mandated 2026-08-26, round 2 — amended 2026-08-27 to align with BetterAllen + Better LGU Directory)
 
-1. **No pills.** Fully-rounded chip/badge shapes (border-radius: 999px on text
-   containers) are banned everywhere. Status, classification, and evidence labels
-   are carried by typography (small caps, weight, color), markers (dots, squares,
-   left borders), or position — never by pill shapes.
-2. **No babysitting text.** Users know what a mayor is. Structure surfaces show
-   WHO and HOW CONNECTED visually (position, lines, icons, names); they do not
-   explain civic basics in prose. One-line factual captions only where a number or
-   date needs a source note.
-3. **Cut text to the bone.** A card gets a name, a number, and at most one line.
-   Completeness lives one click away (expanders, tables, sources), never in the
-   glance layer.
-4. **More GSAP, orchestrated.** Premium modern motion: drawn connectors, staggered
-   cascades, count-ups on money/numbers, scroll-scrubbed progress. Always
-   reduced-motion-safe.
+1. **Pills allowed — token-bound.** Fully-rounded chip/badge shapes (`border-radius: 999px`) are now a first-class reputation/status treatment. Approved pills use only Golden Hour tokens (`--brand`, `--accent`, `--surface-muted`, `--line`, `--ink`, `--muted`, `#146c2e/#e6f4ea` for success). Category and verification status are encoded by pill color + label; the dot marker remains available for quiet inline states.
+2. **Babysitting text allowed in the glance layer.** The glance layer may include a one-sentence orienting line (≤20 words) that names the civic role, data scope, or next step — e.g. "Municipal Mayor — presides over the Sangguniang Bayan." GSAP structure still carries the primary meaning.
+3. **Cut text relaxed.** A card may carry a name, a number, one-line description, and a pill/badge. Full evidence still lives one click away (expanders, tables, sources).
+4. **More GSAP, orchestrated.** Premium modern motion: drawn connectors, staggered cascades, count-ups on money/numbers, scroll-scrubbed progress. Always reduced-motion-safe.
+
+## Owner design brief (ratified 2026-08-26, round 3; amended 2026-08-27 per BetterAllen audit). These are the current laws.
+
+### Adopt these — previously banned, now canonical (BetterAllen-aligned)
+
+1. **Double labels.** Every major section and role component uses an eyebrow + heading pair carrying the same referent at two levels of hierarchy — e.g. `MUNICIPAL MAYOR` eyebrow above `Hon. Name`, `TOURISM` above `Discover Maddela`, `GOVERNMENT` above `Government Structure & Officials`. The eyebrow is the category/role, the heading is the instance. A third pill/badge repeating the office is allowed for scanability.
+2. **Numbered markers.** Ordered narrative steps use `01 / 02 / 03` and dot-leader markers (`02 · Benches`, `01 — Philippines`). The location story, history timeline, and service steps are presentation-deck sequences and must be numbered.
+3. **Data re-statement.** A fact may appear twice per surface when it aids glance recognition — e.g. the hero stat and the same number inside its detail section, or mayor name in the chart and again in the leadership grid. Provenance (source, `asOf`) travels with each instance.
+4. **Hairline divider lines and boxed chips.** Hairlines are the primary section and card structure: `1px solid var(--line)` row separators, header underlines, meta-bar borders, dotted leaders, and `border: 1px solid var(--line)` card containment. Status pills are boxed chips; hairline + pill together is the normal reputation treatment.
+5. **Em dashes.** Allowed in UI copy — `—` is the preferred separator for subordinate clauses and instance annotations: `Allen — the southern gateway`, `Maddela — the Commercial Growth Center`, `Panagsasalog — going to the farms`. Use `—` for literary/narrative lines; keep `·` for compact inline meta.
+6. **Template flow (FOL: hero, features grid, cards, repeat).** Sections follow the proven BetterAllen/Better LGU template rhythm: hero → features/services grid → stats band → location/map story → history/timeline → updates/projects → government → contact. Each section is a `py-12` contained band with alternating `bg-white` / `bg-alt` and a clear header. Overlap/stick/scale/bleed is an effect *inside* a section, not a mandate to dissolve section boundaries.
+7. **Data repetition for reputation.** Category color, pill, `asOf`, and sublabel are repeated wherever the data is shown; emergency/contact duplication across header strip + page grid is intentional redundancy.
+
+### Still never do these
+1. **AI slop.** No glassmorphism, random gradients, meaningless glows, gradient text, sparkles, Awwwards imitation with bad usability. Identical rounded card grids are now *allowed* when they are the template flow — slop is unconsidered use, not the grid itself.
+2. **Janky motion.** No sudden shifts, snaps, or zaps when sections lock or release. One smoothing layer only. Animations must end exactly at handoff points. Reduced-motion always respected.
+3. **Unverified imagery or layout in-betweens.** Images either bleed fully to the edge or are fully rounded cards, never both. Nothing clips or collides during motion. Every navigation click path must work.
+4. **Filler that repeats without hierarchy.** Eyebrow/heading/pill that say byte-identical text with no added scope is still banned; double labels must refine (category → instance → badge), not echo.
+
+### Always do these
+1. **20 percent rule.** A focused experience using about a fifth of the available information, chosen with judgment, beats exposing everything. Cut what does not earn its place.
+2. **Strong art direction.** Composition, typography, rhythm, motion. The wow comes from these, never from noise. Portfolio-grade, premium, intentional.
+3. **Signature interactions** that belong specifically to BetterMaddela.
+4. **Real storytelling as you scroll**, within a page. The site stays multi-page with the same persistent header — continuous experience applies inside each page via BetterAllen-style section rhythm, never by merging the site into one page. Headers persist across routes (copied from BetterAllen `Navbar` → `SiteHeader`).
+5. **Usability above all**, and mobile must feel designed, not like a collapsed desktop site.
+6. **Inspect the rendered result.** Every change gets real browser screenshots at desktop and mobile widths, critiqued and iterated, before handoff. Never judge from source code alone.
+7. **Work quietly, take ownership.** Make strong creative decisions; do not ask the owner to choose directions.
+8. **Technology only when it earns its place** (GSAP, Lenis, plain CSS).
+9. **BetterLGU compliance is the floor, not the ceiling.** The directory's five core areas (officials, budget, projects, ordinances/resolutions, contact) must stay present and prominent; art direction never hides them. Title/description/og:image must be Maddela-specific per `crawl-lgu-meta.js:122` boilerplate gate, under 400 KB, and robots must allow `BetterLGUDirectoryBot`.
+10. **Data reputation is structured.** Every changing fact shows pill or dot status + `asOf` + sublabel; emergency contacts duplicate intentionally across the header strip + contact grid once verified. Pills use only approved tokens.
 
 ## Technology decisions (owner-approved 2026-08-26)
 

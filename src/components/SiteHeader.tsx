@@ -110,8 +110,28 @@ export function SiteHeader() {
     </div>
   );
 
+  // Allen-style hotline measure intentionally omitted — Maddela has no verified
+  // emergency hotlines (DATA_CONTRACT emergency gate). The utility strip
+  // below is the honest template interpretation until that gate passes.
   return (
-    <header className="site-header" lang={language === "fil" ? "fil" : "en"}>
+    <header className="site-header site-header--allen" lang={language === "fil" ? "fil" : "en"}>
+      {/* Utility strip — Allen's red hotline + navy currency/weather bar, translated to Golden Hour */}
+      <div className="header-utility" role="complementary" aria-label="Utility bar">
+        <div className="container header-utility-inner">
+          <div className="header-utility-left">
+            <span className="header-utility-kicker">Independent — not the LGU</span>
+            <span className="header-utility-dot" aria-hidden="true">·</span>
+            <span className="header-utility-meta">Maddela — Quirino · Region II</span>
+          </div>
+          <div className="header-utility-right">
+            <span className="header-utility-item"><i className="bi bi-geo-alt" aria-hidden="true" /> Maddela, Quirino</span>
+            <span className="header-utility-dot" aria-hidden="true">·</span>
+            <a className="header-utility-link" href="/contact">Contact &amp; corrections</a>
+            <span className="header-utility-dot" aria-hidden="true">·</span>
+            <a className="header-utility-link" href="/sources">Sources</a>
+          </div>
+        </div>
+      </div>
       <div className="container header-inner">
         <div className="logo-container">
           <Link href="/" aria-label="BetterMaddela home">
