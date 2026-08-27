@@ -1423,6 +1423,10 @@ a.govt-node:focus-visible {
   border-top: 1px solid #e8dfc8;
   padding-top: 10px;
 }
+/* The utility strip is the header's first row — no white gap above it. */
+.site-header--allen {
+  padding-top: 0;
+}
 
 /* ===== Allen double labels, hairline, pill, em-dash system ===== */
 .section-kicker {
@@ -1493,27 +1497,6 @@ a.govt-node:focus-visible {
 }
 .pill--outline {
   background: transparent;
-}
-.number-marker {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 2rem;
-  height: 2rem;
-  padding: 0 8px;
-  border-radius: 999px;
-  border: 1px solid #e8dfc8;
-  background: #ffffff;
-  color: #8a5e0f;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.06em;
-  font-variant-numeric: tabular-nums;
-}
-.number-marker--accent {
-  background: #f5b301;
-  border-color: #f5b301;
-  color: #221d14;
 }
 .section--allen {
   position: relative;

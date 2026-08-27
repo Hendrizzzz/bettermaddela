@@ -322,11 +322,6 @@ export default function HomePage() {
                   {copy.contactInformation}
                 </Link>
               </div>
-              <div style={{ marginTop: 12, display: "flex", gap: 8, flexWrap: "wrap" }}>
-                <span className="pill pill--accent">01 — Services</span>
-                <span className="pill pill--muted">02 — Government</span>
-                <span className="pill pill--muted">03 — Statistics</span>
-              </div>
             </div>
             <div className="home-hero-v2-search">
               <VerifiedSearch />
@@ -335,7 +330,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Service Categories — template flow: hairline + double label + numbered markers + pills + em dash copy */}
+      {/* Service Categories — hairline cards, single label, em dash copy */}
       <section className="section section--allen">
         <div className="container">
           <div className="home-section-header">
@@ -347,22 +342,18 @@ export default function HomePage() {
           </div>
           <div className="section-header-rule" aria-hidden="true" />
           <div className="home-services-grid">
-            {serviceCategories.map((service, idx) => (
+            {serviceCategories.map((service) => (
               <Link key={service.href} href={service.href} className="home-service-card hairline-top">
                 <div className="home-service-content">
-                  <span className="number-marker" aria-hidden="true">{String(idx + 1).padStart(2, "0")}</span>
                   <i className={`bi ${service.icon} home-service-icon`} aria-hidden="true"></i>
                   <h3>{service.title[language]}</h3>
-                  <span className="pill pill--muted" style={{ marginTop: 6 }}>{String(idx + 1).padStart(2, "0")} · {service.title.en}</span>
                 </div>
                 <i className="bi bi-arrow-right home-service-arrow" aria-hidden="true"></i>
               </Link>
             ))}
             <Link href="/services" className="home-service-card home-service-card--all hairline-top">
               <div className="home-service-content">
-                <span className="number-marker number-marker--accent" aria-hidden="true">{String(serviceCategories.length + 1).padStart(2, "0")}</span>
                 <h3>{copy.viewAllServices}</h3>
-                <span className="pill" style={{ marginTop: 6, background: "rgba(255,255,255,0.18)", color: "#ffffff", borderColor: "rgba(255,255,255,0.35)" }}>{String(serviceCategories.length + 1).padStart(2, "0")} — View all</span>
               </div>
               <i className="bi bi-arrow-right home-service-arrow" aria-hidden="true"></i>
             </Link>
@@ -370,7 +361,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Quick Stats — double label + hairline + numbered + data reputation pills + em dashes */}
+      {/* Quick Stats — hairline + data reputation pills + em dashes */}
       <section className="home-stats-v2 section--allen">
         <div className="container">
           <div className="home-stats-v2-header">
@@ -387,7 +378,6 @@ export default function HomePage() {
             <Reveal delay={0}>
               <Link href="/statistics" className="home-stat-card hairline-top">
                 <div className="home-stat-card-content">
-                  <span className="pill pill--success" style={{ marginBottom: 8 }}>01 — {copy.censusBadge}</span>
                   <span className="home-stat-card-value">
                     {population.data.population.toLocaleString("en-PH")}
                   </span>
@@ -399,7 +389,6 @@ export default function HomePage() {
             <Reveal delay={0.08}>
               <Link href="/statistics" className="home-stat-card hairline-top">
                 <div className="home-stat-card-content">
-                  <span className="pill pill--accent" style={{ marginBottom: 8 }}>02 — {copy.barangayBadge}</span>
                   <span className="home-stat-card-value">{barangays.data.barangayCount}</span>
                   <span className="home-stat-card-label">{copy.barangays} — PSGC verified</span>
                   <span className="pill pill--muted" style={{ marginTop: 8 }}>{copy.verifiedBadge} · 2024</span>
@@ -409,7 +398,6 @@ export default function HomePage() {
             <Reveal delay={0.16}>
               <Link href="/statistics" className="home-stat-card hairline-top">
                 <div className="home-stat-card-content">
-                  <span className="pill pill--muted" style={{ marginBottom: 8 }}>03 — {copy.incomeBadge}</span>
                   <span className="home-stat-card-value">{identity.data.incomeClass} {copy.incomeClassSuffix}</span>
                   <span className="home-stat-card-label">{copy.municipality} — 1st Class</span>
                   <span className="pill pill--muted" style={{ marginTop: 8 }}>{copy.verifiedBadge} · PSGC</span>
@@ -419,7 +407,6 @@ export default function HomePage() {
             <Reveal delay={0.24}>
               <Link href="/statistics" className="home-stat-card hairline-top">
                 <div className="home-stat-card-content">
-                  <span className="pill pill--muted" style={{ marginBottom: 8 }}>04 — Households</span>
                   <span className="home-stat-card-value">{households.data.numberOfHouseholds.toLocaleString("en-PH")}</span>
                   <span className="home-stat-card-label">{copy.households} — {copy.censusLabel}</span>
                   <span className="pill pill--muted" style={{ marginTop: 8 }}>{copy.verifiedBadge} · 2024</span>
@@ -430,7 +417,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Where is Maddela? — double label + hairline + numbered 01 — with em dashes */}
+      {/* Where is Maddela? — hairline + location story, no numbering */}
       <section className="section weather-map-section section--allen">
         <div className="container">
           <div className="home-stats-v2-header">
@@ -438,7 +425,6 @@ export default function HomePage() {
               <p className="section-kicker">{copy.whereKicker}</p>
               <h2>{copy.whereTitle}</h2>
             </div>
-            <span className="pill pill--muted">01 — Philippines · 02 — Quirino · 03 — Maddela</span>
           </div>
           <p className="location-intro">{copy.whereIntro}</p>
           <div className="section-header-rule" aria-hidden="true" />
@@ -447,8 +433,7 @@ export default function HomePage() {
               <li key={step.name}>
                 <Reveal delay={index * 0.12}>
                   <article className={`location-step hairline-top${index < locationSteps.length - 1 ? " location-step--linked" : ""}`}>
-                    <span className="number-marker number-marker--accent" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
-                    <h3>{String(index + 1).padStart(2, "0")} — {step.name}</h3>
+                    <h3>{step.name}</h3>
                     <p>{step.detail}</p>
                   </article>
                 </Reveal>
@@ -497,7 +482,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Brief History of Maddela — double label + hairline + numbered + em dashes + pills */}
+      {/* Brief History of Maddela — hairline + timeline, period stated once */}
       <section className="section history-section section--allen">
         <div className="container">
           <div className="home-stats-v2-header">
@@ -514,12 +499,11 @@ export default function HomePage() {
           <div className="section-header-rule" aria-hidden="true" />
           <div className="history-content">
             <div className="history-timeline">
-              {history.data.sections.map((section, idx) => (
+              {history.data.sections.map((section) => (
                 <div className={`timeline-item timeline-item--${section.kind}`} data-year={section.period} key={`${section.period}-${section.title}`}>
                   <div className="timeline-marker" />
                   <div className="timeline-content hairline-top" lang="en">
-                    <span className="pill pill--muted" style={{ marginBottom: 6 }}>{String(idx + 1).padStart(2, "0")} — {section.period}</span>
-                    <span className="timeline-year" style={{ marginLeft: 6 }}>{section.period}</span>
+                    <span className="timeline-year">{section.period}</span>
                     <p><strong>{section.title}</strong> — {section.kind}</p>
                     <details className="timeline-more">
                       <summary>{copy.readMore}<span className="sr-only"> — {section.title}</span></summary>
@@ -531,10 +515,9 @@ export default function HomePage() {
               <p className="history-publication-note">{copy.historySourceNote} <Link href="/sources">{copy.sources}</Link></p>
             </div>
             <div className="history-summary">
-              {community.data.themes.slice(0, 2).map((theme, idx) => (
+              {community.data.themes.slice(0, 2).map((theme) => (
                 <div className="history-card hairline-top" key={theme.label} lang="en">
                   <div className="history-card-content">
-                    <span className="pill pill--muted" style={{ marginBottom: 6 }}>{String(idx + 1).padStart(2, "0")} · {theme.label}</span>
                     <h3>{theme.label}</h3>
                     <details className="history-card-more">
                       <summary>{copy.readMore}<span className="sr-only"> — {theme.label}</span></summary>
@@ -545,8 +528,7 @@ export default function HomePage() {
               ))}
               <div className="history-card history-card--overview hairline-top" lang="en">
                 <div className="history-card-content">
-                  <span className="pill pill--accent" style={{ marginBottom: 6 }}>03 — {copy.maddelaToday}</span>
-                  <h3>{copy.maddelaToday} — Maddela today</h3>
+                  <h3>{copy.maddelaToday}</h3>
                   <details className="history-card-more">
                     <summary>{copy.readMore}<span className="sr-only"> — {copy.maddelaToday}</span></summary>
                     <p>{community.data.summary}</p>
@@ -558,7 +540,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Latest Updates — double label + hairline + pills + data reputation */}
+      {/* Latest Updates — hairline + evidence-typed badges */}
       <section className="section section--allen">
         <div className="container">
           <div className="home-section-header">
@@ -573,11 +555,10 @@ export default function HomePage() {
           <div className="section-header-rule" aria-hidden="true" />
           {updates.length > 0 && (
             <div className={`home-news-grid home-news-grid--${updates.length}`}>
-              {updates.map((item, idx) => (
+              {updates.map((item) => (
                 <article className="home-news-card hairline-top" key={item.id} lang="en">
                   <div className="home-news-meta">
-                    <span className="pill pill--muted">{String(idx + 1).padStart(2, "0")} — {item.category}</span>
-                    <span className={`home-news-badge ${updateBadgeClass(item.category)}`} style={{ marginLeft: 6 }}>{item.category}</span>
+                    <span className={`home-news-badge ${updateBadgeClass(item.category)}`}>{item.category}</span>
                     <time className="home-news-date" dateTime={item.publishedAt} style={{ marginLeft: "auto" }}>{formatDate(item.publishedAt, language)}</time>
                   </div>
                   <h3><a href={item.canonicalUrl} target="_blank" rel="noreferrer">{item.headline}</a></h3>
@@ -590,7 +571,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Municipal Leadership — triple label (eyebrow + name + pill), hairline, numbered, em dashes */}
+      {/* Municipal Leadership — hairline + verified provenance */}
       <section className="section home-leadership-section section--allen">
         <div className="container">
           <div className="home-section-header">
@@ -606,9 +587,8 @@ export default function HomePage() {
           <div className="section-header-rule" aria-hidden="true" />
           {municipalLeaders.length > 0 && (
             <div className={`home-leadership-grid home-leadership-grid--${municipalLeaders.length}`}>
-              {municipalLeaders.map((leader, idx) => (
+              {municipalLeaders.map((leader) => (
                 <article className="home-leader-card hairline-top" key={`${leader.title}-${leader.name}`}>
-                  <span className="pill pill--brand" style={{ marginBottom: 8 }}>{String(idx + 1).padStart(2, "0")} — {leader.title}</span>
                   <div className="home-leader-badge">{leader.title}</div>
                   <h3>{leader.name}</h3>
                   <p className="home-leader-scope">{leader.scope}</p>
@@ -621,7 +601,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Contact Information — double label + hairline + numbered + em dashes + pills */}
+      {/* Contact Information — hairline cards, single label */}
       <section className="section section--allen">
         <div className="container">
           <div className="home-section-header">
@@ -637,21 +617,18 @@ export default function HomePage() {
           <div className="home-contact-v2-grid">
             <Link href="/sources" className="home-contact-v2-card hairline-top">
               <div className="home-contact-v2-content">
-                <span className="pill pill--muted">01 — Sources</span>
                 <h3>{copy.sourceDirectory}</h3>
                 <p className="home-contact-v2-value">{copy.sourceDirectoryNote}</p>
               </div>
             </Link>
             <Link href="/contact" className="home-contact-v2-card hairline-top">
               <div className="home-contact-v2-content">
-                <span className="pill pill--accent">02 — Corrections</span>
                 <h3>{copy.corrections}</h3>
                 <p className="home-contact-v2-value">{copy.correctionsNote}</p>
               </div>
             </Link>
             <Link href="/services" className="home-contact-v2-card hairline-top">
               <div className="home-contact-v2-content">
-                <span className="pill pill--muted">03 — Services</span>
                 <h3>{copy.serviceInformation}</h3>
                 <p className="home-contact-v2-value">{copy.serviceInformationNote}</p>
               </div>

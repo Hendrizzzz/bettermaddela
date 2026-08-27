@@ -308,24 +308,26 @@ export default function StatisticsPage() {
           aria-hidden="true"
           x1={prevPoint.cx} y1={prevPoint.cy} x2={lastPoint.cx} y2={lastPoint.cy}
         />
-        {points.map((point, index) => {
-          const isLast = index === points.length - 1;
+        {points.map((point) => {
+          // The series ascends left-to-right, so the clear zone around every dot
+          // is upper-left: the incoming segment approaches from lower-left and
+          // the outgoing segment leaves to upper-right. Labels sit there.
           return (
             <g key={point.referenceDate}>
               <circle className="chart-dot" cx={point.cx} cy={point.cy} r={4} />
               <text
                 className="chart-label-date"
-                x={isLast ? point.cx - 8 : point.cx + 8}
-                y={point.cy - 20}
-                textAnchor={isLast ? "end" : "start"}
+                x={point.cx - 10}
+                y={point.cy - 22}
+                textAnchor="end"
               >
                 {monthYear(point.referenceDate)}
               </text>
               <text
                 className="chart-label-value"
-                x={isLast ? point.cx - 8 : point.cx + 8}
-                y={point.cy - 6}
-                textAnchor={isLast ? "end" : "start"}
+                x={point.cx - 10}
+                y={point.cy - 8}
+                textAnchor="end"
               >
                 {fmt(point.population)}
               </text>
@@ -333,7 +335,7 @@ export default function StatisticsPage() {
           );
         })}
         <line className="chart-refline" aria-hidden="true" x1={midX} y1={midY + 8} x2={midX} y2={midY + 44} />
-        <text className="chart-annotation" x={midX} y={midY + 60} textAnchor="middle">
+        <text className="chart-annotation" x={right} y={midY + 60} textAnchor="end">
           +{fmt(latestGain)} since {year(prevPoint.referenceDate)}{smallestGain === latestGain ? " — smallest census gain on record" : ""}
         </text>
       </svg>
