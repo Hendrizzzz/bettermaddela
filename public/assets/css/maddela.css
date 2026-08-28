@@ -1351,6 +1351,7 @@ a.govt-node:focus-visible {
   border-radius: 50%;
   background: var(--surface-muted);
   color: var(--brand);
+  font-family: var(--font-display);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -1463,6 +1464,11 @@ a.govt-node:focus-visible {
 .brgy-prof-contact-line a {
   color: inherit;
   text-decoration-color: var(--line);
+  transition: color var(--motion-fast) ease, text-decoration-color var(--motion-fast) ease;
+}
+.brgy-prof-contact-line a:hover {
+  color: var(--brand);
+  text-decoration-color: var(--brand);
 }
 .brgy-prof-office-line {
   margin: var(--spacing-sm) 0 0;
