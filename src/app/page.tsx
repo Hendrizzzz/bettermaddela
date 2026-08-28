@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { LiveWeather, type WeatherConfigData } from "@/components/LiveWeather";
 import { Reveal } from "@/components/motion/Reveal";
 import { VerifiedSearch } from "@/components/VerifiedSearch";
+import { MaddelaAtlas } from "@/components/MaddelaAtlas";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getRecord } from "@/data/civic";
 
@@ -167,9 +168,11 @@ const homeCopy = {
     barangayLabel: "barangays",
     residentsLabel: "residents",
     censusLabel: "2024 census",
-    mapTitle: "Embedded Google Maps general view of Maddela, Quirino",
     mapCaption: "General location view only, not an official boundary.",
     exploreMap: "Explore on Google Maps",
+    photoAlt: "Aerial view of Maddela, Quirino, Philippines, taken in April 2012",
+    photoCredit: "Photograph by P199 (April 2012), CC BY-SA 3.0, via Wikimedia Commons",
+    photoNote: "A 2012 aerial view — not a current condition.",
     weatherSideLabel: "Weather right now",
     localWeatherContext: "Local station context",
     separateForecast: "Forecast values are provided separately by Open-Meteo.",
@@ -219,9 +222,11 @@ const homeCopy = {
     barangayLabel: "mga barangay",
     residentsLabel: "na residente",
     censusLabel: "senso ng 2024",
-    mapTitle: "Pangkalahatang tanaw ng naka-embed na Google Maps sa Maddela, Quirino",
     mapCaption: "Pangkalahatang lokasyon lamang, hindi opisyal na hangganan.",
     exploreMap: "Tingnan ang Maddela sa Google Maps",
+    photoAlt: "Tanawin ng Maddela, Quirino mula sa himpapawid, kuha noong Abril 2012",
+    photoCredit: "Larawan ni P199 (Abril 2012), CC BY-SA 3.0, mula sa Wikimedia Commons",
+    photoNote: "Tanawin mula sa 2012 — hindi ang kasalukuyang kalagayan.",
     weatherSideLabel: "Panahon ngayon",
     localWeatherContext: "Lokal na konteksto ng istasyon",
     separateForecast: "Hiwalay na ibinibigay ng Open-Meteo ang mga forecast value.",
@@ -274,6 +279,12 @@ export default function HomePage() {
           { opacity: 0, y: 20 },
           { opacity: 1, y: 0, duration: 0.55 },
           "-=0.35",
+        )
+        .fromTo(
+          ".home-hero-v2-atlas",
+          { opacity: 0, y: 16 },
+          { opacity: 1, y: 0, duration: 0.6 },
+          "-=0.4",
         );
     }, el);
 
@@ -323,9 +334,12 @@ export default function HomePage() {
                   {copy.contactInformation}
                 </Link>
               </div>
+              <div className="home-hero-v2-search">
+                <VerifiedSearch />
+              </div>
             </div>
-            <div className="home-hero-v2-search">
-              <VerifiedSearch />
+            <div className="home-hero-v2-atlas">
+              <MaddelaAtlas variant="hero" />
             </div>
           </div>
         </div>
@@ -436,15 +450,22 @@ export default function HomePage() {
           </ol>
           <div className="location-detail-grid">
             <div className="map-column">
-              <div className="map-card">
-                <div id="map-container" role="region" aria-label={copy.mapTitle} data-map-loaded="iframe">
-                  <iframe
-                    src="https://www.google.com/maps?q=Maddela%2C+Quirino%2C+Philippines&output=embed"
-                    className="map-iframe"
-                    title={copy.mapTitle}
-                    loading="lazy"
-                  />
-                </div>
+              <figure className="map-card photo-card">
+                <img
+                  src="/assets/images/maddela-quirino-aerial-2012.jpg"
+                  alt={copy.photoAlt}
+                  width={1500}
+                  height={1000}
+                  loading="lazy"
+                />
+                <figcaption className="map-attribution">
+                  <i className="bi bi-camera" aria-hidden="true" />
+                  <span>
+                    <a href="https://commons.wikimedia.org/wiki/File:Maddela_Quirino.JPG" target="_blank" rel="noreferrer">{copy.photoCredit}</a>
+                    <span className="map-attribution-separator" aria-hidden="true">, </span>
+                    {copy.photoNote}
+                  </span>
+                </figcaption>
                 <div className="map-attribution">
                   <i className="bi bi-geo-alt" aria-hidden="true" />
                   <span>
@@ -453,7 +474,7 @@ export default function HomePage() {
                     {copy.mapCaption}
                   </span>
                 </div>
-              </div>
+              </figure>
             </div>
             <aside className="location-weather-column">
               <p className="location-weather-label">

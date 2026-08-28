@@ -948,6 +948,84 @@
     "verifier": "bettermaddela-review-2026-08-28-barangay-officials-b",
     "sourceState": "active",
     "notes": "Owner downloaded the export (official-list_02_2026-08-28.xlsx) from the DILG barangay officials directory masterlist page and supplied it for import. Column structure and the Maddela subset were verified programmatically: 633 rows across all 32 barangays (three exact duplicate rows removed on import, leaving 630 officials), exactly one punong barangay per barangay, TERM column 2023 - 2026 on every row. Names, positions and telephones agree with the system's web listing for all 316 overlapping rows, whose spellings also confirm the Ñ restorations for the Santo Niño barangay cells and the Fredireck and Recto Leaño names. Covers eight roles per barangay: punong barangay, 6-7 sangguniang barangay members, SK chairperson, 5-7 SK members, barangay treasurer, barangay secretary, SK secretary and SK treasurer. Carries TERM (2023 - 2026) and TERM IN PRESENT POSITION (1ST/2ND/3RD, blank for appointed roles and some members). No email column and no photographs. Absent-value markers N/A, NONE and 0 in BARANGAY TEL NO. are treated as absent. The export carries a lost-character marker (U+FFFD) in place of Ñ in 23 Maddela cells; 21 are confirmed by the web listing and 2 (Jay-Ar Leaño, San Pedro SK member; Noemi Maraña, Villa Hermosa Sur treasurer) are restored contextually and disclosed in the record's listing basis."
+    },
+    {
+      "id": "osm-overpass-maddela-place-nodes",
+      "title": "Overpass API place-node query over the Maddela bounding box (OpenStreetMap)",
+      "publisher": "OpenStreetMap contributors via overpass-api.de",
+      "url": "https://overpass-api.de/api/interpreter",
+      "documentType": "dataset",
+      "effectivePeriod": "Query run 2026-08-29 against Overpass DB timestamp 2026-08-28T20:34:56Z (osm_base)",
+      "retrievedAt": "2026-08-29",
+      "verifiedAt": "2026-08-29",
+      "verifier": "bettermaddela-review-2026-08-29-atlas-a",
+      "sourceState": "active",
+      "notes": "Queries (URL-encoded, UA \"BetterMaddelaResearch/1.0 (community civic-info project)\"): place-node sweep node[\"place\"]+way[\"place\"] over (16.05,121.45,16.65,122.15) returned 415 elements; amenity=townhall sweep over (16.25,121.55,16.55,122.0) returned 29 elements; boundary=administrative relations over (15.9,121.3,16.8,122.3) returned 19 elements, none for Maddela; area[\"name\"=\"Maddela\"] returned 0 elements, confirming no OSM boundary polygons exist for the municipality. Data (c) OpenStreetMap contributors, ODbL; visible attribution required on any derived display."
+    },
+    {
+      "id": "osm-nominatim-maddela-lookup",
+      "title": "Nominatim bulk lookup of candidate Maddela place nodes (OpenStreetMap)",
+      "publisher": "OpenStreetMap contributors via nominatim.openstreetmap.org",
+      "url": "https://nominatim.openstreetmap.org/lookup?osm_ids=N12709698237,N8195101671,N8195101675,N4394437084,N8195100788,N8195100787,N8195100789,N9421946567,N4394405603,N10982611446,N12657242300,N12657254201,N8195100786,N4394262532,N9321550079,N9421940576,N4393678383,N9476560618,N8195101672,N9381620998,N9476359026,N4394267901,N5740760575,N12690386706,N12690386707,N12709698238,N198492740&format=jsonv2",
+      "documentType": "dataset",
+      "effectivePeriod": "Lookup run 2026-08-29",
+      "retrievedAt": "2026-08-29",
+      "verifiedAt": "2026-08-29",
+      "verifier": "bettermaddela-review-2026-08-29-atlas-a",
+      "sourceState": "active",
+      "notes": "Final confirmation pass for the candidate nodes (UA \"BetterMaddelaResearch/1.0 (community civic-info project)\", ~1.1 s between geocoder requests). Per-barangay search passes used q=\"<Name>, Maddela, Quirino, Philippines\" and a \"Barangay <Name>\" prefix pass. Confirmed place tags: place=village for all verified rows except Poblacion Norte/Poblacion Sur (place=quarter). The same service also produced the refusals recorded in the research handoff (Santo Niño node attributed to Isabela; 'Dipantan' unverified; 'San Dionisio Ⅱ' uncertifiable)."
+    },
+    {
+      "id": "osm-photon-maddela-fallback",
+      "title": "Photon geocoder fallback queries for the nine unmapped Maddela barangay names",
+      "publisher": "Komoot GmbH (Photon geocoder over OpenStreetMap data)",
+      "url": "https://photon.komoot.io/api/",
+      "documentType": "dataset",
+      "effectivePeriod": "Queries run 2026-08-29",
+      "retrievedAt": "2026-08-29",
+      "verifiedAt": "2026-08-29",
+      "verifier": "bettermaddela-review-2026-08-29-atlas-a",
+      "sourceState": "active",
+      "notes": "q=\"<Name> Maddela Quirino Philippines\", limit 3, for each of the nine unmapped names. Returned no usable barangay-level result (Jose Ancheta returned 0 results). Used only to support the absence claims for the unmapped list."
+    },
+    {
+      "id": "wikidata-q53072-claims",
+      "title": "Wikidata claims for Maddela (Q53072): P625 coordinate and P131 administrative children",
+      "publisher": "Wikidata / Wikimedia Foundation",
+      "url": "https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=Q53072&property=P625&format=json",
+      "documentType": "dataset",
+      "effectivePeriod": "Queries run 2026-08-29",
+      "retrievedAt": "2026-08-29",
+      "verifiedAt": "2026-08-29",
+      "verifier": "bettermaddela-review-2026-08-29-atlas-a",
+      "sourceState": "active",
+      "notes": "P625 municipal coordinate 16.341111, 121.683333 used as a sanity reference. SPARQL query for P131 children of Q53072 at query.wikidata.org returned 0 bindings; no barangay items carry coordinates. Cross-check only."
+    },
+    {
+      "id": "commons-maddela-quirino-aerial",
+      "title": "Maddela Quirino.JPG - aerial view of Maddela, Quirino, Philippines (April 2012), photograph by P199",
+      "publisher": "Wikimedia Commons (photograph by P199, own work)",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Maddela_Quirino.JPG",
+      "documentType": "media-file",
+      "sha256": "ec3d75e867b2f2a2b666fbcfd91fc714e343b24e3fbfd9c1e14dd559861b25b1",
+      "publishedAt": "2012-10-29",
+      "retrievedAt": "2026-08-29",
+      "verifiedAt": "2026-08-29",
+      "verifier": "bettermaddela-review-2026-08-29-atlas-a",
+      "sourceState": "active",
+      "notes": "Dual-licensed CC BY-SA 3.0 Unported and GFDL 1.2+; CC BY-SA 3.0 chosen. Local copy 1500x1000, 385,330 bytes, byte count equal to the source-stated size; served unmodified (no derivative). Commons-stated SHA-1 93bc50434f9dc83dc9595a20c69151fd7bb5b37c. Attribution displayed adjacent to every use; no endorsement implied. Rights handoff: research/2026-08-29-maddela-imagery-rights.md."
+    },
+    {
+      "id": "commons-maddela-quirino-aerial-filepage",
+      "title": "Wikimedia Commons file page for Maddela Quirino.JPG (revision oldid 927424815)",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Maddela_Quirino.JPG",
+      "documentType": "webpage",
+      "retrievedAt": "2026-08-29",
+      "verifiedAt": "2026-08-29",
+      "verifier": "bettermaddela-review-2026-08-29-atlas-a",
+      "sourceState": "active",
+      "notes": "States description 'Aerial view of Maddela, Quirino, Philippines', date April 2012, author P199 (own work), licenses CC BY-SA 3.0 Unported and GFDL 1.2+, size 1500x1000, 385,330 bytes."
     }
   ]
 }

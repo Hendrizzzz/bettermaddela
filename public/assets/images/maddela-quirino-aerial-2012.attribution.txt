@@ -1,0 +1,9 @@
+File: maddela-quirino-aerial-2012.jpg
+Source: Wikimedia Commons — https://commons.wikimedia.org/wiki/File:Maddela_Quirino.JPG
+Description: Aerial view of Maddela, Quirino, Philippines
+Date: April 2012
+Author: P199 — https://commons.wikimedia.org/wiki/User:P199
+License: Creative Commons Attribution-ShareAlike 3.0 Unported — https://creativecommons.org/licenses/by-sa/3.0/
+Dual-licensed with GFDL 1.2+; CC BY-SA 3.0 chosen for this project.
+SHA-256: ec3d75e867b2f2a2b666fbcfd91fc714e343b24e3fbfd9c1e14dd559861b25b1
+Served unmodified by BetterMaddela. No endorsement by the author or Wikimedia is implied.

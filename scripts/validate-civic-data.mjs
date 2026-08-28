@@ -57,6 +57,8 @@ const allowedRecordTypes = new Set([
   "weather-config",
   "transparency-document",
   "contact",
+  "place",
+  "media-item",
 ]);
 
 function requireText(value, path) {
