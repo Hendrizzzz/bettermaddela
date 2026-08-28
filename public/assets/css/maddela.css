@@ -1391,6 +1391,9 @@ a.govt-node:focus-visible {
 .site-header--allen .header-inner {
   border-top: 1px solid #e8dfc8;
   padding-top: 10px;
+  /* Reserved minimum between the nav and the language buttons so the last
+     link never leans on "EN", even when the FIL row exactly fills the line. */
+  gap: 12px;
 }
 /* The utility strip is the header's first row — no white gap above it. */
 .site-header--allen {
@@ -1468,7 +1471,7 @@ a.govt-node:focus-visible {
   white-space: nowrap;
 }
 .main-nav ul {
-  gap: clamp(10px, 1.4vw, 24px);
+  gap: clamp(10px, 1.2vw, 20px);
 }
 .main-nav {
   flex-shrink: 1;
@@ -1486,7 +1489,7 @@ a.govt-node:focus-visible {
     font-size: 0.8125rem;
   }
   .main-nav ul {
-    gap: 8px;
+    gap: 7px;
   }
 }
 
