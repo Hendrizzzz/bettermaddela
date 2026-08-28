@@ -196,7 +196,7 @@ export default function StructureChart({ mayor, viceMayor, councilors }: Structu
           <>
             <p className="govt-node-name">{mayor.name}</p>
             <p className="govt-node-asof">
-              Verified <time dateTime={mayor.asOf}>{mayor.asOf}</time>
+              Recorded <time dateTime={mayor.asOf}>{mayor.asOf}</time>
             </p>
           </>
         ) : (
@@ -315,7 +315,7 @@ export default function StructureChart({ mayor, viceMayor, councilors }: Structu
       <footer className="govt-footnote" data-gsx-meta>
         <p>
           Structure per the Local Government Code (RA 7160). Names appear only after
-          review &mdash; <Link href="/sources">how evidence is gated</Link>.
+          review; <Link href="/sources">how evidence is gated</Link>.
         </p>
       </footer>
     </div>

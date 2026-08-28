@@ -4,7 +4,7 @@ import { ImageResponse } from "next/og";
 // so no edge runtime declaration is needed.
 export const dynamic = "force-static";
 export const alt =
-  "BetterMaddela - verified civic information about Maddela, Quirino";
+  "BetterMaddela - civic information about Maddela, Quirino";
 export const size = {
   width: 1200,
   height: 630,
@@ -84,7 +84,7 @@ export default function OpengraphImage() {
             marginBottom: 200,
           }}
         >
-          Verified civic information for Maddela, Quirino
+          Civic information for Maddela, Quirino
         </div>
         <svg
           width="1200"
@@ -121,7 +121,7 @@ export default function OpengraphImage() {
             color: "rgba(255, 252, 244, 0.92)",
           }}
         >
-          Independent project - not a government website
+          Independent project, not a government website
         </div>
       </div>
     ),

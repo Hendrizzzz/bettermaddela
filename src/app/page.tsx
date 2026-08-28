@@ -124,49 +124,49 @@ const serviceCategories = [
 const homeCopy = {
   en: {
     heroKicker: "Maddela, Quirino",
-    heroEyebrow: "Independent portal — not the LGU",
-    heroIntroEm: "Civic information — public-source records for Maddela, Quirino.",
+    heroEyebrow: "Independent portal · not the LGU",
+    heroIntroEm: "Civic information from public-source records for Maddela, Quirino.",
     welcome: "Welcome to BetterMaddela",
-    introduction: "Civic information — public-source records for Maddela, Quirino.",
+    introduction: "Civic information from public-source records for Maddela, Quirino.",
     browseServices: "Browse Services",
     contactInformation: "Contact Information",
     serviceCategories: "Service Categories",
-    serviceKicker: "Directory — Services",
-    serviceNotice: "Requirements and fees not yet verified — confirm with the office.",
+    serviceKicker: "Directory · Services",
+    serviceNotice: "Requirements and fees are not yet verified here; confirm with the office.",
     viewAllServices: "View All Services",
     browseDirectory: "Browse the service directory",
     atAGlance: "Maddela at a Glance",
-    atAGlanceKicker: "By the numbers — Maddela at a glance",
+    atAGlanceKicker: "By the numbers · Maddela at a glance",
     viewStatistics: "View Statistics",
     population: "Population",
     barangays: "Barangays",
     municipality: "Municipality",
     households: "Households",
     whereTitle: "Where is Maddela?",
-    whereKicker: "Location — Three steps",
-    whereIntro: "Three quick steps — from country to town.",
+    whereKicker: "Location · Three steps",
+    whereIntro: "Three quick steps, from country to town.",
     history: "Brief History of Maddela",
-    historyKicker: "History — Local narrative & law",
+    historyKicker: "History · Local narrative & law",
     viewHistory: "View national legal history",
     sources: "Sources",
-    historySourceNote: "Local tradition and documented legal milestones — identified separately.",
+    historySourceNote: "Local tradition and documented legal milestones, identified separately.",
     readMore: "Read more",
     updates: "Latest Updates",
-    updatesKicker: "Notices — From verified publishers",
+    updatesKicker: "Notices · From verified publishers",
     viewUpdates: "View All",
     leadership: "Municipal Leadership",
-    leadershipKicker: "Government — Current observations",
+    leadershipKicker: "Government · Current observations",
     viewGovernment: "View Government",
     asOf: "As of",
     contact: "Contact Information",
-    contactKicker: "Connect — Sources & corrections",
+    contactKicker: "Connect · Sources & corrections",
     viewAll: "View All",
     sourceDirectory: "Source Directory",
-    sourceDirectoryNote: "Evidence and review dates — behind every figure.",
+    sourceDirectoryNote: "Evidence and review dates behind every figure.",
     corrections: "Contact & Corrections",
-    correctionsNote: "Report an error — or suggest a correction.",
+    correctionsNote: "Report an error, or suggest a correction.",
     serviceInformation: "Service Information",
-    serviceInformationNote: "Browse categories — verified details remain limited.",
+    serviceInformationNote: "Browse categories; verified details remain limited.",
     stepPhilippines: "Philippines",
     stepPhilippinesNote: "Luzon island, Cagayan Valley region (Region II)",
     stepQuirino: "Quirino",
@@ -176,64 +176,60 @@ const homeCopy = {
     residentsLabel: "residents",
     censusLabel: "2024 census",
     mapTitle: "Embedded Google Maps general view of Maddela, Quirino",
-    mapCaption: "General location view only — not an official boundary.",
+    mapCaption: "General location view only, not an official boundary.",
     exploreMap: "Explore on Google Maps",
     weatherSideLabel: "Weather right now",
     localWeatherContext: "Local station context",
     separateForecast: "Forecast values are provided separately by Open-Meteo.",
     incomeClassSuffix: "Class",
     maddelaToday: "Maddela today",
-    verifiedBadge: "Verified",
-    censusBadge: "2024 POPCEN",
-    barangayBadge: "32 barangays",
-    incomeBadge: "PSGC 0205704000",
-    weatherBadge: "Open-Meteo + PAGASA",
+    checkedLabel: "Checked",
   },
   fil: {
     heroKicker: "Maddela, Quirino",
-    heroEyebrow: "Independent portal — hindi ito ang LGU",
-    heroIntroEm: "Impormasyong sibiko — mga rekord mula sa pampublikong sanggunian para sa Maddela, Quirino.",
+    heroEyebrow: "Independent portal · hindi ito ang LGU",
+    heroIntroEm: "Impormasyong sibiko mula sa pampublikong sanggunian para sa Maddela, Quirino.",
     welcome: "Maligayang pagdating sa BetterMaddela",
-    introduction: "Impormasyong sibiko — mga rekord mula sa pampublikong sanggunian para sa Maddela, Quirino.",
+    introduction: "Impormasyong sibiko mula sa pampublikong sanggunian para sa Maddela, Quirino.",
     browseServices: "Tingnan ang mga Serbisyo",
     contactInformation: "Impormasyon sa Pakikipag-ugnayan",
     serviceCategories: "Mga Kategorya ng Serbisyo",
-    serviceKicker: "Direktoryo — Mga Serbisyo",
-    serviceNotice: "Hindi pa beripikado ang mga requirements at bayarin — kumpirmahin sa tanggapan.",
+    serviceKicker: "Direktoryo · Mga Serbisyo",
+    serviceNotice: "Hindi pa beripikado ang mga requirements at bayarin; kumpirmahin sa tanggapan.",
     viewAllServices: "Tingnan ang Lahat ng Serbisyo",
     browseDirectory: "Tingnan ang direktoryo ng serbisyo",
     atAGlance: "Maddela sa Isang Tingin",
-    atAGlanceKicker: "Sa mga numero — Maddela sa isang tingin",
+    atAGlanceKicker: "Sa mga numero · Maddela sa isang tingin",
     viewStatistics: "Tingnan ang Estadistika",
     population: "Populasyon",
     barangays: "Mga Barangay",
     municipality: "Munisipalidad",
     households: "Mga Sambahayan",
     whereTitle: "Nasaan ang Maddela?",
-    whereKicker: "Lokasyon — Tatlong hakbang",
-    whereIntro: "Tatlong mabilis na hakbang — mula bansa hanggang bayan.",
+    whereKicker: "Lokasyon · Tatlong hakbang",
+    whereIntro: "Tatlong mabilis na hakbang, mula bansa hanggang bayan.",
     history: "Maikling Kasaysayan ng Maddela",
-    historyKicker: "Kasaysayan — Salaysay at batas",
+    historyKicker: "Kasaysayan · Salaysay at batas",
     viewHistory: "Tingnan ang pambansang legal na kasaysayan",
     sources: "Mga Sanggunian",
-    historySourceNote: "Magkahiwalay na tinutukoy — ang lokal na salaysay at dokumentadong legal na pangyayari.",
+    historySourceNote: "Magkahiwalay na tinutukoy: ang lokal na salaysay at dokumentadong legal na pangyayari.",
     readMore: "Basahin pa",
     updates: "Pinakabagong Update",
-    updatesKicker: "Mga Abiso — Mula sa beripikadong publisher",
+    updatesKicker: "Mga Abiso · Mula sa beripikadong publisher",
     viewUpdates: "Tingnan Lahat",
     leadership: "Pamunuan ng Munisipalidad",
-    leadershipKicker: "Pamahalaan — Kasalukuyang obsebasyon",
+    leadershipKicker: "Pamahalaan · Kasalukuyang obsebasyon",
     viewGovernment: "Tingnan ang Pamahalaan",
     asOf: "Mula noong",
     contact: "Impormasyon sa Pakikipag-ugnayan",
-    contactKicker: "Ugnayan — Mga sanggunian at pagwawasto",
+    contactKicker: "Ugnayan · Mga sanggunian at pagwawasto",
     viewAll: "Tingnan Lahat",
     sourceDirectory: "Direktoryo ng mga Sanggunian",
-    sourceDirectoryNote: "Ebidensya at petsa ng pagsusuri — sa likod ng bawat bilang.",
+    sourceDirectoryNote: "Ebidensya at petsa ng pagsusuri sa likod ng bawat bilang.",
     corrections: "Ugnayan at Pagwawasto",
-    correctionsNote: "Mag-ulat ng mali — o imungkahi ang pagwawasto.",
+    correctionsNote: "Mag-ulat ng mali, o imungkahi ang pagwawasto.",
     serviceInformation: "Impormasyon sa Serbisyo",
-    serviceInformationNote: "Tingnan ang mga kategorya — limitado pa ang beripikadong detalye.",
+    serviceInformationNote: "Tingnan ang mga kategorya; limitado pa ang beripikadong detalye.",
     stepPhilippines: "Pilipinas",
     stepPhilippinesNote: "Isla ng Luzon, rehiyon ng Lambak Cagayan (Rehiyon II)",
     stepQuirino: "Quirino",
@@ -243,18 +239,14 @@ const homeCopy = {
     residentsLabel: "na residente",
     censusLabel: "senso ng 2024",
     mapTitle: "Pangkalahatang tanaw ng naka-embed na Google Maps sa Maddela, Quirino",
-    mapCaption: "Pangkalahatang lokasyon lamang — hindi opisyal na hangganan.",
+    mapCaption: "Pangkalahatang lokasyon lamang, hindi opisyal na hangganan.",
     exploreMap: "Tingnan ang Maddela sa Google Maps",
     weatherSideLabel: "Panahon ngayon",
     localWeatherContext: "Lokal na konteksto ng istasyon",
     separateForecast: "Hiwalay na ibinibigay ng Open-Meteo ang mga forecast value.",
     incomeClassSuffix: "Klase",
     maddelaToday: "Ang Maddela ngayon",
-    verifiedBadge: "Beripikado",
-    censusBadge: "2024 POPCEN",
-    barangayBadge: "32 barangay",
-    incomeBadge: "PSGC 0205704000",
-    weatherBadge: "Open-Meteo + PAGASA",
+    checkedLabel: "Nasuri",
   },
 } as const;
 
@@ -381,8 +373,7 @@ export default function HomePage() {
                   <span className="home-stat-card-value">
                     {population.data.population.toLocaleString("en-PH")}
                   </span>
-                  <span className="home-stat-card-label">{copy.population} — {copy.censusLabel}</span>
-                  <span className="pill pill--muted" style={{ marginTop: 8 }}>{copy.verifiedBadge} · 2024</span>
+                  <span className="home-stat-card-label">{copy.population} · {copy.censusLabel}</span>
                 </div>
               </Link>
             </Reveal>
@@ -390,8 +381,7 @@ export default function HomePage() {
               <Link href="/statistics" className="home-stat-card hairline-top">
                 <div className="home-stat-card-content">
                   <span className="home-stat-card-value">{barangays.data.barangayCount}</span>
-                  <span className="home-stat-card-label">{copy.barangays} — PSGC verified</span>
-                  <span className="pill pill--muted" style={{ marginTop: 8 }}>{copy.verifiedBadge} · 2024</span>
+                  <span className="home-stat-card-label">{copy.barangays} · PSGC</span>
                 </div>
               </Link>
             </Reveal>
@@ -399,8 +389,7 @@ export default function HomePage() {
               <Link href="/statistics" className="home-stat-card hairline-top">
                 <div className="home-stat-card-content">
                   <span className="home-stat-card-value">{identity.data.incomeClass} {copy.incomeClassSuffix}</span>
-                  <span className="home-stat-card-label">{copy.municipality} — 1st Class</span>
-                  <span className="pill pill--muted" style={{ marginTop: 8 }}>{copy.verifiedBadge} · PSGC</span>
+                  <span className="home-stat-card-label">{copy.municipality} · PSGC</span>
                 </div>
               </Link>
             </Reveal>
@@ -408,8 +397,7 @@ export default function HomePage() {
               <Link href="/statistics" className="home-stat-card hairline-top">
                 <div className="home-stat-card-content">
                   <span className="home-stat-card-value">{households.data.numberOfHouseholds.toLocaleString("en-PH")}</span>
-                  <span className="home-stat-card-label">{copy.households} — {copy.censusLabel}</span>
-                  <span className="pill pill--muted" style={{ marginTop: 8 }}>{copy.verifiedBadge} · 2024</span>
+                  <span className="home-stat-card-label">{copy.households} · {copy.censusLabel}</span>
                 </div>
               </Link>
             </Reveal>
@@ -504,9 +492,9 @@ export default function HomePage() {
                   <div className="timeline-marker" />
                   <div className="timeline-content hairline-top" lang="en">
                     <span className="timeline-year">{section.period}</span>
-                    <p><strong>{section.title}</strong> — {section.kind}</p>
+                    <p><strong>{section.title}</strong> · {section.kind}</p>
                     <details className="timeline-more">
-                      <summary>{copy.readMore}<span className="sr-only"> — {section.title}</span></summary>
+                      <summary>{copy.readMore}<span className="sr-only">: {section.title}</span></summary>
                       <p>{section.text}</p>
                     </details>
                   </div>
@@ -520,7 +508,7 @@ export default function HomePage() {
                   <div className="history-card-content">
                     <h3>{theme.label}</h3>
                     <details className="history-card-more">
-                      <summary>{copy.readMore}<span className="sr-only"> — {theme.label}</span></summary>
+                      <summary>{copy.readMore}<span className="sr-only">: {theme.label}</span></summary>
                       <p>{theme.description}</p>
                     </details>
                   </div>
@@ -530,7 +518,7 @@ export default function HomePage() {
                 <div className="history-card-content">
                   <h3>{copy.maddelaToday}</h3>
                   <details className="history-card-more">
-                    <summary>{copy.readMore}<span className="sr-only"> — {copy.maddelaToday}</span></summary>
+                    <summary>{copy.readMore}<span className="sr-only">: {copy.maddelaToday}</span></summary>
                     <p>{community.data.summary}</p>
                   </details>
                 </div>
@@ -563,7 +551,7 @@ export default function HomePage() {
                   </div>
                   <h3><a href={item.canonicalUrl} target="_blank" rel="noreferrer">{item.headline}</a></h3>
                   <p className="home-news-summary">{item.summary}</p>
-                  <p className="home-news-publisher">{item.publisher} — {formatDate(item.publishedAt, language)}</p>
+                  <p className="home-news-publisher">{item.publisher} · {formatDate(item.publishedAt, language)}</p>
                 </article>
               ))}
             </div>
@@ -578,7 +566,7 @@ export default function HomePage() {
             <div>
               <p className="section-kicker">{copy.leadershipKicker}</p>
               <h2>{copy.leadership}</h2>
-              <p style={{ color: "var(--color-text-light)", margin: 0 }}>Elected leadership — verified scope and dates, with provenance one click away.</p>
+              <p style={{ color: "var(--color-text-light)", margin: 0 }}>Elected leadership with verified scope and dates; provenance one click away.</p>
             </div>
             <Link href="/government" className="home-section-link">
               {copy.viewGovernment} <i className="bi bi-arrow-right" aria-hidden="true"></i>
@@ -592,8 +580,8 @@ export default function HomePage() {
                   <div className="home-leader-badge">{leader.title}</div>
                   <h3>{leader.name}</h3>
                   <p className="home-leader-scope">{leader.scope}</p>
-                  <p className="home-leader-as-of">{copy.asOf} <time dateTime={leader.asOf}>{formatDate(leader.asOf, language)}</time> — {leader.evidenceContext}</p>
-                  <span className="pill pill--success" style={{ marginTop: 8 }}>{copy.verifiedBadge} · {leader.asOf}</span>
+                  <p className="home-leader-as-of">{copy.asOf} <time dateTime={leader.asOf}>{formatDate(leader.asOf, language)}</time> · {leader.evidenceContext}</p>
+                  <span className="meta-checked">{copy.checkedLabel} · {formatDate(leader.asOf, language)}</span>
                 </article>
               ))}
             </div>

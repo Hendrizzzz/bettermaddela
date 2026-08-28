@@ -33,7 +33,7 @@ export default function SourcesPage() {
             {records.map((record) => (
               <article className="source-card" id={`record-${record.id}`} key={record.id}>
                 <div className="source-card-heading">
-                  <div><p className="status-chip">Verified</p><h3>{record.label}</h3></div>
+                  <h3>{record.label}</h3>
                   <p className="source-dates">Checked <time dateTime={record.lastVerified}>{record.lastVerified}</time><br />Review by <time dateTime={record.nextReviewOn}>{record.nextReviewOn}</time></p>
                 </div>
                 {record.notes && <p>{record.notes}</p>}

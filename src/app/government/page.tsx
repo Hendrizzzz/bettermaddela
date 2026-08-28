@@ -68,15 +68,15 @@ export default function GovernmentPage() {
     <>
       <PageHeader
         title="Government Structure & Officials"
-        description="Verified incumbents — where the record exists, shown with a hairline card; elsewhere honestly withheld."
+        description="Names shown where the record exists, each on a hairline card; withheld elsewhere."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Government" }]}
       />
 
       <section className="section govt-structure-section section--allen">
         <div className="container">
           <div className="text-center" style={{ marginBottom: "var(--spacing-xl)" }}>
-            <p className="section-kicker" style={{ justifyContent: "center" }}>Government — Structure</p>
-            <h2>Government structure — Maddela LGU</h2>
+            <p className="section-kicker" style={{ justifyContent: "center" }}>Government · Structure</p>
+            <h2>Maddela LGU government structure</h2>
             <div className="section-header-rule" style={{ maxWidth: 320, margin: "12px auto 0" }} aria-hidden="true" />
           </div>
           <StructureChart
@@ -84,20 +84,22 @@ export default function GovernmentPage() {
             viceMayor={viceMayor ? { name: viceMayor.name, asOf: viceMayor.asOf } : null}
             councilors={councilors.map((member) => ({ name: member.name }))}
           />
-          <div style={{ display: "flex", justifyContent: "center", gap: 8, marginTop: 16, flexWrap: "wrap" }}>
-            <span className="pill pill--brand">Mayor</span>
-            <span className="pill pill--muted">Vice Mayor</span>
-            <span className="pill pill--muted">Sangguniang Bayan · 8 seats</span>
-          </div>
+          <p className="govt-legend-items">
+            <span>Mayor</span>
+            <span className="govt-legend-sep" aria-hidden="true">·</span>
+            <span>Vice Mayor</span>
+            <span className="govt-legend-sep" aria-hidden="true">·</span>
+            <span>Sangguniang Bayan, 8 seats</span>
+          </p>
         </div>
       </section>
 
       <section className="section section--allen" style={{ background: "var(--color-bg-alt)" }}>
         <div className="container">
           <div className="text-center" style={{ marginBottom: "var(--spacing-xl)" }}>
-            <p className="section-kicker" style={{ justifyContent: "center" }}>Government — Current observations</p>
+            <p className="section-kicker" style={{ justifyContent: "center" }}>Government · Current observations</p>
             <h2>Current public observations</h2>
-            <p style={{ color: "var(--color-text-light)" }}>Each role keeps the scope and date — stated by its evidence, repeated here and in the chart for glance recognition.</p>
+            <p style={{ color: "var(--color-text-light)" }}>Each role keeps the scope and date stated by its evidence, repeated here and in the chart for glance recognition.</p>
           </div>
           <div className="section-header-rule" aria-hidden="true" />
           <div className="grid grid-2">
@@ -105,9 +107,9 @@ export default function GovernmentPage() {
               <article className="official-card card hairline-top" key={`${leader.title}-${leader.name}`}>
                 <div className="official-info">
                   <h3>{leader.name}</h3>
-                  <p className="official-title">{leader.title} — {leader.scope}</p>
-                  <p className="record-meta">Observed as of <time dateTime={leader.asOf}>{leader.asOf}</time> — {leader.evidenceContext}</p>
-                  <span className="pill pill--success" style={{ marginTop: 8 }}>Verified · {leader.asOf}</span>
+                  <p className="official-title">{leader.title} · {leader.scope}</p>
+                  <p className="record-meta">Observed as of <time dateTime={leader.asOf}>{leader.asOf}</time> · {leader.evidenceContext}</p>
+                  <span className="meta-checked">Checked · {leader.asOf}</span>
                 </div>
               </article>
             ))}
@@ -115,8 +117,8 @@ export default function GovernmentPage() {
           <RecordMeta record={leadershipRecord} />
           <p className="unpublished-note">
             The 2025-elected vice mayor and councilors appear above and in the structure chart as
-            listed on Comelec server tallies — full legal names and the new ex-officio seats await
-            official proclamations — <Link href="/government/officials">see the officials record</Link>.
+            listed on Comelec server tallies; full legal names and the new ex-officio seats await
+            official proclamations. <Link href="/government/officials">See the officials record</Link>.
           </p>
         </div>
       </section>
@@ -124,19 +126,19 @@ export default function GovernmentPage() {
       <section className="section section--allen">
         <div className="container">
           <div className="text-center" style={{ marginBottom: "var(--spacing-xl)" }}>
-            <p className="section-kicker" style={{ justifyContent: "center" }}>Offices — Dated observations</p>
+            <p className="section-kicker" style={{ justifyContent: "center" }}>Offices · Dated observations</p>
             <h2>Dated office-head observations</h2>
-            <p style={{ color: "var(--color-text-light)" }}>These are source-dated observations — not a complete office directory.</p>
+            <p style={{ color: "var(--color-text-light)" }}>These are source-dated observations, not a complete office directory.</p>
           </div>
           <div className="section-header-rule" aria-hidden="true" />
           <div className="grid grid-3">
             {officeHeadsRecord.data.observations.map((observation) => (
               <article className="councilor-card card text-center hairline-top" key={`${observation.office}-${observation.person}`}>
                 <h3>{observation.person}</h3>
-                <span className="pill pill--brand" style={{ margin: "6px auto" }}>{observation.displayedTitle}</span>
+                <span className="office-role-label">{observation.displayedTitle}</span>
                 <p>{observation.office}</p>
-                <p className="record-meta">Observed <time dateTime={observation.asOf}>{observation.asOf}</time> — {observation.evidenceContext}</p>
-                <span className="pill pill--success">Verified · {observation.asOf}</span>
+                <p className="record-meta">Observed <time dateTime={observation.asOf}>{observation.asOf}</time> · {observation.evidenceContext}</p>
+                <span className="meta-checked">Checked · {observation.asOf}</span>
               </article>
             ))}
           </div>
@@ -147,9 +149,9 @@ export default function GovernmentPage() {
       <section id="barangays" className="section section--allen" style={{ background: "var(--color-bg-alt)" }}>
         <div className="container">
           <div className="text-center" style={{ marginBottom: "var(--spacing-xl)" }}>
-            <p className="section-kicker" style={{ justifyContent: "center" }}>Government — Barangays</p>
-            <h2>Barangays of Maddela — {barangayRecord.data.barangayCount} barangays</h2>
-            <p style={{ color: "var(--color-text-light)" }}>{barangayRecord.data.barangayCount} barangays — rural and urban, each a hairline card</p>
+            <p className="section-kicker" style={{ justifyContent: "center" }}>Government · Barangays</p>
+            <h2>The {barangayRecord.data.barangayCount} barangays of Maddela</h2>
+            <p style={{ color: "var(--color-text-light)" }}>{barangayRecord.data.barangayCount} barangays, rural and urban, each a hairline card</p>
             <div className="section-header-rule" style={{ maxWidth: 360, margin: "12px auto 0" }} aria-hidden="true" />
           </div>
           <div className="grid grid-4">
@@ -158,7 +160,7 @@ export default function GovernmentPage() {
                 <div className="barangay-card-header">
                   <span className="barangay-name">{barangay.name}</span>
                 </div>
-                <span className="pill pill--muted" style={{ marginTop: 8, alignSelf: "flex-start" }}>{barangay.classification}</span>
+                <span className="barangay-class">{barangay.classification}</span>
               </Link>
             ))}
           </div>

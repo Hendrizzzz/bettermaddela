@@ -72,7 +72,7 @@ function DataValue({ value }: { value: unknown }) {
         {value.map((item, index) => (
           <li key={index}>
             {"office" in item && "headOfOffice" in item && "amount" in item
-              ? <>{item.office} — {item.headOfOffice}: <strong>{formatMoney(item.amount)}</strong></>
+                ? <>{item.office} · {item.headOfOffice}: <strong>{formatMoney(item.amount)}</strong></>
               : null}
             {"project" in item && "estimatedCost" in item
               ? <>{item.project}: <strong>{formatMoney(item.estimatedCost)}</strong></>
@@ -114,7 +114,7 @@ function LineItemBars({ items }: { items: LineItem[] }) {
         {items.map((item, index) => {
           const name =
             typeof item.office === "string" && typeof item.headOfOffice === "string"
-              ? `${item.office} — ${item.headOfOffice}`
+              ? `${item.office} · ${item.headOfOffice}`
               : String(item.project);
           return (
             <li className="disclosure-bar-item" key={index}>

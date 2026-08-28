@@ -114,7 +114,7 @@ function StageTrack({ stage }: { stage: string }) {
             <span className="proj-track-dot" aria-hidden="true" />
             <span className="proj-track-label">
               {label}
-              {isCurrent ? " — recorded stage" : ""}
+              {isCurrent ? " · recorded stage" : ""}
             </span>
           </li>
         );
@@ -217,7 +217,7 @@ function DetailBody({ data }: { data: ProjectData }) {
 export const metadata: Metadata = {
   title: "Projects & Infrastructure",
   description:
-    "A glanceable board of reviewed, source-linked Maddela infrastructure project records — stages exactly as official sources state them.",
+        "A glanceable board of reviewed, source-linked Maddela infrastructure project records, staged exactly as official sources state them.",
 };
 
 export default function ProjectsPage() {
@@ -256,7 +256,7 @@ export default function ProjectsPage() {
 
       <PageHeader
         title="Projects"
-        description="Reviewed civic records — what public works are actually on file for Maddela."
+        description="Reviewed civic records: the public works actually on file for Maddela."
         breadcrumbs={[
           { label: "Home", href: "/" },
           { label: "Projects & infrastructure" },
@@ -295,7 +295,7 @@ export default function ProjectsPage() {
               const data = record.data;
               const tone = cardTone(data);
               const locationLine = data.locationConflict
-                ? "Municipality conflicted across sources — see record detail"
+                ? "Municipality conflicted across sources; see record detail"
                 : data.location;
               const metaLine = [locationLine, data.implementingAgency]
                 .filter(Boolean)
@@ -348,7 +348,7 @@ export default function ProjectsPage() {
                 <div className="proj-card-id">
                   <p className="proj-eyebrow">
                     <i className="bi bi-cone-striped" aria-hidden="true" />
-                    <span>Provincial bids board — roads, water, buildings</span>
+                    <span>Provincial bids board · roads, water, buildings</span>
                   </p>
                   <h2 className="proj-name">
                     Six provincially advertised bid notices naming Maddela barangays
@@ -375,7 +375,7 @@ export default function ProjectsPage() {
                   <ul className="proj-item-list">
                     {provincialNotices.data.items.map((item) => (
                       <li key={item.title}>
-                        <strong>{item.title}</strong> — posted {item.postedAt}
+                        <strong>{item.title}</strong>, posted {item.postedAt}
                       </li>
                     ))}
                   </ul>
@@ -400,7 +400,7 @@ export default function ProjectsPage() {
             </article>
 
             <p className="proj-unpublished" data-reveal>
-              Not yet tracked here: DPWH, SubayBAYAN and municipal works listings —
+              Not yet tracked here: DPWH, SubayBAYAN and municipal works listings,
               unpublished at their sources.
             </p>
           </BoardMotion>

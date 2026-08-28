@@ -152,13 +152,13 @@ export default function StatisticsPage() {
               <CensusChart />
             </div>
             <figcaption className="stats-figure-caption">
-              <strong>Maddela grew by {fmt(totalGain)} residents over 24 years — and the pace is visibly easing.</strong>
+              <strong>Maddela grew by {fmt(totalGain)} residents over 24 years, and the pace is visibly easing.</strong>
             </figcaption>
           </figure>
           <details className="stats-more">
             <summary>About this data</summary>
             <p className="table-note">
-              The census count rose from {fmt(firstCensus.population)} ({monthYear(firstCensus.referenceDate)}) to {fmt(lastCensus.population)} ({monthYear(lastCensus.referenceDate)}), a {totalGrowthPercent}% increase (computed). The latest interval added {fmt(latestGain)} people{smallestGain === latestGain ? " — smaller than any previous census interval" : ""} (computed).
+              The census count rose from {fmt(firstCensus.population)} ({monthYear(firstCensus.referenceDate)}) to {fmt(lastCensus.population)} ({monthYear(lastCensus.referenceDate)}), a {totalGrowthPercent}% increase (computed). The latest interval added {fmt(latestGain)} people{smallestGain === latestGain ? ", smaller than any previous census interval" : ""} (computed).
             </p>
             <div className="table-wrap">
               <table>
@@ -176,7 +176,7 @@ export default function StatisticsPage() {
         <div className="container">
           <div className="section-header-minimal">
             <h2>Annual population growth rate</h2>
-            <p>As published by the Philippine Statistics Authority — periods are kept exactly as released</p>
+            <p>As published by the Philippine Statistics Authority; periods are kept exactly as released</p>
           </div>
           <figure className="stats-figure">
             <div className="chart-scroll" role="region" aria-label="Population growth rate chart" tabIndex={0}>
@@ -220,7 +220,7 @@ export default function StatisticsPage() {
           <details className="stats-more">
             <summary>About this data</summary>
             <p className="table-note">
-              These are PSA small-area model estimates, not headcounts. Only the {povertyLatest.year} reading publishes uncertainty: a {povertyLatest.confidenceLevelPercent}% confidence interval spanning {povertyLatest.lowerBoundPercent.toFixed(2)}%–{povertyLatest.upperBoundPercent.toFixed(2)}%, nearly {Math.round(Number(povertyCiWidth))} points wide (computed). Earlier years carry no published interval, so this record does not support calling the decline statistically significant — read it as direction, not proof.
+              These are PSA small-area model estimates, not headcounts. Only the {povertyLatest.year} reading publishes uncertainty: a {povertyLatest.confidenceLevelPercent}% confidence interval spanning {povertyLatest.lowerBoundPercent.toFixed(2)}%–{povertyLatest.upperBoundPercent.toFixed(2)}%, nearly {Math.round(Number(povertyCiWidth))} points wide (computed). Earlier years carry no published interval, so this record does not support calling the decline statistically significant; read it as direction, not proof.
             </p>
             <div className="table-wrap">
               <table>
@@ -251,7 +251,7 @@ export default function StatisticsPage() {
           <details className="stats-more">
             <summary>About this data</summary>
             <p className="table-note">
-              They range from {smallestBarangay.name}&apos;s {fmt(smallestBarangay.population)} to {largestBarangay.name}&apos;s {fmt(largestBarangay.population)} — a {barangaySpread}× spread (computed). Only the {urbanBarangays.length === 2 ? "two urban-classified barangays, both Poblaciones" : `${urbanBarangays.length} urban-classified barangays`}, hold about {urbanShare}% of the municipal population (computed).
+              They range from {smallestBarangay.name}&apos;s {fmt(smallestBarangay.population)} to {largestBarangay.name}&apos;s {fmt(largestBarangay.population)}, a {barangaySpread}× spread (computed). Only the {urbanBarangays.length === 2 ? "two urban-classified barangays, both Poblaciones" : `${urbanBarangays.length} urban-classified barangays`}, hold about {urbanShare}% of the municipal population (computed).
             </p>
             <div className="table-wrap">
               <table>
@@ -336,7 +336,7 @@ export default function StatisticsPage() {
         })}
         <line className="chart-refline" aria-hidden="true" x1={midX} y1={midY + 8} x2={midX} y2={midY + 44} />
         <text className="chart-annotation" x={right} y={midY + 60} textAnchor="end">
-          +{fmt(latestGain)} since {year(prevPoint.referenceDate)}{smallestGain === latestGain ? " — smallest census gain on record" : ""}
+          +{fmt(latestGain)} since {year(prevPoint.referenceDate)}{smallestGain === latestGain ? ", the smallest census gain on record" : ""}
         </text>
       </svg>
     );

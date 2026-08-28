@@ -86,7 +86,7 @@ export default function OfficialsPage() {
       <section className="section">
         <div className="container">
           <p className="unpublished-note">
-            No complete current Sangguniang Bayan record — ex-officio seats and vacancies included — was established,
+            No complete current Sangguniang Bayan record (ex-officio seats and vacancies included) was established,
             so no partial list is presented as the current council.
           </p>
           <RecordMetaGroup records={[

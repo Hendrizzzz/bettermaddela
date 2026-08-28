@@ -55,7 +55,7 @@ export default function ContactPage() {
             </a>
           </div>
           <p className="unpublished-note">
-            No municipal contact directory or office schedule is published here — none has passed independent
+            No municipal contact directory or office schedule is published here; none has passed independent
             verification yet, and BetterMaddela is not a transaction, complaint, appointment, or emergency channel.
           </p>
         </div>

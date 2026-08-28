@@ -171,7 +171,7 @@ export default function BarangaysPage() {
           </ol>
 
           <p className="brgy-unpublished-note">
-            Each profile opens with verified population data — officials, projects, and contacts appear
+            Each profile opens with verified population data; officials, projects, and contacts appear
             there as each passes verification.
           </p>
 

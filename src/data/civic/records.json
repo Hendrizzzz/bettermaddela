@@ -3056,13 +3056,13 @@
     {
       "id": "nia-lusod-inip-close-conduit",
       "type": "procurement-register",
-      "label": "Lusod Integrated National Irrigation Project — close-conduit package (NIA Region II)",
+      "label": "Lusod Integrated National Irrigation Project: close-conduit package (NIA Region II)",
       "data": {
         "projectName": "Lusod Integrated National Irrigation Project",
         "category": "National irrigation project",
         "componentPackage": "Construction of Close Conduit at Sta. 3+574.68 – Sta. 4+600",
         "location": "Maddela, Quirino; related land-acquisition areas reported in Dipantan (Nagtipunan), Abbag (Maddela) and Dipintin (Maddela)",
-        "implementingAgency": "National Irrigation Administration — Region II, through the Quirino Irrigation Management Office (NIA-QIMO)",
+        "implementingAgency": "National Irrigation Administration, Region II, through the Quirino Irrigation Management Office (NIA-QIMO)",
         "referenceCodes": "NCB-RO2-QUI01-26 (original ITB); NCB-RO2-QUI01R-26 (re-bid); supplemental/bid bulletin #04-2026",
         "amountLabel": "Approved Budget for the Contract (ABC)",
         "amount": 62645314.3,
@@ -3071,7 +3071,7 @@
         "stageAsOf": "2026-07-01",
         "contextNotes": "Pre-construction conferences were held June 16–18, 2026 for CY 2026 packages including Lusod ('contractors may now proceed with project mobilization based on the approved implementation schedules'); land acquisition and resettlement planning was ongoing as of March 18, 2026.",
         "canonicalUrl": "https://region2.nia.gov.ph/content/contract-construction-close-conduit-sta357468-sta-460000-lusod-integrated-national-0",
-        "limitations": "An NOA proves award only — not commencement, delivery or completion. No contractor is published (the NOA PDF has no extractable text), and no fund source, overall INIP cost, construction schedule or physical progress percentage appears in the retrieved postings. The source's NOA title spells 'Madella' [sic]."
+        "limitations": "An NOA proves award only, not commencement, delivery or completion. No contractor is published (the NOA PDF has no extractable text), and no fund source, overall INIP cost, construction schedule or physical progress percentage appears in the retrieved postings. The source's NOA title spells 'Madella' [sic]."
       },
       "sourceIds": [
         "nia-r2-lusod-inip-noa",
@@ -3145,13 +3145,13 @@
       "data": {
         "projectName": "Construction of Fourteen (14) units 15HP Solar Powered Pump with AI Satellite-assisted Monitoring System, Aglipay, Cabarroguis, Diffun, Maddela & Saguday, Quirino and Enchague [sic], Isabela",
         "category": "Solar-powered irrigation infrastructure",
-        "location": "Municipalities named only — Aglipay, Cabarroguis, Diffun, Maddela and Saguday (Quirino), Enchague [sic] (Isabela); per-unit site breakdown within Maddela is not stated",
+        "location": "Municipalities named only: Aglipay, Cabarroguis, Diffun, Maddela and Saguday (Quirino), Enchague [sic] (Isabela); per-unit site breakdown within Maddela is not stated",
         "implementingAgency": "NIA Region II",
         "referenceCode": "NCB-RO2-QUI02-26",
         "amountLabel": "Approved Budget for the Contract (ABC)",
         "amount": 132220450.79,
         "amountNote": "Printed on the posting with spaces as '132, 220, 450.79'; bidding budget, not a contract price.",
-        "stage": "Invitation to Bid posted June 30, 2026 — bids due July 20, 2026, 9:30 AM; status Open as posted",
+        "stage": "Invitation to Bid posted June 30, 2026; bids due July 20, 2026, 9:30 AM; status Open as posted",
         "stageAsOf": "2026-06-30",
         "outcomeCheck": "Outcome unverified: no matching Notice of Award was present on page 1 of NIA R2's Notice of Award listing as of 2026-08-26; deeper listing pages were not enumerated.",
         "canonicalUrl": "https://region2.nia.gov.ph/content/construction-fourteen-14-units-15hp-solar-powered-pump-ai-satellite-assisted-monitoring",
@@ -3213,7 +3213,7 @@
     {
       "id": "nia-balligui-spip",
       "type": "procurement-register",
-      "label": "Balligui Solar Pump Irrigation Project — completed and turned over February 17, 2022 (NIA Region II)",
+      "label": "Balligui Solar Pump Irrigation Project: completed and turned over February 17, 2022 (NIA Region II)",
       "data": {
         "projectName": "Balligui Solar Pump Irrigation Project (SPIP)",
         "category": "Solar pump irrigation system (solar pump system, pump sump, water tanks, appurtenant structures)",
@@ -3289,9 +3289,9 @@
     {
       "id": "dar-nia-carpic-cabaruan-cis",
       "type": "procurement-register",
-      "label": "CARP-IC communal irrigation system, Cabaruan — turned over October 29, 2021 (DAR Quirino with NIA)",
+      "label": "CARP-IC communal irrigation system, Cabaruan: turned over October 29, 2021 (DAR Quirino with NIA)",
       "data": {
-        "projectName": "CARP-IC irrigation project — Communal Irrigation System (CIS) at Cabaruan (formal project name not given in the posting)",
+        "projectName": "CARP-IC irrigation project: Communal Irrigation System (CIS) at Cabaruan (formal project name not given in the posting)",
         "category": "Communal irrigation system",
         "location": "Barangay Cabaruan, Maddela",
         "implementingAgency": "Department of Agrarian Reform (DAR) Quirino, with NIA and the irrigators' association",
@@ -3299,7 +3299,7 @@
         "stage": "Turned over October 29, 2021",
         "stageAsOf": "2021-10-29",
         "canonicalUrl": "https://region2.nia.gov.ph/content/ia-and-dar-turns-over-carp-ic-irrigation-project-quirino",
-        "limitations": "Contractor, fund source and amount are not stated in the retrieved summary. The headline and snippet were verified on the NIA page listing; the full article body was not independently inspected in the 2026-08 session. Historical item only — it does not describe a current build."
+        "limitations": "Contractor, fund source and amount are not stated in the retrieved summary. The headline and snippet were verified on the NIA page listing; the full article body was not independently inspected in the 2026-08 session. Historical item only; it does not describe a current build."
       },
       "sourceIds": [
         "nia-r2-carpic-cabaruan-turnover"
@@ -3345,7 +3345,7 @@
     {
       "id": "quirino-bac-maddela-notices-2025",
       "type": "procurement-register",
-      "label": "Provincial bid notices naming Maddela barangays — titles only, details unavailable at source (Provincial Government of Quirino, 2025)",
+      "label": "Provincial bid notices naming Maddela barangays: titles only, details unavailable at source (Provincial Government of Quirino, 2025)",
       "data": {
         "summary": "Six bid notices naming Maddela were posted on the Quirino provincial bids board between April 30 and September 26, 2025. Post bodies currently error out at the source, so only titles and posting dates are verifiable.",
         "items": [
@@ -3383,7 +3383,7 @@
         "stage": "Bid notice posted on the dates shown; nothing later is evidenced",
         "stageAsOf": "2026-08-26",
         "canonicalUrl": "https://quirinoprovince.gov.ph/?s=Maddela",
-        "limitations": "Every individual /bac-post/ post body returns a WordPress critical error at the source (verified through three fetch methods as of 2026-08-26). Amounts, fund sources, deadlines, contractors and award outcomes are UNAVAILABLE — do not infer completion or ongoing construction from these titles."
+        "limitations": "Every individual /bac-post/ post body returns a WordPress critical error at the source (verified through three fetch methods as of 2026-08-26). Amounts, fund sources, deadlines, contractors and award outcomes are UNAVAILABLE; do not infer completion or ongoing construction from these titles."
       },
       "sourceIds": [
         "quirino-bac-maddela-listing"
@@ -3446,73 +3446,73 @@
             "title": "Municipal Mayor",
             "scope": "Municipality of Maddela",
             "asOf": "2025-06-30",
-            "evidenceContext": "Winner of the May 12, 2025 mayoral race — 12,140 votes (46.63%), listed as 'TOLENTINO LIPPUOK (NPC)'; succeeds his 2022–2025 term."
+            "evidenceContext": "Winner of the May 12, 2025 mayoral race, 12,140 votes (46.63%), listed as 'TOLENTINO LIPPUOK (NPC)'; succeeds his 2022–2025 term."
           },
           {
             "name": "Salvador 'Junjun'",
             "title": "Municipal Vice Mayor",
             "scope": "Municipality of Maddela",
             "asOf": "2025-06-30",
-            "evidenceContext": "Listed as the vice-mayoral winner 'SALVADOR JUNJUN (Ind)' — 13,881 votes (53.31%). Name reproduced as listed; the full given name awaits official proclamation (possibly the 2022–2025 SB member Orlando L. Salvador Jr. — unconfirmed, not asserted here)."
+            "evidenceContext": "Listed as the vice-mayoral winner 'SALVADOR JUNJUN (Ind)', 13,881 votes (53.31%). Name reproduced as listed; the full given name awaits official proclamation (possibly the 2022–2025 SB member Orlando L. Salvador Jr., unconfirmed, not asserted here)."
           },
           {
             "name": "Tolentino, Jaja",
             "title": "Sangguniang Bayan Member",
             "scope": "Municipality of Maddela",
             "asOf": "2025-06-30",
-            "evidenceContext": "Elected councilor (top 8 of the 2025 race) — 13,654 votes, listed as NPC. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
+            "evidenceContext": "Elected councilor (top 8 of the 2025 race), 13,654 votes, listed as NPC. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
           },
           {
             "name": "Albano, Prescy",
             "title": "Sangguniang Bayan Member",
             "scope": "Municipality of Maddela",
             "asOf": "2025-06-30",
-            "evidenceContext": "Elected councilor (top 8 of the 2025 race) — 13,445 votes, listed as NPC. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
+            "evidenceContext": "Elected councilor (top 8 of the 2025 race), 13,445 votes, listed as NPC. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
           },
           {
             "name": "Ylanan Jr., Renato",
             "title": "Sangguniang Bayan Member",
             "scope": "Municipality of Maddela",
             "asOf": "2025-06-30",
-            "evidenceContext": "Elected councilor (top 8 of the 2025 race) — 13,011 votes, listed as NPC. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
+            "evidenceContext": "Elected councilor (top 8 of the 2025 race), 13,011 votes, listed as NPC. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
           },
           {
             "name": "Ruiz, Ace Pong",
             "title": "Sangguniang Bayan Member",
             "scope": "Municipality of Maddela",
             "asOf": "2025-06-30",
-            "evidenceContext": "Elected councilor (top 8 of the 2025 race) — 12,859 votes, listed as NPC. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
+            "evidenceContext": "Elected councilor (top 8 of the 2025 race), 12,859 votes, listed as NPC. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
           },
           {
             "name": "Naboye, Carlos Cajoga",
             "title": "Sangguniang Bayan Member",
             "scope": "Municipality of Maddela",
             "asOf": "2025-06-30",
-            "evidenceContext": "Elected councilor (top 8 of the 2025 race) — 12,429 votes, listed as NPC. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
+            "evidenceContext": "Elected councilor (top 8 of the 2025 race), 12,429 votes, listed as NPC. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
           },
           {
             "name": "Hidalgo, Budan",
             "title": "Sangguniang Bayan Member",
             "scope": "Municipality of Maddela",
             "asOf": "2025-06-30",
-            "evidenceContext": "Elected councilor (top 8 of the 2025 race) — 12,286 votes, listed as NPC. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
+            "evidenceContext": "Elected councilor (top 8 of the 2025 race), 12,286 votes, listed as NPC. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
           },
           {
             "name": "Cadavis, Jun",
             "title": "Sangguniang Bayan Member",
             "scope": "Municipality of Maddela",
             "asOf": "2025-06-30",
-            "evidenceContext": "Elected councilor (top 8 of the 2025 race) — 11,246 votes, listed as LP. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
+            "evidenceContext": "Elected councilor (top 8 of the 2025 race), 11,246 votes, listed as LP. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
           },
           {
             "name": "Balderas, Eleazar",
             "title": "Sangguniang Bayan Member",
             "scope": "Municipality of Maddela",
             "asOf": "2025-06-30",
-            "evidenceContext": "Elected councilor (top 8 of the 2025 race) — 10,741 votes, listed as Ind. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
+            "evidenceContext": "Elected councilor (top 8 of the 2025 race), 10,741 votes, listed as Ind. Name reproduced as listed on the Comelec Media Server tallies (surnames first)."
           }
         ],
-        "limitations": "Names are reproduced as listed on the Comelec Media (Transparency) Server tallies republished by Rappler (100% of precincts reporting as of May 15, 2025) — partial and unofficial; no primary COMELEC certificate of canvass for Maddela was accessed. Several winners are listed by nickname; full legal names and any post-election changes await official proclamations. Ex-officio seats (ABC president, SK federation president, IPMR) for the new term are not yet verified and are not listed. Wikipedia's Maddela officials infobox is stale and contradicted by primary reporting; it was not used."
+        "limitations": "Names are reproduced as listed on the Comelec Media (Transparency) Server tallies republished by Rappler (100% of precincts reporting as of May 15, 2025), partial and unofficial; no primary COMELEC certificate of canvass for Maddela was accessed. Several winners are listed by nickname; full legal names and any post-election changes await official proclamations. Ex-officio seats (ABC president, SK federation president, IPMR) for the new term are not yet verified and are not listed. Wikipedia's Maddela officials infobox is stale and contradicted by primary reporting; it was not used."
       },
       "sourceIds": [
         "rappler-maddela-2025-results"

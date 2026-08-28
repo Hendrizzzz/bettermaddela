@@ -119,9 +119,9 @@ export function SiteHeader() {
       <div className="header-utility" role="complementary" aria-label="Utility bar">
         <div className="container header-utility-inner">
           <div className="header-utility-left">
-            <span className="header-utility-kicker">Independent — not the LGU</span>
+            <span className="header-utility-kicker">Independent · not the LGU</span>
             <span className="header-utility-dot" aria-hidden="true">·</span>
-            <span className="header-utility-meta">Maddela — Quirino · Region II</span>
+            <span className="header-utility-meta">Maddela, Quirino · Region II</span>
           </div>
           <div className="header-utility-right">
             <span className="header-utility-item"><i className="bi bi-geo-alt" aria-hidden="true" /> Maddela, Quirino</span>
@@ -166,7 +166,7 @@ export function SiteHeader() {
               </ul>
             </li>
             <li><Link href="/budget" className={pathname.startsWith("/budget") ? "active" : ""}>{t("nav-transparency")}</Link></li>
-            <li><Link href="/projects" className={pathname.startsWith("/projects") ? "active" : ""}>Projects</Link></li>
+            <li><Link href="/projects" className={pathname.startsWith("/projects") ? "active" : ""}>{t("nav-projects")}</Link></li>
             <li><Link href="/contact" className={pathname.startsWith("/contact") ? "active" : ""}>{t("nav-contact")}</Link></li>
           </ul>
         </nav>

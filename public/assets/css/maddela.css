@@ -354,28 +354,7 @@
   justify-content: space-between;
   gap: var(--spacing-sm);
 }
-.status-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: var(--spacing-xs);
-  padding: 0;
-  border-radius: 0;
-  background: none;
-  color: var(--color-primary-dark);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-.status-chip::before {
-  content: "";
-  flex: none;
-  width: 7px;
-  height: 7px;
-  background: #f5b301;
-}
-.source-dates, 
+.source-dates,
 .source-links span {
   color: var(--color-text-light);
   font-size: 0.8125rem;
@@ -1459,50 +1438,96 @@ a.govt-node:focus-visible {
 .hairline-bottom {
   border-bottom: 1px solid #e8dfc8;
 }
-.pill {
+/* Quiet provenance marker, shared with the history chip language: a small
+   square swatch and a small-caps label. No border, no rounded pill. */
+.meta-checked {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 4px 10px;
-  border-radius: 999px;
-  border: 1px solid #e8dfc8;
-  background: #f7efd8;
-  color: #7a540d;
+  gap: 7px;
+  margin-top: 8px;
+  color: #146c2e;
   font-size: 0.6875rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   line-height: 1;
-  white-space: nowrap;
 }
-.pill--brand {
-  background: #8a5e0f;
-  border-color: #8a5e0f;
-  color: #ffffff;
+.meta-checked::before {
+  content: "";
+  flex: none;
+  width: 7px;
+  height: 7px;
+  background: #146c2e;
 }
-.pill--accent {
-  background: #f5b301;
-  border-color: #f5b301;
-  color: #221d14;
+/* Office role line: small-caps label in the amber register, replaces role pills. */
+.office-role-label {
+  display: block;
+  margin: 6px auto;
+  color: #8a5e0f;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1;
 }
-.pill--success {
-  background: #e6f4ea;
-  border-color: #e6f4ea;
-  color: #146c2e;
-}
-.pill--muted {
-  background: #ffffff;
-  border-color: #e8dfc8;
+/* Barangay classification: quiet small-caps text, replaces the muted pill. */
+.barangay-class {
+  display: block;
+  margin-top: 8px;
   color: #6b6353;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1;
 }
-.pill--outline {
-  background: transparent;
+/* Chart role key: small-caps text items, the chart nodes are already labeled. */
+.govt-legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 18px;
+  margin: 16px 0 0;
+  color: #6b6353;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.govt-legend-items .govt-legend-sep {
+  color: #e8dfc8;
 }
 .section--allen {
   position: relative;
 }
 .section--allen + .section--allen {
   border-top: 1px solid #e8dfc8;
+}
+
+/* Filipino nav labels run long ("Makipag-ugnayan", "Lehislatura"); keep every
+   link on one line and tighten the gaps so the row stays a single line from
+   the 1024px breakpoint up. The caret ::after stays attached because it is
+   inline content inside the same nowrap anchor. */
+.main-nav a {
+  white-space: nowrap;
+}
+.main-nav ul {
+  gap: clamp(10px, 1.4vw, 24px);
+}
+.main-nav {
+  flex-shrink: 1;
+  min-width: 0;
+}
+.main-nav > ul {
+  flex-wrap: nowrap;
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .main-nav a {
+    font-size: 0.875rem;
+  }
+  .main-nav ul {
+    gap: 8px;
+  }
 }
 
 @media (max-width: 900px) {

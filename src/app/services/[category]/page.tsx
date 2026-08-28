@@ -55,7 +55,7 @@ export default async function ServiceCategoryPage({
               ))}
             </ul>
             <aside className="unpublished-note">
-              Requirements, fees, and processing time are not yet verified — confirm directly with the responsible
+              Requirements, fees, and processing time are not yet verified; confirm directly with the responsible
               office. <Link href="/services">Back to all services</Link>
             </aside>
           </div>

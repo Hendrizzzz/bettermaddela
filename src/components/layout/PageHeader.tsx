@@ -13,7 +13,7 @@ export default function PageHeader({
 }: PageHeaderProps) {
   const isGovernment = title.toLowerCase().includes("government");
   const isBarangay = title.toLowerCase().includes("barangay");
-  const kicker = isGovernment ? "Government — Structure & officials" : isBarangay ? "Government — Barangays" : "Section — Overview";
+  const kicker = isGovernment ? "Government · Structure & officials" : isBarangay ? "Government · Barangays" : "Section · Overview";
   return (
     <section className="page-header">
       <div className="container">

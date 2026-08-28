@@ -9,7 +9,7 @@ import {
 import { getRecord, getSource, records, type CivicRecord } from "@/data/civic";
 
 export const metadata: Metadata = {
-  title: "The story of Maddela — history & legal timeline",
+  title: "The story of Maddela: history & legal timeline",
   description:
     "A glanceable, source-linked story of Maddela: its reviewed local history, the national laws that shaped the municipality, and the eras still being researched.",
 };
@@ -277,7 +277,7 @@ function formatEnPh(iso: string): string {
       heading: "The earlier centuries",
       children: (
         <p className="hst-body hst-gap-text">
-          The earlier centuries are not yet documented here — evidence collection
+          The earlier centuries are not yet documented here; evidence collection
           is in progress.
         </p>
       ),
@@ -292,7 +292,7 @@ function formatEnPh(iso: string): string {
     chapter(5, []),
   ];
 
-  const arcSentence = `From river valleys and early settlements to a municipality in Quirino — a story traced through ${legalRecords.length} national laws and ${sections.length} chapters of reviewed local history.`;
+  const arcSentence = `From river valleys and early settlements to a municipality in Quirino: a story traced through ${legalRecords.length} national laws and ${sections.length} chapters of reviewed local history.`;
 
 
 
@@ -302,7 +302,7 @@ function formatEnPh(iso: string): string {
         <div className="container">
           <p className="hst-kicker">
             <i className="bi bi-signpost-split-fill" aria-hidden="true" /> An
-            independent volunteer project — not a government site
+            independent volunteer project, not a government site
           </p>
           <h1>The story of Maddela</h1>
           <p className="hst-arc">{arcSentence}</p>
@@ -332,7 +332,7 @@ function formatEnPh(iso: string): string {
               </li>
               <li className="hst-legend-item">
                 <span className="hst-chip hst-chip--outline">Local tradition</span>{" "}
-                A local historical account — attributed, not treated as controlling
+                A local historical account, attributed but not treated as controlling
                 legal history.
               </li>
             </ul>

@@ -33,7 +33,7 @@ export default function SecurityPage() {
             <article className="legal-article">
               <section id="reporting" className="legal-section">
                 <h2>Report a Vulnerability</h2>
-                <div className="legal-highlight"><i className="bi bi-shield-lock" aria-hidden="true" /><p>BetterMaddela is an independent, open-source civic-information project. Please disclose suspected vulnerabilities privately — not in a public issue, discussion, pull request, or chat.</p></div>
+                <div className="legal-highlight"><i className="bi bi-shield-lock" aria-hidden="true" /><p>BetterMaddela is an independent, open-source civic-information project. Please disclose suspected vulnerabilities privately, not in a public issue, discussion, pull request, or chat.</p></div>
                 <p>
                   Use <a href="https://github.com/Hendrizzzz/bettermaddela/security/advisories/new" target="_blank" rel="noopener noreferrer">GitHub private vulnerability reporting <i className="bi bi-box-arrow-up-right" aria-hidden="true" /></a>. If that form is unavailable, open a public issue asking the maintainer to enable a private reporting channel, and include no vulnerability details in that issue.
                 </p>
@@ -57,7 +57,7 @@ export default function SecurityPage() {
               <section id="boundaries" className="legal-section">
                 <h2>Security Boundaries</h2>
                 <p>BetterMaddela is a statically deployed public-information site. It intentionally provides no authentication, payments, form submissions, stored records, or client-side administration surface. A future change introducing a server, database, privileged operation, or personal-data collection requires a separate threat review before release.</p>
-                <p>Security-relevant areas include the repository&apos;s source and build configuration, accidental exposure of credentials or private contact details, unsafe rendering or links, third-party integrations, and content that could cause material harm — such as tampered emergency information.</p>
+                <p>Security-relevant areas include the repository&apos;s source and build configuration, accidental exposure of credentials or private contact details, unsafe rendering or links, third-party integrations, and content that could cause material harm, such as tampered emergency information.</p>
                 <p>External services, upstream projects, browsers, and hosting providers follow their own security processes; reports affecting this project are still welcome so maintainers can coordinate or mitigate.</p>
               </section>
 

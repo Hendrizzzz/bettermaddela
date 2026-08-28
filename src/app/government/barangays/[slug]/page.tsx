@@ -103,7 +103,7 @@ export async function generateMetadata({
 
   return {
     title: `Barangay ${barangay.name}`,
-    description: `Structured profile for Barangay ${barangay.name}, Maddela — dated population and classification today; officials, projects, and contacts follow verification.`,
+      description: `Structured profile for Barangay ${barangay.name}, Maddela, with dated population and classification today; officials, projects, and contacts follow verification.`,
   };
 }
 
@@ -225,7 +225,7 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
               </div>
             </div>
             <p className="brgy-prof-awaiting">
-              Officials are published once the list passes verification — expected from the DILG municipal office.
+              Officials are published once the list passes verification, expected from the DILG municipal office.
             </p>
           </section>
 
