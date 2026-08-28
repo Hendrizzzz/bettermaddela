@@ -12929,6 +12929,67 @@
       "owner": "BetterMaddela barangay and statistics data steward",
       "effectiveFrom": "2026-08-29",
       "notes": "Rights handoff: research/2026-08-29-maddela-imagery-rights.md. The 2012 capture date is 14 years before retrieval; captions must state the date and must not imply current conditions. Rejected sources (Flickr CC BY-NC-ND Siitan River shots; non-Maddela stock imagery) are listed in the handoff."
+    },
+    {
+      "id": "maddela-barangay-boundaries-codab-2026-08",
+      "type": "place",
+      "label": "Municipal and barangay boundary polygons for Maddela from OCHA COD-AB (all 32 barangays)",
+      "sourceIds": [
+        "ocha-codab-phl-admin-boundaries-2026-08"
+      ],
+      "data": {
+        "attribution": "Administrative boundaries © UN OCHA Philippines COD-AB, CC BY-IGO 3.0",
+        "license": "CC BY-IGO 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/igo/legalcode",
+        "method": "Polygon geometry from the OCHA COD-AB Philippines geodatabase (v03, features valid_on 2025-02-13), matched to the reviewed 32-name PSGC list by code, with barangay polygon areas cross-checked so they tile the municipal polygon. Geometry is simplified for stylized web rendering; it is not an official survey boundary.",
+        "geometryArtifact": "/assets/data/maddela-boundaries-codab.geojson",
+        "barangayCount": 32,
+        "datasetVersion": "v03",
+        "validOn": "2025-02-13",
+        "municipalityAreaSqkm": 770.62,
+        "barangayAreaSumSqkm": 770.6
+      },
+      "claimSources": {
+        "attribution": [
+          "ocha-codab-phl-admin-boundaries-2026-08"
+        ],
+        "license": [
+          "ocha-codab-phl-admin-boundaries-2026-08"
+        ],
+        "licenseUrl": [
+          "ocha-codab-phl-admin-boundaries-2026-08"
+        ],
+        "method": [
+          "ocha-codab-phl-admin-boundaries-2026-08"
+        ],
+        "geometryArtifact": [
+          "ocha-codab-phl-admin-boundaries-2026-08"
+        ],
+        "barangayCount": [
+          "ocha-codab-phl-admin-boundaries-2026-08"
+        ],
+        "datasetVersion": [
+          "ocha-codab-phl-admin-boundaries-2026-08"
+        ],
+        "validOn": [
+          "ocha-codab-phl-admin-boundaries-2026-08"
+        ],
+        "municipalityAreaSqkm": [
+          "ocha-codab-phl-admin-boundaries-2026-08"
+        ],
+        "barangayAreaSumSqkm": [
+          "ocha-codab-phl-admin-boundaries-2026-08"
+        ]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-29",
+      "acceptedBy": "owner-approval-2026-08-29",
+      "acceptedAt": "2026-08-29T06:12:45+08:00",
+      "nextReviewOn": "2027-08-29",
+      "updateCadence": "annually",
+      "owner": "BetterMaddela barangay and statistics data steward",
+      "effectiveFrom": "2026-08-29",
+      "notes": "Research handoff: research/2026-08-29-maddela-boundaries-codab.md. Geometry joined 32/32 to the reviewed barangay list by PSGC code. COD-AB lists 'Divisoria Sur' with the alternate name 'Bisangal'; the reviewed name is displayed. The bundled artifact preserves full source geometry while the site rendering is simplified."
     }
   ]
 }

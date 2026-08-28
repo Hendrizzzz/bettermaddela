@@ -4,8 +4,26 @@ import PageHeader from "@/components/layout/PageHeader";
 import { RecordMeta } from "@/components/RecordMeta";
 import { Reveal } from "@/components/motion/Reveal";
 import { getRecord } from "@/data/civic";
-import { MaddelaAtlas, maddelaPlaceRecord } from "@/components/MaddelaAtlas";
+import { MaddelaAtlas, maddelaBoundariesRecord } from "@/components/MaddelaAtlas";
 import { slugify } from "@/lib/slugify";
+import atlasGeometry from "@/data/atlas/geometry.json";
+
+interface BoundaryGeometryEntry {
+  psgc: string;
+  name: string;
+  d: string;
+  center: [number, number];
+  geoCenter: [number, number];
+  label: boolean;
+  areaSqkm: number;
+}
+
+const polygonByPsgc = new Map(
+  (atlasGeometry as unknown as { barangays: BoundaryGeometryEntry[] }).barangays.map((entry) => [
+    entry.psgc,
+    entry,
+  ]),
+);
 
 interface BarangayEntry {
   name: string;
@@ -39,6 +57,9 @@ interface OfficialsDataset {
 
 const barangayRecord = getRecord<BarangayDataset>("barangay-dataset-2026q2");
 const officialsRecord = getRecord<OfficialsDataset>("maddela-barangay-officials-2026-dilg-bops");
+const osmLocationRecord = getRecord<{
+  unmapped: { barangay: string; psgcCode: string; note: string }[];
+}>("maddela-barangay-locations-osm-2026-08");
 
 interface BarangayOfficials {
   punongBarangay?: OfficialEntry;
@@ -254,14 +275,12 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
   const hasOfficialRoster = Boolean(officials?.punongBarangay || officials?.members.length);
   const officers = officials ? officerEntries(officials) : [];
 
-  const locationEntry = maddelaPlaceRecord.data.locations.find(
+  const boundary = polygonByPsgc.get(barangay.psgcCode);
+  const unmappedEntry = osmLocationRecord.data.unmapped.find(
     (entry) => entry.barangay === barangay.name,
   );
-  const unmappedEntry = maddelaPlaceRecord.data.unmapped.find(
-    (entry) => entry.barangay === barangay.name,
-  );
-  const mapsPointUrl = locationEntry
-    ? `https://www.google.com/maps/search/?api=1&query=${locationEntry.latitude},${locationEntry.longitude}`
+  const mapsPointUrl = boundary
+    ? `https://www.google.com/maps/search/?api=1&query=${boundary.geoCenter[1]},${boundary.geoCenter[0]}`
     : null;
   const mapsNameUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
     `Barangay ${barangay.name}, Maddela, Quirino, Philippines`,
@@ -337,20 +356,19 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
               <h2 className="brgy-section-heading" id="brgy-prof-location">
                 Location
               </h2>
-              {locationEntry ? (
+              {boundary ? (
                 <div className="brgy-prof-location-card">
                   <MaddelaAtlas variant="mini" highlight={barangay.name} />
                   <div className="brgy-prof-location-actions">
                     <p className="brgy-prof-location-note" lang="en">
-                      Approximate point location from an OpenStreetMap place node
-                      {locationEntry.match === "variant" && ` (mapped as “${locationEntry.matchName}”)`}; dots
-                      are not official boundaries.
+                      Position within Maddela from OCHA COD-AB administrative
+                      boundaries; the stylized map is not an official survey boundary.
                     </p>
                     <a className="btn btn-primary" href={mapsPointUrl ?? "#"} target="_blank" rel="noreferrer">
                       Open in Google Maps <i className="bi bi-box-arrow-up-right" aria-hidden="true"></i>
                     </a>
                     <p className="brgy-prof-location-note" lang="en">
-                      {maddelaPlaceRecord.data.attribution}
+                      {maddelaBoundariesRecord.data.attribution}
                     </p>
                   </div>
                 </div>
