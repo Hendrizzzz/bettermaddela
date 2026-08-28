@@ -46,6 +46,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <link rel="stylesheet" href="/assets/css/maddela.css" />
         <link rel="stylesheet" href="/assets/css/legal-history.css" />
         <link rel="stylesheet" href="/assets/css/atlas.css" />
+        <link rel="stylesheet" href="/assets/css/officials-directory.css" />
       </head>
       <body>
         <LanguageProvider>
