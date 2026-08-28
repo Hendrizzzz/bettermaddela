@@ -1782,3 +1782,41 @@ a.govt-node:focus-visible {
 .brgy-prof-section-link .bi {
   margin-left: 4px;
 }
+
+.page-header {
+  position: relative;
+  overflow: hidden;
+}
+.page-header .container {
+  position: relative;
+  z-index: 1;
+}
+.page-header-decor {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.page-header-decor svg {
+  position: absolute;
+  right: -48px;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  transform: translateY(-50%);
+}
+.page-header-decor path {
+  fill: none;
+  stroke: color-mix(in srgb, var(--color-white) 13%, transparent);
+  stroke-width: 0.8;
+}
+.page-header-decor .page-header-decor-muni {
+  stroke: color-mix(in srgb, var(--color-white) 28%, transparent);
+  stroke-width: 1.4;
+}
+@media (max-width: 768px) {
+  .page-header-decor svg {
+    right: -150px;
+    opacity: 0.75;
+  }
+}
