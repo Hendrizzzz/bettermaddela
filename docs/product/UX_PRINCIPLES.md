@@ -29,24 +29,24 @@ the price of understanding.
    websites — orchestrated reveals, count-ups, scroll-triggered timelines. Never
    decorative noise; never a barrier to information.
 
-## Hard interface rules (owner-mandated 2026-08-26, round 2 — amended 2026-08-27; round 4 override below supersedes conflicting items)
+## Hard interface rules (owner-mandated 2026-08-26, round 2 — amended 2026-08-28; round 4 override below supersedes conflicting items)
 
-1. ~~**Pills allowed**~~ **Pills banned (round 4).** Rounded chip/badge shapes are no longer used anywhere. Reputation and status render as quiet text: small-caps labels, the green "Checked" stamp, stacked source lines.
+1. ~~**Pills allowed**~~ **Pills banned (round 4).** Rounded chip/badge shapes are no longer used anywhere. Reputation and status render as quiet text: the amber role label, date-only meta, and section-level source rows. The green "Checked" stamp was also removed by the owner (round 4).
 2. **Babysitting text allowed in the glance layer.** The glance layer may include a one-sentence orienting line (≤20 words) that names the civic role, data scope, or next step — e.g. "Municipal Mayor — presides over the Sangguniang Bayan." GSAP structure still carries the primary meaning.
 3. **Cut text relaxed.** A card may carry a name, a number, one-line description, and a status line. Full evidence still lives one click away (expanders, tables, sources).
 4. **More GSAP, orchestrated.** Premium modern motion: drawn connectors, staggered cascades, count-ups on money/numbers, scroll-scrubbed progress. Always reduced-motion-safe.
 
-## Owner design brief (ratified 2026-08-26, round 3; amended 2026-08-27; items 1, 2, 4 (boxed-chip clause), and 5 superseded by round 4). These are the current laws.
+## Owner design brief (ratified 2026-08-26, round 3; amended 2026-08-28; items 1, 2, 4 (boxed-chip clause), 5, and 7 superseded by round 4). These are the current laws.
 
 ### Adopt these (as amended)
 
 1. ~~**Double labels.**~~ **Single labels (round 4).** Sections and components are title + body. No eyebrow/kicker line above a title; the title carries the meaning once. A subordinate classification line (e.g. barangay urban/rural class) is allowed only when it adds data, never as decoration.
 2. ~~**Numbered markers.**~~ **No deck numbering (round 4).** Ordered narrative steps use layout and arrows, not `01 / 02 / 03` markers, dot leaders, or forms like `02 · Benches` / `01 — Philippines`.
-3. **Data re-statement.** A fact may appear twice per surface when it aids glance recognition — e.g. the hero stat and the same number inside its detail section, or mayor name in the chart and again in the leadership grid. Provenance (source, `asOf`) travels with each instance. This is different from the banned role+office echo on one card (see not-likes).
+3. **Data re-statement.** A fact may appear twice per surface when it aids glance recognition — e.g. the hero stat and the same number inside its detail section, or mayor name in the chart and again in the leadership grid. Round 4: per-instance provenance sublabels were removed; provenance lives in the section-level sources row instead. This is different from the banned role+office echo on one card (see not-likes).
 4. **Hairline divider lines.** Hairlines are the primary section and card structure: `1px solid var(--line)` row separators, header underlines, meta-bar borders, and `border: 1px solid var(--line)` card containment.
 5. ~~**Em dashes.**~~ **Commas and stacks (round 4).** Em dashes and dash-like rules are banned in rendered UI, and the middot `·` separator is banned everywhere rendered. Inline meta uses commas ("PSA dataset, 2020 census") or stacked lines (value / label / source). En dashes in date ranges (2010–2019) remain legitimate.
 6. **Template flow (FOL: hero, features grid, cards, repeat).** Sections follow the proven BetterAllen/Better LGU template rhythm: hero → features/services grid → stats band → location/map story → history/timeline → updates/projects → government → contact. Each section is a `py-12` contained band with alternating `bg-white` / `bg-alt` and a clear header. Overlap/stick/scale/bleed is an effect *inside* a section, not a mandate to dissolve section boundaries.
-7. **Data repetition for reputation.** Category, status, `asOf`, and sublabel travel wherever the data is shown, as quiet text lines; emergency/contact duplication across header strip + page grid is intentional redundancy.
+7. ~~**Data repetition for reputation.**~~ **Superseded (round 4).** Category badges, per-card `asOf`/evidence lines, and per-value source sublabels were removed by the owner: "just make it simple, nothing complicated." Structured provenance remains in section-level source rows and the sources directory (see always-do 10). Emergency/contact duplication across header strip + page grid stays intentional once verified.
 
 ### Owner likes and not-likes (2026-08-28, round 4 — binding)
 
@@ -63,14 +63,19 @@ to every rendered surface, including the header, hero, stats, cards, charts, and
 6. Primary nav overlapping or crowding the EN/FIL buttons at any width.
 7. Pills, badges, and rounded chips.
 8. Deck-style numbering and dot-leader meta (`02 · Benches`).
+9. Green "Checked <date>" stamps on cards (round 4: "remove these") — provenance is not stamped on individual cards.
+10. Boxed/badge category labels above card titles, including news cards ("■ PROJECTS AND MONITORING", "■ CIVIL REGISTRATION") — a card is a title and a date, not a classified filing (round 4: "I hate these box styles… probably totally remove that").
+11. Filler provenance sentences under card bodies ("Observed as of 2026-08-18, Listed on the official House of Representatives member profile for the 20th Congress.") — evidence stays in the data files, the sources page, and section source rows, not retyped onto cards (round 4).
+12. Per-value source sublabels under big numbers ("2024 census count", "Official administrative units", "Official municipal classification") — a stat tile is value + label, nothing more (round 4: "just make it simple").
+13. Chart annotations that collide with plotted lines — keep annotations short ("+924 since 2020") and clear of data.
 
 **Likes — keep and reuse:**
 
 1. Title + body hierarchy with generous whitespace.
 2. Hairlines as the structural device.
-3. The quiet small-caps green "Checked" provenance stamp.
+3. Date-only card meta: a quiet published/observed date line, nothing stamped or boxed around it (round 4 replaced the "Checked" stamp like).
 4. Amber (`#8a5e0f`) accents used sparingly for role/type labels — in sentence case, never long uppercase strings.
-5. Stacked source lines (value, then label, then source) instead of inline separator punctuation.
+5. Value + label stat tiles with the sources row directly beneath the grid, one click from full provenance (round 4 simplified "value / label / source" stacks).
 6. Overall premium restraint: the page should feel quiet, confident, and expensive.
 
 ### Still never do these
@@ -89,7 +94,7 @@ to every rendered surface, including the header, hero, stats, cards, charts, and
 7. **Work quietly, take ownership.** Make strong creative decisions; do not ask the owner to choose directions.
 8. **Technology only when it earns its place** (GSAP, Lenis, plain CSS).
 9. **BetterLGU compliance is the floor, not the ceiling.** The directory's five core areas (officials, budget, projects, ordinances/resolutions, contact) must stay present and prominent; art direction never hides them. Title/description/og:image must be Maddela-specific per `crawl-lgu-meta.js:122` boilerplate gate, under 400 KB, and robots must allow `BetterLGUDirectoryBot`.
-10. **Data reputation is structured.** Every changing fact shows a status line + `asOf` + sublabel as quiet text (the green "Checked" stamp or a stacked source line); emergency contacts duplicate intentionally across the header strip + contact grid once verified. No pills.
+10. **Data reputation is structured, not stamped.** Provenance lives in the section-level sources row (`Sources: population, barangays, …`), the `/sources` directory, and the data files — never as per-card stamps, badges, or sublabels (round 4). Emergency contacts duplicate intentionally across the header strip + contact grid once verified. No pills.
 
 ## Technology decisions (owner-approved 2026-08-26)
 

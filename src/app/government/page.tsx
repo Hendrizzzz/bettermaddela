@@ -95,7 +95,7 @@ export default function GovernmentPage() {
         <div className="container">
           <div className="text-center" style={{ marginBottom: "var(--spacing-xl)" }}>
             <h2>Current public observations</h2>
-            <p style={{ color: "var(--color-text-light)" }}>Each role keeps the scope and date stated by its evidence, repeated here and in the chart for glance recognition.</p>
+            <p style={{ color: "var(--color-text-light)" }}>Each role keeps the scope stated by its cited sources.</p>
           </div>
           <div className="section-header-rule" aria-hidden="true" />
           <div className="grid grid-2">
@@ -105,8 +105,6 @@ export default function GovernmentPage() {
                   <h3>{leader.name}</h3>
                   <p className="official-title">{leader.title}</p>
                   <p className="official-scope">{leader.scope}</p>
-                  <p className="record-meta">Observed as of <time dateTime={leader.asOf}>{leader.asOf}</time>, {leader.evidenceContext}</p>
-                  <span className="meta-checked">Checked {leader.asOf}</span>
                 </div>
               </article>
             ))}
@@ -132,8 +130,6 @@ export default function GovernmentPage() {
               <article className="councilor-card card text-center hairline-top" key={`${observation.office}-${observation.person}`}>
                 <h3>{observation.person}</h3>
                 <span className="office-role-label">{observation.displayedTitle}</span>
-                <p className="record-meta">Observed <time dateTime={observation.asOf}>{observation.asOf}</time>, {observation.evidenceContext}</p>
-                <span className="meta-checked">Checked {observation.asOf}</span>
               </article>
             ))}
           </div>

@@ -52,8 +52,6 @@ export default function OfficialsPage() {
                   <h3>{leader.name}</h3>
                   <p className="official-title">{leader.title}</p>
                   <p>{leader.scope}</p>
-                  <p>{leader.evidenceContext}</p>
-                  <p className="record-meta">Observed as of <time dateTime={leader.asOf}>{leader.asOf}</time></p>
                 </div>
               </article>
             ))}
@@ -72,10 +70,7 @@ export default function OfficialsPage() {
             {officeHeadsRecord.data.observations.map((observation) => (
               <article className="councilor-card card text-center" key={`${observation.office}-${observation.person}`}>
                 <h3>{observation.person}</h3>
-                <p className="badge badge-info">{observation.displayedTitle}</p>
-                <p>{observation.office}</p>
-                <p>{observation.evidenceContext}</p>
-                <p className="record-meta">Observed <time dateTime={observation.asOf}>{observation.asOf}</time></p>
+                <span className="office-role-label">{observation.displayedTitle}</span>
               </article>
             ))}
           </div>

@@ -116,10 +116,10 @@ export default function StatisticsPage() {
       <section className="stats-metrics">
         <div className="container">
           <div className="metrics-grid">
-            <div className="metric-card"><div className="metric-value">{fmt(population.data.population)}</div><div className="metric-label">Population</div><div className="metric-source">2024 census count</div></div>
-            <div className="metric-card"><div className="metric-value">{barangays.data.barangayCount}</div><div className="metric-label">Barangays</div><div className="metric-source">Official administrative units</div></div>
-            <div className="metric-card"><div className="metric-value">{identity.data.incomeClass}</div><div className="metric-label">Income class</div><div className="metric-source">Official municipal classification</div></div>
-            <div className="metric-card"><div className="metric-value">{postal.data.zipCode}</div><div className="metric-label">ZIP code</div><div className="metric-source">PHLPost locator</div></div>
+            <div className="metric-card"><div className="metric-value">{fmt(population.data.population)}</div><div className="metric-label">Population</div></div>
+            <div className="metric-card"><div className="metric-value">{barangays.data.barangayCount}</div><div className="metric-label">Barangays</div></div>
+            <div className="metric-card"><div className="metric-value">{identity.data.incomeClass}</div><div className="metric-label">Income class</div></div>
+            <div className="metric-card"><div className="metric-value">{postal.data.zipCode}</div><div className="metric-label">ZIP code</div></div>
           </div>
           <RecordMetaGroup records={[{ label: "population", record: population }, { label: "barangays", record: barangays }, { label: "classification", record: identity }, { label: "ZIP code", record: postal }]} />
         </div>
@@ -132,10 +132,10 @@ export default function StatisticsPage() {
             <p>Dated census counts as of <time dateTime={households.data.referenceDate}>{formatLongDate(households.data.referenceDate)}</time></p>
           </div>
           <div className="metrics-grid">
-            <div className="metric-card"><div className="metric-value">{fmt(households.data.householdPopulation)}</div><div className="metric-label">Household residents</div><div className="metric-source">People living in households</div></div>
-            <div className="metric-card"><div className="metric-value">{fmt(households.data.numberOfHouseholds)}</div><div className="metric-label">Households</div><div className="metric-source">Dated census count</div></div>
-            <div className="metric-card"><div className="metric-value">{fmt(households.data.institutionalPopulation)}</div><div className="metric-label">Institutional residents</div><div className="metric-source">Derived difference from the census totals</div></div>
-            <div className="metric-card"><div className="metric-value metric-value--computed">{personsPerHousehold}</div><div className="metric-label">Persons per household</div><div className="metric-source">Computed: {fmt(households.data.householdPopulation)} residents ÷ {fmt(households.data.numberOfHouseholds)} households</div></div>
+            <div className="metric-card"><div className="metric-value">{fmt(households.data.householdPopulation)}</div><div className="metric-label">Household residents</div></div>
+            <div className="metric-card"><div className="metric-value">{fmt(households.data.numberOfHouseholds)}</div><div className="metric-label">Households</div></div>
+            <div className="metric-card"><div className="metric-value">{fmt(households.data.institutionalPopulation)}</div><div className="metric-label">Institutional residents</div></div>
+            <div className="metric-card"><div className="metric-value metric-value--computed">{personsPerHousehold}</div><div className="metric-label">Persons per household</div></div>
           </div>
           <RecordMeta record={households} />
         </div>
@@ -335,8 +335,8 @@ export default function StatisticsPage() {
           );
         })}
         <line className="chart-refline" aria-hidden="true" x1={midX} y1={midY + 8} x2={midX} y2={midY + 44} />
-        <text className="chart-annotation" x={right} y={midY + 60} textAnchor="end">
-          +{fmt(latestGain)} since {year(prevPoint.referenceDate)}{smallestGain === latestGain ? ", the smallest census gain on record" : ""}
+        <text className="chart-annotation" x={right} y={midY + 62} textAnchor="end">
+          +{fmt(latestGain)} since {year(prevPoint.referenceDate)}
         </text>
       </svg>
     );

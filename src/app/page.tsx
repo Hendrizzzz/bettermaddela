@@ -149,7 +149,6 @@ const homeCopy = {
     viewUpdates: "View All",
     leadership: "Municipal Leadership",
     viewGovernment: "View Government",
-    asOf: "As of",
     contact: "Contact Information",
     viewAll: "View All",
     sourceDirectory: "Source Directory",
@@ -174,7 +173,6 @@ const homeCopy = {
     separateForecast: "Forecast values are provided separately by Open-Meteo.",
     incomeClassSuffix: "Class",
     maddelaToday: "Maddela today",
-    checkedLabel: "Checked",
   },
   fil: {
     heroIntroEm: "Impormasyong sibiko mula sa pampublikong sanggunian para sa Maddela, Quirino.",
@@ -203,7 +201,6 @@ const homeCopy = {
     viewUpdates: "Tingnan Lahat",
     leadership: "Pamunuan ng Munisipalidad",
     viewGovernment: "Tingnan ang Pamahalaan",
-    asOf: "Mula noong",
     contact: "Impormasyon sa Pakikipag-ugnayan",
     viewAll: "Tingnan Lahat",
     sourceDirectory: "Direktoryo ng mga Sanggunian",
@@ -228,7 +225,6 @@ const homeCopy = {
     separateForecast: "Hiwalay na ibinibigay ng Open-Meteo ang mga forecast value.",
     incomeClassSuffix: "Klase",
     maddelaToday: "Ang Maddela ngayon",
-    checkedLabel: "Nasuri",
   },
 } as const;
 
@@ -239,13 +235,6 @@ function formatDate(value: string, language: "en" | "fil") {
     day: "numeric",
     timeZone: "Asia/Manila",
   }).format(new Date(`${value}T00:00:00+08:00`));
-}
-
-function updateBadgeClass(category: string) {
-  const normalized = category.toLowerCase();
-  if (normalized.includes("project") || normalized.includes("program")) return "home-news-badge--success";
-  if (normalized.includes("advisory") || normalized.includes("procurement")) return "home-news-badge--warning";
-  return "home-news-badge--info";
 }
 
 export default function HomePage() {
@@ -352,7 +341,6 @@ export default function HomePage() {
                     {population.data.population.toLocaleString("en-PH")}
                   </span>
                   <span className="home-stat-card-label">{copy.population}</span>
-                  <span className="home-stat-card-source">{copy.censusLabel}</span>
                 </div>
               </Link>
             </Reveal>
@@ -361,7 +349,6 @@ export default function HomePage() {
                 <div className="home-stat-card-content">
                   <span className="home-stat-card-value">{barangays.data.barangayCount}</span>
                   <span className="home-stat-card-label">{copy.barangays}</span>
-                  <span className="home-stat-card-source">PSGC</span>
                 </div>
               </Link>
             </Reveal>
@@ -370,7 +357,6 @@ export default function HomePage() {
                 <div className="home-stat-card-content">
                   <span className="home-stat-card-value">{identity.data.incomeClass} {copy.incomeClassSuffix}</span>
                   <span className="home-stat-card-label">{copy.municipality}</span>
-                  <span className="home-stat-card-source">PSGC</span>
                 </div>
               </Link>
             </Reveal>
@@ -379,7 +365,6 @@ export default function HomePage() {
                 <div className="home-stat-card-content">
                   <span className="home-stat-card-value">{households.data.numberOfHouseholds.toLocaleString("en-PH")}</span>
                   <span className="home-stat-card-label">{copy.households}</span>
-                  <span className="home-stat-card-source">{copy.censusLabel}</span>
                 </div>
               </Link>
             </Reveal>
@@ -508,7 +493,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Latest Updates — hairline + evidence-typed badges */}
+      {/* Latest Updates — hairline cards, date-first meta */}
       <section className="section section--allen">
         <div className="container">
           <div className="home-section-header">
@@ -525,8 +510,7 @@ export default function HomePage() {
               {updates.map((item) => (
                 <article className="home-news-card hairline-top" key={item.id} lang="en">
                   <div className="home-news-meta">
-                    <span className={`home-news-badge ${updateBadgeClass(item.category)}`}>{item.category}</span>
-                    <time className="home-news-date" dateTime={item.publishedAt} style={{ marginLeft: "auto" }}>{formatDate(item.publishedAt, language)}</time>
+                    <time className="home-news-date" dateTime={item.publishedAt}>{formatDate(item.publishedAt, language)}</time>
                   </div>
                   <h3><a href={item.canonicalUrl} target="_blank" rel="noreferrer">{item.headline}</a></h3>
                   <p className="home-news-summary">{item.summary}</p>
@@ -555,11 +539,9 @@ export default function HomePage() {
             <div className={`home-leadership-grid home-leadership-grid--${municipalLeaders.length}`}>
               {municipalLeaders.map((leader) => (
                 <article className="home-leader-card hairline-top" key={`${leader.title}-${leader.name}`}>
-                  <div className="home-leader-badge">{leader.title}</div>
+                  <p className="office-role-label">{leader.title}</p>
                   <h3>{leader.name}</h3>
                   <p className="home-leader-scope">{leader.scope}</p>
-                  <p className="home-leader-as-of">{copy.asOf} <time dateTime={leader.asOf}>{formatDate(leader.asOf, language)}</time>, {leader.evidenceContext}</p>
-                  <span className="meta-checked">{copy.checkedLabel} {formatDate(leader.asOf, language)}</span>
                 </article>
               ))}
             </div>

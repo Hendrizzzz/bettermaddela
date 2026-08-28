@@ -436,26 +436,6 @@ body.mobile-menu-open {
   padding: var(--spacing-xl) 0;
   margin-top: var(--spacing-xl);
 }
-.badge {
-  display: inline-block;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-.badge-success {
-  background-color: #e6f4ea;
-  color: var(--color-success);
-}
-.badge-warning {
-  background-color: #f7efd8;
-  color: var(--color-accent);
-}
-.badge-info {
-  background-color: #f7efd8;
-  color: var(--color-info);
-}
 .breadcrumbs {
   padding: var(--spacing-sm) 0;
   color: var(--color-text-light);
@@ -522,12 +502,13 @@ body.mobile-menu-open {
 }
 .official-card {
   text-align: center;
-}.official-title {
+}
+.official-title {
   font-weight: 600;
-  color: var(--color-primary);
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  margin-bottom: var(--spacing-md);
+  color: #8a5e0f;
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  margin-bottom: var(--spacing-sm);
 }
 .councilor-card {
   padding: var(--spacing-md);
@@ -944,35 +925,7 @@ h6 {
   gap: var(--spacing-sm);
   margin-bottom: var(--spacing-sm);
 }
-/* News badges are small-caps labels with a square marker — no pills. */
-.home-news-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-.home-news-badge::before {
-  content: "";
-  flex: none;
-  width: 7px;
-  height: 7px;
-  background: #f5b301;
-}
-.home-news-badge--info {
-  color: #8a5e0f;
-}
-.home-news-badge--success {
-  color: #146c2e;
-}
-.home-news-badge--success::before {
-  background: #146c2e;
-}
-.home-news-badge--warning {
-  color: #8a5e0f;
-}
+/* News cards lead with the date; category boxes were removed by owner (round 4). */
 .home-news-date {
   font-size: 0.8125rem;
   color: var(--color-text-light);
@@ -1013,17 +966,6 @@ h6 {
   border-radius: 12px;
   padding: var(--spacing-lg);
   text-align: center;
-}
-.home-leader-badge {
-  display: inline-block;
-  color: #7a540d;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 0 0 6px;
-  border-bottom: 2px solid #f5b301;
-  margin-bottom: var(--spacing-sm);
 }
 .home-leader-card h3 {
   font-size: 1.25rem;

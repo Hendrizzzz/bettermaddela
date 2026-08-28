@@ -25,13 +25,6 @@ export const metadata: Metadata = {
   description: "Dated government and agency updates with direct relevance to Maddela.",
 };
 
-function badgeClass(status: string) {
-  const value = status.toLowerCase();
-  if (value.includes("archive") || value.includes("expired")) return "badge badge-warning";
-  if (value.includes("current") || value.includes("recent")) return "badge badge-success";
-  return "badge badge-info";
-}
-
 export default function NewsPage() {
   return (
     <>
@@ -52,7 +45,6 @@ export default function NewsPage() {
                 className="news-card"
               >
                 <div className="news-card-header">
-                  <span className={badgeClass(item.status)}>{item.category}</span>
                   <span className="news-card-date">
                     <i className="bi bi-calendar-event" aria-hidden="true" /> Published <time dateTime={item.publishedAt}>{item.publishedAt}</time>
                   </span>

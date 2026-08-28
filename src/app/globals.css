@@ -164,15 +164,10 @@
   font-weight: 600;
 }
 
-.home-leader-scope,
-.home-leader-as-of {
+.home-leader-scope {
   margin: 0;
   color: var(--color-text-light);
   font-size: 0.8125rem;
-}
-
-.home-leader-as-of {
-  margin-top: 4px;
 }
 
 .home-contact-v2-card .home-contact-v2-value {
