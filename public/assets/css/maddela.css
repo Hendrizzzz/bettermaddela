@@ -1302,6 +1302,37 @@ a.govt-node:focus-visible {
   color: var(--muted);
   font-variant-numeric: tabular-nums;
 }
+.brgy-prof-seat-card--filled,
+.brgy-prof-seat-cell--filled {
+  border-style: solid;
+  background: var(--surface);
+}
+.brgy-prof-seat-name {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.brgy-prof-seat-card--pb .brgy-prof-seat-name {
+  font-size: 0.9375rem;
+}
+.brgy-prof-seat-contact {
+  margin: 0;
+  font-size: 0.6875rem;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.brgy-prof-seat-contact a {
+  color: inherit;
+  text-decoration-color: var(--line);
+}
+.brgy-prof-other-seats {
+  margin-top: var(--spacing-md);
+}
 .brgy-prof-awaiting {
   max-width: 46rem;
   margin: var(--spacing-md) 0 0;

@@ -922,6 +922,19 @@
       "verifier": "bettermaddela-review-2026-08-28-projects-a",
       "sourceState": "active",
       "notes": "The API returns HTTP 403 to non-browser clients; responses were read through a browser-context render. The API exposes a 'budget' figure per record without labeling it ABC or contract price; figures are treated as portal display values only."
+    },
+  {
+    "id": "dilg-bops-barangay-officials-2026",
+    "title": "DILG Barangay Officials Profiling System (BOPS) master-filter dataset, Region 02",
+    "publisher": "Department of the Interior and Local Government - Barangay Officials Profiling System",
+    "url": "https://bis.dilg.gov.ph/bops/default/master-filter?region=02",
+    "documentType": "dataset",
+    "effectivePeriod": "Region 02 listing retrieved 2026-08-28 (22,757 rows); the 316 rows for the Municipality of Maddela feed this record, covering all 32 barangays",
+    "retrievedAt": "2026-08-28",
+    "verifiedAt": "2026-08-28",
+    "verifier": "bettermaddela-review-2026-08-28-barangay-officials-a",
+    "sourceState": "active",
+    "notes": "JSON listing returns position, name parts, email address and telephone number per official, filtered client-side to Maddela rows. The system publishes no term identifier or per-entry update date. Absent-value markers are treated as absent, not as data: BH_TELNO values N/A (176 rows), NONE (39) and blanks (65), plus EMAIL_ADD value NONE@GMAIL.COM (17 rows)."
     }
   ]
 }
