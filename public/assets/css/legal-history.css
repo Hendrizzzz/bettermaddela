@@ -17,21 +17,6 @@
   padding: 56px 0 48px;
 }
 
-/* Kicker: small-caps letterspaced line on a hairline gold left rule. */
-.hst-kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin: 0 0 18px;
-  padding-left: 12px;
-  border-left: 2px solid #f5b301;
-  color: rgba(255, 252, 244, 0.85);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
 .hst-hero h1 {
   margin: 0 0 14px;
   font-family: var(--font-display);

@@ -81,7 +81,7 @@ export default function BarangaysPage() {
               <dt className="brgy-summary-label">Total population</dt>
               <dd className="brgy-summary-value">{totalPopulation.toLocaleString("en-PH")}</dd>
               <dd className="brgy-summary-note">
-                PSA dataset ·{" "}
+                PSA dataset,{" "}
                 <time dateTime={data.populationReferenceDate}>{formatLongDate(data.populationReferenceDate)}</time>
               </dd>
             </div>
@@ -98,7 +98,7 @@ export default function BarangaysPage() {
             <div className="brgy-summary-item">
               <dt className="brgy-summary-label">Urban share of population</dt>
               <dd className="brgy-summary-value">{shareFormat.format(urbanSharePercent)}%</dd>
-              <dd className="brgy-summary-note">Computed · PSA dataset</dd>
+              <dd className="brgy-summary-note">Computed, PSA dataset</dd>
             </div>
           </dl>
 
@@ -117,16 +117,13 @@ export default function BarangaysPage() {
             </div>
             <figcaption className="brgy-split-key">
               <span className="brgy-split-swatch brgy-split-swatch--urban" aria-hidden="true" />
-              Urban {shareFormat.format(urbanSharePercent)}%
-              <span className="brgy-split-dot" aria-hidden="true">
-                ·
-              </span>
+              Urban {shareFormat.format(urbanSharePercent)}%{" "}
               {urbanCount.toLocaleString("en-PH")} of {data.barangayCount.toLocaleString("en-PH")} barangays
             </figcaption>
           </figure>
 
           <h2 className="brgy-section-heading">All {data.barangayCount} barangays by population</h2>
-          <p className="brgy-method-note">Ranked by PSA census count · ties alphabetical</p>
+          <p className="brgy-method-note">Ranked by PSA census count, ties alphabetical</p>
           <ol className="brgy-grid">
             {rankedBarangays.map((entry) => (
               <li key={entry.psgcCode}>

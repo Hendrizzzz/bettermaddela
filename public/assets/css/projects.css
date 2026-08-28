@@ -79,18 +79,6 @@
   align-items: end;
 }
 
-.proj-eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 0 0 10px;
-  color: #8a5e0f;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
 .proj-name {
   display: -webkit-box;
   -webkit-line-clamp: 2;

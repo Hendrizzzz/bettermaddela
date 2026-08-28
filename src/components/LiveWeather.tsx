@@ -437,9 +437,9 @@ export function LiveWeather({ config }: { config: WeatherConfigData }) {
       <p className="weather-source-note">
         {cached && <span>{text.cached} </span>}
         <a href={config.forecastProvider.documentationUrl} target="_blank" rel="noreferrer">
-          {config.forecastProvider.attribution} · {text.modelForecast}
+          {config.forecastProvider.attribution}, {text.modelForecast}
         </a>
-        <span> · {text.updated} {updated}</span>
+        <span>, {text.updated} {updated}</span>
       </p>
     </div>
   );

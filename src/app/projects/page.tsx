@@ -105,6 +105,7 @@ function StageTrack({ stage }: { stage: string }) {
           <li
             key={label}
             className={`proj-track-step${done ? " done" : ""}${isCurrent ? " current" : ""}`}
+            aria-current={isCurrent ? "step" : undefined}
           >
             {index > 0 && (
               <span className="proj-track-line" aria-hidden="true">
@@ -112,10 +113,7 @@ function StageTrack({ stage }: { stage: string }) {
               </span>
             )}
             <span className="proj-track-dot" aria-hidden="true" />
-            <span className="proj-track-label">
-              {label}
-              {isCurrent ? " · recorded stage" : ""}
-            </span>
+            <span className="proj-track-label">{label}</span>
           </li>
         );
       })}
@@ -227,11 +225,11 @@ export default function ProjectsPage() {
   const carpic = getRecord<ProjectData>("dar-nia-carpic-cabaruan-cis");
   const provincialNotices = getRecord<NoticesData>("quirino-bac-maddela-notices-2025");
 
-  const projectCards: { record: CivicRecord<ProjectData>; icon: string }[] = [
-    { record: lusod, icon: "bi-droplet" },
-    { record: solarPumps, icon: "bi-sun" },
-    { record: balligui, icon: "bi-sun" },
-    { record: carpic, icon: "bi-droplet" },
+  const projectCards: { record: CivicRecord<ProjectData> }[] = [
+    { record: lusod },
+    { record: solarPumps },
+    { record: balligui },
+    { record: carpic },
   ];
 
   /* Header counts — COUNTS ONLY. Unlike amounts are never summed. */
@@ -291,15 +289,15 @@ export default function ProjectsPage() {
               A published award or contract is not evidence of delivery or completion.
             </p>
 
-            {projectCards.map(({ record, icon }) => {
+            {projectCards.map(({ record }) => {
               const data = record.data;
               const tone = cardTone(data);
               const locationLine = data.locationConflict
                 ? "Municipality conflicted across sources; see record detail"
                 : data.location;
-              const metaLine = [locationLine, data.implementingAgency]
+              const metaLine = [data.category, locationLine, data.implementingAgency]
                 .filter(Boolean)
-                .join(" · ");
+                .join(", ");
               return (
                 <article
                   key={record.id}
@@ -308,10 +306,6 @@ export default function ProjectsPage() {
                 >
                   <div className="proj-card-top">
                     <div className="proj-card-id">
-                      <p className="proj-eyebrow">
-                        <i className={`bi ${icon}`} aria-hidden="true" />
-                        <span>{data.category}</span>
-                      </p>
                       <h2 className="proj-name">{data.projectName}</h2>
                       {metaLine && <p className="proj-metaline">{metaLine}</p>}
                     </div>
@@ -346,15 +340,11 @@ export default function ProjectsPage() {
             <article className="proj-card proj-card--muted" data-reveal>
               <div className="proj-card-top">
                 <div className="proj-card-id">
-                  <p className="proj-eyebrow">
-                    <i className="bi bi-cone-striped" aria-hidden="true" />
-                    <span>Provincial bids board · roads, water, buildings</span>
-                  </p>
                   <h2 className="proj-name">
                     Six provincially advertised bid notices naming Maddela barangays
                   </h2>
                   <p className="proj-metaline">
-                    Provincial Government of Quirino ·{" "}
+                    Provincial bids board, roads, water, buildings,{" "}
                     {provincialNotices.data.items.length} bid notices posted 2025
                   </p>
                 </div>

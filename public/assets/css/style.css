@@ -1093,14 +1093,6 @@ h6 {
   line-height: 1.2;
   letter-spacing: -0.02em;
 }
-.home-hero-kicker {
-  margin: 0 0 var(--spacing-sm);
-  color: #ffffff;
-  font-size: 0.875rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-}
 .home-hero-v2-text p {
   font-size: 1.125rem;
   color: rgba(255, 255, 255, 0.9);

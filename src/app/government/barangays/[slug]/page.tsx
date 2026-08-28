@@ -69,9 +69,9 @@ function buildFacts(name: string, rank: number, population: number) {
   } else {
     standing = `#${rank} of ${count} by population`;
   }
-  return `${standing.charAt(0).toUpperCase()}${standing.slice(1)} · ${shareFormat.format(
+  return `${standing.charAt(0).toUpperCase()}${standing.slice(1)}, ${shareFormat.format(
     share,
-  )}% of the municipal population · computed from the same reviewed PSA dataset.`;
+  )}% of the municipal population, computed from the same reviewed PSA dataset.`;
 }
 
 function formatLongDate(value: string) {
@@ -150,7 +150,7 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
                 <span className={`brgy-prof-class brgy-prof-class--${barangay.classification.toLowerCase()}`}>
                   {barangay.classification}
                 </span>
-                <span className="brgy-prof-kicker-sep" aria-hidden="true">·</span>
+                <span className="brgy-prof-kicker-sep" aria-hidden="true">, </span>
                 Municipality of Maddela
               </p>
               <p className="brgy-prof-population">
@@ -161,8 +161,8 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
                 As of{" "}
                 <time dateTime={barangayRecord.data.populationReferenceDate}>
                   {formatLongDate(barangayRecord.data.populationReferenceDate)}
-                </time>{" "}
-                · reviewed PSA census count
+                </time>
+                , reviewed PSA census count
               </p>
               {facts && <p className="brgy-prof-facts">{facts}</p>}
             </div>
@@ -188,13 +188,13 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
               </div>
               <figcaption className="brgy-prof-range-key">
                 <span>
-                  Smallest · {smallestBarangay.name} {formatPopulation(rangeLow)}
+                  Smallest, {smallestBarangay.name} {formatPopulation(rangeLow)}
                 </span>
                 <span className="brgy-prof-range-key-median">
                   Municipal median {formatPopulation(medianPopulation)}
                 </span>
                 <span>
-                  Largest · {largestBarangay.name} {formatPopulation(rangeHigh)}
+                  Largest, {largestBarangay.name} {formatPopulation(rangeHigh)}
                 </span>
               </figcaption>
             </figure>

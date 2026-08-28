@@ -75,7 +75,6 @@ export default function GovernmentPage() {
       <section className="section govt-structure-section section--allen">
         <div className="container">
           <div className="text-center" style={{ marginBottom: "var(--spacing-xl)" }}>
-            <p className="section-kicker" style={{ justifyContent: "center" }}>Government · Structure</p>
             <h2>Maddela LGU government structure</h2>
             <div className="section-header-rule" style={{ maxWidth: 320, margin: "12px auto 0" }} aria-hidden="true" />
           </div>
@@ -86,9 +85,7 @@ export default function GovernmentPage() {
           />
           <p className="govt-legend-items">
             <span>Mayor</span>
-            <span className="govt-legend-sep" aria-hidden="true">·</span>
             <span>Vice Mayor</span>
-            <span className="govt-legend-sep" aria-hidden="true">·</span>
             <span>Sangguniang Bayan, 8 seats</span>
           </p>
         </div>
@@ -97,7 +94,6 @@ export default function GovernmentPage() {
       <section className="section section--allen" style={{ background: "var(--color-bg-alt)" }}>
         <div className="container">
           <div className="text-center" style={{ marginBottom: "var(--spacing-xl)" }}>
-            <p className="section-kicker" style={{ justifyContent: "center" }}>Government · Current observations</p>
             <h2>Current public observations</h2>
             <p style={{ color: "var(--color-text-light)" }}>Each role keeps the scope and date stated by its evidence, repeated here and in the chart for glance recognition.</p>
           </div>
@@ -107,9 +103,10 @@ export default function GovernmentPage() {
               <article className="official-card card hairline-top" key={`${leader.title}-${leader.name}`}>
                 <div className="official-info">
                   <h3>{leader.name}</h3>
-                  <p className="official-title">{leader.title} · {leader.scope}</p>
-                  <p className="record-meta">Observed as of <time dateTime={leader.asOf}>{leader.asOf}</time> · {leader.evidenceContext}</p>
-                  <span className="meta-checked">Checked · {leader.asOf}</span>
+                  <p className="official-title">{leader.title}</p>
+                  <p className="official-scope">{leader.scope}</p>
+                  <p className="record-meta">Observed as of <time dateTime={leader.asOf}>{leader.asOf}</time>, {leader.evidenceContext}</p>
+                  <span className="meta-checked">Checked {leader.asOf}</span>
                 </div>
               </article>
             ))}
@@ -126,7 +123,6 @@ export default function GovernmentPage() {
       <section className="section section--allen">
         <div className="container">
           <div className="text-center" style={{ marginBottom: "var(--spacing-xl)" }}>
-            <p className="section-kicker" style={{ justifyContent: "center" }}>Offices · Dated observations</p>
             <h2>Dated office-head observations</h2>
             <p style={{ color: "var(--color-text-light)" }}>These are source-dated observations, not a complete office directory.</p>
           </div>
@@ -136,9 +132,8 @@ export default function GovernmentPage() {
               <article className="councilor-card card text-center hairline-top" key={`${observation.office}-${observation.person}`}>
                 <h3>{observation.person}</h3>
                 <span className="office-role-label">{observation.displayedTitle}</span>
-                <p>{observation.office}</p>
-                <p className="record-meta">Observed <time dateTime={observation.asOf}>{observation.asOf}</time> · {observation.evidenceContext}</p>
-                <span className="meta-checked">Checked · {observation.asOf}</span>
+                <p className="record-meta">Observed <time dateTime={observation.asOf}>{observation.asOf}</time>, {observation.evidenceContext}</p>
+                <span className="meta-checked">Checked {observation.asOf}</span>
               </article>
             ))}
           </div>
@@ -149,7 +144,6 @@ export default function GovernmentPage() {
       <section id="barangays" className="section section--allen" style={{ background: "var(--color-bg-alt)" }}>
         <div className="container">
           <div className="text-center" style={{ marginBottom: "var(--spacing-xl)" }}>
-            <p className="section-kicker" style={{ justifyContent: "center" }}>Government · Barangays</p>
             <h2>The {barangayRecord.data.barangayCount} barangays of Maddela</h2>
             <p style={{ color: "var(--color-text-light)" }}>{barangayRecord.data.barangayCount} barangays, rural and urban, each a hairline card</p>
             <div className="section-header-rule" style={{ maxWidth: 360, margin: "12px auto 0" }} aria-hidden="true" />

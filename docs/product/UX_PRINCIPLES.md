@@ -29,24 +29,49 @@ the price of understanding.
    websites — orchestrated reveals, count-ups, scroll-triggered timelines. Never
    decorative noise; never a barrier to information.
 
-## Hard interface rules (owner-mandated 2026-08-26, round 2 — amended 2026-08-27 to align with BetterAllen + Better LGU Directory)
+## Hard interface rules (owner-mandated 2026-08-26, round 2 — amended 2026-08-27; round 4 override below supersedes conflicting items)
 
-1. **Pills allowed — token-bound.** Fully-rounded chip/badge shapes (`border-radius: 999px`) are now a first-class reputation/status treatment. Approved pills use only Golden Hour tokens (`--brand`, `--accent`, `--surface-muted`, `--line`, `--ink`, `--muted`, `#146c2e/#e6f4ea` for success). Category and verification status are encoded by pill color + label; the dot marker remains available for quiet inline states.
+1. ~~**Pills allowed**~~ **Pills banned (round 4).** Rounded chip/badge shapes are no longer used anywhere. Reputation and status render as quiet text: small-caps labels, the green "Checked" stamp, stacked source lines.
 2. **Babysitting text allowed in the glance layer.** The glance layer may include a one-sentence orienting line (≤20 words) that names the civic role, data scope, or next step — e.g. "Municipal Mayor — presides over the Sangguniang Bayan." GSAP structure still carries the primary meaning.
-3. **Cut text relaxed.** A card may carry a name, a number, one-line description, and a pill/badge. Full evidence still lives one click away (expanders, tables, sources).
+3. **Cut text relaxed.** A card may carry a name, a number, one-line description, and a status line. Full evidence still lives one click away (expanders, tables, sources).
 4. **More GSAP, orchestrated.** Premium modern motion: drawn connectors, staggered cascades, count-ups on money/numbers, scroll-scrubbed progress. Always reduced-motion-safe.
 
-## Owner design brief (ratified 2026-08-26, round 3; amended 2026-08-27 per BetterAllen audit). These are the current laws.
+## Owner design brief (ratified 2026-08-26, round 3; amended 2026-08-27; items 1, 2, 4 (boxed-chip clause), and 5 superseded by round 4). These are the current laws.
 
-### Adopt these — previously banned, now canonical (BetterAllen-aligned)
+### Adopt these (as amended)
 
-1. **Double labels.** Every major section and role component uses an eyebrow + heading pair carrying the same referent at two levels of hierarchy — e.g. `MUNICIPAL MAYOR` eyebrow above `Hon. Name`, `TOURISM` above `Discover Maddela`, `GOVERNMENT` above `Government Structure & Officials`. The eyebrow is the category/role, the heading is the instance. A third pill/badge repeating the office is allowed for scanability.
-2. **Numbered markers.** Ordered narrative steps use `01 / 02 / 03` and dot-leader markers (`02 · Benches`, `01 — Philippines`). The location story, history timeline, and service steps are presentation-deck sequences and must be numbered.
-3. **Data re-statement.** A fact may appear twice per surface when it aids glance recognition — e.g. the hero stat and the same number inside its detail section, or mayor name in the chart and again in the leadership grid. Provenance (source, `asOf`) travels with each instance.
-4. **Hairline divider lines and boxed chips.** Hairlines are the primary section and card structure: `1px solid var(--line)` row separators, header underlines, meta-bar borders, dotted leaders, and `border: 1px solid var(--line)` card containment. Status pills are boxed chips; hairline + pill together is the normal reputation treatment.
-5. **Em dashes.** Allowed in UI copy — `—` is the preferred separator for subordinate clauses and instance annotations: `Allen — the southern gateway`, `Maddela — the Commercial Growth Center`, `Panagsasalog — going to the farms`. Use `—` for literary/narrative lines; keep `·` for compact inline meta.
+1. ~~**Double labels.**~~ **Single labels (round 4).** Sections and components are title + body. No eyebrow/kicker line above a title; the title carries the meaning once. A subordinate classification line (e.g. barangay urban/rural class) is allowed only when it adds data, never as decoration.
+2. ~~**Numbered markers.**~~ **No deck numbering (round 4).** Ordered narrative steps use layout and arrows, not `01 / 02 / 03` markers, dot leaders, or forms like `02 · Benches` / `01 — Philippines`.
+3. **Data re-statement.** A fact may appear twice per surface when it aids glance recognition — e.g. the hero stat and the same number inside its detail section, or mayor name in the chart and again in the leadership grid. Provenance (source, `asOf`) travels with each instance. This is different from the banned role+office echo on one card (see not-likes).
+4. **Hairline divider lines.** Hairlines are the primary section and card structure: `1px solid var(--line)` row separators, header underlines, meta-bar borders, and `border: 1px solid var(--line)` card containment.
+5. ~~**Em dashes.**~~ **Commas and stacks (round 4).** Em dashes and dash-like rules are banned in rendered UI, and the middot `·` separator is banned everywhere rendered. Inline meta uses commas ("PSA dataset, 2020 census") or stacked lines (value / label / source). En dashes in date ranges (2010–2019) remain legitimate.
 6. **Template flow (FOL: hero, features grid, cards, repeat).** Sections follow the proven BetterAllen/Better LGU template rhythm: hero → features/services grid → stats band → location/map story → history/timeline → updates/projects → government → contact. Each section is a `py-12` contained band with alternating `bg-white` / `bg-alt` and a clear header. Overlap/stick/scale/bleed is an effect *inside* a section, not a mandate to dissolve section boundaries.
-7. **Data repetition for reputation.** Category color, pill, `asOf`, and sublabel are repeated wherever the data is shown; emergency/contact duplication across header strip + page grid is intentional redundancy.
+7. **Data repetition for reputation.** Category, status, `asOf`, and sublabel travel wherever the data is shown, as quiet text lines; emergency/contact duplication across header strip + page grid is intentional redundancy.
+
+### Owner likes and not-likes (2026-08-28, round 4 — binding)
+
+The owner reviewed round-2/3 surfaces live and recorded these reactions. They apply
+to every rendered surface, including the header, hero, stats, cards, charts, and meta.
+
+**Not-likes — never render these again:**
+
+1. Em dashes and dash-like separator rules (the gold dash before kickers included).
+2. The middot `·` used as a separator anywhere rendered ("Independent · not the LGU").
+3. Kicker/eyebrow lines above titles; a section is title + body, nothing above the title.
+4. The same role and office stacked on one official card ("Municipal Civil Registrar" over "Municipal Civil Registry Office") — show the designation once.
+5. Dead whitespace in stretched cards — short content inside a tall grid cell must center itself (the Vice Mayor chart node).
+6. Primary nav overlapping or crowding the EN/FIL buttons at any width.
+7. Pills, badges, and rounded chips.
+8. Deck-style numbering and dot-leader meta (`02 · Benches`).
+
+**Likes — keep and reuse:**
+
+1. Title + body hierarchy with generous whitespace.
+2. Hairlines as the structural device.
+3. The quiet small-caps green "Checked" provenance stamp.
+4. Amber (`#8a5e0f`) accents used sparingly for role/type labels — in sentence case, never long uppercase strings.
+5. Stacked source lines (value, then label, then source) instead of inline separator punctuation.
+6. Overall premium restraint: the page should feel quiet, confident, and expensive.
 
 ### Still never do these
 1. **AI slop.** No glassmorphism, random gradients, meaningless glows, gradient text, sparkles, Awwwards imitation with bad usability. Identical rounded card grids are now *allowed* when they are the template flow — slop is unconsidered use, not the grid itself.
@@ -64,7 +89,7 @@ the price of understanding.
 7. **Work quietly, take ownership.** Make strong creative decisions; do not ask the owner to choose directions.
 8. **Technology only when it earns its place** (GSAP, Lenis, plain CSS).
 9. **BetterLGU compliance is the floor, not the ceiling.** The directory's five core areas (officials, budget, projects, ordinances/resolutions, contact) must stay present and prominent; art direction never hides them. Title/description/og:image must be Maddela-specific per `crawl-lgu-meta.js:122` boilerplate gate, under 400 KB, and robots must allow `BetterLGUDirectoryBot`.
-10. **Data reputation is structured.** Every changing fact shows pill or dot status + `asOf` + sublabel; emergency contacts duplicate intentionally across the header strip + contact grid once verified. Pills use only approved tokens.
+10. **Data reputation is structured.** Every changing fact shows a status line + `asOf` + sublabel as quiet text (the green "Checked" stamp or a stacked source line); emergency contacts duplicate intentionally across the header strip + contact grid once verified. No pills.
 
 ## Technology decisions (owner-approved 2026-08-26)
 

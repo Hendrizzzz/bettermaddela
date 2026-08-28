@@ -41,7 +41,7 @@ export default function SourcesPage() {
                   {sourcesFor(record).map((source) => (
                     <li key={source.id}>
                       <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title} <i className="bi bi-box-arrow-up-right" aria-hidden="true" /></a>
-                      <span>{source.publisher} · inspected <time dateTime={source.verifiedAt}>{source.verifiedAt}</time></span>
+                      <span>{source.publisher}, inspected <time dateTime={source.verifiedAt}>{source.verifiedAt}</time></span>
                     </li>
                   ))}
                 </ul>

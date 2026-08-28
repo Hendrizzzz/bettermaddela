@@ -123,43 +123,34 @@ const serviceCategories = [
 
 const homeCopy = {
   en: {
-    heroKicker: "Maddela, Quirino",
-    heroEyebrow: "Independent portal · not the LGU",
     heroIntroEm: "Civic information from public-source records for Maddela, Quirino.",
     welcome: "Welcome to BetterMaddela",
     introduction: "Civic information from public-source records for Maddela, Quirino.",
     browseServices: "Browse Services",
     contactInformation: "Contact Information",
     serviceCategories: "Service Categories",
-    serviceKicker: "Directory · Services",
     serviceNotice: "Requirements and fees are not yet verified here; confirm with the office.",
     viewAllServices: "View All Services",
     browseDirectory: "Browse the service directory",
     atAGlance: "Maddela at a Glance",
-    atAGlanceKicker: "By the numbers · Maddela at a glance",
     viewStatistics: "View Statistics",
     population: "Population",
     barangays: "Barangays",
     municipality: "Municipality",
     households: "Households",
     whereTitle: "Where is Maddela?",
-    whereKicker: "Location · Three steps",
     whereIntro: "Three quick steps, from country to town.",
     history: "Brief History of Maddela",
-    historyKicker: "History · Local narrative & law",
     viewHistory: "View national legal history",
     sources: "Sources",
     historySourceNote: "Local tradition and documented legal milestones, identified separately.",
     readMore: "Read more",
     updates: "Latest Updates",
-    updatesKicker: "Notices · From verified publishers",
     viewUpdates: "View All",
     leadership: "Municipal Leadership",
-    leadershipKicker: "Government · Current observations",
     viewGovernment: "View Government",
     asOf: "As of",
     contact: "Contact Information",
-    contactKicker: "Connect · Sources & corrections",
     viewAll: "View All",
     sourceDirectory: "Source Directory",
     sourceDirectoryNote: "Evidence and review dates behind every figure.",
@@ -186,43 +177,34 @@ const homeCopy = {
     checkedLabel: "Checked",
   },
   fil: {
-    heroKicker: "Maddela, Quirino",
-    heroEyebrow: "Independent portal · hindi ito ang LGU",
     heroIntroEm: "Impormasyong sibiko mula sa pampublikong sanggunian para sa Maddela, Quirino.",
     welcome: "Maligayang pagdating sa BetterMaddela",
     introduction: "Impormasyong sibiko mula sa pampublikong sanggunian para sa Maddela, Quirino.",
     browseServices: "Tingnan ang mga Serbisyo",
     contactInformation: "Impormasyon sa Pakikipag-ugnayan",
     serviceCategories: "Mga Kategorya ng Serbisyo",
-    serviceKicker: "Direktoryo · Mga Serbisyo",
     serviceNotice: "Hindi pa beripikado ang mga requirements at bayarin; kumpirmahin sa tanggapan.",
     viewAllServices: "Tingnan ang Lahat ng Serbisyo",
     browseDirectory: "Tingnan ang direktoryo ng serbisyo",
     atAGlance: "Maddela sa Isang Tingin",
-    atAGlanceKicker: "Sa mga numero · Maddela sa isang tingin",
     viewStatistics: "Tingnan ang Estadistika",
     population: "Populasyon",
     barangays: "Mga Barangay",
     municipality: "Munisipalidad",
     households: "Mga Sambahayan",
     whereTitle: "Nasaan ang Maddela?",
-    whereKicker: "Lokasyon · Tatlong hakbang",
     whereIntro: "Tatlong mabilis na hakbang, mula bansa hanggang bayan.",
     history: "Maikling Kasaysayan ng Maddela",
-    historyKicker: "Kasaysayan · Salaysay at batas",
     viewHistory: "Tingnan ang pambansang legal na kasaysayan",
     sources: "Mga Sanggunian",
     historySourceNote: "Magkahiwalay na tinutukoy: ang lokal na salaysay at dokumentadong legal na pangyayari.",
     readMore: "Basahin pa",
     updates: "Pinakabagong Update",
-    updatesKicker: "Mga Abiso · Mula sa beripikadong publisher",
     viewUpdates: "Tingnan Lahat",
     leadership: "Pamunuan ng Munisipalidad",
-    leadershipKicker: "Pamahalaan · Kasalukuyang obsebasyon",
     viewGovernment: "Tingnan ang Pamahalaan",
     asOf: "Mula noong",
     contact: "Impormasyon sa Pakikipag-ugnayan",
-    contactKicker: "Ugnayan · Mga sanggunian at pagwawasto",
     viewAll: "Tingnan Lahat",
     sourceDirectory: "Direktoryo ng mga Sanggunian",
     sourceDirectoryNote: "Ebidensya at petsa ng pagsusuri sa likod ng bawat bilang.",
@@ -289,7 +271,7 @@ export default function HomePage() {
     { name: copy.stepQuirino, detail: copy.stepQuirinoNote },
     {
       name: copy.stepMaddela,
-      detail: `${barangays.data.barangayCount} ${copy.barangayLabel} · ${population.data.population.toLocaleString(
+      detail: `${barangays.data.barangayCount} ${copy.barangayLabel}, ${population.data.population.toLocaleString(
         language === "fil" ? "fil-PH" : "en-PH",
       )} ${copy.residentsLabel} (${copy.censusLabel})`,
     },
@@ -297,13 +279,11 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero Section — Allen hero translation: kicker + H1 double label, em dash intro, search + popular */}
+      {/* Hero Section — Allen hero translation: H1 + intro, search + popular */}
       <section className="home-hero-v2">
         <div className="container">
           <div className="home-hero-v2-inner">
             <div className="home-hero-v2-text">
-              <p className="section-kicker" style={{ color: "#f5b301" }}>{copy.heroEyebrow}</p>
-              <p className="home-hero-kicker">{copy.heroKicker}</p>
               <h1>{copy.welcome}</h1>
               <p>{copy.heroIntroEm}</p>
               <div className="home-hero-v2-actions">
@@ -327,7 +307,6 @@ export default function HomePage() {
         <div className="container">
           <div className="home-section-header">
             <div>
-              <p className="section-kicker">{copy.serviceKicker}</p>
               <h2>{copy.serviceCategories}</h2>
               <p>{copy.serviceNotice}</p>
             </div>
@@ -358,7 +337,6 @@ export default function HomePage() {
         <div className="container">
           <div className="home-stats-v2-header">
             <div>
-              <p className="section-kicker">{copy.atAGlanceKicker}</p>
               <h2>{copy.atAGlance}</h2>
             </div>
             <Link href="/statistics" className="home-section-link">
@@ -373,7 +351,8 @@ export default function HomePage() {
                   <span className="home-stat-card-value">
                     {population.data.population.toLocaleString("en-PH")}
                   </span>
-                  <span className="home-stat-card-label">{copy.population} · {copy.censusLabel}</span>
+                  <span className="home-stat-card-label">{copy.population}</span>
+                  <span className="home-stat-card-source">{copy.censusLabel}</span>
                 </div>
               </Link>
             </Reveal>
@@ -381,7 +360,8 @@ export default function HomePage() {
               <Link href="/statistics" className="home-stat-card hairline-top">
                 <div className="home-stat-card-content">
                   <span className="home-stat-card-value">{barangays.data.barangayCount}</span>
-                  <span className="home-stat-card-label">{copy.barangays} · PSGC</span>
+                  <span className="home-stat-card-label">{copy.barangays}</span>
+                  <span className="home-stat-card-source">PSGC</span>
                 </div>
               </Link>
             </Reveal>
@@ -389,7 +369,8 @@ export default function HomePage() {
               <Link href="/statistics" className="home-stat-card hairline-top">
                 <div className="home-stat-card-content">
                   <span className="home-stat-card-value">{identity.data.incomeClass} {copy.incomeClassSuffix}</span>
-                  <span className="home-stat-card-label">{copy.municipality} · PSGC</span>
+                  <span className="home-stat-card-label">{copy.municipality}</span>
+                  <span className="home-stat-card-source">PSGC</span>
                 </div>
               </Link>
             </Reveal>
@@ -397,7 +378,8 @@ export default function HomePage() {
               <Link href="/statistics" className="home-stat-card hairline-top">
                 <div className="home-stat-card-content">
                   <span className="home-stat-card-value">{households.data.numberOfHouseholds.toLocaleString("en-PH")}</span>
-                  <span className="home-stat-card-label">{copy.households} · {copy.censusLabel}</span>
+                  <span className="home-stat-card-label">{copy.households}</span>
+                  <span className="home-stat-card-source">{copy.censusLabel}</span>
                 </div>
               </Link>
             </Reveal>
@@ -410,7 +392,6 @@ export default function HomePage() {
         <div className="container">
           <div className="home-stats-v2-header">
             <div>
-              <p className="section-kicker">{copy.whereKicker}</p>
               <h2>{copy.whereTitle}</h2>
             </div>
           </div>
@@ -443,7 +424,7 @@ export default function HomePage() {
                   <i className="bi bi-geo-alt" aria-hidden="true" />
                   <span>
                     <a href="https://www.google.com/maps/search/?api=1&query=Maddela%2C+Quirino%2C+Philippines" target="_blank" rel="noreferrer">{copy.exploreMap}</a>
-                    <span className="map-attribution-separator" aria-hidden="true"> · </span>
+                    <span className="map-attribution-separator" aria-hidden="true">, </span>
                     {copy.mapCaption}
                   </span>
                 </div>
@@ -475,7 +456,6 @@ export default function HomePage() {
         <div className="container">
           <div className="home-stats-v2-header">
             <div>
-              <p className="section-kicker">{copy.historyKicker}</p>
               <h2>
                 {copy.history}
               </h2>
@@ -492,7 +472,7 @@ export default function HomePage() {
                   <div className="timeline-marker" />
                   <div className="timeline-content hairline-top" lang="en">
                     <span className="timeline-year">{section.period}</span>
-                    <p><strong>{section.title}</strong> · {section.kind}</p>
+                    <p><strong>{section.title}</strong>, {section.kind}</p>
                     <details className="timeline-more">
                       <summary>{copy.readMore}<span className="sr-only">: {section.title}</span></summary>
                       <p>{section.text}</p>
@@ -533,7 +513,6 @@ export default function HomePage() {
         <div className="container">
           <div className="home-section-header">
             <div>
-              <p className="section-kicker">{copy.updatesKicker}</p>
               <h2>{copy.updates}</h2>
             </div>
             <Link href="/news" className="home-section-link">
@@ -551,7 +530,7 @@ export default function HomePage() {
                   </div>
                   <h3><a href={item.canonicalUrl} target="_blank" rel="noreferrer">{item.headline}</a></h3>
                   <p className="home-news-summary">{item.summary}</p>
-                  <p className="home-news-publisher">{item.publisher} · {formatDate(item.publishedAt, language)}</p>
+                  <p className="home-news-publisher">{item.publisher}, {formatDate(item.publishedAt, language)}</p>
                 </article>
               ))}
             </div>
@@ -564,7 +543,6 @@ export default function HomePage() {
         <div className="container">
           <div className="home-section-header">
             <div>
-              <p className="section-kicker">{copy.leadershipKicker}</p>
               <h2>{copy.leadership}</h2>
               <p style={{ color: "var(--color-text-light)", margin: 0 }}>Elected leadership with verified scope and dates; provenance one click away.</p>
             </div>
@@ -580,8 +558,8 @@ export default function HomePage() {
                   <div className="home-leader-badge">{leader.title}</div>
                   <h3>{leader.name}</h3>
                   <p className="home-leader-scope">{leader.scope}</p>
-                  <p className="home-leader-as-of">{copy.asOf} <time dateTime={leader.asOf}>{formatDate(leader.asOf, language)}</time> · {leader.evidenceContext}</p>
-                  <span className="meta-checked">{copy.checkedLabel} · {formatDate(leader.asOf, language)}</span>
+                  <p className="home-leader-as-of">{copy.asOf} <time dateTime={leader.asOf}>{formatDate(leader.asOf, language)}</time>, {leader.evidenceContext}</p>
+                  <span className="meta-checked">{copy.checkedLabel} {formatDate(leader.asOf, language)}</span>
                 </article>
               ))}
             </div>
@@ -594,7 +572,6 @@ export default function HomePage() {
         <div className="container">
           <div className="home-section-header">
             <div>
-              <p className="section-kicker">{copy.contactKicker}</p>
               <h2>{copy.contact}</h2>
             </div>
             <Link href="/contact" className="home-section-link">

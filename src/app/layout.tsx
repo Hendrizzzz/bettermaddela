@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: "BetterMaddela",
-    template: "%s · BetterMaddela",
+    template: "%s | BetterMaddela",
   },
   description:
     "Independent, source-linked civic information about Maddela, Quirino.",

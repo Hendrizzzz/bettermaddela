@@ -119,15 +119,12 @@ export function SiteHeader() {
       <div className="header-utility" role="complementary" aria-label="Utility bar">
         <div className="container header-utility-inner">
           <div className="header-utility-left">
-            <span className="header-utility-kicker">Independent · not the LGU</span>
-            <span className="header-utility-dot" aria-hidden="true">·</span>
-            <span className="header-utility-meta">Maddela, Quirino · Region II</span>
+            <span className="header-utility-kicker">Independent, not the LGU</span>
+            <span className="header-utility-meta">Region II</span>
           </div>
           <div className="header-utility-right">
             <span className="header-utility-item"><i className="bi bi-geo-alt" aria-hidden="true" /> Maddela, Quirino</span>
-            <span className="header-utility-dot" aria-hidden="true">·</span>
             <a className="header-utility-link" href="/contact">Contact &amp; corrections</a>
-            <span className="header-utility-dot" aria-hidden="true">·</span>
             <a className="header-utility-link" href="/sources">Sources</a>
           </div>
         </div>

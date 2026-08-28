@@ -300,10 +300,6 @@ function formatEnPh(iso: string): string {
     <>
       <section className="hst-hero">
         <div className="container">
-          <p className="hst-kicker">
-            <i className="bi bi-signpost-split-fill" aria-hidden="true" /> An
-            independent volunteer project, not a government site
-          </p>
           <h1>The story of Maddela</h1>
           <p className="hst-arc">{arcSentence}</p>
           <ul className="hst-facts">

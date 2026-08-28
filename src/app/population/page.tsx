@@ -37,7 +37,6 @@ export default function PopulationPage() {
   return (
     <div className="shell page-shell">
       <header className="page-heading">
-        <p className="eyebrow">Published statistics</p>
         <h1>Population</h1>
         <p>
           Maddela recorded {current.data.population.toLocaleString("en-PH")} people in

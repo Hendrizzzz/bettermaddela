@@ -711,9 +711,6 @@
 .brgy-split-swatch--urban {
   background: var(--accent);
 }
-.brgy-split-dot {
-  color: var(--muted);
-}
 .brgy-microbar {
   width: 100%;
   height: 4px;
@@ -931,6 +928,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+/* The vice node stretches to the fork rail's full height; center its short
+   content vertically so it does not look bottom-empty next to the SB node. */
+.govt-node--vice {
+  justify-content: center;
 }
 a.govt-node--barangay {
   display: block;
@@ -1381,9 +1383,6 @@ a.govt-node:focus-visible {
   text-transform: uppercase;
   color: #f5b301;
 }
-.header-utility-dot {
-  color: #6b6353;
-}
 .header-utility-meta,
 .header-utility-item {
   color: #f7efd8;
@@ -1407,26 +1406,7 @@ a.govt-node:focus-visible {
   padding-top: 0;
 }
 
-/* ===== Allen double labels, hairline, pill, em-dash system ===== */
-.section-kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin: 0 0 6px;
-  color: #8a5e0f;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-.section-kicker::before {
-  content: "";
-  width: 18px;
-  height: 2px;
-  border-radius: 1px;
-  background: #f5b301;
-  flex: none;
-}
+/* ===== Hairline system, quiet provenance, stacked source lines ===== */
 .section-header-rule {
   height: 1px;
   margin: var(--spacing-sm) 0 var(--spacing-md);
@@ -1459,16 +1439,33 @@ a.govt-node:focus-visible {
   height: 7px;
   background: #146c2e;
 }
-/* Office role line: small-caps label in the amber register, replaces role pills. */
+/* Office role line: the designation itself, sentence case in the amber
+   register. Long designations wrap instead of shouting in small caps. */
 .office-role-label {
   display: block;
   margin: 6px auto;
+  max-width: 17rem;
   color: #8a5e0f;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  line-height: 1;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: normal;
+  text-transform: none;
+  line-height: 1.35;
+}
+/* Muted scope line under a leader's name (e.g. department served). */
+.official-scope {
+  margin: 0 0 8px;
+  color: #6b6353;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+}
+/* Muted source line under a home stat value (e.g. which census). */
+.home-stat-card-source {
+  display: block;
+  margin-top: 4px;
+  color: #6b6353;
+  font-size: 0.75rem;
+  line-height: 1.3;
 }
 /* Barangay classification: quiet small-caps text, replaces the muted pill. */
 .barangay-class {
@@ -1494,9 +1491,6 @@ a.govt-node:focus-visible {
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
-.govt-legend-items .govt-legend-sep {
-  color: #e8dfc8;
-}
 .section--allen {
   position: relative;
 }
@@ -1504,7 +1498,7 @@ a.govt-node:focus-visible {
   border-top: 1px solid #e8dfc8;
 }
 
-/* Filipino nav labels run long ("Makipag-ugnayan", "Lehislatura"); keep every
+/* Filipino nav labels ("Pamahalaan", "Lehislatura") run long; keep every
    link on one line and tighten the gaps so the row stays a single line from
    the 1024px breakpoint up. The caret ::after stays attached because it is
    inline content inside the same nowrap anchor. */
@@ -1521,9 +1515,13 @@ a.govt-node:focus-visible {
 .main-nav > ul {
   flex-wrap: nowrap;
 }
-@media (min-width: 1025px) and (max-width: 1280px) {
+.logo-container,
+.header-actions {
+  flex: 0 0 auto;
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
   .main-nav a {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
   }
   .main-nav ul {
     gap: 8px;

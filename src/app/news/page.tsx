@@ -61,7 +61,7 @@ export default function NewsPage() {
                   <h2 className="news-card-title">{item.headline}</h2>
                   <p className="news-card-desc">{item.summary}</p>
                   {item.eventDate && <p className="record-meta">Event date: <time dateTime={item.eventDate}>{item.eventDate}</time></p>}
-                  <p className="record-meta">{item.publisher} · {item.status} · Open source <i className="bi bi-box-arrow-up-right" aria-hidden="true" /></p>
+                  <p className="record-meta">{item.publisher}, {item.status}, open source <i className="bi bi-box-arrow-up-right" aria-hidden="true" /></p>
                 </div>
               </a>
             ))}
