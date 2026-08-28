@@ -1,9 +1,12 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHeader from "@/components/layout/PageHeader";
 import { RecordMeta } from "@/components/RecordMeta";
 import { Reveal } from "@/components/motion/Reveal";
+import { TermPips } from "@/components/government/TermPips";
 import { getRecord } from "@/data/civic";
+import { monogramInitials } from "@/lib/monogram";
 import { MaddelaAtlas, maddelaBoundariesRecord } from "@/components/MaddelaAtlas";
 import { slugify } from "@/lib/slugify";
 import atlasGeometry from "@/data/atlas/geometry.json";
@@ -205,16 +208,6 @@ function officerEntries(group: BarangayOfficials) {
   });
 }
 
-function monogramInitials(name: string) {
-  const tokens = name.split(/\s+/).filter((token) => !/^(JR|SR|II|III|IV)$/i.test(token));
-  const first = tokens[0]?.charAt(0) ?? "?";
-  const last =
-    tokens.length > 1
-      ? tokens[tokens.length - 1].charAt(0)
-      : (tokens[0]?.charAt(1) ?? "");
-  return `${first}${last}`;
-}
-
 // The source attaches the same barangay office line to most officials of a
 // barangay; render it once per group instead of repeating it on every person.
 function sharedTelephone(entries: OfficialEntry[]) {
@@ -239,11 +232,17 @@ function OfficialTile({
         {monogramInitials(entry.name)}
       </span>
       <span className="brgy-prof-tile-body">
-        {role && <span className="brgy-prof-tile-role">{role}</span>}
-        <span className="brgy-prof-tile-name">{entry.name}</span>
-        {entry.termOrdinal && (
-          <span className="brgy-prof-tile-term">{entry.termOrdinal} term</span>
+        {role && (
+          <span className="brgy-prof-tile-role">
+            <i
+              className={`bi ${role === "SK Chairperson" ? "bi-lightning-charge" : "bi-clipboard2-check"}`}
+              aria-hidden="true"
+            />
+            {role}
+          </span>
         )}
+        <span className="brgy-prof-tile-name">{entry.name}</span>
+        <TermPips ordinal={entry.termOrdinal} />
         <OfficialContact email={entry.email} telephone={telephone} />
       </span>
     </li>
@@ -393,18 +392,27 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
             <h2 className="brgy-section-heading" id="brgy-prof-officials">
               Barangay officials
             </h2>
+            <p className="brgy-prof-section-link">
+              <Link href="/government/barangay-officials">
+                Browse the municipal officials directory <i className="bi bi-arrow-right" aria-hidden="true" />
+              </Link>
+            </p>
             {officials && hasOfficialRoster ? (
+              <Reveal>
               <div className="brgy-prof-org">
                 {officials.punongBarangay && (
                   <article className="brgy-prof-lead">
-                    <span className="brgy-prof-mono brgy-prof-mono--lg" aria-hidden="true">
+                    <span className="brgy-prof-mono brgy-prof-mono--lg brgy-prof-mono--featured" aria-hidden="true">
                       {monogramInitials(officials.punongBarangay.name)}
                     </span>
                     <div className="brgy-prof-lead-body">
                       <p className="brgy-prof-lead-role">Punong Barangay</p>
                       <p className="brgy-prof-lead-name">{officials.punongBarangay.name}</p>
                       {officials.punongBarangay.termOrdinal && (
-                        <p className="brgy-prof-lead-term">{officials.punongBarangay.termOrdinal} term</p>
+                        <p className="brgy-prof-lead-term">
+                          <TermPips ordinal={officials.punongBarangay.termOrdinal} />
+                          <span>{officials.punongBarangay.termOrdinal} term</span>
+                        </p>
                       )}
                       <OfficialContact
                         email={officials.punongBarangay.email}
@@ -501,7 +509,9 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
                   })()}
                 </div>
               </div>
+              </Reveal>
             ) : (
+              <Reveal>
               <div className="brgy-prof-org">
                 <article className="brgy-prof-seat-card brgy-prof-seat-card--pb">
                   <span className="brgy-prof-seat-box brgy-prof-seat-box--lg" aria-hidden="true" />
@@ -519,6 +529,7 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
                   </ul>
                 </div>
               </div>
+              </Reveal>
             )}
             {officials && hasOfficialRoster ? (
               <>

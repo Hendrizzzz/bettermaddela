@@ -143,6 +143,11 @@ export default function GovernmentPage() {
             <h2>The {barangayRecord.data.barangayCount} barangays of Maddela</h2>
             <p style={{ color: "var(--color-text-light)" }}>{barangayRecord.data.barangayCount} barangays, rural and urban, each a hairline card</p>
             <div className="section-header-rule" style={{ maxWidth: 360, margin: "12px auto 0" }} aria-hidden="true" />
+            <p style={{ marginTop: "var(--spacing-md)" }}>
+              <Link className="btn btn-secondary" href="/government/barangay-officials">
+                Browse the barangay officials directory
+              </Link>
+            </p>
           </div>
           <div className="grid grid-4">
             {barangayRecord.data.barangays.map((barangay) => (

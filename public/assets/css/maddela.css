@@ -1703,3 +1703,82 @@ a.govt-node:focus-visible {
 }
 
 
+
+/* ---- Barangay officials presentation upgrades (profile rosters + directory) ---- */
+.brgy-prof-tile {
+  transition:
+    transform var(--motion-fast) var(--ease-out-soft),
+    box-shadow var(--motion-fast) var(--ease-out-soft),
+    border-color var(--motion-fast) var(--ease-out-soft);
+}
+.brgy-prof-tile:hover {
+  transform: translateY(-2px);
+  border-color: var(--brand);
+  box-shadow: var(--shadow);
+}
+.brgy-prof-mono--featured {
+  box-shadow:
+    0 0 0 2px var(--surface),
+    0 0 0 4px var(--accent);
+}
+.brgy-prof-lead {
+  position: relative;
+}
+.brgy-prof-lead::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  bottom: 14px;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+.brgy-prof-lead-term {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.brgy-prof-tile-role .bi {
+  margin-right: 4px;
+  color: var(--brand);
+  font-size: 0.9em;
+}
+.brgy-prof-tile--featured {
+  border-left: 3px solid var(--accent);
+}
+.term-pips {
+  display: inline-flex;
+  gap: 3px;
+}
+.term-pip {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+.term-pip--filled {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.brgy-prof-tile .term-pips {
+  margin-top: 2px;
+}
+.brgy-prof-contact-line .bi {
+  margin-right: 4px;
+}
+.brgy-prof-section-link {
+  margin: 10px 0 0;
+}
+.brgy-prof-section-link a {
+  color: var(--brand);
+  font-weight: 600;
+  text-decoration: none;
+}
+.brgy-prof-section-link a:hover {
+  text-decoration: underline;
+}
+.brgy-prof-section-link .bi {
+  margin-left: 4px;
+}
