@@ -25,3 +25,43 @@
 ## Data-quality note
 
 The 2012 photograph is 14 years old at retrieval date. Any caption must state the capture date honestly ("Aerial view, April 2012") and must not imply current conditions.
+
+## Community photo intake policy (process note, 2026-08-29)
+
+Operational path for accepting community-submitted photographs. This restates
+and applies the media-rights gate in docs/data/DATA_CONTRACT.md ("Media
+rights", lines 147-158); it does not change that contract.
+
+1. **Everything starts as evidence, never as production data.** A submitted
+   photo is a research input. It does not enter public/assets and no page
+   references it until the media gate below is complete.
+2. **Review inbox, not the public tree.** Submissions land in
+   esearch/media-inbox/<subject-slug>/ holding (a) the untouched original
+   file and (b) a metadata sheet recording submitter, retrieval/submission
+   date, claimed creator, claimed subject, and claimed license or permission.
+3. **Rights evidence required per the contract.** Creator or rights holder;
+   original source URL or acquisition record; explicit license or written
+   permission (documentType permission-record for private grants); required
+   attribution text; modification status; scope/expiry/distribution
+   restrictions. "It was on a government page or in a Facebook group" is not
+   reuse permission. Public-viewable does not mean reusable.
+4. **No social-CDN hotlinking, ever.** If a photo only exists inside a social
+   platform, the volunteer must secure permission from the rights holder and a
+   stable acquisition record; the file is then downloaded, hashed, and stored
+   locally beside an attribution sidecar (same pattern as the 2012 aerial
+   photograph above). We never embed social-platform CDN URLs.
+5. **People require depiction verification.** For any image of a named
+   individual (official, employee, resident): the depicted identity must be
+   confirmed against a second source tied to the subject (official listing,
+   direct confirmation), never inferred from context alone. Portrait use needs
+   permission from the depicted person or their rights holder, recorded as a
+   permission-record. Unverified identity = blocked.
+6. **Publication is opt-in per verified item.** On passing the gate the file
+   moves to public/assets/images/ with its attribution sidecar, the civic
+   record gains a media-file source entry, and the display caption states
+   the capture date honestly (age discipline as with the April 2012 aerial).
+   Failing or missing evidence = locked, stays out.
+7. **Monogram fallback is the default presentation.** Officials without a
+   verified photo keep the generated monogram avatar. Photos are an
+   enhancement layered on verified records; absence of a photo is an honest
+   state, not a defect to fill.
