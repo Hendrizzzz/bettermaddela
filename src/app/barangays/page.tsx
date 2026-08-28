@@ -3,6 +3,7 @@ import Link from "next/link";
 import PageHeader from "@/components/layout/PageHeader";
 import { RecordMeta } from "@/components/RecordMeta";
 import { MaddelaAtlas, maddelaBoundariesRecord } from "@/components/MaddelaAtlas";
+import atlasGeometry from "@/data/atlas/geometry.json";
 import { getRecord } from "@/data/civic";
 import { slugify } from "@/lib/slugify";
 
@@ -25,6 +26,13 @@ interface BarangayData {
 
 const barangayRecord = getRecord<BarangayData>("barangay-dataset-2026q2");
 const barangays = barangayRecord.data.barangays;
+
+const headerGeometry = atlasGeometry as unknown as {
+  width: number;
+  height: number;
+  municipality: { d: string };
+  barangays: Array<{ d: string }>;
+};
 
 function formatLongDate(value: string) {
   return new Intl.DateTimeFormat("en-PH", {
@@ -72,6 +80,21 @@ export default function BarangaysPage() {
         title="Barangays of Maddela"
         description={`${data.barangayCount} barangays serving the municipality`}
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Government", href: "/government" }, { label: "Barangays" }]}
+        decor={
+          <svg
+            viewBox={`0 0 ${headerGeometry.width} ${headerGeometry.height}`}
+            preserveAspectRatio="xMaxYMid meet"
+          >
+            {headerGeometry.barangays.map((entry, index) => (
+              <path key={index} d={entry.d} fillRule="evenodd" />
+            ))}
+            <path
+              className="page-header-decor-muni"
+              d={headerGeometry.municipality.d}
+              fillRule="evenodd"
+            />
+          </svg>
+        }
       />
 
       <section className="section" style={{ background: "var(--color-bg-alt)" }}>
