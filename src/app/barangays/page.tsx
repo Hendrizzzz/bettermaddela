@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHeader from "@/components/layout/PageHeader";
 import { RecordMeta } from "@/components/RecordMeta";
-import { MaddelaAtlas, maddelaPlaceRecord } from "@/components/MaddelaAtlas";
+import { MaddelaAtlas, maddelaBoundariesRecord } from "@/components/MaddelaAtlas";
 import { getRecord } from "@/data/civic";
 import { slugify } from "@/lib/slugify";
 
@@ -125,9 +125,10 @@ export default function BarangaysPage() {
 
           <h2 className="brgy-section-heading">The Maddela atlas</h2>
           <p className="brgy-method-note" lang="en">
-            Approximate point locations from OpenStreetMap place nodes, plotted from the reviewed
-            record. Nine barangays have no barangay-level OpenStreetMap feature yet; they are listed
-            below rather than plotted, and no coordinate was guessed.
+            Municipal and barangay boundary polygons from the OCHA COD-AB Philippines
+            dataset, matched to the reviewed 32-name PSGC list, and shaded by the same
+            reviewed census counts used on this page. The rendering is stylized and
+            simplified; it is not an official survey boundary.
           </p>
           <MaddelaAtlas variant="full" />
 
@@ -181,7 +182,7 @@ export default function BarangaysPage() {
             there as each passes verification.
           </p>
 
-          <RecordMeta record={maddelaPlaceRecord} />
+          <RecordMeta record={maddelaBoundariesRecord} />
           <RecordMeta record={barangayRecord} />
         </div>
       </section>

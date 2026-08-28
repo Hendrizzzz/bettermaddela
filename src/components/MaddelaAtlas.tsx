@@ -1,68 +1,118 @@
-import Link from "next/link";
 import { getRecord } from "@/data/civic";
 import { slugify } from "@/lib/slugify";
+import atlasGeometry from "@/data/atlas/geometry.json";
 
-export interface AtlasLocation {
-  barangay: string;
-  psgcCode: string;
-  latitude: number;
-  longitude: number;
-  osmElement: string;
-  osmPlaceType: string;
-  match: string;
-  matchName?: string;
-  note?: string;
-}
-
-export interface AtlasUnmapped {
-  barangay: string;
-  psgcCode: string;
-  note: string;
-}
-
-interface PlaceData {
+interface BoundariesData {
   attribution: string;
+  license: string;
+  licenseUrl: string;
   method: string;
-  locations: AtlasLocation[];
-  unmapped: AtlasUnmapped[];
+  geometryArtifact: string;
+  barangayCount: number;
+  datasetVersion: string;
+  validOn: string;
+  municipalityAreaSqkm: number;
+  barangayAreaSumSqkm: number;
 }
 
-export const maddelaPlaceRecord = getRecord<PlaceData>(
-  "maddela-barangay-locations-osm-2026-08",
+interface BarangayPopulationEntry {
+  name: string;
+  psgcCode: string;
+  population: number;
+}
+
+interface BarangayDataset {
+  populationReferenceDate: string;
+  barangays: BarangayPopulationEntry[];
+}
+
+export const maddelaBoundariesRecord = getRecord<BoundariesData>(
+  "maddela-barangay-boundaries-codab-2026-08",
 );
 
-const locations = maddelaPlaceRecord.data.locations;
-const unmapped = maddelaPlaceRecord.data.unmapped;
+const barangayRecord = getRecord<BarangayDataset>("barangay-dataset-2026q2");
 
-const WIDTH = 640;
-const PAD = 42;
-const MIN_LAT = Math.min(...locations.map((entry) => entry.latitude));
-const MAX_LAT = Math.max(...locations.map((entry) => entry.latitude));
-const MIN_LNG = Math.min(...locations.map((entry) => entry.longitude));
-const MAX_LNG = Math.max(...locations.map((entry) => entry.longitude));
-const midLatRadians = ((MIN_LAT + MAX_LAT) / 2) * (Math.PI / 180);
-const spanX = (MAX_LNG - MIN_LNG) * Math.cos(midLatRadians);
-const spanY = MAX_LAT - MIN_LAT;
-const scale = (WIDTH - PAD * 2) / spanX;
-const HEIGHT = Math.round(spanY * scale + PAD * 2);
-
-function projectX(longitude: number) {
-  return PAD + (longitude - MIN_LNG) * Math.cos(midLatRadians) * scale;
+interface GeometryEntry {
+  psgc: string;
+  name: string;
+  d: string;
+  center: [number, number];
+  label: boolean;
+  areaSqkm: number;
 }
 
-function projectY(latitude: number) {
-  return PAD + (MAX_LAT - latitude) * scale;
+interface AtlasGeometry {
+  width: number;
+  height: number;
+  pad: number;
+  municipality: { psgc: string; name: string; d: string };
+  barangays: GeometryEntry[];
 }
+
+const geometry = atlasGeometry as unknown as AtlasGeometry;
+
+const populationByPsgc = new Map(
+  barangayRecord.data.barangays.map((entry) => [entry.psgcCode, entry]),
+);
+
+// Reviewed census counts bucketed into five quantile bands, computed at render.
+const sortedPopulations = barangayRecord.data.barangays
+  .map((entry) => entry.population)
+  .sort((a, b) => a - b);
+const bandCuts = [1, 2, 3, 4].map(
+  (k) => sortedPopulations[Math.ceil((sortedPopulations.length * k) / 5) - 1],
+);
+
+function bandOf(population: number) {
+  for (let band = 0; band < bandCuts.length; band++) {
+    if (population <= bandCuts[band]) return band;
+  }
+  return bandCuts.length;
+}
+
+const formatNumber = (value: number) => value.toLocaleString("en-PH");
+
+const bandLabels = [
+  `${formatNumber(sortedPopulations[0])}–${formatNumber(bandCuts[0])}`,
+  `${formatNumber(bandCuts[0] + 1)}–${formatNumber(bandCuts[1])}`,
+  `${formatNumber(bandCuts[1] + 1)}–${formatNumber(bandCuts[2])}`,
+  `${formatNumber(bandCuts[2] + 1)}–${formatNumber(bandCuts[3])}`,
+  `${formatNumber(bandCuts[3] + 1)}+`,
+];
+
+const features = geometry.barangays.map((entry) => {
+  const reviewed = populationByPsgc.get(entry.psgc);
+  if (!reviewed) {
+    throw new Error(
+      `Boundary polygon ${entry.psgc} has no reviewed barangay row in barangay-dataset-2026q2`,
+    );
+  }
+  return {
+    ...entry,
+    name: reviewed.name,
+    population: reviewed.population,
+    band: bandOf(reviewed.population),
+  };
+});
 
 const gridFractions = [0.25, 0.5, 0.75];
 
+function formatLongDate(value: string) {
+  return new Intl.DateTimeFormat("en-PH", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "Asia/Manila",
+  }).format(new Date(`${value}T00:00:00+08:00`));
+}
+
 function atlasAriaLabel(variant: "hero" | "full" | "mini", highlight?: string) {
   if (variant === "mini") {
-    return `Stylized map of Maddela barangays with ${
+    return `Stylized map of Maddela with ${
       highlight ?? "the selected barangay"
-    } highlighted; dots are approximate point locations, not official boundaries.`;
+    } highlighted; boundaries from OCHA COD-AB, not an official survey boundary.`;
   }
-  return `Stylized map of Maddela barangays: ${locations.length} plotted with approximate point locations, ${unmapped.length} not yet mappable. Dots are not official boundaries.`;
+  return `Stylized map of all ${features.length} barangays of Maddela with boundaries from OCHA COD-AB, shaded by reviewed census population; not an official survey boundary.`;
 }
 
 export function MaddelaAtlas({
@@ -74,6 +124,7 @@ export function MaddelaAtlas({
 }) {
   const isMini = variant === "mini";
   const showLabels = variant === "full";
+  const { width: WIDTH, height: HEIGHT, pad: PAD } = geometry;
 
   return (
     <div className={`atlas-card atlas-card--${variant}`}>
@@ -112,87 +163,86 @@ export function MaddelaAtlas({
           rx={14}
           aria-hidden="true"
         />
-        {locations.map((loc) => {
-          const cx = projectX(loc.longitude);
-          const cy = projectY(loc.latitude);
-          const isActive = isMini && highlight === loc.barangay;
+        {features.map((feature) => {
+          const isActive = isMini && highlight === feature.name;
           const isDim = isMini && highlight != null && !isActive;
-          const markClass = [
-            "atlas-dot-mark",
-            isActive ? "atlas-dot-mark--active" : "",
-            isDim ? "atlas-dot-mark--dim" : "",
-          ]
-            .filter(Boolean)
-            .join(" ");
-          const haloClass = [
-            "atlas-dot-halo",
-            isActive ? "atlas-dot-halo--active" : "",
-            isDim ? "atlas-dot-halo--dim" : "",
-          ]
-            .filter(Boolean)
-            .join(" ");
-          const flipLabel = cx > WIDTH - 150;
 
           if (isMini) {
             return (
-              <g key={loc.psgcCode} aria-hidden="true">
-                <circle className={haloClass} cx={cx} cy={cy} r={9} />
-                <circle className={markClass} cx={cx} cy={cy} r={isActive ? 6.5 : 5} />
-              </g>
+              <path
+                key={feature.psgc}
+                className={`atlas-poly${isActive ? " atlas-poly--active" : ""}${
+                  isDim ? " atlas-poly--dim" : ""
+                }`}
+                d={feature.d}
+                fillRule="evenodd"
+                aria-hidden="true"
+              />
             );
           }
 
           return (
             <a
-              key={loc.psgcCode}
-              className="atlas-dot"
-              href={`/government/barangays/${slugify(loc.barangay)}`}
-              aria-label={`Barangay ${loc.barangay} — approximate point location; opens the barangay profile`}
+              key={feature.psgc}
+              className="atlas-poly-link"
+              href={`/government/barangays/${slugify(feature.name)}`}
+              aria-label={`Barangay ${feature.name} — ${formatNumber(
+                feature.population,
+              )} residents, reviewed census count; opens the barangay profile`}
             >
-              <title>{`Barangay ${loc.barangay}`}</title>
-              <circle className={haloClass} cx={cx} cy={cy} r={9} />
-              <circle className={markClass} cx={cx} cy={cy} r={5} />
+              <title>{`Barangay ${feature.name} — ${formatNumber(feature.population)} residents`}</title>
+              <path
+                className={`atlas-poly atlas-poly--band-${feature.band}`}
+                d={feature.d}
+                fillRule="evenodd"
+              />
               {showLabels && (
                 <text
-                  className="atlas-dot-label"
-                  x={flipLabel ? cx - 12 : cx + 12}
-                  y={cy + 4}
-                  textAnchor={flipLabel ? "end" : "start"}
+                  className={`atlas-poly-label ${
+                    feature.label
+                      ? "atlas-poly-label--fixed"
+                      : "atlas-poly-label--hover"
+                  }`}
+                  x={feature.center[0]}
+                  y={feature.center[1] + 3}
+                  textAnchor="middle"
                 >
-                  {loc.barangay}
+                  {feature.name}
                 </text>
               )}
             </a>
           );
         })}
+        <path
+          className="atlas-muni-edge"
+          d={geometry.municipality.d}
+          fillRule="evenodd"
+          aria-hidden="true"
+        />
       </svg>
 
       {variant !== "mini" && (
         <p className="atlas-caption" lang="en">
           <span>
-            {locations.length} of {locations.length + unmapped.length} barangays plotted,{" "}
-            {unmapped.length} pending verification.
+            All {features.length} barangays shaded by reviewed census population (
+            {formatLongDate(barangayRecord.data.populationReferenceDate)}).
           </span>
-          <span>{maddelaPlaceRecord.data.attribution}</span>
+          <span>{maddelaBoundariesRecord.data.attribution}</span>
         </p>
       )}
 
       {variant === "full" && (
-        <>
-          <ul className="atlas-pending" aria-label="Barangays without a mappable location yet">
-            {unmapped.map((entry) => (
-              <li key={entry.psgcCode}>
-                <Link
-                  className="atlas-pending-chip"
-                  href={`/government/barangays/${slugify(entry.barangay)}`}
-                >
-                  {entry.barangay}
-                  <span className="atlas-pending-state">location pending</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </>
+        <ul className="atlas-legend" aria-label="Population bands">
+          {bandLabels.map((labelText, band) => (
+            <li key={band}>
+              <span
+                className={`atlas-legend-swatch atlas-legend-swatch--band-${band}`}
+                aria-hidden="true"
+              />
+              {labelText} residents
+            </li>
+          ))}
+        </ul>
       )}
     </div>
   );

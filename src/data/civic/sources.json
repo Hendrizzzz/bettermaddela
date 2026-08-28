@@ -1026,6 +1026,21 @@
       "verifier": "bettermaddela-review-2026-08-29-atlas-a",
       "sourceState": "active",
       "notes": "States description 'Aerial view of Maddela, Quirino, Philippines', date April 2012, author P199 (own work), licenses CC BY-SA 3.0 Unported and GFDL 1.2+, size 1500x1000, 385,330 bytes."
+    },
+    {
+      "id": "ocha-codab-phl-admin-boundaries-2026-08",
+      "title": "Philippines - Subnational Administrative Boundaries (COD-AB), OCHA Humanitarian Data Exchange",
+      "publisher": "United Nations Office for the Coordination of Humanitarian Affairs (OCHA)",
+      "url": "https://data.humdata.org/dataset/cod-ab-phl",
+      "documentType": "dataset",
+      "publishedAt": "2026-05-28",
+      "effectivePeriod": "COD-AB resource updated 2026-05-28; geometry v03 with features valid_on 2025-02-13",
+      "retrievedAt": "2026-08-29",
+      "verifiedAt": "2026-08-29",
+      "verifier": "bettermaddela-review-2026-08-29-atlas-b",
+      "sourceState": "active",
+      "sha256": "e7fc18f1383a21066ecfbe595c5c1d77375c93341dedf7284f09d66dbd28c5ad",
+      "notes": "Geodatabase resource phl_admin_boundaries.gdb.zip downloaded in full (360,586,879 bytes; SHA-256 above) and extracted; feature counts confirmed independently: phl_admin3 = 1,642 municipalities, phl_admin4 = 42,048 barangays. All 32 Maddela barangay polygons present, keyed by adm4_pcode (PSGC); municipal polygon keyed PH0205704. Barangay areas sum to the municipal area within rounding (770.60 vs 770.62 km2). License CC BY-IGO 3.0; attribution is displayed adjacent to every derived map. The stylized rendering used on the site is simplified and is not presented as an official survey boundary. Research handoff: research/2026-08-29-maddela-boundaries-codab.md."
     }
   ]
 }
