@@ -1,6 +1,8 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import Link from "next/link";
+import gsap from "gsap";
 import { LiveWeather, type WeatherConfigData } from "@/components/LiveWeather";
 import { Reveal } from "@/components/motion/Reveal";
 import { VerifiedSearch } from "@/components/VerifiedSearch";
@@ -240,6 +242,44 @@ function formatDate(value: string, language: "en" | "fil") {
 export default function HomePage() {
   const { language } = useLanguage();
   const copy = homeCopy[language];
+  const heroRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const el = heroRef.current;
+    if (!el) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const ctx = gsap.context(() => {
+      gsap
+        .timeline({ defaults: { ease: "power3.out" } })
+        .fromTo(
+          ".home-hero-v2-text h1",
+          { opacity: 0, y: 18 },
+          { opacity: 1, y: 0, duration: 0.6 },
+        )
+        .fromTo(
+          ".home-hero-v2-text p",
+          { opacity: 0, y: 14 },
+          { opacity: 1, y: 0, duration: 0.5 },
+          "-=0.35",
+        )
+        .fromTo(
+          ".home-hero-v2-actions",
+          { opacity: 0, y: 12 },
+          { opacity: 1, y: 0, duration: 0.5 },
+          "-=0.3",
+        )
+        .fromTo(
+          ".home-hero-v2-search",
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.55 },
+          "-=0.35",
+        );
+    }, el);
+
+    return () => ctx.revert();
+  }, []);
+
   const identity = getRecord<IdentityData>("municipality-identity");
   const population = getRecord<PopulationData>("population-2024-popcen");
   const households = getRecord<HouseholdData>("maddela-households-2024");
@@ -269,7 +309,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section — Allen hero translation: H1 + intro, search + popular */}
-      <section className="home-hero-v2">
+      <section ref={heroRef} className="home-hero-v2">
         <div className="container">
           <div className="home-hero-v2-inner">
             <div className="home-hero-v2-text">
@@ -494,7 +534,7 @@ export default function HomePage() {
       </section>
 
       {/* Latest Updates — hairline cards, date-first meta */}
-      <section className="section section--allen">
+      <section className="section section--allen section--tint">
         <div className="container">
           <div className="home-section-header">
             <div>
@@ -550,7 +590,7 @@ export default function HomePage() {
       </section>
 
       {/* Contact Information — hairline cards, single label */}
-      <section className="section section--allen">
+      <section className="section section--allen section--tint">
         <div className="container">
           <div className="home-section-header">
             <div>

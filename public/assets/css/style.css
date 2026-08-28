@@ -137,6 +137,9 @@ p {
 .bg-alt {
   background-color: var(--color-bg-alt);
 }
+.section--tint {
+  background-color: var(--color-bg-alt);
+}
 .text-center {
   text-align: center;
 }
@@ -840,7 +843,7 @@ h6 {
   gap: var(--spacing-sm);
 }
 .home-section-header h2 {
-  font-size: 1.75rem;
+  font-size: clamp(1.5rem, 1.35rem + 0.6vw, 1.75rem);
   margin: 0;
 }
 .home-section-header p {
@@ -875,7 +878,10 @@ h6 {
   border-radius: 12px;
   text-decoration: none;
   color: var(--color-text);
-  transition: all 0.2s ease;
+  transition:
+    border-color var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease,
+    transform var(--motion-fast) var(--ease-out-soft);
 }
 .home-service-card:hover {
   border-color: var(--color-primary);
@@ -896,12 +902,19 @@ h6 {
   margin: 0;
 }
 .home-service-icon {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
   margin-bottom: 8px;
-  font-size: 1.5rem;
+  border-radius: 10px;
+  background: var(--color-bg-alt);
+  font-size: 1.25rem;
   color: var(--color-primary);
 }
 .home-service-card--all .home-service-icon {
+  background: rgba(255, 255, 255, 0.16);
   color: white;
 }
 .home-service-arrow {
@@ -1053,7 +1066,7 @@ h6 {
   align-items: center;
 }
 .home-hero-v2-text h1 {
-  font-size: clamp(2.5rem, 1.9rem + 2.4vw, 3.25rem);
+  font-size: clamp(2rem, 1.35rem + 2.9vw, 3.25rem);
   max-width: 18ch;
   color: white;
   margin-bottom: var(--spacing-sm);
@@ -1243,12 +1256,20 @@ h6 {
   border-radius: 12px;
   text-decoration: none;
   color: var(--color-text);
-  transition: all 0.2s ease;
+  transition:
+    border-color var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease,
+    transform var(--motion-fast) var(--ease-out-soft);
 }
 .home-contact-v2-card:hover {
   border-color: var(--color-primary);
-  box-shadow: 0 4px 12px rgba(34, 50, 160, 0.08);
+  box-shadow: var(--shadow-md);
   text-decoration: none;
+}
+.home-service-card:active,
+.home-stat-card:active,
+.home-contact-v2-card:active {
+  transform: scale(0.985);
 }.home-contact-v2-content {
   flex: 1;
   min-width: 0;
@@ -1282,10 +1303,7 @@ h6 {
   }
 
 }
-@media (max-width: 768px) {.home-hero-v2-text h1 {
-    font-size: 2rem;
-  }
-.home-hero-v2-text p {
+@media (max-width: 768px) {.home-hero-v2-text p {
     font-size: 1rem;
   }
 .home-search-box {
@@ -1633,7 +1651,10 @@ a.a11y-contact-item:hover i {
   border-radius: 12px;
   text-decoration: none;
   color: var(--color-text);
-  transition: all 0.3s ease;
+  transition:
+    border-color var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease,
+    transform var(--motion-fast) var(--ease-out-soft);
   position: relative;
   overflow: hidden;
 }
@@ -1665,6 +1686,40 @@ a.a11y-contact-item:hover i {
   font-weight: 500;
   color: var(--color-text);
   margin-top: 2px;
+}
+/* Bento anchor: the headline number (population) spans two columns in the
+   primary color, the remaining metrics stay white hairline cards. */
+.home-stats-v2-grid > div:first-child {
+  grid-column: span 2;
+}
+.home-stats-v2-grid > div:first-child .home-stat-card {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+}
+.home-stats-v2-grid > div:first-child .home-stat-card-label {
+  color: rgba(255, 255, 255, 0.8);
+}
+.home-stats-v2-grid > div:first-child .home-stat-card-value {
+  color: white;
+  font-size: clamp(2.75rem, 2.3rem + 1.8vw, 3.5rem);
+}
+.home-stats-v2-grid > div:first-child .home-stat-card:hover {
+  border-color: var(--color-secondary);
+}
+.home-stats-v2-grid > div:first-child .home-stat-card:hover .home-stat-card-value {
+  color: white;
+}
+@media (max-width: 992px) {
+  .home-stats-v2-grid > div:last-child {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 576px) {
+  .home-stats-v2-grid > div:first-child,
+  .home-stats-v2-grid > div:last-child {
+    grid-column: auto;
+  }
 }
 @media (max-width: 992px) {.home-stats-v2-grid {
     grid-template-columns: repeat(2, 1fr);
