@@ -435,7 +435,14 @@ export default function StatisticsPage() {
                 </g>
               )}
               <circle className={isLatest ? "chart-dot chart-dot--lead" : "chart-dot"} cx={x(item.year)} cy={y(item.estimatePercent)} r={5} />
-              <text className="chart-label-value" x={x(item.year)} y={y(item.estimatePercent) - 14} textAnchor="middle">{item.estimatePercent.toFixed(2)}%</text>
+              <text
+                className="chart-label-value"
+                x={isLatest ? x(item.year) - 12 : x(item.year)}
+                y={y(item.estimatePercent) - 14}
+                textAnchor={isLatest ? "end" : "middle"}
+              >
+                {item.estimatePercent.toFixed(2)}%
+              </text>
               <text className="chart-label-date" x={x(item.year)} y={bottom + 24} textAnchor="middle">{item.year}</text>
             </g>
           );
