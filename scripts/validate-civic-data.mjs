@@ -56,6 +56,7 @@ const allowedRecordTypes = new Set([
   "community-profile",
   "weather-config",
   "transparency-document",
+  "contact",
 ]);
 
 function requireText(value, path) {

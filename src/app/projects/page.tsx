@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PageHeader from "@/components/layout/PageHeader";
 import { RecordMeta } from "@/components/RecordMeta";
 import { BoardMotion } from "@/components/projects/BoardMotion";
-import { getRecord, type CivicRecord } from "@/data/civic";
+import { getRecord, getSource, type CivicRecord } from "@/data/civic";
 
 interface ProjectData {
   projectName: string;
@@ -35,6 +35,41 @@ interface NoticesData {
   stage: string;
   stageAsOf: string;
   canonicalUrl: string;
+  limitations: string;
+}
+
+interface WorksData {
+  projectName: string;
+  category: string;
+  implementingAgency: string;
+  summary: string;
+  stage: string;
+  stageAsOf: string;
+  amountLabel?: string;
+  items: {
+    code: string;
+    title: string;
+    year?: string;
+    barangay?: string;
+    status?: string;
+    progress?: string | null;
+    amount?: number | null;
+    contractor?: string | null;
+    note?: string;
+  }[];
+  canonicalUrl: string;
+  limitations: string;
+}
+
+interface AggregateData {
+  summary: string;
+  counts: {
+    dilgLfpFy2014To2022: number;
+    dilgLimePre2025: number;
+    dpwhContracts2016To2024: number;
+  };
+  stage: string;
+  stageAsOf: string;
   limitations: string;
 }
 
@@ -212,6 +247,77 @@ function DetailBody({ data }: { data: ProjectData }) {
   );
 }
 
+function worksItemLine(data: WorksData, item: WorksData["items"][number]) {
+  return [
+    item.barangay,
+    item.year,
+    item.status ? `${item.status}${item.progress ? ` (${item.progress})` : ""}` : null,
+    typeof item.amount === "number"
+      ? data.amountLabel
+        ? `${formatMoney(item.amount)} — ${data.amountLabel}`
+        : formatMoney(item.amount)
+      : "Amount not published in portal",
+    item.contractor ? `Contractor: ${item.contractor}` : null,
+  ]
+    .filter(Boolean)
+    .join(" · ");
+}
+
+function WorksCard({ record }: { record: CivicRecord<WorksData> }) {
+  const data = record.data;
+  return (
+    <article className="proj-card proj-card--muted" data-reveal>
+      <div className="proj-card-top">
+        <div className="proj-card-id">
+          <h2 className="proj-name">{data.projectName}</h2>
+          <p className="proj-metaline">
+            {[data.category, data.implementingAgency, `${data.items.length} records listed as of ${data.stageAsOf}`].join(", ")}
+          </p>
+        </div>
+        <div className="proj-amount">
+          <span className="proj-amount-label">Records listed</span>
+          <span className="proj-amount-none">{data.items.length}</span>
+        </div>
+      </div>
+
+      <div className="proj-track-wrap">
+        <StageTrack stage={data.stage} />
+      </div>
+
+      <details className="proj-details">
+        <summary>Record detail &amp; limitations</summary>
+        <div className="proj-detail-body">
+          <p>{data.summary}</p>
+          <ul className="proj-item-list">
+            {data.items.map((item) => (
+              <li key={item.code}>
+                <strong>{item.code}</strong> — {item.title} — {worksItemLine(data, item)}
+                {item.note ? ` (${item.note})` : ""}
+              </li>
+            ))}
+          </ul>
+          <p>
+            <strong>Limitations:</strong> {data.limitations}
+          </p>
+        </div>
+      </details>
+
+      <div className="proj-footer">
+        <RecordMeta record={record} />
+        <a
+          className="infra-link"
+          href={data.canonicalUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="bi bi-arrow-up-right" aria-hidden="true" />
+          <span>View source</span>
+        </a>
+      </div>
+    </article>
+  );
+}
+
 export const metadata: Metadata = {
   title: "Projects & Infrastructure",
   description:
@@ -224,6 +330,9 @@ export default function ProjectsPage() {
   const balligui = getRecord<ProjectData>("nia-balligui-spip");
   const carpic = getRecord<ProjectData>("dar-nia-carpic-cabaruan-cis");
   const provincialNotices = getRecord<NoticesData>("quirino-bac-maddela-notices-2025");
+  const limeWorks = getRecord<WorksData>("subaybayan-maddela-cy2025-municipal-works");
+  const dpwhWorks = getRecord<WorksData>("dpwh-maddela-cy2025-cy2026-contracts");
+  const aggregates = getRecord<AggregateData>("maddela-works-portal-aggregates");
 
   const projectCards: { record: CivicRecord<ProjectData> }[] = [
     { record: lusod },
@@ -233,9 +342,12 @@ export default function ProjectsPage() {
   ];
 
   /* Header counts — COUNTS ONLY. Unlike amounts are never summed. */
-  const allData: (ProjectData | NoticesData)[] = [
+  const allData: (ProjectData | NoticesData | WorksData | AggregateData)[] = [
     ...projectCards.map(({ record }) => record.data),
     provincialNotices.data,
+    limeWorks.data,
+    dpwhWorks.data,
+    aggregates.data,
   ];
   const trackedCount = allData.length;
   const amountsCount = allData.filter(
@@ -389,10 +501,51 @@ export default function ProjectsPage() {
               </div>
             </article>
 
-            <p className="proj-unpublished" data-reveal>
-              Not yet tracked here: DPWH, SubayBAYAN and municipal works listings,
-              unpublished at their sources.
-            </p>
+            <WorksCard record={limeWorks} />
+            <WorksCard record={dpwhWorks} />
+
+            <article className="proj-card proj-card--muted" data-reveal>
+              <div className="proj-card-top">
+                <div className="proj-card-id">
+                  <h2 className="proj-name">Earlier portal records, in aggregate</h2>
+                  <p className="proj-metaline">
+                    DILG SubayBAYAN and DPWH transparency portal, retrieved{" "}
+                    {aggregates.data.stageAsOf}
+                  </p>
+                </div>
+                <div className="proj-amount">
+                  <span className="proj-amount-label">Counts</span>
+                  <span className="proj-amount-none">
+                    {aggregates.data.counts.dilgLfpFy2014To2022} LFP (FY 2014-2022) ·{" "}
+                    {aggregates.data.counts.dilgLimePre2025} LIME pre-2025 ·{" "}
+                    {aggregates.data.counts.dpwhContracts2016To2024} DPWH (2016-2024)
+                  </span>
+                </div>
+              </div>
+
+              <details className="proj-details">
+                <summary>Record detail &amp; limitations</summary>
+                <div className="proj-detail-body">
+                  <p>{aggregates.data.summary}</p>
+                  <p>
+                    <strong>Limitations:</strong> {aggregates.data.limitations}
+                  </p>
+                </div>
+              </details>
+
+              <div className="proj-footer">
+                <RecordMeta record={aggregates} />
+                <a
+                  className="infra-link"
+                  href={getSource("subaybayan-lfp-maddela-listing").url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="bi bi-arrow-up-right" aria-hidden="true" />
+                  <span>View source listing</span>
+                </a>
+              </div>
+            </article>
           </BoardMotion>
         </div>
       </section>

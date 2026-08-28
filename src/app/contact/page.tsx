@@ -1,18 +1,72 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHeader from "@/components/layout/PageHeader";
-import { getSource } from "@/data/civic";
+import { RecordMeta } from "@/components/RecordMeta";
+import { getRecord, getSource } from "@/data/civic";
 
 const psaSource = getSource("psa-psgc-maddela");
 const postalSource = getSource("phlpost-zip-code-locator");
 
+interface OfficeContactsData {
+  scope: string;
+  publishedBy: string;
+  archivedOn: string;
+  offices: { office: string; details: string }[];
+  limitations: string;
+}
+
+interface EmergencyContactsData {
+  scope: string;
+  entries: { service: string; details: string; basis: string }[];
+  limitations: string;
+}
+
+interface ProvincialContactsData {
+  scope: string;
+  retrievedOn: string;
+  entries: { office: string; details: string }[];
+  limitations: string;
+}
+
+interface NationalContactsData {
+  scope: string;
+  retrievedOn: string;
+  entries: { office: string; details: string; address?: string }[];
+  limitations: string;
+}
+
 export const metadata: Metadata = {
   title: "Contact and Corrections",
   description:
-    "Official source links, project channels, and the public correction route - no municipal or emergency phone numbers are published here.",
+    "Published contact directory for Maddela offices, emergency and safety lines, provincial and national agencies - with source vintages and one clear disclaimer.",
 };
 
+function DirectoryCard({
+  heading,
+  value,
+  note,
+}: {
+  heading: string;
+  value: string;
+  note?: string;
+}) {
+  return (
+    <div className="contact-card">
+      <div className="contact-card-content">
+        <h3>{heading}</h3>
+        <span className="contact-card-value">{value}</span>
+        {note && <span className="contact-card-note">{note}</span>}
+      </div>
+    </div>
+  );
+}
+
 export default function ContactPage() {
+  const municipal = getRecord<OfficeContactsData>("maddela-lgu-office-contacts-2023");
+  const emergency = getRecord<EmergencyContactsData>("maddela-emergency-contacts");
+  const provincial = getRecord<ProvincialContactsData>("quirino-provincial-contacts-2026");
+  const national = getRecord<NationalContactsData>("national-agency-contacts-2026");
+
   return (
     <>
       <PageHeader
@@ -24,9 +78,94 @@ export default function ContactPage() {
         <div className="container">
           <div className="hotlines-header">
             <div className="hotlines-title">
+              <h2>Contact directory</h2>
+            </div>
+            <p>
+              One disclaimer covers everything on this page: municipal and Maddela emergency lines
+              are reproduced from an April 2023 archive capture of the municipal government&apos;s
+              own website, which is currently unreachable; provincial and national entries come
+              from live official pages retrieved August 28, 2026. None of these lines has been
+              re-confirmed directly, and numbers may have changed. BetterMaddela is an independent
+              information project, not an emergency or transaction channel — in an emergency,
+              call 911.
+            </p>
+          </div>
+
+          <div className="hotlines-header">
+            <div className="hotlines-title">
+              <h2>Municipal offices</h2>
+            </div>
+            <p>
+              As published on the LGU website contact page, archived April 2023 (Wayback Machine).
+            </p>
+          </div>
+          <div className="grid grid-2" style={{ gap: "var(--spacing-md)" }}>
+            {municipal.data.offices.map((office) => (
+              <DirectoryCard
+                key={office.office}
+                heading={office.office}
+                value={office.details}
+              />
+            ))}
+          </div>
+          <RecordMeta record={municipal} />
+
+          <div className="hotlines-header" style={{ marginTop: "var(--spacing-lg)" }}>
+            <div className="hotlines-title">
+              <h2>Emergency and safety</h2>
+            </div>
+          </div>
+          <div className="grid grid-2" style={{ gap: "var(--spacing-md)" }}>
+            {emergency.data.entries.map((entry) => (
+              <DirectoryCard
+                key={entry.service}
+                heading={entry.service}
+                value={entry.details}
+                note={entry.basis}
+              />
+            ))}
+          </div>
+          <RecordMeta record={emergency} />
+
+          <div className="hotlines-header" style={{ marginTop: "var(--spacing-lg)" }}>
+            <div className="hotlines-title">
+              <h2>Provincial Government of Quirino</h2>
+            </div>
+            <p>Live provincial pages, retrieved August 28, 2026.</p>
+          </div>
+          <div className="grid grid-2" style={{ gap: "var(--spacing-md)" }}>
+            {provincial.data.entries.map((entry) => (
+              <DirectoryCard
+                key={entry.office}
+                heading={entry.office}
+                value={entry.details}
+              />
+            ))}
+          </div>
+          <RecordMeta record={provincial} />
+
+          <div className="hotlines-header" style={{ marginTop: "var(--spacing-lg)" }}>
+            <div className="hotlines-title">
+              <h2>National agencies</h2>
+            </div>
+            <p>Live agency pages, retrieved August 28, 2026.</p>
+          </div>
+          <div className="grid grid-2" style={{ gap: "var(--spacing-md)" }}>
+            {national.data.entries.map((entry) => (
+              <DirectoryCard
+                key={entry.office}
+                heading={entry.office}
+                value={entry.details}
+                note={entry.address}
+              />
+            ))}
+          </div>
+          <RecordMeta record={national} />
+
+          <div className="hotlines-header" style={{ marginTop: "var(--spacing-lg)" }}>
+            <div className="hotlines-title">
               <h2>Official data and project channels</h2>
             </div>
-            <p>No municipal, emergency, health, utility, office, or personal phone number is published here.</p>
           </div>
           <div className="grid grid-2" style={{ gap: "var(--spacing-md)" }}>
             <a href={psaSource.url} target="_blank" rel="noopener noreferrer" className="contact-card">
@@ -54,10 +193,6 @@ export default function ContactPage() {
               </div>
             </a>
           </div>
-          <p className="unpublished-note">
-            No municipal contact directory or office schedule is published here; none has passed independent
-            verification yet, and BetterMaddela is not a transaction, complaint, appointment, or emergency channel.
-          </p>
         </div>
       </section>
     </>

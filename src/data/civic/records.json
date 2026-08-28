@@ -3563,6 +3563,1379 @@
       "updateCadence": "monthly",
       "owner": "BetterMaddela governance data steward",
       "notes": "Owner approved publication of this import on 2026-08-26 in the project review conversation. Names are reproduced exactly as listed by the cited source (surnames first); no name merging or full-name inference was applied."
+    },
+    {
+      "id": "maddela-lgu-office-contacts-2023",
+      "type": "contact",
+      "label": "Municipal office contact directory (as published on the municipal website, archived 2023)",
+      "data": {
+        "scope": "Municipality of Maddela offices",
+        "publishedBy": "Municipality of Maddela official website, contact page (Local Hotlines and office contact blocks)",
+        "archivedOn": "2023-04-02",
+        "offices": [
+          {
+            "office": "Office of the Municipal Mayor",
+            "details": "Landline (078) 374-1543; email mmo_lgu_maddela@yahoo.com"
+          },
+          {
+            "office": "Business Permit and Licensing Office (BPLO)",
+            "details": "Email bplo@maddela-quirino.gov.ph; Municipal Hall, Magsaysay St., Poblacion Norte, Maddela, Quirino 3404"
+          },
+          {
+            "office": "Municipal Economic Enterprise Management and Development Office (MEEMDO)",
+            "details": "+63-947-853-8035 (Smart); +63-945-866-1375 (Globe)"
+          },
+          {
+            "office": "Site-wide LGU email (website footer)",
+            "details": "mipc@maddela-quirino.gov.ph"
+          },
+          {
+            "office": "LGU Facebook page (website footer link)",
+            "details": "facebook.com/InvestMaddela"
+          }
+        ],
+        "limitations": "The municipal website was unreachable (HTTP 403) at retrieval, so every entry comes from the Internet Archive capture dated 2023-04-02. The page shows no last-updated date for the numbers; lines may have changed since."
+      },
+      "sourceIds": [
+        "wayback-maddela-contact-2023",
+        "wayback-maddela-contact-embed-2022",
+        "ffedis-1913-maddela-email"
+      ],
+      "claimSources": {
+        "scope": [
+          "wayback-maddela-contact-2023"
+        ],
+        "publishedBy": [
+          "wayback-maddela-contact-2023"
+        ],
+        "archivedOn": [
+          "wayback-maddela-contact-2023"
+        ],
+        "offices": [
+          "wayback-maddela-contact-2023",
+          "wayback-maddela-contact-embed-2022",
+          "ffedis-1913-maddela-email"
+        ],
+        "limitations": [
+          "wayback-maddela-contact-2023"
+        ]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-28",
+      "acceptedBy": "owner-approval-2026-08-28",
+      "acceptedAt": "2026-08-28T14:30:00+08:00",
+      "updateCadence": "quarterly",
+      "nextReviewOn": "2026-11-26",
+      "owner": "BetterMaddela contacts data steward",
+      "notes": "Owner reviewed the research caveats on 2026-08-28 and directed publication of the archived municipal directory with a single site disclaimer. The Mayor's Office email is corroborated by a DA RFU 02 procurement page. Contact-person names and personal mobile numbers on third-party pages are deliberately not published."
+    },
+    {
+      "id": "maddela-emergency-contacts",
+      "type": "contact",
+      "label": "Emergency and safety lines for Maddela and Quirino",
+      "data": {
+        "scope": "Emergency and safety lines serving Maddela",
+        "entries": [
+          {
+            "service": "Philippine National Police - Maddela Municipal Police Station",
+            "details": "+63-905-617-2749",
+            "basis": "Municipality of Maddela website, Local Hotlines section (archived 2023-04-02)"
+          },
+          {
+            "service": "Bureau of Fire Protection - Maddela Fire Station",
+            "details": "+63-917-511-1429",
+            "basis": "Municipality of Maddela website, Local Hotlines section (archived 2023-04-02)"
+          },
+          {
+            "service": "Maddela LDRRMO (Local Disaster Risk Reduction and Management Office)",
+            "details": "+63-977-851-9603; +63-966-259-5691",
+            "basis": "Municipality of Maddela website, Local Hotlines section (archived 2023-04-02)"
+          },
+          {
+            "service": "PDRRMO Quirino - Rescue 910 (24/7)",
+            "details": "Globe 0975 415 8508; PLDT (078) 374-6118",
+            "basis": "Provincial Government of Quirino directory (retrieved 2026-08-28)"
+          },
+          {
+            "service": "National emergency hotline",
+            "details": "911",
+            "basis": "Official Gazette record of the 911 hotline launch (2016)"
+          },
+          {
+            "service": "Philippine Red Cross emergency hotline",
+            "details": "143",
+            "basis": "Philippine Red Cross contact page (retrieved 2026-08-28)"
+          }
+        ],
+        "limitations": "The direct confirmation and test calls required by the emergency-contact gate were not performed. Municipal lines are from a 2023 archive capture and may be out of service. In an emergency, call 911."
+      },
+      "sourceIds": [
+        "wayback-maddela-contact-2023",
+        "quirino-province-directory-2026",
+        "official-gazette-911-2016",
+        "redcross-contact-2026"
+      ],
+      "claimSources": {
+        "scope": [
+          "wayback-maddela-contact-2023",
+          "quirino-province-directory-2026"
+        ],
+        "entries": [
+          "wayback-maddela-contact-2023",
+          "quirino-province-directory-2026",
+          "official-gazette-911-2016",
+          "redcross-contact-2026"
+        ],
+        "limitations": [
+          "wayback-maddela-contact-2023",
+          "quirino-province-directory-2026"
+        ]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-28",
+      "acceptedBy": "owner-approval-2026-08-28",
+      "acceptedAt": "2026-08-28T14:30:00+08:00",
+      "updateCadence": "monthly",
+      "nextReviewOn": "2026-09-27",
+      "owner": "BetterMaddela contacts data steward",
+      "notes": "The data contract's emergency gate requires direct confirmation and an authorized test call before publication. The project owner reviewed the research caveats on 2026-08-28 and directed publication of the officially listed numbers with a single site disclaimer instead of waiting for re-confirmation. This note records that decision; re-confirmation (test calls to PNP, BFP, LDRRMO and Rescue 910) remains the outstanding review action and the reason for the monthly cadence."
+    },
+    {
+      "id": "quirino-provincial-contacts-2026",
+      "type": "contact",
+      "label": "Provincial Government of Quirino contact directory (live pages, retrieved 2026-08-28)",
+      "data": {
+        "scope": "Provincial Government of Quirino offices",
+        "retrievedOn": "2026-08-28",
+        "entries": [
+          {
+            "office": "Office of the Governor - Admin Section",
+            "details": "pgo.quirino@gmail.com"
+          },
+          {
+            "office": "Office of the Provincial Administrator",
+            "details": "Globe 0917 651 1626"
+          },
+          {
+            "office": "Provincial Government main line",
+            "details": "+63 917 685 2040"
+          },
+          {
+            "office": "Provincial Government email (contact page)",
+            "details": "pgoquirino@gmail.com"
+          },
+          {
+            "office": "Provincial address",
+            "details": "Capitol Hills, San Marcos, Cabarroguis, Quirino 3400"
+          }
+        ],
+        "limitations": "Two provincial email addresses are published by the province on different pages (pgo.quirino@gmail.com and pgoquirino@gmail.com); both are reproduced, never merged."
+      },
+      "sourceIds": [
+        "quirino-province-directory-2026",
+        "quirino-province-contact-2026"
+      ],
+      "claimSources": {
+        "scope": [
+          "quirino-province-directory-2026",
+          "quirino-province-contact-2026"
+        ],
+        "retrievedOn": [
+          "quirino-province-directory-2026",
+          "quirino-province-contact-2026"
+        ],
+        "entries": [
+          "quirino-province-directory-2026",
+          "quirino-province-contact-2026"
+        ],
+        "limitations": [
+          "quirino-province-directory-2026",
+          "quirino-province-contact-2026"
+        ]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-28",
+      "acceptedBy": "owner-approval-2026-08-28",
+      "acceptedAt": "2026-08-28T14:30:00+08:00",
+      "updateCadence": "quarterly",
+      "nextReviewOn": "2026-11-26",
+      "owner": "BetterMaddela contacts data steward",
+      "notes": "Imported from the live provincial directory and contact pages. Office-head names on the directory are not part of this record; only published contact details are reproduced."
+    },
+    {
+      "id": "national-agency-contacts-2026",
+      "type": "contact",
+      "label": "National agencies serving Quirino: published contact lines (retrieved 2026-08-28)",
+      "data": {
+        "scope": "National agencies with a published Quirino or Cagayan Valley presence",
+        "retrievedOn": "2026-08-28",
+        "entries": [
+          {
+            "office": "DSWD Field Office 2 (Cagayan Valley)",
+            "details": "Main (078) 375-2640; email fo2@dswd.gov.ph; mobile +63 956 473 2954; other published lines (078) 825-2220 / 255-4135, (078) 825-2242, (078) 375-0057 / 255-4137, (078) 846-9727",
+            "address": "Narciso Ramos Ave., District 2, San Mariano, Diffun, Quirino"
+          },
+          {
+            "office": "Philippine Red Cross national office",
+            "details": "Trunkline (+63 2) 8790-2300; blood donation/request (+63 2) 8790-2382, 8790-2383, 8790-2300 loc. 113/116; social/welfare 8790-2359 loc. 916; first aid training 8790-2365 loc. 934/933, (+63 917) 806-8520",
+            "address": "37 EDSA corner Boni Avenue, Barangka-Ilaya, Mandaluyong City 1550"
+          }
+        ],
+        "limitations": "No Quirino chapter contact for the Philippine Red Cross is published at the source; DSWD FO2 lines are regional, not Maddela-specific."
+      },
+      "sourceIds": [
+        "dswd-fo2-directory-2026",
+        "redcross-contact-2026"
+      ],
+      "claimSources": {
+        "scope": [
+          "dswd-fo2-directory-2026",
+          "redcross-contact-2026"
+        ],
+        "retrievedOn": [
+          "dswd-fo2-directory-2026",
+          "redcross-contact-2026"
+        ],
+        "entries": [
+          "dswd-fo2-directory-2026",
+          "redcross-contact-2026"
+        ],
+        "limitations": [
+          "dswd-fo2-directory-2026",
+          "redcross-contact-2026"
+        ]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-28",
+      "acceptedBy": "owner-approval-2026-08-28",
+      "acceptedAt": "2026-08-28T14:30:00+08:00",
+      "updateCadence": "quarterly",
+      "nextReviewOn": "2026-11-26",
+      "owner": "BetterMaddela contacts data steward",
+      "notes": "Included per owner direction to publish all researched contacts; scope is national/regional, clearly labeled as adjacent to Maddela."
+    },
+    {
+      "id": "subaybayan-maddela-cy2025-municipal-works",
+      "type": "procurement-register",
+      "label": "DILG SubayBAYAN LIME-20 municipal works, Maddela, CY 2025 (23 records as listed)",
+      "data": {
+        "projectName": "DILG SubayBAYAN LIME-20 municipal works, Maddela, CY 2025",
+        "category": "Municipal infrastructure (LGU Development Fund)",
+        "implementingAgency": "Municipal Government of Maddela (implementing unit, as encoded in DILG SubayBAYAN)",
+        "summary": "23 CY 2025 works encoded by the LGU in DILG's LIME-20 monitoring module: 22 listed Completed with 100.00% physical accomplishment and 1 listed Not Yet Started. 14 RLIP-25 and 9 LIME-25 records; all show Fund Source Development Fund except LIME-25 items 000-3 through 000-9, where the fund-source field is blank at the source.",
+        "stage": "SubayBAYAN physical status: 22 of 23 works Completed, 1 Not Yet Started (as listed at source)",
+        "stageAsOf": "2026-08-28",
+        "items": [
+          {
+            "code": "RLIP-25-02-57-04-000-1",
+            "title": "CONSTRUCTION OF DRAINAGE CANAL ALONG THIAM ST. EXTENSION POB. NORTE",
+            "barangay": "Poblacion Norte",
+            "status": "Completed",
+            "amount": 3491863.3
+          },
+          {
+            "code": "RLIP-25-02-57-04-000-2",
+            "title": "CONCRETING OF VILLA SUR - BALLIGUI ROAD",
+            "barangay": "Villa Hermosa Sur",
+            "status": "Completed",
+            "amount": 6995477.12
+          },
+          {
+            "code": "RLIP-25-02-57-04-000-3",
+            "title": "CONCRETING OF CAGAYAN ROAD, VILLA YLANAN (PHASE III)",
+            "barangay": "Villa Jose V Ylanan",
+            "status": "Completed",
+            "amount": 1995902.42
+          },
+          {
+            "code": "RLIP-25-02-57-04-000-4",
+            "title": "CONCRETING OF FARM TO MARKET ROAD, DIHABATAN CABUA-AN PHASE III",
+            "barangay": "Cabua-an",
+            "status": "Completed",
+            "amount": 1994690.93
+          },
+          {
+            "code": "RLIP-25-02-57-04-000-5",
+            "title": "CONCRETING OF FARM TO MARKET ROAD SAN MARTIN (LINANGWAYAN ST.)",
+            "barangay": "San Martin",
+            "status": "Completed",
+            "amount": 1995445.52
+          },
+          {
+            "code": "RLIP-25-02-57-04-000-6",
+            "title": "CONCRETING OF FARM TO MARKET ROAD, PUROK 4 DUMABATO NORTE",
+            "barangay": "Dumabato Norte",
+            "status": "Completed",
+            "amount": 2996672.68
+          },
+          {
+            "code": "RLIP-25-02-57-04-000-7",
+            "title": "CONCRETING OF FARM TO MARKET ROAD, PUROK 7 BALLIGUI PHASE IV",
+            "barangay": "Balligui",
+            "status": "Completed",
+            "amount": 1995433.72
+          },
+          {
+            "code": "RLIP-25-02-57-04-000-8",
+            "title": "OPENING OF FARM TO MARKET ROAD STA. MARIA TO BALLIGUI PHASE II",
+            "barangay": "Santa Maria",
+            "status": "Completed",
+            "amount": 3997462.93
+          },
+          {
+            "code": "RLIP-25-02-57-04-000-9",
+            "title": "OPENING OF SALAY-SANGBAY ROAD PHASE III",
+            "barangay": "Santo Niño",
+            "status": "Completed",
+            "amount": 4994902.5
+          },
+          {
+            "code": "RLIP-25-02-57-04-000-10",
+            "title": "OPENING OF CABUA-AN TO MUYUDAN ROAD PHASE II",
+            "barangay": "Manglad",
+            "status": "Completed",
+            "amount": 2993401.94
+          },
+          {
+            "code": "RLIP-25-02-57-04-000-11",
+            "title": "OPENING OF STA. MARIA TO SITIO NIBANAN ROAD PHASE III",
+            "barangay": "Santa Maria",
+            "status": "Completed",
+            "amount": 2496332.39
+          },
+          {
+            "code": "RLIP-25-02-57-04-000-12",
+            "title": "CONCRETING OF SANG-AYDI DISIMUNGAL ROAD PHASE II",
+            "barangay": "Villa Gracia",
+            "status": "Not Yet Started",
+            "amount": 0,
+            "note": "Single monthly row at source reads verbatim: Apr (2026) Php 0.00 Php 0.00 100.00% 0 0 0; no progress computed from it"
+          },
+          {
+            "code": "RLIP-25-02-57-04-000-13",
+            "title": "CONCRETING OF FARM TO MARKET ROAD SAN SALVADOR",
+            "barangay": "San Salvador",
+            "status": "Completed",
+            "amount": 1492977.68
+          },
+          {
+            "code": "RLIP-25-02-57-04-000-14",
+            "title": "CONCRETING OF CSAP ROAD",
+            "barangay": "Divisoria Sur",
+            "status": "Completed",
+            "amount": 1494601.02
+          },
+          {
+            "code": "LIME-25-02-57-04-000-1",
+            "title": "CONCRETING OF FARM TO MARKET ROAD SITO UNEG, VILLA AGULLANA PHASE IV",
+            "barangay": "Villa Agullana",
+            "status": "Completed",
+            "amount": 1993608.04
+          },
+          {
+            "code": "LIME-25-02-57-04-000-2",
+            "title": "CONSTRUCTION OF ONE STOREY TWO CLASSROOM BUILDING",
+            "barangay": "Poblacion Norte",
+            "status": "Completed",
+            "amount": 4496942.6
+          },
+          {
+            "code": "LIME-25-02-57-04-000-3",
+            "title": "Improvement/ Concreting of Farm to Market Roads FTMR",
+            "barangay": "Dumabato Sur",
+            "status": "Completed",
+            "amount": 1988031.14,
+            "note": "Fund Source field blank at source"
+          },
+          {
+            "code": "LIME-25-02-57-04-000-4",
+            "title": "Improvement/ Concreting of Farm to Market Roads FTMR",
+            "barangay": "Pedlisan",
+            "status": "Completed",
+            "amount": 1992919.66,
+            "note": "Fund Source field blank at source"
+          },
+          {
+            "code": "LIME-25-02-57-04-000-5",
+            "title": "Improvement/ Concreting of Farm to Market Roads FTMR",
+            "barangay": "Santo Tomas",
+            "status": "Completed",
+            "amount": 1994791.58,
+            "note": "Fund Source field blank at source"
+          },
+          {
+            "code": "LIME-25-02-57-04-000-6",
+            "title": "Construction/ Completion of Multi Purpose Building (Mini Gymnasium Phase I)",
+            "barangay": "Poblacion Sur",
+            "status": "Completed",
+            "amount": 989828.55,
+            "note": "Fund Source field blank at source"
+          },
+          {
+            "code": "LIME-25-02-57-04-000-7",
+            "title": "Construction/ Completion of Multi Purpose Building (Mini Gymnasium Stage and Facade)",
+            "barangay": "San Pedro",
+            "status": "Completed",
+            "amount": 996540.27,
+            "note": "Fund Source field blank at source"
+          },
+          {
+            "code": "LIME-25-02-57-04-000-8",
+            "title": "Construction/ Completion of Multi Purpose Building (Daycare Center)",
+            "barangay": "Cofcaville",
+            "status": "Completed",
+            "amount": 1992761.14,
+            "note": "Fund Source field blank at source"
+          },
+          {
+            "code": "LIME-25-02-57-04-000-9",
+            "title": "Construction/ Completion of Multi Purpose Building (Phase I)",
+            "barangay": "Balligui",
+            "status": "Completed",
+            "amount": 996952.68,
+            "note": "Fund Source field blank at source"
+          }
+        ],
+        "canonicalUrl": "https://subaybayan.dilg.gov.ph/lime/index?LimeModelSearch[region_c]=02&LimeModelSearch[province_c]=057&LimeModelSearch[citymun_c]=04",
+        "limitations": "Physical 'Completed' is the LGU/DILG-encoded status, not an independent audit. RLIP-25-000-12 reads Not Yet Started while its single April 2026 row reads Php 0.00 / 100.00%; values are reproduced verbatim and no progress is computed. Project briefs and RPMES forms linked at source were not downloaded. Amounts are the pages' obligation totals as displayed; they may not sum to a program total."
+      },
+      "sourceIds": [
+        "subaybayan-lime-maddela-listing",
+        "subaybayan-lime-cy2025-details"
+      ],
+      "claimSources": {
+        "projectName": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "category": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "implementingAgency": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "summary": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "stage": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "stageAsOf": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "canonicalUrl": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "limitations": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items.0": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items.1": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items.2": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items.3": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items.4": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items.5": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items.6": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items.7": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items.8": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items.9": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items.10": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items.11": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items.12": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items.13": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items.14": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items.15": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items.16": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items.17": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items.18": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items.19": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items.20": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items.21": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ],
+        "items.22": [
+          "subaybayan-lime-maddela-listing",
+          "subaybayan-lime-cy2025-details"
+        ]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-28",
+      "acceptedBy": "owner-approval-2026-08-28",
+      "acceptedAt": "2026-08-28T14:30:00+08:00",
+      "updateCadence": "quarterly",
+      "nextReviewOn": "2026-11-26",
+      "owner": "BetterMaddela projects board editor",
+      "notes": "Desk import from research/2026-08-dpwh-subaybayan-municipal-works.md. Item rows transcribed verbatim from the listing and detail pages; titles keep source casing including abbreviations."
+    },
+    {
+      "id": "dpwh-maddela-cy2025-cy2026-contracts",
+      "type": "procurement-register",
+      "label": "DPWH contract records located at MADDELA, QUIRINO, infrastructure years 2025-2026 (56 records as listed)",
+      "data": {
+        "projectName": "DPWH contract records located at MADDELA, QUIRINO, infrastructure years 2025-2026",
+        "category": "National infrastructure (DPWH)",
+        "implementingAgency": "Department of Public Works and Highways (regional/district engineering office as listed per record)",
+        "summary": "56 DPWH transparency-portal contract records carry a 'MADDELA, QUIRINO' location for infrastructure years 2025 (29) and 2026 (27). CY 2025: 22 Completed, 7 On-Going. CY 2026: 1 On-Going (14.78%) and 26 For Procurement. Statuses and percentages are the portal's own values.",
+        "stage": "CY 2025: 22 Completed, 7 On-Going; CY 2026: 1 On-Going, 26 For Procurement (portal statuses)",
+        "stageAsOf": "2026-08-28",
+        "amountLabel": "DPWH portal budget figure",
+        "items": [
+          {
+            "code": "25BK0060",
+            "title": "BASIC INFRASTRUCTURE PROGRAM (BIP) - ACCESS ROADS AND/OR BRIDGES FROM THE NATIONAL ROAD/S LEADING TO MAJOR/ STRATEGIC PUBLIC BUILDINGS/ FACILITIES - CONSTRUCTION OF STA. MARIA ROAD, BARANGAY SANTA MARIA, MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "Completed",
+            "progress": "100",
+            "amount": 4802055.63,
+            "contractor": "A.P.D. CONSTRUCTION, INC. (FORMERLY: APD CONSTRUCTION) (17467)"
+          },
+          {
+            "code": "25BK0012",
+            "title": "BASIC INFRASTRUCTURE PROGRAM (BIP) - ACCESS ROADS AND/OR BRIDGES FROM THE NATIONAL ROAD/S LEADING TO MAJOR/STRATEGIC PUBLIC BUILDINGS/ FACILITIES - CONSTRUCTION OF DIVISORIA NORTE ROAD, BARANGAY DIVISORIA NORTE, MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "Completed",
+            "progress": "100",
+            "amount": 4924652.93,
+            "contractor": "A CARE CONSTRUCTION (55340)"
+          },
+          {
+            "code": "25BK0056",
+            "title": "BASIC INFRASTRUCTURE PROGRAM (BIP) - ACCESS ROADS AND/OR BRIDGES FROM THE NATIONAL ROAD/S LEADING TO MAJOR/STRATEGIC PUBLIC BUILDING/S FACILITIES - CONSTRUCTION OF SAN SALVADOR ROAD, BARANGAY SAN SALVADOR, MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "Completed",
+            "progress": "100",
+            "amount": 4925015.81,
+            "contractor": "A.P.D. CONSTRUCTION, INC. (FORMERLY: APD CONSTRUCTION) (17467)"
+          },
+          {
+            "code": "25BK0085",
+            "title": "FLOOD MANAGEMENT PROGRAM - CONSTRUCTION/ REHABILITATION OF FLOOD MITIGATION FACILITIES WITHIN MAJOR RIVER BASINS AND PRINCIPAL RIVERS - CONSTRUCTION OF CAGAYAN RIVER FLOOD CONCTROL (STO. NIÑO SECTION), MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "Completed",
+            "progress": "100",
+            "amount": 28081383.72,
+            "contractor": "JMD-68 BUILDERS (36943)"
+          },
+          {
+            "code": "25BK0020",
+            "title": "ASSET PRESERVATION PROGRAM - REHABILITATION/ RECONSTRUCTION/ UPGRADING OF DAMAGED PAVED ROADS - SECONDARY ROADS - CORDON - AURORA BDRY RD (ISABELA BDRY - JCT DUMABATO) - K0360+946 - K0361+869, MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "Completed",
+            "progress": "100",
+            "amount": 20135766.29,
+            "contractor": "A.P.D. CONSTRUCTION, INC. (FORMERLY: APD CONSTRUCTION) (17467)"
+          },
+          {
+            "code": "25BK0011",
+            "title": "ASSET PRESERVATION PROGRAM - PREVENTIVE MAINTENANCE - TERTIARY ROADS - ECHAGUE - JONES-MADDELA RD (VILLA NORTE-PANANG SECT) KO377-(-836) - K0377+(-046), MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "Completed",
+            "progress": "100",
+            "amount": 25359958.84,
+            "contractor": "A.P.D. CONSTRUCTION, INC. (FORMERLY: APD CONSTRUCTION) (17467)"
+          },
+          {
+            "code": "25BK0038",
+            "title": "BASIC INFRASTRUCTURE PROGRAM (BIP) - ACCESS ROADS AND/OR BRIDGES FROM THE NATIONAL ROAD/S LEADING TO MAJOR/STRATEGIC PUBLIC BUILDINGS/FACILITIES - CONSTRUCTION OF MANGLAD ROAD, BARANGAY MANGLAD, MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "Completed",
+            "progress": "100",
+            "amount": 4924203.49,
+            "contractor": "JURIS CONSTRUCTION & BUILDERS (37443)"
+          },
+          {
+            "code": "25BK0074",
+            "title": "BASIC INFRASTRUCTURE PROGRAM (BIP) - MULTI-PURPOSE BUILDINGS/FACILITIES TO SUPPORT SOCIAL SERVICES - CONSTRUCTION (COMPLETION) OF MULTI-PURPOSE BUILDING, MADDELA DISTRICT HOSPITAL, MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "Completed",
+            "progress": "100",
+            "amount": 9598583.36,
+            "contractor": "A.P.D. CONSTRUCTION, INC. (FORMERLY: APD CONSTRUCTION) (17467)"
+          },
+          {
+            "code": "25BK0047",
+            "title": "SPECIAL ROAD FUND - MOTOR VEHICLE USERS CHARGE (MVUC) AS PER R.A. 11239 - INSTALLATION/APPLICATION OF ROAD SAFETY FACILITIES (ROADWAY LIGHTING) ALONG ECHAGUE - JONES - MADDELA RD (VILLA NORTE - PANANG SECT) - K0377+(-859) - K0380+298, MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "Completed",
+            "progress": "100",
+            "amount": 19501922.29,
+            "contractor": "JHUERS CONSTRUCTION (51171)"
+          },
+          {
+            "code": "25BK0040",
+            "title": "BASIC INFRASTRUCTURE PROGRAM (BIP) - ACCESS ROADS AND/OR BRIDGES FROM THE NATIONAL ROAD/S LEADING TO MAJOR/STRATEGIC PUBLIC BUILDINGS/FACILITIES - CONSTRUCTION OF SAN DIONISIO I ROAD, BARANGAY SAN DIONISIO I, MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "Completed",
+            "progress": "100",
+            "amount": 4924499.4,
+            "contractor": "JURIS CONSTRUCTION & BUILDERS (37443)"
+          },
+          {
+            "code": "26BK0055",
+            "title": "BASIC INFRASTRUCTURE PROGRAM (BIP) - MULTI-PURPOSE BUILDINGS/ FACILITIES TO SUPPORT SERVICES- CONSTRUCTION OF MUTI-PURPOSE BUILDING, VILLA  AGULLANA, MADDELA, QUIRINO, 16.340637, 121.728575",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "26BK0037",
+            "title": "NETWORK DEVELOPMENT PROGRAM - ROAD WIDENING - TERTIARY ROADS - ECHAGUE-JONES-MADDELA RD (VILLA NORTE -PANANG SECT), K0385+540 - K0385+650, MADDELA, QUIRINO",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "26BK0075",
+            "title": "ASSET PRESERVATION PROGRAM - REHABILITATION/ RECONSTRUCTION OF ROADS WITH SLIPS, SLOPE COLLAPSE, AND LANDSLIDE - TERTIARY ROADS - NRJ VILLA SUR-SAN PEDRO-CABUA-AN-YSMAEL-DISIMUNGAL RD - K0370+550- K0370+630, MADDELA, QUIRINO",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "26BK0027",
+            "title": "ASSET PRESERVATION PROGRAM - CONSTRUCTION/ UPRADING/ REHABILITATION OF DRAINAGE ALONG NATIONAL ROADS - SECONDARY ROADS - CORDON - AURORA BDRY RD (ISABELA BDRY - JCT DUMABATO) - K0368+935 - K0369+476, MADDELA, QUIRINO",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "26BK0077",
+            "title": "ASSET PRESERVATION PROGRAM - REHABILITATION/ RECONSTRUCTION OF ROADS WITH SLIPS, SLOPE COLLAPSE, AND LANDSLIDE - TERTIARY ROADS - NRJ VILLA SUR - SAN PEDRO-CABUA-AN-YSMAEL-DISIMUNGAL RD - K0373+709 - K0373+804, MADDELA, QUIRINO",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "26BK0023",
+            "title": "SPECIAL ROAD FUND - MOTOR VEHICLE USER'S CHARGE (MVUC) AS PER R.A. 11239 - INSTALLATION/ APPLICATION OF ROAD SAFETY FACILITIES (ROADWAY LIGHTING) ALONG CORDON - AURORA BDRY RD (ISABELA BDRY - JCT DUMABATO) - K0367+886 - K0370+326, MADDELA, QUIRINO",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "25BK0016",
+            "title": "ASSET PRESERVATION PROGRAM - PREVENTIVE MAINTENANCE - TERTIARY ROADS - ECHAGUE JONES-MADDELA RD (VILLA NORTE-PANANG SECT) -K0377+612 - K0377+918, MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "Completed",
+            "progress": "100",
+            "amount": 9924094.65,
+            "contractor": "A.P.D. CONSTRUCTION, INC. (FORMERLY: APD CONSTRUCTION) (17467)"
+          },
+          {
+            "code": "26BK0092",
+            "title": "SUSTAINABLE INFRASTRUCTURE PROJECTS ALLEVIATING GAPS (SIPAG) - ACCESS ROADS AND/ OR BRIDGES FROM THE NATIONAL ROAD/S LEADING TO MAJOR/ STRATEGIC PUBLIC BUILDINGS/ FACILITES - CONSTRUCTION OF PEDLISAN ROAD, BARANGAY PEDLISAN, MADDELA, QUIRINO - STA. 0+000",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "25BK0071",
+            "title": "FLOOD MANAGEMENT PROGRAM - CONSTRUCTION/REHABILITATION OF FLOOD MITIGATION FACILITIES WITHIN MAJOR RIVER BASINS ANDPRINCIPAL RIVERS- CONSTRUCTION OF CAGAYAN RIVER FLOOD CONTROL (MANGLAD SECTION), MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "Completed",
+            "progress": "100",
+            "amount": 33270280.7,
+            "contractor": "A.P.D. CONSTRUCTION, INC. (FORMERLY: APD CONSTRUCTION) (17467)"
+          },
+          {
+            "code": "25BK0077",
+            "title": "ASSET PRESERVATION PROGRAM - REHABILITATION/ RECONSTRUCTION/UPGRADING OF DAMAGED PAVED ROADS - SECONDARY ROADS - CORDON - AURORA BDRY RD (ISABELA BDRY - JCT DUMABATO) - K0362+437-K0363+350, MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "Completed",
+            "progress": "100",
+            "amount": 45494774.15,
+            "contractor": "A.P.D. CONSTRUCTION, INC. (FORMERLY: APD CONSTRUCTION) (17467)"
+          },
+          {
+            "code": "26BK0069",
+            "title": "BASIC INFRASTRUCTURE PROGRAM (BIP) - MULTI-PURPOSE BUILDINGS/ FACILITIES TO SUPPORT SERVICES - CONSTRUCTION OF MULTI-PURPOSE BUILDING, DUMABATO SUR, MADDELA, QUIRINO, 16.337779, 121.658190",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "25BK0112",
+            "title": "BASIC EDUCATIONAL FACILITIES FUND (BEFF) (BATCH 1) - REPAIR/ REHABILITATION OF CLASSROOMS LUSOD ELEMENTARY SCHOOL, MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "On-Going",
+            "progress": "69.57",
+            "amount": 6302065.42,
+            "contractor": "NC CONSTRUCTION (37808)"
+          },
+          {
+            "code": "26BK0088",
+            "title": "SUSTAINABLE INFRASTRUCTURE PROJECTS ALLEVIATING GAPS (SIPAG) - ACCESS ROADS AND/ OR BRIDGES FROM THE NATIONAL ROAD/S LEADING TO MAJOR/ STRATEGIC PUBLIC BUILDINGS/ FACILITIES - CONSTRUCTION OF BALLIGUI ROAD, BARANGAY BALLIGUI, MADDELA, QUIRINO - STA. 0+000",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "26BK0048",
+            "title": "SUSTAINABLE INFRASTRUCTURE PROJECTS ALLEVIATING GAPS (SIPAG) - ACCESS ROADS AND/ OR BRIDGES FROM THE NATIONAL ROAD/S LEADING TO MAJOR/ STRATEGIC PUBLIC BUILDINGS/ FACILITIES - CONSTRUCTION OF SAN MARTIN ROAD, BARANGAY SAN MARTIN, MADDELA, QUIRINO - STA.14",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "26BK0040",
+            "title": "SUSTAINABLE INFRASTRUCTURE PROJECTS ALLEVIATING GAPS (SIPAG) - ACCESS ROADS AND/ OR BRIDGES FROM THE NATIONAL ROAD/S LEADING TO MAJOR/ STRATEGIC PUBLIC BUILDINGS/ FACILITIES - CONSTRUCTION OF STA. MARIA ROAD, BARANGAY STA. MARIA, MADDELA, QUIRINO - STA. O",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "26BK0025",
+            "title": "BASIC INFRASTRUCTURE PROGRAM (BIP) - PUBLIC WATER SUPPLY SYSTEM - CONSTRUCTION OF WATER SYSTEM, DIDUYON, MADDELA, QUIRINO",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "25BK0084",
+            "title": "FLOOD MANAGEMENT PROGRAM - CONSTRUCTION/REHABILITATION OF FLOOD MITIGATION FACILITIES WITHIN MAJOR RIVER BASINS AND PRINCIPAL RIVERS - CONSTRUCTION OF CAGAYAN RIVER FLOOD CONTROL DOWNSTREAM (VILLA SUR SECTION), MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "Completed",
+            "progress": "100",
+            "amount": 28535050.42,
+            "contractor": "A CARE CONSTRUCTION (55340)"
+          },
+          {
+            "code": "25BK0004",
+            "title": "CONVERGENCE AND SPECIAL PROGRAM-CONSTRUCTION/IMPROVEMENT OF ACCESS ROADS LEADING TO DECLARED TOURISM DESTINATIONS (TOURISM ROAD INFRASTRUCTURE PROGRAM - TRIP) ACCESS ROAD LEADING TO KIMMALUGONG FALLS, JOSE ANCHETA, MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "Completed",
+            "progress": "100",
+            "amount": 4867980.13,
+            "contractor": "A.P.D. CONSTRUCTION, INC. (FORMERLY: APD CONSTRUCTION) (17467)"
+          },
+          {
+            "code": "25BK0115",
+            "title": "BASIC EDUCATIONAL FACILITIES FUND (BEFF) (BATCH 1) - REPAIR/ REHABILITATION OF CLASSROOMS DIDUYON ES, MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "On-Going",
+            "progress": "75.43",
+            "amount": 3149785.79,
+            "contractor": "NC CONSTRUCTION (37808)"
+          },
+          {
+            "code": "26BK0007",
+            "title": "SIPAG -ACCESS ROADS AND/OR BRIDGES FROM THE NATIONAL ROAD/S LEADING TO MAJOR/STRATEGIC PUBLIC BUILDINGS/ FACILITIES - CONSTRUCTION OF BUENAVISTA ROAD, BARANGAY BUENAVISTA, MADDELA. QUIRINO - STA 0+000 - STA. 0+382",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "25BK0042",
+            "title": "ASSET PRESERVATION PROGRAM - REHABILITATION/ RECONSTRUCTION/ UPGRADING OF DAMAGED PAVED ROADS - SECONDARY ROADS - CORDON - AURORA BDRY RD (JCT DUMABATO - AURORA BDRY) - K0371+074 - K0371+575, K0371+659 - K0371+904, MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "Completed",
+            "progress": "100",
+            "amount": 16746137.86,
+            "contractor": "A.P.D. CONSTRUCTION, INC. (FORMERLY: APD CONSTRUCTION) (17467)"
+          },
+          {
+            "code": "25BK0086",
+            "title": "FLOOD MANAGEMENT PROGRAM - CONSTRUCTION/ MAINTENANCE OF FLOOD MITIGATION STRUCTURES AND DRAINAGE SYSTEMS - CONSTRUCTION OF RIVER FLOOD CONTROL STURCTURE, DIDUYON BRIDGE, MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "On-Going",
+            "progress": "97.05",
+            "amount": 28095295.89,
+            "contractor": "A CARE CONSTRUCTION (55340)"
+          },
+          {
+            "code": "26BK0063",
+            "title": "BASIC INFRASTRUCTURE PROGRAM (BIP) - MULTI-PURPOSE BUILDINGS/ FACILITIES TO SUPPORT SERVICES- CONSTRUCTION OF MULTI-PURPOSE BUILDING, POBLACION NORTE, MADDELA, QUIRINO, 16.343060, 121.683032",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "26BK0028",
+            "title": "BRIDGE PROGRAM - CONSTRUCTION OF NEW BRIDGES - STA. MARIA BR. ALONG CORDON - AURORA BDRY RD (ISABELA BDRY - JCT DUMABATO), BARANGAY STA. MARIA, MADDELA, QUIRINO",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "26BK0064",
+            "title": "BASIC INFRASTRUCTURE PROGRAM (BIP) - MULTI- PURPOSE BUILDINGS/ FACILITIES TO SUPPORT SERVICES- CONSTRUCTION OF MULTI-PURPOSE BUILDING, JOSE ANCHETA, MADDELA, QUIRINO, 16.327818, 121.603775",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "25BK0043",
+            "title": "ASSET PRESERVATION PROGRAM - REHABILITATION/ RECONSTRUCTION/ UPGRADING OF DAMAGED PAVED ROADS - SECONDARY ROADS - CORDON - AURORA BDRY RD (JCT DUMABATO - AURORA BDRY) - K0375+300 - K0375+509, K0375+561 - K0376+000, MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "Completed",
+            "progress": "100",
+            "amount": 14253789.05,
+            "contractor": "A.P.D. CONSTRUCTION, INC. (FORMERLY: APD CONSTRUCTION) (17467)"
+          },
+          {
+            "code": "26BK0035",
+            "title": "NETWORK DEVELOPMENT PROGRAM - ROAD WIDENING - SECONDARY ROADS - CORDON - AURORA BDRY RD (ISABELA BDRY - JCT DUMABATO), K0360+946 - K0361+869, MADDELA, QUIRINO",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "26BK0095",
+            "title": "SUSTAINABLE INFRASTRUCTURE PROJECTS ALLEVIATING GAPS (SIPAG) - ACCESS ROADS AND/ OR BRIDGES FROM THE NATIONAL ROSAD/S LEADING TO MAJOR/ STRATEGIC PUBLIC BUILDINGS/ FACILITIES - CONSTRUCTIO OF SAN BERNABE ROAD, BARANGAY SAN BERNABE, MADDELA, QUIRINO - STA.",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "25BK0044",
+            "title": "CONSTRUCTION/ REHABILITATION OF WATER SUPPLY/ SEPTAGE AND SEWERAGE/ RAIN WATER COLLECTORS - WATER SUPPLY SYSTEM - CONSTRUCTION OF MADDELA WATER SYSTEM, MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "On-Going",
+            "progress": "100",
+            "amount": 48755881.69,
+            "contractor": "JANN-NORRIS CONSTRUCTION AND SUPPLIES INC. (FORMELY: JANN-NORRIS CONSTRUCTION AND SUPPLIES) (35880)"
+          },
+          {
+            "code": "25BK0021",
+            "title": "NETWORK DEVELOPMENT PROGRAM - ROAD WIDENING - TERTIARY ROADS - ECHAGUE - JONES - MADDELA RD (VILLA NORTE - PANANG SECT) - K0383+000 - K0383+155, K0385+109 - K0385+540, MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "On-Going",
+            "progress": "100",
+            "amount": 19496435.79,
+            "contractor": "A CARE CONSTRUCTION (55340)"
+          },
+          {
+            "code": "25BK0033",
+            "title": "ASSET PRESERVATION PROGRAM - PREVENTIVE MAINTENANCE - TERTIARY ROADS - DUMABATO - BALLIGUI RD - K0372+877 - K0373+000, K0374+000 - K0374+468, MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "Completed",
+            "progress": "100",
+            "amount": 20788988.96,
+            "contractor": "A.P.D. CONSTRUCTION, INC. (FORMERLY: APD CONSTRUCTION) (17467)"
+          },
+          {
+            "code": "25BK0007",
+            "title": "CONVERGENCE AND SPECIAL SUPPORT PROGRAM - CONSTRUCTION/IMPROVEMENT OF ACCESS ROADS LEADING TO DECLARED TOURISM DESTINATIONS (TOURISM ROAD INFRASTRUCTURE PROGRAM - TRIP) ACCESS ROAD LEADING TO BANTAY ARAN, VILLA AGULLANA, MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "Completed",
+            "progress": "100",
+            "amount": 9650316.8,
+            "contractor": "SCR CONSTRUCTION AND ENTERPRISES (44707)"
+          },
+          {
+            "code": "26BK0029",
+            "title": "BRIDGE PROGRAM - CONSTRUCTION OF NEW BRIDGES - VILLA SUR BR. ALONG NRJ VILLA SUR-SAN PEDRO-CABUA-AN-YSMAEL-DISIMUNGAL RD, BARANGAY VILLA SUR, MADDELA, QUIRINO",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "25BK0092",
+            "title": "FLOOD MANAGEMENT PROGRAM - CONSTRUCTION/ REHABILITATION OF FLOOD MITIGATION FACILITIES WITHIN MAJOR RIVER BASINS AND PRINCIPAL RIVERS - CONSTRUCTION OF CAGAYAN RIVER FLOOD CONTROL DOWNSTREAM (SAN PEDRO SECTION), MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "On-Going",
+            "progress": "100",
+            "amount": 28069364.12,
+            "contractor": "PACIFIC18 CONSTRUCTIONS INCORPORATED (50264)"
+          },
+          {
+            "code": "26BK0116",
+            "title": "SUSTAINABLE INFRASTRUCTURE PROJECTS ALLEVIATING GAPS (SIPAG) - ACCESS ROADS AND/ OR BRIDGES FROM THE NATIONAL ROAD/S LEADING TO MAJOR/ STRATEGIC PUBLIC BUILDINGS/ FACILITIES - CONSTRUCTION OF SAN SALVADOR ROAD, SAN SALVADOR, MADDELA, QUIRINO - STA. 0+000",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "25BK0072",
+            "title": "FLOOD MANAGEMENT PROGRAM - CONSTRUCTION/REHABILITATION OF FLOOD MITIGATION FACILITIES WITHIN MAJOR RIVER BASINS AND PRINCIPAL RIVERS - CONSTRUCTION OF CAGAYAN RIVER FLOOD CONTROL (LUSOD SECTION), MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "Completed",
+            "progress": "100",
+            "amount": 28080413.8,
+            "contractor": "PACIFIC18 CONSTRUCTIONS INCORPORATED (50264)"
+          },
+          {
+            "code": "25BK0087",
+            "title": "CONCRETING OF DIVISORIA FMR, BRGY. DIVISORIA NORTRE, MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "Completed",
+            "progress": "100",
+            "amount": 14398147.5,
+            "contractor": "A.P.D. CONSTRUCTION, INC. (FORMERLY: APD CONSTRUCTION) (17467)"
+          },
+          {
+            "code": "25BK0105",
+            "title": "BASIC INFRASTRUCTURE PROGRAM (BIP) - MULTI-PURPOSE BUILDINGS/ FACILITIES TO SUPPORT SOCIAL SERVICES - CONSTRUCTION OF MULTI-PURPOSE BUILDING, STA. MARIA, MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "On-Going",
+            "progress": "0",
+            "amount": 38402477.96,
+            "contractor": "A.P.D. CONSTRUCTION, INC. (FORMERLY: APD CONSTRUCTION) (17467)"
+          },
+          {
+            "code": "26BK0096",
+            "title": "SUSTAINABLE INFRASTRUCTURE PROJECTS ALLEVIATING GAPS (SIPAG) - ACCESS ROADS AND/ OR BRIDGES FROM THE NATIONAL ROAD/S LEADING TO MAJOR/ STRATEGIC PUBLIC BUILDINGS/ FACILITIES - CONSTRUCTION OF SAN DIONISIO I ROAD, BARANGAY SAN DIONISIO I, MADDELA, QUIRINO",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "26BK0068",
+            "title": "BASIC INFRASTRUCTURE PROGRAM (BIP) - MULTI-PURPOSE BUILDINGS/ FACILITIES TO SUPPORT SERVICES - CONSTRUCTION OF MULTI-PURPOSE BUILDING, DUMABATO NORTE, MADDELA, QUIRINO, 16.340184, 121.662699",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "25BK0001",
+            "title": "CONVERGENCE AND SPECIAL SUPPORT PROGRAM - CONSTRUCTION/ IMPROVEMENT OF ACCESS ROADS LEADING TO DECLARED TOURISM DESTINATIONS (TOURISM ROAD INFRASTRUCTURE PROGRAM - TRIP) - ACCESS ROAD LEADING TO GOVERNOR'S RAPIDS, MADDELA, QUIRINO",
+            "year": "2025",
+            "status": "Completed",
+            "progress": "100",
+            "amount": 9744955.48,
+            "contractor": "A.P.D. CONSTRUCTION, INC. (FORMERLY: APD CONSTRUCTION) (17467)"
+          },
+          {
+            "code": "26BK0076",
+            "title": "ASSET PRESERVATION PROGRAM - REHABILITATION/ RECONSTRUCTION OF ROADS WITH SLIPS, SLOPE COLLAPSE, AND LANDSLIDE - TERTIARY ROADS - NRJ VILLA SUR - SAN PEDRO-CABUA-AN-YSMAEL-DISIMUNGAL RD - K0381+574 - K0381+604, MADDELA, QUIRINO",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "26BK0013",
+            "title": "ASSET PRESERVATION PROGRAM - REHABILITATION/ RECONSTRUCTION/ UPGRADING OF DAMAGED PAVED ROADS - SECONDARY ROADS - CORDON - AURORA BDRY RD (ISABELA BDRY-JCT DUMABATO) - K0369+587 - K0370+313, MADDELA, QUIRINO",
+            "year": "2026",
+            "status": "On-Going",
+            "progress": "14.78",
+            "amount": 10498254.94,
+            "contractor": "JURIS CONSTRUCTION & BUILDERS (37443)"
+          },
+          {
+            "code": "26BK0054",
+            "title": "BASIC INFRASTRUCTURE PROGRAM (BIP) - MULTI-PURPOSE BUILDINGS/ FACILITIES TO SUPPORT SERVICES- CONSTRUCTION OF MULTI-PURPOSE BUILDING, DIVISORIA SUR, MADDELA, QUIRINO, 16.373882, 121.724861",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "26BK0044",
+            "title": "NETWORK DEVELOPMENT PRGORAM - ROAD WIDENING - SECONDARY ROADS - CORDON - AURORA BDRY RD (JCT DUMABATO - AURORA BDRY) - K0371+992 - K0372+447, MADDELA, QUIRINO",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          },
+          {
+            "code": "26BK0110",
+            "title": "SUSTAINABLE INFRASTRUCTURE PROJECTS ALLEVIATING GAPS (SIPAG) - ACCESS ROADS AND/ OR BRIDGES  FROM THE NATIONAL ROAD/S LEADING TO MAJOR/ STRATEGIC PUBLIC BUILDINGS/ FACILITIES - CONSTRUCTION OF STO. TOMAS ROAD, BARANGAY STO. TOMAS, MADDELA, QUIRINO - STA.",
+            "year": "2026",
+            "status": "For Procurement",
+            "progress": "0",
+            "amount": null,
+            "contractor": "null"
+          }
+        ],
+        "canonicalUrl": "https://transparency.dpwh.gov.ph/",
+        "limitations": "The API labels no figure as approved budget for the contract or contract price; amounts are the portal's display 'budget' values, and For Procurement rows carry zero. Progress percentages are portal values; rows showing On-Going at 100% are reproduced verbatim without inferring completion. Descriptions are verbatim, including a 'STURCTURE' misspelling and 'MADDELA. QUIRINO' punctuation variants at source."
+      },
+      "sourceIds": [
+        "dpwh-transparency-api-maddela"
+      ],
+      "claimSources": {
+        "projectName": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "category": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "implementingAgency": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "summary": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "stage": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "stageAsOf": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "amountLabel": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "canonicalUrl": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "limitations": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.0": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.1": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.2": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.3": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.4": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.5": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.6": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.7": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.8": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.9": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.10": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.11": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.12": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.13": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.14": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.15": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.16": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.17": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.18": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.19": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.20": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.21": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.22": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.23": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.24": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.25": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.26": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.27": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.28": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.29": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.30": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.31": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.32": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.33": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.34": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.35": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.36": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.37": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.38": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.39": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.40": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.41": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.42": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.43": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.44": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.45": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.46": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.47": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.48": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.49": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.50": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.51": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.52": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.53": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.54": [
+          "dpwh-transparency-api-maddela"
+        ],
+        "items.55": [
+          "dpwh-transparency-api-maddela"
+        ]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-28",
+      "acceptedBy": "owner-approval-2026-08-28",
+      "acceptedAt": "2026-08-28T14:30:00+08:00",
+      "updateCadence": "quarterly",
+      "nextReviewOn": "2026-11-26",
+      "owner": "BetterMaddela projects board editor",
+      "notes": "Desk import from the DPWH transparency API dump in research/2026-08-dpwh-subaybayan-municipal-works.md. Amounts are labeled 'DPWH portal budget figure' per owner instruction; contract IDs are quoted as listed."
+    },
+    {
+      "id": "maddela-works-portal-aggregates",
+      "type": "procurement-register",
+      "label": "Earlier Maddela works in official portals: aggregate counts (retrieved 2026-08-28)",
+      "data": {
+        "summary": "Portal counts for earlier Maddela works as retrieved 2026-08-28: DILG SubayBAYAN lists 26 Locally Funded Projects (FY 2014-2022, all shown Completed; 23 show RSSA result Functional), 43 LIME-20 records of which 23 are CY 2025 (tracked separately above), and the DPWH transparency API returns 366 records matching 'Maddela', of which 318 carry a 'MADDELA, QUIRINO' location (262 of them in infrastructure years 2016-2024).",
+        "counts": {
+          "dilgLfpFy2014To2022": 26,
+          "dilgLimePre2025": 20,
+          "dpwhContracts2016To2024": 262
+        },
+        "stage": "Historical portal counts; per-record statuses not individually re-verified except as noted",
+        "stageAsOf": "2026-08-28",
+        "limitations": "Counts are what the portals state on retrieval; absence of records (e.g., no SubayBAYAN LFP entries after FY 2022) may be an encoding gap, not proof that no projects existed. The 20 pre-2025 LIME records and the 262 pre-2025 DPWH records were retrieved in full but not individually itemized or status-verified for publication."
+      },
+      "sourceIds": [
+        "subaybayan-lfp-maddela-listing",
+        "subaybayan-lfp-maddela-details",
+        "subaybayan-lime-maddela-listing",
+        "dpwh-transparency-api-maddela"
+      ],
+      "claimSources": {
+        "summary": [
+          "subaybayan-lfp-maddela-listing",
+          "subaybayan-lfp-maddela-details",
+          "subaybayan-lime-maddela-listing",
+          "dpwh-transparency-api-maddela"
+        ],
+        "counts": [
+          "subaybayan-lfp-maddela-listing",
+          "subaybayan-lfp-maddela-details",
+          "subaybayan-lime-maddela-listing",
+          "dpwh-transparency-api-maddela"
+        ],
+        "stage": [
+          "subaybayan-lfp-maddela-listing",
+          "subaybayan-lfp-maddela-details",
+          "subaybayan-lime-maddela-listing",
+          "dpwh-transparency-api-maddela"
+        ],
+        "stageAsOf": [
+          "subaybayan-lfp-maddela-listing",
+          "subaybayan-lfp-maddela-details",
+          "subaybayan-lime-maddela-listing",
+          "dpwh-transparency-api-maddela"
+        ],
+        "limitations": [
+          "subaybayan-lfp-maddela-listing",
+          "subaybayan-lfp-maddela-details",
+          "subaybayan-lime-maddela-listing",
+          "dpwh-transparency-api-maddela"
+        ]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-28",
+      "acceptedBy": "owner-approval-2026-08-28",
+      "acceptedAt": "2026-08-28T14:30:00+08:00",
+      "updateCadence": "quarterly",
+      "nextReviewOn": "2026-11-26",
+      "owner": "BetterMaddela projects board editor",
+      "notes": "Aggregate-only record: earlier years are summarized rather than itemized to keep the board focused on current-year works, per owner direction."
     }
   ]
 }
