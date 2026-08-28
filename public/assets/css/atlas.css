@@ -110,6 +110,63 @@
   pointer-events: none;
 }
 
+.atlas-context {
+  pointer-events: none;
+}
+
+.atlas-context-prov {
+  fill: color-mix(in srgb, var(--color-primary) 6%, var(--color-bg-alt));
+  stroke: color-mix(in srgb, var(--color-primary) 10%, var(--color-bg-alt));
+  stroke-width: 0.8;
+}
+
+.atlas-context-nb {
+  fill: color-mix(in srgb, var(--color-primary) 9%, var(--color-bg-alt));
+  stroke: color-mix(in srgb, var(--color-primary) 16%, var(--color-bg-alt));
+  stroke-width: 0.7;
+}
+
+.atlas-context-label {
+  font-family: var(--font-main);
+  font-size: 8.5px;
+  font-style: italic;
+  fill: var(--color-text-light);
+  stroke: var(--color-bg-alt);
+  stroke-width: 2px;
+  paint-order: stroke;
+  pointer-events: none;
+}
+
+.atlas-inset {
+  pointer-events: none;
+}
+
+.atlas-inset-panel {
+  fill: color-mix(in srgb, var(--color-bg) 84%, transparent);
+  stroke: color-mix(in srgb, var(--color-primary) 18%, var(--color-bg));
+  stroke-width: 1;
+}
+
+.atlas-inset-region {
+  fill: color-mix(in srgb, var(--color-primary) 13%, var(--color-bg-alt));
+  stroke: color-mix(in srgb, var(--color-primary) 26%, var(--color-bg-alt));
+  stroke-width: 0.5;
+}
+
+.atlas-inset-province {
+  fill: color-mix(in srgb, var(--color-primary) 52%, var(--color-bg-alt));
+}
+
+.atlas-inset-maddela {
+  fill: var(--color-bg);
+}
+
+.atlas-inset-label {
+  font-family: var(--font-main);
+  font-size: 7.5px;
+  fill: var(--color-text-light);
+}
+
 .atlas-poly--dim {
   opacity: 0.3;
 }

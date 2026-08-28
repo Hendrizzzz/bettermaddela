@@ -47,6 +47,27 @@ interface AtlasGeometry {
   pad: number;
   municipality: { psgc: string; name: string; d: string };
   barangays: GeometryEntry[];
+  context: {
+    province: { psgc: string; name: string; d: string };
+    neighbors: {
+      psgc: string;
+      name: string;
+      d: string;
+      center: [number, number];
+      labelable: boolean;
+      labelPoint: [number, number];
+    }[];
+    inset: {
+      x: number;
+      y: number;
+      width: number;
+      height: number;
+      regionName: string;
+      regionD: string;
+      provinceD: string;
+      maddelaCenter: [number, number];
+    };
+  };
 }
 
 const geometry = atlasGeometry as unknown as AtlasGeometry;
@@ -112,7 +133,7 @@ function atlasAriaLabel(variant: "hero" | "full" | "mini", highlight?: string) {
       highlight ?? "the selected barangay"
     } highlighted; boundaries from OCHA COD-AB, not an official survey boundary.`;
   }
-  return `Stylized map of all ${features.length} barangays of Maddela with boundaries from OCHA COD-AB, shaded by reviewed census population; not an official survey boundary.`;
+  return `Stylized map of all ${features.length} barangays of Maddela, shown within Quirino province with neighbouring municipalities in grey and a Region II locator inset; boundaries from OCHA COD-AB, shaded by reviewed census population; not an official survey boundary.`;
 }
 
 export function MaddelaAtlas({
@@ -163,6 +184,32 @@ export function MaddelaAtlas({
           rx={14}
           aria-hidden="true"
         />
+        {!isMini && (
+          <g className="atlas-context" aria-hidden="true">
+            <path className="atlas-context-prov" d={geometry.context.province.d} fillRule="evenodd" />
+            {geometry.context.neighbors.map((neighbor) => (
+              <path
+                key={neighbor.psgc}
+                className="atlas-context-nb"
+                d={neighbor.d}
+                fillRule="evenodd"
+              />
+            ))}
+            {geometry.context.neighbors
+              .filter((neighbor) => neighbor.labelable)
+              .map((neighbor) => (
+                <text
+                  key={`label-${neighbor.psgc}`}
+                  className="atlas-context-label"
+                  x={neighbor.labelPoint[0]}
+                  y={neighbor.labelPoint[1] + 3}
+                  textAnchor="middle"
+                >
+                  {neighbor.name}
+                </text>
+              ))}
+          </g>
+        )}
         {features.map((feature) => {
           const isActive = isMini && highlight === feature.name;
           const isDim = isMini && highlight != null && !isActive;
@@ -219,6 +266,44 @@ export function MaddelaAtlas({
           fillRule="evenodd"
           aria-hidden="true"
         />
+        {!isMini && (
+          <g className="atlas-inset" aria-hidden="true">
+            <rect
+              className="atlas-inset-panel"
+              x={geometry.context.inset.x - 6}
+              y={geometry.context.inset.y - 6}
+              width={geometry.context.inset.width + 12}
+              height={geometry.context.inset.height + 22}
+              rx={10}
+            />
+            <path
+              className="atlas-inset-region"
+              d={geometry.context.inset.regionD}
+              transform={`translate(${geometry.context.inset.x}, ${geometry.context.inset.y})`}
+              fillRule="evenodd"
+            />
+            <path
+              className="atlas-inset-province"
+              d={geometry.context.inset.provinceD}
+              transform={`translate(${geometry.context.inset.x}, ${geometry.context.inset.y})`}
+              fillRule="evenodd"
+            />
+            <circle
+              className="atlas-inset-maddela"
+              cx={geometry.context.inset.x + geometry.context.inset.maddelaCenter[0]}
+              cy={geometry.context.inset.y + geometry.context.inset.maddelaCenter[1]}
+              r={1.7}
+            />
+            <text
+              className="atlas-inset-label"
+              x={geometry.context.inset.x + geometry.context.inset.width / 2}
+              y={geometry.context.inset.y + geometry.context.inset.height + 12}
+              textAnchor="middle"
+            >
+              Region II
+            </text>
+          </g>
+        )}
       </svg>
 
       {variant !== "mini" && (

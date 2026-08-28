@@ -59,3 +59,26 @@ boundary polygons (see `research/2026-08-29-maddela-atlas-geo-verification.md`)?
   adjacent to every use.
 - Polygons are published only as shapes from the named source; no barangay
   population, official, or contact claim is derived from them.
+
+## Geographic context layer (2026-08-29, second pass)
+
+- Extended the same COD-AB v03 geodatabase: phl_admin2 Quirino (PH02057,
+  2,768.01 kmA²) and phl_admin1 Region II (PH02, 26,387.73 kmA², includes
+  Batanes and island municipalities) extracted with the same pyogrio read;
+  the five other Quirino municipalities (Aglipay, Cabarroguis, Diffun,
+  Nagtipunan, Saguday) come from the existing phl_admin3 read.
+- geometry.json now carries a context block: province and neighbour paths
+  projected into the same 640x372 frame (they bleed past the frame and are
+  clipped by the SVG), neighbour label points computed as the centroid of the
+  projected vertices visible in the frame (all five label), and a Region II
+  locator inset (64x184 panel at its own equirectangular projection) with
+  province and Maddela-center paths.
+- The public artifact adds the unsimplified Quirino province polygon and the
+  five neighbour municipality polygons (artifact 461 KB total). The Region II
+  polygon is 15.6 MB raw and is NOT bundled; the inset carries only the web
+  render path derived from it.
+- Rendering is decor-only: context and inset groups are ria-hidden,
+  pointer-events: none, colored exclusively with token color-mix greys,
+  and present only in the hero and ull variants; the mini variant stays
+  tight on Maddela. The SVG group label and captions state the map sits within
+  Quirino, Region II.
