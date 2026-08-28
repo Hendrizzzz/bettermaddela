@@ -23,6 +23,7 @@ interface BarangayDataset {
 interface OfficialEntry {
   barangay: string;
   position: string;
+  termOrdinal: string | null;
   name: string;
   email: string | null;
   telephone: string | null;
@@ -42,17 +43,25 @@ interface BarangayOfficials {
   punongBarangay?: OfficialEntry;
   members: OfficialEntry[];
   skChairperson?: OfficialEntry;
+  skMembers: OfficialEntry[];
+  treasurer?: OfficialEntry;
   secretary?: OfficialEntry;
+  skSecretary?: OfficialEntry;
+  skTreasurer?: OfficialEntry;
 }
 
 const officialsBySlug = new Map<string, BarangayOfficials>();
 for (const entry of officialsRecord.data.officials) {
   const slug = slugify(entry.barangay);
-  const group = officialsBySlug.get(slug) ?? { members: [] };
+  const group = officialsBySlug.get(slug) ?? { members: [], skMembers: [] };
   if (entry.position === "Punong Barangay") group.punongBarangay = entry;
   else if (entry.position === "Sangguniang Barangay Member") group.members.push(entry);
   else if (entry.position === "SK Chairperson") group.skChairperson = entry;
+  else if (entry.position === "SK Member") group.skMembers.push(entry);
+  else if (entry.position === "Barangay Treasurer") group.treasurer = entry;
   else if (entry.position === "Barangay Secretary") group.secretary = entry;
+  else if (entry.position === "SK Secretary") group.skSecretary = entry;
+  else if (entry.position === "SK Treasurer") group.skTreasurer = entry;
   officialsBySlug.set(slug, group);
 }
 
@@ -150,16 +159,28 @@ function OfficialContact({
   email: string | null | undefined;
   telephone: string | null | undefined;
 }) {
-  if (!email && !telephone) {
-    return <p className="brgy-prof-seat-contact">No contact details published at source</p>;
-  }
+  if (!email && !telephone) return null;
   return (
-    <p className="brgy-prof-seat-contact">
+    <p className="brgy-prof-contact-line">
       {email && <a href={`mailto:${email}`}>{email}</a>}
       {email && telephone && <span aria-hidden="true"> · </span>}
       {telephone && <a href={`tel:${telephone}`}>{telephone}</a>}
     </p>
   );
+}
+
+const OFFICER_ROLES = [
+  ["Barangay Secretary", "secretary"],
+  ["Barangay Treasurer", "treasurer"],
+  ["SK Secretary", "skSecretary"],
+  ["SK Treasurer", "skTreasurer"],
+] as const;
+
+function officerEntries(group: BarangayOfficials) {
+  return OFFICER_ROLES.flatMap((pair) => {
+    const entry = group[pair[1]];
+    return entry ? ([[pair[0], entry]] as const) : [];
+  });
 }
 
 export default async function BarangayDetailPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -185,6 +206,7 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
 
   const officials = officialsBySlug.get(slug);
   const hasOfficialRoster = Boolean(officials?.punongBarangay || officials?.members.length);
+  const officers = officials ? officerEntries(officials) : [];
 
   return (
     <>
@@ -257,28 +279,93 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
             </h2>
             {officials && hasOfficialRoster ? (
               <div className="brgy-prof-org">
-                <article className="brgy-prof-seat-card brgy-prof-seat-card--pb brgy-prof-seat-card--filled">
-                  <h3 className="brgy-prof-seat-role">Punong Barangay</h3>
-                  <p className="brgy-prof-seat-name">{officials.punongBarangay?.name}</p>
-                  <OfficialContact
-                    email={officials.punongBarangay?.email}
-                    telephone={officials.punongBarangay?.telephone}
-                  />
-                </article>
-                <div className="brgy-prof-council">
-                  <h3 className="brgy-prof-group-label">Sangguniang Barangay members</h3>
-                  <ul
-                    className="brgy-prof-seat-grid"
-                    aria-label={`${officials.members.length} Sangguniang Barangay members as listed`}
-                  >
-                    {officials.members.map((member, index) => (
-                      <li key={member.name} className="brgy-prof-seat-cell brgy-prof-seat-cell--filled">
-                        <span className="brgy-prof-seat-num">{String(index + 1).padStart(2, "0")}</span>
-                        <p className="brgy-prof-seat-name">{member.name}</p>
-                        <OfficialContact email={member.email} telephone={member.telephone} />
-                      </li>
-                    ))}
-                  </ul>
+                {officials.punongBarangay && (
+                  <article className="brgy-prof-lead">
+                    <p className="brgy-prof-lead-role">Punong Barangay</p>
+                    <p className="brgy-prof-lead-name">{officials.punongBarangay.name}</p>
+                    {officials.punongBarangay.termOrdinal && (
+                      <p className="brgy-prof-lead-term">{officials.punongBarangay.termOrdinal} term</p>
+                    )}
+                    <OfficialContact
+                      email={officials.punongBarangay.email}
+                      telephone={officials.punongBarangay.telephone}
+                    />
+                  </article>
+                )}
+                <div className="brgy-prof-rosters">
+                  {officials.members.length > 0 && (
+                    <section className="brgy-prof-roster" aria-label={`${officials.members.length} Sangguniang Barangay members as listed`}>
+                      <h3 className="brgy-prof-group-label">
+                        Sangguniang Barangay members{" "}
+                        <span className="brgy-prof-roster-count">· {officials.members.length} listed</span>
+                      </h3>
+                      <ul className="brgy-prof-roster-list">
+                        {officials.members.map((member) => (
+                          <li key={member.name} className="brgy-prof-roster-item">
+                            <span className="brgy-prof-roster-name">{member.name}</span>
+                            {member.termOrdinal && (
+                              <span className="brgy-prof-roster-term">{member.termOrdinal} term</span>
+                            )}
+                            <OfficialContact email={member.email} telephone={member.telephone} />
+                          </li>
+                        ))}
+                      </ul>
+                    </section>
+                  )}
+                  {(officials.skChairperson || officials.skMembers.length > 0) && (
+                    <section className="brgy-prof-roster" aria-label="Sangguniang Kabataan council as listed">
+                      <h3 className="brgy-prof-group-label">
+                        Sangguniang Kabataan{" "}
+                        <span className="brgy-prof-roster-count">
+                          · {(officials.skChairperson ? 1 : 0) + officials.skMembers.length} listed
+                        </span>
+                      </h3>
+                      <ul className="brgy-prof-roster-list">
+                        {officials.skChairperson && (
+                          <li className="brgy-prof-roster-item brgy-prof-roster-item--lead">
+                            <span className="brgy-prof-roster-role">SK Chairperson</span>
+                            <span className="brgy-prof-roster-name">{officials.skChairperson.name}</span>
+                            {officials.skChairperson.termOrdinal && (
+                              <span className="brgy-prof-roster-term">
+                                {officials.skChairperson.termOrdinal} term
+                              </span>
+                            )}
+                            <OfficialContact
+                              email={officials.skChairperson.email}
+                              telephone={officials.skChairperson.telephone}
+                            />
+                          </li>
+                        )}
+                        {officials.skMembers.map((member) => (
+                          <li key={member.name} className="brgy-prof-roster-item">
+                            <span className="brgy-prof-roster-name">{member.name}</span>
+                            {member.termOrdinal && (
+                              <span className="brgy-prof-roster-term">{member.termOrdinal} term</span>
+                            )}
+                            <OfficialContact email={member.email} telephone={member.telephone} />
+                          </li>
+                        ))}
+                      </ul>
+                    </section>
+                  )}
+                  {officers.length > 0 && (
+                    <section className="brgy-prof-roster" aria-label="Appointed barangay officers as listed">
+                      <h3 className="brgy-prof-group-label">
+                        Appointed officers <span className="brgy-prof-roster-count">· {officers.length} listed</span>
+                      </h3>
+                      <dl className="brgy-prof-officers">
+                        {officers.map(([role, entry]) => (
+                          <div key={role} className="brgy-prof-officer-row">
+                            <dt className="brgy-prof-officer-role">{role}</dt>
+                            <dd className="brgy-prof-officer-name">
+                              {entry.name}
+                              <OfficialContact email={entry.email} telephone={entry.telephone} />
+                            </dd>
+                          </div>
+                        ))}
+                      </dl>
+                    </section>
+                  )}
                 </div>
               </div>
             ) : (
@@ -300,28 +387,14 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
                 </div>
               </div>
             )}
-            {officials?.skChairperson || officials?.secretary ? (
-              <div className="brgy-prof-council brgy-prof-other-seats">
-                <h3 className="brgy-prof-group-label">SK Chairperson and barangay secretary</h3>
-                <ul className="brgy-prof-seat-grid" aria-label="SK Chairperson and Barangay Secretary as listed">
-                  {[officials.skChairperson, officials.secretary]
-                    .filter((entry): entry is OfficialEntry => Boolean(entry))
-                    .map((entry) => (
-                      <li key={entry.position} className="brgy-prof-seat-cell brgy-prof-seat-cell--filled">
-                        <span className="brgy-prof-seat-role">{entry.position}</span>
-                        <p className="brgy-prof-seat-name">{entry.name}</p>
-                        <OfficialContact email={entry.email} telephone={entry.telephone} />
-                      </li>
-                    ))}
-                </ul>
-              </div>
-            ) : null}
             {officials && hasOfficialRoster ? (
               <>
                 <p className="brgy-prof-awaiting">
-                  Listing reproduced verbatim from the DILG Barangay Officials Profiling System, reviewed{" "}
-                  <time dateTime={officialsRecord.lastVerified}>{formatLongDate(officialsRecord.lastVerified)}</time>.
-                  The system does not date its entries; this listing is re-checked monthly.
+                  Listing reproduced from the DILG Barangay Officials Profiling System (Region 2 masterlist export,
+                  August 2026), reviewed <time dateTime={officialsRecord.lastVerified}>{formatLongDate(officialsRecord.lastVerified)}</time>.
+                  Names are as listed at source and term ordinals appear where the source states them; seats not
+                  listed at source are omitted rather than shown as vacant. The system does not date its entries;
+                  this listing is re-checked monthly.
                 </p>
                 <RecordMeta record={officialsRecord} />
               </>

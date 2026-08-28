@@ -68,11 +68,46 @@ the separate FIRSTNAME/MIDDLENAME/LASTNAME/SUFFIX fields in that order.
 
 Owner approved publication of official office emails and shared telephone numbers on
 2026-08-28 (names + contacts, all four roles). These are office-contact details published by
-the DILG for public use; absent values render as "No contact details published at source" on
-barangay pages.
+the DILG for public use; absent values are omitted on barangay pages rather than restated,
+with one section-level note explaining the omission policy.
 
 ## Follow-ups not yet done
 
 - Barangay index page (`/barangays`) could surface the 32 punong barangay names; deferred to
   keep this change scoped to the detail pages.
 - Re-verification against the next BSKE results when COMELEC publishes them.
+
+## Round 2 — Region 2 masterlist export (2026-08-28, later the same day)
+
+- **Input:** the owner downloaded `official-list_02_2026-08-28.xlsx` (42,919 rows) from the
+  DILG barangay-officials directory masterlist page and supplied it for import. It contains
+  633 rows for Maddela across all 32 barangays and extends coverage from four roles to eight:
+  the web listing's four, plus SK Member (219), Barangay Treasurer (32), SK Secretary (32)
+  and SK Treasurer (32).
+- **Deduplication:** three exact duplicate rows removed on import (Cofcaville SK member Mae
+  Ann Pedronan Bueno; Manglad SK member Irish Pearl Jamias Joguilon; San Bernabe Sangguniang
+  Barangay member Arnel Ramos Ambrocio). Two of the three pairs had a conflicting
+  TERM IN PRESENT POSITION (`1ST` on one row, blank on the other); the stated `1ST` was kept
+  and the deduplication is disclosed in `listingBasis`. Published roster: 630 officials.
+- **Cross-check:** names, positions and telephones agree with the web listing for all 316
+  overlapping rows, with zero telephone mismatches. The web listing remains the only email
+  surface; its 23 email addresses were overlaid onto the merged roster (66 telephone rows
+  across the 630, 13 distinct numbers — shared barangay office lines, same as the web
+  listing's pattern).
+- **Mojibake repair:** the export carries the Unicode replacement character U+FFFD in 23
+  Maddela cells — 19 BARANGAY cells (`Santo Ni\ufffdo`) and 4 name cells (`LEA\ufffdO` on
+  two officials, `MARA\ufffdA` on one, plus one more LEAÑO middle name). 21 of the 23 are
+  confirmed by the web listing's proper `Ñ`; the remaining 2 (Jay-Ar Leaño, San Pedro SK
+  member; Noemi Maraña, Villa Hermosa Sur barangay treasurer) are contextual restorations,
+  disclosed in `listingBasis` and flagged to the owner for direct confirmation.
+- **Terms:** every row carries TERM `2023 - 2026`. TERM IN PRESENT POSITION (1ST/2ND/3RD,
+  blank for appointed roles and some members) is published as `termOrdinal` where stated
+  (450 of 630 officials).
+- **Per-item provenance:** each official carries its own `officials.N` claim-source pair, so
+  every name traces to both DILG surfaces individually.
+- **UI restructure:** the officials section on barangay pages was rebuilt as a directory —
+  a lead panel for the punong barangay, compact name rosters for the Sangguniang Barangay
+  and SK council, and a role/name list for appointed officers. Decorative seat numbers and
+  per-official "no contact details" lines were removed; seats not listed at source are
+  omitted rather than shown as vacant, with one section-level note carrying the omission
+  policy and review cadence.

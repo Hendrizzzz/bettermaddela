@@ -923,7 +923,7 @@
       "sourceState": "active",
       "notes": "The API returns HTTP 403 to non-browser clients; responses were read through a browser-context render. The API exposes a 'budget' figure per record without labeling it ABC or contract price; figures are treated as portal display values only."
     },
-  {
+    {
     "id": "dilg-bops-barangay-officials-2026",
     "title": "DILG Barangay Officials Profiling System (BOPS) master-filter dataset, Region 02",
     "publisher": "Department of the Interior and Local Government - Barangay Officials Profiling System",
@@ -934,7 +934,20 @@
     "verifiedAt": "2026-08-28",
     "verifier": "bettermaddela-review-2026-08-28-barangay-officials-a",
     "sourceState": "active",
-    "notes": "JSON listing returns position, name parts, email address and telephone number per official, filtered client-side to Maddela rows. The system publishes no term identifier or per-entry update date. Absent-value markers are treated as absent, not as data: BH_TELNO values N/A (176 rows), NONE (39) and blanks (65), plus EMAIL_ADD value NONE@GMAIL.COM (17 rows)."
+    "notes": "Web listing covers the four principal roles per barangay (punong barangay, sangguniang barangay members, SK chairperson, barangay secretary) and is the only surface that publishes official email addresses. The Region 2 masterlist export extends coverage with SK members, treasurers and secretaries, and adds the TERM column; this listing's spellings also confirm the Ñ restorations for the Santo Niño barangay cells and the Fredireck and Recto Leaño names in that export. Absent-value markers in EMAIL_ADD (blank, and NONE@GMAIL.COM on 17 rows) and BH_TELNO (N/A 176 rows, NONE 39, blank 65) are treated as absent, not as data."
+    },
+    {
+    "id": "dilg-bops-region2-masterlist-2026-08",
+    "title": "DILG Barangay Officials Profiling System - Region 2 masterlist of elected barangay and SK officials (August 2026)",
+    "publisher": "Department of the Interior and Local Government - Barangay Information System (NBOO)",
+    "url": "https://dilg.gov.ph/barangay-officials-directory/masterlist",
+    "documentType": "dataset",
+    "effectivePeriod": "Region 2 masterlist export retrieved 2026-08-28 (42,919 rows); the 633 rows for the Municipality of Maddela feed this record, covering all 32 barangays",
+    "retrievedAt": "2026-08-28",
+    "verifiedAt": "2026-08-28",
+    "verifier": "bettermaddela-review-2026-08-28-barangay-officials-b",
+    "sourceState": "active",
+    "notes": "Owner downloaded the export (official-list_02_2026-08-28.xlsx) from the DILG barangay officials directory masterlist page and supplied it for import. Column structure and the Maddela subset were verified programmatically: 633 rows across all 32 barangays (three exact duplicate rows removed on import, leaving 630 officials), exactly one punong barangay per barangay, TERM column 2023 - 2026 on every row. Names, positions and telephones agree with the system's web listing for all 316 overlapping rows, whose spellings also confirm the Ñ restorations for the Santo Niño barangay cells and the Fredireck and Recto Leaño names. Covers eight roles per barangay: punong barangay, 6-7 sangguniang barangay members, SK chairperson, 5-7 SK members, barangay treasurer, barangay secretary, SK secretary and SK treasurer. Carries TERM (2023 - 2026) and TERM IN PRESENT POSITION (1ST/2ND/3RD, blank for appointed roles and some members). No email column and no photographs. Absent-value markers N/A, NONE and 0 in BARANGAY TEL NO. are treated as absent. The export carries a lost-character marker (U+FFFD) in place of Ñ in 23 Maddela cells; 21 are confirmed by the web listing and 2 (Jay-Ar Leaño, San Pedro SK member; Noemi Maraña, Villa Hermosa Sur treasurer) are restored contextually and disclosed in the record's listing basis."
     }
   ]
 }

@@ -1220,7 +1220,7 @@ a.govt-node:focus-visible {
   color: var(--ink);
 }
 
-/* Officials scaffold: 1 + 7 dashed seats, same language as the govt chart */
+/* Officials directory: lead panel + name rosters; dashed scaffold only for the no-roster fallback */
 .brgy-prof-section {
   margin-top: var(--spacing-xl);
 }
@@ -1230,8 +1230,8 @@ a.govt-node:focus-visible {
 .brgy-prof-org {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-  gap: var(--spacing-md);
-  align-items: stretch;
+  gap: var(--spacing-md) var(--spacing-lg);
+  align-items: start;
   margin-top: var(--spacing-md);
 }
 .brgy-prof-council {
@@ -1246,6 +1246,8 @@ a.govt-node:focus-visible {
   text-transform: uppercase;
   color: var(--muted);
 }
+
+/* Fallback scaffold: 1 + 7 dashed seats, same language as the govt chart */
 .brgy-prof-seat-card,
 .brgy-prof-seat-cell {
   display: grid;
@@ -1302,36 +1304,117 @@ a.govt-node:focus-visible {
   color: var(--muted);
   font-variant-numeric: tabular-nums;
 }
-.brgy-prof-seat-card--filled,
-.brgy-prof-seat-cell--filled {
-  border-style: solid;
+
+/* Filled directory: lead panel for the punong barangay, roster columns for the rest */
+.brgy-prof-lead {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-lg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
   background: var(--surface);
 }
-.brgy-prof-seat-name {
-  margin: 0;
-  font-size: 0.8125rem;
-  font-weight: 700;
-  line-height: 1.35;
-  text-align: center;
-  overflow-wrap: anywhere;
-}
-.brgy-prof-seat-card--pb .brgy-prof-seat-name {
-  font-size: 0.9375rem;
-}
-.brgy-prof-seat-contact {
+.brgy-prof-lead-role {
   margin: 0;
   font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.brgy-prof-lead-name {
+  margin: 0;
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.brgy-prof-lead-term {
+  margin: 0;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+.brgy-prof-rosters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+.brgy-prof-roster-count {
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+.brgy-prof-roster-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 11rem), 1fr));
+  gap: 0 var(--spacing-md);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.brgy-prof-roster-item {
+  padding: var(--spacing-xs) 0;
+  border-bottom: 1px solid var(--line);
+}
+.brgy-prof-roster-role {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.brgy-prof-roster-name {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.brgy-prof-roster-item--lead .brgy-prof-roster-name {
+  font-weight: 700;
+}
+.brgy-prof-roster-term {
+  display: block;
+  margin-top: 0.125rem;
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.brgy-prof-contact-line {
+  margin: 0.125rem 0 0;
+  font-size: 0.6875rem;
   line-height: 1.4;
-  text-align: center;
   color: var(--muted);
   overflow-wrap: anywhere;
 }
-.brgy-prof-seat-contact a {
+.brgy-prof-contact-line a {
   color: inherit;
   text-decoration-color: var(--line);
 }
-.brgy-prof-other-seats {
-  margin-top: var(--spacing-md);
+.brgy-prof-officers {
+  margin: 0;
+}
+.brgy-prof-officer-row {
+  display: grid;
+  grid-template-columns: minmax(0, 9rem) minmax(0, 1fr);
+  gap: var(--spacing-xs) var(--spacing-md);
+  padding: var(--spacing-xs) 0;
+  border-bottom: 1px solid var(--line);
+}
+.brgy-prof-officer-role {
+  margin: 0;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.brgy-prof-officer-name {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.35;
 }
 .brgy-prof-awaiting {
   max-width: 46rem;
@@ -1372,6 +1455,13 @@ a.govt-node:focus-visible {
   }
   .brgy-prof-seat-card--pb {
     min-height: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .brgy-prof-officer-row {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 }
 
