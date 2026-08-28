@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHeader from "@/components/layout/PageHeader";
 import { RecordMeta } from "@/components/RecordMeta";
+import { MaddelaAtlas, maddelaPlaceRecord } from "@/components/MaddelaAtlas";
 import { getRecord } from "@/data/civic";
 import { slugify } from "@/lib/slugify";
 
@@ -122,6 +123,14 @@ export default function BarangaysPage() {
             </figcaption>
           </figure>
 
+          <h2 className="brgy-section-heading">The Maddela atlas</h2>
+          <p className="brgy-method-note" lang="en">
+            Approximate point locations from OpenStreetMap place nodes, plotted from the reviewed
+            record. Nine barangays have no barangay-level OpenStreetMap feature yet; they are listed
+            below rather than plotted, and no coordinate was guessed.
+          </p>
+          <MaddelaAtlas variant="full" />
+
           <h2 className="brgy-section-heading">All {data.barangayCount} barangays by population</h2>
           <p className="brgy-method-note">Ranked by PSA census count, ties alphabetical</p>
           <ol className="brgy-grid">
@@ -172,6 +181,7 @@ export default function BarangaysPage() {
             there as each passes verification.
           </p>
 
+          <RecordMeta record={maddelaPlaceRecord} />
           <RecordMeta record={barangayRecord} />
         </div>
       </section>

@@ -4,6 +4,7 @@ import PageHeader from "@/components/layout/PageHeader";
 import { RecordMeta } from "@/components/RecordMeta";
 import { Reveal } from "@/components/motion/Reveal";
 import { getRecord } from "@/data/civic";
+import { MaddelaAtlas, maddelaPlaceRecord } from "@/components/MaddelaAtlas";
 import { slugify } from "@/lib/slugify";
 
 interface BarangayEntry {
@@ -253,6 +254,19 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
   const hasOfficialRoster = Boolean(officials?.punongBarangay || officials?.members.length);
   const officers = officials ? officerEntries(officials) : [];
 
+  const locationEntry = maddelaPlaceRecord.data.locations.find(
+    (entry) => entry.barangay === barangay.name,
+  );
+  const unmappedEntry = maddelaPlaceRecord.data.unmapped.find(
+    (entry) => entry.barangay === barangay.name,
+  );
+  const mapsPointUrl = locationEntry
+    ? `https://www.google.com/maps/search/?api=1&query=${locationEntry.latitude},${locationEntry.longitude}`
+    : null;
+  const mapsNameUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    `Barangay ${barangay.name}, Maddela, Quirino, Philippines`,
+  )}`;
+
   return (
     <>
       <PageHeader
@@ -316,6 +330,45 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
                 </span>
               </figcaption>
             </figure>
+          </Reveal>
+
+          <Reveal delay={0.08}>
+            <section className="brgy-prof-section" aria-labelledby="brgy-prof-location">
+              <h2 className="brgy-section-heading" id="brgy-prof-location">
+                Location
+              </h2>
+              {locationEntry ? (
+                <div className="brgy-prof-location-card">
+                  <MaddelaAtlas variant="mini" highlight={barangay.name} />
+                  <div className="brgy-prof-location-actions">
+                    <p className="brgy-prof-location-note" lang="en">
+                      Approximate point location from an OpenStreetMap place node
+                      {locationEntry.match === "variant" && ` (mapped as “${locationEntry.matchName}”)`}; dots
+                      are not official boundaries.
+                    </p>
+                    <a className="btn btn-primary" href={mapsPointUrl ?? "#"} target="_blank" rel="noreferrer">
+                      Open in Google Maps <i className="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                    </a>
+                    <p className="brgy-prof-location-note" lang="en">
+                      {maddelaPlaceRecord.data.attribution}
+                    </p>
+                  </div>
+                </div>
+              ) : (
+                <div className="brgy-prof-location-card brgy-prof-location-card--pending">
+                  <div className="brgy-prof-location-actions">
+                    <p className="brgy-prof-location-note" lang="en">
+                      No verified location for this barangay yet
+                      {unmappedEntry ? ` — ${unmappedEntry.note.toLowerCase()}` : ""}. Rather than guess a
+                      coordinate, it stays unmapped until a source passes verification.
+                    </p>
+                    <a className="btn btn-secondary" href={mapsNameUrl} target="_blank" rel="noreferrer">
+                      Search the name on Google Maps <i className="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              )}
+            </section>
           </Reveal>
 
           <section className="brgy-prof-section" aria-labelledby="brgy-prof-officials">

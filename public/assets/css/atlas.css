@@ -1,0 +1,213 @@
+/* Maddela atlas — colors come only from the Golden Hour tokens; no raw hex or rgba here. */
+
+.atlas-card {
+  background: var(--color-bg-alt);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-sm);
+}
+
+.atlas-card--hero {
+  background: var(--color-bg);
+}
+
+.atlas-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.atlas-grid line {
+  stroke: var(--color-primary);
+  stroke-width: 1;
+  opacity: 0.07;
+}
+
+.atlas-frame {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 1;
+  opacity: 0.14;
+}
+
+.atlas-dot {
+  cursor: pointer;
+  outline: none;
+}
+
+.atlas-dot-halo {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 1.5;
+  opacity: 0.18;
+  transition: opacity var(--motion-fast) ease, stroke var(--motion-fast) ease;
+}
+
+.atlas-dot-mark {
+  fill: var(--color-primary);
+  transition: fill var(--motion-fast) ease, opacity var(--motion-fast) ease,
+    stroke var(--motion-fast) ease;
+}
+
+.atlas-dot-label {
+  font-family: var(--font-main);
+  font-size: 11px;
+  fill: var(--color-text);
+  stroke: var(--color-bg);
+  stroke-width: 3px;
+  paint-order: stroke;
+  opacity: 0;
+  transition: opacity var(--motion-fast) ease;
+  pointer-events: none;
+}
+
+.atlas-dot:hover .atlas-dot-mark,
+.atlas-dot:focus-visible .atlas-dot-mark {
+  fill: var(--color-accent);
+  stroke: var(--color-primary);
+  stroke-width: 1;
+}
+
+.atlas-dot:hover .atlas-dot-halo,
+.atlas-dot:focus-visible .atlas-dot-halo {
+  stroke: var(--color-accent);
+  opacity: 0.55;
+}
+
+.atlas-dot:focus-visible .atlas-dot-mark {
+  stroke: var(--color-text);
+  stroke-width: 1.5;
+}
+
+.atlas-dot:hover .atlas-dot-label,
+.atlas-dot:focus-visible .atlas-dot-label {
+  opacity: 1;
+}
+
+.atlas-dot-halo--dim,
+.atlas-dot-mark--dim {
+  opacity: 0.28;
+}
+
+.atlas-dot-mark--active {
+  fill: var(--color-accent);
+  stroke: var(--color-primary);
+  stroke-width: 1.5;
+  opacity: 1;
+}
+
+.atlas-dot-halo--active {
+  stroke: var(--color-accent);
+  opacity: 0.55;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .atlas-dot-halo--active {
+    animation: atlas-pulse 2.4s var(--ease-out-soft) infinite;
+  }
+}
+
+@keyframes atlas-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 0.12;
+  }
+}
+
+.atlas-caption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 12px;
+  padding: var(--spacing-xs);
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+}
+
+.atlas-pending {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-sm);
+  padding: 0;
+}
+
+.atlas-pending-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: 0.8125rem;
+  box-shadow: var(--shadow-sm);
+  transition: color var(--motion-fast) ease, transform var(--motion-fast) var(--ease-out-soft),
+    box-shadow var(--motion-fast) ease;
+}
+
+.atlas-pending-chip:hover {
+  color: var(--color-primary);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.atlas-pending-state {
+  font-size: 0.6875rem;
+  color: var(--color-text-light);
+}
+
+.atlas-card--mini {
+  padding: var(--spacing-sm);
+}
+
+.home-hero-v2-search {
+  margin-top: var(--spacing-lg);
+  max-width: 480px;
+}
+
+.home-hero-v2-atlas {
+  min-width: 0;
+}
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.brgy-prof-location-card {
+  background: var(--color-bg-alt);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-md);
+  display: grid;
+  gap: var(--spacing-md);
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  align-items: center;
+}
+
+.brgy-prof-location-card--pending {
+  grid-template-columns: 1fr;
+}
+
+.brgy-prof-location-actions {
+  display: grid;
+  gap: var(--spacing-sm);
+  justify-items: start;
+}
+
+.brgy-prof-location-note {
+  color: var(--color-text-light);
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .brgy-prof-location-card {
+    grid-template-columns: 1fr;
+  }
+}

@@ -12537,6 +12537,398 @@
       ],
       "limitations": "Names are reproduced verbatim in the source's uppercase styling; mid-term appointments or replacements may not be reflected. Telephone numbers are shared barangay office lines (13 distinct numbers across the 66 entries that carry one), so a number identifies the barangay office rather than an individual official. Email addresses are published for 23 of 630 officials; all other contact values are absent at source (N/A, NONE, or blank markers) and are shown as not published. The source publishes no photographs of officials."
     }
+    },
+    {
+      "id": "maddela-barangay-locations-osm-2026-08",
+      "type": "place",
+      "label": "Approximate barangay point locations from OpenStreetMap (23 of 32 barangays)",
+      "data": {
+        "attribution": "Map data © OpenStreetMap contributors",
+        "method": "Raw OpenStreetMap place-node coordinates (never interpolated), matched to the reviewed 32-name PSGC list. No administrative boundary polygons exist in OpenStreetMap for Maddela, so positions are points, not shapes. Nine barangays have no barangay-level OpenStreetMap feature and are listed as unmapped; nearby POIs such as schools or cemeteries were not used as barangay coordinates.",
+        "locations": [
+          {
+            "barangay": "Abbag",
+            "psgcCode": "0205704001",
+            "latitude": 16.271552,
+            "longitude": 121.65534,
+            "osmElement": "node/12709698237",
+            "osmPlaceType": "village",
+            "match": "exact"
+          },
+          {
+            "barangay": "Balligui",
+            "psgcCode": "0205704003",
+            "latitude": 16.365048,
+            "longitude": 121.63297,
+            "osmElement": "node/8195101671",
+            "osmPlaceType": "village",
+            "match": "exact"
+          },
+          {
+            "barangay": "Cabaruan",
+            "psgcCode": "0205704006",
+            "latitude": 16.291351,
+            "longitude": 121.646407,
+            "osmElement": "node/8195101675",
+            "osmPlaceType": "village",
+            "match": "exact"
+          },
+          {
+            "barangay": "Cabua-an",
+            "psgcCode": "0205704007",
+            "latitude": 16.317247,
+            "longitude": 121.716719,
+            "osmElement": "node/4394437084",
+            "osmPlaceType": "village",
+            "match": "variant",
+            "matchName": "Kaboa-An",
+            "note": "OSM name 'Kaboa-An'; barangay hall node/4394437085 adjacent"
+          },
+          {
+            "barangay": "Cofcaville",
+            "psgcCode": "0205704008",
+            "latitude": 16.393875,
+            "longitude": 121.716505,
+            "osmElement": "node/8195100788",
+            "osmPlaceType": "village",
+            "match": "exact"
+          },
+          {
+            "barangay": "Divisoria Norte",
+            "psgcCode": "0205704011",
+            "latitude": 16.396931,
+            "longitude": 121.730549,
+            "osmElement": "node/8195100787",
+            "osmPlaceType": "village",
+            "match": "exact"
+          },
+          {
+            "barangay": "Divisoria Sur",
+            "psgcCode": "0205704004",
+            "latitude": 16.373815,
+            "longitude": 121.724879,
+            "osmElement": "node/8195100789",
+            "osmPlaceType": "village",
+            "match": "exact"
+          },
+          {
+            "barangay": "Dumabato Sur",
+            "psgcCode": "0205704013",
+            "latitude": 16.337822,
+            "longitude": 121.658368,
+            "osmElement": "node/9421946567",
+            "osmPlaceType": "village",
+            "match": "exact"
+          },
+          {
+            "barangay": "Manglad",
+            "psgcCode": "0205704015",
+            "latitude": 16.31789,
+            "longitude": 121.685504,
+            "osmElement": "node/10982611446",
+            "osmPlaceType": "village",
+            "match": "exact"
+          },
+          {
+            "barangay": "Poblacion Norte",
+            "psgcCode": "0205704017",
+            "latitude": 16.341694,
+            "longitude": 121.685021,
+            "osmElement": "node/12657242300",
+            "osmPlaceType": "quarter",
+            "match": "exact"
+          },
+          {
+            "barangay": "Poblacion Sur",
+            "psgcCode": "0205704036",
+            "latitude": 16.339172,
+            "longitude": 121.684527,
+            "osmElement": "node/12657254201",
+            "osmPlaceType": "quarter",
+            "match": "exact"
+          },
+          {
+            "barangay": "San Bernabe",
+            "psgcCode": "0205704019",
+            "latitude": 16.368733,
+            "longitude": 121.700138,
+            "osmElement": "node/8195100786",
+            "osmPlaceType": "village",
+            "match": "exact"
+          },
+          {
+            "barangay": "San Dionisio I",
+            "psgcCode": "0205704021",
+            "latitude": 16.406416,
+            "longitude": 121.800715,
+            "osmElement": "node/4394262532",
+            "osmPlaceType": "village",
+            "match": "variant",
+            "matchName": "San Dionisio",
+            "note": "OSM name 'San Dionisio'; barangay hall way/1182794236 adjacent"
+          },
+          {
+            "barangay": "San Martin",
+            "psgcCode": "0205704023",
+            "latitude": 16.39153,
+            "longitude": 121.780115,
+            "osmElement": "node/9421940576",
+            "osmPlaceType": "village",
+            "match": "exact",
+            "note": "No municipality attribution at source; corroborated by adjacent barangay hall way/603339199"
+          },
+          {
+            "barangay": "San Pedro",
+            "psgcCode": "0205704024",
+            "latitude": 16.34888,
+            "longitude": 121.702789,
+            "osmElement": "node/4393678383",
+            "osmPlaceType": "village",
+            "match": "exact"
+          },
+          {
+            "barangay": "San Salvador",
+            "psgcCode": "0205704025",
+            "latitude": 16.409843,
+            "longitude": 121.684012,
+            "osmElement": "node/9476560618",
+            "osmPlaceType": "village",
+            "match": "exact"
+          },
+          {
+            "barangay": "Santa Maria",
+            "psgcCode": "0205704039",
+            "latitude": 16.373345,
+            "longitude": 121.669711,
+            "osmElement": "node/8195101672",
+            "osmPlaceType": "village",
+            "match": "exact",
+            "note": "Attribution only to 'Quirino'; match justified positionally within the Maddela node cluster; lowest-confidence row"
+          },
+          {
+            "barangay": "Santo Tomas",
+            "psgcCode": "0205704027",
+            "latitude": 16.420968,
+            "longitude": 121.702321,
+            "osmElement": "node/9476359026",
+            "osmPlaceType": "village",
+            "match": "exact"
+          },
+          {
+            "barangay": "Villa Agullana",
+            "psgcCode": "0205704034",
+            "latitude": 16.343977,
+            "longitude": 121.723865,
+            "osmElement": "node/4394267901",
+            "osmPlaceType": "village",
+            "match": "exact"
+          },
+          {
+            "barangay": "Villa Gracia",
+            "psgcCode": "0205704028",
+            "latitude": 16.316818,
+            "longitude": 121.756609,
+            "osmElement": "node/5740760575",
+            "osmPlaceType": "village",
+            "match": "exact"
+          },
+          {
+            "barangay": "Villa Hermosa Norte",
+            "psgcCode": "0205704030",
+            "latitude": 16.357811,
+            "longitude": 121.682146,
+            "osmElement": "node/12690386706",
+            "osmPlaceType": "village",
+            "match": "exact"
+          },
+          {
+            "barangay": "Villa Hermosa Sur",
+            "psgcCode": "0205704029",
+            "latitude": 16.352885,
+            "longitude": 121.677784,
+            "osmElement": "node/12690386707",
+            "osmPlaceType": "village",
+            "match": "exact"
+          },
+          {
+            "barangay": "Villa Jose V Ylanan",
+            "psgcCode": "0205704037",
+            "latitude": 16.362015,
+            "longitude": 121.753111,
+            "osmElement": "node/4394405603",
+            "osmPlaceType": "village",
+            "match": "variant",
+            "matchName": "Villa Jose Ylanan",
+            "note": "OSM name 'Villa Jose Ylanan'; barangay hall node/4394405608 adjacent"
+          }
+        ],
+        "unmapped": [
+          {
+            "barangay": "Buenavista",
+            "psgcCode": "0205704005",
+            "note": "No barangay-level feature in OpenStreetMap as of 2026-08-29"
+          },
+          {
+            "barangay": "Diduyon",
+            "psgcCode": "0205704009",
+            "note": "Only a school POI (way/863800756) at the location; not a barangay coordinate"
+          },
+          {
+            "barangay": "Dipintin",
+            "psgcCode": "0205704010",
+            "note": "Only a school POI (way/863606569); the near-name node 'Dipantan' was refused as unverified"
+          },
+          {
+            "barangay": "Dumabato Norte",
+            "psgcCode": "0205704012",
+            "note": "No barangay-level feature in OpenStreetMap (Dumabato Sur is mapped)"
+          },
+          {
+            "barangay": "Jose Ancheta",
+            "psgcCode": "0205704038",
+            "note": "Nothing found; Photon returned 0 results"
+          },
+          {
+            "barangay": "Lusod",
+            "psgcCode": "0205704014",
+            "note": "Only cemetery (way/217381880) and school (way/862792696) POIs"
+          },
+          {
+            "barangay": "Pedlisan",
+            "psgcCode": "0205704016",
+            "note": "Only a school POI (way/771548647)"
+          },
+          {
+            "barangay": "Santo Niño",
+            "psgcCode": "0205704026",
+            "note": "The only nearby 'Santo Niño' node is in Jones, Isabela; refused as a wrong-place match"
+          },
+          {
+            "barangay": "Ysmael",
+            "psgcCode": "0205704032",
+            "note": "Only a school POI (way/929564505)"
+          }
+        ]
+      },
+      "sourceIds": [
+        "osm-overpass-maddela-place-nodes",
+        "osm-nominatim-maddela-lookup",
+        "osm-photon-maddela-fallback",
+        "wikidata-q53072-claims"
+      ],
+      "claimSources": {
+        "attribution": [
+          "osm-overpass-maddela-place-nodes",
+          "osm-nominatim-maddela-lookup"
+        ],
+        "method": [
+          "osm-overpass-maddela-place-nodes",
+          "osm-nominatim-maddela-lookup",
+          "osm-photon-maddela-fallback",
+          "wikidata-q53072-claims"
+        ],
+        "locations": [
+          "osm-overpass-maddela-place-nodes",
+          "osm-nominatim-maddela-lookup"
+        ],
+        "unmapped": [
+          "osm-overpass-maddela-place-nodes",
+          "osm-nominatim-maddela-lookup",
+          "osm-photon-maddela-fallback",
+          "wikidata-q53072-claims"
+        ]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-29",
+      "acceptedBy": "owner-approval-2026-08-29",
+      "acceptedAt": "2026-08-29T05:01:30+08:00",
+      "nextReviewOn": "2027-08-29",
+      "updateCadence": "annually",
+      "owner": "BetterMaddela barangay and statistics data steward",
+      "effectiveFrom": "2026-08-29",
+      "notes": "Research handoff: research/2026-08-29-maddela-atlas-geo-verification.md. The three variant rows match the OSM element with a name assertion, not an exact string match; row-level notes carry the corroboration. Santa Maria is the lowest-confidence row (positional justification only). San Dionisio: OSM also holds an uncertifiable 'San Dionisio Ⅱ' node that is absent from the PSGC list; the discrepancy was surfaced to the dataset owner and deliberately not reconciled."
+    },
+    {
+      "id": "maddela-aerial-photo-2012-commons",
+      "type": "media-item",
+      "label": "Licensed aerial photograph of Maddela (2012) from Wikimedia Commons",
+      "data": {
+        "file": "/assets/images/maddela-quirino-aerial-2012.jpg",
+        "sha256": "ec3d75e867b2f2a2b666fbcfd91fc714e343b24e3fbfd9c1e14dd559861b25b1",
+        "dimensions": "1500x1000",
+        "bytes": 385330,
+        "credit": "Aerial view of Maddela, Quirino, Philippines (April 2012), photograph by P199, via Wikimedia Commons, CC BY-SA 3.0",
+        "license": "CC BY-SA 3.0 Unported",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "P199",
+        "authorUrl": "https://commons.wikimedia.org/wiki/User:P199",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Maddela_Quirino.JPG",
+        "capturedAt": "2012-04",
+        "modified": false
+      },
+      "sourceIds": [
+        "commons-maddela-quirino-aerial",
+        "commons-maddela-quirino-aerial-filepage"
+      ],
+      "claimSources": {
+        "file": [
+          "commons-maddela-quirino-aerial",
+          "commons-maddela-quirino-aerial-filepage"
+        ],
+        "sha256": [
+          "commons-maddela-quirino-aerial",
+          "commons-maddela-quirino-aerial-filepage"
+        ],
+        "dimensions": [
+          "commons-maddela-quirino-aerial",
+          "commons-maddela-quirino-aerial-filepage"
+        ],
+        "bytes": [
+          "commons-maddela-quirino-aerial",
+          "commons-maddela-quirino-aerial-filepage"
+        ],
+        "credit": [
+          "commons-maddela-quirino-aerial",
+          "commons-maddela-quirino-aerial-filepage"
+        ],
+        "license": [
+          "commons-maddela-quirino-aerial",
+          "commons-maddela-quirino-aerial-filepage"
+        ],
+        "licenseUrl": [
+          "commons-maddela-quirino-aerial",
+          "commons-maddela-quirino-aerial-filepage"
+        ],
+        "author": [
+          "commons-maddela-quirino-aerial",
+          "commons-maddela-quirino-aerial-filepage"
+        ],
+        "authorUrl": [
+          "commons-maddela-quirino-aerial",
+          "commons-maddela-quirino-aerial-filepage"
+        ],
+        "sourcePage": [
+          "commons-maddela-quirino-aerial",
+          "commons-maddela-quirino-aerial-filepage"
+        ],
+        "capturedAt": [
+          "commons-maddela-quirino-aerial",
+          "commons-maddela-quirino-aerial-filepage"
+        ],
+        "modified": [
+          "commons-maddela-quirino-aerial",
+          "commons-maddela-quirino-aerial-filepage"
+        ]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-29",
+      "acceptedBy": "owner-approval-2026-08-29",
+      "acceptedAt": "2026-08-29T05:01:30+08:00",
+      "nextReviewOn": "2027-08-29",
+      "updateCadence": "annually",
+      "owner": "BetterMaddela barangay and statistics data steward",
+      "effectiveFrom": "2026-08-29",
+      "notes": "Rights handoff: research/2026-08-29-maddela-imagery-rights.md. The 2012 capture date is 14 years before retrieval; captions must state the date and must not imply current conditions. Rejected sources (Flickr CC BY-NC-ND Siitan River shots; non-Maddela stock imagery) are listed in the handoff."
     }
   ]
 }

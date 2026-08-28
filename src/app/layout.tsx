@@ -45,6 +45,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <link rel="stylesheet" href="/assets/css/transparency-v2.css" />
         <link rel="stylesheet" href="/assets/css/maddela.css" />
         <link rel="stylesheet" href="/assets/css/legal-history.css" />
+        <link rel="stylesheet" href="/assets/css/atlas.css" />
       </head>
       <body>
         <LanguageProvider>
