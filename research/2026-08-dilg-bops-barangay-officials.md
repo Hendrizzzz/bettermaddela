@@ -105,9 +105,13 @@ with one section-level note explaining the omission policy.
   (450 of 630 officials).
 - **Per-item provenance:** each official carries its own `officials.N` claim-source pair, so
   every name traces to both DILG surfaces individually.
-- **UI restructure:** the officials section on barangay pages was rebuilt as a directory —
-  a lead panel for the punong barangay, compact name rosters for the Sangguniang Barangay
-  and SK council, and a role/name list for appointed officers. Decorative seat numbers and
-  per-official "no contact details" lines were removed; seats not listed at source are
-  omitted rather than shown as vacant, with one section-level note carrying the omission
-  policy and review cadence.
+- **UI restructure:** the officials section on barangay pages was rebuilt as an org chart —
+  a lead card for the punong barangay, a connector spine into group cards for the
+  Sangguniang Barangay, the SK council, and appointed officers, with initials-monogram
+  tiles per official (no photo source exists, so no portraits are used). Where every
+  listed official of a group shares one barangay office line, it renders once as a
+  group-level "Office line" footer instead of repeating it per person; distinct numbers
+  and emails still render per official. Decorative seat numbers, per-official
+  "no contact details" lines, and duplicate shared phone lines were removed; seats not
+  listed at source are omitted rather than shown as vacant, with one section-level note
+  carrying the omission policy and review cadence.

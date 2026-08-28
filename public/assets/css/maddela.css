@@ -1305,15 +1305,21 @@ a.govt-node:focus-visible {
   font-variant-numeric: tabular-nums;
 }
 
-/* Filled directory: lead panel for the punong barangay, roster columns for the rest */
+/* Filled org chart: lead card, connector spine, group cards, monogram tiles */
 .brgy-prof-lead {
   display: flex;
-  flex-direction: column;
-  gap: var(--spacing-xs);
+  align-items: flex-start;
+  gap: var(--spacing-sm);
   padding: var(--spacing-lg);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
+}
+.brgy-prof-lead-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  min-width: 0;
 }
 .brgy-prof-lead-role {
   margin: 0;
@@ -1333,56 +1339,122 @@ a.govt-node:focus-visible {
   margin: 0;
   font-size: 0.8125rem;
   color: var(--muted);
+  font-variant-numeric: tabular-nums;
 }
-.brgy-prof-rosters {
+.brgy-prof-mono {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--surface-muted);
+  color: var(--brand);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  user-select: none;
+}
+.brgy-prof-mono--lg {
+  width: 3.25rem;
+  height: 3.25rem;
+  font-size: 1.0625rem;
+}
+.brgy-prof-tree {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
+  padding-left: var(--spacing-lg);
+}
+.brgy-prof-tree::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: 7px;
+  width: 2px;
+  border-radius: 1px;
+  background: var(--line);
+}
+.brgy-prof-roster {
+  position: relative;
+  padding: var(--spacing-md);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.brgy-prof-roster::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: calc(-1 * var(--spacing-lg) + 2.5px);
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--color-bg);
+}
+.brgy-prof-roster-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
 }
 .brgy-prof-roster-count {
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  text-transform: none;
+  flex: none;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
 }
-.brgy-prof-roster-list {
+.brgy-prof-tile-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 11rem), 1fr));
-  gap: 0 var(--spacing-md);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 11.5rem), 1fr));
+  gap: var(--spacing-xs);
   margin: 0;
   padding: 0;
   list-style: none;
 }
-.brgy-prof-roster-item {
-  padding: var(--spacing-xs) 0;
-  border-bottom: 1px solid var(--line);
+.brgy-prof-tile {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--color-bg);
 }
-.brgy-prof-roster-role {
-  display: block;
-  font-size: 0.6875rem;
+.brgy-prof-tile-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.brgy-prof-tile-role {
+  font-size: 0.625rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
 }
-.brgy-prof-roster-name {
-  display: block;
-  font-size: 0.875rem;
+.brgy-prof-tile-name {
+  font-size: 0.8125rem;
   font-weight: 600;
-  line-height: 1.35;
+  line-height: 1.3;
 }
-.brgy-prof-roster-item--lead .brgy-prof-roster-name {
-  font-weight: 700;
-}
-.brgy-prof-roster-term {
-  display: block;
-  margin-top: 0.125rem;
+.brgy-prof-tile-term {
   font-size: 0.6875rem;
   letter-spacing: 0.04em;
   color: var(--muted);
   font-variant-numeric: tabular-nums;
 }
 .brgy-prof-contact-line {
-  margin: 0.125rem 0 0;
+  margin: 2px 0 0;
   font-size: 0.6875rem;
   line-height: 1.4;
   color: var(--muted);
@@ -1392,29 +1464,17 @@ a.govt-node:focus-visible {
   color: inherit;
   text-decoration-color: var(--line);
 }
-.brgy-prof-officers {
-  margin: 0;
-}
-.brgy-prof-officer-row {
-  display: grid;
-  grid-template-columns: minmax(0, 9rem) minmax(0, 1fr);
-  gap: var(--spacing-xs) var(--spacing-md);
-  padding: var(--spacing-xs) 0;
-  border-bottom: 1px solid var(--line);
-}
-.brgy-prof-officer-role {
-  margin: 0;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+.brgy-prof-office-line {
+  margin: var(--spacing-sm) 0 0;
+  padding-top: var(--spacing-xs);
+  border-top: 1px solid var(--line);
+  font-size: 0.75rem;
   color: var(--muted);
 }
-.brgy-prof-officer-name {
-  margin: 0;
-  font-size: 0.875rem;
+.brgy-prof-office-line a {
+  color: var(--brand);
   font-weight: 600;
-  line-height: 1.35;
+  text-decoration-color: var(--line);
 }
 .brgy-prof-awaiting {
   max-width: 46rem;
@@ -1459,9 +1519,9 @@ a.govt-node:focus-visible {
 }
 
 @media (max-width: 480px) {
-  .brgy-prof-officer-row {
-    grid-template-columns: 1fr;
-    gap: 0;
+  .brgy-prof-lead {
+    flex-direction: column;
+    gap: var(--spacing-xs);
   }
 }
 

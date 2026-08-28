@@ -183,6 +183,51 @@ function officerEntries(group: BarangayOfficials) {
   });
 }
 
+function monogramInitials(name: string) {
+  const tokens = name.split(/\s+/).filter((token) => !/^(JR|SR|II|III|IV)$/i.test(token));
+  const first = tokens[0]?.charAt(0) ?? "?";
+  const last =
+    tokens.length > 1
+      ? tokens[tokens.length - 1].charAt(0)
+      : (tokens[0]?.charAt(1) ?? "");
+  return `${first}${last}`;
+}
+
+// The source attaches the same barangay office line to most officials of a
+// barangay; render it once per group instead of repeating it on every person.
+function sharedTelephone(entries: OfficialEntry[]) {
+  const phones = entries
+    .map((entry) => entry.telephone)
+    .filter((value): value is string => Boolean(value));
+  return new Set(phones).size === 1 && phones.length > 1 ? phones[0] : null;
+}
+
+function OfficialTile({
+  entry,
+  role,
+  telephone,
+}: {
+  entry: OfficialEntry;
+  role?: string;
+  telephone: string | null;
+}) {
+  return (
+    <li className="brgy-prof-tile">
+      <span className="brgy-prof-mono" aria-hidden="true">
+        {monogramInitials(entry.name)}
+      </span>
+      <span className="brgy-prof-tile-body">
+        {role && <span className="brgy-prof-tile-role">{role}</span>}
+        <span className="brgy-prof-tile-name">{entry.name}</span>
+        {entry.termOrdinal && (
+          <span className="brgy-prof-tile-term">{entry.termOrdinal} term</span>
+        )}
+        <OfficialContact email={entry.email} telephone={telephone} />
+      </span>
+    </li>
+  );
+}
+
 export default async function BarangayDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const barangay = barangayRecord.data.barangays.find((item) => slugify(item.name) === slug);
@@ -281,91 +326,108 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
               <div className="brgy-prof-org">
                 {officials.punongBarangay && (
                   <article className="brgy-prof-lead">
-                    <p className="brgy-prof-lead-role">Punong Barangay</p>
-                    <p className="brgy-prof-lead-name">{officials.punongBarangay.name}</p>
-                    {officials.punongBarangay.termOrdinal && (
-                      <p className="brgy-prof-lead-term">{officials.punongBarangay.termOrdinal} term</p>
-                    )}
-                    <OfficialContact
-                      email={officials.punongBarangay.email}
-                      telephone={officials.punongBarangay.telephone}
-                    />
+                    <span className="brgy-prof-mono brgy-prof-mono--lg" aria-hidden="true">
+                      {monogramInitials(officials.punongBarangay.name)}
+                    </span>
+                    <div className="brgy-prof-lead-body">
+                      <p className="brgy-prof-lead-role">Punong Barangay</p>
+                      <p className="brgy-prof-lead-name">{officials.punongBarangay.name}</p>
+                      {officials.punongBarangay.termOrdinal && (
+                        <p className="brgy-prof-lead-term">{officials.punongBarangay.termOrdinal} term</p>
+                      )}
+                      <OfficialContact
+                        email={officials.punongBarangay.email}
+                        telephone={officials.punongBarangay.telephone}
+                      />
+                    </div>
                   </article>
                 )}
-                <div className="brgy-prof-rosters">
-                  {officials.members.length > 0 && (
-                    <section className="brgy-prof-roster" aria-label={`${officials.members.length} Sangguniang Barangay members as listed`}>
-                      <h3 className="brgy-prof-group-label">
-                        Sangguniang Barangay members{" "}
-                        <span className="brgy-prof-roster-count">· {officials.members.length} listed</span>
-                      </h3>
-                      <ul className="brgy-prof-roster-list">
-                        {officials.members.map((member) => (
-                          <li key={member.name} className="brgy-prof-roster-item">
-                            <span className="brgy-prof-roster-name">{member.name}</span>
-                            {member.termOrdinal && (
-                              <span className="brgy-prof-roster-term">{member.termOrdinal} term</span>
-                            )}
-                            <OfficialContact email={member.email} telephone={member.telephone} />
-                          </li>
-                        ))}
-                      </ul>
-                    </section>
-                  )}
-                  {(officials.skChairperson || officials.skMembers.length > 0) && (
-                    <section className="brgy-prof-roster" aria-label="Sangguniang Kabataan council as listed">
-                      <h3 className="brgy-prof-group-label">
-                        Sangguniang Kabataan{" "}
-                        <span className="brgy-prof-roster-count">
-                          · {(officials.skChairperson ? 1 : 0) + officials.skMembers.length} listed
-                        </span>
-                      </h3>
-                      <ul className="brgy-prof-roster-list">
-                        {officials.skChairperson && (
-                          <li className="brgy-prof-roster-item brgy-prof-roster-item--lead">
-                            <span className="brgy-prof-roster-role">SK Chairperson</span>
-                            <span className="brgy-prof-roster-name">{officials.skChairperson.name}</span>
-                            {officials.skChairperson.termOrdinal && (
-                              <span className="brgy-prof-roster-term">
-                                {officials.skChairperson.termOrdinal} term
-                              </span>
-                            )}
-                            <OfficialContact
-                              email={officials.skChairperson.email}
-                              telephone={officials.skChairperson.telephone}
+                <div className="brgy-prof-tree">
+                  {officials.members.length > 0 && (() => {
+                    const shared = sharedTelephone(officials.members);
+                    return (
+                      <section className="brgy-prof-roster" aria-label={`${officials.members.length} Sangguniang Barangay members as listed`}>
+                        <header className="brgy-prof-roster-head">
+                          <h3 className="brgy-prof-group-label">Sangguniang Barangay</h3>
+                          <span className="brgy-prof-roster-count">{officials.members.length} listed</span>
+                        </header>
+                        <ul className="brgy-prof-tile-grid">
+                          {officials.members.map((member) => (
+                            <OfficialTile
+                              key={member.name}
+                              entry={member}
+                              telephone={shared ? null : member.telephone}
                             />
-                          </li>
+                          ))}
+                        </ul>
+                        {shared && (
+                          <p className="brgy-prof-office-line">
+                            Office line <a href={`tel:${shared}`}>{shared}</a>
+                          </p>
                         )}
-                        {officials.skMembers.map((member) => (
-                          <li key={member.name} className="brgy-prof-roster-item">
-                            <span className="brgy-prof-roster-name">{member.name}</span>
-                            {member.termOrdinal && (
-                              <span className="brgy-prof-roster-term">{member.termOrdinal} term</span>
-                            )}
-                            <OfficialContact email={member.email} telephone={member.telephone} />
-                          </li>
-                        ))}
-                      </ul>
-                    </section>
-                  )}
-                  {officers.length > 0 && (
-                    <section className="brgy-prof-roster" aria-label="Appointed barangay officers as listed">
-                      <h3 className="brgy-prof-group-label">
-                        Appointed officers <span className="brgy-prof-roster-count">· {officers.length} listed</span>
-                      </h3>
-                      <dl className="brgy-prof-officers">
-                        {officers.map(([role, entry]) => (
-                          <div key={role} className="brgy-prof-officer-row">
-                            <dt className="brgy-prof-officer-role">{role}</dt>
-                            <dd className="brgy-prof-officer-name">
-                              {entry.name}
-                              <OfficialContact email={entry.email} telephone={entry.telephone} />
-                            </dd>
-                          </div>
-                        ))}
-                      </dl>
-                    </section>
-                  )}
+                      </section>
+                    );
+                  })()}
+                  {(officials.skChairperson || officials.skMembers.length > 0) && (() => {
+                    const roster = [...(officials.skChairperson ? [officials.skChairperson] : []), ...officials.skMembers];
+                    const shared = sharedTelephone(roster);
+                    return (
+                      <section className="brgy-prof-roster" aria-label="Sangguniang Kabataan council as listed">
+                        <header className="brgy-prof-roster-head">
+                          <h3 className="brgy-prof-group-label">Sangguniang Kabataan</h3>
+                          <span className="brgy-prof-roster-count">{roster.length} listed</span>
+                        </header>
+                        <ul className="brgy-prof-tile-grid">
+                          {officials.skChairperson && (
+                            <OfficialTile
+                              key="sk-chairperson"
+                              entry={officials.skChairperson}
+                              role="SK Chairperson"
+                              telephone={shared ? null : officials.skChairperson.telephone}
+                            />
+                          )}
+                          {officials.skMembers.map((member) => (
+                            <OfficialTile
+                              key={member.name}
+                              entry={member}
+                              telephone={shared ? null : member.telephone}
+                            />
+                          ))}
+                        </ul>
+                        {shared && (
+                          <p className="brgy-prof-office-line">
+                            Office line <a href={`tel:${shared}`}>{shared}</a>
+                          </p>
+                        )}
+                      </section>
+                    );
+                  })()}
+                  {officers.length > 0 && (() => {
+                    const shared = sharedTelephone(officers.map(([, entry]) => entry));
+                    return (
+                      <section className="brgy-prof-roster" aria-label="Appointed barangay officers as listed">
+                        <header className="brgy-prof-roster-head">
+                          <h3 className="brgy-prof-group-label">Appointed officers</h3>
+                          <span className="brgy-prof-roster-count">{officers.length} listed</span>
+                        </header>
+                        <ul className="brgy-prof-tile-grid">
+                          {officers.map(([role, entry]) => (
+                            <OfficialTile
+                              key={role}
+                              entry={entry}
+                              role={role}
+                              telephone={shared ? null : entry.telephone}
+                            />
+                          ))}
+                        </ul>
+                        {shared && (
+                          <p className="brgy-prof-office-line">
+                            Office line <a href={`tel:${shared}`}>{shared}</a>
+                          </p>
+                        )}
+                      </section>
+                    );
+                  })()}
                 </div>
               </div>
             ) : (
