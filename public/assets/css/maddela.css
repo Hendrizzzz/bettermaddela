@@ -1820,3 +1820,120 @@ a.govt-node:focus-visible {
     opacity: 0.75;
   }
 }
+
+/* ---- Barangay organigram (top-down chart, govt connector language) ---- */
+.brgy-org {
+  display: flex;
+  flex-direction: column;
+  max-width: 56rem;
+  margin: var(--spacing-md) auto 0;
+}
+.brgy-org-root {
+  align-self: center;
+  max-width: 30rem;
+  width: 100%;
+  justify-content: center;
+}
+.brgy-org-fork {
+  flex: none;
+}
+.brgy-org-stem {
+  display: block;
+  width: 2px;
+  height: 1.75rem;
+  margin: 0 auto;
+  border-radius: 1px;
+  background: var(--brand);
+  opacity: 0.45;
+  transform-origin: top center;
+}
+.brgy-org-rail {
+  position: relative;
+  height: 1.75rem;
+}
+.brgy-org-rail::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 16.666%;
+  right: 16.666%;
+  height: 2px;
+  background: var(--brand);
+  opacity: 0.45;
+}
+.brgy-org-drop {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: var(--brand);
+  opacity: 0.45;
+}
+.brgy-org-drop--1 {
+  left: calc(16.666% - 1px);
+}
+.brgy-org-drop--2 {
+  left: calc(50% - 1px);
+}
+.brgy-org-drop--3 {
+  left: calc(83.333% - 1px);
+}
+.brgy-org-branches {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-md);
+  align-items: start;
+}
+.brgy-org-branch {
+  padding: var(--spacing-md);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.brgy-org-rows {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.brgy-org-row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-sm);
+  padding: 7px 0;
+  border-bottom: 1px solid var(--line);
+  min-width: 0;
+}
+.brgy-org-row:last-child {
+  border-bottom: 0;
+}
+.brgy-org-name {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.brgy-org-role {
+  flex: none;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.brgy-org-row .term-pips {
+  flex: none;
+}
+
+@media (max-width: 900px) {
+  .brgy-org-branches {
+    grid-template-columns: 1fr;
+  }
+  .brgy-org-fork {
+    display: none;
+  }
+}
