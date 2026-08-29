@@ -1142,6 +1142,31 @@
       "sourceState": "active",
       "sha256": "f6564bcab410d483dcc6564af09a966967690f6cbf28627ad5e136f86a79475f",
       "notes": "Downloaded 2026-08-29 and inspected: wide turn-over/ribbon-cutting ceremony scene; kept under the project's wide-ceremony lane (no close-up portraits). No capture date is stated on the image and none is claimed. Related record source: nia-r2-balligui-spip-turnover. Served unmodified at /assets/images/nia-balligui-spip-photo.png."
+    },
+    {
+      "id": "commons-maddela-aurora-road-photo",
+      "title": "Cordon-Diffun-Maddela-Aurora Road (Quirino; 11-25-2022).jpg, photograph by Patrickroque01 (own work)",
+      "publisher": "Wikimedia Commons (photograph by Patrickroque01)",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Cordon-Diffun-Maddela-Aurora_Road_%28Quirino%3B_11-25-2022%29.jpg",
+      "documentType": "media-file",
+      "sha256": "1f22193d00742d5d65dd551d0c3683210a3448968e3d6d6ac9f47bf174d8e5b6",
+      "retrievedAt": "2026-08-29",
+      "verifiedAt": "2026-08-29",
+      "verifier": "bettermaddela-review-2026-08-29-atlas-a",
+      "sourceState": "active",
+      "notes": "Licensed CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/), author Patrickroque01, capture date 2022-11-25 per the file page. Original 3552x2664, 5,627,412 bytes, Commons-stated SHA-1 b34bd213afcaf82c829fec4030c12be3aa0d9a75. Served copy is the Wikimedia-rendered 1280px thumbnail of that original, downloaded 2026-08-29: 1280x960, 428,919 bytes; the sha256 field records this served copy, not the original. No other edits. Attribution displayed adjacent to every use; no endorsement implied. Rights handoff: research/2026-08-29-maddela-imagery-rights.md."
+    },
+    {
+      "id": "commons-maddela-aurora-road-photo-filepage",
+      "title": "Wikimedia Commons file page for Cordon-Diffun-Maddela-Aurora Road (Quirino; 11-25-2022).jpg",
+      "publisher": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Cordon-Diffun-Maddela-Aurora_Road_(Quirino;_11-25-2022).jpg",
+      "documentType": "webpage",
+      "retrievedAt": "2026-08-29",
+      "verifiedAt": "2026-08-29",
+      "verifier": "bettermaddela-review-2026-08-29-atlas-a",
+      "sourceState": "active",
+      "notes": "Read 2026-08-29 via the Commons API (prop=imageinfo): description per title, date 11-25-2022, author Patrickroque01, credit 'Taken using my own camera EOS M100', license CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/), original size 3552x2664, 5,627,412 bytes."
     }
   ]
 }
