@@ -167,6 +167,39 @@
   margin-bottom: 12px;
 }
 
+.bmm-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.brgy-dir-group-map {
+  flex: 0 0 auto;
+  align-self: center;
+}
+
+.brgy-dir-mini {
+  display: block;
+  width: 88px;
+  height: auto;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--brand) 8%, var(--surface-muted));
+  box-shadow: var(--shadow-sm);
+}
+
+.brgy-dir-mini use {
+  fill: color-mix(in srgb, var(--brand) 16%, var(--surface-muted));
+  stroke: var(--surface);
+  stroke-width: 9;
+}
+
+.brgy-dir-mini use.brgy-dir-mini-active {
+  fill: var(--accent);
+  stroke: var(--accent);
+  stroke-width: 8;
+}
+
 .brgy-dir-grid {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
@@ -199,5 +232,8 @@
   }
   .brgy-dir-group {
     padding: 18px 16px;
+  }
+  .brgy-dir-mini {
+    width: 68px;
   }
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { monogramInitials } from "@/lib/monogram";
 import { TermPips } from "@/components/government/TermPips";
@@ -77,10 +77,12 @@ export function OfficialsDirectory({
   groups,
   totalCount,
   barangayCount,
+  maps,
 }: {
   groups: DirectoryGroup[];
   totalCount: number;
   barangayCount: number;
+  maps?: Record<string, ReactNode>;
 }) {
   const [query, setQuery] = useState("");
   const [role, setRole] = useState<RoleFilter>("all");
@@ -190,6 +192,11 @@ export function OfficialsDirectory({
           {filtered.map((group) => (
             <section key={group.slug} className="brgy-dir-group" aria-labelledby={`brgy-dir-${group.slug}`}>
               <header className="brgy-dir-group-head">
+                {maps?.[group.slug] && (
+                  <div className="brgy-dir-group-map" aria-hidden="true">
+                    {maps[group.slug]}
+                  </div>
+                )}
                 <h2 id={`brgy-dir-${group.slug}`}>{group.barangay}</h2>
                 <span className="brgy-dir-group-count">
                   {group.entries.length} listed
