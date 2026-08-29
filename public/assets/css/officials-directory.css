@@ -43,9 +43,6 @@
   color: var(--muted);
   pointer-events: none;
 }
-.brgy-dir-field--search input {
-  padding-left: 34px;
-}
 .brgy-dir-field input,
 .brgy-dir-field select {
   background: var(--surface);
@@ -55,6 +52,10 @@
   font: inherit;
   color: var(--ink);
   min-width: 220px;
+}
+/* Must stay after the shared field rule above: same specificity, later wins. */
+.brgy-dir-field--search input {
+  padding-left: 36px;
 }
 .brgy-dir-field input:focus-visible,
 .brgy-dir-field select:focus-visible {
@@ -192,9 +193,6 @@
   .brgy-dir-field select {
     width: 100%;
     min-width: 0;
-  }
-  .brgy-dir-field--search input {
-    padding-left: 34px;
   }
   .brgy-dir-group-link {
     margin-left: 0;
