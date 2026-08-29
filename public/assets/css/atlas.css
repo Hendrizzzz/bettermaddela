@@ -261,6 +261,23 @@
   min-width: 0;
 }
 
+.home-hero-v2-atlas-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: var(--spacing-sm);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.home-hero-v2-atlas-link:hover,
+.home-hero-v2-atlas-link:focus-visible {
+  color: var(--color-accent);
+}
+
 .photo-card img {
   display: block;
   width: 100%;
@@ -297,5 +314,187 @@
 @media (max-width: 768px) {
   .brgy-prof-location-card {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Interactive Leaflet map — same Golden Hour band language as the stylized atlas. */
+
+.leaflet-shell {
+  --atlas-band-0: color-mix(in srgb, var(--color-primary) 10%, var(--color-bg-alt));
+  --atlas-band-1: color-mix(in srgb, var(--color-primary) 24%, var(--color-bg-alt));
+  --atlas-band-2: color-mix(in srgb, var(--color-primary) 42%, var(--color-bg-alt));
+  --atlas-band-3: color-mix(in srgb, var(--color-primary) 62%, var(--color-bg-alt));
+  --atlas-band-4: color-mix(in srgb, var(--color-primary) 82%, var(--color-bg-alt));
+  position: relative;
+  isolation: isolate;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  background: var(--color-bg-alt);
+  overflow: hidden;
+}
+
+.leaflet-shell-canvas {
+  position: relative;
+  height: 24rem;
+}
+
+.leaflet-shell--hero .leaflet-shell-canvas {
+  height: 26rem;
+}
+
+.leaflet-shell--full .leaflet-shell-canvas {
+  height: 34rem;
+}
+
+.leaflet-shell-canvas::before {
+  content: "Interactive map is loading…";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--color-text-light);
+  font-family: var(--font-main);
+  font-size: 0.875rem;
+}
+
+.leaflet-shell--ready .leaflet-shell-canvas::before {
+  content: none;
+}
+
+.leaflet-container {
+  font: inherit;
+  background: var(--color-bg-alt);
+  outline: none;
+}
+
+.leaflet-container:focus-within {
+  outline: var(--focus-ring, 2px solid var(--color-primary));
+  outline-offset: -2px;
+}
+
+.atlas-leaf-prov {
+  fill: color-mix(in srgb, var(--color-primary) 6%, var(--color-bg-alt));
+  stroke: color-mix(in srgb, var(--color-primary) 20%, var(--color-bg-alt));
+  stroke-width: 1.5;
+  pointer-events: none;
+}
+
+.atlas-leaf-nb {
+  fill: color-mix(in srgb, var(--color-primary) 9%, var(--color-bg-alt));
+  stroke: color-mix(in srgb, var(--color-primary) 16%, var(--color-bg-alt));
+  stroke-width: 1;
+}
+
+.atlas-leaf-muni {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 2.5;
+  stroke-opacity: 0.85;
+  pointer-events: none;
+}
+
+.atlas-leaf-band-0 { fill: var(--atlas-band-0); }
+.atlas-leaf-band-1 { fill: var(--atlas-band-1); }
+.atlas-leaf-band-2 { fill: var(--atlas-band-2); }
+.atlas-leaf-band-3 { fill: var(--atlas-band-3); }
+.atlas-leaf-band-4 { fill: var(--atlas-band-4); }
+
+.atlas-leaf-band-0,
+.atlas-leaf-band-1,
+.atlas-leaf-band-2,
+.atlas-leaf-band-3,
+.atlas-leaf-band-4 {
+  stroke: var(--color-bg-alt);
+  stroke-width: 1;
+}
+
+.atlas-leaf-band-0:hover,
+.atlas-leaf-band-1:hover,
+.atlas-leaf-band-2:hover,
+.atlas-leaf-band-3:hover,
+.atlas-leaf-band-4:hover {
+  stroke: var(--color-primary);
+  stroke-width: 2;
+}
+
+.leaflet-tooltip {
+  background: var(--color-bg);
+  color: var(--color-text);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 24%, var(--color-bg-alt));
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  font-family: var(--font-main);
+  font-size: 0.8125rem;
+  padding: 4px 8px;
+}
+
+.leaflet-tooltip::before {
+  border-top-color: color-mix(in srgb, var(--color-primary) 24%, var(--color-bg-alt));
+}
+
+.leaflet-popup-content-wrapper {
+  background: var(--color-bg);
+  color: var(--color-text);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.leaflet-popup-content {
+  font-family: var(--font-main);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 12px 16px;
+}
+
+.leaflet-popup-content a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.leaflet-popup-tip {
+  background: var(--color-bg);
+}
+
+.leaflet-popup-close-button {
+  color: var(--color-text-light);
+}
+
+.leaflet-bar a,
+.leaflet-bar a:hover {
+  background: var(--color-bg);
+  color: var(--color-text);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-primary) 14%, var(--color-bg-alt));
+}
+
+.leaflet-bar a:hover {
+  background: var(--color-bg-alt);
+}
+
+.leaflet-bar a:focus-visible {
+  outline: var(--focus-ring, 2px solid var(--color-primary));
+  outline-offset: -2px;
+}
+
+.leaflet-control-attribution {
+  background: color-mix(in srgb, var(--color-bg) 85%, transparent);
+  color: var(--color-text-light);
+  font-size: 0.6875rem;
+}
+
+.leaflet-control-attribution a {
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .leaflet-shell--hero .leaflet-shell-canvas,
+  .leaflet-shell--full .leaflet-shell-canvas {
+    height: 20rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .leaflet-fade-anim .leaflet-popup,
+  .leaflet-fade-anim .leaflet-tooltip {
+    transition: none;
   }
 }
