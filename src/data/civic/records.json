@@ -13413,6 +13413,58 @@
       "owner": "BetterMaddela projects and media data steward",
       "effectiveFrom": "2026-08-29",
       "notes": "Served copy is byte-identical to the FFEDIS-hosted original (SHA-256 verified 2026-08-29). Content read from the document: Contract Agreement Form, Control No. 2026-SSA-0001, dated July 9, 2026, between the LGU Maddela and the Maddela Auto Savings Multi-Purpose Cooperative. The authoritative copy remains the publisher's."
+    },
+    {
+      "id": "maddela-aurora-road-photo-2022-commons",
+      "type": "media-item",
+      "label": "Licensed photograph of the Cordon–Diffun–Maddela–Aurora Road (2022) from Wikimedia Commons",
+      "data": {
+        "file": "/assets/images/maddela-cordon-diffun-road-2022.jpg",
+        "sha256": "1f22193d00742d5d65dd551d0c3683210a3448968e3d6d6ac9f47bf174d8e5b6",
+        "dimensions": "1280x960",
+        "bytes": 428919,
+        "credit": "Cordon–Diffun–Maddela–Aurora Road, Quirino (November 25, 2022), photograph by Patrickroque01, via Wikimedia Commons, CC BY-SA 4.0",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "author": "Patrickroque01",
+        "authorUrl": "https://commons.wikimedia.org/wiki/User:Patrickroque01",
+        "sourcePage": "https://commons.wikimedia.org/wiki/File:Cordon-Diffun-Maddela-Aurora_Road_(Quirino;_11-25-2022).jpg",
+        "capturedAt": "2022-11-25",
+        "modified": true
+      },
+      "sourceIds": [
+        "commons-maddela-aurora-road-photo",
+        "commons-maddela-aurora-road-photo-filepage"
+      ],
+      "claimSources": {
+        "file": [
+          "commons-maddela-aurora-road-photo",
+          "commons-maddela-aurora-road-photo-filepage"
+        ],
+        "sha256": ["commons-maddela-aurora-road-photo"],
+        "dimensions": ["commons-maddela-aurora-road-photo"],
+        "bytes": ["commons-maddela-aurora-road-photo"],
+        "credit": ["commons-maddela-aurora-road-photo-filepage"],
+        "license": ["commons-maddela-aurora-road-photo-filepage"],
+        "licenseUrl": ["commons-maddela-aurora-road-photo-filepage"],
+        "author": ["commons-maddela-aurora-road-photo-filepage"],
+        "authorUrl": ["commons-maddela-aurora-road-photo-filepage"],
+        "sourcePage": [
+          "commons-maddela-aurora-road-photo",
+          "commons-maddela-aurora-road-photo-filepage"
+        ],
+        "capturedAt": ["commons-maddela-aurora-road-photo-filepage"],
+        "modified": ["commons-maddela-aurora-road-photo"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-29",
+      "acceptedBy": "owner-approval-2026-08-29",
+      "acceptedAt": "2026-08-29T13:45:00+08:00",
+      "nextReviewOn": "2027-08-29",
+      "updateCadence": "annually",
+      "owner": "BetterMaddela projects and media data steward",
+      "effectiveFrom": "2026-08-29",
+      "notes": "Served copy is the Wikimedia-rendered 1280px JPEG thumbnail of the 3552x2664 original (428,919 bytes); no other edits. Rights handoff: research/2026-08-29-maddela-imagery-rights.md. The authoritative copy remains the publisher's."
     }
   ]
 }

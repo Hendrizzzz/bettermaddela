@@ -103,6 +103,7 @@ export default function LeafletMap({
 
       const boundsRef: { current: LatLngBounds | null } = { current: null };
       const municipalBoundsRef: { current: LatLngBounds | null } = { current: null };
+      const neighbourBounds: LatLngBounds[] = [];
 
       // Paint order: province + neighbours first, barangays above, municipal
       // outline on top.
@@ -128,12 +129,12 @@ export default function LeafletMap({
           const props = (feature.properties ?? {}) as BoundaryFeatureProps;
           if (props.kind === "province") {
             boundsRef.current = (layer as unknown as { getBounds(): LatLngBounds }).getBounds();
-            layer.bindTooltip("Quirino", {
-              permanent: true,
-              direction: "center",
-              className: "atlas-leaf-label atlas-leaf-label--prov",
-            });
             return;
+          }
+          if (props.kind === "neighbour-municipality") {
+            neighbourBounds.push(
+              (layer as unknown as { getBounds(): LatLngBounds }).getBounds(),
+            );
           }
           layer.bindTooltip(props.name, {
             permanent: true,
@@ -147,6 +148,27 @@ export default function LeafletMap({
           );
         },
       }).addTo(map);
+
+      // Pin the province label northwest of Maddela: the province polygon's
+      // centroid falls inside Maddela, where a permanent "Quirino" label reads
+      // as if it named a barangay. A fixed point over the neighbouring
+      // municipalities keeps it on Quirino ground without touching a barangay.
+      const neighbourExtent = neighbourBounds.reduce<LatLngBounds | null>(
+        (acc, bounds) => (acc ? acc.extend(bounds) : bounds),
+        null,
+      );
+      const provinceLabelSource = neighbourExtent ?? boundsRef.current;
+      if (provinceLabelSource) {
+        L.tooltip({
+          permanent: true,
+          direction: "center",
+          className: "atlas-leaf-label atlas-leaf-label--prov",
+          interactive: false,
+        })
+          .setLatLng(provinceLabelSource.pad(-0.2).getNorthWest())
+          .setContent("Quirino")
+          .addTo(map);
+      }
 
       L.geoJSON(barangayDocument, {
         style: (feature) => {
