@@ -1937,3 +1937,90 @@ a.govt-node:focus-visible {
     display: none;
   }
 }
+
+/* ---- Emergency hotline strip (above the site header) ---- */
+.hotline-bar {
+  background: #221d14;
+  border-bottom: 1px solid #e8dfc8;
+  color: #f7efd8;
+  font-size: 0.75rem;
+}
+.hotline-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm) var(--spacing-md);
+  min-height: 34px;
+  padding: 6px 0;
+  flex-wrap: wrap;
+}
+.hotline-bar-kicker {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.hotline-bar-kicker .bi {
+  color: #f5b301;
+}
+.hotline-bar-emergency strong {
+  color: #f5b301;
+  font-size: 0.875rem;
+  letter-spacing: 0.06em;
+  font-variant-numeric: tabular-nums;
+}
+.hotline-bar-items {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm) var(--spacing-md);
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.hotline-bar-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  white-space: nowrap;
+}
+.hotline-bar-office {
+  color: rgba(247, 239, 216, 0.75);
+}
+.hotline-bar-item a {
+  color: #f7efd8;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+  text-decoration-color: rgba(255, 255, 255, 0.35);
+}
+.hotline-bar-item a:hover {
+  color: #ffffff;
+  text-decoration-color: #f5b301;
+}
+.hotline-bar-vintage {
+  color: rgba(247, 239, 216, 0.55);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Contact page: honest pending panel for unconfirmed emergency lines ---- */
+.contact-pending {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+}
+.contact-pending h3 {
+  margin: 0 0 var(--spacing-xs);
+  font-size: 0.9375rem;
+  color: var(--ink);
+}
+.contact-pending p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+}

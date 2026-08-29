@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CivicInfoBar } from "@/components/CivicInfoBar";
+import { HotlineBar } from "@/components/HotlineBar";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SkipLink } from "@/components/SkipLink";
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <LanguageProvider>
           <SkipLink />
+          <HotlineBar />
           <SiteHeader />
           <CivicInfoBar />
           <main id="main-content" tabIndex={-1}>{children}</main>
