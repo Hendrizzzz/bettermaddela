@@ -598,3 +598,40 @@
   font-size: 0.75rem;
   color: var(--color-text-light);
 }
+
+/* Interactive Luzon locator — opens on Quirino, Maddela highlighted. */
+
+.leaflet-shell--luzon .leaflet-shell-canvas {
+  height: 24rem;
+}
+
+.luzon-leaf-prov {
+  fill: color-mix(in srgb, var(--color-primary) 9%, var(--color-bg-alt));
+  stroke: color-mix(in srgb, var(--color-primary) 16%, var(--color-bg-alt));
+  stroke-width: 1;
+  transition: fill var(--motion-fast) ease;
+}
+
+.luzon-leaf-prov:hover {
+  fill: color-mix(in srgb, var(--color-primary) 16%, var(--color-bg-alt));
+  stroke: color-mix(in srgb, var(--color-primary) 30%, var(--color-bg-alt));
+}
+
+.luzon-leaf-maddela {
+  fill: var(--color-accent);
+  stroke: var(--color-primary);
+  stroke-width: 2;
+}
+
+.luzon-loc-noscript {
+  display: block;
+  margin: var(--spacing-xs) 0 0;
+}
+
+.luzon-loc-noscript .luzon-loc-svg {
+  max-width: 200px;
+}
+
+.leaflet-shell--failed .leaflet-shell-canvas::before {
+  content: "The interactive map could not be loaded.";
+}

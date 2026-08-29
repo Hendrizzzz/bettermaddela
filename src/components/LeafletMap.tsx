@@ -102,6 +102,7 @@ export default function LeafletMap({
       };
 
       const boundsRef: { current: LatLngBounds | null } = { current: null };
+      const municipalBoundsRef: { current: LatLngBounds | null } = { current: null };
 
       // Paint order: province + neighbours first, barangays above, municipal
       // outline on top.
@@ -188,6 +189,7 @@ export default function LeafletMap({
           className: "atlas-leaf-muni",
         }),
         onEachFeature: (_feature, layer) => {
+          municipalBoundsRef.current = (layer as unknown as { getBounds(): LatLngBounds }).getBounds();
           layer.bindTooltip("Maddela", {
             permanent: true,
             direction: "center",
@@ -196,8 +198,10 @@ export default function LeafletMap({
         },
       }).addTo(map);
 
-      if (boundsRef.current) {
-        map.fitBounds(boundsRef.current, { padding: [16, 16] });
+      // Open framed on Maddela itself so the barangays fill the card; the
+      // minimum zoom still lets the visitor zoom out to the whole province.
+      if (municipalBoundsRef.current && boundsRef.current) {
+        map.fitBounds(municipalBoundsRef.current, { padding: [28, 28] });
         const padded = boundsRef.current.pad(0.25);
         map.setMaxBounds(padded);
         map.setMinZoom(Math.max(1, map.getBoundsZoom(padded) - 1));
@@ -212,6 +216,9 @@ export default function LeafletMap({
 
     build().catch((error) => {
       console.error("Leaflet map failed to initialize", error);
+      containerRef.current
+        ?.closest(".leaflet-shell")
+        ?.classList.add("leaflet-shell--failed");
     });
 
     return () => {
