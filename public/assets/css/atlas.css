@@ -537,3 +537,64 @@
     transition: none;
   }
 }
+
+/* Luzon locator — same token family as the municipal atlas. */
+
+.luzon-loc {
+  margin: var(--spacing-sm) 0 0;
+  padding: var(--spacing-sm);
+  background: var(--color-bg-alt);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.luzon-loc-svg {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.luzon-loc-prov {
+  fill: color-mix(in srgb, var(--color-primary) 9%, var(--color-bg-alt));
+  stroke: color-mix(in srgb, var(--color-primary) 16%, var(--color-bg-alt));
+  stroke-width: 0.7;
+  transition: fill var(--motion-fast) ease;
+}
+
+.luzon-loc-prov:hover {
+  fill: color-mix(in srgb, var(--color-primary) 15%, var(--color-bg-alt));
+}
+
+.luzon-loc-prov--quirino {
+  fill: color-mix(in srgb, var(--color-primary) 26%, var(--color-bg-alt));
+  stroke: color-mix(in srgb, var(--color-primary) 36%, var(--color-bg-alt));
+}
+
+.luzon-loc-maddela {
+  fill: var(--color-accent);
+  stroke: var(--color-primary);
+  stroke-width: 1;
+}
+
+.luzon-loc-label {
+  font-family: var(--font-main);
+  font-size: 8px;
+  font-weight: 700;
+  fill: var(--color-text);
+  stroke: var(--color-bg-alt);
+  stroke-width: 2.4px;
+  paint-order: stroke;
+  pointer-events: none;
+}
+
+.luzon-loc-caption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 14px;
+  margin: var(--spacing-xs) 0 0;
+  padding: 0 var(--spacing-xs);
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+}
