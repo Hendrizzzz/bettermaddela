@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import type { Map as LeafletMapInstance, LatLngBounds, Path } from "leaflet";
+import type { Map as LeafletMapInstance, LatLngBounds } from "leaflet";
 import { slugify } from "@/lib/slugify";
 
 interface LeafletMapProps {
@@ -32,6 +32,8 @@ interface BoundaryDocument {
 
 // Colors for every layer come from the Golden Hour tokens via CSS classes
 // (see atlas.css), so the interactive map matches the stylized atlas exactly.
+// No raster basemap is drawn: the dataset itself carries the place labels, and
+// the data attribution lives in each page caption instead of on the map.
 function bandIndexFor(share: number) {
   return Math.min(4, Math.max(0, Math.floor(share * 5)));
 }
@@ -65,19 +67,10 @@ export default function LeafletMap({
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       map = L.map(containerRef.current, {
         scrollWheelZoom: false,
-        attributionControl: true,
+        attributionControl: false,
         fadeAnimation: !reduceMotion,
         zoomAnimation: !reduceMotion,
       });
-      map.attributionControl.setPrefix(false);
-      map.attributionControl.addAttribution(
-        'Basemap &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-      );
-
-      L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-        subdomains: "abcd",
-        maxZoom: 19,
-      }).addTo(map);
 
       const counts = Object.values(populationsRef.current ?? {}).sort((a, b) => a - b);
       const quantile = (fraction: number) =>
@@ -134,11 +127,17 @@ export default function LeafletMap({
           const props = (feature.properties ?? {}) as BoundaryFeatureProps;
           if (props.kind === "province") {
             boundsRef.current = (layer as unknown as { getBounds(): LatLngBounds }).getBounds();
+            layer.bindTooltip("Quirino", {
+              permanent: true,
+              direction: "center",
+              className: "atlas-leaf-label atlas-leaf-label--prov",
+            });
             return;
           }
-          layer.bindTooltip(`${props.name} — neighbouring municipality`, {
-            sticky: true,
-            direction: "top",
+          layer.bindTooltip(props.name, {
+            permanent: true,
+            direction: "center",
+            className: "atlas-leaf-label atlas-leaf-label--nb",
           });
           layer.bindPopup(
             `<strong>${props.name}</strong><br>${props.area_sqkm.toLocaleString("en-PH", {
@@ -188,6 +187,13 @@ export default function LeafletMap({
           interactive: false,
           className: "atlas-leaf-muni",
         }),
+        onEachFeature: (_feature, layer) => {
+          layer.bindTooltip("Maddela", {
+            permanent: true,
+            direction: "center",
+            className: "atlas-leaf-label atlas-leaf-label--muni",
+          });
+        },
       }).addTo(map);
 
       if (boundsRef.current) {
