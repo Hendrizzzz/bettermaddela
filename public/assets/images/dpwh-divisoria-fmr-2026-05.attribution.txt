@@ -1,0 +1,8 @@
+File: dpwh-divisoria-fmr-2026-05.jpg
+Source: Department of Public Works and Highways transparency portal (InfraTrack attachment) — https://apps2.dpwh.gov.ph/proxy_infratrack/proxy.ashx?https://services1.arcgis.com/IwZZTMxZCmAmFYvF/arcgis/rest/services/service_30b3f0ce54a9483fac9774a40be43d3b/FeatureServer/0/82310/attachments/189464
+Description: Completion photograph of DPWH contract 25BK0087, component P00969101LZ-CW1 — concreting of Divisoria FMR, Barangay Divisoria Norte, Maddela, Quirino
+Date: May 7, 2026 (as published by the DPWH transparency portal)
+Author: Department of Public Works and Highways
+License: Work of the Government of the Philippines; no copyright subsists under Sec. 176.1, Republic Act 8293
+SHA-256: 8b6d97b4577bedfce428b958a95c5ac61e62f374724cf3f6916cf8b2670d8710
+Served unmodified by BetterMaddela. No endorsement by the Department of Public Works and Highways is implied.

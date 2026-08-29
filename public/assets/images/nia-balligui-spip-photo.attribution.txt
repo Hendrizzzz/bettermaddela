@@ -1,0 +1,8 @@
+File: nia-balligui-spip-photo.png
+Source: National Irrigation Administration Region II — https://region2.nia.gov.ph/sites/r2/files/field/image/NV%20SolarPump.png
+Description: Turn-over activity at the Balligui Small Scale Irrigation Project, as published with the NIA Region II solar-powered pump news post
+Date: Not stated on the image; none is claimed
+Author: National Irrigation Administration Region II
+License: Work of the Government of the Philippines; no copyright subsists under Sec. 176.1, Republic Act 8293
+SHA-256: f6564bcab410d483dcc6564af09a966967690f6cbf28627ad5e136f86a79475f
+Served unmodified by BetterMaddela. No endorsement by the National Irrigation Administration is implied.
