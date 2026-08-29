@@ -407,13 +407,16 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
                     return (
                       <section className="brgy-org-branch" aria-label={`${officials.members.length} Sangguniang Barangay members as listed`}>
                         <header className="brgy-prof-roster-head">
-                          <h3 className="brgy-prof-group-label">Sangguniang Barangay</h3>
+                          <h3 className="brgy-prof-group-label">
+                            <i className="bi bi-people-fill" aria-hidden="true" />
+                            Sangguniang Barangay
+                          </h3>
                           <span className="brgy-prof-roster-count">{officials.members.length} listed</span>
                         </header>
                         <ul className="brgy-org-rows">
                           {officials.members.map((member, index) => (
                             <li key={member.name} className="brgy-org-row">
-                              <span className="brgy-prof-seat-num" aria-hidden="true">{`0${index + 1}`}</span>
+                              <span className="brgy-org-avatar brgy-org-avatar--num" aria-hidden="true">{`0${index + 1}`}</span>
                               <span className="brgy-org-name">{member.name}</span>
                               {member.termOrdinal && <TermPips ordinal={member.termOrdinal} />}
                             </li>
@@ -433,14 +436,22 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
                     return (
                       <section className="brgy-org-branch" aria-label="Sangguniang Kabataan council as listed">
                         <header className="brgy-prof-roster-head">
-                          <h3 className="brgy-prof-group-label">Sangguniang Kabataan</h3>
+                          <h3 className="brgy-prof-group-label">
+                            <i className="bi bi-stars" aria-hidden="true" />
+                            Sangguniang Kabataan
+                          </h3>
                           <span className="brgy-prof-roster-count">{roster.length} listed</span>
                         </header>
                         <ul className="brgy-org-rows">
                           {officials.skChairperson && (
                             <li key="sk-chairperson" className="brgy-org-row">
-                              <span className="brgy-org-role">SK Chair</span>
-                              <span className="brgy-org-name">{officials.skChairperson.name}</span>
+                              <span className="brgy-org-avatar brgy-org-avatar--chair" aria-hidden="true">
+                                {monogramInitials(officials.skChairperson.name)}
+                              </span>
+                              <span className="brgy-org-person">
+                                <span className="brgy-org-name">{officials.skChairperson.name}</span>
+                                <span className="brgy-org-meta">Chairperson</span>
+                              </span>
                               {officials.skChairperson.termOrdinal && (
                                 <TermPips ordinal={officials.skChairperson.termOrdinal} />
                               )}
@@ -448,7 +459,7 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
                           )}
                           {officials.skMembers.map((member) => (
                             <li key={member.name} className="brgy-org-row">
-                              <span className="brgy-org-role">SK Member</span>
+                              <span className="brgy-org-avatar" aria-hidden="true">{monogramInitials(member.name)}</span>
                               <span className="brgy-org-name">{member.name}</span>
                               {member.termOrdinal && <TermPips ordinal={member.termOrdinal} />}
                             </li>
@@ -467,14 +478,20 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
                     return (
                       <section className="brgy-org-branch" aria-label="Appointed barangay officers as listed">
                         <header className="brgy-prof-roster-head">
-                          <h3 className="brgy-prof-group-label">Appointed officers</h3>
+                          <h3 className="brgy-prof-group-label">
+                            <i className="bi bi-person-badge-fill" aria-hidden="true" />
+                            Appointed officers
+                          </h3>
                           <span className="brgy-prof-roster-count">{officers.length} listed</span>
                         </header>
                         <ul className="brgy-org-rows">
                           {officers.map(([role, entry]) => (
                             <li key={role} className="brgy-org-row">
-                              <span className="brgy-org-role">{role}</span>
-                              <span className="brgy-org-name">{entry.name}</span>
+                              <span className="brgy-org-avatar" aria-hidden="true">{monogramInitials(entry.name)}</span>
+                              <span className="brgy-org-person">
+                                <span className="brgy-org-name">{entry.name}</span>
+                                <span className="brgy-org-meta">{role}</span>
+                              </span>
                               {entry.termOrdinal && <TermPips ordinal={entry.termOrdinal} />}
                             </li>
                           ))}
