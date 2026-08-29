@@ -203,7 +203,11 @@ export default function LeafletMap({
         map.setMinZoom(Math.max(1, map.getBoundsZoom(padded) - 1));
       }
 
-      containerRef.current?.classList.add("leaflet-shell--ready");
+      // The ready flag must land on the outer .leaflet-shell element: the
+      // loading veil is removed via `.leaflet-shell--ready .leaflet-shell-canvas::before`.
+      containerRef.current
+        ?.closest(".leaflet-shell")
+        ?.classList.add("leaflet-shell--ready");
     }
 
     build().catch((error) => {
