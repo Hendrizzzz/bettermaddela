@@ -13,6 +13,9 @@ const approvedHex = new Set([
 const approvedRgbaChannels = new Set(["34", "255", "247", "20"]);
 
 const cssDir = "public/assets/css";
+// Vendored third-party styles keep upstream integrity and are not authored
+// palette surface. The allowlist is explicit so stray files cannot slip in.
+const vendoredCss = new Set(["leaflet.css"]);
 const errors = [];
 
 function expand3(hex) {
@@ -23,6 +26,7 @@ function expand3(hex) {
 
 for (const file of readdirSync(cssDir)) {
   if (!file.endsWith(".css")) continue;
+  if (vendoredCss.has(file)) continue;
   const path = join(cssDir, file);
   const content = readFileSync(path, "utf8");
   for (const match of content.matchAll(/#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})\b/g)) {
