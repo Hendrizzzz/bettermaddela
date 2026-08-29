@@ -65,3 +65,71 @@ rights", lines 147-158); it does not change that contract.
    verified photo keep the generated monogram avatar. Photos are an
    enhancement layered on verified records; absence of a photo is an honest
    state, not a defect to fill.
+
+## Sourcing decision: LGU photographs first (2026-08-29)
+
+Owner decision, recorded as `owner-approval-2026-08-29`. When sourcing genuine
+Maddela imagery, LGU-published photographs are the preferred lane, ahead of
+community submissions. The rules below restate and apply the media-rights gate
+in `docs/data/DATA_CONTRACT.md` (lines 147-158); they do not change it.
+
+### Copyright analysis for LGU-published photographs (RA 8293)
+
+- **Sec. 172.1(k):** photographs are protected literary/artistic works by
+  default, so a photo taken by a private party and merely shown on an LGU page
+  does NOT enter this lane — only photographs the LGU itself publishes as its
+  own.
+- **Sec. 176.1:** no copyright subsists in works of the Government of the
+  Philippines. Exploitation for profit would require the agency's prior
+  approval; this project's noncommercial civic-information use does not, but
+  source attribution and honest dating still apply in full.
+- **Sec. 178.3(b):** photographs taken by LGU staff in the course of their
+  regular employment are owned by the LGU as employer. Preserve any
+  photographer credit the LGU page carries, never strip it.
+- **Sec. 184:** the limitations on copyright (quotation, current-event
+  reporting, public-interest use by or under government direction) are narrow
+  and context-dependent. The project does not rest on Sec. 184 to justify
+  publishing LGU photos; it rests on the Sec. 176.1 government-works rule plus
+  documented provenance per item.
+- **Practical consequence:** an LGU-published photo may be downloaded, hashed,
+  stored locally with an attribution sidecar naming the LGU page as source, and
+  captioned with the page's retrieval date — the same evidence pattern as every
+  civic fact on the site.
+
+### Privacy overlay (RA 10173 / NPC Circular 2023-04, Secs. 10, 12-A, 13, 17; circular text archived in the research cache)
+
+- A photograph of an identifiable person is personal information; publishing
+  it is processing personal information.
+- Depiction verification (identity tied to a second source) stays mandatory
+  from the intake policy above.
+- Portraits and close-ups of named individuals require recorded permission
+  before publication. Wide public-event or ceremony shots, and scene or aerial
+  photographs without a naming subject, do not carry the same permission
+  burden.
+- Any permission we collect follows the circular's consent rules: specific,
+  informed, documented, and revocable.
+- Any person depicted may request removal (take-down below) regardless of the
+  legal analysis; the request is honored.
+
+### No scraping, no bulk harvesting
+
+LGU sites are fetched as pages for evidence. Automated bulk harvesting of
+media, or using a photo whose source page and retrieval date cannot be
+recorded, is out of bounds. Every published photograph needs its source URL,
+retrieval date, and attribution sidecar.
+
+### Take-down path
+
+Requests to remove a published photograph are honored as a standing project
+rule — the courtesy threshold is higher than the legal minimum because
+BetterMaddela is an independent project, not the government it documents.
+Channel: repository issues or the project email. Action: remove the file, its
+references, and note the removal in the record. No argument is required from
+the requester.
+
+### Effect on sourcing order
+
+Preferred order is now: (1) LGU-published photographs under the rules above;
+(2) community submissions via the intake policy above; (3) free-licensed
+single finds such as the 2012 aerial photograph. Social-platform-only imagery
+remains out unless a permission record exists; hotlinking stays barred.
