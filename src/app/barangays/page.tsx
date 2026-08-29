@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageHeader from "@/components/layout/PageHeader";
 import { RecordMeta } from "@/components/RecordMeta";
-import { MaddelaAtlas, maddelaBoundariesRecord } from "@/components/MaddelaAtlas";
+import LeafletMap from "@/components/LeafletMap";
+import { maddelaBoundariesRecord } from "@/components/MaddelaAtlas";
 import atlasGeometry from "@/data/atlas/geometry.json";
 import { getRecord } from "@/data/civic";
 import { slugify } from "@/lib/slugify";
@@ -65,6 +66,10 @@ const rankedBarangays = [...barangays]
 const maxSharePercent = rankedBarangays.length > 0 ? rankedBarangays[0].sharePercent : 0;
 
 const shareFormat = new Intl.NumberFormat("en-PH", { maximumFractionDigits: 1 });
+
+const barangayPopulations = Object.fromEntries(
+  barangays.map((entry) => [entry.name, entry.population]),
+);
 
 export const metadata: Metadata = {
   title: "Barangays",
@@ -150,10 +155,12 @@ export default function BarangaysPage() {
           <p className="brgy-method-note" lang="en">
             Municipal and barangay boundary polygons from the OCHA COD-AB Philippines
             dataset, matched to the reviewed 32-name PSGC list, and shaded by the same
-            reviewed census counts used on this page. The rendering is stylized and
-            simplified; it is not an official survey boundary.
+            reviewed census counts used on this page. Interactive basemap ©
+            OpenStreetMap contributors © CARTO. Boundaries are simplified and are not
+            an official survey boundary; the ranked list below repeats every figure
+            shown on the map.
           </p>
-          <MaddelaAtlas variant="full" />
+          <LeafletMap variant="full" linkBarangays populations={barangayPopulations} />
 
           <h2 className="brgy-section-heading">All {data.barangayCount} barangays by population</h2>
           <p className="brgy-method-note">Ranked by PSA census count, ties alphabetical</p>

@@ -6,7 +6,7 @@ import gsap from "gsap";
 import { LiveWeather, type WeatherConfigData } from "@/components/LiveWeather";
 import { Reveal } from "@/components/motion/Reveal";
 import { VerifiedSearch } from "@/components/VerifiedSearch";
-import { MaddelaAtlas } from "@/components/MaddelaAtlas";
+import LeafletMap from "@/components/LeafletMap";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getRecord } from "@/data/civic";
 
@@ -20,6 +20,10 @@ interface PopulationData {
 
 interface BarangayData {
   barangayCount: number;
+  barangays: Array<{
+    name: string;
+    population: number;
+  }>;
 }
 
 interface HouseholdData {
@@ -169,6 +173,7 @@ const homeCopy = {
     residentsLabel: "residents",
     censusLabel: "2024 census",
     mapCaption: "General location view only, not an official boundary.",
+    atlasLink: "Open the barangay atlas",
     exploreMap: "Explore on Google Maps",
     photoAlt: "Aerial view of Maddela, Quirino, Philippines, taken in April 2012",
     photoCredit: "Photograph by P199 (April 2012), CC BY-SA 3.0, via Wikimedia Commons",
@@ -223,6 +228,7 @@ const homeCopy = {
     residentsLabel: "na residente",
     censusLabel: "senso ng 2024",
     mapCaption: "Pangkalahatang lokasyon lamang, hindi opisyal na hangganan.",
+    atlasLink: "Buksan ang atlas ng mga barangay",
     exploreMap: "Tingnan ang Maddela sa Google Maps",
     photoAlt: "Tanawin ng Maddela, Quirino mula sa himpapawid, kuha noong Abril 2012",
     photoCredit: "Larawan ni P199 (Abril 2012), CC BY-SA 3.0, mula sa Wikimedia Commons",
@@ -306,6 +312,10 @@ export default function HomePage() {
   const municipalLeaders = leadership.data.leaders.filter(
     (leader) => leader.scope === "Municipality of Maddela",
   );
+  const barangayPopulations = Object.fromEntries(
+    barangays.data.barangays.map((row) => [row.name, row.population]),
+  );
+
   const locationSteps = [
     { name: copy.stepPhilippines, detail: copy.stepPhilippinesNote },
     { name: copy.stepQuirino, detail: copy.stepQuirinoNote },
@@ -339,7 +349,10 @@ export default function HomePage() {
               </div>
             </div>
             <div className="home-hero-v2-atlas">
-              <MaddelaAtlas variant="hero" />
+              <LeafletMap variant="hero" populations={barangayPopulations} />
+              <Link href="/barangays" className="home-hero-v2-atlas-link">
+                {copy.atlasLink} <i className="bi bi-arrow-right" aria-hidden="true"></i>
+              </Link>
             </div>
           </div>
         </div>
