@@ -3630,32 +3630,13 @@
       "notes": "Owner reviewed the research caveats on 2026-08-28 and directed publication of the archived municipal directory with a single site disclaimer. The Mayor's Office email is corroborated by a DA RFU 02 procurement page. Contact-person names and personal mobile numbers on third-party pages are deliberately not published."
     },
     {
-      "id": "maddela-emergency-contacts",
+      "id": "national-emergency-hotlines-2026",
       "type": "contact",
-      "label": "Emergency and safety lines for Maddela and Quirino",
+      "label": "National emergency hotlines (911 and 143)",
       "data": {
-        "scope": "Emergency and safety lines serving Maddela",
+        "scope": "National emergency hotlines serving Maddela and the rest of the Philippines",
+        "retrievedOn": "2026-08-28",
         "entries": [
-          {
-            "service": "Philippine National Police - Maddela Municipal Police Station",
-            "details": "+63-905-617-2749",
-            "basis": "Municipality of Maddela website, Local Hotlines section (archived 2023-04-02)"
-          },
-          {
-            "service": "Bureau of Fire Protection - Maddela Fire Station",
-            "details": "+63-917-511-1429",
-            "basis": "Municipality of Maddela website, Local Hotlines section (archived 2023-04-02)"
-          },
-          {
-            "service": "Maddela LDRRMO (Local Disaster Risk Reduction and Management Office)",
-            "details": "+63-977-851-9603; +63-966-259-5691",
-            "basis": "Municipality of Maddela website, Local Hotlines section (archived 2023-04-02)"
-          },
-          {
-            "service": "PDRRMO Quirino - Rescue 910 (24/7)",
-            "details": "Globe 0975 415 8508; PLDT (078) 374-6118",
-            "basis": "Provincial Government of Quirino directory (retrieved 2026-08-28)"
-          },
           {
             "service": "National emergency hotline",
             "details": "911",
@@ -3667,38 +3648,38 @@
             "basis": "Philippine Red Cross contact page (retrieved 2026-08-28)"
           }
         ],
-        "limitations": "The direct confirmation and test calls required by the emergency-contact gate were not performed. Municipal lines are from a 2023 archive capture and may be out of service. In an emergency, call 911."
+        "limitations": "Maddela-specific emergency lines (PNP Maddela, BFP Maddela, LDRRMO Maddela) and the provincial PDRRMO Rescue 910 lines are deliberately not republished anywhere on this site pending direct confirmation and test calls. In an emergency, call 911."
       },
       "sourceIds": [
-        "wayback-maddela-contact-2023",
-        "quirino-province-directory-2026",
         "official-gazette-911-2016",
         "redcross-contact-2026"
       ],
       "claimSources": {
         "scope": [
-          "wayback-maddela-contact-2023",
-          "quirino-province-directory-2026"
+          "official-gazette-911-2016",
+          "redcross-contact-2026"
+        ],
+        "retrievedOn": [
+          "official-gazette-911-2016",
+          "redcross-contact-2026"
         ],
         "entries": [
-          "wayback-maddela-contact-2023",
-          "quirino-province-directory-2026",
           "official-gazette-911-2016",
           "redcross-contact-2026"
         ],
         "limitations": [
-          "wayback-maddela-contact-2023",
-          "quirino-province-directory-2026"
+          "official-gazette-911-2016",
+          "redcross-contact-2026"
         ]
       },
       "status": "verified",
       "lastVerified": "2026-08-28",
-      "acceptedBy": "owner-approval-2026-08-28",
-      "acceptedAt": "2026-08-28T14:30:00+08:00",
+      "acceptedBy": "owner-approval-2026-08-29",
+      "acceptedAt": "2026-08-29T10:00:00+08:00",
       "updateCadence": "monthly",
       "nextReviewOn": "2026-09-27",
       "owner": "BetterMaddela contacts data steward",
-      "notes": "The data contract's emergency gate requires direct confirmation and an authorized test call before publication. The project owner reviewed the research caveats on 2026-08-28 and directed publication of the officially listed numbers with a single site disclaimer instead of waiting for re-confirmation. This note records that decision; re-confirmation (test calls to PNP, BFP, LDRRMO and Rescue 910) remains the outstanding review action and the reason for the monthly cadence."
+      "notes": "Published under the owner's 2026-08-29 decision that split the former maddela-emergency-contacts record: the national 911 and 143 hotlines stay published, while every municipal and provincial emergency number (PNP, BFP, LDRRMO, Rescue 910) is unpublished until the direct confirmation and test calls required by the data contract's emergency gate are performed. Those calls remain the outstanding review action and the reason for the monthly cadence."
     },
     {
       "id": "quirino-provincial-contacts-2026",

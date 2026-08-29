@@ -15,8 +15,9 @@ interface OfficeContactsData {
   limitations: string;
 }
 
-interface EmergencyContactsData {
+interface EmergencyHotlinesData {
   scope: string;
+  retrievedOn: string;
   entries: { service: string; details: string; basis: string }[];
   limitations: string;
 }
@@ -63,7 +64,7 @@ function DirectoryCard({
 
 export default function ContactPage() {
   const municipal = getRecord<OfficeContactsData>("maddela-lgu-office-contacts-2023");
-  const emergency = getRecord<EmergencyContactsData>("maddela-emergency-contacts");
+  const hotlines = getRecord<EmergencyHotlinesData>("national-emergency-hotlines-2026");
   const provincial = getRecord<ProvincialContactsData>("quirino-provincial-contacts-2026");
   const national = getRecord<NationalContactsData>("national-agency-contacts-2026");
 
@@ -81,13 +82,14 @@ export default function ContactPage() {
               <h2>Contact directory</h2>
             </div>
             <p>
-              One disclaimer covers everything on this page: municipal and Maddela emergency lines
-              are reproduced from an April 2023 archive capture of the municipal government&apos;s
-              own website, which is currently unreachable; provincial and national entries come
-              from live official pages retrieved August 28, 2026. None of these lines has been
-              re-confirmed directly, and numbers may have changed. BetterMaddela is an independent
-              information project, not an emergency or transaction channel — in an emergency,
-              call 911.
+              One disclaimer covers everything on this page: municipal directory lines are
+              reproduced from an April 2023 archive capture of the municipal government&apos;s own
+              website, which is currently unreachable; provincial and national agency entries come
+              from live official pages retrieved August 28, 2026. Only the national 911 and 143
+              hotlines are listed as emergency numbers — Maddela-specific emergency lines are
+              pending direct confirmation and are published nowhere on this site. BetterMaddela is
+              an independent information project, not an emergency or transaction channel — in an
+              emergency, call 911.
             </p>
           </div>
 
@@ -112,11 +114,15 @@ export default function ContactPage() {
 
           <div className="hotlines-header" style={{ marginTop: "var(--spacing-lg)" }}>
             <div className="hotlines-title">
-              <h2>Emergency and safety</h2>
+              <h2>Emergency hotlines</h2>
             </div>
+            <p>
+              National hotlines that serve every municipality in the Philippines, including
+              Maddela.
+            </p>
           </div>
           <div className="grid grid-2" style={{ gap: "var(--spacing-md)" }}>
-            {emergency.data.entries.map((entry) => (
+            {hotlines.data.entries.map((entry) => (
               <DirectoryCard
                 key={entry.service}
                 heading={entry.service}
@@ -125,7 +131,17 @@ export default function ContactPage() {
               />
             ))}
           </div>
-          <RecordMeta record={emergency} />
+          <div className="contact-pending">
+            <h3>Maddela emergency lines are pending confirmation</h3>
+            <p>
+              Local emergency services — PNP Maddela, the Maddela Fire Station, the Municipal
+              DRRRMO, and the provincial Rescue 910 team — are listed here by name only. Their
+              numbers are not published on this site because they have not been confirmed directly
+              by the project. Do not rely on archived numbers from other websites. In an
+              emergency, call 911.
+            </p>
+          </div>
+          <RecordMeta record={hotlines} />
 
           <div className="hotlines-header" style={{ marginTop: "var(--spacing-lg)" }}>
             <div className="hotlines-title">
