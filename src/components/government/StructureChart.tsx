@@ -10,6 +10,7 @@
  *
  * Data discipline: incumbent names come ONLY from the reviewed
  * `maddela-leadership-snapshot` record passed in as props by the server page.
+ * Monogram avatars are derived from those names at render time — nothing else.
  *
  * Motion: one GSAP timeline draws connectors and cascades tiers top-down,
  * once, ~1s total; skipped entirely under prefers-reduced-motion; content is
@@ -21,6 +22,7 @@ import { useEffect, useRef } from "react";
 import type { ReactNode } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { monogramInitials } from "@/lib/monogram";
 
 export interface VerifiedIncumbent {
   name: string;
@@ -38,6 +40,12 @@ const EX_OFFICIO_SEATS = [
   "SK Federation President",
   "IPMR",
 ] as const;
+
+const EX_OFFICIO_ICONS: Record<(typeof EX_OFFICIO_SEATS)[number], string> = {
+  "ABC President": "bi-people-fill",
+  "SK Federation President": "bi-stars",
+  IPMR: "bi-person-badge-fill",
+};
 
 const OFFICE_ICONS: Record<string, ReactNode> = {
   "Planning & Development": (
@@ -130,12 +138,19 @@ export default function StructureChart({ mayor, viceMayor, councilors }: Structu
           { autoAlpha: 1, y: 0 },
           "-=0.2",
         )
-        // Draw every connector downward.
+        // Draw every connector downward. Drop lines fade instead of scaling
+        // so their junction dots are not stretched by the transform.
         .fromTo(
-          "[data-gsx-line]",
+          "[data-gsx-line]:not(.govt-link-line--drop)",
           { scaleY: 0 },
           { scaleY: 1, duration: 0.35, ease: "power1.inOut", stagger: 0.05 },
           "-=0.1",
+        )
+        .fromTo(
+          ".govt-link-line--drop",
+          { autoAlpha: 0 },
+          { autoAlpha: 1, duration: 0.3 },
+          "<",
         )
         .fromTo(
           "[data-gsx-council]",
@@ -191,6 +206,11 @@ export default function StructureChart({ mayor, viceMayor, councilors }: Structu
 
       {/* Tier 1 — Executive */}
       <article className="govt-node govt-node--mayor" data-gsx-mayor>
+        {mayor && (
+          <span className="govt-mono" aria-hidden="true">
+            {monogramInitials(mayor.name)}
+          </span>
+        )}
         <h3 className="govt-node-role">Mayor</h3>
         {mayor ? (
           <>
@@ -222,6 +242,11 @@ export default function StructureChart({ mayor, viceMayor, councilors }: Structu
       {/* Tier 2 — Legislature */}
       <div className="govt-split">
         <article className="govt-node govt-node--vice" data-gsx-council>
+          {viceMayor && (
+            <span className="govt-mono govt-mono--sm" aria-hidden="true">
+              {monogramInitials(viceMayor.name)}
+            </span>
+          )}
           <h3 className="govt-node-role">Vice Mayor</h3>
           {viceMayor ? (
             <>
@@ -249,7 +274,9 @@ export default function StructureChart({ mayor, viceMayor, councilors }: Structu
               <li key={`seat-${index + 1}`} className="govt-seat-cell" data-gsx-seat>
                 {member ? (
                   <>
-                    <span className="govt-seat govt-seat--filled" aria-hidden="true" />
+                    <span className="govt-seat-mono" aria-hidden="true">
+                      {monogramInitials(member.name)}
+                    </span>
                     <span className="govt-seat-name">{member.name}</span>
                   </>
                 ) : (
@@ -264,7 +291,10 @@ export default function StructureChart({ mayor, viceMayor, councilors }: Structu
           <ul className="govt-exofficio">
             {EX_OFFICIO_SEATS.map((title) => (
               <li key={title} className="govt-exofficio-row">
-                <span className="govt-exofficio-role">{title}</span>
+                <span className="govt-exofficio-role">
+                  <i className={`bi ${EX_OFFICIO_ICONS[title]}`} aria-hidden="true" />
+                  {title}
+                </span>
                 <SeatMarker />
               </li>
             ))}
@@ -280,18 +310,19 @@ export default function StructureChart({ mayor, viceMayor, councilors }: Structu
         <ul className="govt-offices">
           {LINE_OFFICES.map((office) => (
             <li key={office} className="govt-office" data-gsx-office>
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-                focusable="false"
-              >
-                {OFFICE_ICONS[office]}
-              </svg>
+              <span className="govt-office-icon" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  focusable="false"
+                >
+                  {OFFICE_ICONS[office]}
+                </svg>
+              </span>
               <span>{office}</span>
             </li>
           ))}
