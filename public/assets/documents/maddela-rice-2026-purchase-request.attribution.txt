@@ -1,0 +1,8 @@
+File: maddela-rice-2026-purchase-request.pdf
+Source: Municipality of Maddela, hosted by the Department of Agriculture FFEDIS portal — https://ffedis.da.gov.ph/storage/npss/attachments/rfq/26/9leBesHh1YYqsB7d5HSSLuW6eBotUW2sA82SP585.pdf
+Description: Purchase Request PR No. 2026-06-832 (2026-06-23) — Supply & Delivery of Rice for Assistance to Indigent Families, PHP 6,000,240
+Date: June 23, 2026
+Author: Municipality of Maddela
+License: Work of the Government of the Philippines; no copyright subsists under Sec. 176.1, Republic Act 8293
+SHA-256: 2739544ea7551aed9c3ddc73363d273c8df83d7a63d286a666461357fda1af0b
+Served unmodified by BetterMaddela. No endorsement by the Municipality of Maddela or the Department of Agriculture is implied.

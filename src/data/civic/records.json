@@ -12983,9 +12983,10 @@
         "attribution": "Administrative boundaries © UN OCHA Philippines COD-AB, CC BY-IGO 3.0",
         "license": "CC BY-IGO 3.0",
         "licenseUrl": "https://creativecommons.org/licenses/by/3.0/igo/legalcode",
-        "method": "Province polygons from the same OCHA COD-AB Philippines geodatabase (v03, features valid on 2025-02-13) used for the Maddela atlas, phl_admin2 layer. Mainland Luzon covers Regions I, II excluding Batanes, III, CAR, NCR, IV-A excluding island provinces, and V excluding Catanduanes and Masbate, as directed by the owner. The four NCR district rows are merged into a single Metropolitan Manila feature. Geometry is simplified at 0.012 degrees with islets under 0.015 degrees of bbox diagonal dropped for stylized web rendering. Maddela is rebuilt from the reviewed municipal atlas geometry and re-projected into the same frame: its centroid sits within 2 km of the COD-AB municipal center and its area computes to 773 versus 770.62 square kilometers. Not an official survey boundary.",
+        "method": "Province polygons from the same OCHA COD-AB Philippines geodatabase (v03, features valid on 2025-02-13) used for the Maddela atlas, phl_admin2 layer. Mainland Luzon covers Regions I, II excluding Batanes, III, CAR, NCR, IV-A excluding island provinces, and V excluding Catanduanes and Masbate, as directed by the owner. The four NCR district rows are merged into a single Metropolitan Manila feature. Geometry is simplified at 0.012 degrees with islets under 0.015 degrees of bbox diagonal dropped for stylized web rendering. The artifact also carries the Maddela municipality polygon, reused from the reviewed maddela-boundaries-codab artifact of the same dataset, so the interactive locator can highlight it. Maddela is rebuilt from the reviewed municipal atlas geometry and re-projected into the same frame: its centroid sits within 2 km of the COD-AB municipal center and its area computes to 773 versus 770.62 square kilometers. Not an official survey boundary.",
         "geometryArtifact": "/assets/data/luzon-mainland-boundaries-codab.geojson",
         "provinceCount": 31,
+        "includesMunicipality": "Maddela (PSGC 0205704000), reused from the reviewed maddela-boundaries-codab artifact of the same OCHA COD-AB v03 dataset",
         "ncrMergedFrom": 4,
         "datasetVersion": "v03",
         "validOn": "2025-02-13"
@@ -13009,6 +13010,9 @@
         "provinceCount": [
           "ocha-codab-phl-admin-boundaries-2026-08"
         ],
+        "includesMunicipality": [
+          "ocha-codab-phl-admin-boundaries-2026-08"
+        ],
         "ncrMergedFrom": [
           "ocha-codab-phl-admin-boundaries-2026-08"
         ],
@@ -13027,7 +13031,388 @@
       "updateCadence": "annually",
       "owner": "BetterMaddela barangay and statistics data steward",
       "effectiveFrom": "2026-08-29",
-      "notes": "Research handoff: research/2026-08-29-luzon-context-map.md. Mainland scope (31 features incl. merged Metropolitan Manila) fixed by owner instruction on 2026-08-29; Batanes, Catanduanes, Masbate, Marinduque, Mindoro Occidental and Oriental, Romblon, and Palawan are excluded as island provinces. The locator is decorative context: province names render as SVG title tooltips on hover, and no boundary is presented as a survey line."
+      "notes": "Research handoff: research/2026-08-29-luzon-context-map.md. Mainland scope (31 features incl. merged Metropolitan Manila) fixed by owner instruction on 2026-08-29; Batanes, Catanduanes, Masbate, Marinduque, Mindoro Occidental and Oriental, Romblon, and Palawan are excluded as island provinces. The locator is interactive context: it opens framed on Quirino with Maddela highlighted, and users may drag and zoom out to the rest of mainland Luzon; province names appear on hover, and no boundary is presented as a survey line. A static SVG rendering is kept as the no-JS fallback."
+    },
+    {
+      "id": "dpwh-photo-kimmalugong-cw1-2025-10",
+      "type": "media-item",
+      "label": "DPWH photograph on file — access road leading to Kimmalugong Falls, component P00937839LZ-CW1 (2025-10-23)",
+      "data": {
+        "file": "/assets/images/dpwh-kimmalugong-access-road-2025-10-01.jpg",
+        "sha256": "db47eb113382c1c1d539c7429af4f0cb8ed2d5ac57a9c4089adaf35542593ec9",
+        "dimensions": "1280x720",
+        "bytes": 135599,
+        "credit": "Photograph published by the Department of Public Works and Highways on its transparency portal.",
+        "license": "Work of the Government of the Philippines; no copyright subsists under Sec. 176.1 of Republic Act 8293.",
+        "sourcePage": "https://s3.transparency.dpwh.gov.ph/dpwh-gallery/fy2025/P00937839LZ-CW1/1_b91fd3ba-5ea1-45c1-b8b7-f8bd51caa34c.jpg",
+        "alt": "Concrete access road under construction with a STOP ROAD CLOSED sign and DPWH project billboards",
+        "caption": "Component P00937839LZ-CW1 of DPWH contract 25BK0004 — access road leading to Kimmalugong Falls, Jose Ancheta — photographed 2025-10-23.",
+        "capturedAt": "2025-10-23",
+        "modified": false
+      },
+      "sourceIds": [
+        "dpwh-s3-25bk0004-cw1-progress-photo-1",
+        "dpwh-transparency-api-25bk0004-images"
+      ],
+      "claimSources": {
+        "file": ["dpwh-s3-25bk0004-cw1-progress-photo-1"],
+        "sha256": ["dpwh-s3-25bk0004-cw1-progress-photo-1"],
+        "dimensions": ["dpwh-s3-25bk0004-cw1-progress-photo-1"],
+        "bytes": ["dpwh-s3-25bk0004-cw1-progress-photo-1"],
+        "credit": ["dpwh-s3-25bk0004-cw1-progress-photo-1"],
+        "license": ["dpwh-s3-25bk0004-cw1-progress-photo-1"],
+        "sourcePage": ["dpwh-s3-25bk0004-cw1-progress-photo-1"],
+        "alt": ["dpwh-s3-25bk0004-cw1-progress-photo-1"],
+        "caption": [
+          "dpwh-s3-25bk0004-cw1-progress-photo-1",
+          "dpwh-transparency-api-25bk0004-images"
+        ],
+        "capturedAt": ["dpwh-transparency-api-25bk0004-images"],
+        "modified": ["dpwh-s3-25bk0004-cw1-progress-photo-1"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-29",
+      "acceptedBy": "owner-approval-2026-08-29",
+      "acceptedAt": "2026-08-29T12:40:00+08:00",
+      "nextReviewOn": "2026-09-28",
+      "updateCadence": "monthly",
+      "owner": "BetterMaddela projects and media data steward",
+      "effectiveFrom": "2026-08-29",
+      "notes": "Served copy hash-matches the publisher's original. capturedAt was read from the API image listing earlier on 2026-08-29; the same endpoint returned 403/404 on a same-day re-check, so re-confirm at the next review. Rights basis: research/2026-08-29-maddela-imagery-rights.md (Sec. 176.1 government works)."
+    },
+    {
+      "id": "dpwh-photo-kimmalugong-cw2-2025-10",
+      "type": "media-item",
+      "label": "DPWH photograph on file — access road leading to Kimmalugong Falls, component P00937839LZ-CW2 (2025-10-23)",
+      "data": {
+        "file": "/assets/images/dpwh-kimmalugong-access-road-2025-10-02.jpg",
+        "sha256": "f0605935ac6dc42b85b6df3ecbf9b4d069fa1521402951658349467ace393419",
+        "dimensions": "1280x720",
+        "bytes": 244418,
+        "credit": "Photograph published by the Department of Public Works and Highways on its transparency portal.",
+        "license": "Work of the Government of the Philippines; no copyright subsists under Sec. 176.1 of Republic Act 8293.",
+        "sourcePage": "https://s3.transparency.dpwh.gov.ph/dpwh-gallery/fy2025/P00937839LZ-CW2/1_35d0a3a1-8235-461f-8979-48743cceae66.jpg",
+        "alt": "Ongoing road construction with concrete works and heavy equipment",
+        "caption": "Component P00937839LZ-CW2 of DPWH contract 25BK0004 — access road leading to Kimmalugong Falls, Jose Ancheta — photographed 2025-10-23.",
+        "capturedAt": "2025-10-23",
+        "modified": false
+      },
+      "sourceIds": [
+        "dpwh-s3-25bk0004-cw2-progress-photo-1",
+        "dpwh-transparency-api-25bk0004-images"
+      ],
+      "claimSources": {
+        "file": ["dpwh-s3-25bk0004-cw2-progress-photo-1"],
+        "sha256": ["dpwh-s3-25bk0004-cw2-progress-photo-1"],
+        "dimensions": ["dpwh-s3-25bk0004-cw2-progress-photo-1"],
+        "bytes": ["dpwh-s3-25bk0004-cw2-progress-photo-1"],
+        "credit": ["dpwh-s3-25bk0004-cw2-progress-photo-1"],
+        "license": ["dpwh-s3-25bk0004-cw2-progress-photo-1"],
+        "sourcePage": ["dpwh-s3-25bk0004-cw2-progress-photo-1"],
+        "alt": ["dpwh-s3-25bk0004-cw2-progress-photo-1"],
+        "caption": [
+          "dpwh-s3-25bk0004-cw2-progress-photo-1",
+          "dpwh-transparency-api-25bk0004-images"
+        ],
+        "capturedAt": ["dpwh-transparency-api-25bk0004-images"],
+        "modified": ["dpwh-s3-25bk0004-cw2-progress-photo-1"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-29",
+      "acceptedBy": "owner-approval-2026-08-29",
+      "acceptedAt": "2026-08-29T12:40:00+08:00",
+      "nextReviewOn": "2026-09-28",
+      "updateCadence": "monthly",
+      "owner": "BetterMaddela projects and media data steward",
+      "effectiveFrom": "2026-08-29",
+      "notes": "Served copy hash-matches the publisher's original. capturedAt was read from the API image listing earlier on 2026-08-29; the same endpoint returned 403/404 on a same-day re-check, so re-confirm at the next review. Rights basis: research/2026-08-29-maddela-imagery-rights.md (Sec. 176.1 government works)."
+    },
+    {
+      "id": "dpwh-photo-divisoria-fmr-2026-05",
+      "type": "media-item",
+      "label": "DPWH photograph on file — concreting of Divisoria FMR, component P00969101LZ-CW1 (2026-05-07)",
+      "data": {
+        "file": "/assets/images/dpwh-divisoria-fmr-2026-05.jpg",
+        "sha256": "8b6d97b4577bedfce428b958a95c5ac61e62f374724cf3f6916cf8b2670d8710",
+        "dimensions": "1280x720",
+        "bytes": 113557,
+        "credit": "Photograph published by the Department of Public Works and Highways on its transparency portal.",
+        "license": "Work of the Government of the Philippines; no copyright subsists under Sec. 176.1 of Republic Act 8293.",
+        "sourcePage": "https://apps2.dpwh.gov.ph/proxy_infratrack/proxy.ashx?https://services1.arcgis.com/IwZZTMxZCmAmFYvF/arcgis/rest/services/service_30b3f0ce54a9483fac9774a40be43d3b/FeatureServer/0/82310/attachments/189464",
+        "alt": "Completed concrete farm-to-market road lane with a DPWH project marker",
+        "caption": "Component P00969101LZ-CW1 of DPWH contract 25BK0087 — concreting of Divisoria FMR, Barangay Divisoria Norte — photographed 2026-05-07. The marker in frame reads \"2025 FMR LENGTH 11 KM\".",
+        "capturedAt": "2026-05-07",
+        "modified": false
+      },
+      "sourceIds": [
+        "dpwh-arcgis-25bk0087-cw1-completion-photo-1",
+        "dpwh-transparency-api-25bk0087-images"
+      ],
+      "claimSources": {
+        "file": ["dpwh-arcgis-25bk0087-cw1-completion-photo-1"],
+        "sha256": ["dpwh-arcgis-25bk0087-cw1-completion-photo-1"],
+        "dimensions": ["dpwh-arcgis-25bk0087-cw1-completion-photo-1"],
+        "bytes": ["dpwh-arcgis-25bk0087-cw1-completion-photo-1"],
+        "credit": ["dpwh-arcgis-25bk0087-cw1-completion-photo-1"],
+        "license": ["dpwh-arcgis-25bk0087-cw1-completion-photo-1"],
+        "sourcePage": ["dpwh-arcgis-25bk0087-cw1-completion-photo-1"],
+        "alt": ["dpwh-arcgis-25bk0087-cw1-completion-photo-1"],
+        "caption": [
+          "dpwh-arcgis-25bk0087-cw1-completion-photo-1",
+          "dpwh-transparency-api-25bk0087-images"
+        ],
+        "capturedAt": ["dpwh-transparency-api-25bk0087-images"],
+        "modified": ["dpwh-arcgis-25bk0087-cw1-completion-photo-1"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-29",
+      "acceptedBy": "owner-approval-2026-08-29",
+      "acceptedAt": "2026-08-29T12:40:00+08:00",
+      "nextReviewOn": "2026-09-28",
+      "updateCadence": "monthly",
+      "owner": "BetterMaddela projects and media data steward",
+      "effectiveFrom": "2026-08-29",
+      "notes": "Served copy hash-matches the publisher's original. capturedAt was read from the API image listing earlier on 2026-08-29; the same endpoint returned 403 on a same-day re-check, so re-confirm at the next review. Rights basis: research/2026-08-29-maddela-imagery-rights.md (Sec. 176.1 government works)."
+    },
+    {
+      "id": "dpwh-photo-governors-rapids-2026-03",
+      "type": "media-item",
+      "label": "DPWH photograph on file — access road leading to Governor's Rapids, component P00937393LZ-CW1 (2026-03-11)",
+      "data": {
+        "file": "/assets/images/dpwh-governors-rapids-road-2026-03.jpg",
+        "sha256": "04708b78f38e9550dc019f66c0c46b43be1800b1f89e29dc18a0c2ad784e318f",
+        "dimensions": "1280x961",
+        "bytes": 200692,
+        "credit": "Photograph published by the Department of Public Works and Highways on its transparency portal.",
+        "license": "Work of the Government of the Philippines; no copyright subsists under Sec. 176.1 of Republic Act 8293.",
+        "sourcePage": "https://apps2.dpwh.gov.ph/proxy_infratrack/proxy.ashx?https://services1.arcgis.com/IwZZTMxZCmAmFYvF/arcgis/rest/services/service_30b3f0ce54a9483fac9774a40be43d3b/FeatureServer/0/72433/attachments/164568",
+        "alt": "Completed concrete access road winding through farmland with guardrails",
+        "caption": "Component P00937393LZ-CW1 of DPWH contract 25BK0001 — access road leading to Governor's Rapids — photographed 2026-03-11.",
+        "capturedAt": "2026-03-11",
+        "modified": false
+      },
+      "sourceIds": [
+        "dpwh-arcgis-25bk0001-cw1-completion-photo-1",
+        "dpwh-transparency-api-25bk0001-images"
+      ],
+      "claimSources": {
+        "file": ["dpwh-arcgis-25bk0001-cw1-completion-photo-1"],
+        "sha256": ["dpwh-arcgis-25bk0001-cw1-completion-photo-1"],
+        "dimensions": ["dpwh-arcgis-25bk0001-cw1-completion-photo-1"],
+        "bytes": ["dpwh-arcgis-25bk0001-cw1-completion-photo-1"],
+        "credit": ["dpwh-arcgis-25bk0001-cw1-completion-photo-1"],
+        "license": ["dpwh-arcgis-25bk0001-cw1-completion-photo-1"],
+        "sourcePage": ["dpwh-arcgis-25bk0001-cw1-completion-photo-1"],
+        "alt": ["dpwh-arcgis-25bk0001-cw1-completion-photo-1"],
+        "caption": [
+          "dpwh-arcgis-25bk0001-cw1-completion-photo-1",
+          "dpwh-transparency-api-25bk0001-images"
+        ],
+        "capturedAt": [
+          "dpwh-arcgis-25bk0001-cw1-completion-photo-1",
+          "dpwh-transparency-api-25bk0001-images"
+        ],
+        "modified": ["dpwh-arcgis-25bk0001-cw1-completion-photo-1"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-29",
+      "acceptedBy": "owner-approval-2026-08-29",
+      "acceptedAt": "2026-08-29T12:40:00+08:00",
+      "nextReviewOn": "2026-09-28",
+      "updateCadence": "monthly",
+      "owner": "BetterMaddela projects and media data steward",
+      "effectiveFrom": "2026-08-29",
+      "notes": "Served copy hash-matches the publisher's original. capturedAt 2026-03-11 is corroborated by the InfraTrack submission date (20260311) and the attachment file name read 2026-08-29. Rights basis: research/2026-08-29-maddela-imagery-rights.md (Sec. 176.1 government works)."
+    },
+    {
+      "id": "nia-photo-balligui-spip",
+      "type": "media-item",
+      "label": "NIA Region II photograph on file — Balligui SPIP turn-over activity",
+      "data": {
+        "file": "/assets/images/nia-balligui-spip-photo.png",
+        "sha256": "f6564bcab410d483dcc6564af09a966967690f6cbf28627ad5e136f86a79475f",
+        "dimensions": "687x400",
+        "bytes": 583173,
+        "credit": "Photograph published by the National Irrigation Administration Region II.",
+        "license": "Work of the Government of the Philippines; no copyright subsists under Sec. 176.1 of Republic Act 8293.",
+        "sourcePage": "https://region2.nia.gov.ph/sites/r2/files/field/image/NV%20SolarPump.png",
+        "alt": "Ribbon-cutting ceremony at the Balligui Small Scale Irrigation Project with officials and attendees",
+        "caption": "Turn-over activity at the Balligui Small Scale Irrigation Project, as published by NIA Region II.",
+        "modified": false
+      },
+      "sourceIds": [
+        "nia-r2-balligui-spip-photo-file",
+        "nia-r2-balligui-spip-turnover"
+      ],
+      "claimSources": {
+        "file": ["nia-r2-balligui-spip-photo-file"],
+        "sha256": ["nia-r2-balligui-spip-photo-file"],
+        "dimensions": ["nia-r2-balligui-spip-photo-file"],
+        "bytes": ["nia-r2-balligui-spip-photo-file"],
+        "credit": ["nia-r2-balligui-spip-photo-file"],
+        "license": ["nia-r2-balligui-spip-photo-file"],
+        "sourcePage": ["nia-r2-balligui-spip-photo-file"],
+        "alt": ["nia-r2-balligui-spip-photo-file"],
+        "caption": [
+          "nia-r2-balligui-spip-photo-file",
+          "nia-r2-balligui-spip-turnover"
+        ],
+        "modified": ["nia-r2-balligui-spip-photo-file"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-29",
+      "acceptedBy": "owner-approval-2026-08-29",
+      "acceptedAt": "2026-08-29T12:40:00+08:00",
+      "nextReviewOn": "2026-09-28",
+      "updateCadence": "monthly",
+      "owner": "BetterMaddela projects and media data steward",
+      "effectiveFrom": "2026-08-29",
+      "notes": "Served copy hash-matches the publisher's original. Wide ceremony scene kept under the wide-ceremony lane; no close-up portraits. No capture date is stated on the image and none is claimed. Related record: nia-balligui-spip. Rights basis: research/2026-08-29-maddela-imagery-rights.md (Sec. 176.1 government works)."
+    },
+    {
+      "id": "maddela-rice-2026-purchase-request-file",
+      "type": "transparency-document",
+      "label": "Purchase Request PR No. 2026-06-832 — rice food assistance (PHP 6,000,240)",
+      "data": {
+        "file": "/assets/documents/maddela-rice-2026-purchase-request.pdf",
+        "sha256": "2739544ea7551aed9c3ddc73363d273c8df83d7a63d286a666461357fda1af0b",
+        "bytes": 144600,
+        "documentForm": "Purchase Request",
+        "referenceNumber": "PR No. 2026-06-832",
+        "documentDate": "2026-06-23",
+        "publishingBody": "Municipality of Maddela, published via the DA FFEDIS portal",
+        "subject": "Supply & Delivery of Rice for Assistance to Indigent Families — Food Assistance / Rice Distribution Project (13,044 bags of 10 kg at PHP 460 per bag)",
+        "amount": 6000240,
+        "currency": "PHP",
+        "servedUnmodified": true
+      },
+      "sourceIds": [
+        "ffedis-2026-06-832-purchase-request",
+        "da-ffedis-2026-06-832"
+      ],
+      "claimSources": {
+        "file": ["ffedis-2026-06-832-purchase-request"],
+        "sha256": ["ffedis-2026-06-832-purchase-request"],
+        "bytes": ["ffedis-2026-06-832-purchase-request"],
+        "documentForm": ["ffedis-2026-06-832-purchase-request"],
+        "referenceNumber": ["ffedis-2026-06-832-purchase-request"],
+        "documentDate": ["ffedis-2026-06-832-purchase-request"],
+        "publishingBody": ["ffedis-2026-06-832-purchase-request"],
+        "subject": [
+          "ffedis-2026-06-832-purchase-request",
+          "da-ffedis-2026-06-832"
+        ],
+        "amount": [
+          "ffedis-2026-06-832-purchase-request",
+          "da-ffedis-2026-06-832"
+        ],
+        "currency": ["ffedis-2026-06-832-purchase-request"],
+        "servedUnmodified": ["ffedis-2026-06-832-purchase-request"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-29",
+      "acceptedBy": "owner-approval-2026-08-29",
+      "acceptedAt": "2026-08-29T12:40:00+08:00",
+      "nextReviewOn": "2026-09-28",
+      "updateCadence": "monthly",
+      "owner": "BetterMaddela projects and media data steward",
+      "effectiveFrom": "2026-08-29",
+      "notes": "Served copy is byte-identical to the FFEDIS-hosted original (SHA-256 verified 2026-08-29). Content read from the document: requested by the Municipal Social Welfare and Development Office; approved by the Municipal Mayor. The authoritative copy remains the publisher's."
+    },
+    {
+      "id": "maddela-rice-2026-notice-of-award-file",
+      "type": "transparency-document",
+      "label": "Notice of Award — rice food assistance (PHP 6,000,240)",
+      "data": {
+        "file": "/assets/documents/maddela-rice-2026-notice-of-award.pdf",
+        "sha256": "d4ff47df7b13b20737702e3e1b3c193cb72fb300923e1d8d7086565ac950a480",
+        "bytes": 152544,
+        "documentForm": "Notice of Award",
+        "documentDate": "2026-07-08",
+        "publishingBody": "Municipality of Maddela, published via the DA FFEDIS portal",
+        "subject": "Notice of Award for the Supply & Delivery of Rice for Assistance to Indigent Families, addressed to the Maddela Auto Savings Multi-Purpose Cooperative, Poblacion Norte",
+        "amount": 6000240,
+        "currency": "PHP",
+        "servedUnmodified": true
+      },
+      "sourceIds": [
+        "ffedis-2026-06-832-notice-of-award",
+        "da-ffedis-2026-06-832"
+      ],
+      "claimSources": {
+        "file": ["ffedis-2026-06-832-notice-of-award"],
+        "sha256": ["ffedis-2026-06-832-notice-of-award"],
+        "bytes": ["ffedis-2026-06-832-notice-of-award"],
+        "documentForm": ["ffedis-2026-06-832-notice-of-award"],
+        "documentDate": ["ffedis-2026-06-832-notice-of-award"],
+        "publishingBody": ["ffedis-2026-06-832-notice-of-award"],
+        "subject": [
+          "ffedis-2026-06-832-notice-of-award",
+          "da-ffedis-2026-06-832"
+        ],
+        "amount": [
+          "ffedis-2026-06-832-notice-of-award",
+          "da-ffedis-2026-06-832"
+        ],
+        "currency": ["ffedis-2026-06-832-notice-of-award"],
+        "servedUnmodified": ["ffedis-2026-06-832-notice-of-award"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-29",
+      "acceptedBy": "owner-approval-2026-08-29",
+      "acceptedAt": "2026-08-29T12:40:00+08:00",
+      "nextReviewOn": "2026-09-28",
+      "updateCadence": "monthly",
+      "owner": "BetterMaddela projects and media data steward",
+      "effectiveFrom": "2026-08-29",
+      "notes": "Served copy is byte-identical to the FFEDIS-hosted original (SHA-256 verified 2026-08-29). Content read from the document: notice dated July 8, 2026, addressed to Jovelyn B. Colbongan, General Manager of the Maddela Auto Savings Multi-Purpose Cooperative. The authoritative copy remains the publisher's."
+    },
+    {
+      "id": "maddela-rice-2026-contract-file",
+      "type": "transparency-document",
+      "label": "Contract Agreement — rice food assistance (PHP 6,000,240)",
+      "data": {
+        "file": "/assets/documents/maddela-rice-2026-contract-agreement.pdf",
+        "sha256": "793afb323e2a5e1654196864c34b1714efab92ab96096e35793f92fe90708cb2",
+        "bytes": 191930,
+        "documentForm": "Contract Agreement Form",
+        "referenceNumber": "Control No. 2026-SSA-0001",
+        "documentDate": "2026-07-09",
+        "publishingBody": "Municipality of Maddela, published via the DA FFEDIS portal",
+        "subject": "Contract agreement between the Municipality of Maddela and the Maddela Auto Savings Multi-Purpose Cooperative for the Supply & Delivery of Rice for Assistance to Indigent Families",
+        "amount": 6000240,
+        "currency": "PHP",
+        "servedUnmodified": true
+      },
+      "sourceIds": [
+        "ffedis-2026-06-832-contract",
+        "da-ffedis-2026-06-832"
+      ],
+      "claimSources": {
+        "file": ["ffedis-2026-06-832-contract"],
+        "sha256": ["ffedis-2026-06-832-contract"],
+        "bytes": ["ffedis-2026-06-832-contract"],
+        "documentForm": ["ffedis-2026-06-832-contract"],
+        "referenceNumber": ["ffedis-2026-06-832-contract"],
+        "documentDate": ["ffedis-2026-06-832-contract"],
+        "publishingBody": ["ffedis-2026-06-832-contract"],
+        "subject": [
+          "ffedis-2026-06-832-contract",
+          "da-ffedis-2026-06-832"
+        ],
+        "amount": ["ffedis-2026-06-832-contract", "da-ffedis-2026-06-832"],
+        "currency": ["ffedis-2026-06-832-contract"],
+        "servedUnmodified": ["ffedis-2026-06-832-contract"]
+      },
+      "status": "verified",
+      "lastVerified": "2026-08-29",
+      "acceptedBy": "owner-approval-2026-08-29",
+      "acceptedAt": "2026-08-29T12:40:00+08:00",
+      "nextReviewOn": "2026-09-28",
+      "updateCadence": "monthly",
+      "owner": "BetterMaddela projects and media data steward",
+      "effectiveFrom": "2026-08-29",
+      "notes": "Served copy is byte-identical to the FFEDIS-hosted original (SHA-256 verified 2026-08-29). Content read from the document: Contract Agreement Form, Control No. 2026-SSA-0001, dated July 9, 2026, between the LGU Maddela and the Maddela Auto Savings Multi-Purpose Cooperative. The authoritative copy remains the publisher's."
     }
   ]
 }

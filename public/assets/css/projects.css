@@ -338,3 +338,100 @@
     transform-origin: center top;
   }
 }
+
+/* ---- On-file media & documents ---- */
+
+.proj-media {
+  margin: var(--spacing-sm) 0 0;
+}
+
+.proj-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #e8dfc8;
+  border-radius: 14px;
+}
+
+.proj-media figcaption {
+  margin-top: 8px;
+  color: #6b6353;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.proj-media figcaption span {
+  display: block;
+}
+
+.proj-media-credit a {
+  color: #8a5e0f;
+  text-decoration: underline;
+}
+
+.proj-media-strip {
+  margin: var(--spacing-md) 0 0;
+}
+
+.proj-media-title {
+  margin: 0 0 var(--spacing-sm);
+  color: #3a2f1b;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.proj-media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--spacing-sm);
+}
+
+.proj-media-grid .proj-media {
+  margin: 0;
+}
+
+.proj-doc-list {
+  list-style: none;
+  margin: var(--spacing-md) 0 0;
+  padding: 0;
+  display: grid;
+  gap: var(--spacing-sm);
+}
+
+.proj-doc-list li {
+  border: 1px solid #e8dfc8;
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+.proj-doc-head {
+  margin: 0;
+  color: #3a2f1b;
+  font-size: 0.9rem;
+}
+
+.proj-doc-head strong {
+  color: #221d14;
+}
+
+.proj-doc-subject {
+  margin: 6px 0 0;
+  color: #6b6353;
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.proj-doc-note {
+  margin: 6px 0 0;
+  color: #6b6353;
+  font-size: 0.82rem;
+}
+
+.proj-doc-note a {
+  color: #8a5e0f;
+  text-decoration: underline;
+}
+
+.proj-doc-list .record-meta {
+  margin: 8px 0 0;
+}

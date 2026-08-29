@@ -1,0 +1,8 @@
+File: dpwh-governors-rapids-road-2026-03.jpg
+Source: Department of Public Works and Highways transparency portal (InfraTrack attachment) — https://apps2.dpwh.gov.ph/proxy_infratrack/proxy.ashx?https://services1.arcgis.com/IwZZTMxZCmAmFYvF/arcgis/rest/services/service_30b3f0ce54a9483fac9774a40be43d3b/FeatureServer/0/72433/attachments/164568
+Description: Completion photograph of DPWH contract 25BK0001, component P00937393LZ-CW1 — access road leading to Governor's Rapids, Maddela, Quirino
+Date: March 11, 2026 (attachment file name Geotagged_Photo1-20260311-125241.jpg; InfraTrack submission date 20260311)
+Author: Department of Public Works and Highways
+License: Work of the Government of the Philippines; no copyright subsists under Sec. 176.1, Republic Act 8293
+SHA-256: 04708b78f38e9550dc019f66c0c46b43be1800b1f89e29dc18a0c2ad784e318f
+Served unmodified by BetterMaddela. No endorsement by the Department of Public Works and Highways is implied.

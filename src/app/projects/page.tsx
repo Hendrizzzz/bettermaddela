@@ -73,6 +73,34 @@ interface AggregateData {
   limitations: string;
 }
 
+interface MediaData {
+  file: string;
+  sha256: string;
+  dimensions: string;
+  bytes: number;
+  credit: string;
+  license: string;
+  sourcePage: string;
+  alt: string;
+  caption: string;
+  capturedAt?: string;
+  modified?: boolean;
+}
+
+interface DocumentData {
+  file: string;
+  sha256: string;
+  bytes: number;
+  documentForm: string;
+  referenceNumber?: string;
+  documentDate: string;
+  publishingBody: string;
+  subject: string;
+  amount: number;
+  currency: string;
+  servedUnmodified?: boolean;
+}
+
 /*
  * STAGE-TRACK MAPPING — conservative by design.
  *
@@ -263,7 +291,40 @@ function worksItemLine(data: WorksData, item: WorksData["items"][number]) {
     .join(" · ");
 }
 
-function WorksCard({ record }: { record: CivicRecord<WorksData> }) {
+function MediaFigure({ record }: { record: CivicRecord<MediaData> }) {
+  const data = record.data;
+  const [width, height] = data.dimensions
+    .split("x")
+    .map((value) => Number.parseInt(value, 10));
+  return (
+    <figure className="proj-media">
+      <img
+        src={data.file}
+        alt={data.alt}
+        width={Number.isNaN(width) ? undefined : width}
+        height={Number.isNaN(height) ? undefined : height}
+        loading="lazy"
+      />
+      <figcaption>
+        <span>{data.caption}</span>
+        <span className="proj-media-credit">
+          {data.credit}{" "}
+          <a href={data.sourcePage} target="_blank" rel="noopener noreferrer">
+            View original
+          </a>
+        </span>
+      </figcaption>
+    </figure>
+  );
+}
+
+function WorksCard({
+  record,
+  photos,
+}: {
+  record: CivicRecord<WorksData>;
+  photos?: CivicRecord<MediaData>[];
+}) {
   const data = record.data;
   return (
     <article className="proj-card proj-card--muted" data-reveal>
@@ -302,6 +363,17 @@ function WorksCard({ record }: { record: CivicRecord<WorksData> }) {
         </div>
       </details>
 
+      {photos && photos.length > 0 && (
+        <div className="proj-media-strip">
+          <h3 className="proj-media-title">Site photographs on file</h3>
+          <div className="proj-media-grid">
+            {photos.map((photo) => (
+              <MediaFigure key={photo.id} record={photo} />
+            ))}
+          </div>
+        </div>
+      )}
+
       <div className="proj-footer">
         <RecordMeta record={record} />
         <a
@@ -333,6 +405,18 @@ export default function ProjectsPage() {
   const limeWorks = getRecord<WorksData>("subaybayan-maddela-cy2025-municipal-works");
   const dpwhWorks = getRecord<WorksData>("dpwh-maddela-cy2025-cy2026-contracts");
   const aggregates = getRecord<AggregateData>("maddela-works-portal-aggregates");
+  const balliguiPhoto = getRecord<MediaData>("nia-photo-balligui-spip");
+  const dpwhPhotos = [
+    getRecord<MediaData>("dpwh-photo-kimmalugong-cw1-2025-10"),
+    getRecord<MediaData>("dpwh-photo-kimmalugong-cw2-2025-10"),
+    getRecord<MediaData>("dpwh-photo-divisoria-fmr-2026-05"),
+    getRecord<MediaData>("dpwh-photo-governors-rapids-2026-03"),
+  ];
+  const riceDocs = [
+    getRecord<DocumentData>("maddela-rice-2026-purchase-request-file"),
+    getRecord<DocumentData>("maddela-rice-2026-notice-of-award-file"),
+    getRecord<DocumentData>("maddela-rice-2026-contract-file"),
+  ];
 
   const projectCards: { record: CivicRecord<ProjectData> }[] = [
     { record: lusod },
@@ -428,6 +512,10 @@ export default function ProjectsPage() {
                     <StageTrack stage={data.stage} />
                   </div>
 
+                  {record.id === "nia-balligui-spip" && (
+                    <MediaFigure record={balliguiPhoto} />
+                  )}
+
                   <details className="proj-details">
                     <summary>Record detail &amp; limitations</summary>
                     <DetailBody data={data} />
@@ -502,7 +590,72 @@ export default function ProjectsPage() {
             </article>
 
             <WorksCard record={limeWorks} />
-            <WorksCard record={dpwhWorks} />
+            <WorksCard record={dpwhWorks} photos={dpwhPhotos} />
+
+            <article className="proj-card proj-card--muted" data-reveal>
+              <div className="proj-card-top">
+                <div className="proj-card-id">
+                  <h2 className="proj-name">
+                    Procurement documents on file — rice food assistance
+                  </h2>
+                  <p className="proj-metaline">
+                    Municipality of Maddela via the DA FFEDIS portal,{" "}
+                    {riceDocs.length} documents
+                  </p>
+                </div>
+                <div className="proj-amount">
+                  <span className="proj-amount-label">Contract price</span>
+                  <strong className="proj-amount-value">
+                    {formatMoney(riceDocs[0].data.amount)}
+                  </strong>
+                </div>
+              </div>
+
+              <ul className="proj-doc-list">
+                {riceDocs.map((doc) => (
+                  <li key={doc.id}>
+                    <p className="proj-doc-head">
+                      <strong>{doc.data.documentForm}</strong>
+                      {doc.data.referenceNumber
+                        ? ` · ${doc.data.referenceNumber}`
+                        : ""}{" "}
+                      · dated {doc.data.documentDate}
+                    </p>
+                    <p className="proj-doc-subject">{doc.data.subject}</p>
+                    <p className="proj-doc-note">
+                      Served copy verified byte-identical to the publisher's
+                      original (SHA-256).{" "}
+                      <a
+                        href={doc.data.file}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Open the served copy (PDF)
+                      </a>
+                    </p>
+                    <RecordMeta record={doc} />
+                  </li>
+                ))}
+              </ul>
+
+              <p className="proj-honesty">
+                Copies are served read-only for reference; the FFEDIS portal holds
+                the authoritative originals and BetterMaddela does not process
+                transactions.
+              </p>
+
+              <div className="proj-footer">
+                <a
+                  className="infra-link"
+                  href={getSource("da-ffedis-2026-06-832").url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="bi bi-arrow-up-right" aria-hidden="true" />
+                  <span>View procurement listing</span>
+                </a>
+              </div>
+            </article>
 
             <article className="proj-card proj-card--muted" data-reveal>
               <div className="proj-card-top">

@@ -1041,6 +1041,107 @@
       "sourceState": "active",
       "sha256": "e7fc18f1383a21066ecfbe595c5c1d77375c93341dedf7284f09d66dbd28c5ad",
       "notes": "Geodatabase resource phl_admin_boundaries.gdb.zip downloaded in full (360,586,879 bytes; SHA-256 above) and extracted; feature counts confirmed independently: phl_admin3 = 1,642 municipalities, phl_admin4 = 42,048 barangays. All 32 Maddela barangay polygons present, keyed by adm4_pcode (PSGC); municipal polygon keyed PH0205704. Barangay areas sum to the municipal area within rounding (770.60 vs 770.62 km2). License CC BY-IGO 3.0; attribution is displayed adjacent to every derived map. The stylized rendering used on the site is simplified and is not presented as an official survey boundary. Research handoff: research/2026-08-29-maddela-boundaries-codab.md."
+    },
+    {
+      "id": "dpwh-s3-25bk0004-cw1-progress-photo-1",
+      "title": "DPWH progress photograph — access road leading to Kimmalugong Falls, contract 25BK0004, component P00937839LZ-CW1 (2025-10-23)",
+      "publisher": "Department of Public Works and Highways transparency portal",
+      "url": "https://s3.transparency.dpwh.gov.ph/dpwh-gallery/fy2025/P00937839LZ-CW1/1_b91fd3ba-5ea1-45c1-b8b7-f8bd51caa34c.jpg",
+      "documentType": "media-file",
+      "retrievedAt": "2026-08-29",
+      "verifiedAt": "2026-08-29",
+      "verifier": "bettermaddela-review-2026-08-29-media-a",
+      "sourceState": "active",
+      "sha256": "db47eb113382c1c1d539c7429af4f0cb8ed2d5ac57a9c4089adaf35542593ec9",
+      "notes": "Downloaded 2026-08-29 and inspected: concrete road works with road-closed signage and DPWH project billboards; no identifiable persons. Served unmodified at /assets/images/dpwh-kimmalugong-access-road-2025-10-01.jpg."
+    },
+    {
+      "id": "dpwh-s3-25bk0004-cw2-progress-photo-1",
+      "title": "DPWH progress photograph — access road leading to Kimmalugong Falls, contract 25BK0004, component P00937839LZ-CW2 (2025-10-23)",
+      "publisher": "Department of Public Works and Highways transparency portal",
+      "url": "https://s3.transparency.dpwh.gov.ph/dpwh-gallery/fy2025/P00937839LZ-CW2/1_35d0a3a1-8235-461f-8979-48743cceae66.jpg",
+      "documentType": "media-file",
+      "retrievedAt": "2026-08-29",
+      "verifiedAt": "2026-08-29",
+      "verifier": "bettermaddela-review-2026-08-29-media-a",
+      "sourceState": "active",
+      "sha256": "f0605935ac6dc42b85b6df3ecbf9b4d069fa1521402951658349467ace393419",
+      "notes": "Downloaded 2026-08-29 and inspected: ongoing concrete works with trucks and equipment; no identifiable persons. Served unmodified at /assets/images/dpwh-kimmalugong-access-road-2025-10-02.jpg."
+    },
+    {
+      "id": "dpwh-arcgis-25bk0087-cw1-completion-photo-1",
+      "title": "DPWH completion photograph — concreting of Divisoria FMR, contract 25BK0087, component P00969101LZ-CW1 (2026-05-07)",
+      "publisher": "Department of Public Works and Highways transparency portal (InfraTrack attachment)",
+      "url": "https://apps2.dpwh.gov.ph/proxy_infratrack/proxy.ashx?https://services1.arcgis.com/IwZZTMxZCmAmFYvF/arcgis/rest/services/service_30b3f0ce54a9483fac9774a40be43d3b/FeatureServer/0/82310/attachments/189464",
+      "documentType": "media-file",
+      "retrievedAt": "2026-08-29",
+      "verifiedAt": "2026-08-29",
+      "verifier": "bettermaddela-review-2026-08-29-media-a",
+      "sourceState": "active",
+      "sha256": "8b6d97b4577bedfce428b958a95c5ac61e62f374724cf3f6916cf8b2670d8710",
+      "notes": "Downloaded 2026-08-29 and inspected: completed concrete farm-to-market lane with a project marker reading '2025 FMR LENGTH 11 KM'; no identifiable persons. Served unmodified at /assets/images/dpwh-divisoria-fmr-2026-05.jpg."
+    },
+    {
+      "id": "dpwh-arcgis-25bk0001-cw1-completion-photo-1",
+      "title": "DPWH completion photograph — access road leading to Governor's Rapids, contract 25BK0001, component P00937393LZ-CW1 (2026-03-11)",
+      "publisher": "Department of Public Works and Highways transparency portal (InfraTrack attachment)",
+      "url": "https://apps2.dpwh.gov.ph/proxy_infratrack/proxy.ashx?https://services1.arcgis.com/IwZZTMxZCmAmFYvF/arcgis/rest/services/service_30b3f0ce54a9483fac9774a40be43d3b/FeatureServer/0/72433/attachments/164568",
+      "documentType": "media-file",
+      "retrievedAt": "2026-08-29",
+      "verifiedAt": "2026-08-29",
+      "verifier": "bettermaddela-review-2026-08-29-media-a",
+      "sourceState": "active",
+      "sha256": "04708b78f38e9550dc019f66c0c46b43be1800b1f89e29dc18a0c2ad784e318f",
+      "notes": "Attachment provenance re-verified 2026-08-29 via the DPWH InfraTrack feature service: parent object 72433 (PCID P00937393LZ-CW1, contract 25BK0001, submission_date 20260311), attachment 164568 'Geotagged_Photo1-20260311-125241.jpg' (200692 bytes); re-download SHA-256 matches. Inspected: completed concrete road with guardrails; no identifiable persons. Served unmodified at /assets/images/dpwh-governors-rapids-road-2026-03.jpg."
+    },
+    {
+      "id": "dpwh-transparency-api-25bk0004-images",
+      "title": "DPWH transparency API project image listing — 25BK0004 (access road leading to Kimmalugong Falls)",
+      "publisher": "Department of Public Works and Highways",
+      "url": "https://api.transparency.dpwh.gov.ph/api/v1/projects/25BK0004/images",
+      "documentType": "dataset",
+      "retrievedAt": "2026-08-29",
+      "verifiedAt": "2026-08-29",
+      "verifier": "bettermaddela-review-2026-08-29-media-a",
+      "sourceState": "active",
+      "notes": "JSON image listing retrieved 2026-08-29; the photographed-component and capturedAt values published from it were read from this listing. On a same-day re-check the endpoint returned 403/404 (rate limiting or availability); re-verify at the next review cycle."
+    },
+    {
+      "id": "dpwh-transparency-api-25bk0087-images",
+      "title": "DPWH transparency API project image listing — 25BK0087 (concreting of Divisoria FMR)",
+      "publisher": "Department of Public Works and Highways",
+      "url": "https://api.transparency.dpwh.gov.ph/api/v1/projects/25BK0087/images",
+      "documentType": "dataset",
+      "retrievedAt": "2026-08-29",
+      "verifiedAt": "2026-08-29",
+      "verifier": "bettermaddela-review-2026-08-29-media-a",
+      "sourceState": "active",
+      "notes": "JSON image listing retrieved 2026-08-29; capturedAt 2026-05-07 for the completion photographs was read from this listing. On a same-day re-check the endpoint returned 403 (rate limiting or availability); re-verify at the next review cycle."
+    },
+    {
+      "id": "dpwh-transparency-api-25bk0001-images",
+      "title": "DPWH transparency API project image listing — 25BK0001 (access road leading to Governor's Rapids)",
+      "publisher": "Department of Public Works and Highways",
+      "url": "https://api.transparency.dpwh.gov.ph/api/v1/projects/25BK0001/images",
+      "documentType": "dataset",
+      "retrievedAt": "2026-08-29",
+      "verifiedAt": "2026-08-29",
+      "verifier": "bettermaddela-review-2026-08-29-media-a",
+      "sourceState": "active",
+      "notes": "JSON image listing retrieved 2026-08-29; capturedAt 2026-03-11 for the completion photographs was read from this listing and is independently corroborated by the InfraTrack submission date (20260311) and attachment file name (Geotagged_Photo1-20260311-125241.jpg). On a same-day re-check the endpoint returned 404; re-verify at the next review cycle."
+    },
+    {
+      "id": "nia-r2-balligui-spip-photo-file",
+      "title": "NIA Region II photograph of the Balligui Small Scale Irrigation Project turn-over activity, published with the region's solar-powered pump news post",
+      "publisher": "National Irrigation Administration Region II",
+      "url": "https://region2.nia.gov.ph/sites/r2/files/field/image/NV%20SolarPump.png",
+      "documentType": "media-file",
+      "retrievedAt": "2026-08-29",
+      "verifiedAt": "2026-08-29",
+      "verifier": "bettermaddela-review-2026-08-29-media-a",
+      "sourceState": "active",
+      "sha256": "f6564bcab410d483dcc6564af09a966967690f6cbf28627ad5e136f86a79475f",
+      "notes": "Downloaded 2026-08-29 and inspected: wide turn-over/ribbon-cutting ceremony scene; kept under the project's wide-ceremony lane (no close-up portraits). No capture date is stated on the image and none is claimed. Related record source: nia-r2-balligui-spip-turnover. Served unmodified at /assets/images/nia-balligui-spip-photo.png."
     }
   ]
 }
