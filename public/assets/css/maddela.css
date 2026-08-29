@@ -1825,14 +1825,33 @@ a.govt-node:focus-visible {
 .brgy-org {
   display: flex;
   flex-direction: column;
-  max-width: 56rem;
-  margin: var(--spacing-md) auto 0;
+  max-width: 60rem;
+  margin: var(--spacing-lg) auto 0;
 }
 .brgy-org-root {
   align-self: center;
-  max-width: 30rem;
+  max-width: 32rem;
   width: 100%;
   justify-content: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-xl);
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--surface) 55%, var(--surface-muted));
+  box-shadow: var(--shadow);
+}
+.brgy-org-root::before {
+  content: none;
+}
+.brgy-org-root .brgy-prof-mono--lg {
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.25rem;
+}
+.brgy-org-root .brgy-prof-lead-role {
+  color: var(--brand);
+}
+.brgy-org-root .brgy-prof-lead-name {
+  font-size: 1.5rem;
 }
 .brgy-org-fork {
   flex: none;
@@ -1840,16 +1859,15 @@ a.govt-node:focus-visible {
 .brgy-org-stem {
   display: block;
   width: 2px;
-  height: 1.75rem;
+  height: 2rem;
   margin: 0 auto;
   border-radius: 1px;
   background: var(--brand);
-  opacity: 0.45;
-  transform-origin: top center;
+  opacity: 0.4;
 }
 .brgy-org-rail {
   position: relative;
-  height: 1.75rem;
+  height: 2rem;
 }
 .brgy-org-rail::before {
   content: "";
@@ -1858,8 +1876,9 @@ a.govt-node:focus-visible {
   left: 16.666%;
   right: 16.666%;
   height: 2px;
+  border-radius: 1px;
   background: var(--brand);
-  opacity: 0.45;
+  opacity: 0.4;
 }
 .brgy-org-drop {
   position: absolute;
@@ -1867,7 +1886,19 @@ a.govt-node:focus-visible {
   height: 100%;
   width: 2px;
   background: var(--brand);
-  opacity: 0.45;
+  opacity: 0.4;
+}
+.brgy-org-drop::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 2px var(--color-bg);
 }
 .brgy-org-drop--1 {
   left: calc(16.666% - 1px);
@@ -1882,46 +1913,119 @@ a.govt-node:focus-visible {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--spacing-md);
-  align-items: start;
+  align-items: stretch;
 }
 .brgy-org-branch {
-  padding: var(--spacing-md);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--surface);
-  box-shadow: var(--shadow);
-}
-.brgy-org-rows {
   display: flex;
   flex-direction: column;
+  padding: var(--spacing-lg);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition:
+    border-color var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease,
+    transform var(--motion-fast) var(--ease-out-soft);
+}
+.brgy-org-branch:hover {
+  border-color: color-mix(in srgb, var(--brand) 35%, var(--line));
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+.brgy-org-branch .brgy-prof-roster-head {
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--line);
+}
+.brgy-org-branch .brgy-prof-group-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 0.75rem;
+}
+.brgy-org-branch .brgy-prof-group-label .bi {
+  color: var(--brand);
+  font-size: 0.9em;
+}
+.brgy-org-branch .brgy-prof-roster-count {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--surface-muted);
+}
+.brgy-org-branch .brgy-prof-office-line {
+  margin-top: var(--spacing-md);
+}
+.brgy-org-rows {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 .brgy-org-row {
   display: flex;
-  align-items: baseline;
-  gap: var(--spacing-sm);
-  padding: 7px 0;
-  border-bottom: 1px solid var(--line);
+  align-items: center;
+  gap: 12px;
+  padding: 9px 10px;
+  margin: 0 -10px;
+  border-radius: 10px;
   min-width: 0;
+  transition: background var(--motion-fast) ease;
 }
-.brgy-org-row:last-child {
-  border-bottom: 0;
+.brgy-org-row:hover {
+  background: var(--surface-muted);
 }
-.brgy-org-name {
+.brgy-org-avatar {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: var(--surface-muted);
+  color: var(--brand);
+  font-family: var(--font-display);
+  font-size: 0.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  user-select: none;
+}
+.brgy-org-avatar--num {
+  font-family: var(--font-main);
+  font-size: 0.625rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.brgy-org-avatar--chair {
+  background: var(--brand);
+  color: var(--surface);
+}
+.brgy-org-person {
   flex: 1;
   min-width: 0;
-  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.brgy-org-row > .brgy-org-name {
+  flex: 1;
+  min-width: 0;
+}
+.brgy-org-name {
+  font-size: 0.9375rem;
   font-weight: 600;
-  line-height: 1.35;
+  line-height: 1.3;
   overflow-wrap: anywhere;
 }
-.brgy-org-role {
-  flex: none;
-  font-size: 0.625rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+.brgy-org-meta {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
 }
