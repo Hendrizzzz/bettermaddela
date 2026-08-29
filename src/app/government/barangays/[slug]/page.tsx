@@ -7,8 +7,6 @@ import { Reveal } from "@/components/motion/Reveal";
 import BarangayOrganigram from "@/components/government/BarangayOrganigram";
 import { getRecord } from "@/data/civic";
 import { MaddelaAtlas, maddelaBoundariesRecord } from "@/components/MaddelaAtlas";
-import { LuzonLocatorStatic } from "@/components/LuzonLocator";
-import LuzonMap from "@/components/LuzonMap";
 import { slugify } from "@/lib/slugify";
 import atlasGeometry from "@/data/atlas/geometry.json";
 
@@ -312,17 +310,6 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
                     </a>
                   </div>
                 </div>
-              )}
-              {boundary && (
-                <LuzonMap
-                  attribution={
-                    getRecord<{ attribution: string }>(
-                      "luzon-mainland-province-boundaries-codab-2026-08",
-                    ).data.attribution
-                  }
-                >
-                  <LuzonLocatorStatic />
-                </LuzonMap>
               )}
             </section>
           </Reveal>

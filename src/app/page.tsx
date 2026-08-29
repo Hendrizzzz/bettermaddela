@@ -6,7 +6,8 @@ import gsap from "gsap";
 import { LiveWeather, type WeatherConfigData } from "@/components/LiveWeather";
 import { Reveal } from "@/components/motion/Reveal";
 import { VerifiedSearch } from "@/components/VerifiedSearch";
-import LeafletMap from "@/components/LeafletMap";
+import LuzonMap from "@/components/LuzonMap";
+import { LuzonLocatorStatic } from "@/components/LuzonLocator";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { getRecord } from "@/data/civic";
 
@@ -312,9 +313,6 @@ export default function HomePage() {
   const municipalLeaders = leadership.data.leaders.filter(
     (leader) => leader.scope === "Municipality of Maddela",
   );
-  const barangayPopulations = Object.fromEntries(
-    barangays.data.barangays.map((row) => [row.name, row.population]),
-  );
 
   const locationSteps = [
     { name: copy.stepPhilippines, detail: copy.stepPhilippinesNote },
@@ -349,7 +347,15 @@ export default function HomePage() {
               </div>
             </div>
             <div className="home-hero-v2-atlas">
-              <LeafletMap variant="hero" populations={barangayPopulations} />
+              <LuzonMap
+                attribution={
+                  getRecord<{ attribution: string }>(
+                    "luzon-mainland-province-boundaries-codab-2026-08",
+                  ).data.attribution
+                }
+              >
+                <LuzonLocatorStatic />
+              </LuzonMap>
               <Link href="/barangays" className="home-hero-v2-atlas-link">
                 {copy.atlasLink} <i className="bi bi-arrow-right" aria-hidden="true"></i>
               </Link>
