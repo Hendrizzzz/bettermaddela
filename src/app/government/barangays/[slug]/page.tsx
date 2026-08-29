@@ -4,9 +4,8 @@ import Link from "next/link";
 import PageHeader from "@/components/layout/PageHeader";
 import { RecordMeta } from "@/components/RecordMeta";
 import { Reveal } from "@/components/motion/Reveal";
-import { TermPips } from "@/components/government/TermPips";
+import BarangayOrganigram from "@/components/government/BarangayOrganigram";
 import { getRecord } from "@/data/civic";
-import { monogramInitials } from "@/lib/monogram";
 import { MaddelaAtlas, maddelaBoundariesRecord } from "@/components/MaddelaAtlas";
 import { slugify } from "@/lib/slugify";
 import atlasGeometry from "@/data/atlas/geometry.json";
@@ -177,46 +176,6 @@ export async function generateMetadata({
 
 const KAGAWAD_SEATS = 7;
 
-function OfficialContact({
-  email,
-  telephone,
-}: {
-  email: string | null | undefined;
-  telephone: string | null | undefined;
-}) {
-  if (!email && !telephone) return null;
-  return (
-    <p className="brgy-prof-contact-line">
-      {email && <a href={`mailto:${email}`}>{email}</a>}
-      {email && telephone && <span aria-hidden="true"> · </span>}
-      {telephone && <a href={`tel:${telephone}`}>{telephone}</a>}
-    </p>
-  );
-}
-
-const OFFICER_ROLES = [
-  ["Barangay Secretary", "secretary"],
-  ["Barangay Treasurer", "treasurer"],
-  ["SK Secretary", "skSecretary"],
-  ["SK Treasurer", "skTreasurer"],
-] as const;
-
-function officerEntries(group: BarangayOfficials) {
-  return OFFICER_ROLES.flatMap((pair) => {
-    const entry = group[pair[1]];
-    return entry ? ([[pair[0], entry]] as const) : [];
-  });
-}
-
-// The source attaches the same barangay office line to most officials of a
-// barangay; render it once per group instead of repeating it on every person.
-function sharedTelephone(entries: OfficialEntry[]) {
-  const phones = entries
-    .map((entry) => entry.telephone)
-    .filter((value): value is string => Boolean(value));
-  return new Set(phones).size === 1 && phones.length > 1 ? phones[0] : null;
-}
-
 export default async function BarangayDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const barangay = barangayRecord.data.barangays.find((item) => slugify(item.name) === slug);
@@ -240,7 +199,6 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
 
   const officials = officialsBySlug.get(slug);
   const hasOfficialRoster = Boolean(officials?.punongBarangay || officials?.members.length);
-  const officers = officials ? officerEntries(officials) : [];
 
   const boundary = polygonByPsgc.get(barangay.psgcCode);
   const unmappedEntry = osmLocationRecord.data.unmapped.find(
@@ -366,147 +324,7 @@ export default async function BarangayDetailPage({ params }: { params: Promise<{
               </Link>
             </p>
             {officials && hasOfficialRoster ? (
-              <Reveal>
-              <div className="brgy-org">
-                {officials.punongBarangay && (
-                  <>
-                    <article className="brgy-prof-lead brgy-org-root">
-                      <span className="brgy-prof-mono brgy-prof-mono--lg brgy-prof-mono--featured" aria-hidden="true">
-                        {monogramInitials(officials.punongBarangay.name)}
-                      </span>
-                      <div className="brgy-prof-lead-body">
-                        <p className="brgy-prof-lead-role">Punong Barangay</p>
-                        <p className="brgy-prof-lead-name">{officials.punongBarangay.name}</p>
-                        {officials.punongBarangay.termOrdinal && (
-                          <p className="brgy-prof-lead-term">
-                            <TermPips ordinal={officials.punongBarangay.termOrdinal} />
-                            <span>{officials.punongBarangay.termOrdinal} term</span>
-                          </p>
-                        )}
-                        <OfficialContact
-                          email={officials.punongBarangay.email}
-                          telephone={officials.punongBarangay.telephone}
-                        />
-                      </div>
-                    </article>
-                    {officials.members.length > 0 && (
-                      <div className="brgy-org-fork" aria-hidden="true">
-                        <span className="brgy-org-stem" />
-                        <div className="brgy-org-rail">
-                          <span className="brgy-org-drop brgy-org-drop--1" />
-                          <span className="brgy-org-drop brgy-org-drop--2" />
-                          <span className="brgy-org-drop brgy-org-drop--3" />
-                        </div>
-                      </div>
-                    )}
-                  </>
-                )}
-                <div className="brgy-org-branches">
-                  {officials.members.length > 0 && (() => {
-                    const shared = sharedTelephone(officials.members);
-                    return (
-                      <section className="brgy-org-branch" aria-label={`${officials.members.length} Sangguniang Barangay members as listed`}>
-                        <header className="brgy-prof-roster-head">
-                          <h3 className="brgy-prof-group-label">
-                            <i className="bi bi-people-fill" aria-hidden="true" />
-                            Sangguniang Barangay
-                          </h3>
-                          <span className="brgy-prof-roster-count">{officials.members.length} listed</span>
-                        </header>
-                        <ul className="brgy-org-rows">
-                          {officials.members.map((member, index) => (
-                            <li key={member.name} className="brgy-org-row">
-                              <span className="brgy-org-avatar brgy-org-avatar--num" aria-hidden="true">{`0${index + 1}`}</span>
-                              <span className="brgy-org-name">{member.name}</span>
-                              {member.termOrdinal && <TermPips ordinal={member.termOrdinal} />}
-                            </li>
-                          ))}
-                        </ul>
-                        {shared && (
-                          <p className="brgy-prof-office-line">
-                            Office line <a href={`tel:${shared}`}>{shared}</a>
-                          </p>
-                        )}
-                      </section>
-                    );
-                  })()}
-                  {(officials.skChairperson || officials.skMembers.length > 0) && (() => {
-                    const roster = [...(officials.skChairperson ? [officials.skChairperson] : []), ...officials.skMembers];
-                    const shared = sharedTelephone(roster);
-                    return (
-                      <section className="brgy-org-branch" aria-label="Sangguniang Kabataan council as listed">
-                        <header className="brgy-prof-roster-head">
-                          <h3 className="brgy-prof-group-label">
-                            <i className="bi bi-stars" aria-hidden="true" />
-                            Sangguniang Kabataan
-                          </h3>
-                          <span className="brgy-prof-roster-count">{roster.length} listed</span>
-                        </header>
-                        <ul className="brgy-org-rows">
-                          {officials.skChairperson && (
-                            <li key="sk-chairperson" className="brgy-org-row">
-                              <span className="brgy-org-avatar brgy-org-avatar--chair" aria-hidden="true">
-                                {monogramInitials(officials.skChairperson.name)}
-                              </span>
-                              <span className="brgy-org-person">
-                                <span className="brgy-org-name">{officials.skChairperson.name}</span>
-                                <span className="brgy-org-meta">Chairperson</span>
-                              </span>
-                              {officials.skChairperson.termOrdinal && (
-                                <TermPips ordinal={officials.skChairperson.termOrdinal} />
-                              )}
-                            </li>
-                          )}
-                          {officials.skMembers.map((member) => (
-                            <li key={member.name} className="brgy-org-row">
-                              <span className="brgy-org-avatar" aria-hidden="true">{monogramInitials(member.name)}</span>
-                              <span className="brgy-org-name">{member.name}</span>
-                              {member.termOrdinal && <TermPips ordinal={member.termOrdinal} />}
-                            </li>
-                          ))}
-                        </ul>
-                        {shared && (
-                          <p className="brgy-prof-office-line">
-                            Office line <a href={`tel:${shared}`}>{shared}</a>
-                          </p>
-                        )}
-                      </section>
-                    );
-                  })()}
-                  {officers.length > 0 && (() => {
-                    const shared = sharedTelephone(officers.map(([, entry]) => entry));
-                    return (
-                      <section className="brgy-org-branch" aria-label="Appointed barangay officers as listed">
-                        <header className="brgy-prof-roster-head">
-                          <h3 className="brgy-prof-group-label">
-                            <i className="bi bi-person-badge-fill" aria-hidden="true" />
-                            Appointed officers
-                          </h3>
-                          <span className="brgy-prof-roster-count">{officers.length} listed</span>
-                        </header>
-                        <ul className="brgy-org-rows">
-                          {officers.map(([role, entry]) => (
-                            <li key={role} className="brgy-org-row">
-                              <span className="brgy-org-avatar" aria-hidden="true">{monogramInitials(entry.name)}</span>
-                              <span className="brgy-org-person">
-                                <span className="brgy-org-name">{entry.name}</span>
-                                <span className="brgy-org-meta">{role}</span>
-                              </span>
-                              {entry.termOrdinal && <TermPips ordinal={entry.termOrdinal} />}
-                            </li>
-                          ))}
-                        </ul>
-                        {shared && (
-                          <p className="brgy-prof-office-line">
-                            Office line <a href={`tel:${shared}`}>{shared}</a>
-                          </p>
-                        )}
-                      </section>
-                    );
-                  })()}
-                </div>
-              </div>
-              </Reveal>
+              <BarangayOrganigram officials={officials} />
             ) : (
               <Reveal>
               <div className="brgy-prof-org">
