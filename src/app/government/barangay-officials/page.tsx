@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import PageHeader from "@/components/layout/PageHeader";
 import { RecordMeta } from "@/components/RecordMeta";
 import {
@@ -8,6 +9,11 @@ import {
 } from "@/components/government/OfficialsDirectory";
 import { getRecord } from "@/data/civic";
 import { slugify } from "@/lib/slugify";
+import {
+  BarangayMapSprite,
+  BarangayMiniMap,
+} from "@/components/government/BarangayMapSprite";
+import atlasGeometry from "@/data/atlas/geometry.json";
 
 interface BarangayEntry {
   name: string;
@@ -94,6 +100,15 @@ const emailCount = officialsRecord.data.officials.filter(
   (official) => official.email,
 ).length;
 
+const atlasBarangays = (atlasGeometry as { barangays: { psgc: string; name: string }[] })
+  .barangays;
+const miniMapsBySlug: Record<string, ReactNode> = Object.fromEntries(
+  atlasBarangays.map((barangay) => [
+    slugify(barangay.name),
+    <BarangayMiniMap key={barangay.psgc} psgc={barangay.psgc} />,
+  ]),
+);
+
 export const metadata: Metadata = {
   title: "Barangay officials directory",
   description:
@@ -125,10 +140,12 @@ export default function BarangayOfficialsPage() {
               <strong>{emailCount}</strong> published emails
             </li>
           </ul>
+          <BarangayMapSprite />
           <OfficialsDirectory
             groups={directoryGroups}
             totalCount={officialCount}
             barangayCount={directoryGroups.length}
+            maps={miniMapsBySlug}
           />
           <p className="brgy-prof-awaiting">
             Names are reproduced verbatim from the DILG Barangay Officials Profiling System
