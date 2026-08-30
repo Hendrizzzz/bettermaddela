@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import Link from "next/link";
 import { RecordMeta } from "@/components/RecordMeta";
 import {
   HistoryTimeline,
@@ -300,6 +301,19 @@ function formatEnPh(iso: string): string {
     <>
       <section className="hst-hero">
         <div className="container">
+          <nav className="breadcrumbs breadcrumbs--inverse" aria-label="Breadcrumb">
+            <span>
+              <Link href="/">Home</Link>
+              <span aria-hidden="true">/</span>
+            </span>
+            <span>
+              <Link href="/legislative">Legislative</Link>
+              <span aria-hidden="true">/</span>
+            </span>
+            <span>
+              <span aria-current="page">History &amp; legal timeline</span>
+            </span>
+          </nav>
           <h1>The story of Maddela</h1>
           <p className="hst-arc">{arcSentence}</p>
           <ul className="hst-facts">

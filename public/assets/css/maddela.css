@@ -2238,6 +2238,58 @@ a.govt-node:focus-visible {
   font-variant-numeric: tabular-nums;
 }
 
+/* Compact packing so the quick-contact strip stops stacking one item per
+   row on tablets and phones. */
+@media (max-width: 1024px) {
+  .hotline-bar-inner {
+    row-gap: 2px;
+  }
+  .hotline-bar-items {
+    gap: 2px 16px;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 767px) {
+  .hotline-bar-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 10px;
+    align-items: baseline;
+    padding: 8px 0;
+  }
+  .hotline-bar-kicker {
+    grid-column: 1 / -1;
+    justify-content: center;
+  }
+  .hotline-bar-items {
+    display: contents;
+  }
+  .hotline-bar-item {
+    white-space: normal;
+    justify-content: center;
+    text-align: center;
+  }
+  .hotline-bar-item a {
+    overflow-wrap: normal;
+    white-space: nowrap;
+  }
+  .hotline-bar-item a[href^="mailto:"] {
+    overflow-wrap: anywhere;
+  }
+}
+@media (max-width: 575px) {
+  .hotline-bar {
+    font-size: 0.6875rem;
+  }
+  .hotline-bar-emergency strong {
+    font-size: 0.8125rem;
+  }
+  .hotline-bar-inner {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+}
+
 /* ---- Contact page: honest pending panel for unconfirmed emergency lines ---- */
 .contact-pending {
   margin-top: var(--spacing-md);

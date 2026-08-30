@@ -214,7 +214,8 @@ export default function StatisticsPage() {
               <PovertyChart />
             </div>
             <figcaption className="stats-figure-caption">
-              <strong>Estimated poverty incidence declined from {povertyFirst.estimatePercent.toFixed(2)}% in {povertyFirst.year} to {povertyLatest.estimatePercent.toFixed(2)}% in {povertyLatest.year}.</strong>
+              <strong>Estimated poverty incidence declined from {povertyFirst.estimatePercent.toFixed(2)}% in {povertyFirst.year} to {povertyLatest.estimatePercent.toFixed(2)}% in {povertyLatest.year}.</strong>{" "}
+              <span>The dashed line traces direction between estimates; only the {povertyLatest.year} point publishes uncertainty.</span>
             </figcaption>
           </figure>
           <details className="stats-more">
@@ -413,7 +414,7 @@ export default function StatisticsPage() {
     return (
       <svg
         role="img"
-        aria-label={`Dot chart of model-based poverty incidence estimates: ${poverty.data.series.map((item) => `${item.estimatePercent.toFixed(2)} percent in ${item.year}`).join(", ")}, where only the ${povertyLatest.year} estimate includes a ${povertyLatest.confidenceLevelPercent} percent confidence interval from ${povertyLatest.lowerBoundPercent.toFixed(2)} to ${povertyLatest.upperBoundPercent.toFixed(2)} percent. Full data in the table below.`}
+        aria-label={`Dot chart of model-based poverty incidence estimates connected by a dashed guide line: ${poverty.data.series.map((item) => `${item.estimatePercent.toFixed(2)} percent in ${item.year}`).join(", ")}, where only the ${povertyLatest.year} estimate includes a ${povertyLatest.confidenceLevelPercent} percent confidence interval from ${povertyLatest.lowerBoundPercent.toFixed(2)} to ${povertyLatest.upperBoundPercent.toFixed(2)} percent. Full data in the table below.`}
         className="chart-svg chart-poverty"
         viewBox={`0 0 ${width} 320`}
       >
@@ -423,6 +424,11 @@ export default function StatisticsPage() {
             <text className="chart-tick-label" x={left - 10} y={y(tick) + 4} textAnchor="end">{tick}%</text>
           </g>
         ))}
+        <polyline
+          aria-hidden="true"
+          className="chart-trend"
+          points={poverty.data.series.map((item) => `${x(item.year)},${y(item.estimatePercent)}`).join(" ")}
+        />
         {poverty.data.series.map((item) => {
           const isLatest = item.year === povertyLatest.year;
           return (
