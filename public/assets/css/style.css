@@ -317,14 +317,13 @@ body.mobile-menu-open {
   font-size: 0.75rem;
   font-family: var(--font-main);
   font-weight: 600;
-  opacity: 0.7;
-  transition: opacity 0.2s ease;
+  color: var(--color-text-light);
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
-.lang-btn:hover, 
+.lang-btn:hover,
 .lang-btn.active {
-  opacity: 1;
-  background-color: var(--color-primary);
   color: var(--color-white);
+  background-color: var(--color-primary);
   border-color: var(--color-primary);
 }
 .section-header {
