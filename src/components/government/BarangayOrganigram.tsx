@@ -222,7 +222,11 @@ export default function BarangayOrganigram({
           >
             <header className="brgy-prof-roster-head">
               <h3 className="brgy-prof-group-label">
-                <i className="bi bi-stars" aria-hidden="true" />
+                <img
+                  src="/assets/images/logo/sangguniang-kabataan-logo.svg"
+                  alt=""
+                  className="brgy-prof-org-mark"
+                />
                 Sangguniang Kabataan
               </h3>
               <span className="brgy-prof-roster-count">{skRoster.length} listed</span>

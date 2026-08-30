@@ -1089,6 +1089,11 @@ a.govt-node:focus-visible {
   color: var(--muted);
   font-size: 0.9375rem;
 }
+.govt-exofficio-role .govt-exofficio-mark {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  object-fit: contain;
+}
 
 /* Branch split under the mayor fork */
 .govt-split {
@@ -1832,6 +1837,17 @@ a.govt-node:focus-visible {
   margin-right: 4px;
   color: var(--brand);
   font-size: 0.9em;
+}
+.brgy-prof-org-mark {
+  width: 1.75rem;
+  height: 1.75rem;
+  object-fit: contain;
+  flex: none;
+}
+.brgy-prof-org-mark--sm {
+  width: 0.9em;
+  height: 0.9em;
+  margin-right: 4px;
 }
 .brgy-prof-tile--featured {
   border-left: 3px solid var(--accent);
