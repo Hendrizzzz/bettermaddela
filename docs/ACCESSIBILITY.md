@@ -21,13 +21,12 @@ prints each finding when a check fails.
 - axe-core via `@axe-core/playwright` 4.13 (WCAG-oriented rules, color contrast included)
 - `playwright-core` 1.62 driving Chrome (headless, `channel: "chrome"`)
 - Static export served locally from `out/` by the check scripts
-- Review date: 2026-08-30, against the working tree that introduced this record
-  (commit `96c8a79` plus this change)
+- Review date: 2026-08-30, against the change that introduced this record
 
 ## Coverage
 
-`check-accessibility.mjs` axe-scans **every generated route** (69 static pages at the
-time of this record) at 390x844: no serious or critical findings.
+`check-accessibility.mjs` axe-scans **every generated route** (66 routes at the time
+of this record) at 390x844: no serious or critical findings.
 
 `check-a11y-manual.mjs` adds scripted manual checks on 20 representative routes — one or
 more for every shared layout and interaction:
@@ -97,5 +96,5 @@ Checks run on each representative route:
 - **Dynamic third-party embeds** (Google Maps iframe, Open-Meteo data) are reviewed via
   their containers and disclosures; their internal DOM is outside this repository's
   control.
-- **Filipino (`fil`) translations** update `lang` attributes correctly, but translation
-  completeness is a content-quality matter outside this accessibility record.
+- **Translation completeness is out of scope.** The EN/FIL toggle switches shipped
+  copy; the accessibility review does not assess translation quality.
