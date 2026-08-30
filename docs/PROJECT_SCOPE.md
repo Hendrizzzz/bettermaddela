@@ -76,8 +76,8 @@ upstream Git history and software foundation under the existing licence and attr
 requirements. BetterAurora is a design and code starting point only; its municipal
 facts, images, branding, and operational assumptions are not BetterMaddela data. Its
 interface and route compositions may be reused only with reviewed Maddela records or
-honest section-level unavailable states. The application remains a work in progress
-until the applicable release checks pass.
+honest section-level unavailable states. The core application is live; remaining
+release checks and data coverage are tracked in the README project status.
 
 Implementation may establish the clean shell, schemas, validation, accessibility, and
 publication controls before civic research is complete. Research is a separate input:

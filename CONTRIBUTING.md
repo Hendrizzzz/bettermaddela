@@ -22,9 +22,19 @@ bun run dev
 
 ## Branches, commits, and pull requests
 
-Create a short-lived branch from the current target branch. Use a descriptive name such as `fix/service-source` or `feat/barangay-directory`. Keep commits scoped and write messages that explain the change, for example `fix: correct service source date`.
+Create a short-lived branch from the current target branch. Name branches
+`type/topic` in kebab-case, matching the commit type — for example
+`feat/barangay-directory`, `fix/service-source`, `docs/data-contract`,
+`chore/dependency-bump`.
 
-A pull request should:
+Write commit messages in [Conventional Commits](https://www.conventionalcommits.org)
+style: `type: lowercase imperative summary`, about 72 characters or fewer, with an
+optional scope when it helps (`feat(search): highlight verified matches`). Use `feat`,
+`fix`, `docs`, `refactor`, `perf`, `test`, `build`, `ci`, or `chore`. Commits merged
+before 2026-08-30 predate this convention; do not rewrite merged history to retrofit
+it. Never force-push shared branches.
+
+Title the pull request with the same conventional style. A pull request should:
 
 - explain its scope and user impact;
 - identify every civic-data addition, removal, or change;
