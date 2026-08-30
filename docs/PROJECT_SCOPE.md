@@ -21,10 +21,10 @@ with:
   transparency records, and legislation as each dataset becomes publishable; and
 - clear attribution, correction, accessibility, privacy, and security information.
 
-The inherited-content removal is implemented. The remaining acceptance for the MVP is
-that any intended deployment boundary is separately reviewed; the repository and
-accessibility release checks have run and are recorded in
-[`docs/ACCESSIBILITY.md`](ACCESSIBILITY.md) and the README project status.
+The inherited-content removal is implemented. The repository and accessibility release
+checks have run and are recorded in [`docs/ACCESSIBILITY.md`](ACCESSIBILITY.md); the
+README states the current project status. Any intended deployment boundary still
+requires separate review.
 
 ## Accessibility acceptance
 
