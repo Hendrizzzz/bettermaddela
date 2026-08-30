@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { RecordMeta } from "@/components/RecordMeta";
 import { getRecord } from "@/data/civic";
 
@@ -37,6 +38,19 @@ export default function PopulationPage() {
   return (
     <div className="shell page-shell">
       <header className="page-heading">
+        <nav className="breadcrumbs" aria-label="Breadcrumb">
+          <span>
+            <Link href="/">Home</Link>
+            <span aria-hidden="true">/</span>
+          </span>
+          <span>
+            <Link href="/statistics">Statistics</Link>
+            <span aria-hidden="true">/</span>
+          </span>
+          <span>
+            <span aria-current="page">Population</span>
+          </span>
+        </nav>
         <h1>Population</h1>
         <p>
           Maddela recorded {current.data.population.toLocaleString("en-PH")} people in

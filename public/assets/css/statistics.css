@@ -164,6 +164,13 @@
 .chart-line--lead {
   stroke-width: 3;
 }
+.chart-trend {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 4;
+  opacity: 0.55;
+}
 .chart-dot {
   fill: #ffffff;
   stroke: var(--color-primary);
