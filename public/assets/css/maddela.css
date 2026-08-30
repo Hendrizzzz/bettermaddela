@@ -767,6 +767,23 @@
   font-weight: 600;
   letter-spacing: 0.02em;
 }
+.reported-flag--sm {
+  margin: 0;
+  padding: 0.05rem 0.45rem;
+  font-size: 0.625rem;
+}
+.govt-exofficio-incumbent {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.1875rem;
+  text-align: right;
+}
+.govt-exofficio-name {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ink);
+}
 
 /* ===== Phase 3 polish: unified section-heading scale =====
    Normalizes heading classes defined in statistics.css and

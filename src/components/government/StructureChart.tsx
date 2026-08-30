@@ -8,8 +8,10 @@
  * incumbent render an empty dashed-square marker (one shared legend below
  * the chart explains it once).
  *
- * Data discipline: incumbent names come ONLY from the reviewed
+ * Data discipline: elected names come ONLY from the reviewed
  * `maddela-leadership-snapshot` record passed in as props by the server page.
+ * Ex-officio seats may additionally carry community-reported incumbents via
+ * `reportedExOfficio`; those render with a visible community-reported label.
  * Monogram avatars are derived from those names at render time — nothing else.
  *
  * Motion: one GSAP timeline draws connectors and cascades tiers top-down,
@@ -29,10 +31,16 @@ export interface VerifiedIncumbent {
   asOf: string;
 }
 
+export interface ReportedIncumbent {
+  title: string;
+  name: string;
+}
+
 interface StructureChartProps {
   mayor?: VerifiedIncumbent | null;
   viceMayor?: VerifiedIncumbent | null;
   councilors?: { name: string }[];
+  reportedExOfficio?: ReportedIncumbent[];
 }
 
 const EX_OFFICIO_SEATS = [
@@ -110,8 +118,19 @@ function SeatMarker({ large = false }: { large?: boolean }) {
   );
 }
 
-export default function StructureChart({ mayor, viceMayor, councilors }: StructureChartProps) {
+export default function StructureChart({
+  mayor,
+  viceMayor,
+  councilors,
+  reportedExOfficio,
+}: StructureChartProps) {
   const seats = Array.from({ length: 8 }, (_, index) => councilors?.[index] ?? null);
+  const reportedSeats = reportedExOfficio ?? [];
+  const hasEmptySeats =
+    !mayor ||
+    !viceMayor ||
+    seats.some((member) => !member) ||
+    EX_OFFICIO_SEATS.some((title) => !reportedSeats.some((seat) => seat.title === title));
   const rootRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -288,23 +307,35 @@ export default function StructureChart({ mayor, viceMayor, councilors }: Structu
             ))}
           </ul>
           <ul className="govt-exofficio">
-            {EX_OFFICIO_SEATS.map((title) => (
-              <li key={title} className="govt-exofficio-row">
-                <span className="govt-exofficio-role">
-                  {title === "SK Federation President" ? (
-                    <img
-                      src="/assets/images/logo/sangguniang-kabataan-logo.svg"
-                      alt=""
-                      className="govt-exofficio-mark"
-                    />
+            {EX_OFFICIO_SEATS.map((title) => {
+              const reported = reportedSeats.find((seat) => seat.title === title);
+              return (
+                <li key={title} className="govt-exofficio-row">
+                  <span className="govt-exofficio-role">
+                    {title === "SK Federation President" ? (
+                      <img
+                        src="/assets/images/logo/sangguniang-kabataan-logo.svg"
+                        alt=""
+                        className="govt-exofficio-mark"
+                      />
+                    ) : (
+                      <i className={`bi ${EX_OFFICIO_ICONS[title]}`} aria-hidden="true" />
+                    )}
+                    {title}
+                  </span>
+                  {reported ? (
+                    <span className="govt-exofficio-incumbent">
+                      <span className="govt-exofficio-name">{reported.name}</span>
+                      <span className="reported-flag reported-flag--sm">
+                        community-reported
+                      </span>
+                    </span>
                   ) : (
-                    <i className={`bi ${EX_OFFICIO_ICONS[title]}`} aria-hidden="true" />
+                    <SeatMarker />
                   )}
-                  {title}
-                </span>
-                <SeatMarker />
-              </li>
-            ))}
+                </li>
+              );
+            })}
           </ul>
         </article>
       </div>
@@ -346,14 +377,17 @@ export default function StructureChart({ mayor, viceMayor, councilors }: Structu
       </Link>
 
       {/* Shared legend + statutory citation */}
-      <p className="govt-legend" data-gsx-meta>
-        <span className="govt-legend-swatch" aria-hidden="true" />
-        not yet verified
-      </p>
+      {hasEmptySeats && (
+        <p className="govt-legend" data-gsx-meta>
+          <span className="govt-legend-swatch" aria-hidden="true" />
+          not yet verified
+        </p>
+      )}
       <footer className="govt-footnote" data-gsx-meta>
         <p>
           Structure per the Local Government Code (RA 7160). Names appear only after
-          review; <Link href="/sources">how evidence is gated</Link>.
+          review; seats labeled &ldquo;community-reported&rdquo; await official
+          confirmation. <Link href="/sources">How evidence is gated</Link>.
         </p>
       </footer>
     </div>

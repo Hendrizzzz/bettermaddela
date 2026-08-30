@@ -41,10 +41,31 @@ interface OfficeHeadsData {
   limitations: string;
 }
 
+interface ReportedOfficialsData {
+  leaders: {
+    name: string;
+    title: string;
+  }[];
+}
+
 const barangayRecord = getRecord<BarangayDataset>("barangay-dataset-2026q2");
 const leadershipRecord = getRecord<LeadershipData>("maddela-leadership-snapshot");
 const officeHeadsRecord = getRecord<OfficeHeadsData>("maddela-office-head-observations");
 const officialsTermRecord = getRecord<LeadershipData>("maddela-officials-2025-term");
+const reportedOfficialsRecord = getRecord<ReportedOfficialsData>(
+  "maddela-officials-exofficio-succession-2026-report",
+);
+
+// Chart seats use short labels; record titles carry the full statutory wording,
+// so match by prefix and resolve each chart seat independently.
+const EX_OFFICIO_CHART_SEATS = [
+  { chartTitle: "ABC President", recordPrefix: "ABC President" },
+  {
+    chartTitle: "SK Federation President",
+    recordPrefix: "SK Federation President",
+  },
+  { chartTitle: "IPMR", recordPrefix: "Indigenous Peoples" },
+] as const;
 
 export const metadata: Metadata = {
   title: "Government",
@@ -63,6 +84,12 @@ export default function GovernmentPage() {
   const councilors = officialsTermRecord.data.leaders.filter(
     (leader) => leader.title === "Sangguniang Bayan Member",
   );
+  const reportedExOfficio = EX_OFFICIO_CHART_SEATS.flatMap(({ chartTitle, recordPrefix }) => {
+    const leader = reportedOfficialsRecord.data.leaders.find((entry) =>
+      entry.title.startsWith(recordPrefix),
+    );
+    return leader ? [{ title: chartTitle, name: leader.name }] : [];
+  });
 
   return (
     <>
@@ -82,6 +109,7 @@ export default function GovernmentPage() {
             mayor={mayor ? { name: mayor.name, asOf: mayor.asOf } : null}
             viceMayor={viceMayor ? { name: viceMayor.name, asOf: viceMayor.asOf } : null}
             councilors={councilors.map((member) => ({ name: member.name }))}
+            reportedExOfficio={reportedExOfficio}
           />
           <p className="govt-legend-items">
             <span>Mayor</span>
@@ -113,8 +141,9 @@ export default function GovernmentPage() {
           <p className="unpublished-note">
             The 2025-elected vice mayor and councilors appear above and in the structure chart as
             listed on Comelec server tallies; full legal names await official proclamations. The
-            ex-officio seats and one reported council succession are shown on the officials record
-            as community-reported, awaiting official confirmation.{" "}
+            ex-officio seats appear in the structure chart and on the officials record as
+            community-reported, awaiting official confirmation, together with one reported council
+            succession.{" "}
             <Link href="/government/officials">See the officials record</Link>.
           </p>
         </div>
