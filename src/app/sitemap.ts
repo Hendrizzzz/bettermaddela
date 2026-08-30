@@ -24,8 +24,6 @@ const staticRoutes = [
   "/government/officials",
   "/legal-history",
   "/legislative",
-  "/legislative/ordinance-framework",
-  "/legislative/resolution-framework",
   "/news",
   "/population",
   "/privacy",

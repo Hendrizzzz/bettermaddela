@@ -4,7 +4,7 @@ import PageHeader from "@/components/layout/PageHeader";
 
 export const metadata: Metadata = {
   title: "Legislative",
-  description: "Maddela's local legislative archive status and source-reviewed national legal history.",
+  description: "Source-reviewed national legal history that shaped Maddela, and the honest status of the local ordinance and resolution archive.",
 };
 
 export default function LegislativePage() {
@@ -12,22 +12,9 @@ export default function LegislativePage() {
     <>
       <PageHeader
         title="Legislative"
-        description="Local archive publication areas and the national legal instruments documented in Maddela's history."
+        description="National legal instruments documented in Maddela's history, and the status of Maddela's local legislative archive."
         breadcrumbs={[{ label: "Home", href: "/" }, { label: "Legislative" }]}
       />
-
-      <section className="leg-categories">
-        <div className="container">
-          <div className="leg-categories-grid">
-            <Link href="/legislative/ordinance-framework" className="leg-category-card">
-              <div className="leg-category-content"><h2>Ordinances</h2><p>Check the publication status of Maddela&apos;s municipal-ordinance archive.</p><span className="leg-category-link"><i className="bi bi-arrow-right" aria-hidden="true" /> View ordinance archive</span></div>
-            </Link>
-            <Link href="/legislative/resolution-framework" className="leg-category-card">
-              <div className="leg-category-content"><h2>Resolutions</h2><p>Check the publication status of Maddela&apos;s municipal-resolution archive.</p><span className="leg-category-link">View resolution archive <i className="bi bi-arrow-right" aria-hidden="true" /></span></div>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       <section className="leg-info">
         <div className="container">

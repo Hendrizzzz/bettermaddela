@@ -313,10 +313,8 @@
   height: auto;
 }
 
-.photo-card img {
-  display: block;
-  width: 100%;
-  height: auto;
+.map-explore-card .map-attribution {
+  border-top: 0;
 }
 
 .brgy-prof-location-card {

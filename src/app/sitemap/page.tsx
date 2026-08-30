@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const sections = [
   { title: "Main Navigation", links: [["Home", "/"], ["Services", "/services"], ["Government", "/government"], ["Statistics", "/statistics"], ["Legislative", "/legislative"], ["Transparency", "/budget"], ["Contact", "/contact"]] },
-  { title: "Civic Information", links: [["Barangays", "/government#barangays"], ["Barangays of Maddela", "/barangays"], ["Population", "/population"], ["Officials", "/government/officials"], ["Legal History", "/legal-history"], ["Ordinances", "/legislative/ordinance-framework"], ["Resolutions", "/legislative/resolution-framework"], ["Sources", "/sources"]] },
+  { title: "Civic Information", links: [["Barangays", "/government#barangays"], ["Barangays of Maddela", "/barangays"], ["Population", "/population"], ["Officials", "/government/officials"], ["Legal History", "/legal-history"], ["Sources", "/sources"]] },
   { title: "Project", links: [["News", "/news"], ["FAQ", "/faq"], ["Accessibility", "/accessibility"], ["Security", "/security"], ["Privacy", "/privacy"], ["Terms of Use", "/terms"]] },
 ] as const;
 

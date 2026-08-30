@@ -180,9 +180,6 @@ const homeCopy = {
     photoCredit: "Photograph by P199 (April 2012), CC BY-SA 3.0, via Wikimedia Commons",
     photoNote: "A 2012 aerial view — not a current condition.",
     heroLandmarkTitle: "Maddela from the air",
-    roadAlt: "Straight concrete road lined with coconut palms, on the Cordon–Diffun–Maddela–Aurora Road in Quirino",
-    roadCredit: "Photograph by Patrickroque01 (November 25, 2022), CC BY-SA 4.0, via Wikimedia Commons",
-    roadNote: "The Cordon–Diffun–Maddela–Aurora Road, Quirino (2022).",
     weatherSideLabel: "Weather right now",
     localWeatherContext: "Local station context",
     separateForecast: "Forecast values are provided separately by Open-Meteo.",
@@ -239,9 +236,6 @@ const homeCopy = {
     photoCredit: "Larawan ni P199 (Abril 2012), CC BY-SA 3.0, mula sa Wikimedia Commons",
     photoNote: "Tanawin mula sa 2012 — hindi ang kasalukuyang kalagayan.",
     heroLandmarkTitle: "Ang Maddela mula sa himpapawid",
-    roadAlt: "Tuwid na kongkretong daan na may palibot na niyog, sa Cordon–Diffun–Maddela–Aurora Road sa Quirino",
-    roadCredit: "Larawan ni Patrickroque01 (Nobyembre 25, 2022), CC BY-SA 4.0, mula sa Wikimedia Commons",
-    roadNote: "Ang Cordon–Diffun–Maddela–Aurora Road, Quirino (2022).",
     weatherSideLabel: "Panahon ngayon",
     localWeatherContext: "Lokal na konteksto ng istasyon",
     separateForecast: "Hiwalay na ibinibigay ng Open-Meteo ang mga forecast value.",
@@ -491,22 +485,7 @@ export default function HomePage() {
               >
                 <LuzonLocatorStatic />
               </LuzonMap>
-              <figure className="map-card photo-card">
-                <img
-                  src="/assets/images/maddela-cordon-diffun-road-2022.jpg"
-                  alt={copy.roadAlt}
-                  width={1280}
-                  height={960}
-                  loading="lazy"
-                />
-                <figcaption className="map-attribution">
-                  <i className="bi bi-camera" aria-hidden="true" />
-                  <span>
-                    <a href="https://commons.wikimedia.org/wiki/File:Cordon-Diffun-Maddela-Aurora_Road_(Quirino;_11-25-2022).jpg" target="_blank" rel="noreferrer">{copy.roadCredit}</a>
-                    <span className="map-attribution-separator" aria-hidden="true">, </span>
-                    {copy.roadNote}
-                  </span>
-                </figcaption>
+              <figure className="map-card map-explore-card">
                 <div className="map-attribution">
                   <i className="bi bi-geo-alt" aria-hidden="true" />
                   <span>

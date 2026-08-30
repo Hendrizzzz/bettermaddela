@@ -18,11 +18,6 @@ const serviceLinks = [
   ["/services/environment", "dropdown-environment"],
 ] as const;
 
-const legislativeLinks = [
-  ["/legislative/ordinance-framework", "dropdown-ordinance-framework"],
-  ["/legislative/resolution-framework", "dropdown-resolution-framework"],
-] as const;
-
 function isMobileNavigation() {
   return typeof window !== "undefined" && window.matchMedia("(max-width: 1024px)").matches;
 }
@@ -139,12 +134,7 @@ export function SiteHeader() {
             </li>
             <li><Link href="/government" className={pathname.startsWith("/government") ? "active" : ""}>{t("nav-government")}</Link></li>
             <li><Link href="/statistics" className={pathname.startsWith("/statistics") ? "active" : ""}>{t("nav-statistics")}</Link></li>
-            <li className={`has-dropdown ${openDropdown === 1 ? "dropdown-open" : ""}`}>
-              <Link href="/legislative" className={pathname.startsWith("/legislative") ? "active" : ""} aria-haspopup="true" aria-expanded={openDropdown === 1} onClick={(event) => toggleDropdown(1, event)}>{t("nav-legislative")}</Link>
-              <ul className="dropdown-menu">
-                {legislativeLinks.map(([href, key]) => <li key={href}><Link href={href}>{t(key)}</Link></li>)}
-              </ul>
-            </li>
+            <li><Link href="/legislative" className={pathname.startsWith("/legislative") ? "active" : ""}>{t("nav-legislative")}</Link></li>
             <li><Link href="/budget" className={pathname.startsWith("/budget") ? "active" : ""}>{t("nav-transparency")}</Link></li>
             <li><Link href="/projects" className={pathname.startsWith("/projects") ? "active" : ""}>{t("nav-projects")}</Link></li>
             <li><Link href="/contact" className={pathname.startsWith("/contact") ? "active" : ""}>{t("nav-contact")}</Link></li>
