@@ -47,7 +47,18 @@ function DirectoryTile({ entry, telephone }: { entry: DirectoryEntry; telephone:
       <span className="brgy-prof-tile-body">
         {role && (
           <span className="brgy-prof-tile-role">
-            <i className={`bi ${isLead ? "bi-star-fill" : entry.bucket === "sk" ? "bi-lightning-charge" : entry.bucket === "officer" ? "bi-clipboard2-check" : "bi-person-badge"}`} aria-hidden="true" />
+            {entry.bucket === "sk" ? (
+              <img
+                src="/assets/images/logo/sangguniang-kabataan-logo.svg"
+                alt=""
+                className="brgy-prof-org-mark brgy-prof-org-mark--sm"
+              />
+            ) : (
+              <i
+                className={`bi ${isLead ? "bi-star-fill" : entry.bucket === "officer" ? "bi-clipboard2-check" : "bi-person-badge"}`}
+                aria-hidden="true"
+              />
+            )}
             {role}
           </span>
         )}

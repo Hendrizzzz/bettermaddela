@@ -41,9 +41,8 @@ const EX_OFFICIO_SEATS = [
   "IPMR",
 ] as const;
 
-const EX_OFFICIO_ICONS: Record<(typeof EX_OFFICIO_SEATS)[number], string> = {
+const EX_OFFICIO_ICONS: Partial<Record<(typeof EX_OFFICIO_SEATS)[number], string>> = {
   "ABC President": "bi-people-fill",
-  "SK Federation President": "bi-stars",
   IPMR: "bi-person-badge-fill",
 };
 
@@ -292,7 +291,15 @@ export default function StructureChart({ mayor, viceMayor, councilors }: Structu
             {EX_OFFICIO_SEATS.map((title) => (
               <li key={title} className="govt-exofficio-row">
                 <span className="govt-exofficio-role">
-                  <i className={`bi ${EX_OFFICIO_ICONS[title]}`} aria-hidden="true" />
+                  {title === "SK Federation President" ? (
+                    <img
+                      src="/assets/images/logo/sangguniang-kabataan-logo.svg"
+                      alt=""
+                      className="govt-exofficio-mark"
+                    />
+                  ) : (
+                    <i className={`bi ${EX_OFFICIO_ICONS[title]}`} aria-hidden="true" />
+                  )}
                   {title}
                 </span>
                 <SeatMarker />
