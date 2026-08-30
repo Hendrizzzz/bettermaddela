@@ -15,8 +15,8 @@ const destinations = [
 ];
 
 const searchCopy = {
-  en: { title: "Find a Service", label: "Search services", placeholder: "e.g., birth certificate, business permit", action: "Search", browse: "Browse:", destinations: "Browse destinations" },
-  fil: { title: "Maghanap ng Serbisyo", label: "Maghanap ng serbisyo", placeholder: "hal., birth certificate, permit sa negosyo", action: "Maghanap", browse: "Tingnan:", destinations: "Tingnan ang mga destinasyon" },
+  en: { title: "Find a Service", label: "Search services", placeholder: "e.g., birth certificate", action: "Search", browse: "Browse:", destinations: "Browse destinations" },
+  fil: { title: "Maghanap ng Serbisyo", label: "Maghanap ng serbisyo", placeholder: "hal., birth certificate", action: "Maghanap", browse: "Tingnan:", destinations: "Tingnan ang mga destinasyon" },
 } as const;
 
 export function VerifiedSearch() {
