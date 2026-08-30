@@ -112,8 +112,10 @@ export default function GovernmentPage() {
           <RecordMeta record={leadershipRecord} />
           <p className="unpublished-note">
             The 2025-elected vice mayor and councilors appear above and in the structure chart as
-            listed on Comelec server tallies; full legal names and the new ex-officio seats await
-            official proclamations. <Link href="/government/officials">See the officials record</Link>.
+            listed on Comelec server tallies; full legal names await official proclamations. The
+            ex-officio seats and one reported council succession are shown on the officials record
+            as community-reported, awaiting official confirmation.{" "}
+            <Link href="/government/officials">See the officials record</Link>.
           </p>
         </div>
       </section>
