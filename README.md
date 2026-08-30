@@ -25,7 +25,8 @@ partial, and local office contacts are limited.
 ### How you can help
 
 - **Fix UI issues.** Report or correct layout, accessibility, or presentation
-  mistakes on any page or viewport.
+  mistakes on any page or viewport. Accessibility release checks and their recorded
+  results live in [docs/ACCESSIBILITY.md](docs/ACCESSIBILITY.md).
 - **Correct published data.** Open an issue or pull request with evidence for any
   fact shown here that is wrong, outdated, or missing a source.
 - **Research missing data.** The largest gaps are services (no verified records
@@ -58,9 +59,9 @@ build, and automated accessibility across every public route.
 
 The GitHub repository is connected to the Vercel project `bettermaddela`. Vercel
 deploys `main` to [bettermaddela.vercel.app](https://bettermaddela.vercel.app) and
-creates previews for other branches and pull requests. The production URL is still a
-work in progress and is intentionally withheld from the BetterLGU directory entry
-until the corrected interface is reviewed and approved.
+creates previews for other branches and pull requests. The site is publicly launched;
+its accessibility release checks and their recorded results live in
+[`docs/ACCESSIBILITY.md`](docs/ACCESSIBILITY.md).
 
 Before merging a deployment change:
 

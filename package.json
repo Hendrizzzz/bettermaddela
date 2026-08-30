@@ -13,6 +13,7 @@
     "audit:inherited": "node scripts/check-repository.mjs --audit-inherited",
     "validate:data": "node scripts/validate-civic-data.mjs",
     "test:accessibility": "node scripts/check-accessibility.mjs",
+    "test:accessibility-manual": "node scripts/check-a11y-manual.mjs",
     "verify": "bun run check:repository && bun run check:design && bun run audit:inherited && bun run validate:data && bun run typecheck && bun run build && bun run test:accessibility"
   },
   "dependencies": {

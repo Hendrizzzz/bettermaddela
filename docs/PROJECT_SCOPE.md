@@ -21,9 +21,10 @@ with:
   transparency records, and legislation as each dataset becomes publishable; and
 - clear attribution, correction, accessibility, privacy, and security information.
 
-The inherited-content removal is implemented. The MVP is complete only after the
-remaining site passes all applicable repository and release checks and any intended
-deployment boundary is separately reviewed.
+The inherited-content removal is implemented. The remaining acceptance for the MVP is
+that any intended deployment boundary is separately reviewed; the repository and
+accessibility release checks have run and are recorded in
+[`docs/ACCESSIBILITY.md`](ACCESSIBILITY.md) and the README project status.
 
 ## Accessibility acceptance
 
@@ -37,8 +38,10 @@ shared layout and interaction must have:
   reduced motion, and meaningful alternative text; and
 - a recorded list of routes, browsers, tools, results, and justified exceptions.
 
-UI changes must report the applicable manual checks immediately. The clean-shell work
-must add the automated accessibility gate before any UI is considered release-ready.
+UI changes must report the applicable manual checks immediately. The automated
+accessibility gate runs in `bun run verify`; the scripted manual review runs via
+`bun run test:accessibility-manual`. Their routes, tools, results, and justified
+exceptions are recorded in [`docs/ACCESSIBILITY.md`](ACCESSIBILITY.md).
 
 ## Glance-first direction (2026-08-26)
 
