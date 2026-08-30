@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function SourcesPage() {
+  const reportedCount = records.filter((record) => record.status === "reported").length;
   return (
     <>
       <PageHeader
@@ -21,7 +22,7 @@ export default function SourcesPage() {
           <div className="method-grid" role="group" aria-label="Publication totals">
             <div><p className="metric">{records.length}</p><p>accepted records</p></div>
             <div><p className="metric">{sources.length}</p><p>reviewed source entries</p></div>
-            <div><p className="metric">0</p><p>published provisional records</p></div>
+            <div><p className="metric">{reportedCount}</p><p>community-reported, awaiting official confirmation</p></div>
           </div>
 
           <div className="section-header-minimal">
@@ -36,11 +37,18 @@ export default function SourcesPage() {
                   <h3>{record.label}</h3>
                   <p className="source-dates">Checked <time dateTime={record.lastVerified}>{record.lastVerified}</time><br />Review by <time dateTime={record.nextReviewOn}>{record.nextReviewOn}</time></p>
                 </div>
+                {record.status === "reported" && (
+                  <p className="reported-flag">Community-reported — awaiting official confirmation</p>
+                )}
                 {record.notes && <p>{record.notes}</p>}
                 <ul className="source-links">
                   {sourcesFor(record).map((source) => (
                     <li key={source.id}>
-                      <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title} <i className="bi bi-box-arrow-up-right" aria-hidden="true" /></a>
+                      {source.url ? (
+                        <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title} <i className="bi bi-box-arrow-up-right" aria-hidden="true" /></a>
+                      ) : (
+                        <span>{source.title}</span>
+                      )}
                       <span>{source.publisher}, inspected <time dateTime={source.verifiedAt}>{source.verifiedAt}</time></span>
                     </li>
                   ))}

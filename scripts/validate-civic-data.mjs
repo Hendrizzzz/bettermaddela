@@ -26,6 +26,7 @@ const allowedSourceTypes = new Set([
   "media-file",
   "permission-record",
   "direct-confirmation",
+  "community-report",
 ]);
 const allowedSourceStates = new Set(["active", "superseded"]);
 const allowedCadences = new Set([
@@ -165,7 +166,7 @@ for (const [index, source] of sources.entries()) {
   if (!idPattern.test(source.id ?? "")) errors.push(`${path}.id is not stable lowercase kebab-case`);
   requireText(source.title, `${path}.title`);
   requireText(source.publisher, `${path}.publisher`);
-  requireText(source.url, `${path}.url`);
+  if (source.url !== undefined) requireText(source.url, `${path}.url`);
   requireText(source.documentType, `${path}.documentType`);
   requireDate(source.retrievedAt, `${path}.retrievedAt`);
   requireDate(source.verifiedAt, `${path}.verifiedAt`);
@@ -175,8 +176,12 @@ for (const [index, source] of sources.entries()) {
   }
   if (!allowedSourceTypes.has(source.documentType)) errors.push(`${path}.documentType is not supported`);
 
-  if (source.url === undefined && source.documentType !== "direct-confirmation") {
-    errors.push(`${path}.url is required unless the source is a direct confirmation`);
+  if (
+    source.url === undefined &&
+    source.documentType !== "direct-confirmation" &&
+    source.documentType !== "community-report"
+  ) {
+    errors.push(`${path}.url is required unless the source is a direct confirmation or a community report`);
   }
 
   if (source.url !== undefined) {
@@ -251,7 +256,19 @@ for (const [index, record] of records.entries()) {
       }
     }
   }
-  if (record.status !== "verified") errors.push(`${path}.status must be verified in production data`);
+  const usesCommunityReport =
+    Array.isArray(record.sourceIds) &&
+    record.sourceIds.some((id) => sourceById.get(id)?.documentType === "community-report");
+  if (record.status !== "verified" && record.status !== "reported") {
+    errors.push(`${path}.status must be verified or reported`);
+  }
+  if (record.status === "verified" && usesCommunityReport) {
+    errors.push(`${path}.verified records must not cite community-report sources`);
+  }
+  if (record.status === "reported") {
+    if (!usesCommunityReport) errors.push(`${path}.status reported requires a community-report source`);
+    if (record.updateCadence !== "monthly") errors.push(`${path}.status reported requires monthly updateCadence`);
+  }
   requireDate(record.lastVerified, `${path}.lastVerified`);
   requireText(record.acceptedBy, `${path}.acceptedBy`);
   if (record.acceptedBy === "openai-gpt-5.6-pro-researcher") {
@@ -340,5 +357,9 @@ if (errors.length > 0) {
   for (const error of errors) console.error(`- ${error}`);
   process.exitCode = 1;
 } else {
-  console.log(`Civic data validation passed: ${records.length} verified records, ${sources.length} sources.`);
+  const verifiedCount = records.filter((record) => record.status === "verified").length;
+  const reportedCount = records.filter((record) => record.status === "reported").length;
+  console.log(
+    `Civic data validation passed: ${verifiedCount} verified records, ${reportedCount} community-reported, ${sources.length} sources.`,
+  );
 }

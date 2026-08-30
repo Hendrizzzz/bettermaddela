@@ -754,6 +754,20 @@
   text-underline-offset: 0.15em;
 }
 
+/* ===== Community-reported record flag ===== */
+.reported-flag {
+  display: inline-block;
+  margin: 0 0 0.5rem;
+  padding: 0.15rem 0.6rem;
+  border: 1px solid #f5b301;
+  border-radius: 999px;
+  background: #f7efd8;
+  color: #7a540d;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
 /* ===== Phase 3 polish: unified section-heading scale =====
    Normalizes heading classes defined in statistics.css and
    transparency-v2.css toward the dominant 1.875rem treatment. */

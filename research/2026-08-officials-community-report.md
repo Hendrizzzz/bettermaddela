@@ -4,10 +4,14 @@
 - Channel: relayed to the project owner by a local Maddela contact whose identity is
   withheld at the owner's request; described by the owner as credible.
 - Owner assessment on receipt: "and it's true."
-- Status of this memo: evidence input only, per
-  [`docs/data/DATA_CONTRACT.md`](../docs/data/DATA_CONTRACT.md). Nothing here is
-  production data. It extends [`2026-08-officials-roster.md`](2026-08-officials-roster.md)
+- Status of this memo: evidence input, per
+  [`docs/data/DATA_CONTRACT.md`](../docs/data/DATA_CONTRACT.md). It extends
+  [`2026-08-officials-roster.md`](2026-08-officials-roster.md)
   and [`2026-08-officials-structure-evidence.md`](2026-08-officials-structure-evidence.md).
+  Follow-up (same day): the owner exercised the documented owner-override exception and
+  authorized publication of the claims below as record
+  `maddela-officials-exofficio-succession-2026-report` with status `reported` —
+  see the decision note in the gate-analysis section.
 
 ## Report as received (verbatim)
 
@@ -37,13 +41,21 @@ corroboration; no instrument or official publication for any of the four claims 
 hand.
 
 Decision (owner delegated the call, 2026-08-30): evidence-only. The candidate record
-below is `provisional` and stays out of production. The published record
+below was initially held as `provisional`, out of production. The published record
 `maddela-officials-2025-term` is unchanged: it is a dated election-outcome snapshot
 (as of 2025-06-30) whose limitations already state that post-election changes await
 official proclamations, and the reported succession does not falsify those claims.
 Its monthly review falls due 2026-09-26 and should attempt to resolve this.
 
-## Candidate record (provisional — do not import)
+Follow-up decision (owner override, 2026-08-30, later the same day): informed that no
+instrument exists or is expected, the owner explicitly chose to publish the claims on
+their attestation. Under the new "Exception — community-reported facts" in the data
+contract's officials gate, the candidate record was imported as
+`maddela-officials-exofficio-succession-2026-report` with status `reported`, a
+`community-report` source, and the visible public label. The evidence-only analysis
+above stands unchanged: nothing here became `verified`.
+
+## Candidate record (imported as `reported` on 2026-08-30)
 
 - id: `maddela-officials-exofficio-succession-2026-report`
 - type: `official-snapshot` (draft)

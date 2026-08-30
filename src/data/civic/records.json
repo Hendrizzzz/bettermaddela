@@ -3565,6 +3565,78 @@
       "notes": "Owner approved publication of this import on 2026-08-26 in the project review conversation. Names are reproduced exactly as listed by the cited source (surnames first); no name merging or full-name inference was applied."
     },
     {
+      "id": "maddela-officials-exofficio-succession-2026-report",
+      "type": "official-snapshot",
+      "label": "Community-reported ex-officio seats and Sangguniang Bayan succession (reported 2026-08-30)",
+      "data": {
+        "leaders": [
+          {
+            "name": "Reynaldo Ramos",
+            "title": "ABC President (ex-officio Sangguniang Bayan Member)",
+            "scope": "Municipality of Maddela",
+            "asOf": "2026-08-30",
+            "evidenceContext": "Community report naming him ABC president for the current term. Corroboration: the published DILG BOPS Region 2 masterlist lists REYNALD GARMA RAMOS, Punong Barangay of San Pedro, on a third term - a matching surname and the eligibility to hold the ABC seat; the given-name spelling (Reynaldo vs Reynald) is unresolved and reproduced as reported."
+          },
+          {
+            "name": "Roxanne Valdez",
+            "title": "SK Federation President (ex-officio Sangguniang Bayan Member)",
+            "scope": "Municipality of Maddela",
+            "asOf": "2026-08-30",
+            "evidenceContext": "Community report naming her SK federation president for the current term. Corroboration: the published DILG BOPS Region 2 masterlist lists ROXANNE GRACE DECLARADOR VALDEZ, Sangguniang Kabataan Chairperson of Cofcaville, on a first term - a matching name and the eligibility rule that federation presidents are drawn from sitting SK chairpersons."
+          },
+          {
+            "name": "Rudy Rafael",
+            "title": "Indigenous Peoples Mandatory Representative (ex-officio Sangguniang Bayan Member)",
+            "scope": "Municipality of Maddela",
+            "asOf": "2026-08-30",
+            "evidenceContext": "Community report naming him IPMR. No held official data covers this claim: IPMRs are not listed in the DILG BOPS masterlist. The name is reproduced exactly as reported."
+          },
+          {
+            "name": "Melchor Sad-en",
+            "title": "Sangguniang Bayan Member (reported succession appointment)",
+            "scope": "Municipality of Maddela",
+            "asOf": "2026-08-30",
+            "evidenceContext": "Community report stating he was installed in the seat of the late Councilor Carlos Cajoga Naboye. Coherent with published records: the 2025 election snapshot lists Naboye as an elected councilor, no official succession instrument is held, and a project research roster lists a Melchor C. Sad-en as a 2019-2022 Sangguniang Bayan member. The date of death and the appointment effectivity are unknown."
+          }
+        ],
+        "limitations": "Every entry on this record is a community report, relayed through the project owner from a source the owner attests to as credible; no proclamation, appointment, signed roster, or official publication supports any entry. Names are reproduced as reported, with spelling variants left unresolved. A community report is evidence of a claim, not verification of it; any entry may be corrected or withdrawn when an official instrument arrives."
+      },
+      "sourceIds": [
+        "community-report-officials-2026-08",
+        "dilg-bops-region2-masterlist-2026-08"
+      ],
+      "claimSources": {
+        "leaders": [
+          "community-report-officials-2026-08"
+        ],
+        "limitations": [
+          "community-report-officials-2026-08"
+        ],
+        "leaders.0": [
+          "community-report-officials-2026-08",
+          "dilg-bops-region2-masterlist-2026-08"
+        ],
+        "leaders.1": [
+          "community-report-officials-2026-08",
+          "dilg-bops-region2-masterlist-2026-08"
+        ],
+        "leaders.2": [
+          "community-report-officials-2026-08"
+        ],
+        "leaders.3": [
+          "community-report-officials-2026-08"
+        ]
+      },
+      "status": "reported",
+      "lastVerified": "2026-08-30",
+      "acceptedBy": "owner-override-2026-08-30",
+      "acceptedAt": "2026-08-30T14:00:00+08:00",
+      "nextReviewOn": "2026-09-30",
+      "updateCadence": "monthly",
+      "owner": "BetterMaddela governance data steward",
+      "notes": "Published under the owner-override exception in the data contract (Officials and rosters), authorized by the project owner on 2026-08-30. The owner attests the reporting source is credible; the reporter's identity is withheld at the owner's request."
+    },
+    {
       "id": "maddela-lgu-office-contacts-2023",
       "type": "contact",
       "label": "Municipal office contact directory (as published on the municipal website, archived 2023)",

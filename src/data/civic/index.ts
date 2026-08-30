@@ -10,13 +10,14 @@ export type SourceType =
   | "procurement-record"
   | "media-file"
   | "permission-record"
-  | "direct-confirmation";
+  | "direct-confirmation"
+  | "community-report";
 
 export interface CivicSource {
   id: string;
   title: string;
   publisher: string;
-  url: string;
+  url?: string;
   documentType: SourceType;
   publishedAt?: string;
   effectivePeriod?: string;
@@ -35,7 +36,7 @@ export interface CivicRecord<TData = unknown> {
   data: TData;
   sourceIds: string[];
   claimSources: Record<string, string[]>;
-  status: "verified";
+  status: "verified" | "reported";
   lastVerified: string;
   acceptedBy: string;
   acceptedAt: string;

@@ -54,8 +54,8 @@ Every `sourceId` must resolve to exactly one source entry.
 | `id` | Required. Stable, unique source identifier. |
 | `title` | Required. Exact page, dataset, post, or document title; use a descriptive label only when the source has no title. |
 | `publisher` | Required. Issuing organization or office, not the search engine or researcher. |
-| `url` | Required unless the evidence is a documented direct confirmation. Use the original page or document URL, not a search-results URL. |
-| `documentType` | Required. One of `webpage`, `pdf`, `law`, `social-post`, `dataset`, `procurement-record`, `media-file`, `permission-record`, or `direct-confirmation`. |
+| `url` | Required unless the evidence is a documented direct confirmation or a community report. Use the original page or document URL, not a search-results URL. |
+| `documentType` | Required. One of `webpage`, `pdf`, `law`, `social-post`, `dataset`, `procurement-record`, `media-file`, `permission-record`, `direct-confirmation`, or `community-report`. |
 | `publishedAt` | Required when the source provides a publication date. |
 | `effectivePeriod` | Required when the source applies to a term, fiscal year, quarter, or other bounded period. |
 | `retrievedAt` | Required. ISO 8601 date on which the evidence was accessed. |
@@ -68,6 +68,8 @@ Every `sourceId` must resolve to exactly one source entry.
 
 A direct-confirmation source has no invented URL. It must instead record the office contacted, date and time, method, public purpose of the confirmation, outcome, and the reviewer who performed it. Do not publish private conversation details or a confirmer's personal data.
 
+A `community-report` source documents a claim relayed to the project owner from the community. It has no URL by nature and must record in `notes` the channel and date received, the location of the verbatim transcript (a research memo), the owner's attestation, and a prohibition on publishing the reporter's identity or personal data. A community report is evidence of a claim, never verification of it; it may support only records whose status is `reported`, never `verified`.
+
 ## Verification vocabulary
 
 Use only these record states:
@@ -76,11 +78,12 @@ Use only these record states:
 |---|---|---|
 | `provisional` | Evidence is useful but the preferred source or required check is missing. | Keep out of production. |
 | `verified` | Evidence was reviewed and the applicable gate passed at that time. | May be published while fresh. |
+| `reported` | An owner-attested community report published under the scoped exception in the applicable gate. | Publish only with a visible “Community-reported — awaiting official confirmation” label and monthly review. |
 | `needs-reverification` | The review deadline passed, a material change occurred, a link failed, or a test no longer succeeds. | Remove from current factual displays or show unavailable; do not imply it remains current. |
 | `blocked` | Sources conflict, evidence is incomplete, or a required high-risk check failed. | Do not publish the claim. |
 | `retired` | The record is no longer current and is intentionally kept for history. | Show only in a clearly dated archive, never as current information. |
 
-Normal flow is `provisional` → `verified` → `needs-reverification` or `retired`. Any state may become `blocked`. A blocked record returns to `verified` only after the conflict or failed gate is documented as resolved.
+Normal flow is `provisional` → `verified` → `needs-reverification` or `retired`. An owner-attested community report may publish as `reported` under the scoped exception in its gate and leaves that state for `verified`, `needs-reverification`, `blocked`, or `retired` as evidence and freshness dictate. Any state may become `blocked`. A blocked record returns to `verified` only after the conflict or failed gate is documented as resolved.
 
 “Not found” is a research outcome, not a production record state. Track it in the unresolved-items section of the handoff and render an honest unavailable state when necessary.
 
@@ -107,6 +110,8 @@ Stable legal or statistical identity facts still require provenance, but may use
 - Recheck time-sensitive officeholders near launch; for mayor and vice mayor, within 30 days when feasible.
 - Verify complete bodies as complete, including applicable ex-officio seats, vacancies, succession, and appointments. A partial list must be labeled partial or withheld.
 - Recheck quarterly and after elections, appointments, vacancies, succession, or organizational changes. Use monthly review during the initial launch period for the highest-profile offices.
+
+Exception — community-reported facts (owner override, adopted 2026-08-30). When no instrument or official publication can be obtained and the project owner personally attests to the credibility of a community source, the owner may authorize publication of the reported officials facts in a record with status `reported`. This exception is strictly scoped: it applies only to this gate's facts; the record must cite a `community-report` source; `verified` records must never cite one; the public label “Community-reported — awaiting official confirmation” must be visible wherever the entries appear; review is monthly; and the exception never satisfies the `verified` gate. A `reported` record must be replaced by a verified one as soon as any instrument appears, and any challenge to a reported fact moves the record to `blocked` until resolved. The validator enforces the source-type and cadence rules.
 
 ### Services
 

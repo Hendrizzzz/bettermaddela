@@ -129,7 +129,7 @@ export default function LegalHistoryPage() {
     data: LegalData;
     date: string;
     typeLabel: string;
-    sourceUrl: string;
+    sourceUrl: string | null;
     record: CivicRecord<LegalData>;
   }
 
@@ -142,7 +142,7 @@ export default function LegalHistoryPage() {
         date: recordDate(record),
         typeLabel:
           record.type.charAt(0).toUpperCase() + record.type.slice(1).replace(/-/g, " "),
-        sourceUrl: getSource(record.sourceIds[0]).url,
+        sourceUrl: getSource(record.sourceIds[0]).url ?? null,
         record: record as CivicRecord<LegalData>,
       },
     ]),
@@ -176,11 +176,13 @@ export default function LegalHistoryPage() {
             <strong>Interpretive limit:</strong> {view.record.notes}
           </p>
         )}
-        <p className="hst-source-link">
-          <a href={view.sourceUrl} target="_blank" rel="noreferrer">
-            Read the complete text <i className="bi bi-box-arrow-up-right" aria-hidden="true" />
-          </a>
-        </p>
+        {view.sourceUrl && (
+          <p className="hst-source-link">
+            <a href={view.sourceUrl} target="_blank" rel="noreferrer">
+              Read the complete text <i className="bi bi-box-arrow-up-right" aria-hidden="true" />
+            </a>
+          </p>
+        )}
         <RecordMeta record={view.record} />
       </div>
     );
