@@ -63,8 +63,9 @@ above remain separate trust boundaries.
 This repository produces a host-agnostic static export. The GitHub repository is
 connected to Vercel project `bettermaddela`; `main` deploys to
 `https://bettermaddela.vercel.app`, while other branches and pull requests receive
-preview deployments. The production URL remains a work in progress and must not be
-treated as a completed BetterLGU launch merely because a deployment succeeds.
+preview deployments. A successful deployment alone does not establish that civic
+content is accurate or that release checks passed; the accessibility release record
+lives in `docs/ACCESSIBILITY.md` and the publication gates in `docs/data/DATA_CONTRACT.md`.
 
 Vercel's Next.js framework defaults, the existing `package.json` build script, and
 `next.config.mjs` are sufficient; no `vercel.json` override or application environment
