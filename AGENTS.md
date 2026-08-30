@@ -90,6 +90,13 @@ record it.
 - Do not commit, push, merge, deploy, publish civic data, or mutate external services
   unless the user's request authorizes it.
 
+### Git conventions
+
+- Follow the commit, branch, and pull-request conventions in `CONTRIBUTING.md`:
+  Conventional Commits messages, `type/topic` branch names, and conventionally titled
+  pull requests.
+- Never rewrite or force-push history on shared branches, including `main`.
+
 ## Verification and handoff
 
 Use the narrowest checks that cover the change, followed by the repository's applicable

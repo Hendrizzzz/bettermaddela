@@ -12,7 +12,7 @@ current task, and the exact files being changed are always required.
 | UI, accessibility, navigation, or PWA behavior | `docs/PROJECT_SCOPE.md`; affected UI files and tests | Data contract for factual copy; current accessibility or deployment guidance for the changed surface |
 | Build, dependencies, scripts, or CI | `package.json`; lockfile; affected configuration and workflow files | Security policy and current official version-specific documentation when behavior may have changed |
 | Security, privacy, secrets, or reporting | `SECURITY.md`; affected data flow or workflow | `docs/data/DATA_CONTRACT.md` for evidence or civic data; deployment documentation for an actual deployment boundary |
-| Contribution, review, or repository delivery | `CONTRIBUTING.md`; pull-request template and affected workflows | Governing product, data, security, or implementation document for the change being delivered |
+| Contribution, review, or repository delivery | `CONTRIBUTING.md`; affected workflow files | Governing product, data, security, or implementation document for the change being delivered |
 | Licensing, assets, or upstream reuse | `LICENSE`; attribution material; exact asset/source record | `docs/data/DATA_CONTRACT.md` when a source or rights record is stored or published |
 | Durable architecture change | `docs/PROJECT_SCOPE.md`; current source and configuration | Existing decision records; add a focused decision record only when material alternatives and consequences would otherwise be rediscovered |
 

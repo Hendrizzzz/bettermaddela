@@ -9,26 +9,29 @@ make verified civic information about Maddela, Quirino easier to find and unders
 
 ## Project status
 
-**Pre-release / work in progress.** Inherited municipal production content has been
-removed. The application currently publishes 23 reviewed civic records covering
-municipal identity and postal information; population, household, poverty, and
-barangay statistics; reviewed legal history; dated leadership and office-head
-observations; selected agency updates and procurement records; a scoped community
-profile; and the configuration for live weather and a general-location map.
+**Live and maintained.** The core site is complete and deployed to
+[bettermaddela.vercel.app](https://bettermaddela.vercel.app). It publishes 58 verified
+civic records covering municipal identity and postal information; population,
+household, poverty, and barangay statistics; reviewed legal history; dated leadership
+and office-head observations; selected agency updates, procurement records, and
+transparency documents; a scoped community profile; verified contacts; and licensed
+media and maps. Missing datasets render as honest unavailable states, never
+placeholders.
 
-Complete municipal rosters, local and emergency contacts, service requirements,
-fees and processing times, local legislation, a complete municipal finance or
-project archive, and unlicensed media remain unavailable until their record-specific
-publication gates pass.
+Coverage is intentionally incomplete. Service requirements, fees, and processing
+times have no verified records yet. Project, budget, and transparency coverage is
+partial, and local office contacts are limited.
 
-### Next steps
+### How you can help
 
-1. Complete final cross-browser and branch-preview checks for the Maddela adaptation.
-2. Continue importing useful civic records only when they pass the
-   [civic-data publication gate](docs/data/DATA_CONTRACT.md).
-3. Complete the remaining manual accessibility, link, privacy, and security release
-   checks.
-4. Approve a branch preview before merging to `main` and requesting directory review.
+- **Fix UI issues.** Report or correct layout, accessibility, or presentation
+  mistakes on any page or viewport.
+- **Correct published data.** Open an issue or pull request with evidence for any
+  fact shown here that is wrong, outdated, or missing a source.
+- **Research missing data.** The largest gaps are services (no verified records
+  yet), projects, and transparency documents. Submissions are evidence inputs and
+  must pass [the civic-data publication gate](docs/data/DATA_CONTRACT.md) before
+  publication.
 
 ## Technical foundation
 
