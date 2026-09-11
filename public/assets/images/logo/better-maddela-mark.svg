@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- BetterMaddela Panagsasalog mark. The M holds Maddela's dawn journey:
+     home -> path -> fields -> ridges. Dark ink, harvest gold, warm paper. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="BetterMaddela Panagsasalog mark">
+  <defs>
+    <clipPath id="mclip">
+      <path d="M6 110V23C17 24 25 19 31 13C35 9 39 9 43 14C50 23 55 29 60 32C65 29 70 23 77 14C81 9 85 9 89 13C95 19 103 24 114 23V110H78L65 84L52 110H6Z"/>
+    </clipPath>
+  </defs>
+  <circle cx="60" cy="31" r="10.5" fill="#f5b301"/>
+  <path d="M6 110V23C17 24 25 19 31 13C35 9 39 9 43 14C50 23 55 29 60 32C65 29 70 23 77 14C81 9 85 9 89 13C95 19 103 24 114 23V110H78L65 84L52 110H6Z" fill="#151d22"/>
+  <g clip-path="url(#mclip)">
+    <path d="M-3 75C16 72 33 76 49 88" fill="none" stroke="#f5b301" stroke-width="4.2"/>
+    <path d="M-2 84C16 80 31 84 45 96" fill="none" stroke="#f5b301" stroke-width="4.2"/>
+    <path d="M1 93C17 89 29 94 39 105" fill="none" stroke="#f5b301" stroke-width="4.2"/>
+    <path d="M123 75C104 72 87 76 71 88" fill="none" stroke="#f5b301" stroke-width="4.2"/>
+    <path d="M122 84C104 80 89 84 75 96" fill="none" stroke="#f5b301" stroke-width="4.2"/>
+    <path d="M119 93C103 89 91 94 81 105" fill="none" stroke="#f5b301" stroke-width="4.2"/>
+    <path d="M8 42C20 42 23 49 31 52C39 55 44 58 51 61" fill="none" stroke="#fffcf4" stroke-width="2.3" stroke-linecap="round"/>
+    <path d="M112 42C100 42 97 49 89 52C81 55 76 58 69 61" fill="none" stroke="#fffcf4" stroke-width="2.3" stroke-linecap="round"/>
+    <path d="M17 116C27 103 39 99 47 89C55 79 45 73 51 65C56 59 65 60 66 53C67 47 58 47 60 40C60.5 38 61.5 36.5 63 35" fill="none" stroke="#fffcf4" stroke-width="8.3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M16 99L26 90L36 99V110H16V99Z" fill="#151d22"/>
+  <path d="M13.5 100L26 88L38.5 100Z" fill="#151d22"/>
+  <rect x="24" y="100" width="4.5" height="5.5" fill="#fffcf4"/>
+</svg>

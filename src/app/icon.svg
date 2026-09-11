@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  BetterMaddela identity mark - "The Ridge Mon" (owner-selected from the
-  /logo-lab decision round, 2026-08). Original vector work for this project.
-  THESIS: a geometric M whose strokes are the Sierra Madre ridgeline, set in
-  a ring that echoes the civic-seal genre without copying it. Harvest gold
-  on warm charcoal ink; independent project - never an official seal.
-  OWN-WORLD: ink #221D14, harvest gold #F5B301, paper #FFFCF4.
--->
+<!-- BetterMaddela Panagsasalog app icon. Simplified for small-size legibility. -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <circle cx="32" cy="32" r="29.5" fill="none" stroke="#221d14" stroke-width="4.5"/>
-  <path d="M17 44 L17 21 L25 21 L32 31 L39 21 L47 21 L47 44 L40 44 L40 32.5 L34.5 40 L29.5 40 L24 32.5 L24 44 Z"
-        fill="#f5b301" stroke="#221d14" stroke-width="2.5" stroke-linejoin="round"/>
+  <defs><clipPath id="m"><path d="M4 59V13C10 14 15 10 19 6C21 4 23 4 25 7C28 11 30 14 32 16C34 14 36 11 39 7C41 4 43 4 45 6C49 10 54 14 60 13V59H43L35 45L27 59H4Z"/></clipPath></defs>
+  <circle cx="32" cy="15" r="6" fill="#f5b301"/>
+  <path d="M4 59V13C10 14 15 10 19 6C21 4 23 4 25 7C28 11 30 14 32 16C34 14 36 11 39 7C41 4 43 4 45 6C49 10 54 14 60 13V59H43L35 45L27 59H4Z" fill="#151d22"/>
+  <g clip-path="url(#m)">
+    <path d="M0 39C12 37 21 40 28 47M64 39C52 37 43 40 36 47M1 46C12 43 20 47 24 54M63 46C52 43 44 47 40 54" fill="none" stroke="#f5b301" stroke-width="2.8"/>
+    <path d="M7 64C13 55 21 54 25 47C29 40 23 37 27 32C30 28 35 30 35 25C35 22 31 21 32 18" fill="none" stroke="#fffcf4" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <path d="M8 54L14 49L20 54V59H8Z" fill="#151d22"/><path d="M6.5 55L14 47.5L21.5 55Z" fill="#151d22"/><rect x="13" y="54" width="2.5" height="3" fill="#fffcf4"/>
 </svg>
